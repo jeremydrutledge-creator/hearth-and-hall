@@ -12,7 +12,8 @@
   #c{display:block;width:100%;height:100%;touch-action:none}
 
   /* top HUD */
-  .top{position:fixed;top:env(safe-area-inset-top,0);left:0;right:0;z-index:10;
+  .top{position:fixed;top:env(safe-area-inset-top,0);
+    left:env(safe-area-inset-left,0);right:env(safe-area-inset-right,0);z-index:10;
     display:flex;justify-content:center;pointer-events:none}
   .resbar{display:flex;gap:5px;padding:8px 8px;flex-wrap:wrap;justify-content:center;pointer-events:auto}
   .res{background:rgba(18,22,11,.85);border:1px solid #4a5230;border-radius:8px;
@@ -36,7 +37,7 @@
   .float.fade{opacity:0}
 
   /* objectives / age panel */
-  #quests{position:fixed;left:8px;top:calc(env(safe-area-inset-top,0) + 92px);z-index:10;
+  #quests{position:fixed;left:calc(8px + env(safe-area-inset-left,0));top:calc(env(safe-area-inset-top,0) + 92px);z-index:10;
     background:rgba(18,22,11,.84);border:1px solid #4a5230;border-radius:10px;
     padding:6px 9px;max-width:212px;font-size:.74rem;pointer-events:auto;display:none}
   #quests.show{display:block}
@@ -59,7 +60,7 @@
   #toast span.show{opacity:1}
 
   /* selected villager card */
-  #selCard{position:fixed;bottom:124px;left:8px;z-index:9;pointer-events:none;
+  #selCard{position:fixed;bottom:124px;left:calc(8px + env(safe-area-inset-left,0));z-index:9;pointer-events:none;
     background:rgba(18,22,11,.88);border:1px solid #5a6535;border-radius:10px;
     padding:7px 11px;font-size:.78rem;display:none;max-width:60%}
   #selCard.show{display:block}
@@ -85,7 +86,7 @@
 
   /* bottom bar */
   .bar{position:fixed;bottom:0;left:0;right:0;z-index:12;
-    padding:8px 8px calc(8px + env(safe-area-inset-bottom,0));
+    padding:8px calc(8px + env(safe-area-inset-right,0)) calc(8px + env(safe-area-inset-bottom,0)) calc(8px + env(safe-area-inset-left,0));
     display:flex;gap:8px;justify-content:center}
   .tab{flex:1;max-width:200px;background:rgba(34,40,20,.95);border:1px solid #5a6535;
     border-radius:11px;color:#e8dfc0;padding:12px;font-family:inherit;font-size:.92rem;
@@ -258,9 +259,14 @@ let camTarget=new THREE.Vector3(0,0,0),camZoom=1;
 function updateCam(){const d=27*camZoom;const cy=getH(camTarget.x,camTarget.z);
   camera.position.set(camTarget.x+d*0.7,cy+d*0.85,camTarget.z+d*0.7);
   camera.lookAt(camTarget.x,cy+1.5,camTarget.z);}
-function resize(){renderer.setSize(innerWidth,innerHeight,false);
-  camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}
-addEventListener('resize',resize);resize();updateCam();
+function resize(){const w=innerWidth,h=innerHeight;
+  renderer.setSize(w,h,false);
+  camera.aspect=w/Math.max(1,h);camera.updateProjectionMatrix();updateCam();}
+addEventListener('resize',resize);
+// rotating a phone (esp. iOS) reports stale sizes for a moment — re-measure a few times
+addEventListener('orientationchange',()=>{resize();setTimeout(resize,150);setTimeout(resize,400);});
+if(window.visualViewport)visualViewport.addEventListener('resize',resize);
+resize();updateCam();
 
 const hemi=new THREE.HemisphereLight(0xbfd8f5,0x49612c,0.34);scene.add(hemi);
 const sun=new THREE.DirectionalLight(0xffe9c2,1.55);
