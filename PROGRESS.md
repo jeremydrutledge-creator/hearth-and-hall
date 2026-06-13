@@ -34,6 +34,11 @@ Age of Empires-style game."
 11. **Worn paths** — dirt trails (`wornPath()` ribbon meshes w/ a generated fade
     texture) trodden from the keep out to grove/pond/rocks/forest/hills.
 12. **Ducks** — 4 paddle around the pond (`ducks[]` + `tickDuck`, float at WATER_Y).
+13. **Fish shoals** — depletable+replenishing fishing spots (`shoals[]`, `makeShoal`/
+    `tickShoal`/`nearestShoal`/`shoreNear`/`depleteShoal`). Ripple rings + circling
+    fish + invisible tap-disc. Fishing now targets the nearest shoal (`u.shoal`),
+    casts from the shore nearest it, and each catch removes 9; an emptied shoal
+    despawns and a new one fades in elsewhere after ~9-16s. Tap a shoal to fish it.
 
 NOTE: temporary debug hooks used while iterating, all REMOVED before commit —
 re-add if needed: `#gallery` hash (building grid), `window.__G=G` (state), and
