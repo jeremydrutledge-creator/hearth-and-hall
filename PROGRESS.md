@@ -64,6 +64,14 @@ Age of Empires-style game."
     walk to the muster point. Fixes "new/idle settlers do nothing / stop working".
 19. **Hunting needs bows** — `G.bows`; Hunt job + manualHunt locked until you craft
     bows via Build ▸ 🏹 Craft Bows (25 wood, instant `craft()` action, data-craft).
+20. **Landscape support** — orientationchange/visualViewport re-fit (iOS stale-size
+    retries) + left/right safe-area insets on HUD/bar/quests/selCard.
+21. **Graphics step 1 (global ground+atmosphere)** — terrain is now MeshStandard
+    with a procedural tileable detail `map` + `normalMap` (`groundDetail()`,
+    blurred white-noise) so the ground reads as textured earth instead of flat
+    colour; plus a CSS `#vignette` and crisper shadows (2560 map, tighter frustum).
+    NEXT graphics steps (deferred per plan): PBR/textures on buildings & units
+    (per-asset art), env map, optional post-FX (needs three addons — CDN at runtime).
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
