@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Hearth &amp; Hall</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%;width:100%;overflow:hidden;position:fixed;inset:0;
+    background:#10160c;font-family:Georgia,'Times New Roman',serif;color:#e8dfc0;
+    -webkit-user-select:none;user-select:none;overscroll-behavior:none;touch-action:none}
+  #c{display:block;width:100%;height:100%;touch-action:none}
+
+  /* top HUD */
+  .top{position:fixed;top:env(safe-area-inset-top,0);left:0;right:0;z-index:10;
+    display:flex;justify-content:center;pointer-events:none}
+  .resbar{display:flex;gap:5px;padding:8px 8px;flex-wrap:wrap;justify-content:center;pointer-events:auto}
+  .res{background:rgba(18,22,11,.85);border:1px solid #4a5230;border-radius:8px;
+    padding:5px 9px;font-size:.86rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .res b{color:#f0c060}
+  .res small{color:#9aa478;font-size:.62rem}
+  .res.store b{color:#cdd6a0}
+  .res.warn{border-color:#c08040;animation:pulse 1.2s infinite}
+  @keyframes pulse{50%{background:rgba(80,40,12,.85)}}
+
+  #hint{position:fixed;top:56px;left:0;right:0;text-align:center;z-index:10;pointer-events:none}
+  #hint span{display:inline-block;background:rgba(18,22,11,.78);color:#cfd9a8;border-radius:8px;
+    padding:5px 12px;font-size:.8rem;font-style:italic;max-width:92%}
+
+  #toast{position:fixed;bottom:128px;left:0;right:0;text-align:center;z-index:9;pointer-events:none}
+  #toast span{display:inline-block;background:rgba(18,22,11,.9);border-radius:8px;
+    padding:6px 14px;font-size:.85rem;opacity:0;transition:opacity .3s;max-width:90%}
+  #toast span.show{opacity:1}
+
+  /* selected villager card */
+  #selCard{position:fixed;bottom:124px;left:8px;z-index:9;pointer-events:none;
+    background:rgba(18,22,11,.88);border:1px solid #5a6535;border-radius:10px;
+    padding:7px 11px;font-size:.78rem;display:none;max-width:60%}
+  #selCard.show{display:block}
+  #selCard b{color:#f0c060}
+
+  /* dropdown panels */
+  .menu{position:fixed;left:0;right:0;bottom:64px;z-index:11;display:none;
+    padding:0 8px;pointer-events:none}
+  .menu.show{display:block}
+  .menuInner{max-width:520px;margin:0 auto;background:rgba(22,27,14,.97);
+    border:1px solid #5a6535;border-radius:12px;padding:8px;pointer-events:auto;
+    max-height:48vh;overflow-y:auto}
+  .cat{color:#9aa478;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;
+    margin:8px 4px 4px;border-bottom:1px solid #3a4424;padding-bottom:3px}
+  .cat:first-child{margin-top:2px}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .opt{background:#2c3318;border:1px solid #4a5230;border-radius:9px;color:#e8dfc0;
+    padding:9px 10px;font-family:inherit;font-size:.84rem;text-align:left;touch-action:manipulation}
+  .opt small{display:block;color:#9aa478;font-size:.66rem;margin-top:2px}
+  .opt:active{background:#3a4424}
+  .opt:disabled{opacity:.4}
+  .opt.full{grid-column:1/-1}
+
+  /* bottom bar */
+  .bar{position:fixed;bottom:0;left:0;right:0;z-index:12;
+    padding:8px 8px calc(8px + env(safe-area-inset-bottom,0));
+    display:flex;gap:8px;justify-content:center}
+  .tab{flex:1;max-width:200px;background:rgba(34,40,20,.95);border:1px solid #5a6535;
+    border-radius:11px;color:#e8dfc0;padding:12px;font-family:inherit;font-size:.92rem;
+    text-align:center;touch-action:manipulation}
+  .tab:active,.tab.active{background:#3a4424;border-color:#f0c060;color:#f0c060}
+  .tab:disabled{opacity:.4}
+  #confirmBar{display:none}
+  #confirmBar.show{display:flex}
+  .bar.hide{display:none}
+  .tab.primary{border-color:#f0c060;color:#f0c060}
+
+  #intro{position:fixed;inset:0;z-index:30;background:rgba(10,13,6,.93);display:flex;
+    align-items:center;justify-content:center;text-align:center;padding:24px}
+  #intro .card{max-width:360px}
+  #intro h1{font-size:2.1rem;color:#f0c060;margin-bottom:8px;font-weight:400;letter-spacing:.03em}
+  #intro p{font-size:.9rem;line-height:1.5;color:#cfd9a8;margin-bottom:9px}
+  #intro b{color:#f0c060}
+  #intro button{margin-top:8px;background:#3a4424;border:1px solid #f0c060;color:#f0c060;
+    border-radius:10px;padding:14px 30px;font-family:inherit;font-size:1rem}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div class="top"><div class="resbar">
+  <div class="res">🪵 <b id="hWood">0</b></div>
+  <div class="res">🍖 <b id="hFood">0</b> <small id="hFoodRate"></small></div>
+  <div class="res">🪨 <b id="hStone">0</b> <small id="hStoneRate"></small></div>
+  <div class="res store" id="storeRes">📦 <b id="hStore">0/0</b></div>
+  <div class="res">👤 <b id="hPop">1/3</b></div>
+</div></div>
+
+<div id="hint"><span id="hintText">Tap your settler to select them</span></div>
+<div id="toast"><span id="toastText"></span></div>
+<div id="selCard"></div>
+
+<!-- BUILD MENU -->
+<div class="menu" id="buildMenu"><div class="menuInner">
+  <div class="cat">Housing &amp; Storage</div>
+  <div class="opts">
+    <button class="opt" data-build="house">🏠 House<small>30 🪵 · +3 pop</small></button>
+    <button class="opt" data-build="storehouse">📦 Storehouse<small>50 🪵 · +200 storage · drop-off</small></button>
+  </div>
+  <div class="cat">Food</div>
+  <div class="opts">
+    <button class="opt" data-build="farm">🌾 Farm<small>40 🪵 · grows food</small></button>
+    <button class="opt" data-build="coop">🐔 Coop<small>35 🪵 · hens + food</small></button>
+    <button class="opt" data-build="pen">🐑 Pen<small>50 🪵 · sheep + food</small></button>
+  </div>
+  <div class="cat">Industry</div>
+  <div class="opts">
+    <button class="opt" data-build="lumber">🪓 Lumber Camp<small>40 🪵 · drop-off by forest</small></button>
+    <button class="opt" data-build="quarry">⛏ Quarry<small>60 🪵 · stone · rocky hills</small></button>
+  </div>
+  <div class="cat">Landmark</div>
+  <div class="opts">
+    <button class="opt full" data-build="hall">🏛 Great Hall<small>150 🪵 60 🪨 · found your realm</small></button>
+  </div>
+</div></div>
+
+<!-- JOBS MENU -->
+<div class="menu" id="jobMenu"><div class="menuInner">
+  <div class="cat">Standing Order</div>
+  <div class="opts">
+    <button class="opt" data-job="wood">🪓 Cut Wood<small>auto: fell → haul → repeat</small></button>
+    <button class="opt" data-job="stone">⛏ Mine Stone<small>auto: quarry rock → haul</small></button>
+    <button class="opt" data-job="food">🍇 Forage<small>auto: berries → haul</small></button>
+    <button class="opt" data-job="hunt">🏹 Hunt<small>chase deer → haul meat</small></button>
+    <button class="opt full" data-job="idle">🛑 Stand Down<small>wait by the keep</small></button>
+  </div>
+</div></div>
+
+<div class="bar" id="mainBar">
+  <button class="tab" id="tabBuild">⚒ Build ▾</button>
+  <button class="tab" id="tabJobs" disabled>⚑ Assign ▾</button>
+</div>
+<div class="bar" id="confirmBar">
+  <button class="tab primary" id="bConfirm">✔ Build here</button>
+  <button class="tab" id="bCancel">✖ Cancel</button>
+</div>
+
+<div id="intro"><div class="card">
+  <h1>Hearth &amp; Hall</h1>
+  <p>Your <b>keep</b> stands at the heart of a wild valley — deep forest west, rocky hills east, a pond south.</p>
+  <p>Settlers <b>haul</b> every load back to the keep. It only holds so much — raise <b>storehouses</b> to grow.</p>
+  <p><b>Tap</b> a settler, then a tree, rock, berry, or deer — or use <b>⚑ Assign</b> to give a standing job. <b>⚒ Build</b> opens the menu.</p>
+  <p><b>Drag</b> to roam · <b>pinch</b> to zoom.</p>
+  <button id="startBtn">Begin</button>
+</div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+'use strict';
+
+// ===== world regions =====
+const FOREST={x:-32,z:-16,r:22}, ROCKY={x:32,z:-22,r:18}, POND={x:-16,z:30,r:9};
+
+function hash(x,z){const s=Math.sin(x*127.1+z*311.7)*43758.5453;return s-Math.floor(s);}
+function sm(t){return t*t*(3-2*t);}
+function vn(x,z){const xi=Math.floor(x),zi=Math.floor(z),xf=x-xi,zf=z-zi;
+  const a=hash(xi,zi),b=hash(xi+1,zi),c=hash(xi,zi+1),d=hash(xi+1,zi+1);
+  const u=sm(xf),v=sm(zf);return a*(1-u)*(1-v)+b*u*(1-v)+c*(1-u)*v+d*u*v;}
+function rocky(x,z){return Math.max(0,1-Math.hypot(x-ROCKY.x,z-ROCKY.z)/ROCKY.r);}
+function pondF(x,z){return Math.max(0,1-Math.hypot(x-POND.x,z-POND.z)/(POND.r+3));}
+function forestF(x,z){return Math.max(0,1-Math.hypot(x-FOREST.x,z-FOREST.z)/FOREST.r);}
+function getH(x,z){
+  let h=(vn(x*0.05,z*0.05)-0.5)*2.4+(vn(x*0.13,z*0.13)-0.5)*0.9;
+  h+=Math.pow(rocky(x,z),1.4)*5.4; h-=Math.pow(pondF(x,z),2)*3.0;
+  const dc=Math.hypot(x,z), flat=Math.min(1,Math.max(0,(dc-6)/8));
+  return h*flat;
+}
+const WATER_Y=-0.55;
+
+// ===== state =====
+const G={
+  wood:30,food:40,stone:0,
+  stored:0, cap:200,
+  popCap:3,
+  villagers:[],nodes:[],buildings:[],depots:[],deer:[],critters:[],
+  selected:null,buildMode:null,
+  farms:0,coops:0,pens:0,quarries:0,lumbers:0,houses:0,stores:0,hall:false,
+  started:false, fullWarn:0
+};
+const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
+  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},hall:{wood:150,stone:60},settler:{food:50}};
+const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,hall:14};
+const CARRY=12;
+
+// ===== renderer =====
+const canvas=document.getElementById('c');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const scene=new THREE.Scene();
+scene.fog=new THREE.Fog(0xbcd6e8,62,140);
+// sky gradient
+{
+  const cv=document.createElement('canvas');cv.width=8;cv.height=128;
+  const g=cv.getContext('2d').createLinearGradient(0,0,0,128);
+  g.addColorStop(0,'#8fb8e0');g.addColorStop(0.5,'#bcd6e8');g.addColorStop(1,'#dbe7d2');
+  const ctx=cv.getContext('2d');ctx.fillStyle=g;ctx.fillRect(0,0,8,128);
+  const tex=new THREE.CanvasTexture(cv);scene.background=tex;
+}
+const camera=new THREE.PerspectiveCamera(45,1,0.1,500);
+let camTarget=new THREE.Vector3(0,0,0),camZoom=1;
+function updateCam(){const d=27*camZoom;const cy=getH(camTarget.x,camTarget.z);
+  camera.position.set(camTarget.x+d*0.7,cy+d*0.85,camTarget.z+d*0.7);
+  camera.lookAt(camTarget.x,cy+1.5,camTarget.z);}
+function resize(){renderer.setSize(innerWidth,innerHeight,false);
+  camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}
+addEventListener('resize',resize);resize();updateCam();
+
+scene.add(new THREE.HemisphereLight(0xfff4e0,0x46582e,0.7));
+const sun=new THREE.DirectionalLight(0xffeccb,1.05);
+sun.position.set(40,58,18);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
+const SC=sun.shadow.camera;SC.left=-64;SC.right=64;SC.top=64;SC.bottom=-64;SC.near=5;SC.far=170;
+scene.add(sun);scene.add(sun.target);
+
+// ===== terrain =====
+const SIZE=180,SEG=140;
+const tGeo=new THREE.PlaneGeometry(SIZE,SIZE,SEG,SEG);tGeo.rotateX(-Math.PI/2);
+{
+  const pos=tGeo.attributes.position,col=new Float32Array(pos.count*3);
+  const cG=new THREE.Color(0x6f9a4a),cG2=new THREE.Color(0x82ad54),cF=new THREE.Color(0x517a3b),
+    cR=new THREE.Color(0x8d8a80),cR2=new THREE.Color(0x6f6d64),cS=new THREE.Color(0xc7b282);
+  const tmp=new THREE.Color();
+  for(let i=0;i<pos.count;i++){
+    const x=pos.getX(i),z=pos.getZ(i),h=getH(x,z);pos.setY(i,h);
+    const rf=rocky(x,z),ff=forestF(x,z),n=vn(x*0.3,z*0.3);
+    tmp.copy(cG).lerp(cG2,n);
+    if(ff>0.15)tmp.lerp(cF,Math.min(1,ff*1.1));
+    if(h<WATER_Y+0.55)tmp.lerp(cS,Math.min(1,(WATER_Y+0.55-h)*1.6));
+    if(rf>0.18||h>2.6){const rr=Math.max(rf,(h-2.6)/3);tmp.lerp(n>0.5?cR:cR2,Math.min(1,rr*1.5));}
+    col[i*3]=tmp.r;col[i*3+1]=tmp.g;col[i*3+2]=tmp.b;
+  }
+  tGeo.setAttribute('color',new THREE.BufferAttribute(col,3));tGeo.computeVertexNormals();
+}
+const terrain=new THREE.Mesh(tGeo,new THREE.MeshLambertMaterial({vertexColors:true}));
+terrain.receiveShadow=true;scene.add(terrain);
+
+// water
+const water=new THREE.Mesh(new THREE.CircleGeometry(POND.r+2.5,30),
+  new THREE.MeshLambertMaterial({color:0x3f7fa0,transparent:true,opacity:0.86}));
+water.rotation.x=-Math.PI/2;water.position.set(POND.x,WATER_Y,POND.z);scene.add(water);
+
+function place(g,x,z){g.position.set(x,getH(x,z),z);}
+function shadows(g){g.traverse(o=>{if(o.isMesh)o.castShadow=true;});}
+function okSpot(x,z){return getH(x,z)>=WATER_Y+0.5 && Math.hypot(x,z)>=7;}
+
+// decorative grass + flowers
+{
+  const gMat=new THREE.MeshLambertMaterial({color:0x6fa048});
+  const fMats=[0xe8d24a,0xd86a8a,0xe0e0e0,0x8a6ad8].map(c=>new THREE.MeshLambertMaterial({color:c}));
+  for(let i=0;i<170;i++){
+    const x=(Math.random()-0.5)*150,z=(Math.random()-0.5)*150;
+    if(!okSpot(x,z)||rocky(x,z)>0.5)continue;
+    const blade=new THREE.Mesh(new THREE.ConeGeometry(0.06,0.45,4),gMat);
+    place(blade,x,z);blade.position.y+=0.22;blade.rotation.y=Math.random()*6;scene.add(blade);
+    if(Math.random()<0.18){
+      const f=new THREE.Mesh(new THREE.SphereGeometry(0.07,5,4),fMats[(Math.random()*4)|0]);
+      place(f,x,z);f.position.y+=0.4;scene.add(f);
+    }
+  }
+}
+
+// ===== materials =====
+const trunkMat=new THREE.MeshLambertMaterial({color:0x6b4a2a});
+const pine1=new THREE.MeshLambertMaterial({color:0x3a7032}),pine2=new THREE.MeshLambertMaterial({color:0x4a8a3c});
+const oak1=new THREE.MeshLambertMaterial({color:0x4f8a38}),oak2=new THREE.MeshLambertMaterial({color:0x60a044});
+const rockMat=new THREE.MeshLambertMaterial({color:0x8d8a80});
+const bushMat=new THREE.MeshLambertMaterial({color:0x4a7a3a}),berryMat=new THREE.MeshLambertMaterial({color:0xc04040});
+function wM(c){return new THREE.MeshLambertMaterial({color:c});}
+
+// ===== nodes =====
+function makePine(){const g=new THREE.Group();
+  const t=new THREE.Mesh(new THREE.CylinderGeometry(0.2,0.3,1.4,6),trunkMat);t.position.y=0.7;g.add(t);
+  const c1=new THREE.Mesh(new THREE.ConeGeometry(1.25,2.1,7),pine1);c1.position.y=2.1;g.add(c1);
+  const c2=new THREE.Mesh(new THREE.ConeGeometry(0.85,1.6,7),pine2);c2.position.y=3.1;g.add(c2);return g;}
+function makeOak(){const g=new THREE.Group();
+  const t=new THREE.Mesh(new THREE.CylinderGeometry(0.22,0.34,1.5,6),trunkMat);t.position.y=0.75;g.add(t);
+  const c1=new THREE.Mesh(new THREE.SphereGeometry(1.15,7,6),oak1);c1.position.y=2.2;g.add(c1);
+  const c2=new THREE.Mesh(new THREE.SphereGeometry(0.8,7,6),oak2);c2.position.set(0.6,1.8,0.3);g.add(c2);
+  const c3=new THREE.Mesh(new THREE.SphereGeometry(0.7,7,6),oak1);c3.position.set(-0.55,1.9,-0.25);g.add(c3);return g;}
+function makeTree(x,z){const g=Math.random()<0.6?makePine():makeOak();place(g,x,z);
+  g.scale.setScalar(0.8+Math.random()*0.5);g.rotation.y=Math.random()*6.28;
+  g.userData={kind:'node',res:'wood',amount:40,label:'tree'};shadows(g);scene.add(g);G.nodes.push(g);}
+function makeRock(x,z,big){const g=new THREE.Group();
+  const r=new THREE.Mesh(new THREE.DodecahedronGeometry(big?1.15:0.8,0),rockMat);
+  r.position.y=big?0.7:0.5;r.rotation.set(Math.random(),Math.random(),Math.random());g.add(r);
+  const r2=new THREE.Mesh(new THREE.DodecahedronGeometry(0.45,0),rockMat);r2.position.set(0.75,0.3,0.25);g.add(r2);
+  place(g,x,z);g.userData={kind:'node',res:'stone',amount:big?80:50,label:'rocks'};shadows(g);scene.add(g);G.nodes.push(g);}
+function makeBush(x,z){const g=new THREE.Group();
+  const b=new THREE.Mesh(new THREE.SphereGeometry(0.7,8,6),bushMat);b.position.y=0.55;b.scale.y=0.8;g.add(b);
+  for(let i=0;i<6;i++){const be=new THREE.Mesh(new THREE.SphereGeometry(0.09,6,5),berryMat);
+    const a=Math.random()*6.28;be.position.set(Math.cos(a)*0.6,0.5+Math.random()*0.5,Math.sin(a)*0.6);g.add(be);}
+  place(g,x,z);g.userData={kind:'node',res:'food',amount:50,label:'berries'};shadows(g);scene.add(g);G.nodes.push(g);}
+
+for(let i=0;i<58;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*FOREST.r;
+  const x=FOREST.x+Math.cos(a)*rr,z=FOREST.z+Math.sin(a)*rr;
+  if(okSpot(x,z)&&rocky(x,z)<0.4)makeTree(x,z);}
+makeTree(8,5);makeTree(10,7);makeTree(7,9);
+for(let i=0;i<20;i++){const x=(Math.random()-0.5)*140,z=(Math.random()-0.5)*140;
+  if(okSpot(x,z)&&forestF(x,z)<0.2&&rocky(x,z)<0.35&&Math.hypot(x,z)<62)makeTree(x,z);}
+makeRock(6,-9,false);
+for(let i=0;i<13;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*ROCKY.r*0.9;
+  const x=ROCKY.x+Math.cos(a)*rr,z=ROCKY.z+Math.sin(a)*rr;if(okSpot(x,z))makeRock(x,z,Math.random()<0.4);}
+makeBush(-8,6);makeBush(-10,8);
+for(let i=0;i<7;i++){const a=Math.random()*6.28;
+  const x=FOREST.x+Math.cos(a)*(FOREST.r+2),z=FOREST.z+Math.sin(a)*(FOREST.r+2);if(okSpot(x,z))makeBush(x,z);}
+for(let i=0;i<4;i++){const a=Math.random()*6.28,rr=POND.r+4+Math.random()*3;
+  const x=POND.x+Math.cos(a)*rr,z=POND.z+Math.sin(a)*rr;if(okSpot(x,z))makeBush(x,z);}
+
+// ===== animals =====
+const deerMat=wM(0x8a6a44);
+function makeDeer(x,z){const g=new THREE.Group();
+  const body=new THREE.Mesh(new THREE.BoxGeometry(1.0,0.55,0.45),deerMat);body.position.y=0.78;g.add(body);
+  const head=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.3,0.26),deerMat);head.position.set(0.7,1.2,0);g.add(head);
+  const neck=new THREE.Mesh(new THREE.BoxGeometry(0.22,0.45,0.22),deerMat);neck.position.set(0.55,1.0,0);neck.rotation.z=0.5;g.add(neck);
+  const a1=new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,0.42,4),trunkMat);a1.position.set(0.72,1.5,0.1);a1.rotation.z=0.4;g.add(a1);
+  const a2=a1.clone();a2.position.z=-0.1;a2.rotation.x=0.5;g.add(a2);
+  const lg=new THREE.CylinderGeometry(0.06,0.05,0.62,5);
+  [[0.35,0.18],[0.35,-0.18],[-0.35,0.18],[-0.35,-0.18]].forEach(p=>{
+    const l=new THREE.Mesh(lg,deerMat);l.position.set(p[0],0.31,p[1]);g.add(l);});
+  place(g,x,z);g.userData={kind:'deer',state:'wander',dest:null,pause:Math.random()*3};
+  shadows(g);scene.add(g);G.deer.push(g);}
+function spawnDeer(){const a=Math.random()*6.28;
+  const x=FOREST.x+Math.cos(a)*(FOREST.r+4),z=FOREST.z+Math.sin(a)*(FOREST.r+4);
+  okSpot(x,z)?makeDeer(x,z):makeDeer(FOREST.x+8,FOREST.z+8);}
+makeDeer(-14,2);makeDeer(-22,-2);makeDeer(-16,14);makeDeer(-36,0);
+
+const chickBody=wM(0xf0ece0),comb=wM(0xc03030),beakM=wM(0xe0a030);
+function makeChicken(home){const g=new THREE.Group();
+  const b=new THREE.Mesh(new THREE.SphereGeometry(0.18,7,6),chickBody);b.position.y=0.2;b.scale.set(1,0.9,1.25);g.add(b);
+  const h=new THREE.Mesh(new THREE.SphereGeometry(0.1,6,5),chickBody);h.position.set(0,0.42,0.16);g.add(h);
+  const c=new THREE.Mesh(new THREE.ConeGeometry(0.05,0.09,4),comb);c.position.set(0,0.52,0.16);g.add(c);
+  const bk=new THREE.Mesh(new THREE.ConeGeometry(0.04,0.1,4),beakM);bk.rotation.x=Math.PI/2;bk.position.set(0,0.42,0.28);g.add(bk);
+  g.userData={kind:'critter',home,radius:3.5,dest:null,pause:Math.random()*2,peckT:0,head:h};
+  place(g,home.position.x+(Math.random()-0.5)*3,home.position.z+(Math.random()-0.5)*3);
+  shadows(g);scene.add(g);G.critters.push(g);}
+const wool=wM(0xe9e7da),face=wM(0x4a4038);
+function makeSheep(home){const g=new THREE.Group();
+  const b=new THREE.Mesh(new THREE.SphereGeometry(0.45,8,7),wool);b.position.y=0.5;b.scale.set(1,0.85,1.3);g.add(b);
+  const h=new THREE.Mesh(new THREE.BoxGeometry(0.22,0.22,0.3),face);h.position.set(0,0.62,0.62);g.add(h);
+  const lg=new THREE.CylinderGeometry(0.05,0.05,0.35,5);
+  [[0.2,0.25],[0.2,-0.25],[-0.2,0.25],[-0.2,-0.25]].forEach(p=>{
+    const l=new THREE.Mesh(lg,face);l.position.set(p[0],0.17,p[1]);g.add(l);});
+  g.userData={kind:'critter',home,radius:3,dest:null,pause:Math.random()*3,peckT:0,head:h};
+  place(g,home.position.x+(Math.random()-0.5)*2.5,home.position.z+(Math.random()-0.5)*2.5);
+  shadows(g);scene.add(g);G.critters.push(g);}
+
+// ===== humanoid settlers =====
+const skin=wM(0xe0b088),skin2=wM(0xc89070),hairMats=[0x3a2a1a,0x5a3a22,0x806040,0x202020].map(wM);
+const tunics=[0x8a4a4a,0x4a6a9a,0x6a8a4a,0x9a7a3a,0x6a5a8a,0x4a8a8a].map(wM);
+const pants=wM(0x5a4636),boot=wM(0x3a2c20);
+const loadMat={wood:wM(0x6b4a2a),stone:wM(0x8d8a80),food:wM(0xc04040)};
+
+function makeSettler(x,z){
+  const g=new THREE.Group();
+  const tunic=tunics[G.villagers.length%6];
+  // legs
+  const legGeo=new THREE.CylinderGeometry(0.1,0.09,0.55,6);
+  const legL=new THREE.Mesh(legGeo,pants);legL.position.set(0.12,0.42,0);g.add(legL);
+  const legR=new THREE.Mesh(legGeo,pants);legR.position.set(-0.12,0.42,0);g.add(legR);
+  const footGeo=new THREE.BoxGeometry(0.16,0.1,0.26);
+  const footL=new THREE.Mesh(footGeo,boot);footL.position.set(0.12,0.13,0.05);legL.add(footL);footL.position.set(0,-0.32,0.05);
+  const footR=new THREE.Mesh(footGeo,boot);legR.add(footR);footR.position.set(0,-0.32,0.05);
+  // torso
+  const torso=new THREE.Mesh(new THREE.CylinderGeometry(0.24,0.3,0.62,8),tunic);torso.position.y=1.0;g.add(torso);
+  const belt=new THREE.Mesh(new THREE.CylinderGeometry(0.27,0.28,0.1,8),wM(0x4a3525));belt.position.y=0.74;g.add(belt);
+  // arms
+  const armGeo=new THREE.CylinderGeometry(0.07,0.06,0.5,6);
+  const armL=new THREE.Group();const armLm=new THREE.Mesh(armGeo,tunic);armLm.position.y=-0.22;armL.add(armLm);
+  const handL=new THREE.Mesh(new THREE.SphereGeometry(0.08,6,5),skin);handL.position.y=-0.46;armL.add(handL);
+  armL.position.set(0.3,1.22,0);g.add(armL);
+  const armR=new THREE.Group();const armRm=new THREE.Mesh(armGeo,tunic);armRm.position.y=-0.22;armR.add(armRm);
+  const handR=new THREE.Mesh(new THREE.SphereGeometry(0.08,6,5),skin);handR.position.y=-0.46;armR.add(handR);
+  armR.position.set(-0.3,1.22,0);g.add(armR);
+  // head
+  const neck=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,0.12,6),skin2);neck.position.y=1.34;g.add(neck);
+  const head=new THREE.Mesh(new THREE.SphereGeometry(0.2,10,9),skin);head.position.y=1.52;head.scale.set(0.92,1.05,0.92);g.add(head);
+  const hair=new THREE.Mesh(new THREE.SphereGeometry(0.205,9,6,0,6.3,0,1.5),hairMats[(Math.random()*4)|0]);
+  hair.position.y=1.55;g.add(hair);
+  const eyeGeo=new THREE.SphereGeometry(0.025,5,4),eyeM=wM(0x201810);
+  const eyeL=new THREE.Mesh(eyeGeo,eyeM);eyeL.position.set(0.07,1.53,0.18);g.add(eyeL);
+  const eyeR=new THREE.Mesh(eyeGeo,eyeM);eyeR.position.set(-0.07,1.53,0.18);g.add(eyeR);
+  // carried load (hidden until carrying)
+  const load=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.3,0.3),loadMat.wood);
+  load.position.set(0,1.05,-0.32);load.visible=false;g.add(load);
+  // select ring
+  const ring=new THREE.Mesh(new THREE.RingGeometry(0.45,0.62,22),
+    new THREE.MeshBasicMaterial({color:0xf0c060,side:THREE.DoubleSide}));
+  ring.rotation.x=-Math.PI/2;ring.position.y=0.05;ring.visible=false;g.add(ring);
+
+  place(g,x,z);
+  g.userData={kind:'villager',ring,legL,legR,armL,armR,load,
+    order:null,phase:'idle',dest:null,node:null,site:null,prey:null,depot:null,
+    carrying:0,carryRes:null,workT:0,walkT:0,retry:0};
+  shadows(g);scene.add(g);G.villagers.push(g);
+  return g;
+}
+
+// ===== buildings =====
+function keepMesh(){const g=new THREE.Group();
+  const base=new THREE.Mesh(new THREE.BoxGeometry(3.4,3.0,3.4),wM(0x9a978c));base.position.y=1.5;g.add(base);
+  const top=new THREE.Mesh(new THREE.BoxGeometry(3.7,0.5,3.7),wM(0x8a877c));top.position.y=3.1;g.add(top);
+  // battlements
+  for(let i=-1;i<=1;i++)for(let j=-1;j<=1;j++){if(i===0&&j===0)continue;
+    const m=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.5,0.5),wM(0x8a877c));
+    m.position.set(i*1.5,3.55,j*1.5);g.add(m);}
+  const door=new THREE.Mesh(new THREE.BoxGeometry(0.8,1.3,0.1),wM(0x4a3525));door.position.set(0,0.65,1.72);g.add(door);
+  const pole=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.05,2.0,5),wM(0x5a4028));pole.position.set(0,4.8,0);g.add(pole);
+  const flag=new THREE.Mesh(new THREE.PlaneGeometry(1.1,0.6),new THREE.MeshBasicMaterial({color:0xc02828,side:THREE.DoubleSide}));
+  flag.position.set(0.55,5.3,0);flag.name='flag';g.add(flag);return g;}
+function storeMesh(){const g=new THREE.Group();
+  const base=new THREE.Mesh(new THREE.BoxGeometry(2.4,1.4,2.0),wM(0xb89868));base.position.y=0.7;g.add(base);
+  const roof=new THREE.Mesh(new THREE.BoxGeometry(2.7,0.9,2.3),wM(0x8a5030));roof.position.y=1.7;roof.rotation.z=0.0;roof.scale.y=0.6;g.add(roof);
+  const crate1=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.5,0.5),wM(0x9a7a4a));crate1.position.set(1.4,0.25,0.6);g.add(crate1);
+  const crate2=new THREE.Mesh(new THREE.BoxGeometry(0.45,0.45,0.45),wM(0x8a6a3a));crate2.position.set(1.5,0.22,-0.5);g.add(crate2);
+  const sack=new THREE.Mesh(new THREE.SphereGeometry(0.3,6,5),wM(0xc8b88a));sack.position.set(-1.4,0.3,0.5);sack.scale.y=1.2;g.add(sack);return g;}
+function houseMesh(){const g=new THREE.Group();
+  const base=new THREE.Mesh(new THREE.BoxGeometry(2.2,1.3,2.0),wM(0xc8b088));base.position.y=0.65;g.add(base);
+  const beam=new THREE.Mesh(new THREE.BoxGeometry(2.3,0.12,2.1),wM(0x6b4a2a));beam.position.y=1.32;g.add(beam);
+  const roof=new THREE.Mesh(new THREE.ConeGeometry(1.9,1.15,4),wM(0x9a4a30));roof.position.y=1.92;roof.rotation.y=Math.PI/4;g.add(roof);
+  const door=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.8,0.06),wM(0x5a4028));door.position.set(0,0.4,1.03);g.add(door);
+  const win=new THREE.Mesh(new THREE.BoxGeometry(0.4,0.35,0.05),wM(0x3a3020));win.position.set(0.6,0.85,1.03);g.add(win);return g;}
+function farmMesh(){const g=new THREE.Group();
+  const soil=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.15,3.4),wM(0x7a5a38));soil.position.y=0.08;g.add(soil);
+  for(let i=-1;i<=1;i++){const r=new THREE.Mesh(new THREE.BoxGeometry(3.0,0.32,0.5),wM(0xc8b84a));r.position.set(0,0.3,i*1.0);g.add(r);}
+  const post=new THREE.Mesh(new THREE.CylinderGeometry(0.06,0.06,1.1,5),wM(0x6b4a2a));post.position.set(1.6,0.55,1.6);g.add(post);return g;}
+function fence(g,s){const pg=new THREE.CylinderGeometry(0.07,0.07,0.8,5),rg=new THREE.BoxGeometry(s,0.08,0.08),m=wM(0x8a6a44);
+  for(const sd of[[0,s/2,0],[0,-s/2,0],[s/2,0,1],[-s/2,0,1]]){
+    const r=new THREE.Mesh(rg,m);r.position.set(sd[0],0.55,sd[1]);if(sd[2])r.rotation.y=Math.PI/2;g.add(r);
+    const r2=r.clone();r2.position.y=0.3;g.add(r2);}
+  [[s/2,s/2],[s/2,-s/2],[-s/2,s/2],[-s/2,-s/2]].forEach(p=>{const po=new THREE.Mesh(pg,m);po.position.set(p[0],0.4,p[1]);g.add(po);});}
+function coopMesh(){const g=new THREE.Group();
+  const box=new THREE.Mesh(new THREE.BoxGeometry(1.4,1.0,1.1),wM(0xb08858));box.position.y=0.75;g.add(box);
+  const roof=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.1,1.3),wM(0x7a4a30));roof.position.y=1.32;roof.rotation.z=0.18;g.add(roof);
+  const ramp=new THREE.Mesh(new THREE.BoxGeometry(0.4,0.06,1.0),wM(0x8a6a44));ramp.position.set(0,0.4,0.95);ramp.rotation.x=0.5;g.add(ramp);return g;}
+function penMesh(){const g=new THREE.Group();fence(g,4.2);
+  const tr=new THREE.Mesh(new THREE.BoxGeometry(1.2,0.3,0.4),wM(0x6b4a2a));tr.position.set(0,0.18,0);g.add(tr);return g;}
+function lumberMesh(){const g=new THREE.Group();
+  const base=new THREE.Mesh(new THREE.BoxGeometry(2.0,1.0,1.6),wM(0xa07848));base.position.y=0.55;g.add(base);
+  const roof=new THREE.Mesh(new THREE.ConeGeometry(1.6,0.7,4),wM(0x6a4028));roof.position.y=1.4;roof.rotation.y=Math.PI/4;g.add(roof);
+  for(let i=0;i<3;i++){const log=new THREE.Mesh(new THREE.CylinderGeometry(0.16,0.16,1.6,7),trunkMat);
+    log.rotation.z=Math.PI/2;log.position.set(1.4,0.18+i*0.34,0.3);g.add(log);}
+  const saw=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,0.08,12),wM(0xb0b0b0));saw.position.set(-1.2,0.6,0.4);saw.rotation.x=Math.PI/2;g.add(saw);return g;}
+function quarryMesh(){const g=new THREE.Group();
+  const pit=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.3,0.4,8),wM(0x6f6d64));pit.position.y=0.2;g.add(pit);
+  const b1=new THREE.Mesh(new THREE.BoxGeometry(0.8,0.5,0.6),rockMat);b1.position.set(1.2,0.3,0.8);b1.rotation.y=0.4;g.add(b1);
+  const b2=new THREE.Mesh(new THREE.BoxGeometry(0.6,0.4,0.5),rockMat);b2.position.set(-1.1,0.25,0.9);g.add(b2);
+  const p1=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,2.2,5),wM(0x8a6a44));p1.position.set(0.8,1.1,-0.8);g.add(p1);
+  const p2=p1.clone();p2.position.x=-0.8;g.add(p2);
+  const beam=new THREE.Mesh(new THREE.BoxGeometry(1.8,0.12,0.12),wM(0x8a6a44));beam.position.set(0,2.15,-0.8);g.add(beam);return g;}
+function hallMesh(){const g=new THREE.Group();
+  const stone=new THREE.Mesh(new THREE.BoxGeometry(4.2,1.0,3.4),wM(0x9a978c));stone.position.y=0.5;g.add(stone);
+  const base=new THREE.Mesh(new THREE.BoxGeometry(3.8,1.5,3.0),wM(0xb89868));base.position.y=1.75;g.add(base);
+  const roof=new THREE.Mesh(new THREE.ConeGeometry(3.3,1.9,4),wM(0x7a3a28));roof.position.y=3.45;roof.rotation.y=Math.PI/4;g.add(roof);
+  const door=new THREE.Mesh(new THREE.BoxGeometry(0.85,1.2,0.08),wM(0x4a3525));door.position.set(0,1.0,1.55);g.add(door);
+  const pole=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.05,1.9,5),wM(0x5a4028));pole.position.set(0,5.2,0);g.add(pole);
+  const flag=new THREE.Mesh(new THREE.PlaneGeometry(1.0,0.55),new THREE.MeshBasicMaterial({color:0xc02828,side:THREE.DoubleSide}));
+  flag.position.set(0.52,5.7,0);flag.name='flag';g.add(flag);return g;}
+const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,hall:hallMesh};
+
+// keep at origin + starting settler
+const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'building',type:'keep',depot:true};
+shadows(keep);scene.add(keep);G.buildings.push(keep);G.depots.push(keep);
+makeSettler(2.4,2.4);
+
+// ===== UI helpers =====
+const $=id=>document.getElementById(id);
+let toastTimer=null;
+function toast(m){const t=$('toastText');t.textContent=m;t.classList.add('show');
+  clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2800);}
+function hint(m){$('hintText').textContent=m;}
+function pop(){return G.villagers.length;}
+function afford(c){for(const k in c)if(G[k]<c[k])return false;return true;}
+function pay(c){for(const k in c)G[k]-=c[k];}
+function foodRate(){return G.farms*0.4+G.coops*0.25+G.pens*0.45;}
+function stoneRate(){return G.quarries*0.4;}
+function spaceLeft(){return Math.max(0,G.cap-G.stored);}
+function addStored(res,amt){const sp=spaceLeft();const give=Math.min(amt,sp);G[res]+=give;G.stored+=give;return give;}
+function spend(c){for(const k in c){G[k]-=c[k];G.stored-=c[k];}if(G.stored<0)G.stored=0;}
+
+function refreshHUD(){
+  $('hWood').textContent=Math.floor(G.wood);
+  $('hFood').textContent=Math.floor(G.food);
+  $('hStone').textContent=Math.floor(G.stone);
+  $('hStore').textContent=Math.floor(G.stored)+'/'+G.cap;
+  $('storeRes').classList.toggle('warn',G.stored>=G.cap-5);
+  $('hPop').textContent=pop()+'/'+G.popCap;
+  $('hFoodRate').textContent=foodRate()>0?('+'+foodRate().toFixed(1)):'';
+  $('hStoneRate').textContent=stoneRate()>0?('+'+stoneRate().toFixed(1)):'';
+  document.querySelectorAll('#buildMenu .opt').forEach(b=>{
+    const t=b.dataset.build;b.disabled=(t==='hall'&&G.hall)||!afford(COSTS[t]);});
+  updateSelCard();
+}
+const JOBNAME={wood:'cutting wood',stone:'mining stone',food:'foraging',hunt:'hunting',null:'idle',idle:'idle'};
+function updateSelCard(){
+  const c=$('selCard');
+  if(!G.selected){c.classList.remove('show');return;}
+  const u=G.selected.userData;
+  const carry=u.carrying>0?` · carrying ${u.carrying} ${u.carryRes}`:'';
+  c.innerHTML=`<b>Settler</b> — ${JOBNAME[u.order]||'idle'}${carry}`;
+  c.classList.add('show');
+}
+
+// ===== orders =====
+function select(v){
+  if(G.selected)G.selected.userData.ring.visible=false;
+  G.selected=v;
+  $('tabJobs').disabled=!v;
+  if(v){v.userData.ring.visible=true;hint('Tap a tree, rock, berry or deer — or use ⚑ Assign for a standing job');}
+  updateSelCard();
+}
+function clearTargets(u){u.dest=null;u.node=null;u.site=null;u.prey=null;u.depot=null;}
+function nearestNode(v,res){let best=null,bd=1e9;
+  for(const n of G.nodes){if(n.userData.res!==res)continue;const d=n.position.distanceTo(v.position);if(d<bd){bd=d;best=n;}}return best;}
+function nearestDeer(v){let best=null,bd=1e9;
+  for(const d of G.deer){const dd=d.position.distanceTo(v.position);if(dd<bd){bd=dd;best=d;}}return best;}
+function nearestDepot(v){let best=null,bd=1e9;
+  for(const dp of G.depots){const d=dp.position.distanceTo(v.position);if(d<bd){bd=d;best=dp;}}return best;}
+
+function setOrder(v,order){const u=v.userData;u.order=(order==='idle'?null:order);clearTargets(u);u.phase='idle';u.retry=0;updateSelCard();}
+function manualGather(v,node){const u=v.userData;u.order=node.userData.res;clearTargets(u);u.node=node;u.dest=node.position.clone();u.phase='toNode';updateSelCard();}
+function manualHunt(v,d){const u=v.userData;u.order='hunt';clearTargets(u);u.prey=d;u.dest=d.position.clone();u.phase='toPrey';d.userData.state='flee';updateSelCard();}
+function manualMove(v,p){const u=v.userData;u.order=null;clearTargets(u);u.dest=p.clone();u.phase='move';updateSelCard();}
+function manualBuild(v,site){const u=v.userData;clearTargets(u);u.site=site;u.dest=site.position.clone();u.phase='toSite';}
+
+// ===== build mode =====
+function openMenu(which){
+  closeMenus();
+  if(which==='build'){$('buildMenu').classList.add('show');$('tabBuild').classList.add('active');}
+  if(which==='jobs'){$('jobMenu').classList.add('show');$('tabJobs').classList.add('active');}
+}
+function closeMenus(){$('buildMenu').classList.remove('show');$('jobMenu').classList.remove('show');
+  $('tabBuild').classList.remove('active');$('tabJobs').classList.remove('active');}
+$('tabBuild').addEventListener('click',()=>{
+  if($('buildMenu').classList.contains('show'))closeMenus();else openMenu('build');});
+$('tabJobs').addEventListener('click',()=>{
+  if(!G.selected)return;
+  if($('jobMenu').classList.contains('show'))closeMenus();else openMenu('jobs');});
+document.querySelectorAll('#jobMenu .opt').forEach(b=>b.addEventListener('click',()=>{
+  if(G.selected){setOrder(G.selected,b.dataset.job);toast('Order set: '+(JOBNAME[b.dataset.job]||'idle'));}
+  closeMenus();}));
+document.querySelectorAll('#buildMenu .opt').forEach(b=>b.addEventListener('click',()=>{
+  closeMenus();enterBuild(b.dataset.build);}));
+
+function enterBuild(type){
+  if(!afford(COSTS[type])){toast('Not enough resources.');return;}
+  cancelBuild();
+  const ghost=MESH[type]();
+  ghost.traverse(o=>{if(o.material){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=0.55;}});
+  ghost.position.set(camTarget.x,getH(camTarget.x,camTarget.z),camTarget.z);
+  scene.add(ghost);G.buildMode={type,ghost};
+  $('mainBar').classList.add('hide');$('confirmBar').classList.add('show');
+  hint(type==='quarry'?'Quarries need rocky ground — place it in the eastern hills'
+    :type==='lumber'?'Place the lumber camp near the forest for a short haul'
+    :'Tap the ground to place the '+type+', then confirm');
+}
+function cancelBuild(){if(G.buildMode){scene.remove(G.buildMode.ghost);G.buildMode=null;}
+  $('mainBar').classList.remove('hide');$('confirmBar').classList.remove('show');}
+function quarryOK(p){if(rocky(p.x,p.z)>0.22)return true;
+  for(const n of G.nodes)if(n.userData.res==='stone'&&n.position.distanceTo(p)<6)return true;return false;}
+function confirmBuild(){
+  const bm=G.buildMode;if(!bm)return;const p=bm.ghost.position;
+  if(getH(p.x,p.z)<WATER_Y+0.4){toast('Can\u2019t build in the pond.');return;}
+  if(bm.type==='quarry'&&!quarryOK(p)){toast('No stone here — use the rocky hills.');return;}
+  spend(COSTS[bm.type]);
+  const site=MESH[bm.type]();site.position.copy(p);site.scale.y=0.12;
+  site.userData={kind:'site',type:bm.type,progress:0,need:BTIME[bm.type]};
+  shadows(site);scene.add(site);G.buildings.push(site);
+  cancelBuild();
+  let builder=G.selected,best=1e9;
+  if(!builder)for(const v of G.villagers){const d=v.position.distanceTo(site.position)+(v.userData.phase==='idle'?0:40);if(d<best){best=d;builder=v;}}
+  if(builder)manualBuild(builder,site);
+  toast('Construction started.');refreshHUD();
+}
+$('bConfirm').addEventListener('click',confirmBuild);
+$('bCancel').addEventListener('click',cancelBuild);
+
+// ===== input =====
+const ray=new THREE.Raycaster(),ndc=new THREE.Vector2();
+let pStart=null,pMoved=false,lastPan=null,pinch=null;
+function castAt(cx,cy,objs){ndc.x=(cx/innerWidth)*2-1;ndc.y=-(cy/innerHeight)*2+1;
+  ray.setFromCamera(ndc,camera);return ray.intersectObjects(objs,true);}
+function rootOf(o){while(o&&!(o.userData&&o.userData.kind)&&o.parent)o=o.parent;return(o&&o.userData&&o.userData.kind)?o:null;}
+function panBy(dx,dy){const fwd=new THREE.Vector3().subVectors(camTarget,camera.position);fwd.y=0;fwd.normalize();
+  const right=new THREE.Vector3(-fwd.z,0,fwd.x);const s=0.05*camZoom;
+  camTarget.addScaledVector(right,-dx*s);camTarget.addScaledVector(fwd,dy*s);
+  camTarget.x=Math.max(-74,Math.min(74,camTarget.x));camTarget.z=Math.max(-74,Math.min(74,camTarget.z));updateCam();}
+canvas.addEventListener('touchstart',e=>{e.preventDefault();
+  if(e.touches.length===2){pinch=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);pStart=null;return;}
+  pStart={x:e.touches[0].clientX,y:e.touches[0].clientY};lastPan={...pStart};pMoved=false;},{passive:false});
+canvas.addEventListener('touchmove',e=>{e.preventDefault();
+  if(e.touches.length===2&&pinch){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+    camZoom=Math.min(2.3,Math.max(0.5,camZoom*pinch/d));pinch=d;updateCam();return;}
+  if(!pStart)return;const t=e.touches[0];
+  if(Math.hypot(t.clientX-pStart.x,t.clientY-pStart.y)>10)pMoved=true;
+  if(pMoved&&lastPan)panBy(t.clientX-lastPan.x,t.clientY-lastPan.y);
+  lastPan={x:t.clientX,y:t.clientY};},{passive:false});
+canvas.addEventListener('touchend',e=>{e.preventDefault();
+  if(pinch&&e.touches.length<2)pinch=null;
+  if(pStart&&!pMoved)handleTap(pStart.x,pStart.y);pStart=null;},{passive:false});
+let mDown=null,mMoved=false;
+canvas.addEventListener('mousedown',e=>{mDown={x:e.clientX,y:e.clientY};mMoved=false;});
+canvas.addEventListener('mousemove',e=>{if(!mDown)return;
+  if(Math.hypot(e.clientX-mDown.x,e.clientY-mDown.y)>8)mMoved=true;if(mMoved)panBy(e.movementX,e.movementY);});
+canvas.addEventListener('mouseup',e=>{if(mDown&&!mMoved)handleTap(e.clientX,e.clientY);mDown=null;});
+canvas.addEventListener('wheel',e=>{camZoom=Math.min(2.3,Math.max(0.5,camZoom*(e.deltaY>0?1.1:0.9)));updateCam();});
+
+function handleTap(x,y){
+  if(!G.started)return;
+  closeMenus();
+  if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length)G.buildMode.ghost.position.copy(hit[0].point);return;}
+  const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...G.buildings]);
+  if(hits.length){const r=rootOf(hits[0].object);
+    if(r){const k=r.userData.kind;
+      if(k==='villager'){select(r);return;}
+      if(k==='deer'){if(G.selected)manualHunt(G.selected,r);else toast('Tap a settler first.');return;}
+      if(k==='node'){if(G.selected)manualGather(G.selected,r);else toast('Tap a settler first.');return;}
+      if(k==='site'){if(G.selected)manualBuild(G.selected,r);return;}
+      if(k==='building'){return;}}}
+  const g=castAt(x,y,[terrain]);
+  if(g.length&&G.selected)manualMove(G.selected,g[0].point);
+  else if(g.length)hint('Tap your settler to select them first');
+}
+
+// ===== simulation =====
+const clock=new THREE.Clock();
+function walk(g,dir,sp,dt){g.position.addScaledVector(dir,sp*dt);g.position.y=getH(g.position.x,g.position.z);}
+function animWalk(u,dt){u.walkT+=dt*9;const s=Math.sin(u.walkT)*0.5;
+  u.legL.rotation.x=s;u.legR.rotation.x=-s;u.armL.rotation.x=-s*0.8;u.armR.rotation.x=s*0.8;}
+function animRest(u){u.legL.rotation.x*=0.8;u.legR.rotation.x*=0.8;}
+function setLoad(u,v){const has=u.carrying>0;u.load.visible=has;
+  if(has){u.load.material=loadMat[u.carryRes];const s=0.18+0.18*(u.carrying/CARRY);u.load.scale.setScalar(s);}}
+
+function tickVillager(v,dt){
+  const u=v.userData;
+  switch(u.phase){
+    case 'move':{
+      const d=new THREE.Vector3().subVectors(u.dest,v.position);d.y=0;
+      if(d.length()>0.2){d.normalize();walk(v,d,3.2,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);}
+      else{u.phase='idle';animRest(u);}break;}
+    case 'toNode':{
+      const n=u.node;
+      if(!n||!n.parent){u.phase=u.carrying>0?'toDepot':'idle';u.node=null;break;}
+      const d=new THREE.Vector3().subVectors(n.position,v.position);d.y=0;
+      if(d.length()>1.25){d.normalize();walk(v,d,3.2,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);}
+      else{u.phase='gather';animRest(u);}break;}
+    case 'gather':{
+      const n=u.node;
+      if(!n||!n.parent){u.phase=u.carrying>0?'toDepot':'idle';u.node=null;break;}
+      u.workT+=dt;u.armR.rotation.x=Math.sin(u.workT*8)*0.9-0.4;u.armL.rotation.x=Math.sin(u.workT*8)*0.5-0.2;
+      if(u.workT>=0.9){u.workT=0;
+        const take=Math.min(2,n.userData.amount,CARRY-u.carrying);
+        n.userData.amount-=take;u.carrying+=take;u.carryRes=n.userData.res;n.scale.multiplyScalar(0.99);setLoad(u);
+        if(n.userData.amount<=0){scene.remove(n);const i=G.nodes.indexOf(n);if(i>=0)G.nodes.splice(i,1);u.node=null;}
+        if(u.carrying>=CARRY||!u.node){u.armR.rotation.x=0;u.armL.rotation.x=0;
+          u.depot=nearestDepot(v);u.phase=u.carrying>0?'toDepot':'idle';}
+      }break;}
+    case 'toDepot':{
+      const dp=u.depot||nearestDepot(v);u.depot=dp;
+      if(!dp){u.phase='idle';break;}
+      const d=new THREE.Vector3().subVectors(dp.position,v.position);d.y=0;
+      if(d.length()>1.8){d.normalize();walk(v,d,3.2,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);}
+      else{u.phase='deposit';animRest(u);}break;}
+    case 'deposit':{
+      if(u.carrying>0){
+        const got=addStored(u.carryRes,u.carrying);u.carrying-=got;setLoad(u);refreshHUD();
+        if(u.carrying>0){ if(clock.elapsedTime-G.fullWarn>4){G.fullWarn=clock.elapsedTime;toast('📦 Storage full — build a storehouse!');}break; }
+      }
+      // resume standing order
+      if(u.order==='hunt'){const pr=nearestDeer(v);if(pr){u.prey=pr;pr.userData.state='flee';u.phase='toPrey';}else u.phase='idle';}
+      else if(u.order){const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else{u.phase='idle';u.retry=1.2;}}
+      else u.phase='idle';
+      break;}
+    case 'toSite':{
+      const s=u.site;if(!s||s.userData.kind!=='site'){u.phase='idle';u.site=null;break;}
+      const d=new THREE.Vector3().subVectors(s.position,v.position);d.y=0;
+      if(d.length()>1.4){d.normalize();walk(v,d,3.2,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);}
+      else{u.phase='build';animRest(u);}break;}
+    case 'build':{
+      const s=u.site;if(!s||s.userData.kind!=='site'){u.phase='idle';u.site=null;break;}
+      u.workT+=dt;u.armR.rotation.x=Math.sin(u.workT*9)*0.8-0.3;u.armL.rotation.x=Math.sin(u.workT*9)*0.6-0.2;
+      s.userData.progress+=dt;const p=Math.min(1,s.userData.progress/s.userData.need);s.scale.y=0.12+0.88*p;
+      if(p>=1){finishBuilding(s);u.site=null;u.armR.rotation.x=0;u.armL.rotation.x=0;
+        // resume order
+        if(u.order){const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else u.phase='idle';}else u.phase='idle';}
+      break;}
+    case 'toPrey':{
+      const pr=u.prey;if(!pr||!pr.parent){u.phase='idle';u.prey=null;break;}
+      const d=new THREE.Vector3().subVectors(pr.position,v.position);d.y=0;const dist=d.length();
+      if(dist<1.1){scene.remove(pr);const i=G.deer.indexOf(pr);if(i>=0)G.deer.splice(i,1);
+        u.carrying=Math.min(CARRY,u.carrying+10);u.carryRes='food';setLoad(u);u.prey=null;
+        toast('🦌 Venison taken — hauling it home.');u.depot=nearestDepot(v);u.phase='toDepot';
+        setTimeout(spawnDeer,28000+Math.random()*20000);break;}
+      if(dist>17){u.phase='idle';u.prey=null;toast('The deer escaped.');break;}
+      d.normalize();walk(v,d,3.7,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);break;}
+    default:{ // idle
+      animRest(u);
+      if(u.order){
+        if(u.retry>0){u.retry-=dt;break;}
+        if(u.order==='hunt'){const pr=nearestDeer(v);if(pr){u.prey=pr;pr.userData.state='flee';u.phase='toPrey';}else u.retry=2;}
+        else{const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else u.retry=2;}
+      }
+    }
+  }
+}
+
+function finishBuilding(s){
+  s.scale.y=1;s.userData.kind='building';const t=s.userData.type;
+  if(t==='house'){G.houses++;G.popCap+=3;toast('🏠 House raised — +3 population.');}
+  if(t==='storehouse'){G.stores++;G.cap+=200;s.userData.depot=true;G.depots.push(s);toast('📦 Storehouse built — +200 storage & a new drop-off.');}
+  if(t==='farm'){G.farms++;toast('🌾 Farm yields food over time.');}
+  if(t==='coop'){G.coops++;makeChicken(s);makeChicken(s);makeChicken(s);toast('🐔 Coop built — hens settle in.');}
+  if(t==='pen'){G.pens++;makeSheep(s);makeSheep(s);toast('🐑 Pen built — sheep graze.');}
+  if(t==='lumber'){G.lumbers++;s.userData.depot=true;G.depots.push(s);toast('🪓 Lumber camp — drop-off for nearby woodcutters.');}
+  if(t==='quarry'){G.quarries++;toast('⛏ Quarry cut — stone flows in.');}
+  if(t==='hall'){G.hall=true;G.popCap+=5;toast('🏛 The Great Hall stands — your realm is founded!');hint('Realm founded. The valley is yours to grow.');}
+  refreshHUD();
+}
+
+function tickDeer(d,dt){const u=d.userData;
+  if(u.state==='flee'){let hunter=null,bd=1e9;
+    for(const v of G.villagers)if(v.userData.prey===d){const dd=v.position.distanceTo(d.position);if(dd<bd){bd=dd;hunter=v;}}
+    if(!hunter){u.state='wander';return;}
+    if(bd>18){u.state='wander';return;}
+    const dir=new THREE.Vector3().subVectors(d.position,hunter.position);dir.y=0;dir.normalize();
+    walk(d,dir,3.2,dt);d.rotation.y=Math.atan2(dir.x,dir.z);return;}
+  if(u.pause>0){u.pause-=dt;return;}
+  if(!u.dest){const a=Math.random()*6.28,r=4+Math.random()*7;
+    const nx=d.position.x+Math.cos(a)*r,nz=d.position.z+Math.sin(a)*r;
+    if(getH(nx,nz)>WATER_Y+0.4&&Math.abs(nx)<62&&Math.abs(nz)<62)u.dest=new THREE.Vector3(nx,0,nz);else u.pause=1;return;}
+  const dir=new THREE.Vector3().subVectors(u.dest,d.position);dir.y=0;
+  if(dir.length()<0.4){u.dest=null;u.pause=1.5+Math.random()*3;return;}
+  dir.normalize();walk(d,dir,1.1,dt);d.rotation.y=Math.atan2(dir.x,dir.z);}
+
+function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
+  if(u.head){if(u.head.position.y0===undefined)u.head.position.y0=u.head.position.y;
+    u.head.position.y=u.head.position.y0-Math.max(0,Math.sin(u.peckT*4))*0.08;}
+  if(u.pause>0){u.pause-=dt;return;}
+  if(!u.dest){const a=Math.random()*6.28,r=Math.random()*u.radius;
+    u.dest=new THREE.Vector3(u.home.position.x+Math.cos(a)*r,0,u.home.position.z+Math.sin(a)*r);return;}
+  const dir=new THREE.Vector3().subVectors(u.dest,c.position);dir.y=0;
+  if(dir.length()<0.25){u.dest=null;u.pause=1+Math.random()*3;return;}
+  dir.normalize();walk(c,dir,0.7,dt);c.rotation.y=Math.atan2(dir.x,dir.z);}
+
+// settler auto-recruit handled by tab? Add a small recruit on House? Use a dedicated button via jobs? 
+// Simpler: tapping keep recruits if affordable.
+keep.userData.recruit=true;
+
+let trickleF=0,trickleS=0;
+function loop(){
+  requestAnimationFrame(loop);
+  const dt=Math.min(0.05,clock.getDelta()),t=clock.elapsedTime;
+  if(G.started){
+    for(const v of G.villagers)tickVillager(v,dt);
+    for(const d of G.deer)tickDeer(d,dt);
+    for(const c of G.critters)tickCritter(c,dt);
+    const fr=foodRate(),sr=stoneRate();
+    if(fr>0){trickleF+=dt*fr;if(trickleF>=1){addStored('food',Math.floor(trickleF));trickleF%=1;refreshHUD();}}
+    if(sr>0){trickleS+=dt*sr;if(trickleS>=1){addStored('stone',Math.floor(trickleS));trickleS%=1;refreshHUD();}}
+  }
+  for(const b of G.buildings)b.traverse(o=>{if(o.name==='flag')o.rotation.y=Math.sin(t*3)*0.3;});
+  water.position.y=WATER_Y+Math.sin(t*0.8)*0.04;
+  const ang=t*0.01;sun.position.set(Math.cos(ang)*46+10,52+Math.sin(t*0.05)*4,Math.sin(ang)*36+10);
+  renderer.render(scene,camera);
+}
+loop();
+
+// recruit by tapping keep
+const _handleTap=handleTap;
+handleTap=function(x,y){
+  if(!G.started)return;
+  if(!G.buildMode){
+    const hits=castAt(x,y,G.buildings);
+    if(hits.length){const r=rootOf(hits[0].object);
+      if(r&&r.userData.recruit){
+        if(pop()>=G.popCap){toast('Build a house for more room.');closeMenus();return;}
+        if(!afford(COSTS.settler)){toast('Need 50 food to recruit.');closeMenus();return;}
+        spend(COSTS.settler);const a=Math.random()*6.28;makeSettler(Math.cos(a)*3,Math.sin(a)*3);
+        toast('A new settler answers the call. Tap the keep again to recruit more.');closeMenus();refreshHUD();return;}
+    }
+  }
+  _handleTap(x,y);
+};
+
+$('startBtn').addEventListener('click',()=>{
+  document.getElementById('intro').style.display='none';G.started=true;refreshHUD();
+  hint('Tap your settler · tap the keep to recruit more (50 food)');});
+refreshHUD();
+})();
+</script>
+</body>
+</html>
