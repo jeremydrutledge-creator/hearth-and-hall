@@ -53,6 +53,11 @@ Age of Empires-style game."
     in the City age = victory (`G.victory`). All gameplay-gated, no money/timers.
     NEXT pillars (see vision): building upgrade levels, wider economy (gold/market),
     stakes/defense (raids, walls, soldiers).
+16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
+    (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
+    buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
+    no longer walk through buildings: `G.obstacles[]` (keep + `OBS_R` building types),
+    `walk()` rides the obstacle edge + slides tangentially toward the target side.
 
 ## VISION (user, 2026-06-13): aim for the depth Rise of Kingdoms / Rise of
 Empires *advertise* — lots to build, research, and grow, a long progression

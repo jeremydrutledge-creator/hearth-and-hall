@@ -212,8 +212,11 @@ const G={
   selected:null,buildMode:null,
   farms:0,coops:0,pens:0,quarries:0,lumbers:0,houses:0,stores:0,hall:false,
   age:1, objDone:{}, victory:false,
+  obstacles:[],
   started:false, fullWarn:0
 };
+// solid building footprints settlers must walk around (radius < their interact range)
+const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1};
 const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
   pen:{wood:50},lumber:{wood:40},quarry:{wood:60},hall:{wood:150,stone:60},settler:{food:50}};
 const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,hall:14};
@@ -256,6 +259,9 @@ const SC=sun.shadow.camera;SC.left=-70;SC.right=70;SC.top=70;SC.bottom=-70;SC.ne
 scene.add(sun);scene.add(sun.target);
 // warm bounce/fill from the opposite side keeps shadows from going muddy
 const fill=new THREE.DirectionalLight(0xc8e0ff,0.18);fill.position.set(-38,26,-30);scene.add(fill);
+// settlers live on render layer 1 (drawn in a second on-top pass so they're
+// never hidden behind buildings) — lights must illuminate that layer too
+const VLAYER=1;hemi.layers.enable(VLAYER);sun.layers.enable(VLAYER);fill.layers.enable(VLAYER);
 
 // ===== gentle day cycle: golden morning -> bright noon -> amber evening (never full night) =====
 const _dc1=new THREE.Color(),_dc2=new THREE.Color(),_dt1=new THREE.Color(),_dt2=new THREE.Color(),
@@ -698,7 +704,7 @@ function makeSettler(x,z){
   g.userData={kind:'villager',ring,legL,legR,armL,armR,load,rod,
     order:null,phase:'idle',dest:null,node:null,site:null,prey:null,depot:null,fishPt:null,shoal:null,
     carrying:0,carryRes:null,workT:0,walkT:0,retry:0};
-  shadows(g);scene.add(g);G.villagers.push(g);
+  shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.villagers.push(g);
   return g;
 }
 
@@ -860,6 +866,7 @@ const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen
 // keep at origin + starting settler
 const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'building',type:'keep',depot:true};
 shadows(keep);scene.add(keep);G.buildings.push(keep);G.depots.push(keep);
+G.obstacles.push({x:0,z:0,r:OBS_R.keep});
 makeSettler(2.4,2.4);
 
 // ===== particles: work chips, chimney smoke, stumps =====
@@ -1101,7 +1108,7 @@ $('bConfirm').addEventListener('click',confirmBuild);
 $('bCancel').addEventListener('click',cancelBuild);
 
 // ===== input =====
-const ray=new THREE.Raycaster(),ndc=new THREE.Vector2();
+const ray=new THREE.Raycaster();ray.layers.enableAll();const ndc=new THREE.Vector2();
 let pStart=null,pMoved=false,lastPan=null,pinch=null;
 function castAt(cx,cy,objs){ndc.x=(cx/innerWidth)*2-1;ndc.y=-(cy/innerHeight)*2+1;
   ray.setFromCamera(ndc,camera);return ray.intersectObjects(objs,true);}
@@ -1156,7 +1163,16 @@ function handleTap(x,y){
 
 // ===== simulation =====
 const clock=new THREE.Clock();
-function walk(g,dir,sp,dt){g.position.addScaledVector(dir,sp*dt);g.position.y=getH(g.position.x,g.position.z);}
+function walk(g,dir,sp,dt){
+  let nx=g.position.x+dir.x*sp*dt,nz=g.position.z+dir.z*sp*dt;
+  if(g.userData.kind==='villager'){
+    for(const o of G.obstacles){const dx=nx-o.x,dz=nz-o.z,d=Math.hypot(dx,dz);
+      if(d<o.r){const ux=d>0.001?dx/d:1,uz=d>0.001?dz/d:0;
+        nx=o.x+ux*o.r;nz=o.z+uz*o.r;                         // ride the edge
+        let tx=-uz,tz=ux;const s=(dir.x*tx+dir.z*tz)<0?-1:1; // slide toward the target side
+        nx+=tx*s*sp*dt*0.9;nz+=tz*s*sp*dt*0.9;}}
+  }
+  g.position.x=nx;g.position.z=nz;g.position.y=getH(nx,nz);}
 function animWalk(u,dt){u.walkT+=dt*9;const s=Math.sin(u.walkT)*0.5;
   u.legL.rotation.x=s;u.legR.rotation.x=-s;u.armL.rotation.x=-s*0.8;u.armR.rotation.x=s*0.8;}
 function animRest(u){u.legL.rotation.x*=0.8;u.legR.rotation.x*=0.8;}
@@ -1260,6 +1276,7 @@ function tickVillager(v,dt){
 
 function finishBuilding(s){
   s.scale.y=1;s.userData.kind='building';const t=s.userData.type;
+  if(OBS_R[t])G.obstacles.push({x:s.position.x,z:s.position.z,r:OBS_R[t]});
   if(t==='house'){G.houses++;G.popCap+=3;addSmoke(s,0.55,2.4,-0.5);toast('🏠 House raised — +3 population.');}
   if(t==='storehouse'){G.stores++;G.cap+=200;s.userData.depot=true;G.depots.push(s);toast('📦 Storehouse built — +200 storage & a new drop-off.');}
   if(t==='farm'){G.farms++;toast('🌾 Farm yields food over time.');}
@@ -1329,7 +1346,15 @@ function loop(){
     for(let i=0;i<pa.count;i++){pa.setY(i,bs[i*3+1]+Math.sin(t*0.7+i*1.3)*0.35);}
     pa.needsUpdate=true;pollen.rotation.y=t*0.006;}
   updateDay(t);
+  // pass 1: the whole world (layer 0). pass 2: settlers (layer 1) on a cleared
+  // depth buffer so they're drawn on top and can never hide behind a building.
+  renderer.autoClear=true;camera.layers.set(0);
   renderer.render(scene,camera);
+  // pass 2 on a cleared depth buffer; null the sky so it doesn't repaint over pass 1
+  renderer.autoClear=false;renderer.clearDepth();camera.layers.set(1);
+  const _bg=scene.background;scene.background=null;
+  renderer.render(scene,camera);
+  scene.background=_bg;camera.layers.set(0);renderer.autoClear=true;
 }
 loop();
 
