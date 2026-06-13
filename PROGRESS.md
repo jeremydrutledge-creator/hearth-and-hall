@@ -43,6 +43,17 @@ Age of Empires-style game."
     over `DAYLEN=200s` (never full night). Drives sun pos/color/intensity, hemi
     tint, fog, and a redrawn sky gradient (`drawSky`). Always playable/bright.
 
+15. **Progression spine (Ages + objectives)** — FIRST pillar of the vision below.
+    `AGES[]` (Camp→Hamlet→Village→Town→City), each with an objective checklist
+    (`objs[].check()` against G state). `checkObjectives()` (loop, ~3/s) latches
+    done objectives in `G.objDone`, toasts each, and auto-advances the age when all
+    are met (`advanceAge()` bumps `G.popCap`). `AGE_UNLOCK` gates each building by
+    age — refreshHUD adds `.locked` 🔒 + disables until unlocked. Live panel
+    `#quests` (top-left, collapsible) via `renderQuests()`. Raising the Great Hall
+    in the City age = victory (`G.victory`). All gameplay-gated, no money/timers.
+    NEXT pillars (see vision): building upgrade levels, wider economy (gold/market),
+    stakes/defense (raids, walls, soldiers).
+
 ## VISION (user, 2026-06-13): aim for the depth Rise of Kingdoms / Rise of
 Empires *advertise* — lots to build, research, and grow, a long progression
 arc — but WITHOUT pay-to-play gates. Everything gated by gameplay only (time,

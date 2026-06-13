@@ -35,6 +35,24 @@
   .float.go{transform:translate(-50%,calc(-50% - 52px));opacity:1}
   .float.fade{opacity:0}
 
+  /* objectives / age panel */
+  #quests{position:fixed;left:8px;top:calc(env(safe-area-inset-top,0) + 92px);z-index:10;
+    background:rgba(18,22,11,.84);border:1px solid #4a5230;border-radius:10px;
+    padding:6px 9px;max-width:212px;font-size:.74rem;pointer-events:auto;display:none}
+  #quests.show{display:block}
+  #questHead{color:#cfd9a8;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap}
+  #questHead .age{color:#f0c060;letter-spacing:.02em}
+  #questTog{margin-left:auto;color:#9aa478;font-size:.7rem}
+  #questList{list-style:none;margin:6px 0 0;padding:0}
+  #quests.collapsed #questList{display:none}
+  #quests.collapsed #questTog{transform:rotate(-90deg)}
+  #questList li{color:#cdd6a0;padding:2px 0;line-height:1.25;display:flex;gap:5px}
+  #questList li.done{color:#84915f;text-decoration:line-through}
+  #quests.flash{animation:qflash 1.2s ease-out}
+  @keyframes qflash{0%,100%{border-color:#4a5230}40%{border-color:#f0c060;background:rgba(60,52,20,.9)}}
+  .opt.locked{opacity:.5}
+  .opt.locked::after{content:' 🔒'}
+
   #toast{position:fixed;bottom:128px;left:0;right:0;text-align:center;z-index:9;pointer-events:none}
   #toast span{display:inline-block;background:rgba(18,22,11,.9);border-radius:8px;
     padding:6px 14px;font-size:.85rem;opacity:0;transition:opacity .3s;max-width:90%}
@@ -103,6 +121,7 @@
 <div id="hint"><span id="hintText">Tap your settler to select them</span></div>
 <div id="toast"><span id="toastText"></span></div>
 <div id="selCard"></div>
+<div id="quests"><div id="questHead">📜 <span class="age" id="ageName">Camp</span><span id="questTog">▾</span></div><ul id="questList"></ul></div>
 
 <!-- BUILD MENU -->
 <div class="menu" id="buildMenu"><div class="menuInner">
@@ -192,6 +211,7 @@ const G={
   villagers:[],nodes:[],buildings:[],depots:[],deer:[],critters:[],
   selected:null,buildMode:null,
   farms:0,coops:0,pens:0,quarries:0,lumbers:0,houses:0,stores:0,hall:false,
+  age:1, objDone:{}, victory:false,
   started:false, fullWarn:0
 };
 const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
@@ -933,8 +953,58 @@ function refreshHUD(){
   $('hFoodRate').textContent=foodRate()>0?('+'+foodRate().toFixed(1)):'';
   $('hStoneRate').textContent=stoneRate()>0?('+'+stoneRate().toFixed(1)):'';
   document.querySelectorAll('#buildMenu .opt').forEach(b=>{
-    const t=b.dataset.build;b.disabled=(t==='hall'&&G.hall)||!afford(COSTS[t]);});
+    const t=b.dataset.build;const locked=(AGE_UNLOCK[t]||1)>G.age;
+    b.classList.toggle('locked',locked);
+    b.disabled=locked||(t==='hall'&&G.hall)||!afford(COSTS[t]);});
   updateSelCard();
+}
+// ===== progression: ages + objective ladder (gated by gameplay, never money) =====
+const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,coop:2,quarry:2,pen:3,hall:4};
+const AGES=[
+  {name:'Camp',objs:[
+    {id:'c_wood',label:'Stockpile 50 🪵 wood',check:()=>G.wood>=50},
+    {id:'c_lumber',label:'Build a Lumber Camp',check:()=>G.lumbers>=1},
+    {id:'c_house',label:'Build a House',check:()=>G.houses>=1}],capBonus:2},
+  {name:'Hamlet',objs:[
+    {id:'h_farm',label:'Build a Farm',check:()=>G.farms>=1},
+    {id:'h_store',label:'Build a Storehouse',check:()=>G.stores>=1},
+    {id:'h_pop',label:'Grow to 3 settlers',check:()=>pop()>=3}],capBonus:2},
+  {name:'Village',objs:[
+    {id:'v_quarry',label:'Build a Quarry',check:()=>G.quarries>=1},
+    {id:'v_stone',label:'Stockpile 30 🪨 stone',check:()=>G.stone>=30},
+    {id:'v_pop',label:'Grow to 5 settlers',check:()=>pop()>=5}],capBonus:3},
+  {name:'Town',objs:[
+    {id:'t_houses',label:'Raise 3 Houses',check:()=>G.houses>=3},
+    {id:'t_coop',label:'Build a Coop',check:()=>G.coops>=1},
+    {id:'t_pop',label:'Grow to 8 settlers',check:()=>pop()>=8}],capBonus:3},
+  {name:'City',objs:[
+    {id:'y_hall',label:'Raise the Great Hall',check:()=>G.hall}],capBonus:0},
+];
+function renderQuests(){
+  const cur=AGES[G.age-1];$('ageName').textContent=cur.name;
+  const ul=$('questList');ul.innerHTML='';
+  if(G.victory){ul.innerHTML='<li class="done">✓ Your realm is founded</li>';return;}
+  for(const o of cur.objs){const li=document.createElement('li');const done=!!G.objDone[o.id];
+    li.className=done?'done':'';li.textContent=(done?'✓ ':'☐ ')+o.label;ul.appendChild(li);}
+}
+function advanceAge(){
+  const cur=AGES[G.age-1];G.popCap+=cur.capBonus;G.age++;
+  const na=AGES[G.age-1];
+  toast('🎉 Your '+cur.name+' grows into a '+na.name+'!');
+  hint('A new age dawns — fresh buildings unlocked. Lead your '+na.name+' onward.');
+  const q=$('quests');q.classList.add('flash');setTimeout(()=>q.classList.remove('flash'),1200);
+}
+function checkObjectives(){
+  if(G.victory)return;
+  const cur=AGES[G.age-1];let all=true,changed=false;
+  for(const o of cur.objs){
+    if(!G.objDone[o.id]){if(o.check()){G.objDone[o.id]=true;changed=true;toast('✓ '+o.label);}else all=false;}
+  }
+  if(all){
+    if(G.age<AGES.length){advanceAge();refreshHUD();renderQuests();return;}
+    else if(!G.victory){G.victory=true;toast('👑 Your realm stands eternal — a thriving City!');renderQuests();return;}
+  }
+  if(changed)renderQuests();
 }
 const JOBNAME={wood:'cutting wood',stone:'mining stone',food:'foraging',hunt:'hunting',fish:'fishing',null:'idle',idle:'idle'};
 function updateSelCard(){
@@ -1230,7 +1300,7 @@ function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
 // Simpler: tapping keep recruits if affordable.
 keep.userData.recruit=true;
 
-let trickleF=0,trickleS=0;
+let trickleF=0,trickleS=0,qTimer=0;
 function loop(){
   requestAnimationFrame(loop);
   const dt=Math.min(0.05,clock.getDelta()),t=clock.elapsedTime;
@@ -1241,6 +1311,7 @@ function loop(){
     const fr=foodRate(),sr=stoneRate();
     if(fr>0){trickleF+=dt*fr;if(trickleF>=1){addStored('food',Math.floor(trickleF));trickleF%=1;refreshHUD();}}
     if(sr>0){trickleS+=dt*sr;if(trickleS>=1){addStored('stone',Math.floor(trickleS));trickleS%=1;refreshHUD();}}
+    qTimer+=dt;if(qTimer>0.3){qTimer=0;checkObjectives();}
   }
   for(const b of G.buildings)b.traverse(o=>{if(o.name==='flag')o.rotation.y=Math.sin(t*3)*0.3;});
   water.position.y=WATER_Y+Math.sin(t*0.8)*0.04;
@@ -1279,9 +1350,11 @@ handleTap=function(x,y){
   _handleTap(x,y);
 };
 
+$('questHead').addEventListener('click',()=>$('quests').classList.toggle('collapsed'));
 $('startBtn').addEventListener('click',()=>{
   document.getElementById('intro').style.display='none';G.started=true;refreshHUD();
-  hint('Tap your settler · tap the keep to recruit more (50 food)');});
+  $('quests').classList.add('show');renderQuests();
+  hint('Tap your settler · grow your Camp by completing the objectives at left');});
 refreshHUD();
 })();
 </script>
