@@ -245,7 +245,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
 renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 renderer.outputEncoding=THREE.sRGBEncoding;
 renderer.toneMapping=THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure=0.92;
+renderer.toneMappingExposure=1.0;
 const scene=new THREE.Scene();
 scene.fog=new THREE.Fog(0xcfe1ea,105,250);
 // sky gradient — redrawn through the day cycle (deep blue aloft, warm at the horizon)
@@ -284,6 +284,19 @@ const fill=new THREE.DirectionalLight(0xc8e0ff,0.18);fill.position.set(-38,26,-3
 // never hidden behind buildings) — lights must illuminate that layer too
 const VLAYER=1;hemi.layers.enable(VLAYER);sun.layers.enable(VLAYER);fill.layers.enable(VLAYER);
 
+// ===== image-based lighting: a prefiltered sky→ground environment for PBR materials =====
+{
+  const ec=document.createElement('canvas');ec.width=16;ec.height=128;const ex=ec.getContext('2d');
+  const eg=ex.createLinearGradient(0,0,0,128);
+  eg.addColorStop(0,'#6f9bd6');eg.addColorStop(0.42,'#c2d4e6');eg.addColorStop(0.52,'#b3bd95');
+  eg.addColorStop(0.72,'#7a9657');eg.addColorStop(1,'#4c6733');
+  ex.fillStyle=eg;ex.fillRect(0,0,16,128);
+  const et=new THREE.CanvasTexture(ec);et.mapping=THREE.EquirectangularReflectionMapping;et.encoding=THREE.sRGBEncoding;
+  const pm=new THREE.PMREMGenerator(renderer);
+  scene.environment=pm.fromEquirectangular(et).texture;
+  pm.dispose();et.dispose();
+}
+
 // ===== gentle day cycle: golden morning -> bright noon -> amber evening (never full night) =====
 const _dc1=new THREE.Color(),_dc2=new THREE.Color(),_dt1=new THREE.Color(),_dt2=new THREE.Color(),
   _dm1=new THREE.Color(),_dm2=new THREE.Color(),_dh1=new THREE.Color(),_dh2=new THREE.Color();
@@ -297,8 +310,8 @@ function updateDay(t){
   sun.position.set(cx+Math.cos(az)*hor*70,cy+Math.sin(elev)*70+5,cz+Math.sin(az)*hor*70);
   sun.target.position.set(cx,cy,cz);
   sun.color.copy(_dc1.set(0xffe9c2).lerp(_dc2.set(0xff7a2e),low*0.82));
-  sun.intensity=1.55-low*0.5;
-  hemi.intensity=0.34-low*0.05;
+  sun.intensity=1.7-low*0.5;
+  hemi.intensity=0.13-low*0.03;          // env map now supplies most ambient
   hemi.color.copy(_dt1.set(0xbfd8f5).lerp(_dt2.set(0xdb9a64),low));
   scene.fog.color.copy(_dm1.set(0xcfe1ea).lerp(_dm2.set(0xe2b988),low));
   if(t-_lastSky>1.0){_lastSky=t;
@@ -372,14 +385,14 @@ function groundDetail(S){
 }
 const _gd=groundDetail(256);
 const terrain=new THREE.Mesh(tGeo,new THREE.MeshStandardMaterial({vertexColors:true,
-  map:_gd.map,normalMap:_gd.normalMap,normalScale:new THREE.Vector2(0.38,0.38),
-  roughness:0.97,metalness:0.0}));
+  map:_gd.map,normalMap:_gd.normalMap,normalScale:new THREE.Vector2(0.4,0.4),
+  roughness:0.96,metalness:0.0,envMapIntensity:0.4}));
 terrain.receiveShadow=true;scene.add(terrain);
 
 // water
 const water=new THREE.Mesh(new THREE.CircleGeometry(POND.r+2.5,40),
-  new THREE.MeshPhongMaterial({color:new THREE.Color(0x2f6f96).convertSRGBToLinear(),
-    specular:0xbfe6ff,shininess:90,transparent:true,opacity:0.9}));
+  new THREE.MeshStandardMaterial({color:new THREE.Color(0x245d82).convertSRGBToLinear(),
+    roughness:0.12,metalness:0.0,envMapIntensity:1.0,transparent:true,opacity:0.88}));
 water.rotation.x=-Math.PI/2;water.position.set(POND.x,WATER_Y,POND.z);scene.add(water);
 // lily pads + a flower or two to make the pond a place worth fishing
 {
@@ -620,7 +633,8 @@ function scatterInstanced(geo,count,tries,colorFn,placeFn,filterFn){
 }
 
 // ===== materials =====
-function wM(c){return new THREE.MeshLambertMaterial({color:new THREE.Color(c).convertSRGBToLinear()});}
+function wM(c,rough,metal){return new THREE.MeshStandardMaterial({color:new THREE.Color(c).convertSRGBToLinear(),
+  roughness:rough==null?0.82:rough,metalness:metal||0,envMapIntensity:0.45});}
 function bM(c){return new THREE.MeshBasicMaterial({color:new THREE.Color(c).convertSRGBToLinear()});}
 const trunkMat=wM(0x6b4a2a);
 const pine1=wM(0x357a2c),pine2=wM(0x49993a);
@@ -775,6 +789,19 @@ function makeSettler(x,z){
 // shared building palette + a proper gable (ridge) roof helper
 const bPlaster=wM(0xe6d8bc),bTimber=wM(0x5a3d26),bStone=wM(0xa6a398),bStone2=wM(0x8c897e),
   bTile=wM(0xb24a32),bThatch=wM(0xb39a55),bThatch2=wM(0x9c8243),bPlank=wM(0x9a7748),bPlankD=wM(0x6b4a2a);
+// give the masonry & plaster a faint rough surface so walls aren't perfectly flat
+function bumpNormal(S,rep){
+  let buf=new Float32Array(S*S);for(let i=0;i<buf.length;i++)buf[i]=Math.random();
+  const blur=(s,r)=>{const d=new Float32Array(S*S);for(let y=0;y<S;y++)for(let x=0;x<S;x++){let a=0,c=0;
+    for(let dy=-r;dy<=r;dy++)for(let dx=-r;dx<=r;dx++){a+=s[((y+dy+S)%S)*S+((x+dx+S)%S)];c++;}d[y*S+x]=a/c;}return d;};
+  buf=blur(buf,1);const H=(x,y)=>buf[((y+S)%S)*S+((x+S)%S)];
+  const cv=document.createElement('canvas');cv.width=cv.height=S;const cx=cv.getContext('2d'),im=cx.createImageData(S,S);
+  for(let y=0;y<S;y++)for(let x=0;x<S;x++){const i=(y*S+x)*4;
+    let nx=(H(x-1,y)-H(x+1,y))*3,ny=(H(x,y-1)-H(x,y+1))*3,nz=1,il=1/Math.hypot(nx,ny,nz);nx*=il;ny*=il;nz*=il;
+    im.data[i]=(nx*0.5+0.5)*255;im.data[i+1]=(ny*0.5+0.5)*255;im.data[i+2]=(nz*0.5+0.5)*255;im.data[i+3]=255;}
+  cx.putImageData(im,0,0);const t=new THREE.CanvasTexture(cv);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rep,rep);return t;}
+{const sn=bumpNormal(128,3),ns=new THREE.Vector2(0.3,0.3);
+  for(const m of[bStone,bStone2,bPlaster,bPlank]){m.normalMap=sn;m.normalScale=ns;m.needsUpdate=true;}}
 function gableRoof(g,len,halfW,h,thick,mat,yBase,gableMat){
   const slope=Math.atan2(h,halfW),pl=Math.hypot(halfW,h);
   for(const s of[1,-1]){const panel=new THREE.Mesh(new THREE.BoxGeometry(len,thick,pl+0.12),mat);

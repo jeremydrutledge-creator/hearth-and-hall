@@ -70,8 +70,15 @@ Age of Empires-style game."
     with a procedural tileable detail `map` + `normalMap` (`groundDetail()`,
     blurred white-noise) so the ground reads as textured earth instead of flat
     colour; plus a CSS `#vignette` and crisper shadows (2560 map, tighter frustum).
-    NEXT graphics steps (deferred per plan): PBR/textures on buildings & units
-    (per-asset art), env map, optional post-FX (needs three addons — CDN at runtime).
+22. **Graphics step 2 (PBR + IBL)** — `wM()` now returns MeshStandardMaterial; a
+    prefiltered sky→ground environment map (PMREMGenerator.fromEquirectangular of a
+    gradient) drives image-based ambient on all PBR surfaces. Hemisphere light cut
+    way down (env supplies ambient), sun up to 1.7, exposure 1.0 to keep contrast/
+    saturation. Reflective pond (low-roughness Standard + env). Faint procedural
+    normal map (`bumpNormal()`) on stone/plaster/plank so masonry isn't dead flat.
+    envMapIntensity kept low (~0.4-0.45) to avoid washing the stylised colours.
+    NEXT graphics: per-asset textures/normals on roofs & units, optional post-FX
+    (SSAO/bloom need three addons; loadable from CDN at runtime, hard to verify here).
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
