@@ -23,6 +23,16 @@ Age of Empires-style game."
 6. **Grander keep** — turrets, crenellations, arched gate, banner.
 7. **Floating "+N" popups** on resource drop-off (DOM overlay, `floatGain`).
 8. **Pond polish** — lily pads + blossoms.
+9. **Building overhaul** — all models rebuilt to match the keep: shared palette
+   (`bPlaster/bTimber/bStone/bTile/bThatch/bPlank...`) + a `gableRoof()` ridge-roof
+   helper. House=Tudor cottage w/ chimney, storehouse=timber+barrels, farm=fenced
+   crops+scarecrow, coop/pen improved, lumber=open shed+log pile+axe, quarry=pit+
+   hoist+cut blocks, hall=grand stone/timber longhall w/ twin banners.
+10. **Bugfix:** placement no longer falsely says "Can't build in the pond" on low
+    but dry ground — the check now tests proximity to the actual pond disc.
+
+NOTE: a temporary `#gallery` hash hook (renders all buildings in a grid for
+screenshotting) was added then REMOVED before commit — re-add if iterating on models.
 
 ## How to develop/test in this environment (IMPORTANT)
 The CDN (cdnjs) is **blocked behind a cert proxy** in the container, so a headless
