@@ -133,6 +133,7 @@
   <div class="res">🪵 <b id="hWood">0</b> <small id="hWoodRate"></small></div>
   <div class="res">🍖 <b id="hFood">0</b> <small id="hFoodRate"></small></div>
   <div class="res">🪨 <b id="hStone">0</b> <small id="hStoneRate"></small></div>
+  <div class="res">🪙 <b id="hGold">0</b></div>
   <div class="res store" id="storeRes">📦 <b id="hStore">0/0</b></div>
   <div class="res">👤 <b id="hPop">1/3</b></div>
 </div></div>
@@ -160,6 +161,7 @@
   <div class="opts">
     <button class="opt" data-build="lumber">🪓 Lumber Camp<small>40 🪵 · drop-off by forest</small></button>
     <button class="opt" data-build="quarry">⛏ Quarry<small>60 🪵 · stone · rocky hills</small></button>
+    <button class="opt" data-build="market">🏪 Market<small>70 🪵 20 🪨 · trade for gold</small></button>
   </div>
   <div class="cat">Landmark</div>
   <div class="opts">
@@ -177,10 +179,27 @@
   <div class="opts">
     <button class="opt" data-job="wood">🪓 Cut Wood<small>auto: fell → haul → repeat</small></button>
     <button class="opt" data-job="stone">⛏ Mine Stone<small>auto: quarry rock → haul</small></button>
+    <button class="opt" data-job="gold">🪙 Mine Gold<small>auto: gold ore → haul</small></button>
     <button class="opt" data-job="food">🍇 Forage<small>auto: berries → haul</small></button>
     <button class="opt" data-job="hunt">🏹 Hunt<small>needs bows · chase deer → meat</small></button>
     <button class="opt" data-job="fish">🎣 Fish<small>cast at the pond → haul fish</small></button>
     <button class="opt full" data-job="idle">🛑 Stand Down<small>wait by the keep</small></button>
+  </div>
+</div></div>
+
+<!-- MARKET MENU -->
+<div class="menu" id="marketMenu"><div class="menuInner">
+  <div class="cat">Sell for 🪙 gold</div>
+  <div class="opts">
+    <button class="opt" data-sell="wood">Sell 20 🪵<small>→ 10 🪙</small></button>
+    <button class="opt" data-sell="food">Sell 20 🍖<small>→ 8 🪙</small></button>
+    <button class="opt" data-sell="stone">Sell 15 🪨<small>→ 12 🪙</small></button>
+  </div>
+  <div class="cat">Buy with 🪙 gold</div>
+  <div class="opts">
+    <button class="opt" data-buy="wood">Buy 20 🪵<small>14 🪙</small></button>
+    <button class="opt" data-buy="food">Buy 20 🍖<small>12 🪙</small></button>
+    <button class="opt" data-buy="stone">Buy 15 🪨<small>16 🪙</small></button>
   </div>
 </div></div>
 
@@ -235,7 +254,7 @@ const WATER_Y=-0.55;
 
 // ===== state =====
 const G={
-  wood:30,food:40,stone:0,
+  wood:30,food:40,stone:0,gold:0,
   stored:0, cap:200,
   popCap:3,
   villagers:[],nodes:[],buildings:[],depots:[],deer:[],critters:[],
@@ -248,10 +267,10 @@ const G={
   started:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
-const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1};
+const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5};
 const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
-  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},hall:{wood:150,stone:60},settler:{food:50}};
-const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,hall:14};
+  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},hall:{wood:150,stone:60},settler:{food:50}};
+const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,hall:14};
 const CARRY=12;
 
 // ===== renderer =====
@@ -711,6 +730,13 @@ function makeRock(x,z,big){const g=new THREE.Group();
   r.position.y=big?0.7:0.5;r.rotation.set(Math.random(),Math.random(),Math.random());g.add(r);
   const r2=new THREE.Mesh(new THREE.DodecahedronGeometry(0.45,0),rockMat);r2.position.set(0.75,0.3,0.25);g.add(r2);
   place(g,x,z);g.userData={kind:'node',res:'stone',amount:big?120:75,label:'rocks'};shadows(g);scene.add(g);G.nodes.push(g);}
+const goldOreMat=wM(0x96875a),goldVein=wM(0xe8c422,0.35,0.6);
+function makeGold(x,z){const g=new THREE.Group();
+  const r=new THREE.Mesh(new THREE.DodecahedronGeometry(0.9,0),goldOreMat);r.position.y=0.55;r.rotation.set(Math.random(),Math.random(),Math.random());g.add(r);
+  const r2=new THREE.Mesh(new THREE.DodecahedronGeometry(0.5,0),goldOreMat);r2.position.set(0.7,0.32,0.2);g.add(r2);
+  for(let i=0;i<6;i++){const v=new THREE.Mesh(new THREE.IcosahedronGeometry(0.11,0),goldVein);
+    const a=Math.random()*6.28;v.position.set(Math.cos(a)*0.55,0.35+Math.random()*0.6,Math.sin(a)*0.55);g.add(v);}
+  place(g,x,z);g.userData={kind:'node',res:'gold',amount:60,label:'gold ore'};shadows(g);scene.add(g);G.nodes.push(g);}
 function makeBush(x,z){const g=new THREE.Group();
   const b=new THREE.Mesh(new THREE.SphereGeometry(0.7,8,6),bushMat);b.position.y=0.55;b.scale.y=0.8;g.add(b);
   for(let i=0;i<6;i++){const be=new THREE.Mesh(new THREE.SphereGeometry(0.09,6,5),berryMat);
@@ -733,6 +759,10 @@ makeRock(7,-9,false);makeRock(10,-11,true);
 for(const Rk of ROCKIES){const n=Math.round(Rk.r*0.85);
   for(let i=0;i<n;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*Rk.r*0.92;
     const x=Rk.x+Math.cos(a)*rr,z=Rk.z+Math.sin(a)*rr;if(okSpot(x,z))makeRock(x,z,Math.random()<0.45);}}
+// scarce gold ore tucked into the rocky ranges
+for(const Rk of ROCKIES){const n=1+(Math.random()<0.5?1:0);
+  for(let i=0;i<n;i++){const a=Math.random()*6.28,rr=Rk.r*(0.35+Math.random()*0.5);
+    const x=Rk.x+Math.cos(a)*rr,z=Rk.z+Math.sin(a)*rr;if(okSpot(x,z))makeGold(x,z);}}
 // berry bushes — starter patch, forest fringes, and scattered
 makeBush(-8,6);makeBush(-10,8);makeBush(-7,10);
 for(const F of FORESTS){for(let i=0;i<5;i++){const a=Math.random()*6.28;
@@ -786,7 +816,7 @@ function makeSheep(home){const g=new THREE.Group();
 const skin=wM(0xe0b088),skin2=wM(0xc89070),hairMats=[0x3a2a1a,0x5a3a22,0x806040,0x202020].map(wM);
 const tunics=[0x8a4a4a,0x4a6a9a,0x6a8a4a,0x9a7a3a,0x6a5a8a,0x4a8a8a].map(wM);
 const pants=wM(0x5a4636),boot=wM(0x3a2c20);
-const loadMat={wood:wM(0x6b4a2a),stone:wM(0x8d8a80),food:wM(0xc04040)};
+const loadMat={wood:wM(0x6b4a2a),stone:wM(0x8d8a80),food:wM(0xc04040),gold:wM(0xe6b81f,0.4,0.6)};
 
 function makeSettler(x,z){
   const g=new THREE.Group();
@@ -1006,7 +1036,29 @@ function hallMesh(){const g=new THREE.Group();
     const flag=new THREE.Mesh(new THREE.PlaneGeometry(0.9,0.55),new THREE.MeshBasicMaterial({color:new THREE.Color(0xd83030).convertSRGBToLinear(),side:THREE.DoubleSide}));
     flag.position.set(sx*(len/2-0.3)+0.45,yB+1.6,halfW);flag.name='flag';g.add(flag);}
   return g;}
-const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,hall:hallMesh};
+function marketMesh(){const g=new THREE.Group();
+  const stripeA=wM(0xc23a32),stripeB=wM(0xe8dcc0);
+  // counter + base
+  const base=new THREE.Mesh(new THREE.BoxGeometry(2.6,0.5,1.4),bPlankD);base.position.y=0.25;g.add(base);
+  const top=new THREE.Mesh(new THREE.BoxGeometry(2.7,0.12,1.5),bPlank);top.position.y=0.56;g.add(top);
+  // four posts
+  for(const sx of[-1,1])for(const sz of[-1,1]){const po=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,1.7,6),bPlankD);
+    po.position.set(sx*1.25,0.85,sz*0.6);g.add(po);}
+  // striped awning (alternating panels, sloped)
+  for(let i=0;i<6;i++){const pn=new THREE.Mesh(new THREE.BoxGeometry(0.46,0.08,1.7),i%2?stripeA:stripeB);
+    pn.position.set(-1.15+i*0.46,1.75,0);pn.rotation.x=0.0;g.add(pn);}
+  const awn=new THREE.Mesh(new THREE.BoxGeometry(2.8,0.06,1.8),stripeA);awn.position.y=1.7;awn.visible=false;g.add(awn);
+  // goods on the counter: sacks, barrel, and a little gold
+  const sack=new THREE.Mesh(new THREE.SphereGeometry(0.22,7,6),wM(0xcbbb8c));sack.position.set(-0.8,0.78,0.2);sack.scale.y=1.2;g.add(sack);
+  const barrel=new THREE.Mesh(new THREE.CylinderGeometry(0.22,0.22,0.5,10),bPlankD);barrel.position.set(0.9,0.82,-0.2);g.add(barrel);
+  const crate=new THREE.Mesh(new THREE.BoxGeometry(0.4,0.4,0.4),wM(0x9a7a4a));crate.position.set(0.2,0.78,0.3);g.add(crate);
+  const coins=new THREE.Mesh(new THREE.CylinderGeometry(0.18,0.2,0.16,12),wM(0xe8c422,0.35,0.6));coins.position.set(-0.2,0.66,-0.3);g.add(coins);
+  // banner pennant
+  const pole=new THREE.Mesh(new THREE.CylinderGeometry(0.04,0.04,1.0,5),bPlankD);pole.position.set(1.25,2.3,0.6);g.add(pole);
+  const flag=new THREE.Mesh(new THREE.PlaneGeometry(0.5,0.3),new THREE.MeshBasicMaterial({color:new THREE.Color(0xe8c422).convertSRGBToLinear(),side:THREE.DoubleSide}));
+  flag.position.set(1.5,2.6,0.6);flag.name='flag';g.add(flag);
+  return g;}
+const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,hall:hallMesh};
 
 // ===== optional glTF asset layer (see ASSETS.md) =====
 // Drop GLB files in /assets and list them here to replace the procedural meshes.
@@ -1110,7 +1162,7 @@ const patchMat=new THREE.MeshLambertMaterial({map:patchTex,transparent:true,dept
 function groundPatch(x,z,r){const m=new THREE.Mesh(new THREE.CircleGeometry(r,24),patchMat);
   m.rotation.x=-Math.PI/2;m.position.set(x,getH(x,z)+0.04,z);m.receiveShadow=true;scene.add(m);return m;}
 // floating "+N" resource-gain popups (DOM overlay projected from world space)
-const RES_EMOJI={wood:'🪵',stone:'🪨',food:'🍖'};
+const RES_EMOJI={wood:'🪵',stone:'🪨',food:'🍖',gold:'🪙'};
 const _proj=new THREE.Vector3();
 function floatGain(v,amount,res){
   if(amount<=0)return;_proj.set(v.position.x,v.position.y+2.3,v.position.z).project(camera);
@@ -1140,13 +1192,15 @@ function foodRate(){return G.farms*0.4+G.coops*0.25+G.pens*0.45+G.rateFood;}
 function stoneRate(){return G.quarries*0.4+G.rateStone;}
 function woodRate(){return G.rateWood;}
 function spaceLeft(){return Math.max(0,G.cap-G.stored);}
-function addStored(res,amt){const sp=spaceLeft();const give=Math.min(amt,sp);G[res]+=give;G.stored+=give;return give;}
-function spend(c){for(const k in c){G[k]-=c[k];G.stored-=c[k];}if(G.stored<0)G.stored=0;}
+function addStored(res,amt){if(res==='gold'){G.gold+=amt;return amt;}        // gold is an uncapped treasury
+  const sp=spaceLeft();const give=Math.min(amt,sp);G[res]+=give;G.stored+=give;return give;}
+function spend(c){for(const k in c){G[k]-=c[k];if(k!=='gold')G.stored-=c[k];}if(G.stored<0)G.stored=0;}
 
 function refreshHUD(){
   $('hWood').textContent=Math.floor(G.wood);
   $('hFood').textContent=Math.floor(G.food);
   $('hStone').textContent=Math.floor(G.stone);
+  $('hGold').textContent=Math.floor(G.gold);
   $('hStore').textContent=Math.floor(G.stored)+'/'+G.cap;
   $('storeRes').classList.toggle('warn',G.stored>=G.cap-5);
   $('hPop').textContent=pop()+'/'+G.popCap;
@@ -1164,7 +1218,7 @@ function refreshHUD(){
   updateSelCard();if(G.selBuilding)updateBldCard();
 }
 // ===== progression: ages + objective ladder (gated by gameplay, never money) =====
-const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,coop:2,quarry:2,pen:3,hall:4};
+const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,coop:2,quarry:2,market:2,pen:3,hall:4};
 const AGES=[
   {name:'Camp',objs:[
     {id:'c_wood',label:'Stockpile 50 🪵 wood',check:()=>G.wood>=50},
@@ -1211,7 +1265,7 @@ function checkObjectives(){
   }
   if(changed)renderQuests();
 }
-const JOBNAME={wood:'cutting wood',stone:'mining stone',food:'foraging',hunt:'hunting',fish:'fishing',null:'idle',idle:'idle'};
+const JOBNAME={wood:'cutting wood',stone:'mining stone',gold:'mining gold',food:'foraging',hunt:'hunting',fish:'fishing',null:'idle',idle:'idle'};
 function updateSelCard(){
   const c=$('selCard');
   if(!G.selected){c.classList.remove('show');return;}
@@ -1256,8 +1310,21 @@ function openMenu(which){
   if(which==='build'){$('buildMenu').classList.add('show');$('tabBuild').classList.add('active');}
   if(which==='jobs'){$('jobMenu').classList.add('show');$('tabJobs').classList.add('active');}
 }
-function closeMenus(){$('buildMenu').classList.remove('show');$('jobMenu').classList.remove('show');
+function closeMenus(){$('buildMenu').classList.remove('show');$('jobMenu').classList.remove('show');$('marketMenu').classList.remove('show');
   $('tabBuild').classList.remove('active');$('tabJobs').classList.remove('active');}
+// ===== market trade (resources <-> gold) =====
+const SELL={wood:{amt:20,gold:10},food:{amt:20,gold:8},stone:{amt:15,gold:12}};
+const BUY={wood:{amt:20,gold:14},food:{amt:20,gold:12},stone:{amt:15,gold:16}};
+function openMarket(){closeMenus();hideBldCard();$('marketMenu').classList.add('show');}
+function doSell(res){const d=SELL[res];if(!d)return;
+  if(G[res]<d.amt){toast('Not enough '+RES_EMOJI[res]+' to sell.');return;}
+  spend({[res]:d.amt});G.gold+=d.gold;toast('Sold '+d.amt+RES_EMOJI[res]+' → +'+d.gold+'🪙');refreshHUD();}
+function doBuy(res){const d=BUY[res];if(!d)return;
+  if(G.gold<d.gold){toast('Not enough 🪙 gold.');return;}
+  if(spaceLeft()<d.amt){toast('📦 Storage full — build a storehouse.');return;}
+  G.gold-=d.gold;addStored(res,d.amt);toast('Bought '+d.amt+RES_EMOJI[res]+' for '+d.gold+'🪙');refreshHUD();}
+document.querySelectorAll('#marketMenu [data-sell]').forEach(b=>b.addEventListener('click',()=>doSell(b.dataset.sell)));
+document.querySelectorAll('#marketMenu [data-buy]').forEach(b=>b.addEventListener('click',()=>doBuy(b.dataset.buy)));
 $('tabBuild').addEventListener('click',()=>{
   if($('buildMenu').classList.contains('show'))closeMenus();else openMenu('build');});
 $('tabJobs').addEventListener('click',()=>{
@@ -1515,13 +1582,14 @@ function finishBuilding(s){
   if(t==='pen'){G.pens++;makeSheep(s);makeSheep(s);toast('🐑 Pen built — sheep graze.');}
   if(t==='lumber'){G.lumbers++;s.userData.depot=true;G.depots.push(s);toast('🪓 Lumber camp — drop-off for nearby woodcutters.');}
   if(t==='quarry'){G.quarries++;toast('⛏ Quarry cut — stone flows in.');}
+  if(t==='market'){toast('🏪 Market built — tap it to trade resources for 🪙 gold.');}
   if(t==='hall'){G.hall=true;G.popCap+=5;addSmoke(s,0.8,4.1,0.8);toast('🏛 The Great Hall stands — your realm is founded!');hint('Realm founded. The valley is yours to grow.');}
   refreshHUD();
 }
 
 // ===== building upgrades (resource + time gated, never money) =====
-const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',hall:'Great Hall'};
-const RESICON={wood:'🪵',stone:'🪨',food:'🍖'};
+const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',hall:'Great Hall'};
+const RESICON={wood:'🪵',stone:'🪨',food:'🍖',gold:'🪙'};
 const UPGRADE={
   keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage',apply:()=>{G.popCap+=2;G.cap+=150;}},
   house:{max:3,cost:l=>({wood:40*l}),time:l=>5+l*2,gain:'+3 pop',apply:()=>{G.popCap+=3;}},
@@ -1554,6 +1622,7 @@ function finishUpgrade(b){
   toast('✅ '+NAME[t]+' is now Lv '+b.userData.level+'!');refreshHUD();
 }
 function selectBuilding(b){
+  if(b.userData.type==='market'){openMarket();return;}   // markets open the trade menu
   if(G.selected){G.selected.userData.ring.visible=false;G.selected=null;$('tabJobs').disabled=true;updateSelCard();}
   G.selBuilding=b;updateBldCard();
 }

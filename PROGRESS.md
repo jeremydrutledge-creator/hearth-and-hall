@@ -98,6 +98,12 @@ Age of Empires-style game."
     `finishUpgrade` applies bonus + restores obstacle + level++. New `woodRate()`
     + wood trickle + HUD rate. Keep recruit moved from tap to the card button.
     Verified: keep Lv1→2, popCap+2, storage+150, obstacle restored.
+28. **Gold + market economy** — new `gold` resource (🪙, uncapped treasury: addStored/
+    spend special-case it). Scarce **gold ore** nodes (`makeGold`, res 'gold') in the
+    rocky ranges, mined via the generic gather system + a "🪙 Mine Gold" job. **Market**
+    building (marketMesh, age 2, COSTS/BTIME/OBS_R/MESH) → tapping it opens `#marketMenu`
+    (`openMarket`); `SELL`/`BUY` tables + `doSell`/`doBuy` trade resources↔gold at a
+    spread. Verified: 4 ore nodes, sell/buy math, gold-mining routing.
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
