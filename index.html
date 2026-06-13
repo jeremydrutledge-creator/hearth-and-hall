@@ -970,6 +970,36 @@ function hallMesh(){const g=new THREE.Group();
   return g;}
 const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,hall:hallMesh};
 
+// ===== optional glTF asset layer (see ASSETS.md) =====
+// Drop GLB files in /assets and list them here to replace the procedural meshes.
+// While MODELS is empty (or a file is missing) the game uses the built-in meshes,
+// so nothing breaks before you add art.
+const MODELS={
+  // keep:'assets/keep.glb', house:'assets/house.glb', hall:'assets/hall.glb',
+  // storehouse:'assets/storehouse.glb', farm:'assets/farm.glb', coop:'assets/coop.glb',
+  // pen:'assets/pen.glb', lumber:'assets/lumber.glb', quarry:'assets/quarry.glb',
+};
+// per-model fit (units differ per pack): scale, ground offset y, yaw — tune once per model
+const MODEL_XF={ /* house:{scale:1, y:0, ry:0}, ... */ };
+const loadedModels={};
+function getMesh(type){
+  const lm=loadedModels[type];
+  if(lm){const c=lm.clone(true);c.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}});return c;}
+  return MESH[type]?MESH[type]():new THREE.Group();
+}
+(function bootAssets(){
+  const types=Object.keys(MODELS);if(!types.length)return;   // no art listed → stay procedural
+  const s=document.createElement('script');
+  s.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js';
+  s.onload=()=>{ if(!THREE.GLTFLoader)return; const L=new THREE.GLTFLoader();
+    for(const t of types)L.load(MODELS[t],g=>{const o=g.scene,xf=MODEL_XF[t]||{};
+      if(xf.scale)o.scale.setScalar(xf.scale);o.rotation.y=xf.ry||0;o.position.y=xf.y||0;
+      o.traverse(n=>{if(n.isMesh){n.castShadow=true;n.receiveShadow=true;}});loadedModels[t]=o;},
+      undefined,()=>console.warn('asset missing:',MODELS[t]));};
+  s.onerror=()=>console.warn('GLTFLoader failed to load');
+  document.head.appendChild(s);
+})();
+
 // keep at origin + starting settler
 const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'building',type:'keep',depot:true};
 shadows(keep);scene.add(keep);G.buildings.push(keep);G.depots.push(keep);
@@ -1219,7 +1249,7 @@ $('tabRally').addEventListener('click',()=>{
 function enterBuild(type){
   if(!afford(COSTS[type])){toast('Not enough resources.');return;}
   cancelBuild();
-  const ghost=MESH[type]();
+  const ghost=getMesh(type);
   ghost.traverse(o=>{if(o.material){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=0.55;}});
   ghost.position.set(camTarget.x,getH(camTarget.x,camTarget.z),camTarget.z);
   scene.add(ghost);G.buildMode={type,ghost};
@@ -1238,7 +1268,7 @@ function confirmBuild(){
   if(Math.hypot(p.x-POND.x,p.z-POND.z)<POND.r+1.8 && getH(p.x,p.z)<WATER_Y+0.5){toast('Can\u2019t build in the pond.');return;}
   if(bm.type==='quarry'&&!quarryOK(p)){toast('No stone here — use the rocky hills.');return;}
   spend(COSTS[bm.type]);
-  const site=MESH[bm.type]();site.position.copy(p);site.scale.y=0.12;
+  const site=getMesh(bm.type);site.position.copy(p);site.scale.y=0.12;
   site.userData={kind:'site',type:bm.type,progress:0,need:BTIME[bm.type]};
   const PR={house:2.7,storehouse:2.9,farm:3.2,coop:2.2,pen:3.5,lumber:2.7,quarry:3.1,hall:4.3};
   groundPatch(p.x,p.z,PR[bm.type]||2.7);

@@ -79,6 +79,16 @@ Age of Empires-style game."
     envMapIntensity kept low (~0.4-0.45) to avoid washing the stylised colours.
     NEXT graphics: per-asset textures/normals on roofs & units, optional post-FX
     (SSAO/bloom need three addons; loadable from CDN at runtime, hard to verify here).
+23. **Living world** — varied trees (pine/oak/birch + 6-tone canopy incl. autumn),
+    gentle per-tree/bush wind sway (`swayers[]`, loop), scrolling water ripple
+    normals on the pond.
+24. **glTF asset layer (scaffold)** — user chose the free CC0+Mixamo route (see
+    ASSETS.md). `MODELS`/`MODEL_XF`/`getMesh()` in index.html: when MODELS is empty
+    it uses procedural meshes (no-op); listing a GLB swaps that building. GLTFLoader
+    is injected from CDN only when MODELS is non-empty (so the test harness, which
+    can't fetch assets, is unaffected). Building placement already routed through
+    getMesh(). TODO once assets exist: fit scales (MODEL_XF), hot-swap the keep,
+    integrate animated villager via AnimationMixer (the big piece).
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
