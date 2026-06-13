@@ -67,6 +67,20 @@
     background:rgba(18,22,11,.88);border:1px solid #5a6535;border-radius:10px;
     padding:7px 11px;font-size:.78rem;display:none;max-width:60%}
   #selCard.show{display:block}
+
+  /* building info + upgrade card */
+  #bldCard{position:fixed;bottom:72px;left:50%;transform:translateX(-50%);z-index:13;
+    background:rgba(22,27,14,.96);border:1px solid #5a6535;border-radius:12px;
+    padding:8px 10px;display:none;max-width:94%;text-align:center}
+  #bldCard.show{display:block}
+  #bldName{color:#f0c060;font-size:.86rem;margin-bottom:6px;white-space:nowrap}
+  #bldCard .bldBtns{display:flex;gap:6px;justify-content:center}
+  #bldCard button{background:#2c3318;border:1px solid #5a6535;border-radius:9px;color:#e8dfc0;
+    padding:9px 12px;font-family:inherit;font-size:.82rem;white-space:nowrap;touch-action:manipulation}
+  #bldCard button:active{background:#3a4424}
+  #bldCard button:disabled{opacity:.4}
+  #bldUpgrade{border-color:#f0c060;color:#f0c060}
+  #bldClose{padding:9px 11px}
   #selCard b{color:#f0c060}
 
   /* dropdown panels */
@@ -116,7 +130,7 @@
 <div id="vignette"></div>
 
 <div class="top"><div class="resbar">
-  <div class="res">🪵 <b id="hWood">0</b></div>
+  <div class="res">🪵 <b id="hWood">0</b> <small id="hWoodRate"></small></div>
   <div class="res">🍖 <b id="hFood">0</b> <small id="hFoodRate"></small></div>
   <div class="res">🪨 <b id="hStone">0</b> <small id="hStoneRate"></small></div>
   <div class="res store" id="storeRes">📦 <b id="hStore">0/0</b></div>
@@ -127,6 +141,7 @@
 <div id="toast"><span id="toastText"></span></div>
 <div id="selCard"></div>
 <div id="quests"><div id="questHead">📜 <span class="age" id="ageName">Camp</span><span id="questTog">▾</span></div><ul id="questList"></ul></div>
+<div id="bldCard"><div id="bldName">Building</div><div class="bldBtns"><button id="bldUpgrade">⬆ Upgrade</button><button id="bldRecruit">＋ Settler</button><button id="bldClose">✕</button></div></div>
 
 <!-- BUILD MENU -->
 <div class="menu" id="buildMenu"><div class="menuInner">
@@ -229,6 +244,7 @@ const G={
   age:1, objDone:{}, victory:false,
   obstacles:[],
   bows:false, rally:null, rallyRes:null, rallyMode:false,
+  rateFood:0, rateStone:0, rateWood:0, selBuilding:null,
   started:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
@@ -1023,9 +1039,9 @@ function getMesh(type){
 })();
 
 // keep at origin + starting settler
-const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'building',type:'keep',depot:true};
+const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'building',type:'keep',depot:true,level:1};
 shadows(keep);scene.add(keep);G.buildings.push(keep);G.depots.push(keep);
-G.obstacles.push({x:0,z:0,r:OBS_R.keep});
+{const o={x:0,z:0,r:OBS_R.keep};G.obstacles.push(o);keep.userData.obs=o;}
 
 // ===== rally point: where idle & newly-recruited settlers muster (and auto-work) =====
 const rallyFlag=(function(){const g=new THREE.Group();
@@ -1120,8 +1136,9 @@ function hint(m){$('hintText').textContent=m;}
 function pop(){return G.villagers.length;}
 function afford(c){for(const k in c)if(G[k]<c[k])return false;return true;}
 function pay(c){for(const k in c)G[k]-=c[k];}
-function foodRate(){return G.farms*0.4+G.coops*0.25+G.pens*0.45;}
-function stoneRate(){return G.quarries*0.4;}
+function foodRate(){return G.farms*0.4+G.coops*0.25+G.pens*0.45+G.rateFood;}
+function stoneRate(){return G.quarries*0.4+G.rateStone;}
+function woodRate(){return G.rateWood;}
 function spaceLeft(){return Math.max(0,G.cap-G.stored);}
 function addStored(res,amt){const sp=spaceLeft();const give=Math.min(amt,sp);G[res]+=give;G.stored+=give;return give;}
 function spend(c){for(const k in c){G[k]-=c[k];G.stored-=c[k];}if(G.stored<0)G.stored=0;}
@@ -1135,6 +1152,7 @@ function refreshHUD(){
   $('hPop').textContent=pop()+'/'+G.popCap;
   $('hFoodRate').textContent=foodRate()>0?('+'+foodRate().toFixed(1)):'';
   $('hStoneRate').textContent=stoneRate()>0?('+'+stoneRate().toFixed(1)):'';
+  $('hWoodRate').textContent=woodRate()>0?('+'+woodRate().toFixed(1)):'';
   document.querySelectorAll('#buildMenu .opt').forEach(b=>{
     if(b.dataset.craft){const owned=b.dataset.craft==='bows'&&G.bows;
       b.style.display=owned?'none':'';b.classList.toggle('locked',false);b.disabled=!afford({wood:25});return;}
@@ -1143,7 +1161,7 @@ function refreshHUD(){
     b.disabled=locked||(t==='hall'&&G.hall)||!afford(COSTS[t]);});
   const hb=document.querySelector('#jobMenu [data-job="hunt"]');
   if(hb){hb.classList.toggle('locked',!G.bows);hb.disabled=!G.bows;}
-  updateSelCard();
+  updateSelCard();if(G.selBuilding)updateBldCard();
 }
 // ===== progression: ages + objective ladder (gated by gameplay, never money) =====
 const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,coop:2,quarry:2,pen:3,hall:4};
@@ -1234,7 +1252,7 @@ function manualBuild(v,site){const u=v.userData;clearTargets(u);u.site=site;u.de
 
 // ===== build mode =====
 function openMenu(which){
-  closeMenus();
+  closeMenus();hideBldCard();
   if(which==='build'){$('buildMenu').classList.add('show');$('tabBuild').classList.add('active');}
   if(which==='jobs'){$('jobMenu').classList.add('show');$('tabJobs').classList.add('active');}
 }
@@ -1263,7 +1281,7 @@ function craft(what){
 }
 // ===== rally point control =====
 $('tabRally').addEventListener('click',()=>{
-  closeMenus();G.rallyMode=!G.rallyMode;
+  closeMenus();hideBldCard();G.rallyMode=!G.rallyMode;
   $('tabRally').classList.toggle('active',G.rallyMode);
   hint(G.rallyMode?'Tap a forest, rocks, berries or the pond to set a work rally — or open ground to muster':'');
 });
@@ -1347,6 +1365,7 @@ function handleTap(x,y){
     G.rallyMode=false;$('tabRally').classList.remove('active');hint('');return;
   }
   if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length)G.buildMode.ghost.position.copy(hit[0].point);return;}
+  hideBldCard();   // any canvas tap dismisses the building card; a building tap re-opens it
   const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.buildings]);
   if(hits.length){const r=rootOf(hits[0].object);
     if(r){const k=r.userData.kind;
@@ -1356,7 +1375,7 @@ function handleTap(x,y){
       if(k==='shoal'){if(G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);u.shoal=r;
         startFishing(G.selected);toast('🎣 Casting at the shoal.');updateSelCard();}else toast('Tap a settler first.');return;}
       if(k==='site'){if(G.selected)manualBuild(G.selected,r);return;}
-      if(k==='building'){return;}}}
+      if(k==='building'){selectBuilding(r);return;}}}
   // tapping the pond sends a selected settler to fish its shore
   const w=castAt(x,y,[water]);
   if(w.length&&G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);
@@ -1437,8 +1456,9 @@ function tickVillager(v,dt){
     case 'build':{
       const s=u.site;if(!s||s.userData.kind!=='site'){u.phase='idle';u.site=null;break;}
       u.workT+=dt;u.armR.rotation.x=Math.sin(u.workT*9)*0.8-0.3;u.armL.rotation.x=Math.sin(u.workT*9)*0.6-0.2;
-      s.userData.progress+=dt;const p=Math.min(1,s.userData.progress/s.userData.need);s.scale.y=0.12+0.88*p;
-      if(p>=1){finishBuilding(s);u.site=null;u.armR.rotation.x=0;u.armL.rotation.x=0;
+      s.userData.progress+=dt;const p=Math.min(1,s.userData.progress/s.userData.need);
+      if(!s.userData.upgrading)s.scale.y=0.12+0.88*p;
+      if(p>=1){if(s.userData.upgrading)finishUpgrade(s);else finishBuilding(s);u.site=null;u.armR.rotation.x=0;u.armL.rotation.x=0;
         // resume order
         if(u.order){const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else u.phase='idle';}else u.phase='idle';}
       break;}
@@ -1486,8 +1506,8 @@ function tickVillager(v,dt){
 }
 
 function finishBuilding(s){
-  s.scale.y=1;s.userData.kind='building';const t=s.userData.type;
-  if(OBS_R[t])G.obstacles.push({x:s.position.x,z:s.position.z,r:OBS_R[t]});
+  s.scale.y=1;s.userData.kind='building';s.userData.level=1;const t=s.userData.type;
+  if(OBS_R[t]){const o={x:s.position.x,z:s.position.z,r:OBS_R[t]};G.obstacles.push(o);s.userData.obs=o;}
   if(t==='house'){G.houses++;G.popCap+=3;addSmoke(s,0.55,2.4,-0.5);toast('🏠 House raised — +3 population.');}
   if(t==='storehouse'){G.stores++;G.cap+=200;s.userData.depot=true;G.depots.push(s);toast('📦 Storehouse built — +200 storage & a new drop-off.');}
   if(t==='farm'){G.farms++;toast('🌾 Farm yields food over time.');}
@@ -1497,6 +1517,58 @@ function finishBuilding(s){
   if(t==='quarry'){G.quarries++;toast('⛏ Quarry cut — stone flows in.');}
   if(t==='hall'){G.hall=true;G.popCap+=5;addSmoke(s,0.8,4.1,0.8);toast('🏛 The Great Hall stands — your realm is founded!');hint('Realm founded. The valley is yours to grow.');}
   refreshHUD();
+}
+
+// ===== building upgrades (resource + time gated, never money) =====
+const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',hall:'Great Hall'};
+const RESICON={wood:'🪵',stone:'🪨',food:'🍖'};
+const UPGRADE={
+  keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage',apply:()=>{G.popCap+=2;G.cap+=150;}},
+  house:{max:3,cost:l=>({wood:40*l}),time:l=>5+l*2,gain:'+3 pop',apply:()=>{G.popCap+=3;}},
+  storehouse:{max:3,cost:l=>({wood:50*l}),time:l=>5+l*2,gain:'+200 storage',apply:()=>{G.cap+=200;}},
+  farm:{max:3,cost:l=>({wood:35*l}),time:l=>5+l*2,gain:'+food',apply:()=>{G.rateFood+=0.4;}},
+  coop:{max:3,cost:l=>({wood:30*l}),time:l=>5+l*2,gain:'+food',apply:()=>{G.rateFood+=0.3;}},
+  pen:{max:3,cost:l=>({wood:45*l}),time:l=>5+l*2,gain:'+food',apply:()=>{G.rateFood+=0.5;}},
+  quarry:{max:3,cost:l=>({wood:40*l,stone:20*l}),time:l=>6+l*2,gain:'+stone',apply:()=>{G.rateStone+=0.4;}},
+  lumber:{max:3,cost:l=>({wood:40*l}),time:l=>6+l*2,gain:'+wood',apply:()=>{G.rateWood+=0.35;}},
+};
+function costStr(c){return Object.keys(c).map(k=>c[k]+RESICON[k]).join(' ');}
+function startUpgrade(b){
+  if(!b||b.userData.kind!=='building')return;
+  const t=b.userData.type,cfg=UPGRADE[t];if(!cfg)return;
+  const lv=b.userData.level||1;if(lv>=cfg.max){toast('Already at max level.');return;}
+  const cost=cfg.cost(lv);if(!afford(cost)){toast('Not enough resources to upgrade.');return;}
+  spend(cost);
+  if(b.userData.obs){const i=G.obstacles.indexOf(b.userData.obs);if(i>=0)G.obstacles.splice(i,1);} // free footprint for the builder
+  b.userData.kind='site';b.userData.upgrading=true;b.userData.progress=0;b.userData.need=cfg.time(lv);
+  let builder=(G.selected&&G.selected.userData.kind==='villager')?G.selected:null;
+  if(!builder){let bd=1e9;for(const v of G.villagers){const d=v.position.distanceTo(b.position)+(v.userData.phase==='idle'?0:30);if(d<bd){bd=d;builder=v;}}}
+  if(builder)manualBuild(builder,b);
+  toast('⬆ Upgrading '+NAME[t]+' to Lv '+(lv+1)+'…');hideBldCard();refreshHUD();
+}
+function finishUpgrade(b){
+  const t=b.userData.type;b.userData.kind='building';b.userData.upgrading=false;
+  b.userData.level=(b.userData.level||1)+1;
+  if(b.userData.obs)G.obstacles.push(b.userData.obs);
+  UPGRADE[t].apply(b,b.userData.level);b.scale.multiplyScalar(1.05);
+  toast('✅ '+NAME[t]+' is now Lv '+b.userData.level+'!');refreshHUD();
+}
+function selectBuilding(b){
+  if(G.selected){G.selected.userData.ring.visible=false;G.selected=null;$('tabJobs').disabled=true;updateSelCard();}
+  G.selBuilding=b;updateBldCard();
+}
+function hideBldCard(){G.selBuilding=null;$('bldCard').classList.remove('show');}
+function updateBldCard(){
+  const b=G.selBuilding,c=$('bldCard');
+  if(!b||b.userData.kind!=='building'){c.classList.remove('show');return;}
+  const t=b.userData.type,lv=b.userData.level||1,cfg=UPGRADE[t];
+  $('bldName').textContent=NAME[t]+' · Lv '+lv;
+  $('bldRecruit').style.display=(t==='keep')?'':'none';
+  const ub=$('bldUpgrade');
+  if(!cfg){ub.style.display='none';}
+  else if(lv>=cfg.max){ub.style.display='';ub.disabled=true;ub.textContent='⬆ Max level';}
+  else{const cost=cfg.cost(lv);ub.style.display='';ub.disabled=!afford(cost);ub.textContent='⬆ Lv '+(lv+1)+' · '+costStr(cost);}
+  c.classList.add('show');
 }
 
 function tickDeer(d,dt){const u=d.userData;
@@ -1528,7 +1600,7 @@ function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
 // Simpler: tapping keep recruits if affordable.
 keep.userData.recruit=true;
 
-let trickleF=0,trickleS=0,qTimer=0;
+let trickleF=0,trickleS=0,trickleW=0,qTimer=0;
 function loop(){
   requestAnimationFrame(loop);
   const dt=Math.min(0.05,clock.getDelta()),t=clock.elapsedTime;
@@ -1536,9 +1608,10 @@ function loop(){
     for(const v of G.villagers)tickVillager(v,dt);
     for(const d of G.deer)tickDeer(d,dt);
     for(const c of G.critters)tickCritter(c,dt);
-    const fr=foodRate(),sr=stoneRate();
+    const fr=foodRate(),sr=stoneRate(),wr=woodRate();
     if(fr>0){trickleF+=dt*fr;if(trickleF>=1){addStored('food',Math.floor(trickleF));trickleF%=1;refreshHUD();}}
     if(sr>0){trickleS+=dt*sr;if(trickleS>=1){addStored('stone',Math.floor(trickleS));trickleS%=1;refreshHUD();}}
+    if(wr>0){trickleW+=dt*wr;if(trickleW>=1){addStored('wood',Math.floor(trickleW));trickleW%=1;refreshHUD();}}
     qTimer+=dt;if(qTimer>0.3){qTimer=0;checkObjectives();}
   }
   for(const b of G.buildings)b.traverse(o=>{if(o.name==='flag')o.rotation.y=Math.sin(t*3)*0.3;});
@@ -1574,22 +1647,14 @@ function loop(){
 }
 loop();
 
-// recruit by tapping keep
-const _handleTap=handleTap;
-handleTap=function(x,y){
-  if(!G.started)return;
-  if(!G.buildMode){
-    const hits=castAt(x,y,G.buildings);
-    if(hits.length){const r=rootOf(hits[0].object);
-      if(r&&r.userData.recruit){
-        if(pop()>=G.popCap){toast('Build a house for more room.');closeMenus();return;}
-        if(!afford(COSTS.settler)){toast('Need 50 food to recruit.');closeMenus();return;}
-        spend(COSTS.settler);const a=Math.random()*6.28;makeSettler(Math.cos(a)*3,Math.sin(a)*3);
-        toast('A new settler answers the call. Tap the keep again to recruit more.');closeMenus();refreshHUD();return;}
-    }
-  }
-  _handleTap(x,y);
-};
+// building card buttons: recruit (keep) + upgrade
+$('bldRecruit').addEventListener('click',()=>{
+  if(pop()>=G.popCap){toast('Build or upgrade a house for more room.');return;}
+  if(!afford(COSTS.settler)){toast('Need 50 🍖 to recruit.');return;}
+  spend(COSTS.settler);const a=Math.random()*6.28;makeSettler(Math.cos(a)*3,Math.sin(a)*3);
+  toast('A new settler answers the call.');refreshHUD();updateBldCard();});
+$('bldUpgrade').addEventListener('click',()=>{if(G.selBuilding)startUpgrade(G.selBuilding);});
+$('bldClose').addEventListener('click',hideBldCard);
 
 $('questHead').addEventListener('click',()=>$('quests').classList.toggle('collapsed'));
 $('startBtn').addEventListener('click',()=>{

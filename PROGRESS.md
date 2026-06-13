@@ -89,6 +89,15 @@ Age of Empires-style game."
     can't fetch assets, is unaffected). Building placement already routed through
     getMesh(). TODO once assets exist: fit scales (MODEL_XF), hot-swap the keep,
     integrate animated villager via AnimationMixer (the big piece).
+26. **Living world gfx** — varied trees + wind sway, lush gradient grass with wind
+    shader (`applyWind`/`windU`), scrolling water ripples.
+27. **Building upgrades** — tap a building → `#bldCard` (name·Lv, Upgrade, +Settler
+    for keep). `UPGRADE` config per type (max 3; cost/time scale per level; `apply`
+    bumps popCap/cap/rateFood/rateStone/rateWood). `startUpgrade`→building becomes a
+    'site' (footprint obstacle freed so a builder can reach), reuses build phase,
+    `finishUpgrade` applies bonus + restores obstacle + level++. New `woodRate()`
+    + wood trickle + HUD rate. Keep recruit moved from tap to the card button.
+    Verified: keep Lv1→2, popCap+2, storage+150, obstacle restored.
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
