@@ -649,6 +649,16 @@ function addStump(pos){const g=new THREE.Group();
   const s=new THREE.Mesh(new THREE.CylinderGeometry(0.26,0.32,0.36,7),trunkMat);s.position.y=0.18;g.add(s);
   const rings=new THREE.Mesh(new THREE.CylinderGeometry(0.24,0.24,0.04,7),wM(0x8a6038));rings.position.y=0.37;g.add(rings);
   place(g,pos.x,pos.z);g.rotation.y=Math.random()*6.28;shadows(g);scene.add(g);}
+// soft trampled-earth patch so buildings sit planted in the ground
+const patchTex=(()=>{const cv=document.createElement('canvas');cv.width=cv.height=64;
+  const x=cv.getContext('2d'),g=x.createRadialGradient(32,32,6,32,32,32);
+  g.addColorStop(0,'rgba(106,78,46,0.95)');g.addColorStop(0.7,'rgba(106,78,46,0.7)');g.addColorStop(1,'rgba(106,78,46,0)');
+  x.fillStyle=g;x.beginPath();x.arc(32,32,32,0,6.3);x.fill();
+  const t=new THREE.CanvasTexture(cv);t.encoding=THREE.sRGBEncoding;return t;})();
+const patchMat=new THREE.MeshLambertMaterial({map:patchTex,transparent:true,depthWrite:false,
+  polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
+function groundPatch(x,z,r){const m=new THREE.Mesh(new THREE.CircleGeometry(r,24),patchMat);
+  m.rotation.x=-Math.PI/2;m.position.set(x,getH(x,z)+0.04,z);m.receiveShadow=true;scene.add(m);return m;}
 // smoke from the keep hearth + a few hens give the town immediate life
 addSmoke(keep,0.9,3.9,-0.9);
 const yard=new THREE.Object3D();yard.position.set(4.5,getH(4.5,4.5),4.5);scene.add(yard);
@@ -756,6 +766,8 @@ function confirmBuild(){
   spend(COSTS[bm.type]);
   const site=MESH[bm.type]();site.position.copy(p);site.scale.y=0.12;
   site.userData={kind:'site',type:bm.type,progress:0,need:BTIME[bm.type]};
+  const PR={house:2.7,storehouse:2.9,farm:3.2,coop:2.2,pen:3.5,lumber:2.7,quarry:3.1,hall:4.3};
+  groundPatch(p.x,p.z,PR[bm.type]||2.7);
   shadows(site);scene.add(site);G.buildings.push(site);
   cancelBuild();
   let builder=G.selected,best=1e9;
