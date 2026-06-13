@@ -611,6 +611,49 @@ const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'buil
 shadows(keep);scene.add(keep);G.buildings.push(keep);G.depots.push(keep);
 makeSettler(2.4,2.4);
 
+// ===== particles: work chips, chimney smoke, stumps =====
+const chips=[],chipGeo=new THREE.TetrahedronGeometry(0.09,0);
+function spawnChips(pos,res,n){
+  if(chips.length>90)return;const mat=loadMat[res]||loadMat.wood;
+  for(let i=0;i<n;i++){const c=new THREE.Mesh(chipGeo,mat);
+    c.position.set(pos.x,getH(pos.x,pos.z)+0.6,pos.z);
+    const a=Math.random()*6.28,sp=1.1+Math.random()*1.7;
+    c.userData={vx:Math.cos(a)*sp,vy:2.2+Math.random()*2,vz:Math.sin(a)*sp,life:0.6+Math.random()*0.4,age:0};
+    scene.add(c);chips.push(c);}
+}
+function updateChips(dt){
+  for(let i=chips.length-1;i>=0;i--){const c=chips[i],u=c.userData;u.age+=dt;
+    if(u.age>=u.life){scene.remove(c);chips.splice(i,1);continue;}
+    u.vy-=9*dt;c.position.x+=u.vx*dt;c.position.y+=u.vy*dt;c.position.z+=u.vz*dt;
+    const gy=getH(c.position.x,c.position.z)+0.05;
+    if(c.position.y<gy){c.position.y=gy;u.vy*=-0.3;u.vx*=0.55;u.vz*=0.55;}
+    c.rotation.x+=dt*9;c.rotation.y+=dt*7;}
+}
+const smokeTex=(()=>{const cv=document.createElement('canvas');cv.width=cv.height=48;
+  const x=cv.getContext('2d'),g=x.createRadialGradient(24,24,1,24,24,24);
+  g.addColorStop(0,'rgba(228,224,216,0.9)');g.addColorStop(1,'rgba(228,224,216,0)');
+  x.fillStyle=g;x.beginPath();x.arc(24,24,24,0,6.3);x.fill();
+  const t=new THREE.CanvasTexture(cv);t.encoding=THREE.sRGBEncoding;return t;})();
+const smokers=[];
+function addSmoke(obj,lx,ly,lz){
+  for(let i=0;i<5;i++){const sp=new THREE.Sprite(new THREE.SpriteMaterial(
+    {map:smokeTex,transparent:true,opacity:0,depthWrite:false,fog:true}));
+    sp.userData={lx,ly,lz,t:i/5};obj.add(sp);smokers.push(sp);}
+}
+function updateSmoke(dt){
+  for(const sp of smokers){const u=sp.userData;u.t+=dt*0.32;if(u.t>1)u.t-=1;const t=u.t;
+    sp.position.set(u.lx+Math.sin(t*5+u.lx)*0.3,u.ly+t*2.7,u.lz);
+    const s=0.5+t*1.6;sp.scale.set(s,s,s);sp.material.opacity=Math.sin(t*Math.PI)*0.42;}
+}
+function addStump(pos){const g=new THREE.Group();
+  const s=new THREE.Mesh(new THREE.CylinderGeometry(0.26,0.32,0.36,7),trunkMat);s.position.y=0.18;g.add(s);
+  const rings=new THREE.Mesh(new THREE.CylinderGeometry(0.24,0.24,0.04,7),wM(0x8a6038));rings.position.y=0.37;g.add(rings);
+  place(g,pos.x,pos.z);g.rotation.y=Math.random()*6.28;shadows(g);scene.add(g);}
+// smoke from the keep hearth + a few hens give the town immediate life
+addSmoke(keep,0.9,3.9,-0.9);
+const yard=new THREE.Object3D();yard.position.set(4.5,getH(4.5,4.5),4.5);scene.add(yard);
+makeChicken(yard);makeChicken(yard);makeChicken(yard);
+
 // ===== UI helpers =====
 const $=id=>document.getElementById(id);
 let toastTimer=null;
@@ -799,7 +842,9 @@ function tickVillager(v,dt){
       if(u.workT>=0.9){u.workT=0;
         const take=Math.min(2,n.userData.amount,CARRY-u.carrying);
         n.userData.amount-=take;u.carrying+=take;u.carryRes=n.userData.res;n.scale.multiplyScalar(0.99);setLoad(u);
-        if(n.userData.amount<=0){scene.remove(n);const i=G.nodes.indexOf(n);if(i>=0)G.nodes.splice(i,1);u.node=null;}
+        spawnChips(n.position,n.userData.res,3);
+        if(n.userData.amount<=0){if(n.userData.label==='tree')addStump(n.position);
+          scene.remove(n);const i=G.nodes.indexOf(n);if(i>=0)G.nodes.splice(i,1);u.node=null;}
         if(u.carrying>=CARRY||!u.node){u.armR.rotation.x=0;u.armL.rotation.x=0;
           u.depot=nearestDepot(v);u.phase=u.carrying>0?'toDepot':'idle';}
       }break;}
@@ -854,14 +899,14 @@ function tickVillager(v,dt){
 
 function finishBuilding(s){
   s.scale.y=1;s.userData.kind='building';const t=s.userData.type;
-  if(t==='house'){G.houses++;G.popCap+=3;toast('🏠 House raised — +3 population.');}
+  if(t==='house'){G.houses++;G.popCap+=3;addSmoke(s,0.55,2.4,-0.5);toast('🏠 House raised — +3 population.');}
   if(t==='storehouse'){G.stores++;G.cap+=200;s.userData.depot=true;G.depots.push(s);toast('📦 Storehouse built — +200 storage & a new drop-off.');}
   if(t==='farm'){G.farms++;toast('🌾 Farm yields food over time.');}
   if(t==='coop'){G.coops++;makeChicken(s);makeChicken(s);makeChicken(s);toast('🐔 Coop built — hens settle in.');}
   if(t==='pen'){G.pens++;makeSheep(s);makeSheep(s);toast('🐑 Pen built — sheep graze.');}
   if(t==='lumber'){G.lumbers++;s.userData.depot=true;G.depots.push(s);toast('🪓 Lumber camp — drop-off for nearby woodcutters.');}
   if(t==='quarry'){G.quarries++;toast('⛏ Quarry cut — stone flows in.');}
-  if(t==='hall'){G.hall=true;G.popCap+=5;toast('🏛 The Great Hall stands — your realm is founded!');hint('Realm founded. The valley is yours to grow.');}
+  if(t==='hall'){G.hall=true;G.popCap+=5;addSmoke(s,0.8,4.1,0.8);toast('🏛 The Great Hall stands — your realm is founded!');hint('Realm founded. The valley is yours to grow.');}
   refreshHUD();
 }
 
@@ -908,6 +953,7 @@ function loop(){
   }
   for(const b of G.buildings)b.traverse(o=>{if(o.name==='flag')o.rotation.y=Math.sin(t*3)*0.3;});
   water.position.y=WATER_Y+Math.sin(t*0.8)*0.04;
+  updateSmoke(dt);updateChips(dt);
   // clouds drift and wrap around the valley
   for(const cl of clouds){cl.position.x+=cl.userData.spd*dt;if(cl.position.x>100)cl.position.x=-100;}
   // birds wheel in slow circles, wings flapping
