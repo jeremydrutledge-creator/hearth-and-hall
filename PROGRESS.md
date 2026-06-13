@@ -53,6 +53,17 @@ Age of Empires-style game."
     in the City age = victory (`G.victory`). All gameplay-gated, no money/timers.
     NEXT pillars (see vision): building upgrade levels, wider economy (gold/market),
     stakes/defense (raids, walls, soldiers).
+17. **World expansion** — terrain 180→260; multiple FORESTS/ROCKIES regions
+    (rocky()/forestF() use rmax over arrays); ~doubled nodes + higher yields; more
+    deer; denser cover; mountains/fog pushed out; pan ±118; sun shadow frustum
+    follows camTarget (see updateDay) so shadows work map-wide.
+18. **Rally point** — `G.rally` (Vector3) + `G.rallyRes` + cyan flag; `setRally()`;
+    🚩 Rally bar button sets it via `G.rallyMode` tap (node→that resource, shoal→fish,
+    ground→muster). Settlers have `rallyReady` (true on spawn / Stand Down, false on
+    any manual command); idle rallyReady settlers adopt the rally's resource order or
+    walk to the muster point. Fixes "new/idle settlers do nothing / stop working".
+19. **Hunting needs bows** — `G.bows`; Hunt job + manualHunt locked until you craft
+    bows via Build ▸ 🏹 Craft Bows (25 wood, instant `craft()` action, data-craft).
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they

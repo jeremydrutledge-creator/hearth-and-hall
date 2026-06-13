@@ -145,6 +145,10 @@
   <div class="opts">
     <button class="opt full" data-build="hall">🏛 Great Hall<small>150 🪵 60 🪨 · found your realm</small></button>
   </div>
+  <div class="cat">Craft</div>
+  <div class="opts">
+    <button class="opt full" data-craft="bows">🏹 Craft Bows<small>25 🪵 · unlocks hunting</small></button>
+  </div>
 </div></div>
 
 <!-- JOBS MENU -->
@@ -154,7 +158,7 @@
     <button class="opt" data-job="wood">🪓 Cut Wood<small>auto: fell → haul → repeat</small></button>
     <button class="opt" data-job="stone">⛏ Mine Stone<small>auto: quarry rock → haul</small></button>
     <button class="opt" data-job="food">🍇 Forage<small>auto: berries → haul</small></button>
-    <button class="opt" data-job="hunt">🏹 Hunt<small>chase deer → haul meat</small></button>
+    <button class="opt" data-job="hunt">🏹 Hunt<small>needs bows · chase deer → meat</small></button>
     <button class="opt" data-job="fish">🎣 Fish<small>cast at the pond → haul fish</small></button>
     <button class="opt full" data-job="idle">🛑 Stand Down<small>wait by the keep</small></button>
   </div>
@@ -163,6 +167,7 @@
 <div class="bar" id="mainBar">
   <button class="tab" id="tabBuild">⚒ Build ▾</button>
   <button class="tab" id="tabJobs" disabled>⚑ Assign ▾</button>
+  <button class="tab" id="tabRally">🚩 Rally</button>
 </div>
 <div class="bar" id="confirmBar">
   <button class="tab primary" id="bConfirm">✔ Build here</button>
@@ -174,7 +179,8 @@
   <p style="margin-top:-6px;font-style:italic;opacity:.75">A village-building tale of timber, stone &amp; stew.</p>
   <p>Your <b>keep</b> stands at the heart of a wild valley — deep forest west, rocky hills east, a pond south.</p>
   <p>Settlers <b>haul</b> every load back to the keep. It only holds so much — raise <b>storehouses</b> to grow.</p>
-  <p><b>Tap</b> a settler, then a tree, rock, berry, or deer — or use <b>⚑ Assign</b> to give a standing job. <b>⚒ Build</b> opens the menu.</p>
+  <p><b>Tap</b> a settler, then a tree, rock or berry — or use <b>⚑ Assign</b> for a standing job. <b>⚒ Build</b> opens the menu; craft <b>🏹 bows</b> there before you can hunt.</p>
+  <p>Set a <b>🚩 Rally</b> on a forest or rocks and idle &amp; new settlers gather there automatically.</p>
   <p><b>Drag</b> to roam · <b>pinch</b> to zoom.</p>
   <button id="startBtn">Begin</button>
 </div></div>
@@ -217,6 +223,7 @@ const G={
   farms:0,coops:0,pens:0,quarries:0,lumbers:0,houses:0,stores:0,hall:false,
   age:1, objDone:{}, victory:false,
   obstacles:[],
+  bows:false, rally:null, rallyRes:null, rallyMode:false,
   started:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
@@ -720,7 +727,7 @@ function makeSettler(x,z){
   place(g,x,z);
   g.userData={kind:'villager',ring,legL,legR,armL,armR,load,rod,
     order:null,phase:'idle',dest:null,node:null,site:null,prey:null,depot:null,fishPt:null,shoal:null,
-    carrying:0,carryRes:null,workT:0,walkT:0,retry:0};
+    rallyReady:true,carrying:0,carryRes:null,workT:0,walkT:0,retry:0};
   shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.villagers.push(g);
   return g;
 }
@@ -884,6 +891,23 @@ const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen
 const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'building',type:'keep',depot:true};
 shadows(keep);scene.add(keep);G.buildings.push(keep);G.depots.push(keep);
 G.obstacles.push({x:0,z:0,r:OBS_R.keep});
+
+// ===== rally point: where idle & newly-recruited settlers muster (and auto-work) =====
+const rallyFlag=(function(){const g=new THREE.Group();
+  const pole=new THREE.Mesh(new THREE.CylinderGeometry(0.04,0.04,1.7,5),wM(0x6a5030));pole.position.y=0.85;g.add(pole);
+  const fl=new THREE.Mesh(new THREE.PlaneGeometry(0.74,0.42),new THREE.MeshBasicMaterial({color:new THREE.Color(0x3fb6e6).convertSRGBToLinear(),side:THREE.DoubleSide}));
+  fl.position.set(0.38,1.45,0);fl.name='rallyflag';g.add(fl);
+  const ringMat=new THREE.MeshBasicMaterial({color:new THREE.Color(0x3fb6e6).convertSRGBToLinear(),transparent:true,opacity:0.5,side:THREE.DoubleSide,depthWrite:false});
+  const ring=new THREE.Mesh(new THREE.RingGeometry(0.7,0.85,24),ringMat);ring.rotation.x=-Math.PI/2;ring.position.y=0.06;g.add(ring);
+  scene.add(g);return g;})();
+const RESNAME={wood:'wood',stone:'stone',food:'berries',fish:'fish'};
+function setRally(x,z,res){
+  if(!G.rally)G.rally=new THREE.Vector3();
+  G.rally.set(x,getH(x,z),z);G.rallyRes=res||null;
+  rallyFlag.position.set(x,getH(x,z),z);rallyFlag.visible=true;
+}
+setRally(5,5,null);  // default muster point beside the keep
+
 makeSettler(2.4,2.4);
 
 // ===== particles: work chips, chimney smoke, stumps =====
@@ -977,9 +1001,13 @@ function refreshHUD(){
   $('hFoodRate').textContent=foodRate()>0?('+'+foodRate().toFixed(1)):'';
   $('hStoneRate').textContent=stoneRate()>0?('+'+stoneRate().toFixed(1)):'';
   document.querySelectorAll('#buildMenu .opt').forEach(b=>{
-    const t=b.dataset.build;const locked=(AGE_UNLOCK[t]||1)>G.age;
+    if(b.dataset.craft){const owned=b.dataset.craft==='bows'&&G.bows;
+      b.style.display=owned?'none':'';b.classList.toggle('locked',false);b.disabled=!afford({wood:25});return;}
+    const t=b.dataset.build;if(!t)return;const locked=(AGE_UNLOCK[t]||1)>G.age;
     b.classList.toggle('locked',locked);
     b.disabled=locked||(t==='hall'&&G.hall)||!afford(COSTS[t]);});
+  const hb=document.querySelector('#jobMenu [data-job="hunt"]');
+  if(hb){hb.classList.toggle('locked',!G.bows);hb.disabled=!G.bows;}
   updateSelCard();
 }
 // ===== progression: ages + objective ladder (gated by gameplay, never money) =====
@@ -1063,11 +1091,11 @@ function nearestDeer(v){let best=null,bd=1e9;
 function nearestDepot(v){let best=null,bd=1e9;
   for(const dp of G.depots){const d=dp.position.distanceTo(v.position);if(d<bd){bd=d;best=dp;}}return best;}
 
-function setOrder(v,order){const u=v.userData;u.order=(order==='idle'?null:order);clearTargets(u);u.phase='idle';u.retry=0;updateSelCard();}
-function manualGather(v,node){const u=v.userData;u.order=node.userData.res;clearTargets(u);u.node=node;u.dest=node.position.clone();u.phase='toNode';updateSelCard();}
-function manualHunt(v,d){const u=v.userData;u.order='hunt';clearTargets(u);u.prey=d;u.dest=d.position.clone();u.phase='toPrey';d.userData.state='flee';updateSelCard();}
-function manualMove(v,p){const u=v.userData;u.order=null;clearTargets(u);u.dest=p.clone();u.phase='move';updateSelCard();}
-function manualBuild(v,site){const u=v.userData;clearTargets(u);u.site=site;u.dest=site.position.clone();u.phase='toSite';}
+function setOrder(v,order){const u=v.userData;u.order=(order==='idle'?null:order);clearTargets(u);u.phase='idle';u.retry=0;u.rallyReady=(order==='idle');updateSelCard();}
+function manualGather(v,node){const u=v.userData;u.order=node.userData.res;clearTargets(u);u.node=node;u.dest=node.position.clone();u.phase='toNode';u.rallyReady=false;updateSelCard();}
+function manualHunt(v,d){const u=v.userData;if(!G.bows){toast('Craft bows first — ⚒ Build ▸ 🏹 Craft Bows.');return;}u.order='hunt';clearTargets(u);u.prey=d;u.dest=d.position.clone();u.phase='toPrey';u.rallyReady=false;d.userData.state='flee';updateSelCard();}
+function manualMove(v,p){const u=v.userData;u.order=null;clearTargets(u);u.dest=p.clone();u.phase='move';u.rallyReady=false;updateSelCard();}
+function manualBuild(v,site){const u=v.userData;clearTargets(u);u.site=site;u.dest=site.position.clone();u.phase='toSite';u.rallyReady=false;}
 
 // ===== build mode =====
 function openMenu(which){
@@ -1083,10 +1111,27 @@ $('tabJobs').addEventListener('click',()=>{
   if(!G.selected)return;
   if($('jobMenu').classList.contains('show'))closeMenus();else openMenu('jobs');});
 document.querySelectorAll('#jobMenu .opt').forEach(b=>b.addEventListener('click',()=>{
-  if(G.selected){setOrder(G.selected,b.dataset.job);toast('Order set: '+(JOBNAME[b.dataset.job]||'idle'));}
+  const j=b.dataset.job;
+  if(j==='hunt'&&!G.bows){toast('Craft bows first — ⚒ Build ▸ 🏹 Craft Bows.');closeMenus();return;}
+  if(G.selected){setOrder(G.selected,j);toast('Order set: '+(JOBNAME[j]||'idle'));}
   closeMenus();}));
 document.querySelectorAll('#buildMenu .opt').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.craft){craft(b.dataset.craft);return;}
+  if(!b.dataset.build)return;
   closeMenus();enterBuild(b.dataset.build);}));
+function craft(what){
+  if(what==='bows'){
+    if(G.bows){closeMenus();return;}
+    if(!afford({wood:25})){toast('Need 25 🪵 to craft bows.');return;}
+    spend({wood:25});G.bows=true;
+    toast('🏹 Bows crafted — your settlers can now hunt!');closeMenus();refreshHUD();}
+}
+// ===== rally point control =====
+$('tabRally').addEventListener('click',()=>{
+  closeMenus();G.rallyMode=!G.rallyMode;
+  $('tabRally').classList.toggle('active',G.rallyMode);
+  hint(G.rallyMode?'Tap a forest, rocks, berries or the pond to set a work rally — or open ground to muster':'');
+});
 
 function enterBuild(type){
   if(!afford(COSTS[type])){toast('Not enough resources.');return;}
@@ -1157,6 +1202,15 @@ canvas.addEventListener('wheel',e=>{camZoom=Math.min(2.3,Math.max(0.5,camZoom*(e
 function handleTap(x,y){
   if(!G.started)return;
   closeMenus();
+  if(G.rallyMode){
+    const h=castAt(x,y,[...G.nodes,...shoals,water,terrain]);
+    if(h.length){const r=rootOf(h[0].object);
+      if(r&&r.userData.kind==='node'){setRally(r.position.x,r.position.z,r.userData.res);
+        toast('🚩 Rally set — idle & new settlers will gather '+(RESNAME[r.userData.res]||'')+'.');}
+      else if(r&&r.userData.kind==='shoal'){setRally(r.position.x,r.position.z,'fish');toast('🚩 Rally set — settlers will fish here.');}
+      else{const p=h[0].point;setRally(p.x,p.z,null);toast('🚩 Rally point set — idle settlers muster here.');}}
+    G.rallyMode=false;$('tabRally').classList.remove('active');hint('');return;
+  }
   if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length)G.buildMode.ghost.position.copy(hit[0].point);return;}
   const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.buildings]);
   if(hits.length){const r=rootOf(hits[0].object);
@@ -1286,6 +1340,11 @@ function tickVillager(v,dt){
         if(u.order==='hunt'){const pr=nearestDeer(v);if(pr){u.prey=pr;pr.userData.state='flee';u.phase='toPrey';}else u.retry=2;}
         else if(u.order==='fish'){startFishing(v);}
         else{const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else u.retry=2;}
+      } else if(u.rallyReady&&G.rally){
+        // obey the rally: gather its resource, or muster at the point and wait
+        if(G.rallyRes){setOrder(v,G.rallyRes);}
+        else{const dx=G.rally.x-v.position.x,dz=G.rally.z-v.position.z;
+          if(dx*dx+dz*dz>3.0){u.dest=G.rally.clone();u.phase='move';}}
       }
     }
   }
