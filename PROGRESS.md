@@ -39,6 +39,17 @@ Age of Empires-style game."
     fish + invisible tap-disc. Fishing now targets the nearest shoal (`u.shoal`),
     casts from the shore nearest it, and each catch removes 9; an emptied shoal
     despawns and a new one fades in elsewhere after ~9-16s. Tap a shoal to fish it.
+14. **Day cycle** — `updateDay(t)` sweeps the sun golden-morning→noon→amber-evening
+    over `DAYLEN=200s` (never full night). Drives sun pos/color/intensity, hemi
+    tint, fog, and a redrawn sky gradient (`drawSky`). Always playable/bright.
+
+## VISION (user, 2026-06-13): aim for the depth Rise of Kingdoms / Rise of
+Empires *advertise* — lots to build, research, and grow, a long progression
+arc — but WITHOUT pay-to-play gates. Everything gated by gameplay only (time,
+resources, planning), never by money/timers-you-pay-to-skip. Next work should
+build toward meaningful progression systems (tech/ages, more buildings &
+resources, population growth, maybe simple threats/quests) while keeping the
+no-paywall, satisfying-loop ethos. See "Candidate next steps" below.
 
 NOTE: temporary debug hooks used while iterating, all REMOVED before commit —
 re-add if needed: `#gallery` hash (building grid), `window.__G=G` (state), and

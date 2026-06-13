@@ -209,16 +209,16 @@ renderer.toneMapping=THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure=0.92;
 const scene=new THREE.Scene();
 scene.fog=new THREE.Fog(0xcfe1ea,78,168);
-// sky gradient — deep blue aloft, warm haze at the horizon
-{
-  const cv=document.createElement('canvas');cv.width=8;cv.height=256;
-  const ctx=cv.getContext('2d');
-  const g=ctx.createLinearGradient(0,0,0,256);
-  g.addColorStop(0,'#3f74c4');g.addColorStop(0.32,'#6fa0d8');
-  g.addColorStop(0.62,'#a9cbe6');g.addColorStop(0.84,'#d6e6ec');g.addColorStop(1,'#eef0d8');
-  ctx.fillStyle=g;ctx.fillRect(0,0,8,256);
-  const tex=new THREE.CanvasTexture(cv);tex.encoding=THREE.sRGBEncoding;scene.background=tex;
+// sky gradient — redrawn through the day cycle (deep blue aloft, warm at the horizon)
+const skyCv=document.createElement('canvas');skyCv.width=8;skyCv.height=256;
+const skyCtx=skyCv.getContext('2d');
+const skyTex=new THREE.CanvasTexture(skyCv);skyTex.encoding=THREE.sRGBEncoding;scene.background=skyTex;
+function drawSky(top,mid,hor){
+  const g=skyCtx.createLinearGradient(0,0,0,256);
+  g.addColorStop(0,top);g.addColorStop(0.42,mid);g.addColorStop(0.78,hor);g.addColorStop(1,hor);
+  skyCtx.fillStyle=g;skyCtx.fillRect(0,0,8,256);skyTex.needsUpdate=true;
 }
+drawSky('#3f74c4','#9fc0e0','#eef0d8');
 const camera=new THREE.PerspectiveCamera(45,1,0.1,500);
 let camTarget=new THREE.Vector3(0,0,0),camZoom=1;
 function updateCam(){const d=27*camZoom;const cy=getH(camTarget.x,camTarget.z);
@@ -228,7 +228,7 @@ function resize(){renderer.setSize(innerWidth,innerHeight,false);
   camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}
 addEventListener('resize',resize);resize();updateCam();
 
-scene.add(new THREE.HemisphereLight(0xbfd8f5,0x49612c,0.34));
+const hemi=new THREE.HemisphereLight(0xbfd8f5,0x49612c,0.34);scene.add(hemi);
 const sun=new THREE.DirectionalLight(0xffe9c2,1.55);
 sun.position.set(46,60,22);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
 sun.shadow.bias=-0.0004;sun.shadow.normalBias=0.02;
@@ -236,6 +236,29 @@ const SC=sun.shadow.camera;SC.left=-70;SC.right=70;SC.top=70;SC.bottom=-70;SC.ne
 scene.add(sun);scene.add(sun.target);
 // warm bounce/fill from the opposite side keeps shadows from going muddy
 const fill=new THREE.DirectionalLight(0xc8e0ff,0.18);fill.position.set(-38,26,-30);scene.add(fill);
+
+// ===== gentle day cycle: golden morning -> bright noon -> amber evening (never full night) =====
+const _dc1=new THREE.Color(),_dc2=new THREE.Color(),_dt1=new THREE.Color(),_dt2=new THREE.Color(),
+  _dm1=new THREE.Color(),_dm2=new THREE.Color(),_dh1=new THREE.Color(),_dh2=new THREE.Color();
+let _lastSky=-9;const DAYLEN=200;
+function updateDay(t){
+  const phase=((t/DAYLEN)+0.26)%1;          // open mid-morning
+  const low=1-Math.sin(Math.PI*phase);      // 0 at noon, 1 toward dawn/dusk
+  const elev=0.16+0.76*Math.sin(Math.PI*phase),az=-0.7+phase*2.4,hor=Math.cos(elev);
+  sun.position.set(Math.cos(az)*hor*62,Math.sin(elev)*62+5,Math.sin(az)*hor*62);
+  sun.target.position.set(0,0,0);
+  sun.color.copy(_dc1.set(0xffe9c2).lerp(_dc2.set(0xff7a2e),low*0.82));
+  sun.intensity=1.55-low*0.5;
+  hemi.intensity=0.34-low*0.05;
+  hemi.color.copy(_dt1.set(0xbfd8f5).lerp(_dt2.set(0xdb9a64),low));
+  scene.fog.color.copy(_dm1.set(0xcfe1ea).lerp(_dm2.set(0xe2b988),low));
+  if(t-_lastSky>1.0){_lastSky=t;
+    const top=_dc1.set(0x3f74c4).lerp(_dc2.set(0x29316e),low);
+    const mid=_dt1.set(0x9fc0e0).lerp(_dt2.set(0xcf8a54),low*0.92);
+    const hr=_dh1.set(0xeef0d8).lerp(_dh2.set(0xf4a64e),low);
+    drawSky('#'+top.getHexString(),'#'+mid.getHexString(),'#'+hr.getHexString());
+  }
+}
 
 // ===== terrain =====
 const SIZE=180,SEG=140;
@@ -1234,7 +1257,7 @@ function loop(){
   if(pollen){const pa=pollen.geometry.attributes.position,bs=pollen.userData.base;
     for(let i=0;i<pa.count;i++){pa.setY(i,bs[i*3+1]+Math.sin(t*0.7+i*1.3)*0.35);}
     pa.needsUpdate=true;pollen.rotation.y=t*0.006;}
-  const ang=t*0.01;sun.position.set(Math.cos(ang)*46+10,52+Math.sin(t*0.05)*4,Math.sin(ang)*36+10);
+  updateDay(t);
   renderer.render(scene,camera);
 }
 loop();
