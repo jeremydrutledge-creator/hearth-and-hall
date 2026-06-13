@@ -578,15 +578,36 @@ function scatterInstanced(geo,count,tries,colorFn,placeFn,filterFn){
   im.count=n;im.instanceMatrix.needsUpdate=true;if(im.instanceColor)im.instanceColor.needsUpdate=true;
   scene.add(im);return im;
 }
-// lush grass tufts
+// wind that ripples through instanced foliage (blade tips bend, roots stay put)
+const windU={value:0};
+function applyWind(mesh,amp,freq,bendStart){
+  const m=mesh.material;
+  m.onBeforeCompile=(sh)=>{sh.uniforms.uTime=windU;
+    sh.vertexShader='uniform float uTime;\n'+sh.vertexShader.replace('#include <begin_vertex>',
+      `#include <begin_vertex>
+       #ifdef USE_INSTANCING
+       vec4 _wp=instanceMatrix*vec4(0.0,0.0,0.0,1.0);
+       float _ph=_wp.x*0.7+_wp.z*0.7;
+       float _b=max(transformed.y-${bendStart.toFixed(2)},0.0);
+       transformed.x+=sin(uTime*${freq.toFixed(2)}+_ph)*${amp.toFixed(3)}*_b;
+       transformed.z+=sin(uTime*${(freq*0.7).toFixed(2)}+_ph*1.3)*${(amp*0.6).toFixed(3)}*_b;
+       #endif`);};
+  m.customProgramCacheKey=()=>'wind_'+amp+'_'+freq+'_'+bendStart;m.needsUpdate=true;
+}
+// lush grass tufts (gradient base→tip + wind)
 {
-  const blade=new THREE.ConeGeometry(0.085,0.5,4);blade.translate(0,0.25,0);
-  const lo=new THREE.Color(0x3c761f),hi=new THREE.Color(0x83c44a),tmp=new THREE.Color();
-  scatterInstanced(blade,5200,20000,
+  const blade=new THREE.ConeGeometry(0.075,0.62,4);blade.translate(0,0.31,0);
+  const bp=blade.attributes.position,bc=new Float32Array(bp.count*3);
+  for(let i=0;i<bp.count;i++){const g=0.5+0.5*Math.min(1,Math.max(0,bp.getY(i)/0.62));bc[i*3]=bc[i*3+1]=bc[i*3+2]=g;}
+  blade.setAttribute('color',new THREE.BufferAttribute(bc,3));
+  const lo=new THREE.Color(0x3c761f),hi=new THREE.Color(0x86c84c),tmp=new THREE.Color();
+  const grass=scatterInstanced(blade,6000,24000,
     (x,z)=>{tmp.copy(lo).lerp(hi,Math.random());if(forestF(x,z)>0.25)tmp.multiplyScalar(0.62);return tmp.convertSRGBToLinear();},
-    (x,z,p,s,q)=>{const sc=0.7+Math.random()*1.0;p.set(x,getH(x,z),z);
+    (x,z,p,s,q)=>{const sc=0.75+Math.random()*1.1;p.set(x,getH(x,z),z);
       s.set(sc*(0.7+Math.random()*0.6),sc,sc*(0.7+Math.random()*0.6));q.setFromAxisAngle(_UP,Math.random()*6.28);},
     (x,z)=>rocky(x,z)<0.5);
+  grass.material.vertexColors=true;grass.material.needsUpdate=true;
+  applyWind(grass,0.12,1.7,0.12);
 }
 // wildflowers in clumps
 {
@@ -601,11 +622,12 @@ function scatterInstanced(geo,count,tries,colorFn,placeFn,filterFn){
 {
   const reed=new THREE.ConeGeometry(0.05,1.3,4);reed.translate(0,0.65,0);
   const lo=new THREE.Color(0x6f8a3a),hi=new THREE.Color(0x9caf4e),tmp=new THREE.Color();
-  scatterInstanced(reed,160,3000,
+  const reeds=scatterInstanced(reed,160,3000,
     ()=>{tmp.copy(lo).lerp(hi,Math.random());return tmp.convertSRGBToLinear();},
     (x,z,p,s,q)=>{const sc=0.8+Math.random()*0.9;p.set(x,getH(x,z),z);
       s.set(sc*0.8,sc,sc*0.8);q.setFromAxisAngle(_UP,Math.random()*6.28);},
     (x,z)=>{const d=Math.hypot(x-POND.x,z-POND.z);return d>POND.r+1.5&&d<POND.r+5;});
+  applyWind(reeds,0.16,1.3,0.2);
 }
 // mushrooms & ferns on the forest floor
 {
@@ -1522,6 +1544,7 @@ function loop(){
   for(const b of G.buildings)b.traverse(o=>{if(o.name==='flag')o.rotation.y=Math.sin(t*3)*0.3;});
   water.position.y=WATER_Y+Math.sin(t*0.8)*0.04;
   waterRipple.offset.x=(t*0.018)%1;waterRipple.offset.y=(t*0.012)%1;
+  windU.value=t;
   // gentle wind through the trees & bushes
   for(let i=0;i<swayers.length;i++){const s=swayers[i];if(!s.o.parent)continue;
     s.o.rotation.z=Math.sin(t*1.25+s.ph)*s.amp;s.o.rotation.x=Math.cos(t*1.05+s.ph)*s.amp*0.5;}
