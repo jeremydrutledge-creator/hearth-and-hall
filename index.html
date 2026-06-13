@@ -185,16 +185,20 @@
 'use strict';
 
 // ===== world regions =====
-const FOREST={x:-32,z:-16,r:22}, ROCKY={x:32,z:-22,r:18}, POND={x:-16,z:30,r:9};
+const FOREST={x:-44,z:-24,r:24}, ROCKY={x:46,z:-32,r:20}, POND={x:-22,z:36,r:10};
+// the valley now holds several forests and rocky ranges to expand toward
+const FORESTS=[FOREST,{x:40,z:52,r:21},{x:-66,z:42,r:18},{x:14,z:-70,r:19}];
+const ROCKIES=[ROCKY,{x:-60,z:-52,r:17},{x:66,z:46,r:15}];
 
 function hash(x,z){const s=Math.sin(x*127.1+z*311.7)*43758.5453;return s-Math.floor(s);}
 function sm(t){return t*t*(3-2*t);}
 function vn(x,z){const xi=Math.floor(x),zi=Math.floor(z),xf=x-xi,zf=z-zi;
   const a=hash(xi,zi),b=hash(xi+1,zi),c=hash(xi,zi+1),d=hash(xi+1,zi+1);
   const u=sm(xf),v=sm(zf);return a*(1-u)*(1-v)+b*u*(1-v)+c*(1-u)*v+d*u*v;}
-function rocky(x,z){return Math.max(0,1-Math.hypot(x-ROCKY.x,z-ROCKY.z)/ROCKY.r);}
+function rmax(x,z,arr){let m=0;for(const r of arr){const v=1-Math.hypot(x-r.x,z-r.z)/r.r;if(v>m)m=v;}return m;}
+function rocky(x,z){return Math.max(0,rmax(x,z,ROCKIES));}
 function pondF(x,z){return Math.max(0,1-Math.hypot(x-POND.x,z-POND.z)/(POND.r+3));}
-function forestF(x,z){return Math.max(0,1-Math.hypot(x-FOREST.x,z-FOREST.z)/FOREST.r);}
+function forestF(x,z){return Math.max(0,rmax(x,z,FORESTS));}
 function getH(x,z){
   let h=(vn(x*0.05,z*0.05)-0.5)*2.4+(vn(x*0.13,z*0.13)-0.5)*0.9;
   h+=Math.pow(rocky(x,z),1.4)*5.4; h-=Math.pow(pondF(x,z),2)*3.0;
@@ -231,7 +235,7 @@ renderer.outputEncoding=THREE.sRGBEncoding;
 renderer.toneMapping=THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure=0.92;
 const scene=new THREE.Scene();
-scene.fog=new THREE.Fog(0xcfe1ea,78,168);
+scene.fog=new THREE.Fog(0xcfe1ea,105,250);
 // sky gradient — redrawn through the day cycle (deep blue aloft, warm at the horizon)
 const skyCv=document.createElement('canvas');skyCv.width=8;skyCv.height=256;
 const skyCtx=skyCv.getContext('2d');
@@ -271,8 +275,10 @@ function updateDay(t){
   const phase=((t/DAYLEN)+0.26)%1;          // open mid-morning
   const low=1-Math.sin(Math.PI*phase);      // 0 at noon, 1 toward dawn/dusk
   const elev=0.16+0.76*Math.sin(Math.PI*phase),az=-0.7+phase*2.4,hor=Math.cos(elev);
-  sun.position.set(Math.cos(az)*hor*62,Math.sin(elev)*62+5,Math.sin(az)*hor*62);
-  sun.target.position.set(0,0,0);
+  // keep the shadow frustum centred on the player so shadows work across the big map
+  const cx=camTarget.x,cz=camTarget.z,cy=getH(cx,cz);
+  sun.position.set(cx+Math.cos(az)*hor*70,cy+Math.sin(elev)*70+5,cz+Math.sin(az)*hor*70);
+  sun.target.position.set(cx,cy,cz);
   sun.color.copy(_dc1.set(0xffe9c2).lerp(_dc2.set(0xff7a2e),low*0.82));
   sun.intensity=1.55-low*0.5;
   hemi.intensity=0.34-low*0.05;
@@ -287,7 +293,7 @@ function updateDay(t){
 }
 
 // ===== terrain =====
-const SIZE=180,SEG=140;
+const SIZE=260,SEG=196;
 const tGeo=new THREE.PlaneGeometry(SIZE,SIZE,SEG,SEG);tGeo.rotateX(-Math.PI/2);
 {
   const pos=tGeo.attributes.position,col=new Float32Array(pos.count*3);
@@ -437,13 +443,13 @@ for(let i=0;i<3;i++)makeShoal();
   const ring=new THREE.Group();
   const near=new THREE.Color(0x5d7a52),far=new THREE.Color(0xa9c2cf);
   const c=new THREE.Color();
-  const peaks=46;
+  const peaks=64;
   for(let i=0;i<peaks;i++){
-    const a=(i/peaks)*6.283+Math.random()*0.12;
-    const rad=93+Math.random()*24;
+    const a=(i/peaks)*6.283+Math.random()*0.09;
+    const rad=138+Math.random()*30;
     const x=Math.cos(a)*rad,z=Math.sin(a)*rad;
-    const h=13+Math.random()*28, w=11+Math.random()*16;
-    c.copy(near).lerp(far,Math.min(1,(rad-96)/30+Math.random()*0.4)).convertSRGBToLinear();
+    const h=16+Math.random()*34, w=13+Math.random()*18;
+    c.copy(near).lerp(far,Math.min(1,(rad-138)/36+Math.random()*0.4)).convertSRGBToLinear();
     const m=new THREE.Mesh(new THREE.ConeGeometry(w,h,5+(Math.random()*3|0)),
       new THREE.MeshLambertMaterial({color:c.clone(),fog:true}));
     m.position.set(x,h/2-3,z);m.rotation.y=Math.random()*6.28;
@@ -504,7 +510,7 @@ function scatterInstanced(geo,count,tries,colorFn,placeFn,filterFn){
   const im=new THREE.InstancedMesh(geo,new THREE.MeshLambertMaterial({color:0xffffff}),count);
   im.castShadow=false;im.receiveShadow=false;let n=0;
   for(let i=0;i<tries&&n<count;i++){
-    const x=(Math.random()-0.5)*152,z=(Math.random()-0.5)*152;
+    const x=(Math.random()-0.5)*244,z=(Math.random()-0.5)*244;
     if(!okSpot(x,z)||(filterFn&&!filterFn(x,z)))continue;
     const r=placeFn(x,z,_p,_s,_q);if(r===false)continue;
     _m4.compose(_p,_q,_s);im.setMatrixAt(n,_m4);
@@ -517,7 +523,7 @@ function scatterInstanced(geo,count,tries,colorFn,placeFn,filterFn){
 {
   const blade=new THREE.ConeGeometry(0.085,0.5,4);blade.translate(0,0.25,0);
   const lo=new THREE.Color(0x3c761f),hi=new THREE.Color(0x83c44a),tmp=new THREE.Color();
-  scatterInstanced(blade,2600,9000,
+  scatterInstanced(blade,5200,20000,
     (x,z)=>{tmp.copy(lo).lerp(hi,Math.random());if(forestF(x,z)>0.25)tmp.multiplyScalar(0.62);return tmp.convertSRGBToLinear();},
     (x,z,p,s,q)=>{const sc=0.7+Math.random()*1.0;p.set(x,getH(x,z),z);
       s.set(sc*(0.7+Math.random()*0.6),sc,sc*(0.7+Math.random()*0.6));q.setFromAxisAngle(_UP,Math.random()*6.28);},
@@ -527,7 +533,7 @@ function scatterInstanced(geo,count,tries,colorFn,placeFn,filterFn){
 {
   const head=new THREE.SphereGeometry(0.08,5,4);head.translate(0,0.34,0);
   const cols=[0xf4dc34,0xef5a86,0xf4f4f4,0x9a6ae0,0xff8a3a].map(c=>new THREE.Color(c));
-  scatterInstanced(head,520,6000,
+  scatterInstanced(head,950,12000,
     ()=>cols[(Math.random()*cols.length)|0].clone().convertSRGBToLinear(),
     (x,z,p,s,q)=>{const sc=0.7+Math.random()*0.8;p.set(x,getH(x,z),z);s.set(sc,sc,sc);q.setFromAxisAngle(_UP,Math.random()*6.28);},
     (x,z)=>rocky(x,z)<0.35&&forestF(x,z)<0.4);
@@ -561,7 +567,7 @@ function scatterInstanced(geo,count,tries,colorFn,placeFn,filterFn){
 // scattered pebbles for ground texture
 {
   const peb=new THREE.DodecahedronGeometry(0.18,0),lo=new THREE.Color(0x8d877c),hi=new THREE.Color(0xb0aa9e),tmp=new THREE.Color();
-  scatterInstanced(peb,90,2500,
+  scatterInstanced(peb,170,5000,
     ()=>{tmp.copy(lo).lerp(hi,Math.random());return tmp.convertSRGBToLinear();},
     (x,z,p,s,q)=>{const sc=0.5+Math.random()*1.3;p.set(x,getH(x,z)+0.05,z);s.set(sc,sc*0.7,sc);
       q.setFromAxisAngle(new THREE.Vector3(Math.random(),Math.random(),Math.random()).normalize(),Math.random()*6.28);});
@@ -588,30 +594,39 @@ function makeOak(){const g=new THREE.Group();
   const c3=new THREE.Mesh(new THREE.SphereGeometry(0.7,7,6),oak1);c3.position.set(-0.55,1.9,-0.25);g.add(c3);return g;}
 function makeTree(x,z){const g=Math.random()<0.6?makePine():makeOak();place(g,x,z);
   g.scale.setScalar(0.8+Math.random()*0.5);g.rotation.y=Math.random()*6.28;
-  g.userData={kind:'node',res:'wood',amount:40,label:'tree'};shadows(g);scene.add(g);G.nodes.push(g);}
+  g.userData={kind:'node',res:'wood',amount:55,label:'tree'};shadows(g);scene.add(g);G.nodes.push(g);}
 function makeRock(x,z,big){const g=new THREE.Group();
   const r=new THREE.Mesh(new THREE.DodecahedronGeometry(big?1.15:0.8,0),rockMat);
   r.position.y=big?0.7:0.5;r.rotation.set(Math.random(),Math.random(),Math.random());g.add(r);
   const r2=new THREE.Mesh(new THREE.DodecahedronGeometry(0.45,0),rockMat);r2.position.set(0.75,0.3,0.25);g.add(r2);
-  place(g,x,z);g.userData={kind:'node',res:'stone',amount:big?80:50,label:'rocks'};shadows(g);scene.add(g);G.nodes.push(g);}
+  place(g,x,z);g.userData={kind:'node',res:'stone',amount:big?120:75,label:'rocks'};shadows(g);scene.add(g);G.nodes.push(g);}
 function makeBush(x,z){const g=new THREE.Group();
   const b=new THREE.Mesh(new THREE.SphereGeometry(0.7,8,6),bushMat);b.position.y=0.55;b.scale.y=0.8;g.add(b);
   for(let i=0;i<6;i++){const be=new THREE.Mesh(new THREE.SphereGeometry(0.09,6,5),berryMat);
     const a=Math.random()*6.28;be.position.set(Math.cos(a)*0.6,0.5+Math.random()*0.5,Math.sin(a)*0.6);g.add(be);}
-  place(g,x,z);g.userData={kind:'node',res:'food',amount:50,label:'berries'};shadows(g);scene.add(g);G.nodes.push(g);}
+  place(g,x,z);g.userData={kind:'node',res:'food',amount:70,label:'berries'};shadows(g);scene.add(g);G.nodes.push(g);}
 
-for(let i=0;i<58;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*FOREST.r;
-  const x=FOREST.x+Math.cos(a)*rr,z=FOREST.z+Math.sin(a)*rr;
-  if(okSpot(x,z)&&rocky(x,z)<0.4)makeTree(x,z);}
-makeTree(8,5);makeTree(10,7);makeTree(7,9);
-for(let i=0;i<20;i++){const x=(Math.random()-0.5)*140,z=(Math.random()-0.5)*140;
-  if(okSpot(x,z)&&forestF(x,z)<0.2&&rocky(x,z)<0.35&&Math.hypot(x,z)<62)makeTree(x,z);}
-makeRock(6,-9,false);
-for(let i=0;i<13;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*ROCKY.r*0.9;
-  const x=ROCKY.x+Math.cos(a)*rr,z=ROCKY.z+Math.sin(a)*rr;if(okSpot(x,z))makeRock(x,z,Math.random()<0.4);}
-makeBush(-8,6);makeBush(-10,8);
-for(let i=0;i<7;i++){const a=Math.random()*6.28;
-  const x=FOREST.x+Math.cos(a)*(FOREST.r+2),z=FOREST.z+Math.sin(a)*(FOREST.r+2);if(okSpot(x,z))makeBush(x,z);}
+// forests across the valley — plenty of timber to expand toward
+for(const F of FORESTS){const n=Math.round(F.r*F.r*0.085);
+  for(let i=0;i<n;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*F.r;
+    const x=F.x+Math.cos(a)*rr,z=F.z+Math.sin(a)*rr;
+    if(okSpot(x,z)&&rocky(x,z)<0.4)makeTree(x,z);}}
+// a starting copse right by the keep
+makeTree(8,5);makeTree(10,7);makeTree(7,9);makeTree(12,4);makeTree(9,11);makeTree(13,8);
+// scattered lone trees over the open country
+for(let i=0;i<40;i++){const x=(Math.random()-0.5)*230,z=(Math.random()-0.5)*230;
+  if(okSpot(x,z)&&forestF(x,z)<0.2&&rocky(x,z)<0.35&&Math.hypot(x,z)<120)makeTree(x,z);}
+// rocky ranges — stone to mine
+makeRock(7,-9,false);makeRock(10,-11,true);
+for(const Rk of ROCKIES){const n=Math.round(Rk.r*0.85);
+  for(let i=0;i<n;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*Rk.r*0.92;
+    const x=Rk.x+Math.cos(a)*rr,z=Rk.z+Math.sin(a)*rr;if(okSpot(x,z))makeRock(x,z,Math.random()<0.45);}}
+// berry bushes — starter patch, forest fringes, and scattered
+makeBush(-8,6);makeBush(-10,8);makeBush(-7,10);
+for(const F of FORESTS){for(let i=0;i<5;i++){const a=Math.random()*6.28;
+  const x=F.x+Math.cos(a)*(F.r+2),z=F.z+Math.sin(a)*(F.r+2);if(okSpot(x,z))makeBush(x,z);}}
+for(let i=0;i<10;i++){const x=(Math.random()-0.5)*210,z=(Math.random()-0.5)*210;
+  if(okSpot(x,z)&&rocky(x,z)<0.3&&forestF(x,z)<0.3&&Math.hypot(x,z)<110)makeBush(x,z);}
 for(let i=0;i<4;i++){const a=Math.random()*6.28,rr=POND.r+4+Math.random()*3;
   const x=POND.x+Math.cos(a)*rr,z=POND.z+Math.sin(a)*rr;if(okSpot(x,z))makeBush(x,z);}
 
@@ -631,7 +646,9 @@ function makeDeer(x,z){const g=new THREE.Group();
 function spawnDeer(){const a=Math.random()*6.28;
   const x=FOREST.x+Math.cos(a)*(FOREST.r+4),z=FOREST.z+Math.sin(a)*(FOREST.r+4);
   okSpot(x,z)?makeDeer(x,z):makeDeer(FOREST.x+8,FOREST.z+8);}
-makeDeer(-14,2);makeDeer(-22,-2);makeDeer(-16,14);makeDeer(-36,0);
+for(const F of FORESTS){const n=2+(Math.random()*2|0);
+  for(let i=0;i<n;i++){const a=Math.random()*6.28,rr=F.r*(0.7+Math.random()*0.5);
+    const x=F.x+Math.cos(a)*rr,z=F.z+Math.sin(a)*rr;if(okSpot(x,z))makeDeer(x,z);}}
 
 const chickBody=wM(0xf0ece0),comb=wM(0xc03030),beakM=wM(0xe0a030);
 function makeChicken(home){const g=new THREE.Group();
@@ -1116,7 +1133,7 @@ function rootOf(o){while(o&&!(o.userData&&o.userData.kind)&&o.parent)o=o.parent;
 function panBy(dx,dy){const fwd=new THREE.Vector3().subVectors(camTarget,camera.position);fwd.y=0;fwd.normalize();
   const right=new THREE.Vector3(-fwd.z,0,fwd.x);const s=0.05*camZoom;
   camTarget.addScaledVector(right,-dx*s);camTarget.addScaledVector(fwd,dy*s);
-  camTarget.x=Math.max(-74,Math.min(74,camTarget.x));camTarget.z=Math.max(-74,Math.min(74,camTarget.z));updateCam();}
+  camTarget.x=Math.max(-118,Math.min(118,camTarget.x));camTarget.z=Math.max(-118,Math.min(118,camTarget.z));updateCam();}
 canvas.addEventListener('touchstart',e=>{e.preventDefault();
   if(e.touches.length===2){pinch=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);pStart=null;return;}
   pStart={x:e.touches[0].clientX,y:e.touches[0].clientY};lastPan={...pStart};pMoved=false;},{passive:false});
