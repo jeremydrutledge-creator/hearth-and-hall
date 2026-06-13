@@ -31,8 +31,15 @@ Age of Empires-style game."
 10. **Bugfix:** placement no longer falsely says "Can't build in the pond" on low
     but dry ground — the check now tests proximity to the actual pond disc.
 
-NOTE: a temporary `#gallery` hash hook (renders all buildings in a grid for
-screenshotting) was added then REMOVED before commit — re-add if iterating on models.
+11. **Worn paths** — dirt trails (`wornPath()` ribbon meshes w/ a generated fade
+    texture) trodden from the keep out to grove/pond/rocks/forest/hills.
+12. **Ducks** — 4 paddle around the pond (`ducks[]` + `tickDuck`, float at WATER_Y).
+
+NOTE: temporary debug hooks used while iterating, all REMOVED before commit —
+re-add if needed: `#gallery` hash (building grid), `window.__G=G` (state), and
+`window.__look=(x,z,zoom)=>{...}` right after `updateCam()` (aim camera; the
+`/tmp/look.js` harness drives it). Strict mode: functions the loop calls must be
+declared at IIFE scope, NOT inside a `{}` block (block-scoped) — see `tickDuck`.
 
 ## How to develop/test in this environment (IMPORTANT)
 The CDN (cdnjs) is **blocked behind a cert proxy** in the container, so a headless
