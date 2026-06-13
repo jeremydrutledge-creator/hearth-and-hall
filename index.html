@@ -27,6 +27,14 @@
   #hint span{display:inline-block;background:rgba(18,22,11,.78);color:#cfd9a8;border-radius:8px;
     padding:5px 12px;font-size:.8rem;font-style:italic;max-width:92%}
 
+  /* floating resource-gain popups */
+  .float{position:fixed;z-index:8;pointer-events:none;font-size:.92rem;font-weight:bold;
+    color:#f4e7b0;text-shadow:0 1px 2px #000,0 0 5px rgba(0,0,0,.7);white-space:nowrap;
+    transform:translate(-50%,-50%);opacity:0;
+    transition:transform 1.15s ease-out,opacity 1.15s ease-out}
+  .float.go{transform:translate(-50%,calc(-50% - 52px));opacity:1}
+  .float.fade{opacity:0}
+
   #toast{position:fixed;bottom:128px;left:0;right:0;text-align:center;z-index:9;pointer-events:none}
   #toast span{display:inline-block;background:rgba(18,22,11,.9);border-radius:8px;
     padding:6px 14px;font-size:.85rem;opacity:0;transition:opacity .3s;max-width:90%}
@@ -128,6 +136,7 @@
     <button class="opt" data-job="stone">⛏ Mine Stone<small>auto: quarry rock → haul</small></button>
     <button class="opt" data-job="food">🍇 Forage<small>auto: berries → haul</small></button>
     <button class="opt" data-job="hunt">🏹 Hunt<small>chase deer → haul meat</small></button>
+    <button class="opt" data-job="fish">🎣 Fish<small>cast at the pond → haul fish</small></button>
     <button class="opt full" data-job="idle">🛑 Stand Down<small>wait by the keep</small></button>
   </div>
 </div></div>
@@ -271,6 +280,17 @@ const water=new THREE.Mesh(new THREE.CircleGeometry(POND.r+2.5,40),
   new THREE.MeshPhongMaterial({color:new THREE.Color(0x2f6f96).convertSRGBToLinear(),
     specular:0xbfe6ff,shininess:90,transparent:true,opacity:0.9}));
 water.rotation.x=-Math.PI/2;water.position.set(POND.x,WATER_Y,POND.z);scene.add(water);
+// lily pads + a flower or two to make the pond a place worth fishing
+{
+  const padMat=new THREE.MeshLambertMaterial({color:new THREE.Color(0x3f7a34).convertSRGBToLinear()});
+  const lilyMat=new THREE.MeshLambertMaterial({color:new THREE.Color(0xf2eef4).convertSRGBToLinear()});
+  for(let i=0;i<9;i++){const a=Math.random()*6.28,r=Math.random()*(POND.r-1.5);
+    const x=POND.x+Math.cos(a)*r,z=POND.z+Math.sin(a)*r;
+    const pad=new THREE.Mesh(new THREE.CircleGeometry(0.35+Math.random()*0.3,7,0,5.0),padMat);
+    pad.rotation.x=-Math.PI/2;pad.rotation.z=Math.random()*6.28;pad.position.set(x,WATER_Y+0.06,z);scene.add(pad);
+    if(Math.random()<0.5){const f=new THREE.Mesh(new THREE.SphereGeometry(0.1,6,5),lilyMat);
+      f.position.set(x,WATER_Y+0.12,z);scene.add(f);}}
+}
 
 // ===== distant mountains — frame the valley, fade into the haze =====
 {
@@ -531,14 +551,18 @@ function makeSettler(x,z){
   // carried load (hidden until carrying)
   const load=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.3,0.3),loadMat.wood);
   load.position.set(0,1.05,-0.32);load.visible=false;g.add(load);
+  // fishing rod (hidden until fishing) — held in the right hand, angled out front
+  const rod=new THREE.Group();
+  const pole=new THREE.Mesh(new THREE.CylinderGeometry(0.012,0.022,1.0,4),wM(0x7a5630));pole.position.y=0.4;rod.add(pole);
+  rod.position.set(0,-0.46,0.04);rod.rotation.x=-2.1;rod.visible=false;armR.add(rod);
   // select ring
   const ring=new THREE.Mesh(new THREE.RingGeometry(0.45,0.62,22),
     new THREE.MeshBasicMaterial({color:new THREE.Color(0xf0c060).convertSRGBToLinear(),side:THREE.DoubleSide}));
   ring.rotation.x=-Math.PI/2;ring.position.y=0.05;ring.visible=false;g.add(ring);
 
   place(g,x,z);
-  g.userData={kind:'villager',ring,legL,legR,armL,armR,load,
-    order:null,phase:'idle',dest:null,node:null,site:null,prey:null,depot:null,
+  g.userData={kind:'villager',ring,legL,legR,armL,armR,load,rod,
+    order:null,phase:'idle',dest:null,node:null,site:null,prey:null,depot:null,fishPt:null,
     carrying:0,carryRes:null,workT:0,walkT:0,retry:0};
   shadows(g);scene.add(g);G.villagers.push(g);
   return g;
@@ -546,16 +570,32 @@ function makeSettler(x,z){
 
 // ===== buildings =====
 function keepMesh(){const g=new THREE.Group();
-  const base=new THREE.Mesh(new THREE.BoxGeometry(3.4,3.0,3.4),wM(0x9a978c));base.position.y=1.5;g.add(base);
-  const top=new THREE.Mesh(new THREE.BoxGeometry(3.7,0.5,3.7),wM(0x8a877c));top.position.y=3.1;g.add(top);
-  // battlements
-  for(let i=-1;i<=1;i++)for(let j=-1;j<=1;j++){if(i===0&&j===0)continue;
-    const m=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.5,0.5),wM(0x8a877c));
-    m.position.set(i*1.5,3.55,j*1.5);g.add(m);}
-  const door=new THREE.Mesh(new THREE.BoxGeometry(0.8,1.3,0.1),wM(0x4a3525));door.position.set(0,0.65,1.72);g.add(door);
-  const pole=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.05,2.0,5),wM(0x5a4028));pole.position.set(0,4.8,0);g.add(pole);
-  const flag=new THREE.Mesh(new THREE.PlaneGeometry(1.1,0.6),new THREE.MeshBasicMaterial({color:new THREE.Color(0xd83030).convertSRGBToLinear(),side:THREE.DoubleSide}));
-  flag.position.set(0.55,5.3,0);flag.name='flag';g.add(flag);return g;}
+  const stoneA=wM(0xa6a398),stoneB=wM(0x8c897e),roofC=wM(0x7a3a2a),woodC=wM(0x4a3525);
+  // stepped stone plinth
+  const plinth=new THREE.Mesh(new THREE.BoxGeometry(4.0,0.4,4.0),stoneB);plinth.position.y=0.2;g.add(plinth);
+  const plinth2=new THREE.Mesh(new THREE.BoxGeometry(3.5,0.35,3.5),stoneA);plinth2.position.y=0.55;g.add(plinth2);
+  // main tower (two stone bands)
+  const base=new THREE.Mesh(new THREE.BoxGeometry(2.9,3.0,2.9),stoneA);base.position.y=2.2;g.add(base);
+  const band=new THREE.Mesh(new THREE.BoxGeometry(3.02,0.22,3.02),stoneB);band.position.y=2.5;g.add(band);
+  // parapet + crenellations
+  const par=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.45,3.2),stoneB);par.position.y=3.9;g.add(par);
+  const mer=new THREE.BoxGeometry(0.46,0.5,0.46),e=1.37;
+  for(let a=-e;a<=e+0.001;a+=e){for(const pp of[[a,e],[a,-e],[e,a],[-e,a]]){
+    const m=new THREE.Mesh(mer,stoneA);m.position.set(pp[0],4.35,pp[1]);g.add(m);}}
+  // four corner turrets with conical roofs
+  for(const c of[[1.55,1.55],[1.55,-1.55],[-1.55,1.55],[-1.55,-1.55]]){
+    const t=new THREE.Mesh(new THREE.CylinderGeometry(0.52,0.6,4.4,9),stoneA);t.position.set(c[0],2.4,c[1]);g.add(t);
+    const tb=new THREE.Mesh(new THREE.CylinderGeometry(0.6,0.62,0.2,9),stoneB);tb.position.set(c[0],4.55,c[1]);g.add(tb);
+    const roof=new THREE.Mesh(new THREE.ConeGeometry(0.74,1.1,9),roofC);roof.position.set(c[0],5.2,c[1]);g.add(roof);}
+  // arched gate
+  const gate=new THREE.Mesh(new THREE.BoxGeometry(1.0,1.4,0.14),woodC);gate.position.set(0,0.95,1.48);g.add(gate);
+  const arch=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,0.14,12,1,false,0,Math.PI),woodC);
+  arch.rotation.x=Math.PI/2;arch.position.set(0,1.65,1.48);g.add(arch);
+  const lintel=new THREE.Mesh(new THREE.BoxGeometry(1.3,0.2,0.3),stoneB);lintel.position.set(0,1.75,1.5);g.add(lintel);
+  // central banner
+  const pole=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.05,2.4,6),wM(0x5a4028));pole.position.set(0,5.6,0);g.add(pole);
+  const flag=new THREE.Mesh(new THREE.PlaneGeometry(1.1,0.62),new THREE.MeshBasicMaterial({color:new THREE.Color(0xd83030).convertSRGBToLinear(),side:THREE.DoubleSide}));
+  flag.position.set(0.55,6.2,0);flag.name='flag';g.add(flag);return g;}
 function storeMesh(){const g=new THREE.Group();
   const base=new THREE.Mesh(new THREE.BoxGeometry(2.4,1.4,2.0),wM(0xb89868));base.position.y=0.7;g.add(base);
   const roof=new THREE.Mesh(new THREE.BoxGeometry(2.7,0.9,2.3),wM(0x8a5030));roof.position.y=1.7;roof.rotation.z=0.0;roof.scale.y=0.6;g.add(roof);
@@ -659,6 +699,19 @@ const patchMat=new THREE.MeshLambertMaterial({map:patchTex,transparent:true,dept
   polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
 function groundPatch(x,z,r){const m=new THREE.Mesh(new THREE.CircleGeometry(r,24),patchMat);
   m.rotation.x=-Math.PI/2;m.position.set(x,getH(x,z)+0.04,z);m.receiveShadow=true;scene.add(m);return m;}
+// floating "+N" resource-gain popups (DOM overlay projected from world space)
+const RES_EMOJI={wood:'🪵',stone:'🪨',food:'🍖'};
+const _proj=new THREE.Vector3();
+function floatGain(v,amount,res){
+  if(amount<=0)return;_proj.set(v.position.x,v.position.y+2.3,v.position.z).project(camera);
+  if(_proj.z>1)return;const sx=(_proj.x*0.5+0.5)*innerWidth,sy=(-_proj.y*0.5+0.5)*innerHeight;
+  const el=document.createElement('div');el.className='float';
+  el.textContent='+'+Math.round(amount)+' '+(RES_EMOJI[res]||'');
+  el.style.left=sx+'px';el.style.top=sy+'px';document.body.appendChild(el);
+  requestAnimationFrame(()=>el.classList.add('go'));
+  setTimeout(()=>{el.classList.add('fade');},900);
+  setTimeout(()=>el.remove(),1300);
+}
 // smoke from the keep hearth + a few hens give the town immediate life
 addSmoke(keep,0.9,3.9,-0.9);
 const yard=new THREE.Object3D();yard.position.set(4.5,getH(4.5,4.5),4.5);scene.add(yard);
@@ -692,7 +745,7 @@ function refreshHUD(){
     const t=b.dataset.build;b.disabled=(t==='hall'&&G.hall)||!afford(COSTS[t]);});
   updateSelCard();
 }
-const JOBNAME={wood:'cutting wood',stone:'mining stone',food:'foraging',hunt:'hunting',null:'idle',idle:'idle'};
+const JOBNAME={wood:'cutting wood',stone:'mining stone',food:'foraging',hunt:'hunting',fish:'fishing',null:'idle',idle:'idle'};
 function updateSelCard(){
   const c=$('selCard');
   if(!G.selected){c.classList.remove('show');return;}
@@ -710,7 +763,17 @@ function select(v){
   if(v){v.userData.ring.visible=true;hint('Tap a tree, rock, berry or deer — or use ⚑ Assign for a standing job');}
   updateSelCard();
 }
-function clearTargets(u){u.dest=null;u.node=null;u.site=null;u.prey=null;u.depot=null;}
+function clearTargets(u){u.dest=null;u.node=null;u.site=null;u.prey=null;u.depot=null;u.fishPt=null;
+  if(u.rod)u.rod.visible=false;}
+// nearest dry shore point on the pond's edge for a villager to cast from
+function fishSpot(v){
+  let a=Math.atan2(v.position.z-POND.z,v.position.x-POND.x);
+  for(let k=0;k<10;k++){const r=POND.r+1.2+k*0.6;
+    const x=POND.x+Math.cos(a)*r,z=POND.z+Math.sin(a)*r;
+    if(getH(x,z)>=WATER_Y+0.45&&okSpot(x,z))return new THREE.Vector3(x,getH(x,z),z);}
+  return new THREE.Vector3(POND.x+POND.r+2,getH(POND.x+POND.r+2,POND.z),POND.z);
+}
+function startFishing(v){const u=v.userData;u.fishPt=fishSpot(v);u.dest=u.fishPt.clone();u.node=null;u.prey=null;u.phase='toFish';}
 function nearestNode(v,res){let best=null,bd=1e9;
   for(const n of G.nodes){if(n.userData.res!==res)continue;const d=n.position.distanceTo(v.position);if(d<bd){bd=d;best=n;}}return best;}
 function nearestDeer(v){let best=null,bd=1e9;
@@ -820,6 +883,11 @@ function handleTap(x,y){
       if(k==='node'){if(G.selected)manualGather(G.selected,r);else toast('Tap a settler first.');return;}
       if(k==='site'){if(G.selected)manualBuild(G.selected,r);return;}
       if(k==='building'){return;}}}
+  // tapping the pond sends a selected settler to fish its shore
+  const w=castAt(x,y,[water]);
+  if(w.length&&G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);
+    startFishing(G.selected);toast('🎣 Off to the pond to fish.');updateSelCard();return;}
+  else if(w.length){toast('Tap a settler first.');return;}
   const g=castAt(x,y,[terrain]);
   if(g.length&&G.selected)manualMove(G.selected,g[0].point);
   else if(g.length)hint('Tap your settler to select them first');
@@ -868,11 +936,13 @@ function tickVillager(v,dt){
       else{u.phase='deposit';animRest(u);}break;}
     case 'deposit':{
       if(u.carrying>0){
-        const got=addStored(u.carryRes,u.carrying);u.carrying-=got;setLoad(u);refreshHUD();
+        const res=u.carryRes;
+        const got=addStored(res,u.carrying);u.carrying-=got;setLoad(u);floatGain(v,got,res);refreshHUD();
         if(u.carrying>0){ if(clock.elapsedTime-G.fullWarn>4){G.fullWarn=clock.elapsedTime;toast('📦 Storage full — build a storehouse!');}break; }
       }
       // resume standing order
       if(u.order==='hunt'){const pr=nearestDeer(v);if(pr){u.prey=pr;pr.userData.state='flee';u.phase='toPrey';}else u.phase='idle';}
+      else if(u.order==='fish'){startFishing(v);}
       else if(u.order){const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else{u.phase='idle';u.retry=1.2;}}
       else u.phase='idle';
       break;}
@@ -898,11 +968,27 @@ function tickVillager(v,dt){
         setTimeout(spawnDeer,28000+Math.random()*20000);break;}
       if(dist>17){u.phase='idle';u.prey=null;toast('The deer escaped.');break;}
       d.normalize();walk(v,d,3.7,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);break;}
+    case 'toFish':{
+      const d=new THREE.Vector3().subVectors(u.dest,v.position);d.y=0;
+      if(d.length()>0.5){d.normalize();walk(v,d,3.2,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);}
+      else{u.phase='fishing';u.workT=0;animRest(u);
+        v.rotation.y=Math.atan2(POND.x-v.position.x,POND.z-v.position.z);
+        if(u.rod)u.rod.visible=true;}break;}
+    case 'fishing':{
+      u.workT+=dt;
+      u.armR.rotation.x=-1.15+Math.sin(u.workT*2.2)*0.18;u.armL.rotation.x=-0.35;
+      if(u.workT>=3.6){u.workT=0;
+        u.carrying=Math.min(CARRY,u.carrying+9);u.carryRes='food';setLoad(u);
+        if(u.rod)u.rod.visible=false;u.armR.rotation.x=0;u.armL.rotation.x=0;
+        spawnChips(u.fishPt||v.position,'food',2);
+        toast('🎣 A fine catch — hauling it home.');u.depot=nearestDepot(v);u.phase='toDepot';}
+      break;}
     default:{ // idle
       animRest(u);
       if(u.order){
         if(u.retry>0){u.retry-=dt;break;}
         if(u.order==='hunt'){const pr=nearestDeer(v);if(pr){u.prey=pr;pr.userData.state='flee';u.phase='toPrey';}else u.retry=2;}
+        else if(u.order==='fish'){startFishing(v);}
         else{const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else u.retry=2;}
       }
     }
