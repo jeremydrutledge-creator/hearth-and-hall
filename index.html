@@ -1357,6 +1357,10 @@ function spaceLeft(){return Math.max(0,G.cap-G.stored);}
 function addStored(res,amt){if(res==='gold'){G.gold+=amt;return amt;}        // gold is an uncapped treasury
   const sp=spaceLeft();const give=Math.min(amt,sp);G[res]+=give;G.stored+=give;return give;}
 function spend(c){for(const k in c){G[k]-=c[k];if(k!=='gold')G.stored-=c[k];}if(G.stored<0)G.stored=0;}
+function drawFood(amt){const take=Math.min(amt,G.food);G.food-=take;G.stored=Math.max(0,G.stored-take);return take;}
+const UPKEEP=0.03;  // food eaten per settler per second
+function foodUpkeep(){return pop()*UPKEEP;}
+function netFoodRate(){return foodRate()-foodUpkeep();}
 
 function refreshHUD(){
   $('hWood').textContent=Math.floor(G.wood);
@@ -1366,7 +1370,10 @@ function refreshHUD(){
   $('hStore').textContent=Math.floor(G.stored)+'/'+G.cap;
   $('storeRes').classList.toggle('warn',G.stored>=G.cap-5);
   $('hPop').textContent=pop()+'/'+G.popCap;
-  $('hFoodRate').textContent=foodRate()>0?('+'+foodRate().toFixed(1)):'';
+  const nfr=netFoodRate();
+  $('hFoodRate').textContent=(nfr>=0?'+':'')+nfr.toFixed(1);
+  $('hFoodRate').style.color=nfr<0?'#e08040':'#9aa478';
+  $('hFood').parentElement.classList.toggle('warn',G.food<8&&nfr<0);
   $('hStoneRate').textContent=stoneRate()>0?('+'+stoneRate().toFixed(1)):'';
   $('hWoodRate').textContent=woodRate()>0?('+'+woodRate().toFixed(1)):'';
   document.querySelectorAll('#buildMenu .opt').forEach(b=>{
@@ -1949,7 +1956,7 @@ function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
 // Simpler: tapping keep recruits if affordable.
 keep.userData.recruit=true;
 
-let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130,mmTimer=0,gameSpeed=1;
+let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130,mmTimer=0,gameSpeed=1,foodDrainAcc=0;
 function loop(){
   requestAnimationFrame(loop);
   const dt=Math.min(0.05,clock.getDelta()),t=clock.elapsedTime;
@@ -1966,6 +1973,7 @@ function loop(){
     mmTimer-=dt;if(mmTimer<=0){mmTimer=0.25;drawMinimap();}
     const fr=foodRate(),sr=stoneRate(),wr=woodRate();
     if(fr>0){trickleF+=dt*fr;if(trickleF>=1){addStored('food',Math.floor(trickleF));trickleF%=1;refreshHUD();}}
+    foodDrainAcc+=dt*foodUpkeep();if(foodDrainAcc>=1){const n=Math.floor(foodDrainAcc);drawFood(n);foodDrainAcc-=n;refreshHUD();}
     if(sr>0){trickleS+=dt*sr;if(trickleS>=1){addStored('stone',Math.floor(trickleS));trickleS%=1;refreshHUD();}}
     if(wr>0){trickleW+=dt*wr;if(trickleW>=1){addStored('wood',Math.floor(trickleW));trickleW%=1;refreshHUD();}}
     qTimer+=dt;if(qTimer>0.3){qTimer=0;checkObjectives();}
