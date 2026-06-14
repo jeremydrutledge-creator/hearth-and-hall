@@ -136,6 +136,19 @@ Age of Empires-style game."
     block `gameSpeed` times (also frozen when `G.over`).
 37. **Food upkeep** — `UPKEEP` per settler/sec (`foodUpkeep`/`netFoodRate`/`drawFood`,
     `foodDrainAcc`). HUD shows net food rate (orange if negative). Gentle, non-lethal.
+38. **Keep self-defense** — keep pushed into `G.towers` w/ range/dmg/fireY=5.2;
+    tickTowers `fireY`. Keep upgrades + Fletching/Masonry buff it.
+39. **Save/load** — autosave to localStorage (`SAVE_KEY`, every 15s); intro
+    Continue btn. `serialize`/`restoreGame`/`placeSaved` persist full state incl.
+    nodes/buildings/villagers + mutated COMBAT/CARRY (tech effects). Defensive
+    (try/catch → fresh start). Cleared on victory/defeat. Verified across reload.
+40. **Bandits** — `G.bandits`, `makeBandit`, `tickBandit`: target nearest building
+    (`nearestBuilding`), loot stockpiles (`banditSteal`), wall-aware (wolfStep).
+    Targeting generalised: `nearestEnemy`/`removeEnemy` over wolves+bandits, so all
+    defenders engage both. Spawn with raids at age≥2. Purple minimap dots.
+41. **End-game polish** — `G.stats` (wolves/bandits slain, peakPop); end screens
+    show stats; victory offers "Keep building" (`endContinue` → over=false). Death
+    `poof()` dust on enemy kill.
 
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
