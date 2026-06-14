@@ -123,6 +123,22 @@
   #intro b{color:#f0c060}
   #intro button{margin-top:8px;background:#3a4424;border:1px solid #f0c060;color:#f0c060;
     border-radius:10px;padding:14px 30px;font-family:inherit;font-size:1rem}
+
+  /* end screen (victory / defeat) — reuses the intro look */
+  #endScreen{position:fixed;inset:0;z-index:31;background:rgba(10,13,6,.94);display:none;
+    align-items:center;justify-content:center;text-align:center;padding:24px}
+  #endScreen.show{display:flex}
+  #endScreen .card{max-width:360px}
+  #endScreen h1{font-size:2rem;color:#f0c060;margin-bottom:10px;font-weight:400}
+  #endScreen p{font-size:.95rem;line-height:1.5;color:#cfd9a8;margin-bottom:14px}
+  #endScreen button{background:#3a4424;border:1px solid #f0c060;color:#f0c060;
+    border-radius:10px;padding:14px 30px;font-family:inherit;font-size:1rem}
+
+  /* minimap */
+  #minimap{position:fixed;z-index:11;border:1px solid #4a5230;border-radius:8px;
+    right:calc(8px + env(safe-area-inset-right,0));top:calc(env(safe-area-inset-top,0) + 56px);
+    width:104px;height:104px;background:rgba(18,22,11,.7);display:none}
+  #minimap.show{display:block}
 </style>
 </head>
 <body>
@@ -233,6 +249,14 @@
   <button id="startBtn">Begin</button>
 </div></div>
 
+<div id="endScreen"><div class="card">
+  <h1 id="endTitle">—</h1>
+  <p id="endMsg"></p>
+  <button id="endBtn">Play again</button>
+</div></div>
+
+<canvas id="minimap" width="148" height="148"></canvas>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
@@ -275,7 +299,7 @@ const G={
   rateFood:0, rateStone:0, rateWood:0, selBuilding:null,
   towers:[], arrows:[], walls:[],
   tech:{}, gatherMult:1, foodMult:1, towerDmgMult:1, towerRangeMult:1,
-  started:false, fullWarn:0
+  started:false, over:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
 const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5,tower:1.2,wall:1.2,workshop:1.4};
@@ -947,7 +971,10 @@ function removeWolf(w){const i=G.wolves.indexOf(w);if(i>=0)G.wolves.splice(i,1);
 function killVillager(v){const i=G.villagers.indexOf(v);if(i>=0)G.villagers.splice(i,1);scene.remove(v);
   if(G.selected===v){G.selected=null;$('tabJobs').disabled=true;updateSelCard();}
   for(const w of G.wolves)if(w.userData.target===v)w.userData.target=null;
-  toast(v.userData.soldier?'⚔ A soldier has fallen!':'💀 A settler was lost to wolves!');refreshHUD();}
+  toast(v.userData.soldier?'⚔ A soldier has fallen!':'💀 A settler was lost to wolves!');refreshHUD();
+  if(G.started&&!G.over&&G.villagers.length===0)
+    showEnd('Your settlement has fallen','The last of your people are gone, and the wild valley reclaims the ruins.');}
+function showEnd(title,msg){G.over=true;$('endTitle').textContent=title;$('endMsg').textContent=msg;$('endScreen').classList.add('show');}
 
 // ===== buildings =====
 // shared building palette + a proper gable (ridge) roof helper
@@ -1378,7 +1405,8 @@ function checkObjectives(){
   }
   if(all){
     if(G.age<AGES.length){advanceAge();refreshHUD();renderQuests();return;}
-    else if(!G.victory){G.victory=true;toast('👑 Your realm stands eternal — a thriving City!');renderQuests();return;}
+    else if(!G.victory){G.victory=true;toast('👑 Your realm stands eternal — a thriving City!');renderQuests();
+      showEnd('A Thriving City! 👑','You founded the Great Hall and your realm stands eternal. The valley is yours.');return;}
   }
   if(changed)renderQuests();
 }
@@ -1896,7 +1924,7 @@ function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
 // Simpler: tapping keep recruits if affordable.
 keep.userData.recruit=true;
 
-let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130;
+let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130,mmTimer=0;
 function loop(){
   requestAnimationFrame(loop);
   const dt=Math.min(0.05,clock.getDelta()),t=clock.elapsedTime;
@@ -1910,6 +1938,7 @@ function loop(){
     for(const v of G.villagers)updateHealthBar(v);
     for(const s of G.walls)updateHealthBar(s);
     raidTimer-=dt;if(raidTimer<=0){raidTimer=110+Math.random()*70;spawnRaid();}
+    mmTimer-=dt;if(mmTimer<=0){mmTimer=0.25;drawMinimap();}
     const fr=foodRate(),sr=stoneRate(),wr=woodRate();
     if(fr>0){trickleF+=dt*fr;if(trickleF>=1){addStored('food',Math.floor(trickleF));trickleF%=1;refreshHUD();}}
     if(sr>0){trickleS+=dt*sr;if(trickleS>=1){addStored('stone',Math.floor(trickleS));trickleS%=1;refreshHUD();}}
@@ -1971,10 +2000,39 @@ $('bldArcher').addEventListener('click',()=>{
 $('bldClose').addEventListener('click',hideBldCard);
 
 $('questHead').addEventListener('click',()=>$('quests').classList.toggle('collapsed'));
+$('endBtn').addEventListener('click',()=>location.reload());
 $('startBtn').addEventListener('click',()=>{
   document.getElementById('intro').style.display='none';G.started=true;refreshHUD();
-  $('quests').classList.add('show');renderQuests();
+  $('quests').classList.add('show');$('minimap').classList.add('show');renderQuests();
   hint('Tap your settler · grow your Camp by completing the objectives at left');});
+
+// ===== minimap =====
+const mm=$('minimap'),mx=mm.getContext('2d'),MMS=mm.width,MM_SPAN=300;
+function w2m(x,z){return [(x/MM_SPAN+0.5)*MMS,(z/MM_SPAN+0.5)*MMS];}
+function mmDot(x,z,c,r){const[px,pz]=w2m(x,z);mx.fillStyle=c;mx.beginPath();mx.arc(px,pz,r,0,6.3);mx.fill();}
+function drawMinimap(){
+  mx.clearRect(0,0,MMS,MMS);mx.fillStyle='#2a3a20';mx.fillRect(0,0,MMS,MMS);
+  // regions
+  for(const F of FORESTS){const[px,pz]=w2m(F.x,F.z);mx.fillStyle='#2f5a26';mx.beginPath();mx.arc(px,pz,F.r/MM_SPAN*MMS,0,6.3);mx.fill();}
+  for(const R of ROCKIES){const[px,pz]=w2m(R.x,R.z);mx.fillStyle='#6a6258';mx.beginPath();mx.arc(px,pz,R.r/MM_SPAN*MMS,0,6.3);mx.fill();}
+  {const[px,pz]=w2m(POND.x,POND.z);mx.fillStyle='#2f6f96';mx.beginPath();mx.arc(px,pz,POND.r/MM_SPAN*MMS,0,6.3);mx.fill();}
+  // resource ore (gold) markers
+  for(const n of G.nodes){if(n.userData.res==='gold')mmDot(n.position.x,n.position.z,'#e8c422',1.4);}
+  // buildings
+  for(const b of G.buildings){if(b.userData.kind!=='building')continue;
+    mmDot(b.position.x,b.position.z,b.userData.type==='keep'?'#f0c060':'#e8dfc0',b.userData.type==='keep'?2.6:1.8);}
+  // rally
+  if(G.rally)mmDot(G.rally.x,G.rally.z,'#3fb6e6',1.6);
+  // villagers + wolves
+  for(const v of G.villagers)mmDot(v.position.x,v.position.z,v.userData.soldier?'#9ad0ff':'#cfd9a8',1.2);
+  for(const w of G.wolves)mmDot(w.position.x,w.position.z,'#e23a2a',1.6);
+  // camera view marker
+  const[cx,cz]=w2m(camTarget.x,camTarget.z);mx.strokeStyle='#fff';mx.lineWidth=1;mx.strokeRect(cx-9,cz-9,18,18);
+}
+mm.addEventListener('click',e=>{const r=mm.getBoundingClientRect();
+  const wx=((e.clientX-r.left)/r.width-0.5)*MM_SPAN,wz=((e.clientY-r.top)/r.height-0.5)*MM_SPAN;
+  camTarget.x=Math.max(-118,Math.min(118,wx));camTarget.z=Math.max(-118,Math.min(118,wz));updateCam();});
+
 refreshHUD();
 })();
 </script>
