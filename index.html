@@ -139,6 +139,13 @@
     right:calc(8px + env(safe-area-inset-right,0));top:calc(env(safe-area-inset-top,0) + 56px);
     width:104px;height:104px;background:rgba(18,22,11,.7);display:none}
   #minimap.show{display:block}
+  /* speed control */
+  #speedBtn{position:fixed;z-index:11;display:none;
+    right:calc(8px + env(safe-area-inset-right,0));top:calc(env(safe-area-inset-top,0) + 166px);
+    background:rgba(18,22,11,.85);border:1px solid #5a6535;border-radius:8px;color:#e8dfc0;
+    padding:6px 9px;font-family:inherit;font-size:.78rem;width:104px;text-align:center;touch-action:manipulation}
+  #speedBtn.show{display:block}
+  #speedBtn.paused{border-color:#c08040;color:#e0a060}
 </style>
 </head>
 <body>
@@ -257,6 +264,7 @@
 </div></div>
 
 <canvas id="minimap" width="148" height="148"></canvas>
+<button id="speedBtn">▶ 1×</button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
@@ -1941,11 +1949,11 @@ function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
 // Simpler: tapping keep recruits if affordable.
 keep.userData.recruit=true;
 
-let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130,mmTimer=0;
+let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130,mmTimer=0,gameSpeed=1;
 function loop(){
   requestAnimationFrame(loop);
   const dt=Math.min(0.05,clock.getDelta()),t=clock.elapsedTime;
-  if(G.started){
+  for(let step=0;step<gameSpeed&&G.started&&!G.over;step++){
     for(const v of G.villagers)tickVillager(v,dt);
     for(const d of G.deer)tickDeer(d,dt);
     for(const c of G.critters)tickCritter(c,dt);
@@ -2020,8 +2028,11 @@ $('questHead').addEventListener('click',()=>$('quests').classList.toggle('collap
 $('endBtn').addEventListener('click',()=>location.reload());
 $('startBtn').addEventListener('click',()=>{
   document.getElementById('intro').style.display='none';G.started=true;refreshHUD();
-  $('quests').classList.add('show');$('minimap').classList.add('show');renderQuests();
+  $('quests').classList.add('show');$('minimap').classList.add('show');$('speedBtn').classList.add('show');renderQuests();
   hint('Tap your settler · grow your Camp by completing the objectives at left');});
+const SPEEDS=[1,2,0],SPEEDLBL=['▶ 1×','⏩ 2×','⏸ Paused'];let speedIdx=0;
+$('speedBtn').addEventListener('click',()=>{speedIdx=(speedIdx+1)%SPEEDS.length;gameSpeed=SPEEDS[speedIdx];
+  $('speedBtn').textContent=SPEEDLBL[speedIdx];$('speedBtn').classList.toggle('paused',gameSpeed===0);});
 
 // ===== minimap =====
 const mm=$('minimap'),mx=mm.getContext('2d'),MMS=mm.width,MM_SPAN=300;
