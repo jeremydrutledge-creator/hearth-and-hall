@@ -300,7 +300,7 @@ const G={
   wood:30,food:40,stone:0,gold:0,
   stored:0, cap:200,
   popCap:3,
-  villagers:[],nodes:[],buildings:[],depots:[],deer:[],critters:[],wolves:[],
+  villagers:[],nodes:[],buildings:[],depots:[],deer:[],critters:[],wolves:[],bandits:[],
   selected:null,buildMode:null,
   farms:0,coops:0,pens:0,quarries:0,lumbers:0,houses:0,stores:0,hall:false,
   age:1, objDone:{}, victory:false,
@@ -319,7 +319,8 @@ const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8
 const SHRINE_R2=64;
 const COMBAT={settlerHP:40,soldierHP:80,wolfHP:34,soldierDmg:14,wolfDmg:6,
   soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4,
-  archerHP:52,archerDmg:9,archerRange:13,archerKite:5,archerFireRate:1.1,regen:3,wallHP:120};
+  archerHP:52,archerDmg:9,archerRange:13,archerKite:5,archerFireRate:1.1,regen:3,wallHP:120,
+  banditHP:55,banditSpeed:2.7,banditReach:1.9,banditLoot:3};
 const SOLDIER_COST={food:40,gold:15},ARCHER_COST={food:35,gold:18};
 let CARRY=12;
 
@@ -952,6 +953,22 @@ function makeWolf(x,z){const g=new THREE.Group();
   [[0.32,0.15],[0.32,-0.15],[-0.32,0.15],[-0.32,-0.15]].forEach(p=>{const l=new THREE.Mesh(lg,wolfDark);l.position.set(p[0],0.3,p[1]);g.add(l);});
   place(g,x,z);g.userData={kind:'wolf',hp:COMBAT.wolfHP,maxhp:COMBAT.wolfHP,target:null,atkT:0,pause:0};
   addHealthBar(g,1.4);shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.wolves.push(g);return g;}
+const banditCloth=wM(0x3a3340),banditHood=wM(0x262230),banditSkin=wM(0xc89070),banditClub=wM(0x5a4028);
+function makeBandit(x,z){const g=new THREE.Group();
+  const legGeo=new THREE.CylinderGeometry(0.1,0.09,0.55,6);
+  for(const sx of[-1,1]){const l=new THREE.Mesh(legGeo,wM(0x2a2630));l.position.set(sx*0.12,0.42,0);g.add(l);}
+  const torso=new THREE.Mesh(new THREE.CylinderGeometry(0.25,0.31,0.64,8),banditCloth);torso.position.y=1.0;g.add(torso);
+  const belt=new THREE.Mesh(new THREE.CylinderGeometry(0.28,0.29,0.1,8),banditClub);belt.position.y=0.74;g.add(belt);
+  const armR=new THREE.Group();const armRm=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.06,0.5,6),banditCloth);armRm.position.y=-0.22;armR.add(armRm);
+  const hand=new THREE.Mesh(new THREE.SphereGeometry(0.08,6,5),banditSkin);hand.position.y=-0.46;armR.add(hand);
+  const club=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.08,0.6,6),banditClub);club.position.set(0,-0.62,0.1);club.rotation.x=0.4;armR.add(club);
+  armR.position.set(-0.3,1.22,0);armR.rotation.x=-0.3;g.add(armR);
+  const armL=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.06,0.5,6),banditCloth);armL.position.set(0.3,1.0,0);g.add(armL);
+  const head=new THREE.Mesh(new THREE.SphereGeometry(0.2,9,8),banditSkin);head.position.y=1.5;g.add(head);
+  const hood=new THREE.Mesh(new THREE.SphereGeometry(0.225,9,7,0,6.3,0,1.7),banditHood);hood.position.y=1.52;g.add(hood);
+  const mask=new THREE.Mesh(new THREE.BoxGeometry(0.34,0.1,0.14),banditHood);mask.position.set(0,1.46,0.16);g.add(mask);
+  place(g,x,z);g.userData={kind:'bandit',hp:COMBAT.banditHP,maxhp:COMBAT.banditHP,target:null,atkT:0,walkT:0,armR};
+  addHealthBar(g,1.95);shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.bandits.push(g);return g;}
 
 function makeSoldier(x,z){
   const g=makeSettler(x,z);const u=g.userData;
@@ -975,10 +992,15 @@ function makeArcher(x,z){
   hood.layers.set(VLAYER);quiver.layers.set(VLAYER);bow.traverse(o=>o.layers.set(VLAYER));
   return g;}
 
-function nearestWolf(p,maxd){let best=null,bd=maxd*maxd;for(const w of G.wolves){if(w.userData.hp<=0)continue;
-  const dx=w.position.x-p.x,dz=w.position.z-p.z,d=dx*dx+dz*dz;if(d<bd){bd=d;best=w;}}return best;}
-function removeWolf(w){const i=G.wolves.indexOf(w);if(i>=0)G.wolves.splice(i,1);scene.remove(w);
-  for(const v of G.villagers)if(v.userData.target===w)v.userData.target=null;}
+function nearestWolf(p,maxd){return nearestEnemy(p,maxd);}
+function nearestEnemy(p,maxd){let best=null,bd=maxd*maxd;
+  for(const arr of[G.wolves,G.bandits])for(const w of arr){if(w.userData.hp<=0)continue;
+    const dx=w.position.x-p.x,dz=w.position.z-p.z,d=dx*dx+dz*dz;if(d<bd){bd=d;best=w;}}return best;}
+function removeEnemy(w){
+  let i=G.wolves.indexOf(w);if(i>=0)G.wolves.splice(i,1);
+  i=G.bandits.indexOf(w);if(i>=0)G.bandits.splice(i,1);
+  scene.remove(w);for(const v of G.villagers)if(v.userData.target===w)v.userData.target=null;}
+function removeWolf(w){removeEnemy(w);}
 function killVillager(v){const i=G.villagers.indexOf(v);if(i>=0)G.villagers.splice(i,1);scene.remove(v);
   if(G.selected===v){G.selected=null;$('tabJobs').disabled=true;updateSelCard();}
   for(const w of G.wolves)if(w.userData.target===v)w.userData.target=null;
@@ -1899,6 +1921,25 @@ function tickRegen(dt){
   for(const s of G.walls){const u=s.userData;                                                                      // palisades self-repair
     if(u.combatT>0)u.combatT-=dt;else if(u.hp<u.maxhp){u.hp=Math.min(u.maxhp,u.hp+7*dt);updateHealthBar(s);}}
 }
+function nearestBuilding(p){let best=null,bd=1e9;for(const b of G.buildings){if(b.userData.kind!=='building')continue;
+  const dx=b.position.x-p.x,dz=b.position.z-p.z,d=dx*dx+dz*dz;if(d<bd){bd=d;best=b;}}return best;}
+let stealToastT=-9;
+function banditSteal(){
+  const opts=[['wood',G.wood],['food',G.food],['stone',G.stone],['gold',G.gold]].filter(o=>o[1]>0).sort((a,b)=>b[1]-a[1]);
+  if(!opts.length)return;const res=opts[0][0],amt=Math.min(COMBAT.banditLoot,G[res]);
+  if(res==='gold')G.gold-=amt;else{G[res]-=amt;G.stored=Math.max(0,G.stored-amt);}
+  if(clock.elapsedTime-stealToastT>4){stealToastT=clock.elapsedTime;toast('🏴‍☠️ Bandits are looting your stores — drive them off!');}
+  refreshHUD();}
+function tickBandit(w,dt){const u=w.userData;
+  if(!u.target||!u.target.parent||u.target.userData.kind!=='building')u.target=nearestBuilding(w.position);
+  const t=u.target;
+  if(!t){if(Math.hypot(w.position.x,w.position.z)>3)wolfStep(w,-w.position.x,-w.position.z,COMBAT.banditSpeed*0.6,dt);return;}
+  const dx=t.position.x-w.position.x,dz=t.position.z-w.position.z,d=Math.hypot(dx,dz);
+  const reach=COMBAT.banditReach+(t.userData.obs?t.userData.obs.r:0.8);
+  if(d>reach){const blocked=wolfStep(w,dx,dz,COMBAT.banditSpeed,dt);if(!blocked){u.walkT+=dt*8;u.armR.rotation.x=Math.sin(u.walkT)*0.4-0.3;}}
+  else{w.rotation.y=Math.atan2(dx,dz);u.atkT+=dt;u.armR.rotation.x=Math.sin(u.atkT*9)*0.7-0.3;
+    if(u.atkT>=0.7){u.atkT=0;banditSteal();}}
+}
 function spawnRaid(){
   const n=Math.min(6,2+G.age+(Math.random()*2|0));
   const F=FORESTS[(Math.random()*FORESTS.length)|0],a0=Math.random()*6.28;
@@ -1906,6 +1947,12 @@ function spawnRaid(){
     let x=F.x+Math.cos(a)*r,z=F.z+Math.sin(a)*r;if(!okSpot(x,z)){x=F.x+6;z=F.z+6;}makeWolf(x,z);}
   toast('🐺 A wolf pack attacks! Recruit ⚔ soldiers at the keep to defend.');
   try{if(navigator.vibrate)navigator.vibrate(150);}catch(e){}
+  // from the Hamlet age on, bandits sometimes raid your buildings for loot
+  if(G.age>=2&&Math.random()<0.5){const nb=1+(Math.random()*G.age|0);
+    const F2=FORESTS[(Math.random()*FORESTS.length)|0],a2=Math.random()*6.28;
+    for(let i=0;i<nb;i++){const a=a2+(Math.random()-0.5)*0.8,r=F2.r+4+Math.random()*5;
+      let x=F2.x+Math.cos(a)*r,z=F2.z+Math.sin(a)*r;if(!okSpot(x,z)){x=F2.x-6;z=F2.z-6;}makeBandit(x,z);}
+    setTimeout(()=>{if(G.started&&!G.over)toast('🏴‍☠️ Bandits approach — they’re after your stockpiles!');},1500);}
 }
 // ===== watch-tower arrows =====
 const arrowShaft=wM(0x6b4a2a),arrowHead=wM(0xc8ccd2,0.4,0.6),arrowFletch=wM(0xe8e0d0);
@@ -1969,8 +2016,10 @@ function loop(){
     for(const d of G.deer)tickDeer(d,dt);
     for(const c of G.critters)tickCritter(c,dt);
     for(const w of [...G.wolves])tickWolf(w,dt);
+    for(const w of [...G.bandits])tickBandit(w,dt);
     tickTowers(dt);tickArrows(dt);tickRegen(dt);
     for(const w of G.wolves)updateHealthBar(w);
+    for(const w of G.bandits)updateHealthBar(w);
     for(const v of G.villagers)updateHealthBar(v);
     for(const s of G.walls)updateHealthBar(s);
     raidTimer-=dt;if(raidTimer<=0){raidTimer=110+Math.random()*70;spawnRaid();}
@@ -2083,6 +2132,7 @@ function restoreGame(s){
   for(const b of G.buildings)if(b!==keep)scene.remove(b);
   for(const v of G.villagers)scene.remove(v);G.villagers.length=0;
   for(const w of G.wolves)scene.remove(w);G.wolves.length=0;
+  for(const w of G.bandits)scene.remove(w);G.bandits.length=0;
   for(const a of G.arrows)scene.remove(a);G.arrows.length=0;
   G.buildings.length=0;G.buildings.push(keep);G.depots.length=0;G.depots.push(keep);
   G.towers.length=0;G.towers.push(keep);G.walls.length=0;G.shrines.length=0;
@@ -2142,6 +2192,7 @@ function drawMinimap(){
   // villagers + wolves
   for(const v of G.villagers)mmDot(v.position.x,v.position.z,v.userData.soldier?'#9ad0ff':'#cfd9a8',1.2);
   for(const w of G.wolves)mmDot(w.position.x,w.position.z,'#e23a2a',1.6);
+  for(const w of G.bandits)mmDot(w.position.x,w.position.z,'#b030c0',1.7);
   // camera view marker
   const[cx,cz]=w2m(camTarget.x,camTarget.z);mx.strokeStyle='#fff';mx.lineWidth=1;mx.strokeRect(cx-9,cz-9,18,18);
 }
