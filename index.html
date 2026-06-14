@@ -842,14 +842,55 @@ function makeDeer(x,z){const g=new THREE.Group();
   const lg=new THREE.CylinderGeometry(0.06,0.05,0.62,5);
   [[0.35,0.18],[0.35,-0.18],[-0.35,0.18],[-0.35,-0.18]].forEach(p=>{
     const l=new THREE.Mesh(lg,deerMat);l.position.set(p[0],0.31,p[1]);g.add(l);});
-  place(g,x,z);g.userData={kind:'deer',state:'wander',dest:null,pause:Math.random()*3};
+  place(g,x,z);g.userData={kind:'deer',state:'wander',dest:null,pause:Math.random()*3,
+    home:new THREE.Vector3(x,0,z),meat:10,fleeSpeed:3.2,wanderSpeed:1.1,roam:20,emoji:'🦌',name:'Venison'};
   shadows(g);scene.add(g);G.deer.push(g);}
-function spawnDeer(){const a=Math.random()*6.28;
-  const x=FOREST.x+Math.cos(a)*(FOREST.r+4),z=FOREST.z+Math.sin(a)*(FOREST.r+4);
+function spawnDeer(){const F=FORESTS[Math.random()*FORESTS.length|0],a=Math.random()*6.28;
+  const x=F.x+Math.cos(a)*(F.r+4),z=F.z+Math.sin(a)*(F.r+4);
   okSpot(x,z)?makeDeer(x,z):makeDeer(FOREST.x+8,FOREST.z+8);}
+
+// Boar — tougher quarry, more meat, slower to flee. Lives in the huntable herd.
+const boarMat=wM(0x4a3a30),tuskMat=wM(0xe8e2d0);
+function makeBoar(x,z){const g=new THREE.Group();
+  const body=new THREE.Mesh(new THREE.BoxGeometry(1.25,0.75,0.66),boarMat);body.position.y=0.7;g.add(body);
+  const hump=new THREE.Mesh(new THREE.SphereGeometry(0.4,7,6),boarMat);hump.position.set(0.25,1.05,0);hump.scale.set(1,0.7,0.9);g.add(hump);
+  const head=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.42,0.42),boarMat);head.position.set(0.78,0.7,0);g.add(head);
+  const snout=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.22,0.3),boarMat);snout.position.set(1.05,0.62,0);g.add(snout);
+  const tg=new THREE.ConeGeometry(0.04,0.18,4);
+  const tk1=new THREE.Mesh(tg,tuskMat);tk1.position.set(1.08,0.6,0.12);tk1.rotation.set(0,0,-0.4);g.add(tk1);
+  const tk2=tk1.clone();tk2.position.z=-0.12;g.add(tk2);
+  const lg=new THREE.CylinderGeometry(0.07,0.06,0.5,5);
+  [[0.42,0.22],[0.42,-0.22],[-0.42,0.22],[-0.42,-0.22]].forEach(p=>{
+    const l=new THREE.Mesh(lg,boarMat);l.position.set(p[0],0.25,p[1]);g.add(l);});
+  place(g,x,z);g.userData={kind:'boar',state:'wander',dest:null,pause:Math.random()*3,
+    home:new THREE.Vector3(x,0,z),meat:20,fleeSpeed:2.7,wanderSpeed:1.0,roam:18,emoji:'🐗',name:'Boar'};
+  shadows(g);scene.add(g);G.deer.push(g);}
+function spawnBoar(){const F=FORESTS[Math.random()*FORESTS.length|0],a=Math.random()*6.28;
+  const x=F.x+Math.cos(a)*(F.r+5),z=F.z+Math.sin(a)*(F.r+5);if(okSpot(x,z))makeBoar(x,z);else makeBoar(FOREST.x-8,FOREST.z-8);}
+
+// Rabbit — small, skittish, quick to flee, little meat. Bonus near meadows.
+const rabMat=wM(0xb8a890),rabBelly=wM(0xe8e0d4);
+function makeRabbit(x,z){const g=new THREE.Group();
+  const body=new THREE.Mesh(new THREE.SphereGeometry(0.2,7,6),rabMat);body.position.y=0.22;body.scale.set(1,0.85,1.3);g.add(body);
+  const head=new THREE.Mesh(new THREE.SphereGeometry(0.13,6,5),rabMat);head.position.set(0.22,0.3,0);g.add(head);
+  const eg=new THREE.BoxGeometry(0.04,0.18,0.05);
+  const e1=new THREE.Mesh(eg,rabMat);e1.position.set(0.2,0.46,0.06);e1.rotation.z=-0.15;g.add(e1);
+  const e2=new THREE.Mesh(eg,rabMat);e2.position.set(0.2,0.46,-0.06);e2.rotation.z=-0.15;g.add(e2);
+  const tail=new THREE.Mesh(new THREE.SphereGeometry(0.07,5,4),rabBelly);tail.position.set(-0.24,0.24,0);g.add(tail);
+  place(g,x,z);g.userData={kind:'rabbit',state:'wander',dest:null,pause:Math.random()*2,
+    home:new THREE.Vector3(x,0,z),meat:5,fleeSpeed:4.4,wanderSpeed:1.6,roam:12,emoji:'🐇',name:'Rabbit'};
+  shadows(g);scene.add(g);G.deer.push(g);}
+function spawnRabbit(){const F=FORESTS[Math.random()*FORESTS.length|0],a=Math.random()*6.28,rr=F.r*(0.9+Math.random()*0.7);
+  const x=F.x+Math.cos(a)*rr,z=F.z+Math.sin(a)*rr;if(okSpot(x,z))makeRabbit(x,z);else makeRabbit(FOREST.x+10,FOREST.z-10);}
+
 for(const F of FORESTS){const n=2+(Math.random()*2|0);
   for(let i=0;i<n;i++){const a=Math.random()*6.28,rr=F.r*(0.7+Math.random()*0.5);
-    const x=F.x+Math.cos(a)*rr,z=F.z+Math.sin(a)*rr;if(okSpot(x,z))makeDeer(x,z);}}
+    const x=F.x+Math.cos(a)*rr,z=F.z+Math.sin(a)*rr;if(okSpot(x,z))makeDeer(x,z);}
+  if(Math.random()<0.7){const a=Math.random()*6.28,rr=F.r*(0.6+Math.random()*0.6);
+    const x=F.x+Math.cos(a)*rr,z=F.z+Math.sin(a)*rr;if(okSpot(x,z))makeBoar(x,z);}}
+for(let i=0;i<14;i++){const F=FORESTS[Math.random()*FORESTS.length|0];
+  const a=Math.random()*6.28,rr=F.r*(0.9+Math.random()*0.7);
+  const x=F.x+Math.cos(a)*rr,z=F.z+Math.sin(a)*rr;if(okSpot(x,z))makeRabbit(x,z);}
 
 const chickBody=wM(0xf0ece0),comb=wM(0xc03030),beakM=wM(0xe0a030);
 function makeChicken(home){const g=new THREE.Group();
@@ -1493,7 +1534,7 @@ function select(v){
   if(G.selected)G.selected.userData.ring.visible=false;
   G.selected=v;
   $('tabJobs').disabled=!v;
-  if(v){v.userData.ring.visible=true;hint('Tap a tree, rock, berry or deer — or use ⚑ Assign for a standing job');}
+  if(v){v.userData.ring.visible=true;hint('Tap a tree, rock, berry or wild game (deer/boar/rabbit) — or use ⚑ Assign for a standing job');}
   updateSelCard();
 }
 function clearTargets(u){u.dest=null;u.node=null;u.site=null;u.prey=null;u.depot=null;u.fishPt=null;
@@ -1678,7 +1719,7 @@ function handleTap(x,y){
   if(hits.length){const r=rootOf(hits[0].object);
     if(r){const k=r.userData.kind;
       if(k==='villager'){select(r);return;}
-      if(k==='deer'){if(G.selected)manualHunt(G.selected,r);else toast('Tap a settler first.');return;}
+      if(k==='deer'||k==='boar'||k==='rabbit'){if(G.selected)manualHunt(G.selected,r);else toast('Tap a settler first.');return;}
       if(k==='node'){if(G.selected)manualGather(G.selected,r);else toast('Tap a settler first.');return;}
       if(k==='shoal'){if(G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);u.shoal=r;
         startFishing(G.selected);toast('🎣 Casting at the shoal.');updateSelCard();}else toast('Tap a settler first.');return;}
@@ -1774,11 +1815,12 @@ function tickVillager(v,dt){
     case 'toPrey':{
       const pr=u.prey;if(!pr||!pr.parent){u.phase='idle';u.prey=null;break;}
       const d=new THREE.Vector3().subVectors(pr.position,v.position);d.y=0;const dist=d.length();
-      if(dist<1.1){scene.remove(pr);const i=G.deer.indexOf(pr);if(i>=0)G.deer.splice(i,1);
-        u.carrying=Math.min(CARRY,u.carrying+10);u.carryRes='food';setLoad(u);u.prey=null;
-        toast('🦌 Venison taken — hauling it home.');u.depot=nearestDepot(v);u.phase='toDepot';
-        setTimeout(spawnDeer,28000+Math.random()*20000);break;}
-      if(dist>17){u.phase='idle';u.prey=null;toast('The deer escaped.');break;}
+      if(dist<1.1){const pu=pr.userData;scene.remove(pr);const i=G.deer.indexOf(pr);if(i>=0)G.deer.splice(i,1);
+        u.carrying=Math.max(u.carrying,pu.meat||10);u.carryRes='food';setLoad(u);u.prey=null;  // a carcass is one big haul (not capped by CARRY)
+        toast((pu.emoji||'🦌')+' '+(pu.name||'Meat')+' taken — hauling it home.');u.depot=nearestDepot(v);u.phase='toDepot';
+        const re=pu.kind==='boar'?spawnBoar:pu.kind==='rabbit'?spawnRabbit:spawnDeer;
+        setTimeout(re,28000+Math.random()*20000);break;}
+      if(dist>17){u.phase='idle';u.prey=null;toast('The '+((pr.userData.name)||'quarry').toLowerCase()+' escaped.');break;}
       d.normalize();walk(v,d,3.7,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);break;}
     case 'toFish':{
       const d=new THREE.Vector3().subVectors(u.dest,v.position);d.y=0;
@@ -2011,14 +2053,17 @@ function tickDeer(d,dt){const u=d.userData;
     if(!hunter){u.state='wander';return;}
     if(bd>18){u.state='wander';return;}
     const dir=new THREE.Vector3().subVectors(d.position,hunter.position);dir.y=0;dir.normalize();
-    walk(d,dir,3.2,dt);d.rotation.y=Math.atan2(dir.x,dir.z);return;}
+    walk(d,dir,u.fleeSpeed||3.2,dt);d.rotation.y=Math.atan2(dir.x,dir.z);return;}
   if(u.pause>0){u.pause-=dt;return;}
   if(!u.dest){const a=Math.random()*6.28,r=4+Math.random()*7;
-    const nx=d.position.x+Math.cos(a)*r,nz=d.position.z+Math.sin(a)*r;
-    if(getH(nx,nz)>WATER_Y+0.4&&Math.abs(nx)<62&&Math.abs(nz)<62)u.dest=new THREE.Vector3(nx,0,nz);else u.pause=1;return;}
+    const h=u.home||d.position,roam=u.roam||20;
+    let nx=d.position.x+Math.cos(a)*r,nz=d.position.z+Math.sin(a)*r;
+    // stay near home region, on land, inside the map
+    if(Math.hypot(nx-h.x,nz-h.z)>roam){nx=h.x+(nx-h.x)*0.3;nz=h.z+(nz-h.z)*0.3;}
+    if(getH(nx,nz)>WATER_Y+0.4&&Math.abs(nx)<162&&Math.abs(nz)<162)u.dest=new THREE.Vector3(nx,0,nz);else u.pause=1;return;}
   const dir=new THREE.Vector3().subVectors(u.dest,d.position);dir.y=0;
   if(dir.length()<0.4){u.dest=null;u.pause=1.5+Math.random()*3;return;}
-  dir.normalize();walk(d,dir,1.1,dt);d.rotation.y=Math.atan2(dir.x,dir.z);}
+  dir.normalize();walk(d,dir,u.wanderSpeed||1.1,dt);d.rotation.y=Math.atan2(dir.x,dir.z);}
 
 function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
   if(u.head){if(u.head.position.y0===undefined)u.head.position.y0=u.head.position.y;

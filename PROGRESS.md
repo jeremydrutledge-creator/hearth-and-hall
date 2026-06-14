@@ -160,6 +160,12 @@ Age of Empires-style game."
     `castAt(...,waters)` so you can fish every lake. Pan widened ±156, mountains
     rad 192+36, fog 135–330, grass/flowers/pebbles + scattered trees/bushes scaled
     up, `MM_SPAN=400`. Save bumped **v1→v2** (old saves invalidated — layout changed).
+46. **More wild game** — huntable herd generalised beyond deer: **boar** (tougher,
+    slow to flee, big 20-meat carcass — a kill is one big haul, not CARRY-capped) and
+    **rabbit** (small/skittish, 4.4 flee speed, 5 meat). All carry `home/meat/fleeSpeed/
+    wanderSpeed/roam/emoji/name` userData; `tickDeer` reads them and keeps animals near
+    their home forest (roam radius, map-bounded — fixes old ±62 box). Tap-target,
+    `manualHunt`, `nearestDeer`, hunt-completion + per-species respawn all generic.
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is
