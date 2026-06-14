@@ -2302,7 +2302,11 @@ function drawMinimap(){
   // regions
   for(const F of FORESTS){const[px,pz]=w2m(F.x,F.z);mx.fillStyle='#2f5a26';mx.beginPath();mx.arc(px,pz,F.r/MM_SPAN*MMS,0,6.3);mx.fill();}
   for(const R of ROCKIES){const[px,pz]=w2m(R.x,R.z);mx.fillStyle='#6a6258';mx.beginPath();mx.arc(px,pz,R.r/MM_SPAN*MMS,0,6.3);mx.fill();}
-  {const[px,pz]=w2m(POND.x,POND.z);mx.fillStyle='#2f6f96';mx.beginPath();mx.arc(px,pz,POND.r/MM_SPAN*MMS,0,6.3);mx.fill();}
+  for(const Q of PONDS){const[px,pz]=w2m(Q.x,Q.z);mx.fillStyle='#2f6f96';mx.beginPath();mx.arc(px,pz,Q.r/MM_SPAN*MMS,0,6.3);mx.fill();}
+  // landmarks (exploration markers — small hollow diamonds)
+  for(const L of G.landmarks){const[px,pz]=w2m(L.position.x,L.position.z);
+    mx.strokeStyle='#d8d2c0';mx.lineWidth=1;mx.beginPath();
+    mx.moveTo(px,pz-2.5);mx.lineTo(px+2.5,pz);mx.lineTo(px,pz+2.5);mx.lineTo(px-2.5,pz);mx.closePath();mx.stroke();}
   // resource ore (gold) markers
   for(const n of G.nodes){if(n.userData.res==='gold')mmDot(n.position.x,n.position.z,'#e8c422',1.4);}
   // buildings
