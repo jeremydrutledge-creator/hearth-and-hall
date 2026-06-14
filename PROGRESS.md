@@ -171,6 +171,13 @@ Age of Empires-style game."
     monolith ring + altar, one toppled) and `makeRuin` (broken arch, toppled pillar,
     crumbled walls). `weather()` adds tilt + moss. Tagged `kind:'landmark'`,
     collected in `G.landmarks`. Pure scenery (regenerate per load; not serialized).
+48. **Explore landmarks** — landmarks now carry a one-time `reward` (ruins→stone+gold,
+    stones→gold+food) + `lore`. A glowing beacon (`addBeacon`, shared `beaconMat`,
+    pulses/bobs in loop) marks unclaimed ones. Tap a landmark with a settler →
+    `manualExplore` → phases `toLandmark`/`exploring` (~3.2s) → `addStored` the cache,
+    `floatGain`, lore toast, beacon removed, `explored=true`. Minimap shows unexplored
+    as a gold diamond, explored as a dim hollow one. Reward gated by travel+time only
+    (no money) — fits the no-P2W vision. (Not serialized: a reload reseeds landmarks.)
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is

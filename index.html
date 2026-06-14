@@ -803,8 +803,14 @@ function makeBush(x,z){const g=new THREE.Group();
   place(g,x,z);g.userData={kind:'node',res:'food',amount:70,label:'berries'};shadows(g);scene.add(g);G.nodes.push(g);
   swayers.push({o:g,ph:Math.random()*6.28,amp:0.02+Math.random()*0.02});}
 
-// ===== weathered landmarks (pure scenery — give the wilds a sense of history) =====
+// ===== weathered landmarks (scenery + a one-time cache to reward exploring) =====
 const mossStone=wM(0x8f8f80),mossDark=wM(0x6f7560),mossGreen=wM(0x5a7340);
+const beaconMat=new THREE.MeshStandardMaterial({color:new THREE.Color(0xffe9a0).convertSRGBToLinear(),
+  emissive:new THREE.Color(0xffd060),emissiveIntensity:1.5,transparent:true,opacity:0.5,depthWrite:false});
+function addBeacon(g,topY){const beam=new THREE.Mesh(new THREE.CylinderGeometry(0.16,0.16,6,8),beaconMat);
+  beam.position.y=topY+3;g.add(beam);
+  const orb=new THREE.Mesh(new THREE.SphereGeometry(0.55,10,8),beaconMat);orb.position.y=topY+5.6;g.add(orb);
+  g.userData.beacon=g.userData.beacon||[];g.userData.beacon.push(beam,orb);g.userData.orb=orb;}
 function weather(m){const a=Math.random()*6.28;m.rotation.set((Math.random()-0.5)*0.18,a,(Math.random()-0.5)*0.18);
   const c=new THREE.Mesh(new THREE.SphereGeometry(0.12+Math.random()*0.1,5,4),mossGreen);
   c.position.set((Math.random()-0.5)*0.3,0.05,(Math.random()-0.5)*0.3);c.scale.y=0.4;m.add(c);return m;}
@@ -819,7 +825,11 @@ function makeStandingStones(x,z){const g=new THREE.Group();
     if(Math.random()<0.18){s.rotation.z=(Math.random()<0.5?1:-1)*(0.6+Math.random()*0.5);s.position.y=0.5;} // a fallen one
     weather(s);g.add(s);}
   const altar=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.5,0.9),mossStone);altar.position.y=0.45;weather(altar);g.add(altar);
-  place(g,x,z);g.rotation.y=Math.random()*6.28;g.userData={kind:'landmark'};shadows(g);scene.add(g);G.landmarks&&G.landmarks.push(g);}
+  place(g,x,z);g.rotation.y=Math.random()*6.28;
+  g.userData={kind:'landmark',name:'Standing Stones',explored:false,
+    reward:{gold:18+(Math.random()*12|0),food:20+(Math.random()*15|0)},
+    lore:'Old stones, older songs. The foragers gather what grows in their shadow.'};
+  addBeacon(g,4.2);shadows(g);scene.add(g);G.landmarks&&G.landmarks.push(g);}
 // crumbled ruins — broken arch, toppled pillars, fragments of wall
 function makeRuin(x,z){const g=new THREE.Group();
   const base=new THREE.Mesh(new THREE.BoxGeometry(7,0.4,5),mossDark);base.position.y=0.1;g.add(base);
@@ -834,7 +844,11 @@ function makeRuin(x,z){const g=new THREE.Group();
   // crumbled wall segments of varying height
   let wx=-3;[1.6,1.1,0.6,1.3].forEach(h=>{const w=new THREE.Mesh(new THREE.BoxGeometry(1.2,h,0.8),Math.random()<0.5?mossStone:mossDark);
     w.position.set(wx,h/2+0.2,-2.0);w.rotation.y=(Math.random()-0.5)*0.2;weather(w);g.add(w);wx+=1.3;});
-  place(g,x,z);g.rotation.y=Math.random()*6.28;g.userData={kind:'landmark'};shadows(g);scene.add(g);G.landmarks&&G.landmarks.push(g);}
+  place(g,x,z);g.rotation.y=Math.random()*6.28;
+  g.userData={kind:'landmark',name:'Ruins',explored:false,
+    reward:{stone:40+(Math.random()*25|0),gold:14+(Math.random()*12|0)},
+    lore:'A hall that fell long ago. Good stone still lies among the rubble.'};
+  addBeacon(g,3.6);shadows(g);scene.add(g);G.landmarks&&G.landmarks.push(g);}
 
 // forests across the valley — plenty of timber to expand toward
 for(const F of FORESTS){const n=Math.round(F.r*F.r*0.085);
@@ -1580,7 +1594,7 @@ function select(v){
   if(v){v.userData.ring.visible=true;hint('Tap a tree, rock, berry or wild game (deer/boar/rabbit) — or use ⚑ Assign for a standing job');}
   updateSelCard();
 }
-function clearTargets(u){u.dest=null;u.node=null;u.site=null;u.prey=null;u.depot=null;u.fishPt=null;
+function clearTargets(u){u.dest=null;u.node=null;u.site=null;u.prey=null;u.depot=null;u.fishPt=null;u.landmark=null;
   if(u.rod)u.rod.visible=false;}
 function startFishing(v){const u=v.userData;
   let sh=u.shoal;
@@ -1598,6 +1612,10 @@ function nearestDepot(v){let best=null,bd=1e9;
 function setOrder(v,order){const u=v.userData;u.order=(order==='idle'?null:order);clearTargets(u);u.phase='idle';u.retry=0;u.rallyReady=(order==='idle');updateSelCard();}
 function manualGather(v,node){const u=v.userData;u.order=node.userData.res;clearTargets(u);u.node=node;u.dest=node.position.clone();u.phase='toNode';u.rallyReady=false;updateSelCard();}
 function manualHunt(v,d){const u=v.userData;if(!G.bows){toast('Craft bows first — ⚒ Build ▸ 🏹 Craft Bows.');return;}u.order='hunt';clearTargets(u);u.prey=d;u.dest=d.position.clone();u.phase='toPrey';u.rallyReady=false;d.userData.state='flee';updateSelCard();}
+function manualExplore(v,lm){const u=v.userData;
+  if(lm.userData.explored){toast('Nothing left to find here.');return;}
+  u.order=null;clearTargets(u);u.landmark=lm;u.dest=lm.position.clone();u.phase='toLandmark';u.rallyReady=false;
+  toast('🧭 Off to investigate the '+lm.userData.name.toLowerCase()+'…');updateSelCard();}
 function manualMove(v,p){const u=v.userData;u.order=null;clearTargets(u);u.dest=p.clone();u.phase='move';u.rallyReady=false;updateSelCard();}
 function manualBuild(v,site){const u=v.userData;clearTargets(u);u.site=site;u.dest=site.position.clone();u.phase='toSite';u.rallyReady=false;}
 
@@ -1758,10 +1776,12 @@ function handleTap(x,y){
   if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length){const pt=hit[0].point;
     G.buildMode.ghost.position.copy(pt);tintGhost(G.buildMode,placeValid(G.buildMode.type,pt.x,pt.z));}return;}
   hideBldCard();   // any canvas tap dismisses the building card; a building tap re-opens it
-  const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.buildings]);
+  const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.landmarks,...G.buildings]);
   if(hits.length){const r=rootOf(hits[0].object);
     if(r){const k=r.userData.kind;
       if(k==='villager'){select(r);return;}
+      if(k==='landmark'){if(G.selected)manualExplore(G.selected,r);
+        else toast(r.userData.explored?'Already explored — '+r.userData.lore:r.userData.name+' — send a settler to investigate.');return;}
       if(k==='deer'||k==='boar'||k==='rabbit'){if(G.selected)manualHunt(G.selected,r);else toast('Tap a settler first.');return;}
       if(k==='node'){if(G.selected)manualGather(G.selected,r);else toast('Tap a settler first.');return;}
       if(k==='shoal'){if(G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);u.shoal=r;
@@ -1854,6 +1874,21 @@ function tickVillager(v,dt){
       if(p>=1){if(s.userData.upgrading)finishUpgrade(s);else finishBuilding(s);u.site=null;u.armR.rotation.x=0;u.armL.rotation.x=0;
         // resume order
         if(u.order){const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else u.phase='idle';}else u.phase='idle';}
+      break;}
+    case 'toLandmark':{
+      const lm=u.landmark;if(!lm||lm.userData.explored){u.phase='idle';u.landmark=null;break;}
+      const d=new THREE.Vector3().subVectors(lm.position,v.position);d.y=0;
+      if(d.length()>3.2){d.normalize();walk(v,d,3.2,dt);v.rotation.y=Math.atan2(d.x,d.z);animWalk(u,dt);}
+      else{u.phase='exploring';u.workT=0;animRest(u);}break;}
+    case 'exploring':{
+      const lm=u.landmark;if(!lm||lm.userData.explored){u.phase='idle';u.landmark=null;break;}
+      u.workT+=dt;u.armR.rotation.x=Math.sin(u.workT*4)*0.5-0.2;
+      if(u.workT>=3.2){u.armR.rotation.x=0;u.landmark=null;u.phase='idle';
+        const lu=lm.userData;lu.explored=true;
+        if(lu.beacon){for(const o of lu.beacon)lm.remove(o);lu.beacon=null;}
+        const parts=[];for(const k in lu.reward){const g=addStored(k,lu.reward[k]);if(g){parts.push(g+' '+k);floatGain(v,g,k);}}
+        refreshHUD();
+        toast('🧭 '+lu.name+' explored — '+(parts.join(', ')||'nothing of use')+'. '+lu.lore);}
       break;}
     case 'toPrey':{
       const pr=u.prey;if(!pr||!pr.parent){u.phase='idle';u.prey=null;break;}
@@ -2153,6 +2188,10 @@ function loop(){
   // gentle wind through the trees & bushes
   for(let i=0;i<swayers.length;i++){const s=swayers[i];if(!s.o.parent)continue;
     s.o.rotation.z=Math.sin(t*1.25+s.ph)*s.amp;s.o.rotation.x=Math.cos(t*1.05+s.ph)*s.amp*0.5;}
+  // landmark beacons pulse and bob to draw the eye
+  beaconMat.emissiveIntensity=1.2+Math.sin(t*2.2)*0.5;
+  for(const L of G.landmarks){const o=L.userData.orb;if(o){if(o.userData.by===undefined)o.userData.by=o.position.y;
+    o.position.y=o.userData.by+Math.sin(t*1.6+L.position.x)*0.3;}}
   updateSmoke(dt);updateChips(dt);
   for(const d of ducks)tickDuck(d,dt);
   for(const s of shoals)tickShoal(s,dt);
@@ -2303,10 +2342,11 @@ function drawMinimap(){
   for(const F of FORESTS){const[px,pz]=w2m(F.x,F.z);mx.fillStyle='#2f5a26';mx.beginPath();mx.arc(px,pz,F.r/MM_SPAN*MMS,0,6.3);mx.fill();}
   for(const R of ROCKIES){const[px,pz]=w2m(R.x,R.z);mx.fillStyle='#6a6258';mx.beginPath();mx.arc(px,pz,R.r/MM_SPAN*MMS,0,6.3);mx.fill();}
   for(const Q of PONDS){const[px,pz]=w2m(Q.x,Q.z);mx.fillStyle='#2f6f96';mx.beginPath();mx.arc(px,pz,Q.r/MM_SPAN*MMS,0,6.3);mx.fill();}
-  // landmarks (exploration markers — small hollow diamonds)
+  // landmarks — gold diamond if unexplored (a beckoning point of interest), dim hollow once claimed
   for(const L of G.landmarks){const[px,pz]=w2m(L.position.x,L.position.z);
-    mx.strokeStyle='#d8d2c0';mx.lineWidth=1;mx.beginPath();
-    mx.moveTo(px,pz-2.5);mx.lineTo(px+2.5,pz);mx.lineTo(px,pz+2.5);mx.lineTo(px-2.5,pz);mx.closePath();mx.stroke();}
+    mx.beginPath();mx.moveTo(px,pz-2.8);mx.lineTo(px+2.8,pz);mx.lineTo(px,pz+2.8);mx.lineTo(px-2.8,pz);mx.closePath();
+    if(L.userData.explored){mx.strokeStyle='#7a766a';mx.lineWidth=1;mx.stroke();}
+    else{mx.fillStyle='#ffd45a';mx.fill();}}
   // resource ore (gold) markers
   for(const n of G.nodes){if(n.userData.res==='gold')mmDot(n.position.x,n.position.z,'#e8c422',1.4);}
   // buildings
