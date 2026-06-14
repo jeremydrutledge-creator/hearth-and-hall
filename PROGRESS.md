@@ -117,6 +117,11 @@ Age of Empires-style game."
     fireRate 1.3). `tickTowers` auto-targets `nearestWolf` in range and `shootArrow`s;
     `G.arrows` projectiles (`makeArrowMesh`, layer 1) homed in `tickArrows`, deal dmg
     on hit → `removeWolf`. Upgradeable for +range/+dmg. Verified: arrows track & kill.
+31. **Archers + HP regen** — `makeArcher` (ranged soldier, bow+hood, `u.ranged`):
+    `tickSoldier` ranged branch kites to `archerRange`/`archerKite` and `shootArrow`s
+    (archerDmg). Keep card now has ⚔ Spearman + 🏹 Archer (ARCHER_COST). `tickRegen`:
+    villagers heal `COMBAT.regen`/s when out of combat (`u.combatT`, set to 8 on
+    attack/hit). Verified: archer arrows damage wolf; regen climbs & combatT blocks it.
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they

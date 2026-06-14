@@ -142,7 +142,7 @@
 <div id="toast"><span id="toastText"></span></div>
 <div id="selCard"></div>
 <div id="quests"><div id="questHead">📜 <span class="age" id="ageName">Camp</span><span id="questTog">▾</span></div><ul id="questList"></ul></div>
-<div id="bldCard"><div id="bldName">Building</div><div class="bldBtns"><button id="bldUpgrade">⬆ Upgrade</button><button id="bldRecruit">＋ Settler</button><button id="bldSoldier">⚔ Soldier</button><button id="bldClose">✕</button></div></div>
+<div id="bldCard"><div id="bldName">Building</div><div class="bldBtns"><button id="bldUpgrade">⬆ Upgrade</button><button id="bldRecruit">＋ Settler</button><button id="bldSoldier">⚔ Spearman</button><button id="bldArcher">🏹 Archer</button><button id="bldClose">✕</button></div></div>
 
 <!-- BUILD MENU -->
 <div class="menu" id="buildMenu"><div class="menuInner">
@@ -277,8 +277,9 @@ const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
   pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},tower:{wood:60,stone:20},hall:{wood:150,stone:60},settler:{food:50}};
 const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,tower:9,hall:14};
 const COMBAT={settlerHP:40,soldierHP:80,wolfHP:34,soldierDmg:14,wolfDmg:6,
-  soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4};
-const SOLDIER_COST={food:40,gold:15};
+  soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4,
+  archerHP:52,archerDmg:9,archerRange:13,archerKite:5,archerFireRate:1.1,regen:3};
+const SOLDIER_COST={food:40,gold:15},ARCHER_COST={food:35,gold:18};
 const CARRY=12;
 
 // ===== renderer =====
@@ -871,7 +872,7 @@ function makeSettler(x,z){
   g.userData={kind:'villager',ring,legL,legR,armL,armR,load,rod,
     order:null,phase:'idle',dest:null,node:null,site:null,prey:null,depot:null,fishPt:null,shoal:null,
     rallyReady:true,carrying:0,carryRes:null,workT:0,walkT:0,retry:0,
-    soldier:false,hp:COMBAT.settlerHP,maxhp:COMBAT.settlerHP,target:null,atkT:0};
+    soldier:false,hp:COMBAT.settlerHP,maxhp:COMBAT.settlerHP,target:null,atkT:0,ranged:false,cd:0,combatT:0};
   addHealthBar(g,1.95);
   shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.villagers.push(g);
   return g;
@@ -921,6 +922,16 @@ function makeSoldier(x,z){
   spear.position.set(0,-0.46,0.06);spear.rotation.x=0.1;u.armR.add(spear);
   const helm=new THREE.Mesh(new THREE.SphereGeometry(0.23,10,8,0,6.3,0,1.7),wM(0xb9bdc4,0.45,0.6));helm.position.y=1.56;g.add(helm);
   helm.layers.set(VLAYER);spear.traverse(o=>o.layers.set(VLAYER));
+  return g;}
+function makeArcher(x,z){
+  const g=makeSettler(x,z);const u=g.userData;
+  u.soldier=true;u.ranged=true;u.hp=COMBAT.archerHP;u.maxhp=COMBAT.archerHP;u.rallyReady=false;u.order=null;u.cd=0;
+  // a bow held out in the left hand + a green hood
+  const bow=new THREE.Mesh(new THREE.TorusGeometry(0.26,0.028,5,10,Math.PI*1.25),wM(0x6b4a2a));
+  bow.position.set(0,-0.32,0.06);bow.rotation.set(0,Math.PI/2,Math.PI/2);u.armL.add(bow);
+  const hood=new THREE.Mesh(new THREE.ConeGeometry(0.23,0.3,7),wM(0x466a3e));hood.position.y=1.6;g.add(hood);
+  const quiver=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.06,0.34,6),wM(0x6b4a2a));quiver.position.set(-0.12,1.02,-0.18);quiver.rotation.z=0.4;g.add(quiver);
+  hood.layers.set(VLAYER);quiver.layers.set(VLAYER);bow.traverse(o=>o.layers.set(VLAYER));
   return g;}
 
 function nearestWolf(p,maxd){let best=null,bd=maxd*maxd;for(const w of G.wolves){if(w.userData.hp<=0)continue;
@@ -1719,6 +1730,7 @@ function updateBldCard(){
   $('bldName').textContent=NAME[t]+' · Lv '+lv;
   $('bldRecruit').style.display=(t==='keep')?'':'none';
   $('bldSoldier').style.display=(t==='keep')?'':'none';
+  $('bldArcher').style.display=(t==='keep')?'':'none';
   const ub=$('bldUpgrade');
   if(!cfg){ub.style.display='none';}
   else if(lv>=cfg.max){ub.style.display='';ub.disabled=true;ub.textContent='⬆ Max level';}
@@ -1730,13 +1742,22 @@ const _cv=new THREE.Vector3();
 function nearestPrey(p){let best=null,bd=1e9;for(const v of G.villagers){if(v.userData.hp<=0)continue;
   const dx=v.position.x-p.x,dz=v.position.z-p.z,d=dx*dx+dz*dz;if(d<bd){bd=d;best=v;}}return best;}
 function tickSoldier(v,dt){const u=v.userData;animRest(u);
-  if(!u.target||u.target.userData.hp<=0||!u.target.parent)u.target=nearestWolf(v.position,COMBAT.soldierAggro);
+  const aggro=u.ranged?COMBAT.archerRange+4:COMBAT.soldierAggro;
+  if(!u.target||u.target.userData.hp<=0||!u.target.parent)u.target=nearestWolf(v.position,aggro);
   const w=u.target;
-  if(w){const dx=w.position.x-v.position.x,dz=w.position.z-v.position.z,d=Math.hypot(dx,dz);
-    if(d>COMBAT.soldierReach){_cv.set(dx,0,dz).normalize();walk(v,_cv,COMBAT.soldierSpeed,dt);v.rotation.y=Math.atan2(dx,dz);animWalk(u,dt);}
-    else{v.rotation.y=Math.atan2(dx,dz);u.atkT+=dt;u.armR.rotation.x=Math.sin(u.atkT*11)*1.0-0.6;
-      if(u.atkT>=0.5){u.atkT=0;w.userData.hp-=COMBAT.soldierDmg*0.5;updateHealthBar(w);
-        if(w.userData.hp<=0){removeWolf(w);u.target=null;u.armR.rotation.x=0;}}}
+  if(w){const dx=w.position.x-v.position.x,dz=w.position.z-v.position.z,d=Math.hypot(dx,dz);v.rotation.y=Math.atan2(dx,dz);
+    if(u.ranged){
+      if(d>COMBAT.archerRange){_cv.set(dx,0,dz).normalize();walk(v,_cv,COMBAT.soldierSpeed,dt);animWalk(u,dt);}
+      else if(d<COMBAT.archerKite){_cv.set(-dx,0,-dz).normalize();walk(v,_cv,COMBAT.soldierSpeed*0.85,dt);animWalk(u,dt);}
+      else{animRest(u);u.armR.rotation.x=-0.9;u.cd-=dt;
+        if(u.cd<=0){u.cd=COMBAT.archerFireRate;u.combatT=8;
+          shootArrow(_cv.set(v.position.x,v.position.y+1.3,v.position.z).clone(),w,COMBAT.archerDmg);}}
+    } else {
+      if(d>COMBAT.soldierReach){_cv.set(dx,0,dz).normalize();walk(v,_cv,COMBAT.soldierSpeed,dt);animWalk(u,dt);}
+      else{u.atkT+=dt;u.combatT=8;u.armR.rotation.x=Math.sin(u.atkT*11)*1.0-0.6;
+        if(u.atkT>=0.5){u.atkT=0;w.userData.hp-=COMBAT.soldierDmg*0.5;updateHealthBar(w);
+          if(w.userData.hp<=0){removeWolf(w);u.target=null;u.armR.rotation.x=0;}}}
+    }
   } else { // no enemy — muster at the rally/keep
     const gx=G.rally?G.rally.x:0,gz=G.rally?G.rally.z:0,dx=gx-v.position.x,dz=gz-v.position.z,d=Math.hypot(dx,dz);
     if(d>2.5){_cv.set(dx,0,dz).normalize();walk(v,_cv,COMBAT.soldierSpeed*0.8,dt);v.rotation.y=Math.atan2(dx,dz);animWalk(u,dt);}
@@ -1750,9 +1771,11 @@ function tickWolf(w,dt){const u=w.userData;
   const dx=t.position.x-w.position.x,dz=t.position.z-w.position.z,d=Math.hypot(dx,dz);
   if(d>COMBAT.wolfReach){_cv.set(dx,0,dz).normalize();w.position.addScaledVector(_cv,COMBAT.wolfSpeed*dt);w.position.y=getH(w.position.x,w.position.z);w.rotation.y=Math.atan2(dx,dz);}
   else{w.rotation.y=Math.atan2(dx,dz);u.atkT+=dt;
-    if(u.atkT>=0.6){u.atkT=0;t.userData.hp-=COMBAT.wolfDmg*0.6;updateHealthBar(t);
+    if(u.atkT>=0.6){u.atkT=0;t.userData.hp-=COMBAT.wolfDmg*0.6;t.userData.combatT=8;updateHealthBar(t);
       if(t.userData.hp<=0)killVillager(t);}}
 }
+function tickRegen(dt){for(const v of G.villagers){const u=v.userData;
+  if(u.combatT>0)u.combatT-=dt;else if(u.hp<u.maxhp){u.hp=Math.min(u.maxhp,u.hp+COMBAT.regen*dt);updateHealthBar(v);}}}
 function spawnRaid(){
   const n=Math.min(6,2+G.age+(Math.random()*2|0));
   const F=FORESTS[(Math.random()*FORESTS.length)|0],a0=Math.random()*6.28;
@@ -1823,7 +1846,7 @@ function loop(){
     for(const d of G.deer)tickDeer(d,dt);
     for(const c of G.critters)tickCritter(c,dt);
     for(const w of [...G.wolves])tickWolf(w,dt);
-    tickTowers(dt);tickArrows(dt);
+    tickTowers(dt);tickArrows(dt);tickRegen(dt);
     for(const w of G.wolves)updateHealthBar(w);
     for(const v of G.villagers)updateHealthBar(v);
     raidTimer-=dt;if(raidTimer<=0){raidTimer=110+Math.random()*70;spawnRaid();}
@@ -1876,9 +1899,15 @@ $('bldUpgrade').addEventListener('click',()=>{if(G.selBuilding)startUpgrade(G.se
 $('bldSoldier').addEventListener('click',()=>{
   if(!G.bows){toast('Craft bows first — soldiers need weapons (⚒ Build ▸ 🏹 Craft Bows).');return;}
   if(pop()>=G.popCap){toast('Build or upgrade a house for more room.');return;}
-  if(!afford(SOLDIER_COST)){toast('Need 40 🍖 + 15 🪙 to arm a soldier.');return;}
+  if(!afford(SOLDIER_COST)){toast('Need 40 🍖 + 15 🪙 to arm a spearman.');return;}
   spend(SOLDIER_COST);const a=Math.random()*6.28;makeSoldier(Math.cos(a)*3.5,Math.sin(a)*3.5);
-  toast('⚔ A soldier takes up arms.');refreshHUD();updateBldCard();});
+  toast('⚔ A spearman takes up arms.');refreshHUD();updateBldCard();});
+$('bldArcher').addEventListener('click',()=>{
+  if(!G.bows){toast('Craft bows first (⚒ Build ▸ 🏹 Craft Bows).');return;}
+  if(pop()>=G.popCap){toast('Build or upgrade a house for more room.');return;}
+  if(!afford(ARCHER_COST)){toast('Need 35 🍖 + 18 🪙 to train an archer.');return;}
+  spend(ARCHER_COST);const a=Math.random()*6.28;makeArcher(Math.cos(a)*3.5,Math.sin(a)*3.5);
+  toast('🏹 An archer joins the watch.');refreshHUD();updateBldCard();});
 $('bldClose').addEventListener('click',hideBldCard);
 
 $('questHead').addEventListener('click',()=>$('quests').classList.toggle('collapsed'));
