@@ -1577,6 +1577,13 @@ $('tabRally').addEventListener('click',()=>{
   hint(G.rallyMode?'Tap a forest, rocks, berries or the pond to set a work rally — or open ground to muster':'');
 });
 
+function placeValid(type,x,z){
+  if(Math.hypot(x-POND.x,z-POND.z)<POND.r+1.8&&getH(x,z)<WATER_Y+0.5)return false;
+  if(type==='quarry'&&!quarryOK({x,z}))return false;
+  return true;
+}
+function tintGhost(bm,valid){bm.ghost.traverse(o=>{if(o.material&&o.material.emissive){
+  o.material.emissive.setHex(valid?0x000000:0x6a1414);o.material.emissiveIntensity=valid?0:1;}});}
 function enterBuild(type){
   if(!afford(COSTS[type])){toast('Not enough resources.');return;}
   cancelBuild();
@@ -1584,6 +1591,7 @@ function enterBuild(type){
   ghost.traverse(o=>{if(o.material){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=0.55;}});
   ghost.position.set(camTarget.x,getH(camTarget.x,camTarget.z),camTarget.z);
   scene.add(ghost);G.buildMode={type,ghost};
+  tintGhost(G.buildMode,placeValid(type,camTarget.x,camTarget.z));
   $('mainBar').classList.add('hide');$('confirmBar').classList.add('show');
   hint(type==='quarry'?'Quarries need rocky ground — place it in the eastern hills'
     :type==='lumber'?'Place the lumber camp near the forest for a short haul'
@@ -1655,7 +1663,8 @@ function handleTap(x,y){
       else{const p=h[0].point;setRally(p.x,p.z,null);toast('🚩 Rally point set — idle settlers muster here.');}}
     G.rallyMode=false;$('tabRally').classList.remove('active');hint('');return;
   }
-  if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length)G.buildMode.ghost.position.copy(hit[0].point);return;}
+  if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length){const pt=hit[0].point;
+    G.buildMode.ghost.position.copy(pt);tintGhost(G.buildMode,placeValid(G.buildMode.type,pt.x,pt.z));}return;}
   hideBldCard();   // any canvas tap dismisses the building card; a building tap re-opens it
   const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.buildings]);
   if(hits.length){const r=rootOf(hits[0].object);
