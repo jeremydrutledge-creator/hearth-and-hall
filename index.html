@@ -163,6 +163,10 @@
     <button class="opt" data-build="quarry">⛏ Quarry<small>60 🪵 · stone · rocky hills</small></button>
     <button class="opt" data-build="market">🏪 Market<small>70 🪵 20 🪨 · trade for gold</small></button>
   </div>
+  <div class="cat">Defense</div>
+  <div class="opts">
+    <button class="opt full" data-build="tower">🗼 Watch Tower<small>60 🪵 20 🪨 · shoots attackers</small></button>
+  </div>
   <div class="cat">Landmark</div>
   <div class="opts">
     <button class="opt full" data-build="hall">🏛 Great Hall<small>150 🪵 60 🪨 · found your realm</small></button>
@@ -264,13 +268,14 @@ const G={
   obstacles:[],
   bows:false, rally:null, rallyRes:null, rallyMode:false,
   rateFood:0, rateStone:0, rateWood:0, selBuilding:null,
+  towers:[], arrows:[],
   started:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
-const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5};
+const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5,tower:1.2};
 const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
-  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},hall:{wood:150,stone:60},settler:{food:50}};
-const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,hall:14};
+  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},tower:{wood:60,stone:20},hall:{wood:150,stone:60},settler:{food:50}};
+const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,tower:9,hall:14};
 const COMBAT={settlerHP:40,soldierHP:80,wolfHP:34,soldierDmg:14,wolfDmg:6,
   soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4};
 const SOLDIER_COST={food:40,gold:15};
@@ -1118,7 +1123,23 @@ function marketMesh(){const g=new THREE.Group();
   const flag=new THREE.Mesh(new THREE.PlaneGeometry(0.5,0.3),new THREE.MeshBasicMaterial({color:new THREE.Color(0xe8c422).convertSRGBToLinear(),side:THREE.DoubleSide}));
   flag.position.set(1.5,2.6,0.6);flag.name='flag';g.add(flag);
   return g;}
-const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,hall:hallMesh};
+function towerMesh(){const g=new THREE.Group();
+  const base=new THREE.Mesh(new THREE.BoxGeometry(1.5,0.8,1.5),bStone);base.position.y=0.4;g.add(base);
+  // four angled timber legs
+  for(const sx of[-1,1])for(const sz of[-1,1]){const leg=new THREE.Mesh(new THREE.CylinderGeometry(0.1,0.13,3.0,6),bPlankD);
+    leg.position.set(sx*0.55,1.9,sz*0.55);leg.rotation.x=-sz*0.05;leg.rotation.z=sx*0.05;g.add(leg);}
+  for(const sz of[-1,1]){const br=new THREE.Mesh(new THREE.BoxGeometry(1.3,0.08,0.08),bPlankD);br.position.set(0,1.7,sz*0.55);g.add(br);}
+  // platform + railing
+  const plat=new THREE.Mesh(new THREE.BoxGeometry(1.8,0.16,1.8),bPlank);plat.position.y=3.3;g.add(plat);
+  for(const sd of[[0,0.82,0],[0,-0.82,0],[0.82,0,1],[-0.82,0,1]]){const r=new THREE.Mesh(new THREE.BoxGeometry(1.7,0.07,0.07),bPlankD);r.position.set(sd[0],3.78,sd[1]);if(sd[2])r.rotation.y=Math.PI/2;g.add(r);}
+  for(const sx of[-1,1])for(const sz of[-1,1]){const po=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.05,0.55,5),bPlankD);po.position.set(sx*0.8,3.65,sz*0.8);g.add(po);}
+  // peaked roof on corner posts
+  for(const sx of[-1,1])for(const sz of[-1,1]){const rp=new THREE.Mesh(new THREE.CylinderGeometry(0.045,0.045,1.0,5),bPlankD);rp.position.set(sx*0.72,4.3,sz*0.72);g.add(rp);}
+  const roof=new THREE.Mesh(new THREE.ConeGeometry(1.5,1.0,4),bThatch);roof.position.y=5.1;roof.rotation.y=Math.PI/4;g.add(roof);
+  // a couple of arrows in a quiver on the rail
+  const quiver=new THREE.Mesh(new THREE.CylinderGeometry(0.12,0.1,0.4,7),bPlankD);quiver.position.set(0.6,3.6,0.6);g.add(quiver);
+  return g;}
+const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,tower:towerMesh,hall:hallMesh};
 
 // ===== optional glTF asset layer (see ASSETS.md) =====
 // Drop GLB files in /assets and list them here to replace the procedural meshes.
@@ -1278,7 +1299,7 @@ function refreshHUD(){
   updateSelCard();if(G.selBuilding)updateBldCard();
 }
 // ===== progression: ages + objective ladder (gated by gameplay, never money) =====
-const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,coop:2,quarry:2,market:2,pen:3,hall:4};
+const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,coop:2,quarry:2,market:2,tower:2,pen:3,hall:4};
 const AGES=[
   {name:'Camp',objs:[
     {id:'c_wood',label:'Stockpile 50 🪵 wood',check:()=>G.wood>=50},
@@ -1644,12 +1665,14 @@ function finishBuilding(s){
   if(t==='lumber'){G.lumbers++;s.userData.depot=true;G.depots.push(s);toast('🪓 Lumber camp — drop-off for nearby woodcutters.');}
   if(t==='quarry'){G.quarries++;toast('⛏ Quarry cut — stone flows in.');}
   if(t==='market'){toast('🏪 Market built — tap it to trade resources for 🪙 gold.');}
+  if(t==='tower'){s.userData.range=18;s.userData.dmg=11;s.userData.cd=0;s.userData.fireRate=1.3;G.towers.push(s);
+    toast('🗼 Watch tower raised — it looses arrows at attackers in range.');}
   if(t==='hall'){G.hall=true;G.popCap+=5;addSmoke(s,0.8,4.1,0.8);toast('🏛 The Great Hall stands — your realm is founded!');hint('Realm founded. The valley is yours to grow.');}
   refreshHUD();
 }
 
 // ===== building upgrades (resource + time gated, never money) =====
-const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',hall:'Great Hall'};
+const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',tower:'Watch Tower',hall:'Great Hall'};
 const RESICON={wood:'🪵',stone:'🪨',food:'🍖',gold:'🪙'};
 const UPGRADE={
   keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage',apply:()=>{G.popCap+=2;G.cap+=150;}},
@@ -1660,6 +1683,7 @@ const UPGRADE={
   pen:{max:3,cost:l=>({wood:45*l}),time:l=>5+l*2,gain:'+food',apply:()=>{G.rateFood+=0.5;}},
   quarry:{max:3,cost:l=>({wood:40*l,stone:20*l}),time:l=>6+l*2,gain:'+stone',apply:()=>{G.rateStone+=0.4;}},
   lumber:{max:3,cost:l=>({wood:40*l}),time:l=>6+l*2,gain:'+wood',apply:()=>{G.rateWood+=0.35;}},
+  tower:{max:3,cost:l=>({wood:40*l,stone:15*l}),time:l=>6+l*2,gain:'+range & damage',apply:b=>{b.userData.range+=4;b.userData.dmg+=5;}},
 };
 function costStr(c){return Object.keys(c).map(k=>c[k]+RESICON[k]).join(' ');}
 function startUpgrade(b){
@@ -1737,6 +1761,30 @@ function spawnRaid(){
   toast('🐺 A wolf pack attacks! Recruit ⚔ soldiers at the keep to defend.');
   try{if(navigator.vibrate)navigator.vibrate(150);}catch(e){}
 }
+// ===== watch-tower arrows =====
+const arrowShaft=wM(0x6b4a2a),arrowHead=wM(0xc8ccd2,0.4,0.6),arrowFletch=wM(0xe8e0d0);
+function makeArrowMesh(){const g=new THREE.Group();
+  const sh=new THREE.Mesh(new THREE.CylinderGeometry(0.022,0.022,0.5,5),arrowShaft);sh.rotation.x=Math.PI/2;g.add(sh);
+  const hd=new THREE.Mesh(new THREE.ConeGeometry(0.05,0.14,5),arrowHead);hd.rotation.x=Math.PI/2;hd.position.z=0.3;g.add(hd);
+  const fl=new THREE.Mesh(new THREE.PlaneGeometry(0.12,0.12),arrowFletch);fl.position.z=-0.24;g.add(fl);
+  g.traverse(o=>o.layers.set(VLAYER));return g;}
+function shootArrow(from,target,dmg){
+  const ar=makeArrowMesh();ar.position.copy(from);ar.userData={target,dmg};scene.add(ar);G.arrows.push(ar);}
+const _av=new THREE.Vector3();
+function tickArrows(dt){
+  for(let i=G.arrows.length-1;i>=0;i--){const ar=G.arrows[i],t=ar.userData.target;
+    if(!t||!t.parent||t.userData.hp<=0){scene.remove(ar);G.arrows.splice(i,1);continue;}
+    _av.set(t.position.x,t.position.y+0.6,t.position.z).sub(ar.position);const dist=_av.length();
+    if(dist<0.7){t.userData.hp-=ar.userData.dmg;updateHealthBar(t);if(t.userData.hp<=0)removeWolf(t);
+      scene.remove(ar);G.arrows.splice(i,1);continue;}
+    _av.multiplyScalar(1/dist);ar.position.addScaledVector(_av,20*dt);
+    ar.lookAt(t.position.x,t.position.y+0.6,t.position.z);}
+}
+function tickTowers(dt){
+  for(const tw of G.towers){const u=tw.userData;if(u.cd>0){u.cd-=dt;continue;}
+    const w=nearestWolf(tw.position,u.range);
+    if(w){u.cd=u.fireRate;shootArrow(_av.set(tw.position.x,tw.position.y+3.4,tw.position.z).clone(),w,u.dmg);}}
+}
 function tickDeer(d,dt){const u=d.userData;
   if(u.state==='flee'){let hunter=null,bd=1e9;
     for(const v of G.villagers)if(v.userData.prey===d){const dd=v.position.distanceTo(d.position);if(dd<bd){bd=dd;hunter=v;}}
@@ -1775,6 +1823,7 @@ function loop(){
     for(const d of G.deer)tickDeer(d,dt);
     for(const c of G.critters)tickCritter(c,dt);
     for(const w of [...G.wolves])tickWolf(w,dt);
+    tickTowers(dt);tickArrows(dt);
     for(const w of G.wolves)updateHealthBar(w);
     for(const v of G.villagers)updateHealthBar(v);
     raidTimer-=dt;if(raidTimer<=0){raidTimer=110+Math.random()*70;spawnRaid();}
