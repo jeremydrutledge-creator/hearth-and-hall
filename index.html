@@ -312,7 +312,7 @@ const G={
   bows:false, rally:null, rallyRes:null, rallyMode:false,
   rateFood:0, rateStone:0, rateWood:0, selBuilding:null,
   towers:[], arrows:[], walls:[], shrines:[],
-  tech:{}, gatherMult:1, foodMult:1, towerDmgMult:1, towerRangeMult:1,
+  tech:{}, gatherMult:1, foodMult:1, towerDmgMult:1, towerRangeMult:1, moveMult:1, huntMult:1,
   stats:{wolves:0,bandits:0,peakPop:1},
   started:false, over:false, fullWarn:0
 };
@@ -1668,21 +1668,42 @@ document.querySelectorAll('#marketMenu [data-sell]').forEach(b=>b.addEventListen
 document.querySelectorAll('#marketMenu [data-buy]').forEach(b=>b.addEventListener('click',()=>doBuy(b.dataset.buy)));
 // ===== research / tech (permanent, gameplay-gated upgrades) =====
 const TECHS=[
-  {id:'tools',name:'Sharper Tools',desc:'+30% gather speed',cost:{wood:60,stone:20},apply:()=>{G.gatherMult*=1.3;}},
-  {id:'wains',name:'Wains',desc:'+4 carry per trip',cost:{wood:50,gold:15},apply:()=>{CARRY+=4;}},
-  {id:'granary',name:'Granary',desc:'+50% farm/coop/pen food',cost:{wood:40,food:30},apply:()=>{G.foodMult*=1.5;}},
-  {id:'forging',name:'Forging',desc:'+40% spearman damage',cost:{wood:40,stone:40,gold:20},apply:()=>{COMBAT.soldierDmg=Math.round(COMBAT.soldierDmg*1.4);}},
-  {id:'fletching',name:'Fletching',desc:'+40% archer & tower arrows',cost:{wood:50,gold:25},apply:()=>{COMBAT.archerDmg=Math.round(COMBAT.archerDmg*1.4);G.towerDmgMult*=1.4;for(const t of G.towers)t.userData.dmg=Math.round(t.userData.dmg*1.4);}},
-  {id:'masonry',name:'Masonry',desc:'+60% palisade HP, +25% tower range',cost:{wood:30,stone:60},apply:()=>{COMBAT.wallHP=Math.round(COMBAT.wallHP*1.6);G.towerRangeMult*=1.25;for(const t of G.towers)t.userData.range*=1.25;}},
+  // — Economy — (tiered chains: each tier needs the one before it)
+  {id:'tools',cat:'Economy',name:'Sharper Tools',desc:'+30% gather speed',cost:{wood:60,stone:20},apply:()=>{G.gatherMult*=1.3;}},
+  {id:'tools2',cat:'Economy',name:'Tempered Tools',desc:'+30% gather speed',req:'tools',cost:{wood:120,stone:70,gold:25},apply:()=>{G.gatherMult*=1.3;}},
+  {id:'wains',cat:'Economy',name:'Wains',desc:'+4 carry per trip',cost:{wood:50,gold:15},apply:()=>{CARRY+=4;}},
+  {id:'wains2',cat:'Economy',name:'Wagons',desc:'+5 carry per trip',req:'wains',cost:{wood:100,stone:50,gold:35},apply:()=>{CARRY+=5;}},
+  {id:'granary',cat:'Economy',name:'Granary',desc:'+50% farm/coop/pen food',cost:{wood:40,food:30},apply:()=>{G.foodMult*=1.5;}},
+  {id:'silos',cat:'Economy',name:'Silos',desc:'+35% food production',req:'granary',cost:{wood:90,stone:60,food:60},apply:()=>{G.foodMult*=1.35;}},
+  {id:'coffers',cat:'Economy',name:'Coffers',desc:'+150 storage capacity',cost:{wood:50,stone:50},apply:()=>{G.cap+=150;refreshHUD();}},
+  {id:'vaults',cat:'Economy',name:'Stone Vaults',desc:'+250 storage capacity',req:'coffers',cost:{wood:60,stone:120},apply:()=>{G.cap+=250;refreshHUD();}},
+  {id:'roads',cat:'Economy',name:'Roads',desc:'+15% settler move speed',cost:{wood:60,stone:40},apply:()=>{G.moveMult*=1.15;}},
+  {id:'trapping',cat:'Economy',name:"Trapper's Craft",desc:'+50% meat from hunting',cost:{wood:40,gold:20},apply:()=>{G.huntMult*=1.5;}},
+  // — Military —
+  {id:'forging',cat:'Military',name:'Forging',desc:'+40% spearman damage',cost:{wood:40,stone:40,gold:20},apply:()=>{COMBAT.soldierDmg=Math.round(COMBAT.soldierDmg*1.4);}},
+  {id:'steel',cat:'Military',name:'Steelworking',desc:'+35% spearman damage',req:'forging',cost:{wood:60,stone:80,gold:45},apply:()=>{COMBAT.soldierDmg=Math.round(COMBAT.soldierDmg*1.35);}},
+  {id:'fletching',cat:'Military',name:'Fletching',desc:'+40% archer & tower arrows',cost:{wood:50,gold:25},apply:()=>{COMBAT.archerDmg=Math.round(COMBAT.archerDmg*1.4);G.towerDmgMult*=1.4;for(const t of G.towers)t.userData.dmg=Math.round(t.userData.dmg*1.4);}},
+  {id:'fletching2',cat:'Military',name:'Bodkin Arrows',desc:'+35% archer & tower arrows',req:'fletching',cost:{wood:70,stone:30,gold:50},apply:()=>{COMBAT.archerDmg=Math.round(COMBAT.archerDmg*1.35);G.towerDmgMult*=1.35;for(const t of G.towers)t.userData.dmg=Math.round(t.userData.dmg*1.35);}},
+  {id:'masonry',cat:'Military',name:'Masonry',desc:'+60% palisade HP, +25% tower range',cost:{wood:30,stone:60},apply:()=>{COMBAT.wallHP=Math.round(COMBAT.wallHP*1.6);G.towerRangeMult*=1.25;for(const t of G.towers)t.userData.range*=1.25;}},
+  {id:'fortify',cat:'Military',name:'Fortification',desc:'+50% palisade HP, +15% tower range',req:'masonry',cost:{wood:50,stone:120},apply:()=>{COMBAT.wallHP=Math.round(COMBAT.wallHP*1.5);G.towerRangeMult*=1.15;for(const t of G.towers)t.userData.range*=1.15;}},
 ];
+function techById(id){return TECHS.find(t=>t.id===id);}
 function openResearch(){closeMenus();hideBldCard();refreshResearch();$('researchMenu').classList.add('show');}
-function refreshResearch(){const o=$('researchOpts');o.innerHTML='';
-  for(const tc of TECHS){const b=document.createElement('button');b.className='opt';
-    const done=!!G.tech[tc.id];
-    b.innerHTML=tc.name+'<small>'+(done?'✓ researched':tc.desc+' · '+costStr(tc.cost))+'</small>';
-    if(done){b.disabled=true;b.classList.add('locked');}else b.disabled=!afford(tc.cost);
+function refreshResearch(){const o=$('researchOpts');o.innerHTML='';let lastCat=null;
+  for(const tc of TECHS){
+    if(tc.cat&&tc.cat!==lastCat){lastCat=tc.cat;const h=document.createElement('div');h.className='cat';
+      h.textContent=(tc.cat==='Military'?'⚔ ':'🌾 ')+tc.cat;o.appendChild(h);}
+    const b=document.createElement('button');b.className='opt';
+    const done=!!G.tech[tc.id];const prereqMet=!tc.req||G.tech[tc.req];
+    let sub;
+    if(done)sub='✓ researched';
+    else if(!prereqMet)sub='🔒 needs '+(techById(tc.req)?techById(tc.req).name:tc.req);
+    else sub=tc.desc+' · '+costStr(tc.cost);
+    b.innerHTML=tc.name+'<small>'+sub+'</small>';
+    if(done||!prereqMet){b.disabled=true;b.classList.add('locked');}else b.disabled=!afford(tc.cost);
     b.addEventListener('click',()=>research(tc.id));o.appendChild(b);}}
-function research(id){const tc=TECHS.find(t=>t.id===id);if(!tc||G.tech[id])return;
+function research(id){const tc=techById(id);if(!tc||G.tech[id])return;
+  if(tc.req&&!G.tech[tc.req]){toast('🔒 Research '+(techById(tc.req)?techById(tc.req).name:tc.req)+' first.');return;}
   if(!afford(tc.cost)){toast('Not enough resources to research.');return;}
   spend(tc.cost);G.tech[id]=true;tc.apply();toast('📜 Researched: '+tc.name+' — '+tc.desc);refreshResearch();refreshHUD();}
 $('tabBuild').addEventListener('click',()=>{
@@ -1827,6 +1848,7 @@ function handleTap(x,y){
 // ===== simulation =====
 const clock=new THREE.Clock();
 function walk(g,dir,sp,dt){
+  if(g.userData.kind==='villager')sp*=G.moveMult;   // Roads research speeds settlers (not wildlife)
   let nx=g.position.x+dir.x*sp*dt,nz=g.position.z+dir.z*sp*dt;
   if(g.userData.kind==='villager'){
     for(const o of G.obstacles){const dx=nx-o.x,dz=nz-o.z,d=Math.hypot(dx,dz);
@@ -1920,7 +1942,7 @@ function tickVillager(v,dt){
       const pr=u.prey;if(!pr||!pr.parent){u.phase='idle';u.prey=null;break;}
       const d=new THREE.Vector3().subVectors(pr.position,v.position);d.y=0;const dist=d.length();
       if(dist<1.1){const pu=pr.userData;scene.remove(pr);const i=G.deer.indexOf(pr);if(i>=0)G.deer.splice(i,1);
-        u.carrying=Math.max(u.carrying,pu.meat||10);u.carryRes='food';setLoad(u);u.prey=null;  // a carcass is one big haul (not capped by CARRY)
+        u.carrying=Math.max(u.carrying,Math.round((pu.meat||10)*G.huntMult));u.carryRes='food';setLoad(u);u.prey=null;  // a carcass is one big haul (not capped by CARRY)
         toast((pu.emoji||'🦌')+' '+(pu.name||'Meat')+' taken — hauling it home.');u.depot=nearestDepot(v);u.phase='toDepot';
         const re=pu.kind==='boar'?spawnBoar:pu.kind==='rabbit'?spawnRabbit:spawnDeer;
         setTimeout(re,28000+Math.random()*20000);break;}
@@ -2282,7 +2304,7 @@ function serialize(){
   return {v:2,
     res:{wood:G.wood,food:G.food,stone:G.stone,gold:G.gold,stored:G.stored,cap:G.cap},
     popCap:G.popCap,age:G.age,objDone:G.objDone,victory:G.victory,bows:G.bows,tech:G.tech,
-    mult:{gather:G.gatherMult,food:G.foodMult,towerDmg:G.towerDmgMult,towerRange:G.towerRangeMult},
+    mult:{gather:G.gatherMult,food:G.foodMult,towerDmg:G.towerDmgMult,towerRange:G.towerRangeMult,move:G.moveMult,hunt:G.huntMult},
     rate:{food:G.rateFood,stone:G.rateStone,wood:G.rateWood},
     counts:{farms:G.farms,coops:G.coops,pens:G.pens,quarries:G.quarries,lumbers:G.lumbers,houses:G.houses,stores:G.stores,hall:G.hall},
     combat:{soldierDmg:COMBAT.soldierDmg,archerDmg:COMBAT.archerDmg,wallHP:COMBAT.wallHP},
@@ -2328,6 +2350,7 @@ function restoreGame(s){
   Object.assign(G,{wood:s.res.wood,food:s.res.food,stone:s.res.stone,gold:s.res.gold,stored:s.res.stored,cap:s.res.cap,
     popCap:s.popCap,age:s.age,objDone:s.objDone||{},victory:!!s.victory,over:false,bows:!!s.bows,tech:s.tech||{},
     gatherMult:s.mult.gather,foodMult:s.mult.food,towerDmgMult:s.mult.towerDmg,towerRangeMult:s.mult.towerRange,
+    moveMult:s.mult.move||1,huntMult:s.mult.hunt||1,
     rateFood:s.rate.food,rateStone:s.rate.stone,rateWood:s.rate.wood,
     farms:s.counts.farms,coops:s.counts.coops,pens:s.counts.pens,quarries:s.counts.quarries,lumbers:s.counts.lumbers,houses:s.counts.houses,stores:s.counts.stores,hall:s.counts.hall});
   COMBAT.soldierDmg=s.combat.soldierDmg;COMBAT.archerDmg=s.combat.archerDmg;COMBAT.wallHP=s.combat.wallHP;

@@ -183,6 +183,14 @@ Age of Empires-style game."
     circling the origin; clouds (9→16) spread/​wrap across the full ±190 sky.
     New **jumping fish**: a pool of 5 fish arc out of random lakes on a timer with
     expanding splash rings (`tickFishJumps`, `splashAt`) — pooled, self-draining.
+50. **Deeper research tree** — TECHS grown 6→16 across two categories (Economy /
+    Military) with **tiered chains** via a `req` prereq (e.g. Sharper→Tempered Tools,
+    Wains→Wagons, Granary→Silos, Coffers→Vaults, Forging→Steel, Fletching→Bodkin,
+    Masonry→Fortification). New levers: storage cap (`G.cap`), settler speed
+    (`G.moveMult`, applied in `walk` for villagers only), hunt yield (`G.huntMult`,
+    applied to carcass meat). `refreshResearch` groups by category, shows 🔒-with-
+    reason for unmet prereqs and ✓ for done; `research()` enforces the prereq.
+    move/hunt mults added to serialize/restore. All gated by resources only.
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is
