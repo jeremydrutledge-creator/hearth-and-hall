@@ -254,6 +254,7 @@
   <p><b>Tap</b> a settler, then a tree, rock or berry — or use <b>⚑ Assign</b> for a standing job. <b>⚒ Build</b> opens the menu; craft <b>🏹 bows</b> there before you can hunt.</p>
   <p>Set a <b>🚩 Rally</b> on a forest or rocks and idle &amp; new settlers gather there automatically.</p>
   <p><b>Drag</b> to roam · <b>pinch</b> to zoom.</p>
+  <button id="continueBtn" style="display:none">Continue</button>
   <button id="startBtn">Begin</button>
 </div></div>
 
@@ -984,7 +985,8 @@ function killVillager(v){const i=G.villagers.indexOf(v);if(i>=0)G.villagers.spli
   toast(v.userData.soldier?'⚔ A soldier has fallen!':'💀 A settler was lost to wolves!');refreshHUD();
   if(G.started&&!G.over&&G.villagers.length===0)
     showEnd('Your settlement has fallen','The last of your people are gone, and the wild valley reclaims the ruins.');}
-function showEnd(title,msg){G.over=true;$('endTitle').textContent=title;$('endMsg').textContent=msg;$('endScreen').classList.add('show');}
+function showEnd(title,msg){G.over=true;try{localStorage.removeItem('hh_save');}catch(e){}
+  $('endTitle').textContent=title;$('endMsg').textContent=msg;$('endScreen').classList.add('show');}
 
 // ===== buildings =====
 // shared building palette + a proper gable (ridge) roof helper
@@ -1958,7 +1960,7 @@ function tickCritter(c,dt){const u=c.userData;u.peckT+=dt;
 // Simpler: tapping keep recruits if affordable.
 keep.userData.recruit=true;
 
-let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130,mmTimer=0,gameSpeed=1,foodDrainAcc=0;
+let trickleF=0,trickleS=0,trickleW=0,qTimer=0,raidTimer=130,mmTimer=0,gameSpeed=1,foodDrainAcc=0,autosaveTimer=15;
 function loop(){
   requestAnimationFrame(loop);
   const dt=Math.min(0.05,clock.getDelta()),t=clock.elapsedTime;
@@ -2001,6 +2003,7 @@ function loop(){
     for(let i=0;i<pa.count;i++){pa.setY(i,bs[i*3+1]+Math.sin(t*0.7+i*1.3)*0.35);}
     pa.needsUpdate=true;pollen.rotation.y=t*0.006;}
   updateDay(t);
+  if(G.started&&!G.over){autosaveTimer-=dt;if(autosaveTimer<=0){autosaveTimer=15;saveGame();}}
   // pass 1: the whole world (layer 0). pass 2: settlers (layer 1) on a cleared
   // depth buffer so they're drawn on top and can never hide behind a building.
   renderer.autoClear=true;camera.layers.set(0);
@@ -2036,9 +2039,84 @@ $('bldClose').addEventListener('click',hideBldCard);
 
 $('questHead').addEventListener('click',()=>$('quests').classList.toggle('collapsed'));
 $('endBtn').addEventListener('click',()=>location.reload());
+
+// ===== save / load (localStorage) =====
+const SAVE_KEY='hh_save';
+function serialize(){
+  return {v:1,
+    res:{wood:G.wood,food:G.food,stone:G.stone,gold:G.gold,stored:G.stored,cap:G.cap},
+    popCap:G.popCap,age:G.age,objDone:G.objDone,victory:G.victory,bows:G.bows,tech:G.tech,
+    mult:{gather:G.gatherMult,food:G.foodMult,towerDmg:G.towerDmgMult,towerRange:G.towerRangeMult},
+    rate:{food:G.rateFood,stone:G.rateStone,wood:G.rateWood},
+    counts:{farms:G.farms,coops:G.coops,pens:G.pens,quarries:G.quarries,lumbers:G.lumbers,houses:G.houses,stores:G.stores,hall:G.hall},
+    combat:{soldierDmg:COMBAT.soldierDmg,archerDmg:COMBAT.archerDmg,wallHP:COMBAT.wallHP},
+    carry:CARRY,raidTimer:raidTimer,
+    rally:G.rally?{x:G.rally.x,z:G.rally.z,res:G.rallyRes}:null,
+    keep:{level:keep.userData.level||1,range:keep.userData.range,dmg:keep.userData.dmg},
+    nodes:G.nodes.map(n=>({x:+n.position.x.toFixed(2),z:+n.position.z.toFixed(2),res:n.userData.res,amount:n.userData.amount})),
+    buildings:G.buildings.filter(b=>b!==keep&&b.userData.kind==='building').map(b=>({type:b.userData.type,x:+b.position.x.toFixed(2),z:+b.position.z.toFixed(2),
+      level:b.userData.level||1,hp:b.userData.hp,range:b.userData.range,dmg:b.userData.dmg,fireRate:b.userData.fireRate,sx:b.scale.x,sy:b.scale.y,sz:b.scale.z})),
+    villagers:G.villagers.map(v=>({x:+v.position.x.toFixed(2),z:+v.position.z.toFixed(2),soldier:!!v.userData.soldier,ranged:!!v.userData.ranged,hp:v.userData.hp})),
+  };
+}
+function saveGame(){if(!G.started||G.over)return;try{localStorage.setItem(SAVE_KEY,JSON.stringify(serialize()));}catch(e){}}
+function loadRaw(){try{const s=localStorage.getItem(SAVE_KEY);if(!s)return null;const o=JSON.parse(s);return(o&&o.v===1&&o.res&&o.nodes&&o.buildings)?o:null;}catch(e){return null;}}
+function placeSaved(b){
+  const s=getMesh(b.type);s.position.set(b.x,getH(b.x,b.z),b.z);
+  if(b.sx)s.scale.set(b.sx,b.sy,b.sz);
+  s.userData={kind:'building',type:b.type,level:b.level||1};
+  shadows(s);scene.add(s);G.buildings.push(s);
+  if(OBS_R[b.type]){const o={x:b.x,z:b.z,r:OBS_R[b.type]};G.obstacles.push(o);s.userData.obs=o;}
+  const t=b.type;
+  if(t==='storehouse'||t==='lumber'){s.userData.depot=true;G.depots.push(s);}
+  if(t==='coop'){makeChicken(s);makeChicken(s);makeChicken(s);}
+  if(t==='pen'){makeSheep(s);makeSheep(s);}
+  if(t==='house')addSmoke(s,0.55,2.4,-0.5);
+  if(t==='hall')addSmoke(s,0.8,4.1,0.8);
+  if(t==='tower'){s.userData.range=b.range;s.userData.dmg=b.dmg;s.userData.cd=0;s.userData.fireRate=b.fireRate;G.towers.push(s);}
+  if(t==='wall'){s.userData.hp=b.hp!=null?b.hp:COMBAT.wallHP;s.userData.maxhp=COMBAT.wallHP;G.walls.push(s);if(s.userData.obs)s.userData.obs.wall=s;addHealthBar(s,2.5);}
+  if(t==='shrine')G.shrines.push(s);
+}
+function restoreGame(s){
+  // clear procedurally-generated dynamic objects
+  for(const n of G.nodes)scene.remove(n);G.nodes.length=0;swayers.length=0;
+  for(const b of G.buildings)if(b!==keep)scene.remove(b);
+  for(const v of G.villagers)scene.remove(v);G.villagers.length=0;
+  for(const w of G.wolves)scene.remove(w);G.wolves.length=0;
+  for(const a of G.arrows)scene.remove(a);G.arrows.length=0;
+  G.buildings.length=0;G.buildings.push(keep);G.depots.length=0;G.depots.push(keep);
+  G.towers.length=0;G.towers.push(keep);G.walls.length=0;G.shrines.length=0;
+  G.obstacles.length=0;G.obstacles.push(keep.userData.obs);
+  // restore scalars
+  Object.assign(G,{wood:s.res.wood,food:s.res.food,stone:s.res.stone,gold:s.res.gold,stored:s.res.stored,cap:s.res.cap,
+    popCap:s.popCap,age:s.age,objDone:s.objDone||{},victory:!!s.victory,over:false,bows:!!s.bows,tech:s.tech||{},
+    gatherMult:s.mult.gather,foodMult:s.mult.food,towerDmgMult:s.mult.towerDmg,towerRangeMult:s.mult.towerRange,
+    rateFood:s.rate.food,rateStone:s.rate.stone,rateWood:s.rate.wood,
+    farms:s.counts.farms,coops:s.counts.coops,pens:s.counts.pens,quarries:s.counts.quarries,lumbers:s.counts.lumbers,houses:s.counts.houses,stores:s.counts.stores,hall:s.counts.hall});
+  COMBAT.soldierDmg=s.combat.soldierDmg;COMBAT.archerDmg=s.combat.archerDmg;COMBAT.wallHP=s.combat.wallHP;
+  CARRY=s.carry;raidTimer=s.raidTimer;
+  keep.userData.level=s.keep.level;keep.userData.range=s.keep.range;keep.userData.dmg=s.keep.dmg;
+  if(s.rally)setRally(s.rally.x,s.rally.z,s.rally.res);else{G.rally=null;G.rallyRes=null;rallyFlag.visible=false;}
+  // rebuild nodes
+  for(const n of s.nodes){if(n.res==='wood')makeTree(n.x,n.z);else if(n.res==='stone')makeRock(n.x,n.z,n.amount>90);
+    else if(n.res==='food')makeBush(n.x,n.z);else if(n.res==='gold')makeGold(n.x,n.z);else continue;
+    G.nodes[G.nodes.length-1].userData.amount=n.amount;}
+  // rebuild buildings + villagers
+  for(const b of s.buildings)placeSaved(b);
+  for(const v of s.villagers){const g=v.soldier?(v.ranged?makeArcher(v.x,v.z):makeSoldier(v.x,v.z)):makeSettler(v.x,v.z);g.userData.hp=v.hp;}
+  refreshHUD();renderQuests();
+}
+function startUI(){$('quests').classList.add('show');$('minimap').classList.add('show');$('speedBtn').classList.add('show');renderQuests();}
+const savedGame=loadRaw();
+if(savedGame)$('continueBtn').style.display='';
+$('continueBtn').addEventListener('click',()=>{
+  let ok=true;try{restoreGame(savedGame);}catch(e){console.warn('load failed, starting fresh',e);localStorage.removeItem(SAVE_KEY);ok=false;}
+  document.getElementById('intro').style.display='none';G.started=true;startUI();refreshHUD();
+  hint(ok?'Welcome back to your settlement.':'Save was unreadable — starting a new game.');});
 $('startBtn').addEventListener('click',()=>{
+  try{localStorage.removeItem(SAVE_KEY);}catch(e){}
   document.getElementById('intro').style.display='none';G.started=true;refreshHUD();
-  $('quests').classList.add('show');$('minimap').classList.add('show');$('speedBtn').classList.add('show');renderQuests();
+  startUI();
   hint('Tap your settler · grow your Camp by completing the objectives at left');});
 const SPEEDS=[1,2,0],SPEEDLBL=['▶ 1×','⏩ 2×','⏸ Paused'];let speedIdx=0;
 $('speedBtn').addEventListener('click',()=>{speedIdx=(speedIdx+1)%SPEEDS.length;gameSpeed=SPEEDS[speedIdx];
