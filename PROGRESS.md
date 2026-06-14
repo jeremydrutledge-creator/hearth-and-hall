@@ -104,6 +104,14 @@ Age of Empires-style game."
     building (marketMesh, age 2, COSTS/BTIME/OBS_R/MESH) → tapping it opens `#marketMenu`
     (`openMarket`); `SELL`/`BUY` tables + `doSell`/`doBuy` trade resources↔gold at a
     spread. Verified: 4 ore nodes, sell/buy math, gold-mining routing.
+29. **Military / defense (the stakes)** — `COMBAT` consts; villagers have hp + a
+    billboarded health bar (`addHealthBar`/`updateHealthBar`, counter-rotated child).
+    **Wolves** (`makeWolf`/`G.wolves`/`tickWolf`) raid from forest edges on `raidTimer`
+    (`spawnRaid`, pack grows with age), chase nearest villager, attack → `killVillager`
+    (pop loss). **Soldiers** (`makeSoldier`=armed settler spear+helm, `u.soldier`,
+    `tickSoldier`) recruited from keep card (⚔ Soldier, needs bows, costs food+gold),
+    auto-seek+kill wolves (`removeWolf`) then muster at rally. Combat units on layer 1.
+    Verified: soldier↔wolf trade + both death paths.
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
