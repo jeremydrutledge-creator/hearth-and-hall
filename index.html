@@ -165,7 +165,8 @@
   </div>
   <div class="cat">Defense</div>
   <div class="opts">
-    <button class="opt full" data-build="tower">🗼 Watch Tower<small>60 🪵 20 🪨 · shoots attackers</small></button>
+    <button class="opt" data-build="tower">🗼 Watch Tower<small>60 🪵 20 🪨 · shoots attackers</small></button>
+    <button class="opt" data-build="wall">🧱 Palisade<small>30 🪵 · blocks attackers</small></button>
   </div>
   <div class="cat">Landmark</div>
   <div class="opts">
@@ -268,17 +269,17 @@ const G={
   obstacles:[],
   bows:false, rally:null, rallyRes:null, rallyMode:false,
   rateFood:0, rateStone:0, rateWood:0, selBuilding:null,
-  towers:[], arrows:[],
+  towers:[], arrows:[], walls:[],
   started:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
-const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5,tower:1.2};
+const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5,tower:1.2,wall:1.2};
 const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
-  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},tower:{wood:60,stone:20},hall:{wood:150,stone:60},settler:{food:50}};
-const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,tower:9,hall:14};
+  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},tower:{wood:60,stone:20},wall:{wood:30},hall:{wood:150,stone:60},settler:{food:50}};
+const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,tower:9,wall:4,hall:14};
 const COMBAT={settlerHP:40,soldierHP:80,wolfHP:34,soldierDmg:14,wolfDmg:6,
   soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4,
-  archerHP:52,archerDmg:9,archerRange:13,archerKite:5,archerFireRate:1.1,regen:3};
+  archerHP:52,archerDmg:9,archerRange:13,archerKite:5,archerFireRate:1.1,regen:3,wallHP:120};
 const SOLDIER_COST={food:40,gold:15},ARCHER_COST={food:35,gold:18};
 const CARRY=12;
 
@@ -1150,7 +1151,15 @@ function towerMesh(){const g=new THREE.Group();
   // a couple of arrows in a quiver on the rail
   const quiver=new THREE.Mesh(new THREE.CylinderGeometry(0.12,0.1,0.4,7),bPlankD);quiver.position.set(0.6,3.6,0.6);g.add(quiver);
   return g;}
-const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,tower:towerMesh,hall:hallMesh};
+function wallMesh(){const g=new THREE.Group();
+  const W=2.4;
+  const rail=new THREE.Mesh(new THREE.BoxGeometry(W,0.16,0.45),bPlankD);rail.position.y=1.05;g.add(rail);
+  const rail2=rail.clone();rail2.position.y=0.55;g.add(rail2);
+  const n=6;for(let i=0;i<n;i++){const x=-W/2+0.2+i*((W-0.4)/(n-1));
+    const log=new THREE.Mesh(new THREE.CylinderGeometry(0.16,0.18,1.7,6),bPlank);log.position.set(x,0.85,0);g.add(log);
+    const tip=new THREE.Mesh(new THREE.ConeGeometry(0.18,0.32,6),bPlankD);tip.position.set(x,1.82,0);g.add(tip);}
+  return g;}
+const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,tower:towerMesh,wall:wallMesh,hall:hallMesh};
 
 // ===== optional glTF asset layer (see ASSETS.md) =====
 // Drop GLB files in /assets and list them here to replace the procedural meshes.
@@ -1310,7 +1319,7 @@ function refreshHUD(){
   updateSelCard();if(G.selBuilding)updateBldCard();
 }
 // ===== progression: ages + objective ladder (gated by gameplay, never money) =====
-const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,coop:2,quarry:2,market:2,tower:2,pen:3,hall:4};
+const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,wall:1,coop:2,quarry:2,market:2,tower:2,pen:3,hall:4};
 const AGES=[
   {name:'Camp',objs:[
     {id:'c_wood',label:'Stockpile 50 🪵 wood',check:()=>G.wood>=50},
@@ -1678,12 +1687,14 @@ function finishBuilding(s){
   if(t==='market'){toast('🏪 Market built — tap it to trade resources for 🪙 gold.');}
   if(t==='tower'){s.userData.range=18;s.userData.dmg=11;s.userData.cd=0;s.userData.fireRate=1.3;G.towers.push(s);
     toast('🗼 Watch tower raised — it looses arrows at attackers in range.');}
+  if(t==='wall'){s.userData.hp=COMBAT.wallHP;s.userData.maxhp=COMBAT.wallHP;G.walls.push(s);
+    if(s.userData.obs)s.userData.obs.wall=s;addHealthBar(s,2.5);toast('🧱 Palisade raised — wolves must break through it.');}
   if(t==='hall'){G.hall=true;G.popCap+=5;addSmoke(s,0.8,4.1,0.8);toast('🏛 The Great Hall stands — your realm is founded!');hint('Realm founded. The valley is yours to grow.');}
   refreshHUD();
 }
 
 // ===== building upgrades (resource + time gated, never money) =====
-const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',tower:'Watch Tower',hall:'Great Hall'};
+const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',tower:'Watch Tower',wall:'Palisade',hall:'Great Hall'};
 const RESICON={wood:'🪵',stone:'🪨',food:'🍖',gold:'🪙'};
 const UPGRADE={
   keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage',apply:()=>{G.popCap+=2;G.cap+=150;}},
@@ -1763,13 +1774,24 @@ function tickSoldier(v,dt){const u=v.userData;animRest(u);
     if(d>2.5){_cv.set(dx,0,dz).normalize();walk(v,_cv,COMBAT.soldierSpeed*0.8,dt);v.rotation.y=Math.atan2(dx,dz);animWalk(u,dt);}
     else{u.armR.rotation.x*=0.8;}}
 }
+function removeWall(s){let i=G.walls.indexOf(s);if(i>=0)G.walls.splice(i,1);
+  i=G.buildings.indexOf(s);if(i>=0)G.buildings.splice(i,1);
+  if(s.userData.obs){const j=G.obstacles.indexOf(s.userData.obs);if(j>=0)G.obstacles.splice(j,1);}
+  scene.remove(s);toast('🧱 A palisade was torn down!');}
+// move a wolf toward (nx,nz) but let palisades block it — when blocked, gnaw the wall
+function wolfStep(w,dx,dz,sp,dt){const u=w.userData;_cv.set(dx,0,dz);const L=_cv.length()||1;_cv.multiplyScalar(1/L);
+  let nx=w.position.x+_cv.x*sp*dt,nz=w.position.z+_cv.z*sp*dt,wall=null;
+  for(const o of G.obstacles){if(!o.wall)continue;const ox=nx-o.x,oz=nz-o.z,od=Math.hypot(ox,oz);
+    if(od<o.r){wall=o.wall;const cx=w.position.x-o.x,cz=w.position.z-o.z,cd=Math.hypot(cx,cz)||1;nx=o.x+cx/cd*o.r;nz=o.z+cz/cd*o.r;break;}}
+  w.position.set(nx,getH(nx,nz),nz);w.rotation.y=Math.atan2(dx,dz);
+  if(wall){u.atkT+=dt;if(u.atkT>=0.6){u.atkT=0;wall.userData.hp-=COMBAT.wolfDmg*1.2;updateHealthBar(wall);if(wall.userData.hp<=0)removeWall(wall);}}
+  return !!wall;}
 function tickWolf(w,dt){const u=w.userData;
   if(!u.target||!u.target.parent||u.target.userData.hp<=0)u.target=nearestPrey(w.position);
   const t=u.target;
-  if(!t){const dx=-w.position.x,dz=-w.position.z,d=Math.hypot(dx,dz);
-    if(d>3){_cv.set(dx,0,dz).normalize();w.position.addScaledVector(_cv,COMBAT.wolfSpeed*0.6*dt);w.position.y=getH(w.position.x,w.position.z);w.rotation.y=Math.atan2(dx,dz);}return;}
+  if(!t){if(Math.hypot(w.position.x,w.position.z)>3)wolfStep(w,-w.position.x,-w.position.z,COMBAT.wolfSpeed*0.6,dt);return;}
   const dx=t.position.x-w.position.x,dz=t.position.z-w.position.z,d=Math.hypot(dx,dz);
-  if(d>COMBAT.wolfReach){_cv.set(dx,0,dz).normalize();w.position.addScaledVector(_cv,COMBAT.wolfSpeed*dt);w.position.y=getH(w.position.x,w.position.z);w.rotation.y=Math.atan2(dx,dz);}
+  if(d>COMBAT.wolfReach){wolfStep(w,dx,dz,COMBAT.wolfSpeed,dt);}
   else{w.rotation.y=Math.atan2(dx,dz);u.atkT+=dt;
     if(u.atkT>=0.6){u.atkT=0;t.userData.hp-=COMBAT.wolfDmg*0.6;t.userData.combatT=8;updateHealthBar(t);
       if(t.userData.hp<=0)killVillager(t);}}
@@ -1849,6 +1871,7 @@ function loop(){
     tickTowers(dt);tickArrows(dt);tickRegen(dt);
     for(const w of G.wolves)updateHealthBar(w);
     for(const v of G.villagers)updateHealthBar(v);
+    for(const s of G.walls)updateHealthBar(s);
     raidTimer-=dt;if(raidTimer<=0){raidTimer=110+Math.random()*70;spawnRaid();}
     const fr=foodRate(),sr=stoneRate(),wr=woodRate();
     if(fr>0){trickleF+=dt*fr;if(trickleF>=1){addStored('food',Math.floor(trickleF));trickleF%=1;refreshHUD();}}
