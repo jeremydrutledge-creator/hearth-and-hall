@@ -112,6 +112,11 @@ Age of Empires-style game."
     `tickSoldier`) recruited from keep card (⚔ Soldier, needs bows, costs food+gold),
     auto-seek+kill wolves (`removeWolf`) then muster at rally. Combat units on layer 1.
     Verified: soldier↔wolf trade + both death paths.
+30. **Watch Tower** — `towerMesh`, Defense build category, age 2, COSTS/BTIME/OBS_R/
+    MESH/NAME/UPGRADE. `G.towers` (pushed in finishBuilding w/ range 18, dmg 11,
+    fireRate 1.3). `tickTowers` auto-targets `nearestWolf` in range and `shootArrow`s;
+    `G.arrows` projectiles (`makeArrowMesh`, layer 1) homed in `tickArrows`, deal dmg
+    on hit → `removeWolf`. Upgradeable for +range/+dmg. Verified: arrows track & kill.
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
