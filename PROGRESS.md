@@ -191,6 +191,12 @@ Age of Empires-style game."
     applied to carcass meat). `refreshResearch` groups by category, shows 🔒-with-
     reason for unmet prereqs and ✓ for done; `research()` enforces the prereq.
     move/hunt mults added to serialize/restore. All gated by resources only.
+51. **Granary building** (age 2) — new `granaryMesh` (raised plaster store on staddle
+    stones, thatch roof, ladder hatch, grain sacks). Wired through every config map
+    (COSTS/BTIME/OBS_R/AGE_UNLOCK/NAME/MESH + build button). Effect folds into the
+    already-saved `rateFood` (+0.5) and `cap` (+150), so it persists with NO new save
+    field and no double-apply on reload (verified: save→reload keeps rateFood/cap and
+    the mesh). Build menu + placement are generic, so it needed no handler changes.
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is

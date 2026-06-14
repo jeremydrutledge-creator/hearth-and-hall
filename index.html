@@ -184,6 +184,7 @@
   <div class="opts">
     <button class="opt" data-build="lumber">🪓 Lumber Camp<small>40 🪵 · drop-off by forest</small></button>
     <button class="opt" data-build="quarry">⛏ Quarry<small>60 🪵 · stone · rocky hills</small></button>
+    <button class="opt" data-build="granary">🌾 Granary<small>55 🪵 20 🪨 · +150 storage · steady food</small></button>
     <button class="opt" data-build="market">🏪 Market<small>70 🪵 20 🪨 · trade for gold</small></button>
     <button class="opt" data-build="workshop">⚒ Workshop<small>80 🪵 30 🪨 · research upgrades</small></button>
     <button class="opt" data-build="shrine">⛩ Shrine<small>50 🪵 30 🪨 · heals nearby units</small></button>
@@ -317,10 +318,10 @@ const G={
   started:false, over:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
-const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5,tower:1.2,wall:1.2,workshop:1.4,shrine:1.3};
+const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,granary:1.3,hall:2.1,market:1.5,tower:1.2,wall:1.2,workshop:1.4,shrine:1.3};
 const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
-  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},tower:{wood:60,stone:20},wall:{wood:30},workshop:{wood:80,stone:30},shrine:{wood:50,stone:30},hall:{wood:150,stone:60},settler:{food:50}};
-const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,tower:9,wall:4,workshop:10,shrine:8,hall:14};
+  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},granary:{wood:55,stone:20},market:{wood:70,stone:20},tower:{wood:60,stone:20},wall:{wood:30},workshop:{wood:80,stone:30},shrine:{wood:50,stone:30},hall:{wood:150,stone:60},settler:{food:50}};
+const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,granary:7,market:8,tower:9,wall:4,workshop:10,shrine:8,hall:14};
 const SHRINE_R2=64;
 const COMBAT={settlerHP:40,soldierHP:80,wolfHP:34,soldierDmg:14,wolfDmg:6,
   soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4,
@@ -1285,6 +1286,30 @@ function lumberMesh(){const g=new THREE.Group();
   const stump=new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.34,0.42,8),trunkMat);stump.position.set(-1.45,0.21,0.6);g.add(stump);
   const helve=new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,0.62,5),bPlankD);helve.position.set(-1.45,0.62,0.6);helve.rotation.z=0.42;g.add(helve);
   const head=new THREE.Mesh(new THREE.BoxGeometry(0.2,0.17,0.06),wM(0xc2c2c2));head.position.set(-1.28,0.78,0.6);head.rotation.z=0.42;g.add(head);return g;}
+function granaryMesh(){const g=new THREE.Group();
+  const len=2.2,halfW=0.95,bodyH=1.5,baseH=0.5,yB=baseH+bodyH;
+  // raised on staddle stones (keeps the grain off the damp ground)
+  for(const sx of[-1,1])for(const sz of[-1,1]){
+    const stone=new THREE.Mesh(new THREE.CylinderGeometry(0.18,0.24,baseH,8),bStone);
+    stone.position.set(sx*(len/2-0.35),baseH/2,sz*(halfW-0.3));g.add(stone);
+    const cap=new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.18,0.12,10),bStone2);
+    cap.position.set(sx*(len/2-0.35),baseH+0.05,sz*(halfW-0.3));g.add(cap);}
+  // plaster & timber body
+  const body=new THREE.Mesh(new THREE.BoxGeometry(len,bodyH,halfW*2),bPlaster);body.position.y=baseH+bodyH/2;g.add(body);
+  for(const sx of[-1,1]){const post=new THREE.Mesh(new THREE.BoxGeometry(0.13,bodyH,0.13),bTimber);
+    post.position.set(sx*(len/2-0.07),baseH+bodyH/2,halfW-0.05);g.add(post);
+    const post2=post.clone();post2.position.z=-(halfW-0.05);g.add(post2);}
+  const belt=new THREE.Mesh(new THREE.BoxGeometry(len+0.04,0.14,halfW*2+0.04),bTimber);belt.position.y=baseH+bodyH-0.1;g.add(belt);
+  // little hatch door with a ladder up to it
+  const door=new THREE.Mesh(new THREE.BoxGeometry(0.55,0.7,0.08),bPlankD);door.position.set(0,baseH+0.5,halfW+0.02);g.add(door);
+  for(let i=0;i<4;i++){const rung=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.05,0.05),bPlankD);rung.position.set(0,0.18+i*0.18,halfW+0.16);g.add(rung);}
+  for(const sx of[-1,1]){const rail=new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,0.85,5),bPlankD);rail.position.set(sx*0.22,0.45,halfW+0.16);g.add(rail);}
+  // thatched roof + a couple of grain sacks at the foot
+  gableRoof(g,len+0.3,halfW+0.18,1.0,0.16,bThatch,yB,bThatch2);
+  for(const p of[[len/2+0.1,0.22,0.4,0.3],[len/2+0.0,0.2,-0.5,-0.4]]){
+    const sack=new THREE.Mesh(new THREE.SphereGeometry(0.22,7,6),bThatch);sack.scale.set(0.8,1.0,0.8);
+    sack.position.set(p[0],p[1],p[2]);sack.rotation.y=p[3];g.add(sack);}
+  return g;}
 function quarryMesh(){const g=new THREE.Group();
   const pit=new THREE.Mesh(new THREE.CylinderGeometry(1.7,1.4,0.45,9),wM(0x6f6d64));pit.position.y=0.22;g.add(pit);
   const rim=new THREE.Mesh(new THREE.TorusGeometry(1.7,0.13,6,20),bStone2);rim.rotation.x=Math.PI/2;rim.position.y=0.42;g.add(rim);
@@ -1384,7 +1409,7 @@ function shrineMesh(){const g=new THREE.Group();
   for(const sx of[-1,1])for(const sz of[-1,1]){const p=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.1,1.2,6),bStone2);p.position.set(sx*0.66,0.9,sz*0.66);g.add(p);}
   const finial=new THREE.Mesh(new THREE.SphereGeometry(0.15,9,8),bM(0xffdf80));finial.position.y=2.7;g.add(finial);
   return g;}
-const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,tower:towerMesh,wall:wallMesh,workshop:workshopMesh,shrine:shrineMesh,hall:hallMesh};
+const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,granary:granaryMesh,market:marketMesh,tower:towerMesh,wall:wallMesh,workshop:workshopMesh,shrine:shrineMesh,hall:hallMesh};
 
 // ===== optional glTF asset layer (see ASSETS.md) =====
 // Drop GLB files in /assets and list them here to replace the procedural meshes.
@@ -1554,7 +1579,7 @@ function refreshHUD(){
   updateSelCard();if(G.selBuilding)updateBldCard();
 }
 // ===== progression: ages + objective ladder (gated by gameplay, never money) =====
-const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,wall:1,coop:2,quarry:2,market:2,tower:2,shrine:2,workshop:3,pen:3,hall:4};
+const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,wall:1,coop:2,quarry:2,granary:2,market:2,tower:2,shrine:2,workshop:3,pen:3,hall:4};
 const AGES=[
   {name:'Camp',objs:[
     {id:'c_wood',label:'Stockpile 50 🪵 wood',check:()=>G.wood>=50},
@@ -1992,6 +2017,7 @@ function finishBuilding(s){
   if(t==='pen'){G.pens++;makeSheep(s);makeSheep(s);toast('🐑 Pen built — sheep graze.');}
   if(t==='lumber'){G.lumbers++;s.userData.depot=true;G.depots.push(s);toast('🪓 Lumber camp — drop-off for nearby woodcutters.');}
   if(t==='quarry'){G.quarries++;toast('⛏ Quarry cut — stone flows in.');}
+  if(t==='granary'){G.rateFood+=0.5;G.cap+=150;refreshHUD();toast('🌾 Granary raised — +150 storage and a steady trickle of food.');}
   if(t==='market'){toast('🏪 Market built — tap it to trade resources for 🪙 gold.');}
   if(t==='workshop'){toast('⚒ Workshop built — tap it to research permanent upgrades.');}
   if(t==='shrine'){G.shrines.push(s);toast('⛩ Shrine raised — nearby units heal faster, even in battle.');}
@@ -2004,7 +2030,7 @@ function finishBuilding(s){
 }
 
 // ===== building upgrades (resource + time gated, never money) =====
-const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',tower:'Watch Tower',wall:'Palisade',workshop:'Workshop',shrine:'Shrine',hall:'Great Hall'};
+const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',granary:'Granary',market:'Market',tower:'Watch Tower',wall:'Palisade',workshop:'Workshop',shrine:'Shrine',hall:'Great Hall'};
 const RESICON={wood:'🪵',stone:'🪨',food:'🍖',gold:'🪙'};
 const UPGRADE={
   keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage, +defense',apply:b=>{G.popCap+=2;G.cap+=150;if(b&&b.userData){b.userData.range+=3;b.userData.dmg+=4;}}},
