@@ -149,6 +149,16 @@ Age of Empires-style game."
 41. **End-game polish** — `G.stats` (wolves/bandits slain, peakPop); end screens
     show stats; victory offers "Keep building" (`endContinue` → over=false). Death
     `poof()` dust on enemy kill.
+42. **Build placement preview** — `placeValid()` + `tintGhost()`: ghost glows red
+    (emissive) on invalid spots (pond / quarry off rock) while placing.
+43. **Alpha wolves** — `makeWolf(x,z,alpha)`: 1.5x size, ~2.6x HP, 2x dmg (per-wolf
+    `userData.dmg`); spawn in raids from age≥3. Distinct warning toast.
+44. **Roster QoL** — tap `#popRes` → toast of settlers/idle/spearmen/archers.
+
+STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
+ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is
+BALANCE/playtest tuning (raid pacing, food upkeep, costs) — needs real play —
+and the deferred GRAPHICS asset pipeline (ASSETS.md, free CC0 route).
 
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
