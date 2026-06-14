@@ -304,7 +304,7 @@ const G={
   wood:30,food:40,stone:0,gold:0,
   stored:0, cap:200,
   popCap:3,
-  villagers:[],nodes:[],buildings:[],depots:[],deer:[],critters:[],wolves:[],bandits:[],
+  villagers:[],nodes:[],buildings:[],depots:[],deer:[],critters:[],wolves:[],bandits:[],landmarks:[],
   selected:null,buildMode:null,
   farms:0,coops:0,pens:0,quarries:0,lumbers:0,houses:0,stores:0,hall:false,
   age:1, objDone:{}, victory:false,
@@ -803,6 +803,39 @@ function makeBush(x,z){const g=new THREE.Group();
   place(g,x,z);g.userData={kind:'node',res:'food',amount:70,label:'berries'};shadows(g);scene.add(g);G.nodes.push(g);
   swayers.push({o:g,ph:Math.random()*6.28,amp:0.02+Math.random()*0.02});}
 
+// ===== weathered landmarks (pure scenery — give the wilds a sense of history) =====
+const mossStone=wM(0x8f8f80),mossDark=wM(0x6f7560),mossGreen=wM(0x5a7340);
+function weather(m){const a=Math.random()*6.28;m.rotation.set((Math.random()-0.5)*0.18,a,(Math.random()-0.5)*0.18);
+  const c=new THREE.Mesh(new THREE.SphereGeometry(0.12+Math.random()*0.1,5,4),mossGreen);
+  c.position.set((Math.random()-0.5)*0.3,0.05,(Math.random()-0.5)*0.3);c.scale.y=0.4;m.add(c);return m;}
+// a ring of standing monoliths on a low mound
+function makeStandingStones(x,z){const g=new THREE.Group();
+  const mound=new THREE.Mesh(new THREE.CylinderGeometry(4.6,5.4,0.5,18),mossGreen);mound.position.y=0.15;g.add(mound);
+  const n=6+(Math.random()*3|0);
+  for(let i=0;i<n;i++){const a=i/n*6.28,rr=3.6;
+    const h=2.2+Math.random()*1.6,w=0.7+Math.random()*0.3;
+    const s=new THREE.Mesh(new THREE.BoxGeometry(w,h,w*0.6),Math.random()<0.5?mossStone:mossDark);
+    s.position.set(Math.cos(a)*rr,h/2+0.2,Math.sin(a)*rr);s.rotation.y=a+ (Math.random()-0.5)*0.4;
+    if(Math.random()<0.18){s.rotation.z=(Math.random()<0.5?1:-1)*(0.6+Math.random()*0.5);s.position.y=0.5;} // a fallen one
+    weather(s);g.add(s);}
+  const altar=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.5,0.9),mossStone);altar.position.y=0.45;weather(altar);g.add(altar);
+  place(g,x,z);g.rotation.y=Math.random()*6.28;g.userData={kind:'landmark'};shadows(g);scene.add(g);G.landmarks&&G.landmarks.push(g);}
+// crumbled ruins — broken arch, toppled pillars, fragments of wall
+function makeRuin(x,z){const g=new THREE.Group();
+  const base=new THREE.Mesh(new THREE.BoxGeometry(7,0.4,5),mossDark);base.position.y=0.1;g.add(base);
+  // broken arch: two uprights + a stub
+  const colG=new THREE.CylinderGeometry(0.42,0.5,3.2,8);
+  const c1=new THREE.Mesh(colG,mossStone);c1.position.set(-1.6,1.7,1.4);weather(c1);g.add(c1);
+  const c2=new THREE.Mesh(new THREE.CylinderGeometry(0.42,0.5,2.2,8),mossStone);c2.position.set(1.6,1.2,1.4);c2.rotation.z=0.06;weather(c2);g.add(c2);
+  const cap=new THREE.Mesh(new THREE.BoxGeometry(2.0,0.5,0.9),mossStone);cap.position.set(-1.6,3.3,1.4);cap.rotation.z=-0.12;g.add(cap);
+  // toppled pillar lying on the ground
+  const fallen=new THREE.Mesh(new THREE.CylinderGeometry(0.4,0.4,3.4,8),mossDark);
+  fallen.rotation.z=Math.PI/2;fallen.position.set(0.4,0.4,-1.4);weather(fallen);g.add(fallen);
+  // crumbled wall segments of varying height
+  let wx=-3;[1.6,1.1,0.6,1.3].forEach(h=>{const w=new THREE.Mesh(new THREE.BoxGeometry(1.2,h,0.8),Math.random()<0.5?mossStone:mossDark);
+    w.position.set(wx,h/2+0.2,-2.0);w.rotation.y=(Math.random()-0.5)*0.2;weather(w);g.add(w);wx+=1.3;});
+  place(g,x,z);g.rotation.y=Math.random()*6.28;g.userData={kind:'landmark'};shadows(g);scene.add(g);G.landmarks&&G.landmarks.push(g);}
+
 // forests across the valley — plenty of timber to expand toward
 for(const F of FORESTS){const n=Math.round(F.r*F.r*0.085);
   for(let i=0;i<n;i++){const a=Math.random()*6.28,rr=Math.sqrt(Math.random())*F.r;
@@ -830,6 +863,16 @@ for(let i=0;i<22;i++){const x=(Math.random()-0.5)*300,z=(Math.random()-0.5)*300;
   if(okSpot(x,z)&&rocky(x,z)<0.3&&forestF(x,z)<0.3&&Math.hypot(x,z)<160)makeBush(x,z);}
 for(let i=0;i<4;i++){const a=Math.random()*6.28,rr=POND.r+4+Math.random()*3;
   const x=POND.x+Math.cos(a)*rr,z=POND.z+Math.sin(a)*rr;if(okSpot(x,z))makeBush(x,z);}
+
+// ===== weathered landmarks scattered across the far country (reward exploration) =====
+function placeLandmark(fn){for(let tries=0;tries<40;tries++){
+  const x=(Math.random()-0.5)*280,z=(Math.random()-0.5)*280;
+  if(Math.hypot(x,z)<55||Math.hypot(x,z)>150)continue;        // out past the home valley, inside the map
+  if(!okSpot(x,z)||forestF(x,z)>0.25||rocky(x,z)>0.45)continue; // clear of water, dense wood, cliffs
+  if(getH(x,z)<WATER_Y+0.6)continue;
+  fn(x,z);return true;}return false;}
+for(let i=0;i<3;i++)placeLandmark(makeStandingStones);
+for(let i=0;i<3;i++)placeLandmark(makeRuin);
 
 // ===== animals =====
 const deerMat=wM(0x8a6a44);

@@ -166,6 +166,11 @@ Age of Empires-style game."
     wanderSpeed/roam/emoji/name` userData; `tickDeer` reads them and keeps animals near
     their home forest (roam radius, map-bounded — fixes old ±62 box). Tap-target,
     `manualHunt`, `nearestDeer`, hunt-completion + per-species respawn all generic.
+47. **Landmarks** — weathered scenery scattered in the far country (hypot 55-150,
+    `placeLandmark` rejects water/dense-wood/cliffs): `makeStandingStones` (mossy
+    monolith ring + altar, one toppled) and `makeRuin` (broken arch, toppled pillar,
+    crumbled walls). `weather()` adds tilt + moss. Tagged `kind:'landmark'`,
+    collected in `G.landmarks`. Pure scenery (regenerate per load; not serialized).
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is
