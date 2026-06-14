@@ -323,7 +323,7 @@ const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
   pen:{wood:50},lumber:{wood:40},quarry:{wood:60},granary:{wood:55,stone:20},market:{wood:70,stone:20},tower:{wood:60,stone:20},wall:{wood:30},workshop:{wood:80,stone:30},shrine:{wood:50,stone:30},hall:{wood:150,stone:60},settler:{food:50}};
 const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,granary:7,market:8,tower:9,wall:4,workshop:10,shrine:8,hall:14};
 const SHRINE_R2=64;
-const COMBAT={settlerHP:40,soldierHP:80,wolfHP:34,soldierDmg:14,wolfDmg:6,
+const COMBAT={settlerHP:40,soldierHP:80,wolfHP:18,soldierDmg:14,wolfDmg:6,
   soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4,
   archerHP:52,archerDmg:9,archerRange:13,archerKite:5,archerFireRate:1.1,regen:3,wallHP:120,
   banditHP:55,banditSpeed:2.7,banditReach:1.9,banditLoot:3};
@@ -1086,7 +1086,7 @@ function makeWolf(x,z,alpha){const g=new THREE.Group();const mat=alpha?wolfAlpha
   const tail=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.1,0.5,5),mat);tail.position.set(-0.62,0.72,0);tail.rotation.z=0.9;g.add(tail);
   const lg=new THREE.CylinderGeometry(0.06,0.05,0.6,5);
   [[0.32,0.15],[0.32,-0.15],[-0.32,0.15],[-0.32,-0.15]].forEach(p=>{const l=new THREE.Mesh(lg,wolfDark);l.position.set(p[0],0.3,p[1]);g.add(l);});
-  const hp=alpha?Math.round(COMBAT.wolfHP*2.6):COMBAT.wolfHP;
+  const hp=alpha?Math.round(COMBAT.wolfHP*2.0):COMBAT.wolfHP;
   if(alpha)g.scale.setScalar(1.5);
   place(g,x,z);g.userData={kind:'wolf',alpha:!!alpha,hp,maxhp:hp,dmg:alpha?COMBAT.wolfDmg*2:COMBAT.wolfDmg,target:null,atkT:0,pause:0};
   addHealthBar(g,alpha?1.7:1.4);shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.wolves.push(g);return g;}
