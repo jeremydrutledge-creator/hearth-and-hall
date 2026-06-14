@@ -122,6 +122,21 @@ Age of Empires-style game."
     (archerDmg). Keep card now has ⚔ Spearman + 🏹 Archer (ARCHER_COST). `tickRegen`:
     villagers heal `COMBAT.regen`/s when out of combat (`u.combatT`, set to 8 on
     attack/hit). Verified: archer arrows damage wolf; regen climbs & combatT blocks it.
+32. **Palisade walls** — `wall` building (age 1, 30 wood). HP; wolves are blocked
+    (`wolfStep` clamps + gnaws) and break through (`removeWall`); self-repair via
+    tickRegen when not gnawed (`combatT`).
+33. **Workshop + research** — `workshop` building (age 3); `#researchMenu`/`TECHS`/
+    `research()`: one-time techs apply permanent mults (G.gatherMult/foodMult/
+    towerDmgMult/towerRangeMult, CARRY, COMBAT.soldierDmg/archerDmg/wallHP).
+34. **Minimap + end screens** — `#minimap` canvas (drawMinimap, tap-to-pan);
+    `showEnd()` victory (Great Hall) / defeat (last villager dies → killVillager).
+35. **Shrine + repair** — `shrine` building (age 2), `G.shrines`, `nearShrine`:
+    faster regen near it (even mid-battle). Palisades self-repair (tickRegen).
+36. **Speed control** — `#speedBtn` cycles 1×/2×/pause; loop sub-steps the sim
+    block `gameSpeed` times (also frozen when `G.over`).
+37. **Food upkeep** — `UPKEEP` per settler/sec (`foodUpkeep`/`netFoodRate`/`drawFood`,
+    `foodDrainAcc`). HUD shows net food rate (orange if negative). Gentle, non-lethal.
+
 16. **Settler visibility + collision** — settlers render on layer 1 in a 2nd pass
     (clear depth, null sky bg, camera.layers.set(1)) so they're NEVER hidden behind
     buildings; lights have layer 1 enabled, raycaster `layers.enableAll()`. And they
