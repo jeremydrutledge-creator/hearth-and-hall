@@ -162,6 +162,7 @@
     <button class="opt" data-build="lumber">🪓 Lumber Camp<small>40 🪵 · drop-off by forest</small></button>
     <button class="opt" data-build="quarry">⛏ Quarry<small>60 🪵 · stone · rocky hills</small></button>
     <button class="opt" data-build="market">🏪 Market<small>70 🪵 20 🪨 · trade for gold</small></button>
+    <button class="opt" data-build="workshop">⚒ Workshop<small>80 🪵 30 🪨 · research upgrades</small></button>
   </div>
   <div class="cat">Defense</div>
   <div class="opts">
@@ -191,6 +192,9 @@
     <button class="opt full" data-job="idle">🛑 Stand Down<small>wait by the keep</small></button>
   </div>
 </div></div>
+
+<!-- RESEARCH MENU -->
+<div class="menu" id="researchMenu"><div class="menuInner"><div class="cat">📜 Research (permanent upgrades)</div><div class="opts" id="researchOpts"></div></div></div>
 
 <!-- MARKET MENU -->
 <div class="menu" id="marketMenu"><div class="menuInner">
@@ -270,18 +274,19 @@ const G={
   bows:false, rally:null, rallyRes:null, rallyMode:false,
   rateFood:0, rateStone:0, rateWood:0, selBuilding:null,
   towers:[], arrows:[], walls:[],
+  tech:{}, gatherMult:1, foodMult:1, towerDmgMult:1, towerRangeMult:1,
   started:false, fullWarn:0
 };
 // solid building footprints settlers must walk around (radius < their interact range)
-const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5,tower:1.2,wall:1.2};
+const OBS_R={keep:1.6,house:1.3,storehouse:1.3,lumber:1.4,quarry:1.6,hall:2.1,market:1.5,tower:1.2,wall:1.2,workshop:1.4};
 const COSTS={house:{wood:30},storehouse:{wood:50},farm:{wood:40},coop:{wood:35},
-  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},tower:{wood:60,stone:20},wall:{wood:30},hall:{wood:150,stone:60},settler:{food:50}};
-const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,tower:9,wall:4,hall:14};
+  pen:{wood:50},lumber:{wood:40},quarry:{wood:60},market:{wood:70,stone:20},tower:{wood:60,stone:20},wall:{wood:30},workshop:{wood:80,stone:30},hall:{wood:150,stone:60},settler:{food:50}};
+const BTIME={house:6,storehouse:6,farm:6,coop:5,pen:5,lumber:6,quarry:8,market:8,tower:9,wall:4,workshop:10,hall:14};
 const COMBAT={settlerHP:40,soldierHP:80,wolfHP:34,soldierDmg:14,wolfDmg:6,
   soldierReach:1.7,wolfReach:1.4,soldierAggro:30,wolfSpeed:3.3,soldierSpeed:3.4,
   archerHP:52,archerDmg:9,archerRange:13,archerKite:5,archerFireRate:1.1,regen:3,wallHP:120};
 const SOLDIER_COST={food:40,gold:15},ARCHER_COST={food:35,gold:18};
-const CARRY=12;
+let CARRY=12;
 
 // ===== renderer =====
 const canvas=document.getElementById('c');
@@ -1159,7 +1164,18 @@ function wallMesh(){const g=new THREE.Group();
     const log=new THREE.Mesh(new THREE.CylinderGeometry(0.16,0.18,1.7,6),bPlank);log.position.set(x,0.85,0);g.add(log);
     const tip=new THREE.Mesh(new THREE.ConeGeometry(0.18,0.32,6),bPlankD);tip.position.set(x,1.82,0);g.add(tip);}
   return g;}
-const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,tower:towerMesh,wall:wallMesh,hall:hallMesh};
+function workshopMesh(){const g=new THREE.Group();
+  const len=2.2,halfW=1.0,wallH=1.2,yB=0.25+wallH;
+  const foot=new THREE.Mesh(new THREE.BoxGeometry(len+0.2,0.22,halfW*2+0.2),bStone2);foot.position.y=0.11;g.add(foot);
+  const wall=new THREE.Mesh(new THREE.BoxGeometry(len,wallH,halfW*2),bPlank);wall.position.y=0.25+wallH/2;g.add(wall);
+  for(let i=0;i<3;i++){const bm=new THREE.Mesh(new THREE.BoxGeometry(len+0.02,0.08,halfW*2+0.02),bPlankD);bm.position.y=0.42+i*0.4;g.add(bm);}
+  gableRoof(g,len+0.3,halfW+0.18,0.8,0.16,bTile,yB,bPlaster);
+  const wheel=new THREE.Mesh(new THREE.CylinderGeometry(0.42,0.42,0.13,16),bStone);wheel.rotation.z=Math.PI/2;wheel.position.set(len/2+0.5,0.5,0.3);g.add(wheel);
+  const anvil=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.22,0.22),wM(0x4a4a52,0.5,0.5));anvil.position.set(-len/2-0.4,0.42,0.2);g.add(anvil);
+  const stump=new THREE.Mesh(new THREE.CylinderGeometry(0.2,0.22,0.32,8),trunkMat);stump.position.set(-len/2-0.4,0.16,0.2);g.add(stump);
+  const ch=new THREE.Mesh(new THREE.BoxGeometry(0.28,0.95,0.28),bStone2);ch.position.set(0.55,1.95,-0.5);g.add(ch);
+  return g;}
+const MESH={house:houseMesh,storehouse:storeMesh,farm:farmMesh,coop:coopMesh,pen:penMesh,lumber:lumberMesh,quarry:quarryMesh,market:marketMesh,tower:towerMesh,wall:wallMesh,workshop:workshopMesh,hall:hallMesh};
 
 // ===== optional glTF asset layer (see ASSETS.md) =====
 // Drop GLB files in /assets and list them here to replace the procedural meshes.
@@ -1289,7 +1305,7 @@ function hint(m){$('hintText').textContent=m;}
 function pop(){return G.villagers.length;}
 function afford(c){for(const k in c)if(G[k]<c[k])return false;return true;}
 function pay(c){for(const k in c)G[k]-=c[k];}
-function foodRate(){return G.farms*0.4+G.coops*0.25+G.pens*0.45+G.rateFood;}
+function foodRate(){return (G.farms*0.4+G.coops*0.25+G.pens*0.45)*G.foodMult+G.rateFood;}
 function stoneRate(){return G.quarries*0.4+G.rateStone;}
 function woodRate(){return G.rateWood;}
 function spaceLeft(){return Math.max(0,G.cap-G.stored);}
@@ -1319,7 +1335,7 @@ function refreshHUD(){
   updateSelCard();if(G.selBuilding)updateBldCard();
 }
 // ===== progression: ages + objective ladder (gated by gameplay, never money) =====
-const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,wall:1,coop:2,quarry:2,market:2,tower:2,pen:3,hall:4};
+const AGE_UNLOCK={house:1,storehouse:1,lumber:1,farm:1,wall:1,coop:2,quarry:2,market:2,tower:2,workshop:3,pen:3,hall:4};
 const AGES=[
   {name:'Camp',objs:[
     {id:'c_wood',label:'Stockpile 50 🪵 wood',check:()=>G.wood>=50},
@@ -1411,7 +1427,7 @@ function openMenu(which){
   if(which==='build'){$('buildMenu').classList.add('show');$('tabBuild').classList.add('active');}
   if(which==='jobs'){$('jobMenu').classList.add('show');$('tabJobs').classList.add('active');}
 }
-function closeMenus(){$('buildMenu').classList.remove('show');$('jobMenu').classList.remove('show');$('marketMenu').classList.remove('show');
+function closeMenus(){$('buildMenu').classList.remove('show');$('jobMenu').classList.remove('show');$('marketMenu').classList.remove('show');$('researchMenu').classList.remove('show');
   $('tabBuild').classList.remove('active');$('tabJobs').classList.remove('active');}
 // ===== market trade (resources <-> gold) =====
 const SELL={wood:{amt:20,gold:10},food:{amt:20,gold:8},stone:{amt:15,gold:12}};
@@ -1426,6 +1442,25 @@ function doBuy(res){const d=BUY[res];if(!d)return;
   G.gold-=d.gold;addStored(res,d.amt);toast('Bought '+d.amt+RES_EMOJI[res]+' for '+d.gold+'🪙');refreshHUD();}
 document.querySelectorAll('#marketMenu [data-sell]').forEach(b=>b.addEventListener('click',()=>doSell(b.dataset.sell)));
 document.querySelectorAll('#marketMenu [data-buy]').forEach(b=>b.addEventListener('click',()=>doBuy(b.dataset.buy)));
+// ===== research / tech (permanent, gameplay-gated upgrades) =====
+const TECHS=[
+  {id:'tools',name:'Sharper Tools',desc:'+30% gather speed',cost:{wood:60,stone:20},apply:()=>{G.gatherMult*=1.3;}},
+  {id:'wains',name:'Wains',desc:'+4 carry per trip',cost:{wood:50,gold:15},apply:()=>{CARRY+=4;}},
+  {id:'granary',name:'Granary',desc:'+50% farm/coop/pen food',cost:{wood:40,food:30},apply:()=>{G.foodMult*=1.5;}},
+  {id:'forging',name:'Forging',desc:'+40% spearman damage',cost:{wood:40,stone:40,gold:20},apply:()=>{COMBAT.soldierDmg=Math.round(COMBAT.soldierDmg*1.4);}},
+  {id:'fletching',name:'Fletching',desc:'+40% archer & tower arrows',cost:{wood:50,gold:25},apply:()=>{COMBAT.archerDmg=Math.round(COMBAT.archerDmg*1.4);G.towerDmgMult*=1.4;for(const t of G.towers)t.userData.dmg=Math.round(t.userData.dmg*1.4);}},
+  {id:'masonry',name:'Masonry',desc:'+60% palisade HP, +25% tower range',cost:{wood:30,stone:60},apply:()=>{COMBAT.wallHP=Math.round(COMBAT.wallHP*1.6);G.towerRangeMult*=1.25;for(const t of G.towers)t.userData.range*=1.25;}},
+];
+function openResearch(){closeMenus();hideBldCard();refreshResearch();$('researchMenu').classList.add('show');}
+function refreshResearch(){const o=$('researchOpts');o.innerHTML='';
+  for(const tc of TECHS){const b=document.createElement('button');b.className='opt';
+    const done=!!G.tech[tc.id];
+    b.innerHTML=tc.name+'<small>'+(done?'✓ researched':tc.desc+' · '+costStr(tc.cost))+'</small>';
+    if(done){b.disabled=true;b.classList.add('locked');}else b.disabled=!afford(tc.cost);
+    b.addEventListener('click',()=>research(tc.id));o.appendChild(b);}}
+function research(id){const tc=TECHS.find(t=>t.id===id);if(!tc||G.tech[id])return;
+  if(!afford(tc.cost)){toast('Not enough resources to research.');return;}
+  spend(tc.cost);G.tech[id]=true;tc.apply();toast('📜 Researched: '+tc.name+' — '+tc.desc);refreshResearch();refreshHUD();}
 $('tabBuild').addEventListener('click',()=>{
   if($('buildMenu').classList.contains('show'))closeMenus();else openMenu('build');});
 $('tabJobs').addEventListener('click',()=>{
@@ -1590,7 +1625,7 @@ function tickVillager(v,dt){
       const n=u.node;
       if(!n||!n.parent){u.phase=u.carrying>0?'toDepot':'idle';u.node=null;break;}
       u.workT+=dt;u.armR.rotation.x=Math.sin(u.workT*8)*0.9-0.4;u.armL.rotation.x=Math.sin(u.workT*8)*0.5-0.2;
-      if(u.workT>=0.9){u.workT=0;
+      if(u.workT>=0.9/G.gatherMult){u.workT=0;
         const take=Math.min(2,n.userData.amount,CARRY-u.carrying);
         n.userData.amount-=take;u.carrying+=take;u.carryRes=n.userData.res;n.scale.multiplyScalar(0.99);setLoad(u);
         spawnChips(n.position,n.userData.res,3);
@@ -1685,7 +1720,8 @@ function finishBuilding(s){
   if(t==='lumber'){G.lumbers++;s.userData.depot=true;G.depots.push(s);toast('🪓 Lumber camp — drop-off for nearby woodcutters.');}
   if(t==='quarry'){G.quarries++;toast('⛏ Quarry cut — stone flows in.');}
   if(t==='market'){toast('🏪 Market built — tap it to trade resources for 🪙 gold.');}
-  if(t==='tower'){s.userData.range=18;s.userData.dmg=11;s.userData.cd=0;s.userData.fireRate=1.3;G.towers.push(s);
+  if(t==='workshop'){toast('⚒ Workshop built — tap it to research permanent upgrades.');}
+  if(t==='tower'){s.userData.range=18*G.towerRangeMult;s.userData.dmg=Math.round(11*G.towerDmgMult);s.userData.cd=0;s.userData.fireRate=1.3;G.towers.push(s);
     toast('🗼 Watch tower raised — it looses arrows at attackers in range.');}
   if(t==='wall'){s.userData.hp=COMBAT.wallHP;s.userData.maxhp=COMBAT.wallHP;G.walls.push(s);
     if(s.userData.obs)s.userData.obs.wall=s;addHealthBar(s,2.5);toast('🧱 Palisade raised — wolves must break through it.');}
@@ -1694,7 +1730,7 @@ function finishBuilding(s){
 }
 
 // ===== building upgrades (resource + time gated, never money) =====
-const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',tower:'Watch Tower',wall:'Palisade',hall:'Great Hall'};
+const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',tower:'Watch Tower',wall:'Palisade',workshop:'Workshop',hall:'Great Hall'};
 const RESICON={wood:'🪵',stone:'🪨',food:'🍖',gold:'🪙'};
 const UPGRADE={
   keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage',apply:()=>{G.popCap+=2;G.cap+=150;}},
@@ -1730,6 +1766,7 @@ function finishUpgrade(b){
 }
 function selectBuilding(b){
   if(b.userData.type==='market'){openMarket();return;}   // markets open the trade menu
+  if(b.userData.type==='workshop'){openResearch();return;} // workshops open research
   if(G.selected){G.selected.userData.ring.visible=false;G.selected=null;$('tabJobs').disabled=true;updateSelCard();}
   G.selBuilding=b;updateBldCard();
 }
