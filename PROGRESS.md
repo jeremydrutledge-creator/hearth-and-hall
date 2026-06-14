@@ -178,6 +178,11 @@ Age of Empires-style game."
     `floatGain`, lore toast, beacon removed, `explored=true`. Minimap shows unexplored
     as a gold diamond, explored as a dim hollow one. Reward gated by travel+time only
     (no money) — fits the no-P2W vision. (Not serialized: a reload reseeds landmarks.)
+49. **Living world (scaled for the bigger map)** — birds (7→16) now wheel over
+    scattered centres (60% over a random forest, rest roaming ±280) instead of all
+    circling the origin; clouds (9→16) spread/​wrap across the full ±190 sky.
+    New **jumping fish**: a pool of 5 fish arc out of random lakes on a timer with
+    expanding splash rings (`tickFishJumps`, `splashAt`) — pooled, self-draining.
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is

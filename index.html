@@ -582,6 +582,29 @@ function tickShoal(s,dt){const u=s.userData;u.t+=dt;
   for(const f of u.fish){f.userData.a+=dt*1.6;f.position.set(Math.cos(f.userData.a)*f.userData.rr,0.02,Math.sin(f.userData.a)*f.userData.rr);f.rotation.y=-f.userData.a;}}
 function nearestShoal(v){let best=null,bd=1e9;for(const s of shoals){if(s.userData.amount<=0)continue;
   const d=s.position.distanceTo(v.position);if(d<bd){bd=d;best=s;}}return best;}
+
+// ===== jumping fish: occasional life on the lakes =====
+const jumpers=[],splashes=[];
+const jumpFishMat=wM(0xb9c6d2,0.3,0.2),splashRingMat=shoalRingMat.clone();
+for(let i=0;i<5;i++){const f=new THREE.Mesh(new THREE.SphereGeometry(0.16,8,6),jumpFishMat);
+  f.scale.set(2.0,0.5,0.75);f.visible=false;f.userData={t:-1};scene.add(f);jumpers.push(f);}
+function splashAt(x,z){const r=new THREE.Mesh(new THREE.RingGeometry(0.2,0.32,18),splashRingMat.clone());
+  r.rotation.x=-Math.PI/2;r.position.set(x,WATER_Y+0.04,z);r.userData={t:0};scene.add(r);splashes.push(r);}
+let fishTimer=3;
+function tickFishJumps(dt){
+  fishTimer-=dt;
+  if(fishTimer<=0){fishTimer=2.4+Math.random()*4;const f=jumpers.find(j=>j.userData.t<0);
+    if(f){const q=PONDS[(Math.random()*PONDS.length)|0],a=Math.random()*6.28,r=Math.random()*(q.r-2);
+      const x=q.x+Math.cos(a)*r,z=q.z+Math.sin(a)*r,dir=Math.random()*6.28;
+      f.userData={t:0,dur:1.0+Math.random()*0.3,x,z,vx:Math.cos(dir)*0.9,vz:Math.sin(dir)*0.9,peak:1.1+Math.random()*0.6,ry:dir};
+      f.visible=true;splashAt(x,z);}}
+  for(const f of jumpers){const u=f.userData;if(u.t<0)continue;u.t+=dt;const p=u.t/u.dur;
+    if(p>=1){f.visible=false;u.t=-1;splashAt(u.x+u.vx*u.dur,u.z+u.vz*u.dur);continue;}
+    f.position.set(u.x+u.vx*u.t,WATER_Y+0.1+Math.sin(p*Math.PI)*u.peak,u.z+u.vz*u.t);
+    f.rotation.set(Math.cos(p*Math.PI)*0.9,u.ry,0);}
+  for(let i=splashes.length-1;i>=0;i--){const r=splashes[i];r.userData.t+=dt;const p=r.userData.t/0.8;
+    if(p>=1){scene.remove(r);splashes.splice(i,1);continue;}
+    const sc=0.5+p*2.2;r.scale.set(sc,sc,sc);r.material.opacity=0.55*(1-p);}}
 function shoreNear(px,pz){const q=nearestPond(px,pz),a=Math.atan2(pz-q.z,px-q.x);
   for(let k=0;k<10;k++){const r=q.r+1.2+k*0.6,x=q.x+Math.cos(a)*r,z=q.z+Math.sin(a)*r;
     if(getH(x,z)>=WATER_Y+0.45&&okSpot(x,z))return new THREE.Vector3(x,getH(x,z),z);}
@@ -628,21 +651,24 @@ const clouds=[],birds=[];
   rg.addColorStop(0,'rgba(255,255,255,0.95)');rg.addColorStop(1,'rgba(255,255,255,0)');
   cx.fillStyle=rg;cx.beginPath();cx.arc(32,32,32,0,6.3);cx.fill();
   const cloudTex=new THREE.CanvasTexture(cv);cloudTex.encoding=THREE.sRGBEncoding;
-  for(let i=0;i<9;i++){const cl=new THREE.Group();const puffs=3+(Math.random()*3|0);
+  for(let i=0;i<16;i++){const cl=new THREE.Group();const puffs=3+(Math.random()*3|0);
     for(let k=0;k<puffs;k++){const sp=new THREE.Sprite(new THREE.SpriteMaterial(
       {map:cloudTex,transparent:true,opacity:0.85,depthWrite:false,fog:true}));
       sp.position.set((Math.random()-0.5)*16,(Math.random()-0.5)*3,(Math.random()-0.5)*16);
       const s=9+Math.random()*9;sp.scale.set(s,s*0.66,1);cl.add(sp);}
-    cl.position.set((Math.random()-0.5)*190,36+Math.random()*18,(Math.random()-0.5)*190);
+    cl.position.set((Math.random()-0.5)*380,38+Math.random()*20,(Math.random()-0.5)*360);
     cl.userData.spd=0.5+Math.random()*0.9;scene.add(cl);clouds.push(cl);}
   // birds gliding over the valley
   const birdMat=new THREE.MeshBasicMaterial({color:new THREE.Color(0x2a261e).convertSRGBToLinear(),side:THREE.DoubleSide,fog:true});
   const wg=new THREE.PlaneGeometry(0.95,0.18);
-  for(let i=0;i<7;i++){const b=new THREE.Group();
+  for(let i=0;i<16;i++){const b=new THREE.Group();
     const wl=new THREE.Mesh(wg,birdMat);wl.position.x=-0.46;wl.rotation.z=0.45;b.add(wl);
     const wr=new THREE.Mesh(wg,birdMat);wr.position.x=0.46;wr.rotation.z=-0.45;b.add(wr);
-    b.userData={r:22+Math.random()*34,a:Math.random()*6.28,sp:0.1+Math.random()*0.1,
-      y:16+Math.random()*12,fl:Math.random()*6,wl,wr};
+    // many flocks wheel over a forest; the rest roam the wider valley
+    const overForest=Math.random()<0.6,F=FORESTS[Math.random()*FORESTS.length|0];
+    const cx=overForest?F.x:(Math.random()-0.5)*280, cz=overForest?F.z:(Math.random()-0.5)*280;
+    b.userData={cx,cz,r:14+Math.random()*30,a:Math.random()*6.28,sp:0.1+Math.random()*0.1,
+      y:16+Math.random()*14,fl:Math.random()*6,wl,wr};
     scene.add(b);birds.push(b);}
 }
 // pollen / dust motes catching the light
@@ -2195,11 +2221,12 @@ function loop(){
   updateSmoke(dt);updateChips(dt);
   for(const d of ducks)tickDuck(d,dt);
   for(const s of shoals)tickShoal(s,dt);
+  tickFishJumps(dt);
   // clouds drift and wrap around the valley
-  for(const cl of clouds){cl.position.x+=cl.userData.spd*dt;if(cl.position.x>100)cl.position.x=-100;}
+  for(const cl of clouds){cl.position.x+=cl.userData.spd*dt;if(cl.position.x>190)cl.position.x=-190;}
   // birds wheel in slow circles, wings flapping
   for(const b of birds){const u=b.userData;u.a+=u.sp*dt;
-    b.position.set(Math.cos(u.a)*u.r,u.y+Math.sin(t*0.6+u.fl)*1.2,Math.sin(u.a)*u.r);
+    b.position.set(u.cx+Math.cos(u.a)*u.r,u.y+Math.sin(t*0.6+u.fl)*1.2,u.cz+Math.sin(u.a)*u.r);
     b.rotation.y=-u.a;const f=Math.sin(t*7+u.fl)*0.5;u.wl.rotation.z=0.45+f;u.wr.rotation.z=-0.45-f;}
   // pollen bobs gently
   if(pollen){const pa=pollen.geometry.attributes.position,bs=pollen.userData.base;
