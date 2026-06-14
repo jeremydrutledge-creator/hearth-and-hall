@@ -1256,6 +1256,8 @@ function getMesh(type){
 const keep=keepMesh();keep.position.set(0,getH(0,0),0);keep.userData={kind:'building',type:'keep',depot:true,level:1};
 shadows(keep);scene.add(keep);G.buildings.push(keep);G.depots.push(keep);
 {const o={x:0,z:0,r:OBS_R.keep};G.obstacles.push(o);keep.userData.obs=o;}
+// the keep defends itself — its garrison looses arrows at nearby attackers
+keep.userData.range=16;keep.userData.dmg=9;keep.userData.cd=0;keep.userData.fireRate=1.6;keep.userData.fireY=5.2;G.towers.push(keep);
 
 // ===== rally point: where idle & newly-recruited settlers muster (and auto-work) =====
 const rallyFlag=(function(){const g=new THREE.Group();
@@ -1787,7 +1789,7 @@ function finishBuilding(s){
 const NAME={keep:'Keep',house:'House',storehouse:'Storehouse',farm:'Farm',coop:'Coop',pen:'Pen',lumber:'Lumber Camp',quarry:'Quarry',market:'Market',tower:'Watch Tower',wall:'Palisade',workshop:'Workshop',shrine:'Shrine',hall:'Great Hall'};
 const RESICON={wood:'🪵',stone:'🪨',food:'🍖',gold:'🪙'};
 const UPGRADE={
-  keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage',apply:()=>{G.popCap+=2;G.cap+=150;}},
+  keep:{max:3,cost:l=>({wood:80*l,stone:30*l}),time:l=>6+l*3,gain:'+pop, +storage, +defense',apply:b=>{G.popCap+=2;G.cap+=150;if(b&&b.userData){b.userData.range+=3;b.userData.dmg+=4;}}},
   house:{max:3,cost:l=>({wood:40*l}),time:l=>5+l*2,gain:'+3 pop',apply:()=>{G.popCap+=3;}},
   storehouse:{max:3,cost:l=>({wood:50*l}),time:l=>5+l*2,gain:'+200 storage',apply:()=>{G.cap+=200;}},
   farm:{max:3,cost:l=>({wood:35*l}),time:l=>5+l*2,gain:'+food',apply:()=>{G.rateFood+=0.4;}},
@@ -1925,7 +1927,7 @@ function tickArrows(dt){
 function tickTowers(dt){
   for(const tw of G.towers){const u=tw.userData;if(u.cd>0){u.cd-=dt;continue;}
     const w=nearestWolf(tw.position,u.range);
-    if(w){u.cd=u.fireRate;shootArrow(_av.set(tw.position.x,tw.position.y+3.4,tw.position.z).clone(),w,u.dmg);}}
+    if(w){u.cd=u.fireRate;shootArrow(_av.set(tw.position.x,tw.position.y+(u.fireY||3.4),tw.position.z).clone(),w,u.dmg);}}
 }
 function tickDeer(d,dt){const u=d.userData;
   if(u.state==='flee'){let hunter=null,bd=1e9;
