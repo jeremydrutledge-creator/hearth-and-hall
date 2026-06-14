@@ -944,19 +944,22 @@ function updateHealthBar(g){
     bar.quaternion.copy(g.quaternion).invert().multiply(camera.quaternion);}
 }
 const wolfMat=wM(0x6a6258),wolfDark=wM(0x4a443c),wolfEye=wM(0xd8c040,0.4,0.2);
-function makeWolf(x,z){const g=new THREE.Group();
-  const body=new THREE.Mesh(new THREE.BoxGeometry(0.95,0.42,0.4),wolfMat);body.position.y=0.62;g.add(body);
-  const rump=new THREE.Mesh(new THREE.SphereGeometry(0.26,7,6),wolfMat);rump.position.set(-0.45,0.62,0);g.add(rump);
-  const neck=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.34,0.28),wolfMat);neck.position.set(0.45,0.74,0);neck.rotation.z=-0.4;g.add(neck);
-  const head=new THREE.Mesh(new THREE.BoxGeometry(0.34,0.3,0.3),wolfMat);head.position.set(0.66,0.86,0);g.add(head);
+const wolfAlphaMat=wM(0x36322e),wolfAlphaEye=wM(0xe23a2a,0.4,0.3);
+function makeWolf(x,z,alpha){const g=new THREE.Group();const mat=alpha?wolfAlphaMat:wolfMat,eyeM=alpha?wolfAlphaEye:wolfEye;
+  const body=new THREE.Mesh(new THREE.BoxGeometry(0.95,0.42,0.4),mat);body.position.y=0.62;g.add(body);
+  const rump=new THREE.Mesh(new THREE.SphereGeometry(0.26,7,6),mat);rump.position.set(-0.45,0.62,0);g.add(rump);
+  const neck=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.34,0.28),mat);neck.position.set(0.45,0.74,0);neck.rotation.z=-0.4;g.add(neck);
+  const head=new THREE.Mesh(new THREE.BoxGeometry(0.34,0.3,0.3),mat);head.position.set(0.66,0.86,0);g.add(head);
   const snout=new THREE.Mesh(new THREE.BoxGeometry(0.22,0.16,0.18),wolfDark);snout.position.set(0.86,0.8,0);g.add(snout);
   for(const sz of[-1,1]){const ear=new THREE.Mesh(new THREE.ConeGeometry(0.08,0.16,4),wolfDark);ear.position.set(0.6,1.04,sz*0.09);g.add(ear);}
-  for(const sz of[-1,1]){const e=new THREE.Mesh(new THREE.SphereGeometry(0.04,5,4),wolfEye);e.position.set(0.78,0.9,sz*0.08);g.add(e);}
-  const tail=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.1,0.5,5),wolfMat);tail.position.set(-0.62,0.72,0);tail.rotation.z=0.9;g.add(tail);
+  for(const sz of[-1,1]){const e=new THREE.Mesh(new THREE.SphereGeometry(0.04,5,4),eyeM);e.position.set(0.78,0.9,sz*0.08);g.add(e);}
+  const tail=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.1,0.5,5),mat);tail.position.set(-0.62,0.72,0);tail.rotation.z=0.9;g.add(tail);
   const lg=new THREE.CylinderGeometry(0.06,0.05,0.6,5);
   [[0.32,0.15],[0.32,-0.15],[-0.32,0.15],[-0.32,-0.15]].forEach(p=>{const l=new THREE.Mesh(lg,wolfDark);l.position.set(p[0],0.3,p[1]);g.add(l);});
-  place(g,x,z);g.userData={kind:'wolf',hp:COMBAT.wolfHP,maxhp:COMBAT.wolfHP,target:null,atkT:0,pause:0};
-  addHealthBar(g,1.4);shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.wolves.push(g);return g;}
+  const hp=alpha?Math.round(COMBAT.wolfHP*2.6):COMBAT.wolfHP;
+  if(alpha)g.scale.setScalar(1.5);
+  place(g,x,z);g.userData={kind:'wolf',alpha:!!alpha,hp,maxhp:hp,dmg:alpha?COMBAT.wolfDmg*2:COMBAT.wolfDmg,target:null,atkT:0,pause:0};
+  addHealthBar(g,alpha?1.7:1.4);shadows(g);g.traverse(o=>o.layers.set(VLAYER));scene.add(g);G.wolves.push(g);return g;}
 const banditCloth=wM(0x3a3340),banditHood=wM(0x262230),banditSkin=wM(0xc89070),banditClub=wM(0x5a4028);
 function makeBandit(x,z){const g=new THREE.Group();
   const legGeo=new THREE.CylinderGeometry(0.1,0.09,0.55,6);
@@ -1919,7 +1922,7 @@ function wolfStep(w,dx,dz,sp,dt){const u=w.userData;_cv.set(dx,0,dz);const L=_cv
   for(const o of G.obstacles){if(!o.wall)continue;const ox=nx-o.x,oz=nz-o.z,od=Math.hypot(ox,oz);
     if(od<o.r){wall=o.wall;const cx=w.position.x-o.x,cz=w.position.z-o.z,cd=Math.hypot(cx,cz)||1;nx=o.x+cx/cd*o.r;nz=o.z+cz/cd*o.r;break;}}
   w.position.set(nx,getH(nx,nz),nz);w.rotation.y=Math.atan2(dx,dz);
-  if(wall){wall.userData.combatT=4;u.atkT+=dt;if(u.atkT>=0.6){u.atkT=0;wall.userData.hp-=COMBAT.wolfDmg*1.2;updateHealthBar(wall);if(wall.userData.hp<=0)removeWall(wall);}}
+  if(wall){wall.userData.combatT=4;u.atkT+=dt;if(u.atkT>=0.6){u.atkT=0;wall.userData.hp-=(u.dmg||COMBAT.wolfDmg)*1.2;updateHealthBar(wall);if(wall.userData.hp<=0)removeWall(wall);}}
   return !!wall;}
 function tickWolf(w,dt){const u=w.userData;
   if(!u.target||!u.target.parent||u.target.userData.hp<=0)u.target=nearestPrey(w.position);
@@ -1928,7 +1931,7 @@ function tickWolf(w,dt){const u=w.userData;
   const dx=t.position.x-w.position.x,dz=t.position.z-w.position.z,d=Math.hypot(dx,dz);
   if(d>COMBAT.wolfReach){wolfStep(w,dx,dz,COMBAT.wolfSpeed,dt);}
   else{w.rotation.y=Math.atan2(dx,dz);u.atkT+=dt;
-    if(u.atkT>=0.6){u.atkT=0;t.userData.hp-=COMBAT.wolfDmg*0.6;t.userData.combatT=8;updateHealthBar(t);
+    if(u.atkT>=0.6){u.atkT=0;t.userData.hp-=(u.dmg||COMBAT.wolfDmg)*0.6;t.userData.combatT=8;updateHealthBar(t);
       if(t.userData.hp<=0)killVillager(t);}}
 }
 function nearShrine(p){for(const s of G.shrines){const dx=p.x-s.position.x,dz=p.z-s.position.z;if(dx*dx+dz*dz<SHRINE_R2)return true;}return false;}
@@ -1961,9 +1964,10 @@ function tickBandit(w,dt){const u=w.userData;
 function spawnRaid(){
   const n=Math.min(6,2+G.age+(Math.random()*2|0));
   const F=FORESTS[(Math.random()*FORESTS.length)|0],a0=Math.random()*6.28;
+  const alphaIdx=(G.age>=3&&Math.random()<0.45)?(Math.random()*n|0):-1;  // a pack-leader from Village age on
   for(let i=0;i<n;i++){const a=a0+(Math.random()-0.5)*0.9,r=F.r+3+Math.random()*4;
-    let x=F.x+Math.cos(a)*r,z=F.z+Math.sin(a)*r;if(!okSpot(x,z)){x=F.x+6;z=F.z+6;}makeWolf(x,z);}
-  toast('🐺 A wolf pack attacks! Recruit ⚔ soldiers at the keep to defend.');
+    let x=F.x+Math.cos(a)*r,z=F.z+Math.sin(a)*r;if(!okSpot(x,z)){x=F.x+6;z=F.z+6;}makeWolf(x,z,i===alphaIdx);}
+  toast(alphaIdx>=0?'🐺 A great wolf leads the pack — brace your defenses!':'🐺 A wolf pack attacks! Recruit ⚔ soldiers at the keep to defend.');
   try{if(navigator.vibrate)navigator.vibrate(150);}catch(e){}
   // from the Hamlet age on, bandits sometimes raid your buildings for loot
   if(G.age>=2&&Math.random()<0.5){const nb=1+(Math.random()*G.age|0);
