@@ -154,6 +154,12 @@ Age of Empires-style game."
 43. **Alpha wolves** — `makeWolf(x,z,alpha)`: 1.5x size, ~2.6x HP, 2x dmg (per-wolf
     `userData.dmg`); spawn in raids from age≥3. Distinct warning toast.
 44. **Roster QoL** — tap `#popRes` → toast of settlers/idle/spearmen/archers.
+45. **World expansion v2** — terrain 260→**340** (SEG 248); regions generalised to
+    arrays: 8 `FORESTS`, 7 `ROCKIES`, 3 `PONDS` (multi-lake). Water/lily/reeds/ducks/
+    shoals/fishing all span `PONDS` (`nearestPond`/`pondF`; ducks store `pond`);
+    `castAt(...,waters)` so you can fish every lake. Pan widened ±156, mountains
+    rad 192+36, fog 135–330, grass/flowers/pebbles + scattered trees/bushes scaled
+    up, `MM_SPAN=400`. Save bumped **v1→v2** (old saves invalidated — layout changed).
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is
