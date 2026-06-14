@@ -158,7 +158,7 @@
   <div class="res">🪨 <b id="hStone">0</b> <small id="hStoneRate"></small></div>
   <div class="res">🪙 <b id="hGold">0</b></div>
   <div class="res store" id="storeRes">📦 <b id="hStore">0/0</b></div>
-  <div class="res">👤 <b id="hPop">1/3</b></div>
+  <div class="res" id="popRes">👤 <b id="hPop">1/3</b></div>
 </div></div>
 
 <div id="hint"><span id="hintText">Tap your settler to select them</span></div>
@@ -2111,6 +2111,11 @@ $('bldClose').addEventListener('click',hideBldCard);
 $('questHead').addEventListener('click',()=>$('quests').classList.toggle('collapsed'));
 $('endBtn').addEventListener('click',()=>location.reload());
 $('endContinue').addEventListener('click',()=>{G.over=false;$('endScreen').classList.remove('show');hint('Your realm endures — keep building.');});
+$('popRes').addEventListener('click',()=>{
+  let set=0,idle=0,spear=0,arch=0;
+  for(const v of G.villagers){const u=v.userData;if(u.ranged)arch++;else if(u.soldier)spear++;
+    else{set++;if(!u.order&&u.rallyReady)idle++;}}
+  toast('👤 '+set+' settlers ('+idle+' idle) · ⚔ '+spear+' spearmen · 🏹 '+arch+' archers');});
 
 // ===== save / load (localStorage) =====
 const SAVE_KEY='hh_save';
