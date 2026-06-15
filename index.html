@@ -218,6 +218,17 @@
   </div>
 </div></div>
 
+<!-- ORDERS MENU (soldiers) -->
+<div class="menu" id="orderMenu"><div class="menuInner">
+  <div class="cat">⚔ Orders</div>
+  <div class="opts">
+    <button class="opt" data-order="sentry">🛡 Stand Sentry<small>hold this ground</small></button>
+    <button class="opt" data-order="patrol">🔄 Patrol<small>roam this area, engage raiders</small></button>
+    <button class="opt" data-order="follow">🫂 Escort a Worker<small>then tap a worker to guard</small></button>
+    <button class="opt full" data-order="hold">🏰 Hold the Line<small>muster at the rally / keep</small></button>
+  </div>
+</div></div>
+
 <!-- RESEARCH MENU -->
 <div class="menu" id="researchMenu"><div class="menuInner"><div class="cat">📜 Research (permanent upgrades)</div><div class="opts" id="researchOpts"></div></div></div>
 
@@ -1110,6 +1121,7 @@ function makeBandit(x,z){const g=new THREE.Group();
 function makeSoldier(x,z){
   const g=makeSettler(x,z);const u=g.userData;
   u.soldier=true;u.hp=COMBAT.soldierHP;u.maxhp=COMBAT.soldierHP;u.rallyReady=false;u.order=null;
+  u.stance='guard';u.post=null;u.guard=null;u.patrolPt=null;
   // arm them: a spear in the right hand + a steel helm
   const spear=new THREE.Group();
   const shaft=new THREE.Mesh(new THREE.CylinderGeometry(0.025,0.025,1.7,5),wM(0x6b4a2a));shaft.position.y=0.45;spear.add(shaft);
@@ -1121,6 +1133,7 @@ function makeSoldier(x,z){
 function makeArcher(x,z){
   const g=makeSettler(x,z);const u=g.userData;
   u.soldier=true;u.ranged=true;u.hp=COMBAT.archerHP;u.maxhp=COMBAT.archerHP;u.rallyReady=false;u.order=null;u.cd=0;
+  u.stance='guard';u.post=null;u.guard=null;u.patrolPt=null;
   // a bow held out in the left hand + a green hood
   const bow=new THREE.Mesh(new THREE.TorusGeometry(0.26,0.028,5,10,Math.PI*1.25),wM(0x6b4a2a));
   bow.position.set(0,-0.32,0.06);bow.rotation.set(0,Math.PI/2,Math.PI/2);u.armL.add(bow);
@@ -1654,8 +1667,14 @@ function updateSelCard(){
   const c=$('selCard');
   if(!G.selected){c.classList.remove('show');return;}
   const u=G.selected.userData;
-  const carry=u.carrying>0?` · carrying ${u.carrying} ${u.carryRes}`:'';
-  c.innerHTML=`<b>Settler</b> — ${JOBNAME[u.order]||'idle'}${carry}`;
+  if(u.soldier){
+    const role=u.ranged?'🏹 Archer':'⚔ Spearman';
+    const st={guard:'holding the line',sentry:'standing sentry',patrol:'patrolling',follow:'escorting a worker'}[u.stance]||'ready';
+    c.innerHTML=`<b>${role}</b> — ${st}`;
+  } else {
+    const carry=u.carrying>0?` · carrying ${u.carrying} ${u.carryRes}`:'';
+    c.innerHTML=`<b>Settler</b> — ${JOBNAME[u.order]||'idle'}${carry}`;
+  }
   c.classList.add('show');
 }
 
@@ -1664,7 +1683,9 @@ function select(v){
   if(G.selected)G.selected.userData.ring.visible=false;
   G.selected=v;
   $('tabJobs').disabled=!v;
-  if(v){v.userData.ring.visible=true;hint('Tap a tree, rock, berry or wild game (deer/boar/rabbit) — or use ⚑ Assign for a standing job');}
+  if(v){v.userData.ring.visible=true;
+    if(v.userData.soldier)hint('Tap ground to post a sentry, a worker to escort, or a building to guard — ⚑ Orders for patrol / hold');
+    else hint('Tap a tree, rock, berry or wild game (deer/boar/rabbit) — or use ⚑ Assign for a standing job');}
   updateSelCard();
 }
 function clearTargets(u){u.dest=null;u.node=null;u.site=null;u.prey=null;u.depot=null;u.fishPt=null;u.landmark=null;
@@ -1690,6 +1711,18 @@ function manualExplore(v,lm){const u=v.userData;
   u.order=null;clearTargets(u);u.landmark=lm;u.dest=lm.position.clone();u.phase='toLandmark';u.rallyReady=false;
   toast('🧭 Off to investigate the '+lm.userData.name.toLowerCase()+'…');updateSelCard();}
 function manualMove(v,p){const u=v.userData;u.order=null;clearTargets(u);u.dest=p.clone();u.phase='move';u.rallyReady=false;updateSelCard();}
+// ===== soldier orders (move/sentry/patrol/escort/guard) =====
+const SOLDIER_LEASH=22, PATROL_R=9;
+function commandSentry(v,p){const u=v.userData;u.stance='sentry';u.post={x:p.x,z:p.z};u.guard=null;u.patrolPt=null;u.target=null;
+  toast('🛡 Marching to stand sentry.');updateSelCard();}
+function commandPatrol(v){const u=v.userData;u.stance='patrol';u.post={x:v.position.x,z:v.position.z};u.guard=null;u.patrolPt=null;u.target=null;
+  toast('🔄 Patrolling this area.');updateSelCard();}
+function commandFollow(v,worker){const u=v.userData;u.stance='follow';u.guard=worker;u.post=null;u.patrolPt=null;u.target=null;
+  toast('🫂 Escorting a worker — guarding them as they work.');updateSelCard();}
+function commandGuardBuilding(v,b){const u=v.userData;u.stance='sentry';u.post={x:b.position.x,z:b.position.z};u.guard=null;u.patrolPt=null;u.target=null;
+  toast('🏰 Guarding the '+(NAME[b.userData.type]||'building')+'.');updateSelCard();}
+function commandHold(v){const u=v.userData;u.stance='guard';u.post=null;u.guard=null;u.patrolPt=null;u.target=null;
+  toast('🏰 Holding at the muster point.');updateSelCard();}
 function manualBuild(v,site){const u=v.userData;clearTargets(u);u.site=site;u.dest=site.position.clone();u.phase='toSite';u.rallyReady=false;}
 
 // ===== build mode =====
@@ -1697,8 +1730,9 @@ function openMenu(which){
   closeMenus();hideBldCard();
   if(which==='build'){$('buildMenu').classList.add('show');$('tabBuild').classList.add('active');}
   if(which==='jobs'){$('jobMenu').classList.add('show');$('tabJobs').classList.add('active');}
+  if(which==='order'){$('orderMenu').classList.add('show');$('tabJobs').classList.add('active');}
 }
-function closeMenus(){$('buildMenu').classList.remove('show');$('jobMenu').classList.remove('show');$('marketMenu').classList.remove('show');$('researchMenu').classList.remove('show');
+function closeMenus(){$('buildMenu').classList.remove('show');$('jobMenu').classList.remove('show');$('orderMenu').classList.remove('show');$('marketMenu').classList.remove('show');$('researchMenu').classList.remove('show');
   $('tabBuild').classList.remove('active');$('tabJobs').classList.remove('active');}
 // ===== market trade (resources <-> gold) =====
 const SELL={wood:{amt:20,gold:10},food:{amt:20,gold:8},stone:{amt:15,gold:12}};
@@ -1757,7 +1791,16 @@ $('tabBuild').addEventListener('click',()=>{
   if($('buildMenu').classList.contains('show'))closeMenus();else openMenu('build');});
 $('tabJobs').addEventListener('click',()=>{
   if(!G.selected)return;
-  if($('jobMenu').classList.contains('show'))closeMenus();else openMenu('jobs');});
+  const soldier=!!G.selected.userData.soldier,menu=soldier?'orderMenu':'jobMenu';
+  if($(menu).classList.contains('show'))closeMenus();else openMenu(soldier?'order':'jobs');});
+document.querySelectorAll('#orderMenu .opt').forEach(b=>b.addEventListener('click',()=>{
+  const v=G.selected;closeMenus();if(!v||!v.userData.soldier)return;
+  const o=b.dataset.order;
+  if(o==='sentry')commandSentry(v,v.position);
+  else if(o==='patrol')commandPatrol(v);
+  else if(o==='hold')commandHold(v);
+  else if(o==='follow'){G.followMode=true;G.followFor=v;hint('Tap a worker for this soldier to escort and protect.');}
+}));
 document.querySelectorAll('#jobMenu .opt').forEach(b=>b.addEventListener('click',()=>{
   const j=b.dataset.job;
   if(j==='hunt'&&!G.bows){toast('Craft bows first — ⚒ Build ▸ 🏹 Craft Bows.');closeMenus();return;}
@@ -1867,13 +1910,22 @@ function handleTap(x,y){
       else{const p=h[0].point;setRally(p.x,p.z,null);toast('🚩 Rally point set — idle settlers muster here.');}}
     G.rallyMode=false;$('tabRally').classList.remove('active');hint('');return;
   }
+  if(G.followMode){
+    const fh=castAt(x,y,G.villagers);const r=fh.length?rootOf(fh[0].object):null;
+    if(r&&r.userData.kind==='villager'&&!r.userData.soldier&&G.followFor)commandFollow(G.followFor,r);
+    else toast('Tap one of your workers to escort.');
+    G.followMode=false;G.followFor=null;hint('');return;
+  }
   if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length){const pt=hit[0].point;
     G.buildMode.ghost.position.copy(pt);tintGhost(G.buildMode,placeValid(G.buildMode.type,pt.x,pt.z));}return;}
   hideBldCard();   // any canvas tap dismisses the building card; a building tap re-opens it
   const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.landmarks,...G.buildings]);
   if(hits.length){const r=rootOf(hits[0].object);
     if(r){const k=r.userData.kind;
-      if(k==='villager'){select(r);return;}
+      if(k==='villager'){
+        // a selected soldier tapping a worker escorts them; tapping another soldier just switches selection
+        if(G.selected&&G.selected.userData.soldier&&!r.userData.soldier&&r!==G.selected){commandFollow(G.selected,r);return;}
+        select(r);return;}
       if(k==='landmark'){if(G.selected)manualExplore(G.selected,r);
         else toast(r.userData.explored?'Already explored — '+r.userData.lore:r.userData.name+' — send a settler to investigate.');return;}
       if(k==='deer'||k==='boar'||k==='rabbit'){if(G.selected)manualHunt(G.selected,r);else toast('Tap a settler first.');return;}
@@ -1881,14 +1933,16 @@ function handleTap(x,y){
       if(k==='shoal'){if(G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);u.shoal=r;
         startFishing(G.selected);toast('🎣 Casting at the shoal.');updateSelCard();}else toast('Tap a settler first.');return;}
       if(k==='site'){if(G.selected)manualBuild(G.selected,r);return;}
-      if(k==='building'){selectBuilding(r);return;}}}
+      if(k==='building'){if(G.selected&&G.selected.userData.soldier){commandGuardBuilding(G.selected,r);return;}selectBuilding(r);return;}}}
   // tapping any lake sends a selected settler to fish its shore
   const w=castAt(x,y,waters);
   if(w.length&&G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);
     startFishing(G.selected);toast('🎣 Off to the pond to fish.');updateSelCard();return;}
   else if(w.length){toast('Tap a settler first.');return;}
   const g=castAt(x,y,[terrain]);
-  if(g.length&&G.selected)manualMove(G.selected,g[0].point);
+  if(g.length&&G.selected){
+    if(G.selected.userData.soldier)commandSentry(G.selected,g[0].point);
+    else manualMove(G.selected,g[0].point);}
   else if(g.length)hint('Tap your settler to select them first');
 }
 
@@ -2116,9 +2170,20 @@ function updateBldCard(){
 const _cv=new THREE.Vector3();
 function nearestPrey(p){let best=null,bd=1e9;for(const v of G.villagers){if(v.userData.hp<=0)continue;
   const dx=v.position.x-p.x,dz=v.position.z-p.z,d=dx*dx+dz*dz;if(d<bd){bd=d;best=v;}}return best;}
+function soldierPost(u,v){
+  if(u.stance==='follow'&&u.guard&&u.guard.parent)return u.guard.position;
+  if(u.post)return u.post;
+  return G.rally||{x:0,z:0};   // 'guard' default → muster at rally/keep
+}
 function tickSoldier(v,dt){const u=v.userData;animRest(u);
   const aggro=u.ranged?COMBAT.archerRange+4:COMBAT.soldierAggro;
+  const post=soldierPost(u,v);
   if(!u.target||u.target.userData.hp<=0||!u.target.parent)u.target=nearestWolf(v.position,aggro);
+  // don't chase a threat clear across the map — stay near the post we're protecting,
+  // but always fight anything right on top of us (self-defense while marching)
+  if(u.target){const px=u.target.position.x-post.x,pz=u.target.position.z-post.z;
+    const selfd=Math.hypot(u.target.position.x-v.position.x,u.target.position.z-v.position.z);
+    if(Math.hypot(px,pz)>SOLDIER_LEASH&&selfd>aggro*0.55)u.target=null;}
   const w=u.target;
   if(w){const dx=w.position.x-v.position.x,dz=w.position.z-v.position.z,d=Math.hypot(dx,dz);v.rotation.y=Math.atan2(dx,dz);
     if(u.ranged){
@@ -2133,9 +2198,21 @@ function tickSoldier(v,dt){const u=v.userData;animRest(u);
         if(u.atkT>=0.5){u.atkT=0;w.userData.hp-=COMBAT.soldierDmg*0.5;updateHealthBar(w);
           if(w.userData.hp<=0){removeWolf(w);u.target=null;u.armR.rotation.x=0;}}}
     }
-  } else { // no enemy — muster at the rally/keep
-    const gx=G.rally?G.rally.x:0,gz=G.rally?G.rally.z:0,dx=gx-v.position.x,dz=gz-v.position.z,d=Math.hypot(dx,dz);
-    if(d>2.5){_cv.set(dx,0,dz).normalize();walk(v,_cv,COMBAT.soldierSpeed*0.8,dt);v.rotation.y=Math.atan2(dx,dz);animWalk(u,dt);}
+  } else { // no enemy in reach — behave per stance
+    let tx,tz,arrive;
+    if(u.stance==='patrol'){
+      if(!u.patrolPt||Math.hypot(v.position.x-u.patrolPt.x,v.position.z-u.patrolPt.z)<1.1){
+        const a=Math.random()*6.28,r=Math.random()*PATROL_R;u.patrolPt={x:post.x+Math.cos(a)*r,z:post.z+Math.sin(a)*r};}
+      tx=u.patrolPt.x;tz=u.patrolPt.z;arrive=0.7;
+    } else if(u.stance==='follow'){
+      // if the worker is gone, fall back to holding ground here
+      if(!(u.guard&&u.guard.parent)){u.stance='guard';u.guard=null;}
+      tx=post.x;tz=post.z;arrive=2.6;
+    } else { // sentry / guard → stand at the post
+      tx=post.x;tz=post.z;arrive=(u.stance==='sentry')?1.0:2.5;
+    }
+    const dx=tx-v.position.x,dz=tz-v.position.z,d=Math.hypot(dx,dz);
+    if(d>arrive){_cv.set(dx,0,dz).normalize();walk(v,_cv,COMBAT.soldierSpeed*0.85,dt);v.rotation.y=Math.atan2(dx,dz);animWalk(u,dt);}
     else{u.armR.rotation.x*=0.8;}}
 }
 function removeWall(s){let i=G.walls.indexOf(s);if(i>=0)G.walls.splice(i,1);
