@@ -205,6 +205,18 @@ Age of Empires-style game."
     [1,1.7,2.8]` (rides Masonry/Fortification research). `UPGRADE.wall` added;
     finishUpgrade restyles walls instead of scaling; save/restore rebuilds the
     upgraded look + HP from the persisted level.
+53. **Soldier orders** — spearmen/archers obey commands: tap ground→march & stand
+    sentry, tap a worker→escort/protect, tap a building→guard it; Orders menu (Assign
+    tab swaps for soldiers) adds Patrol / Hold the Line. `tickSoldier` leashes chases
+    to the post (self-defense exception). Sel-card shows role+stance.
+54. **Pathing fixes** — units get tap-selection priority (raycast villagers first) so
+    a settler on/behind a building is always selectable; a stuck-watchdog (`unstick`)
+    frees a settler that makes no progress for ~1.6s (shoves off the footprint → idle,
+    keeps carried goods), ending the soft-lock against clustered buildings.
+55. **Build rotation + fence lines** — ↻ Turn button rotates a placement 90° (any
+    building; rotation persists via new `ry` save field). Walls now build as a line:
+    pick start→end, posts auto-fill/orient along it (`wallSegPositions`), cost+place
+    per affordable segment, builders auto-assigned and chain post-to-post.
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is

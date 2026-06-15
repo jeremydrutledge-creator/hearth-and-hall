@@ -255,6 +255,7 @@
 </div>
 <div class="bar" id="confirmBar">
   <button class="tab primary" id="bConfirm">✔ Build here</button>
+  <button class="tab" id="bRotate">↻ Turn</button>
   <button class="tab" id="bCancel">✖ Cancel</button>
 </div>
 
@@ -1831,13 +1832,68 @@ function placeValid(type,x,z){
 }
 function tintGhost(bm,valid){bm.ghost.traverse(o=>{if(o.material&&o.material.emissive){
   o.material.emissive.setHex(valid?0x000000:0x6a1414);o.material.emissiveIntensity=valid?0:1;}});}
+function tintMesh(g,valid){g.traverse(o=>{if(o.material&&o.material.emissive){
+  o.material.emissive.setHex(valid?0x000000:0x6a1414);o.material.emissiveIntensity=valid?0:1;}});}
+function affordCount(cost){let n=Infinity;for(const k in cost)n=Math.min(n,Math.floor((G[k]||0)/cost[k]));return n;}
+function tooCloseToBuilding(x,z,mind){for(const b of G.buildings){if(b.userData.kind!=='building'&&b.userData.kind!=='site')continue;
+  if(Math.hypot(b.position.x-x,b.position.z-z)<(mind||1.7))return true;}return false;}
+// ===== fence line builder (walls run from point A to point B as a row of segments) =====
+const WALLSEG=2.4;
+function wallSegPositions(a,b){
+  const dx=b.x-a.x,dz=b.z-a.z,len=Math.hypot(dx,dz);
+  const ux=len>0.001?dx/len:1,uz=len>0.001?dz/len:0,ang=Math.atan2(-uz,ux);
+  const n=Math.max(0,Math.round(len/WALLSEG)),out=[];
+  for(let i=0;i<=n;i++){const t=n>0?i/n:0;out.push({x:a.x+dx*t,z:a.z+dz*t,ang});}
+  return out;
+}
+function enterWallLine(){
+  const c=new THREE.Group();scene.add(c);
+  G.buildMode={type:'wall',line:true,a:null,b:null,ghost:c,segs:[]};
+  $('mainBar').classList.add('hide');$('confirmBar').classList.add('show');$('bRotate').style.display='none';
+  $('bConfirm').textContent='✔ Build fence';
+  hint('Tap the fence start, then tap the end — posts fill the line. Tap again to redo.');
+}
+function rebuildWallPreview(){
+  const bm=G.buildMode,c=bm.ghost;while(c.children.length)c.remove(c.children[0]);bm.segs=[];
+  if(!bm.a)return;
+  const pts=bm.b?wallSegPositions(bm.a,bm.b):[{x:bm.a.x,z:bm.a.z,ang:0}];
+  const budget=affordCount(COSTS.wall);let placeable=0;
+  for(const pt of pts){const valid=placeValid('wall',pt.x,pt.z)&&!tooCloseToBuilding(pt.x,pt.z,1.6);
+    const ok=valid&&placeable<budget;if(ok)placeable++;
+    const gh=getMesh('wall');gh.position.set(pt.x,getH(pt.x,pt.z),pt.z);gh.rotation.y=pt.ang;
+    gh.traverse(o=>{if(o.material){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=0.5;}});
+    tintMesh(gh,ok);c.add(gh);bm.segs.push({x:pt.x,z:pt.z,ang:pt.ang,valid});}
+}
+function confirmWallLine(){
+  const bm=G.buildMode;if(!bm||!bm.line)return;
+  if(!bm.a){toast('Tap to set the fence start.');return;}
+  const sites=[];
+  for(const s of bm.segs){if(!s.valid)continue;if(!afford(COSTS.wall))break;
+    spend(COSTS.wall);
+    const site=getMesh('wall');site.position.set(s.x,getH(s.x,s.z),s.z);site.rotation.y=s.ang;site.scale.y=0.12;
+    site.userData={kind:'site',type:'wall',progress:0,need:BTIME.wall,rot:s.ang};
+    shadows(site);scene.add(site);G.buildings.push(site);sites.push(site);}
+  cancelBuild();
+  if(sites.length){assignFenceBuilders(sites);toast('🧱 Raising a fence of '+sites.length+' post'+(sites.length>1?'s':'')+'.');refreshHUD();}
+  else toast('Couldn’t place a fence there.');
+}
+function assignFenceBuilders(sites){
+  const avail=G.villagers.filter(v=>!v.userData.soldier);
+  for(const site of sites){let best=null,bd=1e9;
+    for(const v of avail){if(v.__used)continue;const d=v.position.distanceTo(site.position)+(v.userData.phase==='idle'?0:25);if(d<bd){bd=d;best=v;}}
+    if(best){best.__used=true;manualBuild(best,site);}else break;   // leftover posts get built by chaining as builders free up
+  }
+  for(const v of avail)delete v.__used;
+}
 function enterBuild(type){
   if(!afford(COSTS[type])){toast('Not enough resources.');return;}
   cancelBuild();
+  if(type==='wall'){enterWallLine();return;}
+  $('bRotate').style.display='';$('bConfirm').textContent='✔ Build here';
   const ghost=getMesh(type);
   ghost.traverse(o=>{if(o.material){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=0.55;}});
   ghost.position.set(camTarget.x,getH(camTarget.x,camTarget.z),camTarget.z);
-  scene.add(ghost);G.buildMode={type,ghost};
+  scene.add(ghost);G.buildMode={type,ghost,rot:0};
   tintGhost(G.buildMode,placeValid(type,camTarget.x,camTarget.z));
   $('mainBar').classList.add('hide');$('confirmBar').classList.add('show');
   hint(type==='quarry'?'Quarries need rocky ground — place it in the eastern hills'
@@ -1845,17 +1901,19 @@ function enterBuild(type){
     :'Tap the ground to place the '+type+', then confirm');
 }
 function cancelBuild(){if(G.buildMode){scene.remove(G.buildMode.ghost);G.buildMode=null;}
-  $('mainBar').classList.remove('hide');$('confirmBar').classList.remove('show');}
+  $('mainBar').classList.remove('hide');$('confirmBar').classList.remove('show');$('bRotate').style.display='';}
 function quarryOK(p){if(rocky(p.x,p.z)>0.22)return true;
   for(const n of G.nodes)if(n.userData.res==='stone'&&n.position.distanceTo(p)<6)return true;return false;}
 function confirmBuild(){
-  const bm=G.buildMode;if(!bm)return;const p=bm.ghost.position;
+  const bm=G.buildMode;if(!bm)return;
+  if(bm.line){confirmWallLine();return;}
+  const p=bm.ghost.position;
   // only block the actual pond (under the water disc), not low-but-dry ground
   if(Math.hypot(p.x-POND.x,p.z-POND.z)<POND.r+1.8 && getH(p.x,p.z)<WATER_Y+0.5){toast('Can\u2019t build in the pond.');return;}
   if(bm.type==='quarry'&&!quarryOK(p)){toast('No stone here — use the rocky hills.');return;}
   spend(COSTS[bm.type]);
-  const site=getMesh(bm.type);site.position.copy(p);site.scale.y=0.12;
-  site.userData={kind:'site',type:bm.type,progress:0,need:BTIME[bm.type]};
+  const site=getMesh(bm.type);site.position.copy(p);site.scale.y=0.12;site.rotation.y=bm.rot||0;
+  site.userData={kind:'site',type:bm.type,progress:0,need:BTIME[bm.type],rot:bm.rot||0};
   const PR={house:2.7,storehouse:2.9,farm:3.2,coop:2.2,pen:3.5,lumber:2.7,quarry:3.1,hall:4.3};
   groundPatch(p.x,p.z,PR[bm.type]||2.7);
   shadows(site);scene.add(site);G.buildings.push(site);
@@ -1866,6 +1924,8 @@ function confirmBuild(){
   toast('Construction started.');refreshHUD();
 }
 $('bConfirm').addEventListener('click',confirmBuild);
+$('bRotate').addEventListener('click',()=>{if(!G.buildMode)return;
+  G.buildMode.rot=(G.buildMode.rot||0)+Math.PI/2;G.buildMode.ghost.rotation.y=G.buildMode.rot;});
 $('bCancel').addEventListener('click',cancelBuild);
 
 // ===== input =====
@@ -1917,7 +1977,10 @@ function handleTap(x,y){
     G.followMode=false;G.followFor=null;hint('');return;
   }
   if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length){const pt=hit[0].point;
-    G.buildMode.ghost.position.copy(pt);tintGhost(G.buildMode,placeValid(G.buildMode.type,pt.x,pt.z));}return;}
+    if(G.buildMode.line){const bm=G.buildMode;
+      if(!bm.a)bm.a={x:pt.x,z:pt.z};else if(!bm.b)bm.b={x:pt.x,z:pt.z};else{bm.a={x:pt.x,z:pt.z};bm.b=null;}
+      rebuildWallPreview();}
+    else{G.buildMode.ghost.position.copy(pt);tintGhost(G.buildMode,placeValid(G.buildMode.type,pt.x,pt.z));}}return;}
   hideBldCard();   // any canvas tap dismisses the building card; a building tap re-opens it
   // units get selection priority so a settler standing on/behind a building can always be tapped
   const vh=castAt(x,y,G.villagers);
@@ -2044,7 +2107,12 @@ function tickVillager(v,dt){
       u.workT+=dt;u.armR.rotation.x=Math.sin(u.workT*9)*0.8-0.3;u.armL.rotation.x=Math.sin(u.workT*9)*0.6-0.2;
       s.userData.progress+=dt;const p=Math.min(1,s.userData.progress/s.userData.need);
       if(!s.userData.upgrading)s.scale.y=0.12+0.88*p;
-      if(p>=1){if(s.userData.upgrading)finishUpgrade(s);else finishBuilding(s);u.site=null;u.armR.rotation.x=0;u.armL.rotation.x=0;
+      if(p>=1){const wasFence=(s.userData.type==='wall'&&!s.userData.upgrading);
+        if(s.userData.upgrading)finishUpgrade(s);else finishBuilding(s);u.site=null;u.armR.rotation.x=0;u.armL.rotation.x=0;
+        // a fence builder keeps marching to the next unfinished post
+        if(wasFence){let best=null,bd=1e9;
+          for(const bb of G.buildings)if(bb.userData.kind==='site'&&bb.userData.type==='wall'){const d=v.position.distanceTo(bb.position);if(d<bd){bd=d;best=bb;}}
+          if(best&&bd<28){manualBuild(v,best);break;}}
         // resume order
         if(u.order){const nn=nearestNode(v,u.order);if(nn){u.node=nn;u.phase='toNode';}else u.phase='idle';}else u.phase='idle';}
       break;}
@@ -2467,7 +2535,7 @@ function serialize(){
     keep:{level:keep.userData.level||1,range:keep.userData.range,dmg:keep.userData.dmg},
     nodes:G.nodes.map(n=>({x:+n.position.x.toFixed(2),z:+n.position.z.toFixed(2),res:n.userData.res,amount:n.userData.amount})),
     buildings:G.buildings.filter(b=>b!==keep&&b.userData.kind==='building').map(b=>({type:b.userData.type,x:+b.position.x.toFixed(2),z:+b.position.z.toFixed(2),
-      level:b.userData.level||1,hp:b.userData.hp,range:b.userData.range,dmg:b.userData.dmg,fireRate:b.userData.fireRate,sx:b.scale.x,sy:b.scale.y,sz:b.scale.z})),
+      level:b.userData.level||1,hp:b.userData.hp,range:b.userData.range,dmg:b.userData.dmg,fireRate:b.userData.fireRate,sx:b.scale.x,sy:b.scale.y,sz:b.scale.z,ry:+b.rotation.y.toFixed(3)})),
     villagers:G.villagers.map(v=>({x:+v.position.x.toFixed(2),z:+v.position.z.toFixed(2),soldier:!!v.userData.soldier,ranged:!!v.userData.ranged,hp:v.userData.hp})),
   };
 }
@@ -2476,6 +2544,7 @@ function loadRaw(){try{const s=localStorage.getItem(SAVE_KEY);if(!s)return null;
 function placeSaved(b){
   const s=getMesh(b.type);s.position.set(b.x,getH(b.x,b.z),b.z);
   if(b.sx)s.scale.set(b.sx,b.sy,b.sz);
+  if(b.ry)s.rotation.y=b.ry;
   s.userData={kind:'building',type:b.type,level:b.level||1};
   shadows(s);scene.add(s);G.buildings.push(s);
   if(OBS_R[b.type]){const o={x:b.x,z:b.z,r:OBS_R[b.type]};G.obstacles.push(o);s.userData.obs=o;}
