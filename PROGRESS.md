@@ -197,6 +197,14 @@ Age of Empires-style game."
     already-saved `rateFood` (+0.5) and `cap` (+150), so it persists with NO new save
     field and no double-apply on reload (verified: save→reload keeps rateFood/cap and
     the mesh). Build menu + placement are generic, so it needed no handler changes.
+52. **Upgradeable walls** — the Palisade (age 1, wood fence) now upgrades through
+    3 tiers via the standard building card: Lv1 wood fence → Lv2 reinforced palisade
+    (taller logs, stone footing, brace) → Lv3 stone rampart with battlements. Mesh
+    split into a named `wallStruct` sub-group so `restyleWall` swaps the look on
+    upgrade without touching the health bar. HP scales `wallHp(lv)=COMBAT.wallHP×
+    [1,1.7,2.8]` (rides Masonry/Fortification research). `UPGRADE.wall` added;
+    finishUpgrade restyles walls instead of scaling; save/restore rebuilds the
+    upgraded look + HP from the persisted level.
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is
