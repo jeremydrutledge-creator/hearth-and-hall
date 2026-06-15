@@ -1919,6 +1919,12 @@ function handleTap(x,y){
   if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length){const pt=hit[0].point;
     G.buildMode.ghost.position.copy(pt);tintGhost(G.buildMode,placeValid(G.buildMode.type,pt.x,pt.z));}return;}
   hideBldCard();   // any canvas tap dismisses the building card; a building tap re-opens it
+  // units get selection priority so a settler standing on/behind a building can always be tapped
+  const vh=castAt(x,y,G.villagers);
+  if(vh.length){const r=rootOf(vh[0].object);
+    if(r&&r.userData.kind==='villager'){
+      if(G.selected&&G.selected.userData.soldier&&!r.userData.soldier&&r!==G.selected){commandFollow(G.selected,r);return;}
+      select(r);return;}}
   const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.landmarks,...G.buildings]);
   if(hits.length){const r=rootOf(hits[0].object);
     if(r){const k=r.userData.kind;
@@ -1965,9 +1971,27 @@ function animRest(u){u.legL.rotation.x*=0.8;u.legR.rotation.x*=0.8;}
 function setLoad(u,v){const has=u.carrying>0;u.load.visible=has;
   if(has){u.load.material=loadMat[u.carryRes];const s=0.18+0.18*(u.carrying/CARRY);u.load.scale.setScalar(s);}}
 
+// phases where a settler is actively trying to walk somewhere (so a lack of progress = stuck)
+const MOVE_PHASES={move:1,toNode:1,toDepot:1,toSite:1,toPrey:1,toFish:1,toLandmark:1};
+function unstick(v){const u=v.userData;
+  // shove out of any footprint it's wedged in
+  for(const o of G.obstacles){const dx=v.position.x-o.x,dz=v.position.z-o.z,d=Math.hypot(dx,dz);
+    if(d<o.r+0.35){let ux=d>0.01?dx/d:Math.random()-0.5,uz=d>0.01?dz/d:Math.random()-0.5;const L=Math.hypot(ux,uz)||1;
+      v.position.x=o.x+ux/L*(o.r+0.6);v.position.z=o.z+uz/L*(o.r+0.6);v.position.y=getH(v.position.x,v.position.z);}}
+  // free it from the stuck task so it's idle, available and selectable (keeps any carried goods)
+  clearTargets(u);u.phase='idle';u.rallyReady=true;u._stuck=0;
+}
 function tickVillager(v,dt){
   const u=v.userData;
   if(u.soldier){tickSoldier(v,dt);return;}
+  // stuck-watchdog: if it should be walking but isn't getting anywhere, unwedge + free it
+  u._st=(u._st||0)+dt;
+  if(u._st>=0.5){
+    const moved=Math.hypot(v.position.x-(u._lx!=null?u._lx:v.position.x),v.position.z-(u._lz!=null?u._lz:v.position.z));
+    if(MOVE_PHASES[u.phase]&&moved<0.12)u._stuck=(u._stuck||0)+u._st;else u._stuck=0;
+    u._lx=v.position.x;u._lz=v.position.z;u._st=0;
+    if(u._stuck>=1.6)unstick(v);
+  }
   switch(u.phase){
     case 'move':{
       const d=new THREE.Vector3().subVectors(u.dest,v.position);d.y=0;
