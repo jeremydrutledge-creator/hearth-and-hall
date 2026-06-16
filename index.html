@@ -225,7 +225,8 @@
     <button class="opt" data-order="sentry">🛡 Stand Sentry<small>hold this ground</small></button>
     <button class="opt" data-order="patrol">🔄 Patrol<small>roam this area, engage raiders</small></button>
     <button class="opt" data-order="follow">🫂 Escort a Worker<small>then tap a worker to guard</small></button>
-    <button class="opt full" data-order="hold">🏰 Hold the Line<small>muster at the rally / keep</small></button>
+    <button class="opt" data-order="guard">🏰 Guard a Building<small>then tap a building to guard</small></button>
+    <button class="opt full" data-order="hold">⚔ Hold the Line<small>muster at the rally / keep</small></button>
   </div>
 </div></div>
 
@@ -1685,7 +1686,7 @@ function select(v){
   G.selected=v;
   $('tabJobs').disabled=!v;
   if(v){v.userData.ring.visible=true;
-    if(v.userData.soldier)hint('Tap ground to post a sentry, a worker to escort, or a building to guard — ⚑ Orders for patrol / hold');
+    if(v.userData.soldier)hint('Tap open ground to move & stand sentry · ⚑ Orders for patrol, escort or guard');
     else hint('Tap a tree, rock, berry or wild game (deer/boar/rabbit) — or use ⚑ Assign for a standing job');}
   updateSelCard();
 }
@@ -1801,6 +1802,7 @@ document.querySelectorAll('#orderMenu .opt').forEach(b=>b.addEventListener('clic
   else if(o==='patrol')commandPatrol(v);
   else if(o==='hold')commandHold(v);
   else if(o==='follow'){G.followMode=true;G.followFor=v;hint('Tap a worker for this soldier to escort and protect.');}
+  else if(o==='guard'){G.guardMode=true;G.guardFor=v;hint('Tap a building for this soldier to guard.');}
 }));
 document.querySelectorAll('#jobMenu .opt').forEach(b=>b.addEventListener('click',()=>{
   const j=b.dataset.job;
@@ -1976,6 +1978,12 @@ function handleTap(x,y){
     else toast('Tap one of your workers to escort.');
     G.followMode=false;G.followFor=null;hint('');return;
   }
+  if(G.guardMode){
+    const gh=castAt(x,y,G.buildings);const r=gh.length?rootOf(gh[0].object):null;
+    if(r&&r.userData.kind==='building'&&G.guardFor)commandGuardBuilding(G.guardFor,r);
+    else toast('Tap a building for this soldier to guard.');
+    G.guardMode=false;G.guardFor=null;hint('');return;
+  }
   if(G.buildMode){const hit=castAt(x,y,[terrain]);if(hit.length){const pt=hit[0].point;
     if(G.buildMode.line){const bm=G.buildMode;
       if(!bm.a)bm.a={x:pt.x,z:pt.z};else if(!bm.b)bm.b={x:pt.x,z:pt.z};else{bm.a={x:pt.x,z:pt.z};bm.b=null;}
@@ -1985,16 +1993,11 @@ function handleTap(x,y){
   // units get selection priority so a settler standing on/behind a building can always be tapped
   const vh=castAt(x,y,G.villagers);
   if(vh.length){const r=rootOf(vh[0].object);
-    if(r&&r.userData.kind==='villager'){
-      if(G.selected&&G.selected.userData.soldier&&!r.userData.soldier&&r!==G.selected){commandFollow(G.selected,r);return;}
-      select(r);return;}}
+    if(r&&r.userData.kind==='villager'){select(r);return;}}
   const hits=castAt(x,y,[...G.villagers,...G.deer,...G.nodes,...shoals,...G.landmarks,...G.buildings]);
   if(hits.length){const r=rootOf(hits[0].object);
     if(r){const k=r.userData.kind;
-      if(k==='villager'){
-        // a selected soldier tapping a worker escorts them; tapping another soldier just switches selection
-        if(G.selected&&G.selected.userData.soldier&&!r.userData.soldier&&r!==G.selected){commandFollow(G.selected,r);return;}
-        select(r);return;}
+      if(k==='villager'){select(r);return;}
       if(k==='landmark'){if(G.selected)manualExplore(G.selected,r);
         else toast(r.userData.explored?'Already explored — '+r.userData.lore:r.userData.name+' — send a settler to investigate.');return;}
       if(k==='deer'||k==='boar'||k==='rabbit'){if(G.selected)manualHunt(G.selected,r);else toast('Tap a settler first.');return;}
@@ -2002,7 +2005,7 @@ function handleTap(x,y){
       if(k==='shoal'){if(G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);u.shoal=r;
         startFishing(G.selected);toast('🎣 Casting at the shoal.');updateSelCard();}else toast('Tap a settler first.');return;}
       if(k==='site'){if(G.selected)manualBuild(G.selected,r);return;}
-      if(k==='building'){if(G.selected&&G.selected.userData.soldier){commandGuardBuilding(G.selected,r);return;}selectBuilding(r);return;}}}
+      if(k==='building'){selectBuilding(r);return;}}}
   // tapping any lake sends a selected settler to fish its shore
   const w=castAt(x,y,waters);
   if(w.length&&G.selected){const u=G.selected.userData;u.order='fish';clearTargets(u);

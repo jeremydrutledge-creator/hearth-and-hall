@@ -217,6 +217,10 @@ Age of Empires-style game."
     building; rotation persists via new `ry` save field). Walls now build as a line:
     pick start→end, posts auto-fill/orient along it (`wallSegPositions`), cost+place
     per affordable segment, builders auto-assigned and chain post-to-post.
+56. **Soldier-select fix** — tapping a worker/building always SELECTS it again (the
+    direct soldier→escort/guard taps trapped selection). Open-ground tap still moves a
+    selected soldier; escort/guard are explicit via the Orders menu target-pick modes
+    (`followMode`/`guardMode`).
 
 STATUS: feature-complete sandbox. 30s integration smoke test (all menus, rally,
 ghost, speed cycle, selection, minimap pan) = 0 errors. Next best work is
