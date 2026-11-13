@@ -33,7 +33,7 @@
 | **A Varrow lantern** (an old bronze lantern that burns blue and never goes out underwater) | 100 gp | Common; Bertie has one; it's his best thing; he'll sell it to someone he likes |
 | **Bell-clapper charm** (rings faintly when Hushed dead are within 60 ft) | 50 gp | glimmer-free; marsh-witch work; Common in effect; the party will want it in Ch18 |
 
-**Art:** `ch18-drowners-rest.png` (the stilt-huts in mist, the ruin's towers behind) · `npc-349-bertie-gall.png`.
+**Art:** `ch18-drowners-rest.jpg` (the stilt-huts in mist, the ruin's towers behind) · `npc-349-bertie-gall.jpg`.
 
 ---
 

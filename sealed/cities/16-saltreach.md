@@ -43,7 +43,7 @@
 ### 2.3 The Navy Yard
 Lady Penrose's three warships (the *Steadfast*, the *Wren*, the *Old Maud*, named by the crews over her protests). If the Crown is allied (Ch19 ★1 route A), the Yard supplies the ship. Otherwise the Yard is a heist target (§7).
 
-**Art:** `ch19-saltreach.png` (the white town and lighthouse over the harbor) · `ch19-fathoms-chandlery.png` · `ch19-the-barnacle.png` · `npc-071-maud-penrose.png` · `npc-072-jago-trelawn.png` · `npc-350-tamsin-gale.png` · `npc-351-abel-fathom.png` · `npc-352-gussie-crabb.png`.
+**Art:** `ch19-saltreach.jpg` (the white town and lighthouse over the harbor) · `ch19-fathoms-chandlery.jpg` · `ch19-the-barnacle.jpg` · `npc-071-maud-penrose.jpg` · `npc-072-jago-trelawn.jpg` · `npc-350-tamsin-gale.jpg` · `npc-351-abel-fathom.jpg` · `npc-352-gussie-crabb.jpg`.
 
 ---
 

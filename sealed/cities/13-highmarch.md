@@ -48,7 +48,7 @@
 ### 2.3 The Lowtown market
 Everything cheap, everything secondhand, half of it stolen. Mundane gear at **−20%**. One magic stall: **Mother Thistlewood** (no ID; Tier 3), who sells **Potions of Healing** at 40 gp (they're real) and **Potions of Supreme Healing** at 1,000 gp (they're also real; she won't say where she got them; three only; T4).
 
-**Art:** `ch17-highmarch-ridge.png` (the castle and cathedral from the river) · `ch17-kingsbridge.png` · `ch17-graves-and-daughter.png` · `ch17-dornes-books.png` · `npc-345-hesper-graves.png` · `npc-344-felix-dorne.png` · `npc-069-edric.png` · `npc-070-anselm-crane.png`.
+**Art:** `ch17-highmarch-ridge.jpg` (the castle and cathedral from the river) · `ch17-kingsbridge.jpg` · `ch17-graves-and-daughter.jpg` · `ch17-dornes-books.jpg` · `npc-345-hesper-graves.jpg` · `npc-344-felix-dorne.jpg` · `npc-069-edric.jpg` · `npc-070-anselm-crane.jpg`.
 
 ---
 

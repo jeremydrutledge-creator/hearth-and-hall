@@ -58,7 +58,7 @@ Haggling is a sport here: **every shop's Haggle DC is −2** (they expect it), b
 ### 2.4 The Toll Guard's Contract Office (Purse Hall)
 Write and seal any contract (2 gp); witness a duel (5 gp); post a bounty (10% of the bounty). **Every odd job in Tollhaven goes through here.** The clerk is a dried-up man called **Mr. Petch** (no ID) who has never smiled.
 
-**Art:** `ch09-fairbanks-curios.png` · `npc-326-odile-fairbanks.png` · `ch09-gull-hill-armory.png` · `npc-327-gaspard-quist.png` · `ch09-the-golden-cage.png` · `ch09-lamplight-row.png`.
+**Art:** `ch09-fairbanks-curios.jpg` · `npc-326-odile-fairbanks.jpg` · `ch09-gull-hill-armory.jpg` · `npc-327-gaspard-quist.jpg` · `ch09-the-golden-cage.jpg` · `ch09-lamplight-row.jpg`.
 
 ---
 

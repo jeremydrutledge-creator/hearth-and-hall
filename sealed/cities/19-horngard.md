@@ -35,7 +35,7 @@ The Horngard has no shops in the Tall Folk sense. Each herd-hall trades from its
 ### 2.2 The armory of Clan Ironhorn
 After the turning only, by Brannoc's gift (Ch16 lists "a thing from the Ironhorn armory" as treasure; the chapter decides it). Sorcha can repair or resize anything from it (free).
 
-**Art:** `ch15-the-horngard.png` (grey-green pastures, drums at herd-hall doors) · `ch15-cairn-answer.png` (the standing stones on the crag) · `ch15-the-drum-hall.png` · `npc-356-sorcha-drumhand.png`.
+**Art:** `ch15-the-horngard.jpg` (grey-green pastures, drums at herd-hall doors) · `ch15-cairn-answer.jpg` (the standing stones on the crag) · `ch15-the-drum-hall.jpg` · `npc-356-sorcha-drumhand.jpg`.
 
 ---
 

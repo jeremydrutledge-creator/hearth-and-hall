@@ -45,7 +45,7 @@ Not a shop. But the Seven Mothers' barges are where you **get things done**: a l
 ### 2.5 Hettie Brine-no-relation's *Lucky Eel*
 The gambling barge. Hettie runs fish-auction betting (Ch8) and a Kings and Ferrymen table (Street sharp, `00-index.md` §3.5). She's a Mother (SC 8-A); she rates people by how they lose.
 
-**Art:** `ch08-driftmarket.png` (the raft-town at dusk, wide) · `ch08-the-swap-deck.png` · `ch08-the-chapel-barge.png` · `npc-062-granny-wenna-tull.png` · `npc-324-father-malory-wake.png` · `npc-322-corrie-bask.png`.
+**Art:** `ch08-driftmarket.jpg` (the raft-town at dusk, wide) · `ch08-the-swap-deck.jpg` · `ch08-the-chapel-barge.jpg` · `npc-062-granny-wenna-tull.jpg` · `npc-324-father-malory-wake.jpg` · `npc-322-corrie-bask.jpg`.
 
 ---
 

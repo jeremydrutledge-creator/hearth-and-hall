@@ -45,7 +45,7 @@ A cavern market of stalls under hanging lamps: gems, iron, gnome-trade clockwork
 ### 2.3 The Hot Kettles (bathhouses)
 A cavern of hot pools stepping down the rock, each hotter than the last. A soak: 2 cp. **The Kettle Plunge** contest (§3). Rest here counts as a **long rest with advantage** on the next day's first Constitution save (it's that good).
 
-**Art:** `ch10-dun-morrach-front-gate.png` · `ch10-the-hot-kettles.png` · `ch10-stonemantles.png` · `npc-341-gudrun-stonemantle.png` · `npc-066-torvald-deepanvil.png` · `npc-067-brynja.png`.
+**Art:** `ch10-dun-morrach-front-gate.jpg` · `ch10-the-hot-kettles.jpg` · `ch10-stonemantles.jpg` · `npc-341-gudrun-stonemantle.jpg` · `npc-066-torvald-deepanvil.jpg` · `npc-067-brynja.jpg`.
 
 ---
 

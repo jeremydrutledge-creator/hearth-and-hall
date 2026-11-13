@@ -14,16 +14,16 @@
 
 | # | Workshop | Keeper (ID) | Specialty | Haggle | Art (interior · portrait) |
 |---|---|---|---|---|---|
-| 1 | **Hearthglow** | Old Wat Ember (NPC-050) | Warmth and comfort | DC 13 (flattery about his kettle) | `ch02-row-hearthglow.png` · `npc-050-wat-ember.png` |
-| 2 | **The Dry Cloak** | Sister Rosalind Fairweather (NPC-051) | Weather and clothing | DC 15 (a weather story) | `ch02-row-the-dry-cloak.png` · `npc-051-rosalind-fairweather.png` |
-| 3 | **Bottomless Barrel** | Jem Tapper (NPC-052) | Food and drink | DC 12 (drink with him) | `ch02-row-bottomless-barrel.png` · `npc-052-jem-tapper.png` |
-| 4 | **Keepsake & Locket** | Widow Elspeth Marsh (NPC-053) | Memory and sentiment | none ("Love has a price and it's this one") | `ch02-row-keepsake-and-locket.png` · `npc-053-elspeth-marsh.png` |
-| 5 | **Lightfinger** | Corwin Lockley (NPC-054) | "Stage magic" (thief-adjacent) | DC 14 (show him a trick) | `ch02-row-lightfinger.png` · `npc-054-corwin-lockley.png` |
-| 6 | **The Lamplit** | Clara Grane (NPC-005) | Light and song | none (she undercharges; Ash may notice) | `ch02-row-the-lamplit.png` · `npc-005-clara-grane.png` |
-| 7 | **Quickhand Tools** | Dagny Coalbeard (NPC-055) | Tools and crafting | DC 16 (no haggling with anyone who calls her "lass") | `ch02-row-quickhand-tools.png` · `npc-055-dagny-coalbeard.png` |
-| 8 | **Small Mercies** | Tobias Neat (NPC-056) | Charity and healing | none; at cost to the poor (−40% if you're buying for someone in need and he believes you) | `ch02-row-small-mercies.png` · `npc-056-tobias-neat.png` |
+| 1 | **Hearthglow** | Old Wat Ember (NPC-050) | Warmth and comfort | DC 13 (flattery about his kettle) | `ch02-row-hearthglow.jpg` · `npc-050-wat-ember.jpg` |
+| 2 | **The Dry Cloak** | Sister Rosalind Fairweather (NPC-051) | Weather and clothing | DC 15 (a weather story) | `ch02-row-the-dry-cloak.jpg` · `npc-051-rosalind-fairweather.jpg` |
+| 3 | **Bottomless Barrel** | Jem Tapper (NPC-052) | Food and drink | DC 12 (drink with him) | `ch02-row-bottomless-barrel.jpg` · `npc-052-jem-tapper.jpg` |
+| 4 | **Keepsake & Locket** | Widow Elspeth Marsh (NPC-053) | Memory and sentiment | none ("Love has a price and it's this one") | `ch02-row-keepsake-and-locket.jpg` · `npc-053-elspeth-marsh.jpg` |
+| 5 | **Lightfinger** | Corwin Lockley (NPC-054) | "Stage magic" (thief-adjacent) | DC 14 (show him a trick) | `ch02-row-lightfinger.jpg` · `npc-054-corwin-lockley.jpg` |
+| 6 | **The Lamplit** | Clara Grane (NPC-005) | Light and song | none (she undercharges; Ash may notice) | `ch02-row-the-lamplit.jpg` · `npc-005-clara-grane.jpg` |
+| 7 | **Quickhand Tools** | Dagny Coalbeard (NPC-055) | Tools and crafting | DC 16 (no haggling with anyone who calls her "lass") | `ch02-row-quickhand-tools.jpg` · `npc-055-dagny-coalbeard.jpg` |
+| 8 | **Small Mercies** | Tobias Neat (NPC-056) | Charity and healing | none; at cost to the poor (−40% if you're buying for someone in need and he believes you) | `ch02-row-small-mercies.jpg` · `npc-056-tobias-neat.jpg` |
 
-A wide establishing painting of the whole lane: `ch02-enchanters-row.png`.
+A wide establishing painting of the whole lane: `ch02-enchanters-row.jpg`.
 
 ---
 

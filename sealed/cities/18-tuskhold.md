@@ -38,7 +38,7 @@ Not a shop. **Memory-stones** (Ch14): sit with a Rememberer and listen to one lo
 ### 2.3 The Fountain Court (food and rest)
 Tuskhold feeds guests: flatbread, fruit, a thick bean stew. Free, always, even during the siege (Ch14 "Feed the city" is the party feeding *them* back).
 
-**Art:** `ch14-tuskhold.png` (the grey city on the plain, the siege-lines' fires) · `ch16-the-remembering.png` · `ch14-oyelus-workshop.png` · `npc-021-umbari.png` · `npc-183-nkemba.png` · `npc-355-oyelu.png`.
+**Art:** `ch14-tuskhold.jpg` (the grey city on the plain, the siege-lines' fires) · `ch16-the-remembering.jpg` · `ch14-oyelus-workshop.jpg` · `npc-021-umbari.jpg` · `npc-183-nkemba.jpg` · `npc-355-oyelu.jpg`.
 
 ---
 

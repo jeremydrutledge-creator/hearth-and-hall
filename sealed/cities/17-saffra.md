@@ -40,7 +40,7 @@ Bell-market haggling: Ch14 (**Persuasion or Deception vs the trader's Insight +6
 ### 2.3 Lodging and food
 Every story-hall has rooms. A night: **one story** (Charisma (Performance) DC 13), or 5 sp. Tabaxi street food: grilled river-fish with honey and pepper, 1 sp.
 
-**Art:** `ch14-saffra.png` (awnings and bell-towers above the Rennet) · `ch14-the-bell-market.png` · `ch14-the-hall-of-bells.png` · `npc-061-saffi.png` · `npc-353-yesh-copper-whisker.png` · `npc-354-lio.png`.
+**Art:** `ch14-saffra.jpg` (awnings and bell-towers above the Rennet) · `ch14-the-bell-market.jpg` · `ch14-the-hall-of-bells.jpg` · `npc-061-saffi.jpg` · `npc-353-yesh-copper-whisker.jpg` · `npc-354-lio.jpg`.
 
 ---
 

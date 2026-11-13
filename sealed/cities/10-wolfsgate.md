@@ -42,7 +42,7 @@
 **Ring formats (`00-index.md` §5.1, CHG-19):** the Yard spars in **Touches** (Company rules: waster swords, three touches, the sergeant judges) and **Last-Standing** on payday. Knife duels (§3.2) are Touches with waster knives. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 Anything can be hired (Ch10). **Rates:** a Grey Wolf Veteran (`act2/ch10` block) **200 gp** a fight (Ch13 allies), a squad of five Wolf soldiers (Street Tough T2 with spears and shields, AC 16) 100 gp a night, a guide over the pass 25 gp, a sapper 50 gp. Every hire is a written contract (Investigation DC 13 for the clause that says "unless the other side pays more" — it's always there, and Ulric's Wolves never use it on a party that's been honest with them).
 
-**Art:** `ch10-wolfsgate.png` (the Wolf Hall in snow) · `ch10-vonns-card-house.png` · `npc-065-ulric-fane.png` · `npc-337-hesketh-vonn.png`.
+**Art:** `ch10-wolfsgate.jpg` (the Wolf Hall in snow) · `ch10-vonns-card-house.jpg` · `npc-065-ulric-fane.jpg` · `npc-337-hesketh-vonn.jpg`.
 
 ---
 

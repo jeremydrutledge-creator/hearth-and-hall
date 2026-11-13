@@ -25,7 +25,7 @@
 
 ## 1. Ash
 
-![Ash](/art/portraits/pc-01-ash.png)
+![Ash](/art/portraits/pc-01-ash.jpg)
 
 **Asheron Fenwick.** Everyone calls him Ash. Only his brothers use "Asheron," and he hates it. Twenty years old. Human. The youngest of three brothers, about twelve years younger than the other two.
 
@@ -100,7 +100,7 @@ Full numbers are on his sheet. In short:
 
 ### Gideon Fenwick
 
-![Gideon](/art/portraits/npc-001-gideon.png)
+![Gideon](/art/portraits/npc-001-gideon.jpg)
 
 *(aka Gid. Spellings that might come through: Gidion.)*
 
@@ -114,7 +114,7 @@ Full numbers are on his sheet. In short:
 
 ### Zeke Fenwick
 
-![Zeke](/art/portraits/npc-002-zeke.png)
+![Zeke](/art/portraits/npc-002-zeke.jpg)
 
 *(Ezekiel. Only Gideon calls him that. Spellings that might come through: Zeek, Ezekial.)*
 
@@ -128,7 +128,7 @@ Full numbers are on his sheet. In short:
 
 ### Moss
 
-![Moss](/art/portraits/npc-003-moss.png)
+![Moss](/art/portraits/npc-003-moss.jpg)
 
 *(Spellings that might come through: Mos, Old Moss.)*
 
@@ -513,13 +513,13 @@ These are rumors. Some are true, some aren't, and some are half true.
 *(Art is being painted. These are the file paths each image will use.)*
 
 **Maps (player versions, labeled only with what a local would know):**
-- Eyrland and the Tamber River: `/player/maps/eyrland-region.png`
-- Emberford: `/player/maps/emberford-city.png`
-- Willow Lane: `/player/maps/willow-lane.png`
+- Eyrland and the Tamber River: `/player/maps/eyrland-region.jpg`
+- Emberford: `/player/maps/emberford-city.jpg`
+- Willow Lane: `/player/maps/willow-lane.jpg`
 
 **Party portraits:**
-- Ash: `/art/portraits/pc-01-ash.png`
-- Gideon: `/art/portraits/npc-001-gideon.png`
-- Zeke: `/art/portraits/npc-002-zeke.png`
-- Moss: `/art/portraits/npc-003-moss.png`
-- Bart: `/art/portraits/familiar-bart.png`
+- Ash: `/art/portraits/pc-01-ash.jpg`
+- Gideon: `/art/portraits/npc-001-gideon.jpg`
+- Zeke: `/art/portraits/npc-002-zeke.jpg`
+- Moss: `/art/portraits/npc-003-moss.jpg`
+- Bart: `/art/portraits/familiar-bart.jpg`

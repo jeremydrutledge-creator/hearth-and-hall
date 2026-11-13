@@ -22,7 +22,7 @@
 
 **The Rope and Raft** (the inn) · run by Nan, cooked for by her daughter-in-law **Molly Pike** (NPC-318; aka Mollie). Low beams, a fire that never goes out, hams in the chimney, the arm-wrestling table with a groove worn in it.
 - Room: Modest 5 sp / Poor (the hayloft) 1 sp. Meal 3 sp. Ale 4 cp (bundle as 1 sp a round for the party).
-- *Art:* `ch04-the-rope-and-raft.png` · `npc-075-nan-pike.png`.
+- *Art:* `ch04-the-rope-and-raft.jpg` · `npc-075-nan-pike.jpg`.
 
 **Pike's Store** (the back of the inn) · Nan sells "whatever came across the river and didn't go back." Mundane gear at PHB price **+10%**, but she always has: rope, oil, rations, a spare ferry-pole, fishing gear, a crate of Bramblecog cider, and **one odd thing** (roll d6 each visit):
 
@@ -124,4 +124,4 @@ Ash's code applies here like the Fringe: **Hobb's Ferry is folk like his folk.**
 | NPC-320 | Brother Ivo (Eye-vo, Evo) | The chapel priest; blesses travelers |
 | NPC-321 | Sergeant Ruth Dane (Ruthie, Ruth Dain) | Grey Wolf recruiter; turns up at Wolfsgate |
 
-**Art:** `ch04-the-rope-and-raft.png` (interior: the arm-wrestling table and the fire) · `ch04-hobbs-ferry.png` (the ferry-raft and rope at dawn) · `npc-075-nan-pike.png` · `npc-318-molly-pike.png`.
+**Art:** `ch04-the-rope-and-raft.jpg` (interior: the arm-wrestling table and the fire) · `ch04-hobbs-ferry.jpg` (the ferry-raft and rope at dawn) · `npc-075-nan-pike.jpg` · `npc-318-molly-pike.jpg`.

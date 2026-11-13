@@ -10,13 +10,13 @@
 
 | Shop | Keeper | District | Haggle DC | Best for | Art (interior · portrait) |
 |---|---|---|---|---|---|
-| The Patient Owl | Master Ambrose Webb (NPC-046) | Glimmerway | 15 (patience lever) | Scrolls, wands, spellbooks, foci, lore | `ch02-the-patient-owl.png` · `npc-046-ambrose-webb.png` |
-| Brightwell & Daughters | Madame Ottoline Brightwell (NPC-047) and daughters (NPC-300–302) | Crownhill | 16 (snob lever) | Social magic, fashion, protection rings | `ch05-brightwell-and-daughters.png` · `npc-047-ottoline-brightwell.png` |
-| Odd Lot | Jory Tolliver (NPC-045) | Market Steps | 12 (counter-offer lever) | Cheap quirky secondhand magic; fence; pawn | `ch01-odd-lot.png` · `npc-045-jory-tolliver.png` |
-| Mother Brine's | Mother Brine (NPC-043) | the Wharves | 14 (sea-story lever) | Potions, antitoxin, sailor charms | `ch01-mother-brines.png` · `npc-043-mother-brine.png` |
-| The Iron Kettle | Hakon Stonebrow (NPC-049) | Commons edge | 16 (no glimmer at the door) | Magic weapons and armor, no glimmer | `ch02-the-iron-kettle.png` · `npc-049-hakon-stonebrow.png` |
-| The Clockwise | Nim Gearwright (NPC-048) | Glimmerway | 13 (demo lever) | Gadgets, clockwork, tools, oddities | `ch02-the-clockwise.png` · `npc-048-nim-gearwright.png` |
-| The Green Jar | Aggie Thorne (NPC-014), for Moss (NPC-003) | Willow Lane | none ("prices are prices") | Herbs, healer's kits, antitoxin, the odd potion | `ch01-the-green-jar.png` · `npc-014-aggie-thorne.png` |
+| The Patient Owl | Master Ambrose Webb (NPC-046) | Glimmerway | 15 (patience lever) | Scrolls, wands, spellbooks, foci, lore | `ch02-the-patient-owl.jpg` · `npc-046-ambrose-webb.jpg` |
+| Brightwell & Daughters | Madame Ottoline Brightwell (NPC-047) and daughters (NPC-300–302) | Crownhill | 16 (snob lever) | Social magic, fashion, protection rings | `ch05-brightwell-and-daughters.jpg` · `npc-047-ottoline-brightwell.jpg` |
+| Odd Lot | Jory Tolliver (NPC-045) | Market Steps | 12 (counter-offer lever) | Cheap quirky secondhand magic; fence; pawn | `ch01-odd-lot.jpg` · `npc-045-jory-tolliver.jpg` |
+| Mother Brine's | Mother Brine (NPC-043) | the Wharves | 14 (sea-story lever) | Potions, antitoxin, sailor charms | `ch01-mother-brines.jpg` · `npc-043-mother-brine.jpg` |
+| The Iron Kettle | Hakon Stonebrow (NPC-049) | Commons edge | 16 (no glimmer at the door) | Magic weapons and armor, no glimmer | `ch02-the-iron-kettle.jpg` · `npc-049-hakon-stonebrow.jpg` |
+| The Clockwise | Nim Gearwright (NPC-048) | Glimmerway | 13 (demo lever) | Gadgets, clockwork, tools, oddities | `ch02-the-clockwise.jpg` · `npc-048-nim-gearwright.jpg` |
+| The Green Jar | Aggie Thorne (NPC-014), for Moss (NPC-003) | Willow Lane | none ("prices are prices") | Herbs, healer's kits, antitoxin, the odd potion | `ch01-the-green-jar.jpg` · `npc-014-aggie-thorne.jpg` |
 
 ---
 
@@ -445,16 +445,16 @@ Odd Lot's magic is **secondhand and quirky**. Most items carry one **quirk** (ro
 - *Interior:* a narrow shop smelling of tallow and hemp; coils of rope like sleeping snakes; candle-ends in a box marked "FREE, TAKE ONE"; a slate behind the counter with names and debts on it, and Ash's name on it, and no number beside it.
 - *Prices:* candle 1 cp · lamp oil (flask) 1 sp · rope (50 ft) 1 gp · tinderbox 5 sp · chalk 1 cp · pitons 5 cp · soap 2 cp · a lamp chip **(g)** 1 cp (Act I), 2 cp (Act II), 5 cp (after Ch12) · a lantern (hooded) 5 gp.
 - *Changes:* he notes glimmer prices on his slate every week (Ch2–4 seed). **Ch17 Glimmer Choice:** he's kept forty barrels of lamp oil in his cellar "just in case," and he's ready.
-- *Art:* `ch01-simon-shaws-chandlery.png` · `npc-025-simon-shaw.png`.
+- *Art:* `ch01-simon-shaws-chandlery.jpg` · `npc-025-simon-shaw.jpg`.
 
 **The Willow** (the Crooked Willow) · **Peg Mallory** (NPC-015; edges **R-028**, **R-029**). The Lane's living room. Food, drink, lodging, Liars' Night, Kings and Ferrymen at the corner table.
 - *Prices:* ale (mug) 4 cp · cider 2 cp · Hobbland brandy (cup) 2 sp · dwarven stout 5 sp · eel pie 1 sp · Restday supper (stew, bread, pie) 3 sp · a bed upstairs 5 sp a night (Modest). Fenwicks: Peg's tab ("Ash, you're washing").
 - *Changes:* **Ch4:** the Willow may burn (`ch04.md`); if it does, the Lane drinks in the Finches' yard until the roof goes back on (Ch7–11; Ash can steal timber). **Ch17:** hosts the Fringe's march.
-- *Art:* `ch01-the-willow.png` · `npc-015-peg-mallory.png`.
+- *Art:* `ch01-the-willow.jpg` · `npc-015-peg-mallory.jpg`.
 
 **Netta Lowe's barrow** · **Netta Lowe** (NPC-016; edges **R-026**, **R-027**). Eels and river fish at the Lane Well, and every rumor in the Fringe.
 - *Prices:* a fresh eel 2 cp · a string of perch 3 cp · smoked eel (keeps a week) 1 sp. **The rumor price:** buy a fish, get a rumor (use the chapter's rumor table). Bring her news first, get two.
-- *Art:* `ch01-the-lane-well.png` · `npc-016-netta-lowe.png`.
+- *Art:* `ch01-the-lane-well.jpg` · `npc-016-netta-lowe.jpg`.
 
 **Bess Carter's washing** · **Bess Carter** (NPC-011; edges **R-018**, **R-019**). Takes in washing from Crownhill. 1 cp a shirt, 5 cp for fine clothes, done by tomorrow. She won't take Fenwick money. She takes it anyway when Gideon leaves it on the step, and never knows it was him (it was Ash).
 
@@ -462,18 +462,18 @@ Odd Lot's magic is **secondhand and quirky**. Most items carry one **quirk** (ro
 - *Voice:* *"Two buns, and one for the bird, since he's looking at me like that."* (She can't hear Bart. She doesn't need to.)
 - *Prices:* loaf 2 cp · bun 1 cp · honey-cake 1 sp · a week's bread for a family 1 sp. Day-old bread free to anyone who asks quietly at the back door.
 - *Changes:* Ch4: her ovens survive the flood (she's on high ground) and she feeds the Lane for a week. Ch13: honey-cakes for the procession. Ch20: the gathering.
-- *Art:* `ch01-hettie-bunces-bakehouse.png` · `npc-303-hettie-bunce.png`.
+- *Art:* `ch01-hettie-bunces-bakehouse.jpg` · `npc-303-hettie-bunce.jpg`.
 
 ### The Commons and Market Steps
 
 **Tam Hollin's forge** · **Big Tam Hollin** (NPC-035; aka Tam Hollen). The Smiths' Guildmaster's own forge on the Commons. Honest, loud, Gideon's sometime employer. Mundane weapons and armor at **PHB price**, repairs at 1 gp, horseshoes, hinges, hooks.
 - *Prices (2024 PHB):* dagger 2 · shortsword 10 · longsword 15 · shortbow 25 (bowyer next door) · 20 arrows 1 · light crossbow 25 · spear 1 · javelin 5 sp · warhammer 15 · shield 10 · leather 10 · studded leather 45 · chain shirt 50 · chain mail 75 · breastplate 400 · half plate 750 · plate 1,500 · manacles 2 · grappling hook 2 · crowbar 2 · chain (10 ft) 5 · caltrops 1 · ball bearings 1.
 - *Changes:* Ch13: his smiths smash lamp chains in the Commons. Ch17: votes for the truth.
-- *Art:* `ch01-tam-hollins-forge.png` · `npc-035-tam-hollin.png`.
+- *Art:* `ch01-tam-hollins-forge.jpg` · `npc-035-tam-hollin.jpg`.
 
 **Mags Weller's old-clothes stall** · **Mags Weller** (NPC-305; aka Maggie, Weler). New. Market Steps, the cloth terrace. A sharp-tongued old woman with a tape measure round her neck. Secondhand clothes, costumes, and "no questions about the bloodstain."
 - *Prices:* traveler's clothes 1 gp (used) · fine clothes 8 gp (used, slightly out of fashion; Crownhill can tell) · a guild apron or porter's smock 2 sp · a lamp-warden's grey coat (no mask) 5 gp (she won't say where she got it; a heist prop in Act II) · a costume 3 gp.
-- *Art:* `npc-305-mags-weller.png`.
+- *Art:* `npc-305-mags-weller.jpg`.
 
 **Sam Clay, cobbler** (NPC-304; aka Sammy). New. A quiet young man in a shop the size of a cupboard on the Commons side of the Steps. Boots 1 gp, soft-soled "roof boots" 3 gp (they give no bonus, but Ash thinks they do), resoling 2 sp. Rook's new Crownhill boots in Ch5 weren't his, and he can tell you whose they were (the maker's mark: a Crownhill bootmaker who only takes Guild orders; a small Act II clue if the party want one).
 

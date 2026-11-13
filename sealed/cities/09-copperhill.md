@@ -33,7 +33,7 @@
 ### 2.2 The Bruised Pick (tavern)
 Miners' tavern by the Square. Modest lodging 5 sp. **The miners' drinking contest** (Ch10) happens here. **Keeper:** nobody's sure; it's run by whoever's least drunk. Rumors at a pint each.
 
-**Art:** `ch10-copperhill.png` (the Square from above, the smelters behind) · `ch10-penks-forge.png` · `npc-336-oswald-penk.png` · `npc-064-hilde-strand.png`.
+**Art:** `ch10-copperhill.jpg` (the Square from above, the smelters behind) · `ch10-penks-forge.jpg` · `npc-336-oswald-penk.jpg` · `npc-064-hilde-strand.jpg`.
 
 ---
 

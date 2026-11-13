@@ -36,7 +36,7 @@ Elves don't haggle, and find it puzzling. Prices are fixed. **Paying without cou
 ### 2.2 The Roots' healers and herbalists
 **Potions of Superior Healing** (Rare consumable, 2,000 gp), **Potions of Supreme Healing** (Very Rare consumable, 20,000 gp; one), **Restorative Ointment** (Uncommon, 400 gp), **elven wine** (once a decade; this is the decade; a bottle 50 gp; it tastes like a memory of summer). Moss knows the herbalists. They bow to him, very slightly, and won't say why (SEC-01 color; only if the chapter allows).
 
-**Art:** `ch17-aranhollow.png` (the Crown Tree in green-gold light) · `ch17-the-queens-mirror.png` · `ch17-fairboughs.png` · `npc-068-amarys.png` · `npc-348-elowen-fairbough.png` · `npc-347-caelir.png`.
+**Art:** `ch17-aranhollow.jpg` (the Crown Tree in green-gold light) · `ch17-the-queens-mirror.jpg` · `ch17-fairboughs.jpg` · `npc-068-amarys.jpg` · `npc-348-elowen-fairbough.jpg` · `npc-347-caelir.jpg`.
 
 ---
 

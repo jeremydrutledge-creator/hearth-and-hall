@@ -5,7 +5,7 @@
   python3 tools/batch_images.py poll  state.json   # prints status
   python3 tools/batch_images.py collect state.json # saves images when done
 
-jobs.json: [{"key":"npc-010","out":"art/portraits/npc-010-rook.png","prompt":"...","aspect":"3:4","refs":["art/portraits/pc-01-ash.png"]}]
+jobs.json: [{"key":"npc-010","out":"art/portraits/npc-010-rook.jpg","prompt":"...","aspect":"3:4","refs":["art/portraits/pc-01-ash.jpg"]}]
 The API key is injected by the network proxy (placeholder header below).
 """
 import base64, json, os, sys, urllib.request, mimetypes, fcntl, time

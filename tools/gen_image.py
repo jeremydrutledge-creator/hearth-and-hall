@@ -58,7 +58,9 @@ def main():
             blob = p.get("inline_data") or p.get("inlineData")
             if blob:
                 os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
-                open(a.out, "wb").write(base64.b64decode(blob["data"]))
+                import io
+                from PIL import Image
+                Image.open(io.BytesIO(base64.b64decode(blob["data"]))).convert("RGB").save(a.out, quality=88, optimize=True)
                 print(f"saved {a.out} (budget left after reserve: {left - 1})")
                 return
     sys.exit("No image returned: " + json.dumps(data)[:800])

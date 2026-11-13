@@ -41,7 +41,7 @@
 ### 2.2 Cider houses and cheese
 **The Merry Wheel** (inn): Comfortable 8 sp a night; the cider is famous (a pint 2 cp; bundle as 1 sp a round). Dabble Quickwhistle's cheese stall on Cog Market sells a wheel of Hobbland Blue for 2 gp; it is the best cheese in Eyrland, and Dabble wants nobody to know he's mayor.
 
-**Art:** `ch08-bramblecog.png` (the Millwheels and the Drawing Green) · `ch08-the-clattering-cog.png` · `npc-333-pernella-gearspring.png` · `npc-073-dabble-quickwhistle.png`.
+**Art:** `ch08-bramblecog.jpg` (the Millwheels and the Drawing Green) · `ch08-the-clattering-cog.jpg` · `npc-333-pernella-gearspring.jpg` · `npc-073-dabble-quickwhistle.jpg`.
 
 ---
 

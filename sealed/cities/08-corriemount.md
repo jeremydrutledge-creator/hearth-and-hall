@@ -39,7 +39,7 @@ Open to scholars by the Abbess's leave (**Persuasion DC 13**, or Zeke asking pol
 ### 2.3 Healing (the infirmary)
 Brother **Cuthbert** (no ID; Tier 3). *Cure Wounds* free for the poor, 10 gp otherwise; *Lesser Restoration* 40 gp; *Remove Curse* 90 gp; *Greater Restoration* 450 gp (T3).
 
-**Art:** `ch11-corriemount-abbey.png` (the cloister above the still lake at dawn) · `ch11-the-abbey-store.png` · `npc-077-hilary-vance.png` · `npc-335-winifred-oake.png`.
+**Art:** `ch11-corriemount-abbey.jpg` (the cloister above the still lake at dawn) · `ch11-the-abbey-store.jpg` · `npc-077-hilary-vance.jpg` · `npc-335-winifred-oake.jpg`.
 
 ---
 

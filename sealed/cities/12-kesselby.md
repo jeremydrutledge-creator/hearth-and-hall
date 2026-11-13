@@ -36,7 +36,7 @@
 - Ale 4 cp, cider (from Sal's sister in the Hobbland) 1 sp, stew 2 sp. A room upstairs, Poor (1 sp).
 - **Ma Garrow's cousin** (Ch5 thread) sits on the step every evening at the same time, Hushed.
 
-**Art:** `ch12-kesselby.png` (the slate rows under the Workings' lamp-ringed mouth) · `ch12-the-pick-and-lantern.png` · `npc-153-sal-pickett.png` · `npc-342-amos-pruett.png`.
+**Art:** `ch12-kesselby.jpg` (the slate rows under the Workings' lamp-ringed mouth) · `ch12-the-pick-and-lantern.jpg` · `npc-153-sal-pickett.jpg` · `npc-342-amos-pruett.jpg`.
 
 ---
 

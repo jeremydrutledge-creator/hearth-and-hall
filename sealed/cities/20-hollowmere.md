@@ -27,7 +27,7 @@ A market in the biggest warren's great round hall, under a ceiling of roots hung
 | **Clover the Baker** (hare-folk) | carrot cake, seed-bread, honey-buns (Lark eats eleven, which is the running joke from Ch13) | 1 sp |
 | **The Warren Mothers' Stores** | anything the party needs, free, forever, after Ch6 | — |
 
-**Art:** `ch06-hollowmere-occupied.png` (grey meadows, Horned banners, the still lake) · `ch14-hollowmere-free.png` (the same view, green and singing) · `ch14-the-warren-market.png` · `npc-019-mother-burdock.png`.
+**Art:** `ch06-hollowmere-occupied.jpg` (grey meadows, Horned banners, the still lake) · `ch14-hollowmere-free.jpg` (the same view, green and singing) · `ch14-the-warren-market.jpg` · `npc-019-mother-burdock.jpg`.
 
 ---
 
