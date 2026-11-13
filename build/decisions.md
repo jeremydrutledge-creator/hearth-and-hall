@@ -34,3 +34,7 @@
 - Familiar uses the Help action to grant advantage; owl has Flyby. Expect smart enemies to target it.
 - Familiar personality: a character in its own right. Snarky; mocks Ash's brothers; lippy with Ash sometimes. The kind of joke that's only funny if you're not the target. Played for fun and humor.
 - Weapon masteries: Shortsword (Vex) and Dagger (Nick) — dual-wields; Nick puts the off-hand attack inside the Attack action, keeping the bonus action free. Carries a shortbow (proficient, no mastery) as a backup.
+- Familiar speaks ONLY telepathically to Ash (RAW). Ash relays jokes ("He says you're an idiot").
+- Languages: Common, Thieves' Cant, Dwarvish, Halfling.
+- Owns dice, playing cards (proficient — Wayfarer gaming set), and a shell-game set (cups and ball; run with Sleight of Hand vs mark's Wisdom (Perception)). Street hustling goes on city side-activity menus.
+- Starting gear: Rogue package A + Wayfarer package A combined (leather armor, shortsword, 4 daggers, shortbow + 20 arrows, quiver, 2x thieves' tools, burglar's pack, bedroll, traveler's clothes, 2 pouches, games). ~24 gp.
