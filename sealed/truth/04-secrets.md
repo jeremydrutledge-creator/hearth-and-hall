@@ -29,6 +29,7 @@
 | SEC-21 | Sergeant Giles Mabry is Calm | NPC-023, the inner circle, NPC-010 | 2 (Ch5, Ch7) | Ch7 or Ch11 (EVT-48) | R-035, R-055, R-057 |
 | SEC-22 | The Lane Well draws from the Hall of Two Rivers' springs | NPC-003 | 3 (Ch2, Ch4, Ch7) | Ch13 (route) or Ch17 (EVT-33) | — |
 | SEC-23 | The split locket: Ash's half has a twin, worn by Clara | NPC-001, NPC-002 (believe Wren's half was lost); NPC-006 (knows Clara's half came off the Fenwick child); NPC-005 wears it unknowing | 4 (Ch1 ×2, Ch2, Ch5/7) | Ch4 route E (EVT-07, half-truth); Ch11 route E (EVT-18, the click) | R-001, R-004, R-011 (strengthens existing SEC-16/SEC-03 edges; no new edges) |
+| SEC-24 | (Optional side thread) The Still Lamp's founding charge at Corriemount: the prior is Calm | NPC-334; NPC-335 half-sees | 5 (novice in the fog; bells rippling the well; Benedict's folded hands; "nobody sings at the night office"; the library's founding charge) | EVT-57 | R-240 |
 
 ## Secret-holder index (who to be careful with)
 
@@ -51,3 +52,10 @@
 | NPC-023 Mabry | SEC-14, SEC-21 |
 | NPC-066 Torvald / NPC-067 Brynja | SEC-05, SEC-11 |
 | NPC-068 Amarys | SEC-01, SEC-05, SEC-06, SEC-08, SEC-12, SEC-15 |
+
+
+## Seed additions from the consistency pass (CHG-13)
+- **SEC-03:** +1 seed, Ch8 (Granny Tull's barge-song line "one to hear and one to cry"). Now 9.
+- **SEC-11, SEC-12, SEC-15:** placements confirmed in Act II chapters (Ch9 vault mark; Ch10 sea-chart slate; Ch8, Ch10, Ch13).
+- **SEC-19:** +1 lever in the reveal chapter, Ch18 (Edwin Fenn-wyck's letter: "the Heron came to the ford and stood with us"). Seeds before reveal remain 4.
+- **SEC-23:** seeded Ch1, Ch2 (world/09); routes Ch4 ★4 E, Ch11 ★2 E; Lamp House admission note (Ch12–13) mentions "pewter locket (half), kept with child."

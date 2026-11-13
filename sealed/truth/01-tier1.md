@@ -501,3 +501,9 @@ ENT-02 · Thalassa-Ommu, the Deep Tortoise (aka Thalassa, Old Ommu, "the Island 
 Firstbeast · FAC-14 · Sleeping under Ommu's Rest · Woken: Ch19 (EVT-39)
 ```
 - Keeps the prison's sea side. Her shell is the finale's battlefield. See world/00 §5.
+
+---
+
+## Consistency-pass notes (CHG-08, CHG-12)
+- **NPC-003 Moss:** Hart stat blocks: Tier 2 story form `chapters/act1/ch06.md` §9; Act III full ally block `chapters/act3/ch16.md`.
+- **NPC-013 Walt Finch:** deep (fully) Hushed in Ch4; woken only after the Ch12 duet or by Ash alone from Ch15.

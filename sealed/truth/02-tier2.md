@@ -84,8 +84,149 @@
 - **HIST-04 · Ursk, the Mountain Bear** (Ursc, Ursek). A Firstbeast. Died holding the mountain gate 400 years ago. His echo marks Gideon (Ch2, Ch10).
 - **HIST-05 · Clara Grane (the elder) and Edmund Grane** (Ned). Hollis's wife and son, dead of river fever in YF 1079. Clara Grane the younger is named after his wife.
 
-## Unnamed roles for step 6 to name if they speak
+## Unnamed roles (all now named; see CHG-10 below)
 - The head of the House of Merrow (Tollhaven, Calm).
 - The Calm-hired duelist (Ch9).
 - The Horned Host champion (Ch14).
 - The Hushed Warlord's living name (Ch16; a Gate War minotaur general).
+
+
+---
+
+## Added in the consistency pass (CHG-10)
+
+> Provisional IDs used by the chapter and city writers are now permanent (gaps are allowed). NPC-185 and NPC-186 are reserved and never used. Unnamed roles above: Merrow head = NPC-140 Lady Honoria Merrow; Ch9 duelist = NPC-141 Valentine Crewe; Horned Host champion = NPC-180 Mairead; Hushed Warlord = NPC-190 Dunmore Breakhorn.
+
+### Act I
+
+- **NPC-080 · Joss Kettering** (Joss, Kettring). A Wharves docker; swears he saw a talking hare; Knife Wall's weekly best; trapped in the Willow's cellar in the flood (Ch1, Ch4). T3.
+- **NPC-081 · Wharfmaster Joan Huckle** (Huckel). Runs the Wharfmaster's Office; "the river's running odd" (Ch1). T3 (possible T2 if the Wharves recur).
+- **NPC-082 · Mistress Rose Ainslie** (Ainsley). Crownhill lady; lost terrier **Button** (Ch1). T3.
+- **NPC-083 · Dob Rushby** (Dob, Rushbee). Bargeman of the *Dabchick* (Ch1). T3.
+- **NPC-084 · Jenny Wick** (Jen Wick). Magpie, Rook's lieutenant; doesn't like nets (Ch1, Ch2). T3 (FAC-06).
+- **NPC-085 · Tad Sallow** (Taddy). Magpie, ten years old; the Market Steps pickpocket on the Watch board (Ch1, Ch2). T3 (FAC-06).
+- **NPC-086 · Big Lottie Sparrow** (Lotty). Bucket undercard fighter (Ch1). T3 (FAC-18).
+- **NPC-087 · Hal Brindle**. Docker; Bucket Tenth-day card (Ch2). T3 (FAC-18).
+- **NPC-088 · Morwenna Kell, "the Anvil"** (Morwena). Bucket fighter at L5 (Ch5). T3 (FAC-18).
+- **NPC-089 · Wilf Applegarth**. Westwood Road orchard-master (Ch3). T3.
+- **NPC-090 · Warden Abel Crouch**. A lamp-warden (not Calm); captured at the Green Jar; "triple wages for Kessel postings" (Ch5). T3 (FAC-02).
+- **NPC-091 · Davy** (Ma Garrow's cousin). Came home from Kessel grey; mentioned, not met (Ch5). T3.
+- **NPC-092 · Tom Penny**. A half-Hushed Kessel miner Ash can wake; workmate of Davy (Ch5). T3.
+- **NPC-093 · Sergeant Murdo Blackhoof** (Murdoch). Minotaur patrol sergeant, Hollowmere; believes the cure (Ch6). T2 candidate (FAC-07; could recur in Act III if captured and kept alive).
+- **NPC-094 · Sorrel**. Fox-folk fighter in Russet's band; wounded (never killed) on Ch6 failures. T3 (FAC-08).
+- **NPC-095 · Bracken**. Fox-folk fighter in Russet's band; wounded (never killed) on Ch6 failures. T3 (FAC-08).
+- **NPC-096 · Teasel** (Teazel). Hushed hare-folk conscript, Lark's cousin; wakeable in Fight 5 (Ch6). T3 (FAC-08).
+
+### Act II
+
+- **NPC-140 · Lady Honoria Merrow** (Honora, Merow). Head of the House of Merrow, Tollhaven; Calm (Ch 9, (13)).
+- **NPC-141 · Valentine Crewe** (Val, Crew). The Calm-hired duelist (Ch9's unnamed role) (Ch 9).
+- **NPC-142 · Julian Hume** (Jules, Hewm). Smooth young Tollhaven broker; the party's rival there (Ch 9, (11)).
+- **NPC-143 · Master Otto Varga** (Varga, Vargas). Head of the House of Varga (Ch 9).
+- **NPC-144 · Coble Tull** (Cobble). Granny Tull's grandson; messenger (Ch 8, 9, 11).
+- **NPC-145 · Merrilee** (Merrily). Otter-folk refugee elder (Ch 8).
+- **NPC-146 · Dughal Brokenhorn** (Dugal, Dougal). Minotaur raid-captain (Ch 8).
+- **NPC-147 · Purser Edwin Lusk** (Ed, Lusck). Merrow-paid toll-boat purser (Ch 8).
+- **NPC-148 · Gert Volker** (Gerd). Mercenary who wants Copperhill's Seat (Ch 10).
+- **NPC-149 · Sergeant-Mage Ilse Brandt** (Ilsa). Grey Wolf battle-mage (Ch 10).
+- **NPC-150 · Thurvig the Gate-Breaker** (Thurvik). Hushed frost giant of the Gate War (dead) (Ch 10).
+- **NPC-151 · Bastian Harrow** (Bas, Bastien). Leader of the Quiet Knives (hired killers) (Ch 11).
+- **NPC-152 · Lieutenant Corbin Wade** (Corbyn). Lamp-warden lieutenant at Kessel; not Calm (Ch 12).
+- **NPC-153 · Sal Pickett** (Sally). Keeper of the Pick and Lantern, Kesselby (Ch 12).
+- **NPC-154 · Senior Enchanter Ivo Pryce** (Price). Calm inner circle (FAC-02's "two senior enchanters") (Ch 13).
+- **NPC-155 · Senior Enchanter Adela Holt** (Adella). Calm inner circle (Ch 13).
+- **NPC-156 · Warden-Sergeant Bryony Nash** (Briony). Lamp-warden sergeant who leads the Calm crew's muscle (Ch 7).
+- **NPC-157 · Skipper Ottilie Bask** (Ottily). River-clan barge skipper of the *Dun Heifer* (Ch 8).
+- **NPC-158 · Archivist Sigrun Deeplore**. Dun Morrach's archivist (Ch 10).
+- **NPC-159 · Plish**. Otter-folk refugee freed from the Bucket (optional) (Ch 7, 8).
+
+### Act III
+
+- **NPC-180 · Mairead of the Seven Drums** (Mairead, Maired, Mared, Maraid). The Horned Host's champion. Grey-muzzled veteran. (Ch14–15).
+- **NPC-181 · Tesh Twelve-Bells** (Tesh, Tess, Twelve-Bells). Saffi's bell-master and guide. (Ch14).
+- **NPC-182 · Ronan Ironvoice** (Ronan, Ronin, Rowan). The Regent's herald. (Ch14–16).
+- **NPC-183 · Nkemba** (Nkemba, Kemba, En-Kemba, Inkemba). Umbari's granddaughter, wall-captain, then Rememberer. Older-sister energy. (Ch14–16, 20).
+- **NPC-184 · Fiachra Hollowhorn** (Fiachra, Feeakra, Fiacra). Pen-Warden; the Heron's man. (Ch15).
+- **NPC-187 · Breeda Stonefield** (Breeda, Brida, Bridget). Mother of a Pens calf; leads the revolt if both brothers fail. (Ch15–16).
+- **NPC-190 · Dunmore Breakhorn** (Dunmore, Dunmoor, Dun More). The Hushed Warlord; a Gate War marshal who held the Horngard's gate for the Wardens. (Ch16).
+- **NPC-191 · Den-Mother Hulda Greypaw** (Hulda, Hilda, Greypaw). Tuskhold's bear-folk den-chief. (Ch14 (unnamed), Ch16, Ch20).
+- **NPC-192 · Leaf-Warden Ithiel** (Ithiel, Ithil, Ithiell). The elves' invitation. Haughty, then not. (Ch17).
+- **NPC-193 · Brother Wendell** (Wendell, Wendel). Royal Archivist. (Ch17).
+- **NPC-194 · The Bell-Warden** (Bell-Warden). Old Varrow's senior Hushed knight. (Ch18).
+- **NPC-195 · Captain Hattie Slade** (Hattie, Hatty, Slade). Smuggler captain, Jago's niece; sisterly rival. (Ch19–20).
+- **NPC-196 · Bosun Ezzard Cole** (Ezzard, Ezard, Cole, Coal). Maud's bosun. (Ch19).
+
+### City life
+
+- **NPC-300 · Clementine Brightwell**. Eldest Brightwell daughter; handles money (cities/01).
+- **NPC-301 · Rosamund Brightwell**. Middle daughter; the fashion eye (cities/01).
+- **NPC-302 · Violet Brightwell**. Youngest; kind to Fringe folk (cities/01).
+- **NPC-303 · Hettie Bunce** (Hetty, Bunse). Willow Lane bakehouse (cities/01).
+- **NPC-304 · Sam Clay** (Sammy). Cobbler (cities/01).
+- **NPC-305 · Mags Weller** (Maggie, Weler). Old-clothes stall (cities/01).
+- **NPC-306 · Bertram Cole** (Bert Cole). Coal and heat-stones; the city's glimmer barometer (cities/01).
+- **NPC-307 · Fat Lem Gilly** (Lemuel, Lem Gilley). Bone Table dice (cities/03).
+- **NPC-308 · Clem Raddle** (Clement, Clem Radle). Drowned Lantern bouncer; hates Gideon (cities/03).
+- **NPC-309 · Saul Hennet** (Saul Hennett). Dock card-sharp (cities/03).
+- **NPC-310 · Little Ned Garrow** (Ned, Neddy). Ma Garrow's nephew; T3 champion (cities/03).
+- **NPC-311 · "Gentle" Joe Barrow**. T1 Bucket champion (cities/03).
+- **NPC-312 · Brannagh "Bonebreaker" Reece**. T3 Bucket main card; from Saltreach's Hold (cities/03, 16).
+- **NPC-313 · Jonas Hatch, "the Bellman"**. T4 Bucket champion (cities/03).
+- **NPC-314 · Barnaby Coyle** (Barney Coil). Merchants' Guild landlord (cities/03).
+- **NPC-315 · Gilbert Swift**. Swift and Sons couriers (cities/03).
+- **NPC-316 · Percy Lisle** (Percy Lyle). Lyceum snob (cities/03).
+- **NPC-317 · Hortensia Vale** (Tensy). Lyceum snob; apologizes in Act III (cities/03).
+- **NPC-318 · Molly Pike** (Mollie). Hobb's Ferry cook; arm-wrestler (cities/04).
+- **NPC-319 · Gerald Hatherley**. Hobb's Ferry miller (cities/04).
+- **NPC-320 · Brother Ivo** (Eye-vo, Evo). Hobb's Ferry priest (cities/04).
+- **NPC-321 · Sergeant Ruth Dane** (Ruthie). Grey Wolf recruiter; runs the Yard (cities/04, 10).
+- **NPC-322 · Old Corrie Bask** (Cory Bask). Swap Deck knitter (cities/05).
+- **NPC-323 · Hob Rudd** (Robb Rudd). Swap Deck fisherman (cities/05).
+- **NPC-324 · Father Malory Wake** (Mallory). Chapel Barge priest (Ch8's Pearl of Power) (cities/05).
+- **NPC-325 · Captain Rafe Lennick** (Raif). Showboat skipper; rival turned friend (cities/05).
+- **NPC-326 · Mistress Odile Fairbanks** (Odeel). Tollhaven curios (cities/06).
+- **NPC-327 · Gaspard Quist** (Gaspar, Kwist). Tollhaven armorer (cities/06).
+- **NPC-328 · Mother Hollyhock** (Holly Hock). Bathhouse keeper; Purse gossip (cities/06).
+- **NPC-329 · Leopold Quarry** (Leo Quarrie). Golden Cage master (cities/06).
+- **NPC-330 · Cassius Dray, "the Gilded Lion"**. Golden Cage champion (cities/06).
+- **NPC-331 · Pim Saddler** (Pimm Sadler). Netyards fence (cities/06).
+- **NPC-332 · Fizzwick Brassbottom**. Rival gnome inventor (cities/07).
+- **NPC-333 · Pernella Gearspring** (Nella). The Clattering Cog; Nim's great-aunt (cities/07).
+- **NPC-334 · Prior Benedict Lowry** (Ben Lowery). Corriemount's Calm-leaning prior (cities/08).
+- **NPC-335 · Sister Winifred Oake** (Winnie). Corriemount bee-mistress and librarian (cities/08).
+- **NPC-336 · Oswald Penk** (Ozzie). Copperhill smith (cities/09).
+- **NPC-337 · Hesketh Vonn** (Hesky, Von). Wolfsgate card house; fence (cities/10).
+- **NPC-338 · Quartermaster Dorran Kemp**. Wolfsgate quartermaster (cities/10).
+- **NPC-339 · Captain Merrick Dunstan** (Merik). Red Hands mercenary captain (cities/10).
+- **NPC-340 · Bersi Flintfist** (Bersy). Shield Ring champion; challenges Gideon (Ch10's "proud young dwarf champion") (cities/11).
+- **NPC-341 · Gudrun Stonemantle** (Gudrin). Dun Morrach armorer (cities/11).
+- **NPC-342 · Clerk Amos Pruett** (Amos Prewitt). Kesselby company store (cities/12).
+- **NPC-343 · Sir Edmund Carrow** (Ed Carrow). Highmarch rival knight (Ch17) (cities/13).
+- **NPC-344 · Master Felix Dorne** (Felix Dorn). Scholars' Gate bookseller (cities/13).
+- **NPC-345 · Mistress Hesper Graves**. Kingsbridge tourney armorer (cities/13).
+- **NPC-346 · Black Tom Rudge** (Tommy). Lowtown Pits boss; fence (cities/13).
+- **NPC-347 · Warden Caelir** (Kay-leer, Caylear). Haughty young Warden of the Leaf (cities/14).
+- **NPC-348 · Elowen Fairbough** (Elowyn, Fairbow). Aranhollow bowyer (cities/14).
+- **NPC-349 · Bertie Gall** (Bert Gaul, Burty). Drowners' Rest scavenger boss (cities/15).
+- **NPC-350 · Captain Tamsin Gale** (Tam, Tamzin). Lanternless rival captain (Ch19) (cities/16).
+- **NPC-351 · Old Enoch Fathom** (Nock). Saltreach chandler (cities/16).
+- **NPC-352 · Gussie Crabb** (Augusta). The Barnacle's keeper (cities/16).
+- **NPC-353 · Yesh Copper-Whisker**. Saffra song-charm seller; fence (cities/17).
+- **NPC-354 · Lio-of-the-Long-Shelf** (Leo). Saffra archivist-bookseller (cities/17).
+- **NPC-355 · Oyelu the Stonewright** (Oyello). Tuskhold carver-smith (cities/18).
+- **NPC-356 · Sorcha Drumhand** (Sorsha). Horngard drum-mistress (cities/19).
+
+### Historical
+
+- **HIST-06 · Edwin Fenn-wyck** (Edwin). The Gate War ford-knight entombed in Old Varrow's chapel (Ch18). His tomb holds a Ring of Free Action and a water-damaged letter: *"...the Heron came to the ford and stood with us. Don't forget that she stood with us."*
+
+### Tier 3 names pre-planned by the writers (log in 07 if used)
+
+- Act II: Lucas Dunn (Lamp House clerk); the six Driftmarket Mothers besides Granny Tull (Ma Kettering, Old Saltash, Mother Reed, Dace Corran, Mother Fennimore, Hettie Brine-no-relation); Brock Underhill (badger-folk sett-elder); Lettice Grey (Purse heir); Gristle (war-dog); Annie (Mabry's late wife); Orm Coalbeard (clan head); Ewan Pickett.
+- Act III: Sergeant Godric Marsh (Crown Guard, Ch17); Kester Sayle (sailor, Bosun Cole's nephew, Ch19); Zuri Far-Wander (tabaxi rooftop champion, Ch14).
+
+---
+
+## Consistency-pass notes (CHG-12)
+- **NPC-059 Ama:** in Ch6 she has been brought down from Cairn Answer to Stillwater Keep for the Heron's midsummer "quieting" and goes back to the Quiet Pens when the Heron does.
+- **NPC-060 Borra:** if woken and sent home through the Ford Pool (Ch3), he's with Russet's band in Ch6 and recognizes Ash. Ch3 gives Ash Borra's iron-horn badge (a nonmagical disguise prop for Ch6).

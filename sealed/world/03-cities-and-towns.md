@@ -15,6 +15,7 @@
 | Wolfsgate | Small town (~2,000) | Mercenary company charter | Kettlehorns |
 | Bramblecog | Small town (~1,800) | Gnome lottery: rulers drawn by lot each year | Hobbland |
 | Hobb's Ferry | Village (~600) | Hereditary ferry family | Midriver |
+| Kesselby | Village (~900) | Guild company town: the Mine-Warden runs it for the Enchanters' Guild | Midriver |
 | Corriemount | Village and monastery (~400) | Abbey rule: the Abbess | Lake Corrie |
 | Old Varrow | Ruin | None (the dead) | Greymarsh |
 
@@ -81,7 +82,7 @@
 **Flavor:** old, proud, a little shabby. Banners, bells and processions. Nobles who are poorer than Emberford merchants and resent it.
 
 **Side-activity menu:**
-- *Contest:* **The King's Tourney** (Haymonth): jousting, melee, archery, a "commoner's melee" anyone can enter. Prize: a purse and a knighthood candidacy (great for Gideon).
+- *Contest:* **The King's Tourney** (normally 1–7 Haymonth; in YF 1105 the Lord Chancellor also holds a special Royal Tourney in Blossom to gather the realm's knights, Ch17): jousting, melee, archery, a "commoner's melee" anyone can enter. Prize: a purse and a knighthood candidacy (great for Gideon).
 - *Fight ring:* **The Lowtown Pits** (illegal, raided twice a year).
 - *Betting:* tourney odds, horse races on the Tourney Fields.
 - *Odd jobs:* nobles hiring off-the-books (court intrigue, recovering letters, guarding the boy-king *unofficially*).
@@ -264,3 +265,10 @@
 **Side activities:** treasure diving (deadly), a dare (row to the Bell Tower and ring the bell).
 **Common knowledge:** Ghost city in the marsh. Fell in some old war. People who go treasure-hunting there come back strange, or not at all.
 **DM notes:** Ruled now by the **Hushed dead** of the Gate War, preserved, grey, calm, endlessly "keeping" their drowned city. The drowned chapel holds a closed but cracked Wellgate and the tomb of the last Fenn-wyck who fought in the Gate War, with a family crest (a ford with a stag's antlers above it) that matches the crest on Ash's mother's old locket (seed).
+
+---
+
+## Consistency-pass rulings (CHG-13, CHG-14)
+- **Old Varrow:** the Fenn-wyck knight in the chapel tomb is **Edwin Fenn-wyck (HIST-06)**. The niche, opened by the whole split locket, holds a Ring of Free Action and a water-damaged letter with one legible line: *"...the Heron came to the ford and stood with us. Don't forget that she stood with us."* (A redemption lever for SC 18-B.)
+- **Kesselby** added to the table above (Guild company town).
+- **Highmarch:** the Blossom Royal Tourney (YF 1105) is in addition to the usual Haymonth tourney.

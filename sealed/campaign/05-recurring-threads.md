@@ -154,3 +154,10 @@ Moss levels with the party as a Circle of the Moon druid. These are **story upgr
 - Lark's birthday (she doesn't know when it is; the Lane picks a day and throws her a party).
 - Brynja teaching Gideon dwarven oath-forms (sisterly, no romance).
 - Granny Tull's letters, which arrive by otter.
+
+---
+
+## Consistency-pass rulings (CHG-12)
+- **Hart rounds (§7):** the Ch6 shore transformation grants upgrade #2 and doesn't spend tier 2's once-per-tier round, so there's one Hart round in Ch7–10 and one in Ch11–13. Ch13's "holds the Hall with roots" is a free scripted beat. **Upgrade #4 (Ch16) replaces** the once-per-tier round with the full Act III ally block (`chapters/act3/ch16.md`). Tier 2 story-form block: `chapters/act1/ch06.md` §9; Act II one-round action: `chapters/act2/_index.md` §3.4.
+- **Gift hooks placed in Act I:** Nell's Hearthglow blanket (Ch2–4, Ch4 flood callback); Aggie's Hearthglow mug (Ch5).
+- **Willow Lane** floats lamps on the Bend for Tom and Elinor on the fire's anniversary in Leaffall (in addition to the three Midsummer lamps of SEC-16).

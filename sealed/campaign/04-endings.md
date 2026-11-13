@@ -104,3 +104,12 @@
 
 ## If the player tries for an ending they can't reach
 Never block the attempt without a reason in the world. If Ash tries the unmaking song without a redemption, the song fails partway: the Stillness is wounded but not unmade, and the Hearkeners can switch to re-sealing (Ending 1) or Moss steps in (Ending 3). Narrate what was missing ("You needed one of the old Wardens, or the Regent's host, holding the Gap"), so the player understands, in hindsight, why.
+
+---
+
+## Consistency-pass rulings (CHG-14)
+- **Ending 2's "holding the Gap":** a redeemed Vessimer satisfies it by standing in the keyhole in Phase 4. If she isn't redeemed, the Horned Host holding it from the Mirrowen side satisfies it (only if Brannoc turned). If neither, Ending 2 can't complete; the song fails partway.
+- **Ash can't be the seal.** The Hall's right panel says "one of us," a Firstbeast. If he tries, the others have one round to sing him out, and Moss goes regardless.
+- **Moss's consent** for Ending 2 is given or refused in Ch20 S20.1. If Ash forbids it, Moss goes anyway on round 15 unless the player actively stops him in the moment; then the song switches to Ending 1 (successes carry).
+- **Switching songs:** from Ending 2 down to Ending 1 mid-song is allowed; never up.
+- **SC 20-B (Clara lost side chapter):** completing it sets Twin Bond to **3** (not higher), opening Ending 1. If any link fails, Clara comes to the finale by boat and listens, and can sing in Ending 3's moment.

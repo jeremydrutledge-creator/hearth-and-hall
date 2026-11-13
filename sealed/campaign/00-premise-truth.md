@@ -154,3 +154,11 @@ These are planned, set up, and must matter. Everything else that dies, dies by t
    - *This death is not avoidable by tactics.* It's her choice, made calmly, and she asks the party to honor it. If Ash refuses to let her, she does it anyway in the night, and leaves him a message.
 
 **Not on the list:** Gideon, Zeke, Moss (dice only), Lark, Clara, the Willow Lane cast (threatened, hurt, Hushed and woken, but never killed by script).
+
+---
+
+## Consistency-pass rulings (CHG-08, CHG-14)
+- **CHG-01 refined:** "wake Hushed one at a time (from Ch15)" applies to the **deep** Hushed. Half-Hushed creatures can be woken from Ch1 (world/05 has the three depths and DCs). Walt Finch, the Ch4 Bend-eels, the Ch6 Wall-Sleepers and Ama are deep Hushed.
+- **The call's stages (§2), pinned down:** Ch2, she hears only Ash's humming while he hears her words. Ch3, she hears his words at a Wellgate (the Ford Pool), where she gives her name. Ch4 on, words both ways at any still water at the turn of light, and feelings carry. Ch5 (Scene 6), at the Quiet's still bowl, Ash can't hear her at all; nobody explains why.
+- **§4 optional side closings:** add Tuskhold's drowned watering-pond (Ch16) to the candidates (still max two).
+- **§7:** if Hester is saved by the costly route, no replacement death. See truth/05 EVT-21 branch.

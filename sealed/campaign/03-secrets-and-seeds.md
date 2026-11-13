@@ -189,3 +189,12 @@
 | **#6** | Captain Hale | Sergeant Mabry | 15 years together on the Watch | Never imagined it | Ch7–11 | Hale → Mabry |
 
 **Fairness check (hindsight):** after Ch12–13, the player should be able to look back and see that every vouch for Hollis was sincere, every seed pointed at him, and he was never written as a cartoon. Hester's death is the cost of her blind spot, not a punishment for it.
+
+---
+
+## Consistency-pass seed additions (CHG-13)
+- **SEC-03:** extra seed, Ch8: Granny Tull's barge-song line "one to hear and one to cry."
+- **SEC-18:** Ama at Stillwater Keep in Ch6 was brought down from Cairn Answer for the Heron's midsummer "quieting"; she goes back to the Quiet Pens when the Heron does (Brannoc's nightly visits pause those few days).
+- **SEC-19:** lever in Ch18: Edwin Fenn-wyck's letter (world/03).
+- **SEC-24 (optional, new):** the Still Lamp's founding charge at Corriemount (cities/08). Five seeds; revealed by EVT-57. Nothing in the main line depends on it.
+- **Act I small seeds placed (for awareness):** Ch4 cradle headboard "WREN"; Ch2 Tansy hums Ash's tune at Lamp House; Ch3 Ford Pool stones list "the Hart, the Bear, the Heron, the Tortoise"; Ch5 the dwarven tool-niche quiets Hakon; Ch6 the island stone ring hums; Ch6 closing image of the grey tabaxi tracker.

@@ -58,3 +58,30 @@
 - [5e SRD (2014) equipment](https://5e.d20srd.org/srd/equipment/equipment.htm)
 - [D&D Beyond: Find Familiar (2024)](https://www.dndbeyond.com/spells/2618877-find-familiar)
 - [AideDD: Find Familiar](https://www.aidedd.org/spell/find-familiar)
+
+---
+
+## Consistency-pass additions (CHG-15, CHG-16)
+
+### House items (no book equivalent; priced by rarity band)
+| Item | Rarity | Price | Source file |
+|---|---|---|---|
+| Bell of Waking | Uncommon | 400 gp | cities/17-saffra |
+| Drum of Waking | Rare | 4,000 gp | cities/19-horngard |
+| Maul of the Long Stone | Rare | 4,000 gp | cities/18-tuskhold |
+| Hat of the Story-Teller | Uncommon | 400 gp | cities/17-saffra |
+| Song-knot | Common | 100 gp | cities/17-saffra, cities/20-hollowmere |
+| Copper Cuffs | Uncommon | 400 gp | cities/09-copperhill |
+| Piton-gun | Uncommon | 400 gp | cities/02-enchanters-row |
+| Cheater's shells (glimmer charm) | — | 25 gp | cities/02-enchanters-row |
+
+### Campaign treasure sum (all chapters, typical play)
+| Act | Coin (about) | Permanent magic items |
+|---|---|---|
+| I (Ch1–6, L1→7) | 650–1,000 gp | 8 (1 Common, 7 Uncommon) + 10 consumables |
+| II (Ch7–13, L7→14) | 14,000–17,000 gp | 16 (2 Common, 5 Uncommon, 9 Rare) |
+| III (Ch14–20, L14→20) | 33,000–42,000 gp | about 14 (about 7 Very Rare, 5–6 Rare, 1 Uncommon), Ash's +3 weapon in Ch16 |
+| **Campaign** | **about 48,000–60,000 gp** | **about 38**, plus Row gifts and side-activity prizes |
+
+- **Not checked against the 2024 DMG's treasure guidance** (the book wasn't available to verify; the step-6A price check covered rarity prices only). Judgment call: coin is modest for level 20 (a single Very Rare item costs 40,000 gp, so the party can't buy them; they find them), and item count is in a normal range for a 38-session campaign. **No trims made.** If play runs rich, trim side-activity purses first, then the second Very Rare item in Ch16 (per CHG-A3-13).
+- Glimmer-cored items (every Row gift; Act I's Wand of the War Mage +1; Act II's Glimmer-lance, Lantern-Glaive, Wand of the War Mage +2) die in Ending 1. Track them in the Campaign Bible.

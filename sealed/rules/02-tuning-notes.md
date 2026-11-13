@@ -250,3 +250,10 @@ DM notes: damage-per-round check, the expected round count, what to cut if it dr
 5. Choose one counter from §6, telegraph it, and write what the party sees.
 6. Check the L1–2 survivability caps (§2) if the party is level 1–2.
 7. Log the expected round count. After the session, log the **real** round count and the party's real DPR in the Sealed GM Notes, and adjust this file if they're off by more than 25%.
+
+---
+
+## Consistency-pass rulings (CHG-14)
+- **Finale (Fight 36) is round-fixed:** phases change on rounds 1–3, 4–7, 8–11, 12–15. If a pool runs out early, the rest of that phase is a breather; leftover HP at the phase's end is lost. Phase 4 has no HP pool (Last Weight is an objective). This is the one exception to the HP-based phase rule.
+- **Waking DCs:** half-Hushed DC 15 / 17 / 19 / 21 by tier from Ch1; deep Hushed per world/05 (two consecutive successes from Ch15).
+- **SC#5 (Ch19):** reaching 5 failures means the party arrives late: SEAL +1 (a second EVT-38 step).

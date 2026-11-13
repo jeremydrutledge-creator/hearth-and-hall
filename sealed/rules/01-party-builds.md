@@ -241,3 +241,18 @@
 | 18 | Elusive | Aura Expansion (30 ft) | Spell Mastery (Shield, Misty Step) | CR 6 forms; Beast Spells |
 | 19 | **Boon of Combat Prowess**, SA 10d6 | Boon of Fortitude | Boon of Spell Recall | Boon of Fortitude |
 | 20 | Stroke of Luck | Elder Champion | Signature Spells (Counterspell, Fireball) | Archdruid |
+
+---
+
+## Consistency-pass rulings: story rewards and boons (CHG-15)
+Add to the sheets **only when they happen at the table** (then update `/player/party-sheets.md`).
+- **Ash, Ch9:** when he opens his first gate (EVT-16), offer **Performance proficiency** ("the song settles in him"). Waking DCs from tier 3 assume it.
+- **Ash, Ch13 (Use Magic Device):** scrolls use Int by the house rule; if the player asks, the DM may allow Cha. Ch13 works either way.
+- **Gideon, Ch8:** still-water and greywilt terrain effects don't affect creatures inside his Aura of Protection while he's conscious.
+- **Gideon, Ch10 (EVT-17): Bear's Ward.** Once per long rest, when a creature in his aura would drop to 0 HP, he can use his reaction to have it drop to 1 HP instead.
+- **Gideon, Ch16: leads an army.** Once per day, his aura covers the whole line out to 300 ft until the end of his next turn.
+- **Gideon (optional, Copperhill):** Hilde Strand's trick, advantage on one shove or grapple Athletics check per day, if he wins the Seat.
+- **Zeke, Ch17:** can Help on any Hearkener song check as if casting a verbal-only spell (no slot, no concentration). In the Ch20 finale he counts as a fourth voice "for the words" (advantage to one singer per round).
+- **Zeke (optional, Bramblecog):** Tinker's Tools proficiency from Pernella Gearspring's lesson, if he lacks it.
+- **Moss:** Tier 2 Hart story-form block in `chapters/act1/ch06.md` §9; upgrade #4 full ally block (Mossoran, the Moss-Crowned Hart) in `chapters/act3/ch16.md`. #4 replaces the once-per-tier round.
+- **Blessings (Act III):** Blessing of the Hall (Ch17 route A: each Hearkener who sang there has advantage on the first song check of each encounter); Vessimer's Blessing (Ch18, if redeemed: each party member one reroll of a save against a Stillness effect); Ommu's Blessing (Ch19: Water Breathing and a swim speed equal to walking speed). None stacks with another source of the same benefit.

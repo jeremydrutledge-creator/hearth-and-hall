@@ -789,3 +789,140 @@
 - WILL VOUCH: for her safety with his life.
 - FEELING: protective, big-brotherly.
 - CHANGES ONLY VIA: EVT-08, EVT-11.
+
+
+---
+
+## G. Added in the consistency pass (CHG-11)
+
+> R-097 to R-199 and R-209 to R-229 are unused (the chapter writers reserved blocks). Next free: **R-241**.
+
+**R-200 · NPC-064 Hilde Strand → NPC-001 Gideon** (or PC-01 Ash, whoever fought her at Copperhill)
+- BELIEVES: the fighter she's been waiting for; maybe a successor.
+- ACTUALLY KNOWS: how they fought, and that they fought fair.
+- BLIND SPOT: thinks every problem is solved in the ring.
+- WILL VOUCH: for their courage, to any Copperhill crowd or mercenary · won't vouch for their politics.
+- FEELING: amused, mentorly (no romance).
+- CHANGES ONLY VIA: Ch10 bout; EVT-17.
+
+**R-201 · NPC-065 Ulric Fane → PC-01 Ash** (and the party)
+- BELIEVES: contract-honest people, or a voided contract's lawful winners.
+- ACTUALLY KNOWS: the terms they kept or broke at Wolfsgate.
+- BLIND SPOT: reads everything as a contract.
+- WILL VOUCH: that they keep their word, in Wolfsgate · won't vouch for anyone's cause.
+- FEELING: professional respect.
+- CHANGES ONLY VIA: Ch10 (route chosen).
+
+**R-202 · NPC-063 Dame Constance Abernathy → PC-01 Ash**
+- BELIEVES: finally, a thief who admits it; useful.
+- ACTUALLY KNOWS: what he took from the House of Merrow (if he did).
+- BLIND SPOT: thinks she's using him; he may be using her.
+- WILL VOUCH: for his usefulness · never for his honesty.
+- FEELING: dry, amused approval.
+- CHANGES ONLY VIA: EVT-15.
+
+**R-203 · NPC-061 Saffi-of-the-Lamplight → PC-01 Ash**
+- BELIEVES: the boy from the stories, now a story she owns.
+- ACTUALLY KNOWS: he opened a gate and came through it.
+- BLIND SPOT: loves the story more than the safe ending.
+- WILL VOUCH: for him at the Great Telling and to any horned one who'll listen (Ch14) · won't vouch for his patience.
+- FEELING: delighted, proprietary.
+- CHANGES ONLY VIA: EVT-16.
+
+**R-204 · NPC-140 Lady Honoria Merrow → NPC-006 Hollis**
+- BELIEVES: the Keeper (she knows the face, maybe not the name) offers the only peace.
+- ACTUALLY KNOWS: she funds the Calm's river work.
+- BLIND SPOT: grief; she lost her husband to the river.
+- WILL VOUCH: for the Quiet · won't vouch for the Keeper by name.
+- FEELING: devoted.
+- CHANGES ONLY VIA: EVT-15, EVT-24.
+
+**R-205 · NPC-034 Dorcas Fell → NPC-006 Hollis**
+- BELIEVES: the Lamplighters live on his glimmer; she doesn't like him.
+- ACTUALLY KNOWS: glimmer quotas don't add up.
+- BLIND SPOT: assumes it's greed, not something worse.
+- WILL VOUCH: for nothing.
+- FEELING: cold, dependent.
+- CHANGES ONLY VIA: Ch13 (turned with proof; EVT-23).
+
+**R-206 · NPC-154 Ivo Pryce → NPC-006 Hollis**
+- BELIEVES: the Keeper is a saint.
+- ACTUALLY KNOWS: the inner circle's whole plan.
+- BLIND SPOT: can't imagine Hollis is wrong.
+- WILL VOUCH: for the Keeper, to the death (in the end he doesn't).
+- FEELING: worship.
+- CHANGES ONLY VIA: EVT-23, EVT-24.
+
+**R-207 · NPC-155 Adela Holt → NPC-006 Hollis**
+- BELIEVES: the Keeper is a saint.
+- ACTUALLY KNOWS: the inner circle's whole plan.
+- BLIND SPOT: her own grief, made into faith.
+- WILL VOUCH: for the Keeper, to the death (in the end she doesn't).
+- FEELING: worship.
+- CHANGES ONLY VIA: EVT-23, EVT-24.
+
+**R-208 · NPC-067 Brynja → PC-01 Ash**
+- BELIEVES: the Bear's chosen's little brother, a thief with good hands; she forged him a sword.
+- ACTUALLY KNOWS: he kept his word under the mountain.
+- BLIND SPOT: none worth playing.
+- WILL VOUCH: for his honesty, to dwarves · won't vouch for his manners.
+- FEELING: sisterly (no romance).
+- CHANGES ONLY VIA: EVT-53.
+
+**R-230 · NPC-183 Nkemba → NPC-021 Umbari**
+- BELIEVES: her grandmother is the wall the city stands on. ACTUALLY KNOWS: Umbari is dying. BLIND SPOT: can't picture herself as Rememberer.
+- WILL VOUCH: for Umbari's every word · won't vouch for the Regent. FEELING: fierce love.
+- CHANGES ONLY VIA: EVT-31 (she carves her grandmother's stone).
+
+**R-231 · NPC-180 Mairead → PC-01 Ash** (or the party's champion)
+- BELIEVES: brave courage earns respect; cowardly tricks earn contempt. ACTUALLY KNOWS: how the champion fought. BLIND SPOT: her oath to the Regent.
+- WILL VOUCH: for the champion's honor, to the Host · won't vouch for Eyrland. FEELING: soldier's respect.
+- CHANGES ONLY VIA: EVT-28.
+
+**R-232 · NPC-181 Tesh Twelve-Bells → PC-01 Ash**
+- BELIEVES: a story worth a bell. ACTUALLY KNOWS: what Saffi has told him. BLIND SPOT: none.
+- WILL VOUCH: that Ash is worth hearing, to Saffra · nothing more. FEELING: curious, fond.
+- CHANGES ONLY VIA: EVT-28.
+
+**R-233 · NPC-184 Fiachra Hollowhorn → NPC-009 Vessimer**
+- BELIEVES: the Heron keeps the calves safe. ACTUALLY KNOWS: the Pens' routine. BLIND SPOT: he's half-Hushed himself.
+- WILL VOUCH: for the Heron, to the Regent's face · won't vouch for the Regent. FEELING: devotion.
+- CHANGES ONLY VIA: EVT-29, EVT-35.
+
+**R-234 · NPC-190 Dunmore → NPC-003 Moss**
+- BELIEVES: an old comrade from the Gate War. ACTUALLY KNOWS: they held a gate together. BLIND SPOT: thinks it's still the war. 
+- WILL VOUCH: for Moss to any Gate War dead · nothing living. FEELING: "Did we hold it?"
+- CHANGES ONLY VIA: Ch16 Fight 28 (laid to rest or woken).
+
+**R-235 · NPC-069 King Edric → PC-01 Ash**
+- BELIEVES: "the one who hums"; trust. ACTUALLY KNOWS: what Ash showed him. BLIND SPOT: he's a boy; he wants a hero.
+- WILL VOUCH: for Ash to his court · can't overrule the Chancellor alone. FEELING: hero-worship turning to trust.
+- CHANGES ONLY VIA: EVT-33.
+
+**R-236 · NPC-070 Lord Chancellor Crane → the Fenn-wyck Charter** (and PC-01 Ash as its bearer)
+- BELIEVES: documents over stories; the crown's old debt is real if it's written. ACTUALLY KNOWS: the archive's records. BLIND SPOT: won't move without paper.
+- WILL VOUCH: for the Charter's legal force · won't vouch for magic he can't read. FEELING: grudging respect.
+- CHANGES ONLY VIA: EVT-33.
+
+**R-237 · NPC-071 Maud Penrose → PC-01 Ash**
+- BELIEVES: "younger than the letters"; worth teaching. ACTUALLY KNOWS: the coast and the Glass. BLIND SPOT: assumes he'll listen.
+- WILL VOUCH: for him to Saltreach's captains · not to the crown. FEELING: mentor (no romance).
+- CHANGES ONLY VIA: EVT-38.
+
+**R-238 · NPC-072 Jago Trelawn → the island (Ommu's Rest)**
+- BELIEVES: it's real; he's never been believed. ACTUALLY KNOWS: where the Glass begins. BLIND SPOT: pride.
+- WILL VOUCH: for the island to anyone who'll sail · not for his own luck. FEELING: vindicated.
+- CHANGES ONLY VIA: EVT-39.
+
+**R-239 · NPC-195 Hattie Slade → PC-01 Ash**
+- BELIEVES: a rival, then a little brother she didn't ask for. ACTUALLY KNOWS: how he sails and steals. BLIND SPOT: competitiveness.
+- WILL VOUCH: for his nerve, to smugglers · not for his seamanship. FEELING: rival, then sisterly (no romance).
+- CHANGES ONLY VIA: Ch19 SC 19-A.
+
+**R-240 · NPC-077 Mother Hilary Vance → NPC-334 Prior Benedict Lowry** (optional Corriemount thread)
+- BELIEVES: he's the best of her order, her first novice, gentle and devout.
+- ACTUALLY KNOWS: he's been visiting Emberford's grief circles (she thinks for pastoral work).
+- BLIND SPOT: she sees him as the boy he was forty years ago.
+- WILL VOUCH: for his goodness and his faith, warmly and sincerely, to anyone · won't vouch for his judgment about the lakeshore lamp (she's uneasy and won't say).
+- FEELING: motherly love.
+- CHANGES ONLY VIA: EVT-57.

@@ -72,3 +72,10 @@
 - *Tuskhold:* memory contests, the long-stone puzzle.
 - *Otter-folk rafts:* swim races, otter-slide, fish-tickling.
 - *Things worth stealing:* Brannoc's orders, the keys of the Quiet Pens, a stolen Warren Mothers' songbook.
+
+---
+
+## Consistency-pass rulings (CHG-07, CHG-08, CHG-14)
+- **Name change:** the tabaxi example name "Mirra Far-Wander" is now **Zuri Far-Wander** (too close to a banned name).
+- **The Hushed, three depths:** **recent / half-Hushed** (grey to the elbows or shoulders, within about a season; "still in there"): Ash's hum wakes them from Ch1, Charisma (Performance) DC 15 / 17 / 19 / 21 by tier. **Deep / fully Hushed** (grey all over, or under still water for long): Ash alone can only *stir* them until Ch15; the twins' duet wakes them from Ch12; from Ch15 Ash alone wakes them with two successful Performance checks on consecutive turns (DC 19 tier 3, DC 21 tier 4; the duet or Lark humming with him makes it one check with advantage). **Hushed dead** (Gate War dead): laid to rest, never woken. Ash senses which depth without a roll.
+- **Tuskhold's drowned watering-pond** (opened in Ch16 ★3 C) is a minor Wellgate. Clara's Voice or the twins' duet can close it for good for SEAL −1; it counts toward the campaign's maximum of two optional side closings.
