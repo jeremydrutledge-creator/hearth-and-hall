@@ -10,7 +10,7 @@ Usage:
 A hard cap on the number of images lives in tools/.image_budget (a single integer:
 images remaining). The script refuses to run when it reaches 0.
 """
-import argparse, base64, json, os, sys, urllib.request, mimetypes
+import argparse, base64, json, os, sys, urllib.request, mimetypes, fcntl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BUDGET = os.path.join(HERE, ".image_budget")
@@ -27,9 +27,13 @@ def main():
     ap.add_argument("--aspect", default=None)
     a = ap.parse_args()
 
-    left = int(open(BUDGET).read().strip()) if os.path.exists(BUDGET) else 0
-    if left <= 0:
-        sys.exit("Image budget is 0. Raise it in tools/.image_budget only with the player's OK.")
+    # Reserve one image from the budget under a file lock (safe for parallel runs).
+    with open(BUDGET, "r+") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        left = int(f.read().strip() or 0)
+        if left <= 0:
+            sys.exit("Image budget is 0. Raise it in tools/.image_budget only with the player's OK.")
+        f.seek(0); f.truncate(); f.write(str(left - 1))
 
     parts = []
     for r in a.ref:
@@ -52,8 +56,7 @@ def main():
             if blob:
                 os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
                 open(a.out, "wb").write(base64.b64decode(blob["data"]))
-                open(BUDGET, "w").write(str(left - 1))
-                print(f"saved {a.out} (budget left: {left - 1})")
+                print(f"saved {a.out} (budget left after reserve: {left - 1})")
                 return
     sys.exit("No image returned: " + json.dumps(data)[:800])
 
