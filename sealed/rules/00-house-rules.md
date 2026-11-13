@@ -1,4 +1,4 @@
-# House Rules (player-safe; a copy lives at `/player/rules-and-house-rules.md`)
+# House Rules (player-safe except lines marked "DM note"; the player copy at `/player/rules-and-house-rules.md` omits them)
 
 > These are the table rules for this campaign. They contain **no story secrets**. The DM applies them every session. Where a rule here differs from the 2024 *Player's Handbook* (PHB) or *Dungeon Master's Guide* (DMG), **this file wins.**
 
@@ -52,6 +52,39 @@ You can use magic items others can't.
 
 ### Level 17: Thief's Reflexes
 You get **two turns during the first round of any combat.** Your first turn is at your normal initiative. Your second is at your initiative minus 10. You can't use this if you're surprised.
+
+---
+
+## 3A. Zeke's subclass: Wardwright (house rule)
+
+> Wizard subclass, chosen at **level 3**. It mixes the **2024 Abjurer** and the **2024 Evoker**: one feature at each subclass level, the same count the real subclasses give. *"Wright" is an old word for a maker (wheelwright, shipwright). Zeke doesn't just cast protective spells, he builds them.*
+> **Gives up:** Potent Cantrip and Empowered Evocation (Evoker); Spell Breaker (except the single spell picked at level 10) and Spell Resistance (Abjurer).
+> **Verification note:** the borrowed features below are written from the 2024 Player's Handbook as best we can recall it; the book itself wasn't available to check. If the DM or player finds a wording difference in the book, the book's wording wins for the borrowed part, and the house twists below stay.
+
+### Level 3: Wright's Savant *(from Abjuration Savant / Evocation Savant)*
+Choose two Wizard spells from the **Abjuration or Evocation** school (any mix), each level 2 or lower, and add them to your spellbook for free. Whenever you gain access to a new level of spell slots, you can add one Abjuration or Evocation Wizard spell of that level to your spellbook for free.
+
+### Level 3: Arcane Ward, "the Harness" *(from the Abjurer's Arcane Ward, with a house twist)*
+Zeke wears a harness of copper coil and wire he built in the attic. It catches spell energy and turns it into a shield. *(DM note: it runs on his own magic, NOT glimmer, so it survives every ending. Never describe it as glimmer-powered.)*
+- **Making the Harness.** When you cast an Abjuration spell with a spell slot, you can make the Harness come up. It lasts until you finish a Long Rest.
+- **Hit points.** The Harness has HP equal to **twice your Wizard level + your Intelligence modifier**. Whenever you take damage, the Harness takes it instead. If damage reduces it to 0 HP, you take any leftover damage. At 0 HP it can't absorb damage, but its magic stays.
+- **Recharging.** Whenever you cast an Abjuration spell with a spell slot, the Harness regains HP equal to **twice the spell's level**. **House twist:** the same happens when you cast an **Evocation** spell of 1st level or higher with a spell slot. You can also take a **Bonus Action** to expend a spell slot; the Harness regains HP equal to twice that slot's level.
+- Once you make it, you can't make it again until you finish a Long Rest.
+- **Zeke at level 3:** Harness HP **10** (2 × 3 + 4).
+
+### Level 6: Sculpt Spells *(from the Evoker)*
+When you cast an **Evocation** spell that affects other creatures you can see, you can choose a number of them equal to **1 + the spell's level**. Those creatures automatically succeed on their saving throws against the spell, and they take **no damage** if they would normally take half damage on a successful save.
+*(In play: Zeke drops a Fireball on a melee and Gideon, Moss and Ash walk out of it untouched.)*
+
+### Level 10: Projected Ward *(from the Abjurer, moved from level 6)*
+When a creature you can see within **30 feet** of you takes damage, you can take a **Reaction** to make the Harness absorb that damage. If this reduces the Harness to 0 HP, the warded creature takes any leftover damage.
+
+### Level 10: The Wright's Pick *(house rule; replaces Spell Breaker)*
+Choose **Counterspell** or **Dispel Magic**. You always have that spell prepared, and it doesn't count against the number of spells you can prepare. *(Counterspell uses the 2014 rules; see §2.)* You can still learn and prepare the other one normally.
+
+### Level 14: Overchannel *(from the Evoker)*
+When you cast a Wizard spell of **1st through 5th level** that deals damage, you can deal **maximum damage** with that spell on the turn you cast it.
+- The first time you do this, there's no cost. If you use it again before you finish a Long Rest, you take **2d12 Necrotic damage for each level of the spell** immediately after you cast it. Each further use before a Long Rest increases this by 1d12 per spell level. This damage ignores Resistance and Immunity.
 
 ---
 

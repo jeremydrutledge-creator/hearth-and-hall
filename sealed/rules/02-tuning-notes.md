@@ -11,7 +11,7 @@
 - Baseline **65% hit chance** against an on-level AC (the AC column in §3).
 - **Ash:** shortsword (Vex) plus off-hand dagger (Nick) every turn. On about **40% of rounds** his first attack has advantage, from Bart's Help, Vex carry-over or (from L3) Steady Aim. Sneak Attack lands if either attack hits. Dex 20 from L4. Magic weapon bonus assumed: +1 from L6, +2 from L11, +3 from L16.
 - **Gideon:** longsword and shield (Str 20 from L4), Extra Attack at L5, Radiant Strikes +1d8 at L11. Divine Smite spending is amortized at roughly a third of his slots per adventuring day of about 3 fights.
-- **Zeke:** a cantrip about 60–70% of rounds. Otherwise an area spell of his best slot level, hitting about 2.2 targets at about 75% effective (saves and misses).
+- **Zeke (Wardwright, CHG-24):** a cantrip about 60–70% of rounds. Otherwise an area spell of his best slot level, hitting about 2.2 targets at about 75% effective (saves and misses). **From L6, Sculpt Spells** lets him drop area spells on melee without hurting allies: modeled as **+20% Zeke DPR** (more targets per blast, blasts cast more often). **From L14, Overchannel** (one free maximized spell per long rest) adds about +2 per round amortized. He has no Potent Cantrip and no Empowered Evocation.
 - **Moss:** Shillelagh at L1. From L2–3, Wild Shape beasts at his Circle Forms CR (CR 1 at L3, rising to CR 6 at L18). From L5, a concentration spell ticking (Moonbeam or Conjure Animals) amortized in.
 
 **Math, worked at three levels:**
@@ -35,21 +35,23 @@
 | 3 | 14 | 8 | 7 | 8 | **37** |
 | 4 | 14 | 8 | 7 | 8 | **38** |
 | 5 | 17 | 17 | 13 | 12 | **59** |
-| 6 | 19 | 18 | 13 | 14 | **64** |
-| 7 | 22 | 19 | 16 | 14 | **71** |
-| 8 | 22 | 19 | 16 | 17 | **74** |
-| 9 | 25 | 22 | 23 | 21 | **91** |
-| 10 | 25 | 22 | 23 | 21 | **91** |
-| 11 | 30 | 31 | 27 | 21 | **109** |
-| 12 | 30 | 31 | 27 | 27 | **115** |
-| 13 | 33 | 35 | 30 | 27 | **124** |
-| 14 | 33 | 35 | 30 | 27 | **124** |
-| 15 | 36 | 37 | 32 | 29 | **134** |
-| 16 | 38 | 38 | 32 | 33 | **140** |
-| 17 | 41 | 40 | 36 | 33 | **150** |
-| 18 | 41 | 40 | 36 | 35 | **152** |
-| 19 | 44 | 42 | 36 | 35 | **157** |
-| 20 | 44 | 42 | 36 | 39 | **161** |
+| 6 | 19 | 18 | 16 | 14 | **67** |
+| 7 | 22 | 19 | 19 | 14 | **74** |
+| 8 | 22 | 19 | 19 | 17 | **77** |
+| 9 | 25 | 22 | 27 | 21 | **95** |
+| 10 | 25 | 22 | 27 | 21 | **95** |
+| 11 | 30 | 31 | 32 | 21 | **114** |
+| 12 | 30 | 31 | 32 | 27 | **120** |
+| 13 | 33 | 35 | 35 | 27 | **129** |
+| 14 | 33 | 35 | 37 | 27 | **131** |
+| 15 | 36 | 37 | 39 | 29 | **141** |
+| 16 | 38 | 38 | 39 | 33 | **147** |
+| 17 | 41 | 40 | 43 | 33 | **157** |
+| 18 | 41 | 40 | 43 | 35 | **159** |
+| 19 | 44 | 42 | 43 | 35 | **164** |
+| 20 | 44 | 42 | 43 | 39 | **168** |
+
+**The L6–10 bump (Wardwright, CHG-24).** Sculpt Spells at L6 lifts party DPR about **+4–5%** (L6 64 → 67, L9 91 → 95) and, more importantly, removes the friendly-fire tax: Fireball into a crowded melee is now free. Fights with clustered enemies around Gideon and Moss end about a third of a round sooner. No retune is needed (every level stays within 6% of the old DPR), but at L6–10 use the **spread formation** counter (§6) a little more often against groups, and give significant fights at least one enemy that doesn't cluster.
 
 **Nova warning:** a round where everything lines up (Bless, Ash with advantage and a crit, Zeke's best area spell, Gideon's two smites) can hit **2–2.5× DPR**. Bosses need a phase or form change, not one HP bar, so a single nova round can't skip a fight's story. At L17+, **Thief's Reflexes** gives Ash two turns in round 1. Add about 40 to round-1 damage in boss maths.
 
@@ -80,6 +82,8 @@
 | 19 | 136 | 194 | 154 | 193 (+57) | 677 | ~905 |
 | 20 | 143 | 204 | 162 | 203 (+60) | 712 | ~952 |
 
+**Zeke's Harness (Arcane Ward, CHG-24).** Pool = 2 × level + Int: L3 10 · L4 13 · L5 15 · L6 17 · L8 21 · L10 25 · L12 29 · L14 33 · L16 37 · L18 41 · L20 45. It refills by 2 × slot level whenever he casts an Abjuration **or Evocation** spell with a slot, so over a typical fight it soaks about **1.5× its pool**, mostly damage aimed at Zeke. Until L10 it protects **only Zeke**; Projected Ward (L10) lets it soak hits on allies. **Not added to the Effective column below**: the column was already built with the old Abjurer ward as unstated margin, and adding it moves effective HP by only +7–10% (L3 +10%, L6 +9%, L10 +8%, L20 +7%). Treat it as the reason Zeke is less "squishy" than his HP says. If play shows enemies can't touch him, shift ~10% of enemy DPR onto him (ranged focus fire, saving-throw effects the ward still absorbs only as damage).
+
 "Effective" adds Moss's wild-shape temporary HP (one use) plus a share of Lay on Hands and Moss's and Gideon's healing for a single fight. Moss's Resilient (Con) at L4 adds about 1 HP per level, which isn't included.
 
 **Armor class (L1 → L20, with expected magic):** Gideon 18 → 21–22 · Ash 15 → 18–19 · Moss 16 (beast forms 13 + Wis = 17 → 18) · Zeke 11 (14 with Mage Armor, 19 with Shield) → 15–17 base.
@@ -93,6 +97,8 @@
 ---
 
 ## 3. Encounter targets by level
+
+> **CHG-24 note:** the Party DPR column in this table is the pre-Wardwright figure. The new figures in §1 are at most 6% higher, inside the ±10% band, so the targets below stand and no chapter fight was retuned. If you build a new fight at L6+, you may use the §1 figure.
 
 **How to read this:**
 - **Total enemy HP** is the combined HP of everything on the enemy side.
@@ -232,8 +238,9 @@ DM notes: damage-per-round check, the expected round count, what to cut if it dr
 | **Ash's Sneak Attack from flanking** | Enemies fight back-to-back or keep a reach guard. A shove or grapple to drag Ash out of position. A guard's Interpose. "Watchful" leaders who can't be ganged up on (once per round, an ally within 5 ft doesn't count for Sneak Attack). |
 | **Ash's Cunning Action Hide** | Tremorsense, scent, lanterns and light, a hound or familiar of its own, a "hush" field where his footsteps echo. |
 | **Gideon's Protection style and smites** | Ranged enemies who ignore him. Enemies that pull or push a protected ally away from him (shove, tentacle, current). A boss that makes Gideon's smite target a temporary shell or decoy. |
-| **Zeke's area spells (Thunderwave, Fireball)** | Spread formation. Enemies that close fast and grapple him. A caster with **Counterspell (2014)**. Wards that absorb one spell. Water or wind that disperses fire. |
+| **Zeke's area spells (Thunderwave, Fireball; Sculpt Spells from L6)** | Spread formation (the main counter from L6, since allies no longer limit his aim). Enemies that close fast and grapple him. A caster with **Counterspell (2014)**. Wards that absorb one spell. Water or wind that disperses fire. |
 | **Zeke's Shield spell** | Saving-throw attacks instead of attack rolls. Multi-hit routines that burn the reaction early. |
+| **Zeke's Harness (Arcane Ward / Projected Ward from L10)** | Many small hits that strip it before a big one lands. Psychic or non-damage effects (grapple, charm, restrain) that it can't absorb. From L10, forcing him to choose: Projected Ward and Shield and Counterspell all use his one reaction. |
 | **Moss's wild shape as a front-line beast** | Big single hits that burn temporary HP. Grapple and restrain to pin the beast. Concentration-breaking volleys on his spell. Psychic or Wisdom-save effects, which hit his Wis +6 (fairly). |
 | **Gideon's Initiative Swap** | Bosses with high initiative and legendary movement. Reinforcements that arrive on initiative count 10. |
 | **Healing Word and Lay on Hands yo-yo** | Enemies that "keep" a downed hero: drag them toward water, the gate or the greywilt (an objective change, not an execution). |

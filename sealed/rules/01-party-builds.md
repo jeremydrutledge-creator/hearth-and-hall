@@ -114,7 +114,7 @@
 
 ## Zeke (Ezekiel Fenwick), level 1
 **Human Wizard 1 · Sage background · age 31 · the middle brother**
-*Arcane Tradition at level 3: School of Abjuration (the "unmaker"). He loves taking spells apart to see how they work.*
+*Arcane Tradition at level 3: **Wardwright** (house rule: half Abjurer, half Evoker; see `rules-and-house-rules.md` §3A). He builds his shields like gadgets, and he blows things up when his family is in danger.*
 
 | STR | DEX | CON | INT | WIS | CHA |
 |---|---|---|---|---|---|
@@ -148,7 +148,7 @@
 
 **Gear:** spellbook (patched, half its margins full of gadget sketches) · quarterstaff arcane focus · 2 daggers · robe · scholar's pack · calligrapher's supplies · his attic tinkering tools · spectacles · **5 gp**
 
-**Coming up:** L2 Scholar (expertise in **Arcana**) · L3 School of Abjuration (Arcane Ward) · L4 feat (**Int 18 → 20**) · L5 Memorize Spell, 3rd-level spells (**Counterspell**, 2014 version) · L6 Projected Ward · L8 feat (**War Caster**) · L10 Spell Breaker · L12 feat (**Resilient (Dex)** or **Alert**) · L14 Spell Resistance · L16 feat · L18 Spell Mastery (Shield, Misty Step) · L19 Epic Boon (Spell Recall) · L20 Signature Spells
+**Coming up:** L2 Scholar (expertise in **Arcana**) · L3 **Wardwright**: Wright's Savant (free: **Shatter**, **Arcane Lock**) and **the Harness** (Arcane Ward, 10 HP) · L4 feat (**Int 18 → 20**) · L5 Memorize Spell, 3rd-level spells (**Counterspell**, 2014 version; **Fireball**) · L6 **Sculpt Spells** · L8 feat (**War Caster**) · L10 **Projected Ward** and **the Wright's Pick** (Counterspell *or* Dispel Magic, always prepared; **Jeremy picks** at level 10) · L12 feat (**Resilient (Dex)** or **Alert**) · L14 **Overchannel** · L16 feat · L18 Spell Mastery (Shield, Misty Step) · L19 Epic Boon (Spell Recall) · L20 Signature Spells (Counterspell, Fireball)
 
 ---
 
@@ -205,7 +205,8 @@
 - Holds SEC-09 and SEC-16. **Bearback (Ch10)** is his "second oath" moment. Give him a story-only boon there (a bear-shaped aura effect when Aura of Protection is up; dwarves kneel). No extra mechanics unless the chapter writer adds a specific one.
 
 ## Zeke: what the sheet doesn't say
-- **Abjuration** was chosen because Zeke's sealed gift is to **unweave glimmer workings** (Ch12–13) and read Sundering-script (Ch3+). Spell Breaker (L10) and Counterspell (L5) make the unweaving feel earned at the table. Discovery moments in `campaign/02` say *when*. The sheet says nothing about it.
+- **Wardwright** (player-approved house subclass, CHG-24) keeps the Abjurer's unmaking thread: Zeke's sealed gift is to **unweave glimmer workings** (Ch12–13) and read Sundering-script (Ch3+). Counterspell (L5) and the **Wright's Pick** at L10 (Counterspell or Dispel Magic, always prepared) make the unweaving feel earned; the unweave scenes in Ch10, Ch12 and Ch13 accept **either** spell, so the player's pick never locks him out. Discovery moments in `campaign/02` say *when*. The sheet says nothing about it.
+- **The Harness is not glimmer-powered.** It's his own magic in copper coil, so it survives every ending. Never describe it as running on glimmer.
 - His Crafter feat lets him make small gifts for Ash to give. Tie this to the Enchanters' Row gift engine.
 
 ## Ash: what the sheet doesn't say
@@ -219,22 +220,22 @@
 
 > Ash's picks are **proposals**. The player confirms each at level-up. The companions' picks are the DM's plan, and can change with play. Levels arrive by milestone (`campaign/01`).
 
-| Lvl | Ash (Rogue / Thief-Swashbuckler) | Gideon (Paladin / Ancients) | Zeke (Wizard / Abjurer) | Moss (Druid / Moon) |
+| Lvl | Ash (Rogue / Thief-Swashbuckler) | Gideon (Paladin / Ancients) | Zeke (Wizard / Wardwright) | Moss (Druid / Moon) |
 |---|---|---|---|---|
 | 1 | SA 1d6, Expertise (Stealth, Perception), Mastery | Lay on Hands, spells (Bless, Cure Wounds), Mastery | Spells, Ritual Adept, Arcane Recovery | Spells, Warden |
 | 2 | Cunning Action | Fighting Style (Protection), Paladin's Smite; Divine Smite always prepared | Scholar (Arcana) | Wild Shape (CR 1/4), Wild Companion |
-| 3 | Fast Hands, Second-Story Work, Fancy Footwork, Steady Aim, SA 2d6 | **Oath of the Ancients** (Ch2 vigil): Nature's Wrath; Ensnaring Strike, Speak with Animals | Abjuration: Arcane Ward | Circle Forms (CR 1, temp HP 3×level, AC 13+Wis); Moon spells. *Story upgrade #1 (Ch3)* |
+| 3 | Fast Hands, Second-Story Work, Fancy Footwork, Steady Aim, SA 2d6 | **Oath of the Ancients** (Ch2 vigil): Nature's Wrath; Ensnaring Strike, Speak with Animals | Wardwright: Wright's Savant (Shatter, Arcane Lock), the Harness (Arcane Ward, 10 HP) | Circle Forms (CR 1, temp HP 3×level, AC 13+Wis); Moon spells. *Story upgrade #1 (Ch3)* |
 | 4 | **ASI Dex 20** | **ASI Str 20** | **ASI Int 20** | **Resilient (Con)** → Con 18 |
-| 5 | Cunning Strike, Uncanny Dodge, SA 3d6 | Extra Attack, Faithful Steed | 3rd-level spells: Counterspell (2014), Fireball, Dispel Magic | Wild Resurgence; 3rd: Call Lightning, Conjure Animals |
-| 6 | Expertise: Sleight of Hand + Deception or Persuasion | Aura of Protection (+3) | Projected Ward | Improved Circle Forms (CR 2) |
-| 7 | Evasion, Reliable Talent, SA 4d6 | Aura of Warding | 4th: Banishment, Greater Invisibility | Elemental Fury; 4th: Polymorph |
+| 5 | Cunning Strike, Uncanny Dodge, SA 3d6 | Extra Attack, Faithful Steed | 3rd-level spells: Counterspell (2014), Fireball, Dispel Magic (Savant: Lightning Bolt free) | Wild Resurgence; 3rd: Call Lightning, Conjure Animals |
+| 6 | Expertise: Sleight of Hand + Deception or Persuasion | Aura of Protection (+3) | **Sculpt Spells** | Improved Circle Forms (CR 2) |
+| 7 | Evasion, Reliable Talent, SA 4d6 | Aura of Warding | 4th: Banishment, Ice Storm (Savant: Fire Shield free) | Elemental Fury; 4th: Polymorph |
 | 8 | **Alert** | **ASI Cha 18** | **War Caster** | **War Caster** |
-| 9 | **Panache**, SA 5d6 | Abjure Foes; 3rd-level spells | 5th: Wall of Force, Animate Objects | CR 3 forms; 5th: Mass Cure Wounds |
-| 10 | **ASI Cha 20** | Aura of Courage | **Spell Breaker** | Moonlight Step |
-| 11 | Improved Cunning Strike, SA 6d6 | Radiant Strikes (+1d8 radiant per hit) | 6th: Globe of Invulnerability | 6th: Heal |
+| 9 | **Panache**, SA 5d6 | Abjure Foes; 3rd-level spells | 5th: Wall of Force, Cone of Cold | CR 3 forms; 5th: Mass Cure Wounds |
+| 10 | **ASI Cha 20** | Aura of Courage | **Projected Ward** + **Wright's Pick** (Counterspell or Dispel Magic always prepared; player picks) | Moonlight Step |
+| 11 | Improved Cunning Strike, SA 6d6 | Radiant Strikes (+1d8 radiant per hit) | 6th: Globe of Invulnerability, Chain Lightning | 6th: Heal |
 | 12 | **Resilient (Wis)** | **ASI Cha 20** | Resilient (Dex) | **ASI Wis 20**; CR 4 forms |
 | 13 | **Use Magic Device**, SA 7d6 | 4th-level spells | 7th: Forcecage | 7th |
-| 14 | Devious Strikes | Restoring Touch | Spell Resistance | Lunar Form |
+| 14 | Devious Strikes | Restoring Touch | **Overchannel** | Lunar Form |
 | 15 | Slippery Mind, SA 8d6 | Undying Sentinel | 8th: Mind Blank | CR 5 forms; Improved Elemental Fury |
 | 16 | **Tavern Brawler** or **Tough** | **Sentinel** | Alert | Alert |
 | 17 | **Thief's Reflexes**, SA 9d6 | 5th-level spells | 9th: Wish (narrative-limited) | 9th: Foresight |

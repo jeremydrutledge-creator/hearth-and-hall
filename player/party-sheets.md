@@ -113,7 +113,7 @@
 
 ## Zeke (Ezekiel Fenwick), level 1
 **Human Wizard 1 · Sage background · age 31 · the middle brother**
-*Arcane Tradition at level 3: School of Abjuration (the "unmaker"). He loves taking spells apart to see how they work.*
+*Arcane Tradition at level 3: **Wardwright** (house rule: half Abjurer, half Evoker; see `rules-and-house-rules.md` §3A). He builds his shields like gadgets, and he blows things up when his family is in danger.*
 
 | STR | DEX | CON | INT | WIS | CHA |
 |---|---|---|---|---|---|
@@ -147,7 +147,7 @@
 
 **Gear:** spellbook (patched, half its margins full of gadget sketches) · quarterstaff arcane focus · 2 daggers · robe · scholar's pack · calligrapher's supplies · his attic tinkering tools · spectacles · **5 gp**
 
-**Coming up:** L2 Scholar (expertise in **Arcana**) · L3 School of Abjuration (Arcane Ward) · L4 feat (**Int 18 → 20**) · L5 Memorize Spell, 3rd-level spells (**Counterspell**, 2014 version) · L6 Projected Ward · L8 feat (**War Caster**) · L10 Spell Breaker · L12 feat (**Resilient (Dex)** or **Alert**) · L14 Spell Resistance · L16 feat · L18 Spell Mastery (Shield, Misty Step) · L19 Epic Boon (Spell Recall) · L20 Signature Spells
+**Coming up:** L2 Scholar (expertise in **Arcana**) · L3 **Wardwright**: Wright's Savant (free: **Shatter**, **Arcane Lock**) and **the Harness** (Arcane Ward, 10 HP) · L4 feat (**Int 18 → 20**) · L5 Memorize Spell, 3rd-level spells (**Counterspell**, 2014 version; **Fireball**) · L6 **Sculpt Spells** · L8 feat (**War Caster**) · L10 **Projected Ward** and **the Wright's Pick** (Counterspell *or* Dispel Magic, always prepared; **Jeremy picks** at level 10) · L12 feat (**Resilient (Dex)** or **Alert**) · L14 **Overchannel** · L16 feat · L18 Spell Mastery (Shield, Misty Step) · L19 Epic Boon (Spell Recall) · L20 Signature Spells (Counterspell, Fireball)
 
 ---
 

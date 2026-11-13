@@ -49,7 +49,7 @@
 |---|---|---|---|---|
 | Ash | Rogue / Thief-Swashbuckler (house rule) | 15 | 10 | Lucky (2), Magic Initiate (Wizard; CHA): Message, Prestidigitation, Find Familiar. Shortsword (Vex) + dagger (Nick). Stealth +8, Perception +6. Bart the owl. 10 gp. Split locket (SEC-23). |
 | Gideon (NPC-001) | Paladin / Ancients (oath at the Ford Stone, Ch2) | 18 | 14 | Alert (Initiative Swap), Tough, Protection style at L2. Aura of Warding at L7 matters against psychic effects. |
-| Zeke (NPC-002) | Wizard / Abjuration | 11 (14 with Mage Armor) | 10 | Counterspell (2014) at L5, Spell Breaker at L10. Reads Sundering-script (from Ch3). Unweaves glimmer. |
+| Zeke (NPC-002) | Wizard / Wardwright (house: Abjurer + Evoker) | 11 (14 with Mage Armor) | 10 | Counterspell (2014) at L5; Sculpt Spells L6; Projected Ward + Wright's Pick (Counterspell or Dispel Magic, player's choice) L10; Overchannel L14. Reads Sundering-script (from Ch3). Unweaves glimmer. |
 | Moss (NPC-003) | Druid / Moon | 16 | 13 | Beast forms are **always antlered or mossy** (SEC-01 seed). Story upgrades in §6. |
 
 **Ash's subclass checkpoints:**
