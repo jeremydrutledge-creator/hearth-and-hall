@@ -1,0 +1,13 @@
+{"title": "Emberford", "markers": [
+ {"n":1,"x":745,"y":330,"label":"Crownhill"},
+ {"n":2,"x":440,"y":370,"label":"Guildhall Isle"},
+ {"n":3,"x":620,"y":580,"label":"Temple Isle"},
+ {"n":4,"x":190,"y":380,"label":"The Commons"},
+ {"n":5,"x":300,"y":560,"label":"Market Steps"},
+ {"n":6,"x":400,"y":640,"label":"The Wharves"},
+ {"n":7,"x":250,"y":740,"label":"Glimmerway & the Row"},
+ {"n":8,"x":380,"y":950,"label":"Old Ford"},
+ {"n":9,"x":215,"y":1010,"label":"West Gate"},
+ {"n":10,"x":95,"y":930,"label":"The Fringe & Willow Lane"},
+ {"n":11,"x":560,"y":540,"label":"The Seven Bridges"}
+]}

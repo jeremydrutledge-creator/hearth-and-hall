@@ -25,6 +25,7 @@ def main():
     ap.add_argument("--ref", nargs="*", default=[])
     ap.add_argument("--model", default=os.environ.get("IMG_MODEL", "gemini-3-pro-image-preview"))
     ap.add_argument("--aspect", default=None)
+    ap.add_argument("--size", default="2K", help="1K, 2K or 4K (1K and 2K cost the same)")
     a = ap.parse_args()
 
     # Reserve one image from the budget under a file lock (safe for parallel runs).
@@ -41,8 +42,10 @@ def main():
         parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(r, "rb").read()).decode()}})
     parts.append({"text": a.prompt.strip() + "\n\n" + STYLE})
     body = {"contents": [{"parts": parts}], "generationConfig": {"responseModalities": ["IMAGE", "TEXT"]}}
+    ic = {"imageSize": a.size}
     if a.aspect:
-        body["generationConfig"]["imageConfig"] = {"aspectRatio": a.aspect}
+        ic["aspectRatio"] = a.aspect
+    body["generationConfig"]["imageConfig"] = ic
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{a.model}:generateContent"
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
