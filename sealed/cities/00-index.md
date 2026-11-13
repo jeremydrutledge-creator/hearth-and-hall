@@ -520,3 +520,199 @@ Skill-contest purses come out of the **same side-activity allowance** as ring pu
 | Tuskhold | 18 | **The Weight-and-Balance** (carry and balance stations), **Trunk-Throw** (knife-throwing at the elephant-folk's swinging targets) |
 | Horngard | 19 | **The Maze Run** (Perception and sprint stations in the hedge maze), **Horn-Archery** (long rounds) |
 | Hollowmere | 20 | **The Leaping Fair** (hare-folk Gauntlet: jump stations dominate; hare-folk +8 jump), **The Reed Run** (otter-raft Gauntlet across floating reed mats, Hard) |
+
+---
+
+## 12. STRANGE ARMS (CHG-22: the "never held one before" contest)
+
+> **The pitch, in the world:** a traveling collector named **Odo Fairlie** ("the Collector," NPC-097) buys odd weapons from every corner of Eyrland, and later from Mirrowen, and stages contests where good shots and good throwers are handed something **none of them has ever used.** Nobody's proficient. Everybody's guessing. The crowd loves watching a champion archer fumble a bola. The player gets the fun of **working out a strange weapon in real time.**
+> **Player-safe:** the format (Study, Practice, Challenge, Elimination) is public; locals know it. **The weapons are not.** Never list them for the player. Reveal each one when it's set on the table.
+
+### 12.1 Common rules
+- **No proficiency.** Every competitor attacks with **Dex or Str modifier only** (the weapon says which; finesse-like ones let you pick), plus **Feel** (below). Ash at L1: **+4**.
+- **No magic, no familiars** (same as every contest). **Non-magical class features apply:** **Steady Aim** (L3) on ranged rounds where he doesn't move, **Lucky**, **Reliable Talent** on the Study check (L7). **Sneak Attack doesn't** (no creature).
+- **Feel:** a bonus to every Strange Arms roll **with that weapon, that day**. It comes from Study and Practice, **stacks**, and is **capped at Ash's proficiency bonus** (+2 at L1–4, +3 at L5–8, and so on). It's "learning the thing," and the cap is on purpose: by the end of the day he's as good as if he'd trained, never better.
+- **Tier DCs:** written for **T1**. **+2 per tier** to every target AC and DC; purses as §11.1.
+- **Every weapon has a Quirk** (a built-in way to fumble it) and a **Hidden Trick** (a way to use it that the demonstrator doesn't mention). Finding the Trick is the swingy moment of the day.
+
+### 12.2 The four phases (about 20 minutes at the table)
+
+**1. STUDY (one roll).** The Collector sets it on the table and says one line about where it's from. Each competitor gets a minute to look it over, heft it, or watch the demonstrator's single throw. Ash picks **one**:
+- **Intelligence (Investigation) DC 12:** take it apart with your eyes.
+- **Wisdom (Insight) DC 12:** watch the demonstrator's hands, not the weapon.
+- **A relevant tool, DC 10:** Thieves' Tools for anything with a catch or trigger; Tinker's Tools for clockwork; Weaver's/Leatherworker's for cords, nets and whips; Smith's for iron. (Zeke's or Gideon's advice counts as flavor only; they're not competing... unless they enter, which they may.)
+- **Results:** **Success:** Ash learns the **Quirk** (he's immune to it all day) and gets **+1 Feel**. **Success by 5+:** also a **hint** at the Hidden Trick (tell the player one true sentence about it), and his Trick-discovery range widens (below). **Failure:** no Feel, and the Quirk bites the first time it can.
+
+**2. PRACTICE (three shots).** Three practice attempts at a plain target (**AC 12**). **Each attempt, hit or miss, gives +1 Feel** (to the cap). Describe each one: what went right, what went wrong.
+- **Discovering the Hidden Trick:** a practice roll of **natural 18–20** (or **15–20** if Study succeeded by 5+) reveals it. The player may also **describe trying something specific**; if it matches the Trick's description, he finds it automatically. **Reward the player who thinks about the weapon.**
+- **Bart** heckles from the rail, because he can't compete. (Bart: "You're holding it upside down." He's lying about half the time. Roll a d6: on 1–3 he's right.)
+
+**3. CHALLENGE ROUND (everyone).** Each competitor shoots the weapon's **target course** (each weapon lists one: usually 3–5 targets of rising AC). Score = hits (**2 for a hit by 5+**). The **bottom two** go to elimination (in a field of 6; with 8, the bottom four go to two duels). Using the **Hidden Trick** on its target scores **3**.
+
+**4. ELIMINATION (head to head).** Two competitors, the same weapon (or **a new one**: the Collector's favorite twist, which resets Feel to 0 and runs a quick Study and one practice shot first). **Best of three targets, alternating shots, ties shoot again at AC 18.** Loser goes home. Repeat until **the final two** shoot the **showpiece course**: moving targets, a trick shot, and the crowd on its feet.
+
+**Field:** 6 competitors (T1), 8 (T2+). Ash is one; the rest come from §12.4 and the city's own rivals. **Roll rivals for real at the elimination stage**; earlier, use §11.7 bonuses and the d6 pass table if you need speed.
+
+**Prizes:** Entry **5 gp** (T1) / 25 / 100 / 400. **Winner:** the purse (**60 gp** T1 / 300 / 1,200 / 4,000) **and the day's weapon** (a fine mundane example, worth the listed price; sometimes the magic version, as each weapon says). Runner-up: a quarter of the purse. **Circuit points:** 3 for a win, 2 for the final, 1 for reaching elimination and surviving one duel.
+
+### 12.3 The weapons (14; three are Mirrowen's and appear only once Act II opens the way)
+
+Damage is for completeness (ring and contest use is targets only; if Ash buys one, it's a real weapon). **Proficiency:** once Ash **wins** with a weapon, or practices it for a week of downtime, treat it as a Simple weapon he's proficient with (DM's call; it's a reward, not a loophole).
+
+| # | Weapon (where from) | How it works | Quirk | Hidden Trick | Target course (T1) | Prize / buy |
+|---|---|---|---|---|---|---|
+| 1 | **Kettle-sling** (Dun Morrach: a staff-sling the dwarves use to lob hot stones up the spring terraces) | A 5-ft staff with a sling pouch at the tip; two-handed overhead whip. **Str or Dex**, 1d6 bludgeoning, range 60/240. | Releases late if you think of it as a sling: **first shot goes straight up** (automatic miss) unless Study succeeded. | **The skip:** bounce the stone off flat rock to hit a target behind low cover; ignores half cover, and the "behind the wall" target (AC 16) scores 3. | 3 clay pots on posts at 60 ft (AC 12/14/16) and one behind a low wall (AC 16) | 15 gp mundane. Hakon (Iron Kettle) sells them and will lecture. |
+| 2 | **Spring-bow** (Bramblecog: gnomish clockwork repeating crossbow) | Crank winds a spring; holds 4 bolts. **Dex**, 1d6 piercing, 60/240, **fires twice per Attack action if you didn't move**. | **Jams** on a natural 1 or 2 (lose the next shot clearing it). | **Half-wind:** a quarter-crank turn fires a weak bolt with no jam chance; perfect for the "ring the bell" target (a hit by any margin scores 3). | 4 rapid targets that pop up (AC 13 each, 2 attempts per turn), then the bell (AC 17) | 75 gp; the **+1 version** is the circuit final prize option. Nim Gearwright drools over it. |
+| 3 | **Shepherd's knot** (the Hobbland: gnome sheep-herders' bola) | Three cords, three weights; whirl and throw at legs. **Dex**, range 20/60. A hit on a creature: **DC 12 Str save or prone and speed 0** until it uses an action to free itself. | **Needs two full whirls:** if you moved more than half your speed this turn, disadvantage. | **The low throw:** aim at the ground just in front; it skips up and wraps. +2 to hit the "running post" (a sledge dragged across the yard). | Tangle 3 posts (AC 12/14/16), then the running post (AC 16) | 5 gp. Pip will want one. **Combat use is legitimately good** for a rogue; that's a fine prize. |
+| 4 | **Drift hook-and-cast** (Driftmarket: the river clans' net on a hooked pole) | A 10-ft hooked pole in one hand, a weighted casting net in the other. **Str or Dex**; net: range 10/15, Restrained (DC 10 Str to escape); hook: reach, 1d4, pull 5 ft. | **The net spreads with the wind:** roll a d6 before each cast; on a 1 it drifts 5 ft left. | **Cast-and-hook:** net first, hook the net's drawline the same turn and haul the whole catch in: the "bag the buoy" target (a floating barrel, AC 16) scores 3. | Net 3 floating buoys (AC 12/14/16), then haul a buoy to the jetty | 10 gp. The otter-folk use something almost identical (Ch14 callback). |
+| 5 | **Harpoon-thrower** (Saltreach and the Salt Isles: a throwing-stick that hurls a lined harpoon) | A notched stick that throws a light harpoon on a line. **Str or Dex**, 1d8 piercing, range 40/160. Line: retrieve as a bonus action. | **The line tangles** on a miss by 5+: lose the next shot. | **The rope return:** throw past the target and yank the line so it swings back in (hits a target **behind** you or around a mast: AC 17, scores 3). | Three hanging fish-shapes at 40 / 80 / 120 ft (AC 12/14/16), then the mast-shot | 12 gp. Saba Mercer's own weapon at home; she's terrifying with it. |
+| 6 | **Company whip** (Wolfsgate: a Grey Wolf drover's lead-tipped war-whip) | **Dex**, reach 15 ft, 1d4 slashing. Can **disarm** (contest vs Str/Dex) or snuff a flame. | **The crack comes back:** a miss by 5+ snaps back at you (1 damage, and the crowd howls). | **The wrap:** wrap a post and pull yourself or swing across a gap (the "creek swing" scores 3). Also snuffs two candles with one crack. | Snuff 3 candles at 10/12/15 ft (AC 12/14/16), then the creek swing (Acrobatics DC 13 after a hit vs AC 14) | 2 gp, mundane. A nice prize for Gideon to disapprove of. |
+| 7 | **Pit-chain** (Copperhill: a weighted miners' chain thrown from scaffolds to snag loads) | 10 ft of chain with a pear-shaped weight. **Str**, 1d6 bludgeoning, range 10/20, or reach 10 ft. | **Heavy:** Dex users take −2 unless they discover the Trick. | **The pendulum:** let it swing and only *steer*: use **Dex** with no penalty and +1. (The miners know; the Collector doesn't.) | Knock 3 ore-buckets off hooks (AC 12/14/16), then the swinging bucket (AC 17) | 5 gp. Copperhill's Champion's Bout bans it ("too mean"). |
+| 8 | **Whisper-tube** (Aranhollow: the elves' silent blowpipe for birds) | **Dex**, 1 piercing, range 25/100, **near silent** (no Stealth penalty to stay hidden after firing). | **Breath:** each shot past 25 ft needs a **DC 10 Con save** or it drops short. Ash's weak spot. | **The held breath:** skip a turn's attack to breathe deep; the next shot ignores the Con save and crits on 19–20. | Darts into 3 hanging leaves at 20 / 40 / 60 ft (AC 13/15/17), then the "between the bells" shot (hit without ringing two bells on either side: AC 18) | Elves don't sell them. Win one, or earn it in Ch17. A **Whisper-tube of Sleep** (darts of *Sleep*, Uncommon, 400 gp) is the circuit's sealed favorite prize. |
+| 9 | **Return-iron** (Old Varrow: an ancient curved bronze throwing blade, dug out of the marsh by salvagers; nobody alive has used one) | **Dex**, 1d6 slashing, range 30/90. **Comes back** to your hand on a miss if you catch it. | **Catching it:** DC 12 Dex save when it returns, or **1d4 to you** and it clatters into the crowd. | **The curve:** throw it wide so it bends around an obstacle (hits the target behind the pillar, AC 17, scores 3). | 3 stakes at 20/40/60 ft (AC 12/14/16), then the pillar shot | Priceless as an antique (**150 gp** to a collector; the Collector bids). The Old Varrow pop-up has one; a second one is in Ch18's ruins. |
+| 10 | **Skimming ring** (the Salt Isles: a flat bronze ring sailors spin across water to cut lines) | **Dex**, 1d4 slashing, range 30/120; **skips off water** once to extend range. | **Spin:** without the wrist-snap (Study), disadvantage beyond 30 ft. | **The double skip:** two skips off calm water, hits the "far rope" (AC 18) and cuts it: scores 3, and the flag on it drops into the harbor. | Cut 3 ropes over water at 30/60/90 ft (AC 13/15/17) | 8 gp; Saltreach dockside. |
+| 11 | *Reserve slot* | Reuse any weapon above with **a new course** (e.g. the Kettle-sling: smash the dwarven lantern shades without breaking the glass globes beneath; Trick needed), or a weapon a chapter introduces. | | | | |
+| 12 | **Bell-chain** (Saffra, Mirrowen: the tabaxi dancer-fighters' chain with bells and a hook) — **Act II+ only** | **Dex**, reach 10 ft, 1d4; the bells **jangle** loudly. | **Noisy:** disadvantage on any Stealth roll that turn. | **The jangle feint:** ring it on purpose before striking; the target (a dummy rigged by the tabaxi to "flinch") opens: advantage, and the "cat's eye" target (AC 18) scores 3. | Hook 3 rings off posts (AC 14/16/18), then the cat's eye | 30 gp in Saffra. Tabaxi rivals get +2 with it. |
+| 13 | **Stone-bow** (Tuskhold, Mirrowen: the elephant-folk's pellet bow, a heavy bow that throws stones) — **Act II+ only** | **Str**, 1d8 bludgeoning, range 80/320, **needs Str 13** or disadvantage (Ash has 13: just enough). | **Draw weight:** after two shots in a row, DC 12 Con save or disadvantage on the third. | **Low arc:** shoot it flat, skimming the grass; it rolls on and hits the "rolling gourd" (AC 17, moving), scoring 3. | 3 hanging gongs at 80/160/240 ft (AC 14/16/18), then the rolling gourd | 40 gp. Elephant-folk don't race; they *remember* scores, all of them, forever. |
+| 14 | **Herd-crook** (Horngard, Mirrowen: the minotaur herders' long crook) — **Act II+ only** | **Str or Dex**, reach 10 ft, 1d6; hook to **pull a target 10 ft** or trip (contest). | **Long:** two-handed, and you can't use it within 5 ft. | **The calf-lift:** hook and *lift* rather than pull: the "lamb" (a straw bundle, Medium, 40 lb) is lifted clear of the pen rail in one smooth move (Athletics DC 13 after the hook), scoring 3. | Hook 3 straw lambs out of a pen (AC 14/16/18), then the lift | Not sold; given. A minotaur who sees Ash use one well will gift him one, and it means something in Horngard. |
+
+*(Item 11 is a deliberate reuse slot so the DM always has a 14th draw; swap in any weapon the chapters introduce.)*
+
+### 12.4 Strange Arms rivals (Top Shot types; reuse at every stop, scaled by §11.7)
+
+| Rival | Type | How they play | Bonus (T1 base) |
+|---|---|---|---|
+| **Odo Fairlie** (NPC-097), the Collector | Host, not a competitor | Plump, delighted, sixty, a magnifying glass on a chain, travels with a cart of locked cases. Talks to every weapon like an old friend. "Now *this* one has a temper." Fair, but loves a twist. Never cheats; does **swap weapons mid-elimination** when the crowd's bored. | — |
+| **Sergeant Garnet Haddow** (NPC-098) | **The Veteran** | Grey Wolf Company crossbow sergeant, 50s, scarred, methodical. Starts **+2 Feel on anything with a trigger** but **gains only +1 total from Practice** (set in her ways). Hates whips. | +5 (+7 with triggers) |
+| **Saba Mercer** (NPC-099) | **The Natural** | Saltreach harpooner, late 20s, laughs a lot, never studies. **Study automatically fails; Practice gives +2 Feel each** (cap still applies). Terrifying with anything thrown. | +5 (+7 thrown) |
+| **Dilly Bellamy** (NPC-100) | **The Scholar** | Bramblecog gnome, 40s, notebook, asks the Collector a hundred questions. **Study automatically succeeds by 5+**; physically weak (−2 on Str weapons). Shares what she learns with anyone polite (Persuasion DC 12: Ash gets her Study result). | +4 (+6 with clockwork) |
+| **Lord Teddy Rowntree** (NPC-101) | **The Showboat** | A Highmarch lordling slumming the circuit, 20s, very handsome, very loud. **Advantage on every Trick shot attempt; disadvantage on any roll while behind.** The crowd adores him. The Final's villain-for-a-day, not a real villain. | +5 |
+| **Pashi Two-Rivers** (NPC-102) | **The Wanderer** (Act II+, Saffra on) | Tabaxi collector-competitor, the Collector's friendly rival and best customer. Knows half the weapons already (**+2 Feel** on Mirrowen ones). Gossips to Ash between rounds; a good source for Saffra rumors. | +7 (T3) |
+| **Rook** | **The Rival** (Emberford only) | Enters the first Strange Arms day in Emberford because Ash did. Treat as a Natural with +5. If he beats Ash he will never, ever stop talking about it. | +5 |
+| Local entrants | as the city file | | §11.7 |
+
+### 12.5 The Strange Arms Circuit (recurring, with a final)
+
+The Collector runs a **circuit** across the river country, and later across the water. Each stop is one Strange Arms day (three weapons drawn from his cases; one is always new).
+
+| Stop | Where / when | Tier | Notes |
+|---|---|---|---|
+| **1. The Strangers' Booth** | **Emberford, Highwater Fair** (Ch4 side-activity window; also offered in Ch5's window if Ash missed it) | T1 | The Collector arrives with the Fair. Weapons: draw from 1, 3, 6, 7. Rook enters. **The Lane comes to watch.** First prize: 60 gp + the weapon. |
+| **2. The Purse Cup** | **Tollhaven, the Grand Wager** (Ch8–10 window) | T2 | A Purse sponsors it (the Collector's patron). Bets are enormous. Weapons: 2, 4, 5, 10. |
+| **3. The Hiring Yard Strangers** | **Wolfsgate** (Ch10 window) | T2 | Garnet Haddow's home stop. The Company **hires** the winner for a day (a contract worth 100 gp). Weapons: 2, 6, 7. |
+| *(exhibitions)* | Dun Morrach (Ch10: the Kettle-sling only; the prize is respect), Old Varrow pop-up (salvagers; the Return-iron) | T2 | Not circuit points; side fun. |
+| **4. The Far Booth** | **Saffra** (Ch14 window) | T3 | **Mirrowen's weapons arrive:** 12, 13, 14 plus one Eyrland weapon for the tabaxi to fumble (they love that). Pashi joins. |
+| **5. FINAL: the Stranger's Crown** | **Highmarch, the King's Tourney** (Ch17 window) | T4 | Eight finalists (anyone with **5+ circuit points**, or any stop's winner). Three rounds, all Elimination; the Collector brings **a weapon nobody has ever seen**, not on the list (DM's invention: make it from the world, e.g., a dwarven tuning-fork bolt that hums on target, or a Gate War relic). **Prize: 2,000 gp and the champion's pick of a Rare magic weapon from his case** (4,000 gp value; pick one that suits Ash: a **+2 dagger**-equivalent throwing iron, or the +1 Spring-bow and 1,000 gp more). **This counts against Act III's treasure budget.** |
+
+**Missing stops is fine.** The final takes anyone who won a stop. If Ash never enters, the Collector still turns up in Ch17's crowd, recognizes the Fenwick name ("Your brother fumbled my whip at Wolfsgate"), and invites him anyway.
+
+---
+
+## 13. Novel rogue contests (CHG-22)
+
+> **The idea:** contests the player hasn't heard of. Each is short (two to five rolls), has a clear choice at every step, and has one swingy moment. Each says its **player-safe** status. **Five are player-safe** (the player was told about them in chat): **The Switch, Shadow-Tail, the Lamp Run, Who's the Duke, the Moth Post.** The rest are **sealed for discovery**: don't announce them; let him find them in a city.
+> All use §11 common rules (no magic, no familiars **except the Moth Post**), T1 DCs (+2 per tier), §11.7 rival bonuses, and the side-activity budget.
+
+### 13.1 THE SWITCH (player-safe)
+**Swap a marked object for a fake, right under the judges' noses.** On a table: a jeweled egg (or a seal, a ring, a dwarven token: local flavor). Three judges stand around it. You get a convincing fake.
+- **Setup (choose one):** distract (**Deception or Performance DC 13**: one judge looks away), crowd (**Stealth DC 13**: you get to the table unnoticed), or straight nerve (no setup; the swap is at disadvantage).
+- **The swap:** **Sleight of Hand vs. the judges' best passive Perception (13)**, +2 per judge still watching.
+- **The walk-away (swingy):** a judge picks up the egg and examines it. **The fake holds** if Ash rolls **Deception DC 13** to keep a straight face, **or** if he bought the good fake (5 gp more at registration, which the judges allow: "a craftsman's contest too").
+- **Score:** clean swap and the fake holds = win. Judges catch it = out. Catch *another* contestant's swap and call it (**Insight DC 14**) = a bonus share.
+- **Entry 3 gp; prize 50 gp (T1)** and the real object's replica as a trophy. **Rivals:** a Tollhaven counting-house clerk (+6 Sleight), Old Merrit (+6), Rook (+6, always picks "crowd").
+
+### 13.2 SHADOW-TAIL (player-safe)
+**Follow a hired "rabbit" through a crowded market for an hour without being spotted.** The rabbit is paid **1 gp per tail she catches**, so she's trying.
+- **Four stretches** (each one quick choice + roll): the crowd (**Stealth DC 12**), the doubling-back (**Perception DC 13** to notice she's turned around before she sees you), the change (she swaps coats in a shop: **Investigation or Perception DC 14** to pick her out), the last alley (**Stealth DC 15**; she stops and listens).
+- **A failure isn't out:** she gets a "glance." **Two glances = she points and calls "Tail!"** and you're out. A **natural 20** on any stretch gets a bonus: you learn something the rabbit wasn't meant to show (she meets someone; local plot hook, or just gossip).
+- **Disguise (Charisma (Deception) DC 12 once, before you start)** erases one glance.
+- **Entry 2 gp; pot format** (§11.1). Typically 1–2 of 10 tails make it. **The rabbits are retired spies, actors, or a Copperhill Seat's "shadows."** Rivals: Magpies, a Toll Guard runner, an elf (Aranhollow's Leaf-Follow: Perception +8 rabbit, Hard).
+
+### 13.3 THE LAMP RUN (player-safe)
+**A night rooftop race: tap the city's lamps in a set order.** The Lamplighters' apprentices run it once a month (unofficially). Ten numbered lamps across the roofs; tapping one lights it **blue**, and if you tap one **out of order** it flashes **red**, and everyone below sees.
+- **Five legs**, each two lamps: a ridge run (**Acrobatics DC 12**), a gutter climb (**Athletics DC 12**, automatic with climb speed), a wide street gap (**Athletics DC 14**, or jump distance with Second-Story Work), a swinging sign (**Dex save DC 13**), the dome (**Acrobatics DC 15**).
+- **The choice each leg:** the **safe route** (as written) or the **short route** (+3 DC, but you gain a leg on the field). **Order:** every leg, a **Perception DC 11** to spot the next number painted small on the lamp's bracket. Fail and you tap the wrong one: **red flash**, one penalty, and you must come back for it.
+- **The Watch** below: two red flashes and a whistle blows; one more and you're running from them, not racing.
+- **Entry 2 gp; pot.** Rivals: Lamplighters' apprentices (+5 Athletics, **+2 knowing the order**), Rook. **In Emberford it's the Fringe to Old Ford; the last lamp is above the Ford Stone.**
+
+### 13.4 WHO'S THE DUKE (player-safe)
+**A masquerade game for the rich.** Four "impostors" (contestants) go into a masked ball pretending to be a guest, a servant, a musician or a lord; four "hunters" (paid) roam the floor for two hours trying to spot them. Hunters tap a shoulder and say "Your Grace?" If they're right, you're out.
+- **Pick your cover** (each favors a skill): Guest (**Persuasion**), Servant (**Stealth**), Musician (**Performance**; Ash isn't trained: −), Lord (**Deception**, and the hunters look hardest at lords).
+- **Three "moments"** (each a roll at DC 13 vs. the cover's skill): the arrival, a conversation that goes wrong (a real guest asks a question only a real guest would know: **History or Insight DC 14** or bluff at disadvantage), and the hunter's pass (**Deception vs. the hunter's Insight +5**).
+- **Swingy moment:** once per night, Ash may **accuse another guest** of being an impostor to deflect a hunter (**Deception DC 15**; if they're a real guest, it's a scene).
+- **Win:** last impostor uncaught at midnight, **or** spot the hunters first (**Insight DC 15**; tell the judge and he gets a bonus).
+- **Entry 10 gp (it's a rich man's game; T1 Emberford Assembly Rooms or Tollhaven's masquerade tables); prize 80 gp** and an invitation that's worth more. Rivals: a Purse heir (+6 Deception), an actress (+7 Performance).
+
+### 13.5 THE MOTH POST (player-safe; familiars allowed)
+**Emberford's message-moths race... against everybody's pets, familiars, birds and the odd cat.** Each racer's courier must carry a sealed note from the Guildhall steps to a named house across the city and bring back a reply. The owner can't touch the courier after the start.
+- **Three legs:** the launch (**Animal Handling** or, for a familiar, **Ash's Charisma** check DC 12: does it go the right way?), the city (the courier's **Perception or Dex** vs. DC 13: kites, cats, gulls, a sudden Lamplighter), the reply (the recipient must be found: **Ash's Investigation DC 12** to have named the right house at registration).
+- **Bart's complication (the comedy):** before each leg roll a d6. On **1–2 Bart negotiates** (he wants a fee: a sausage, an apology, "say I'm handsome in front of Gideon"). Ash can pay it (automatic success on that leg) or refuse (disadvantage). On a **6 Bart heckles a rival courier** and the rival takes disadvantage.
+- **Bart's form swap is legal** (he's not in combat): a **rat** is slow but can't be stopped by birds; Bart picks.
+- **Entry 1 gp; prize 20 gp** and a brass moth pin. **Rivals:** a Lyceum student's pigeon (+5), the official message-moths (+6, no personality, cheat by flying straight), Nim Gearwright's clockwork sparrow (+4, falls apart on a 1, the crowd loves it). **Elsewhere:** Hollowmere's **Burrow Post** (hare-folk messengers race in tunnels; T1/T3; the Warren Mothers judge).
+
+### 13.6 CANDLE-AND-BELL (sealed: discovery)
+Cross a dark hall strung with **bells on threads** and set with **forty lit candles**, from one door to the other, without **ringing a bell or blowing out a candle**. Judges in the gallery count.
+- **Four crossings** (each a choice between two paths): the threads (**Perception DC 13** to see them; then **Acrobatics DC 13** to step through), the candle aisle (**Stealth DC 12**; your passing draught: a fail by 5+ snuffs one), the stair (**Dex save DC 12**), the last door (**Thieves' Tools DC 13**, quietly).
+- Each ring or snuff is a **mark**; three marks and you're out. Fewest marks wins.
+- **Twist:** the judges cut one thread at random each round, and a bell falls and **rings by itself**; Ash can claim it wasn't him (**Deception DC 12**).
+- **Variants:** Wolfsgate's **Picket Test** (cross a line of "sleeping" Company pickets with bells on their boots; the prize is a scout's contract), Corriemount's **Silent Crossing** (cross the chapter house during vespers; the abbot judges; prize: a blessing and a jar of the good honey).
+
+### 13.7 STEAL THE PURSE (sealed: discovery)
+**A legal festival heist.** A lockmaker (or a rich patron) displays a **purse of gold** in a glass case in a booth for a whole festival day and dares anyone to steal it. It's the quick heist (§8.1) as a **sanctioned** contest: the Watch stands down; the booth's guards don't.
+- **Rules:** no violence, no magic. If you're caught, you pay a 5 gp fine and buy the guards a drink. **If you get it out of the booth, it's yours** (**100 gp** T1), and the lockmaker gets the best advertising of his life whether you win or not.
+- **The swingy moment:** the lockmaker's **new lock** (DC 17; one try; a trapped dye-needle marks your hand blue for a week: everyone knows you tried).
+- **Where:** Emberford (Ford Festival; the Locksmiths' Guild's booth), Tollhaven (the Seal-Breaking, as a Purse's showpiece).
+
+### 13.8 THE WEIR RUN (sealed: discovery)
+**Ride a barrel down a mill weir.** The village pays out to anyone who rides the old weir in a cask and comes up holding the flag.
+- **Three drops** (each **Acrobatics or Con save DC 12/14/16**: you choose which every drop), a fail is **1d6 bludgeoning** and a **mark**; two marks and you're fished out by the miller's sons. A **natural 1** on the last drop: the barrel splits, swim (**Athletics DC 12**) and the crowd roars anyway.
+- **The flag:** at the bottom, grab the flag on the pole (**Sleight of Hand or Athletics DC 13** while spinning).
+- **Entry 1 gp; pot.** **Hobb's Ferry** runs it at the old mill weir on Rope-Breaking day; **Saltreach's Tide-Race** is the harbor version (T4: DC +6, and the tide is the weir).
+
+### 13.9 THE GLASS MAZE (sealed: discovery)
+**A gnome mirror-maze with a hunter inside.** Contestants enter; a "Minotaur" (a gnome on stilts in a horned helmet, very proud of it) hunts them by sight. Get out the far door without being tagged.
+- **Four turns**, each a fork: **Perception or Investigation DC 13** to read which mirror is a door; a fail is a dead end and the hunter gains a step. The hunter's tag is **Stealth vs. his Perception (+4)**, rolled whenever he gains three steps.
+- **Swingy:** the gnomes **rotate the mirrors** mid-run (once): everyone's map resets, and a **natural 18+** on the next check means you saw them do it.
+- **Entry 2 gp; prize 30 gp** and a pocket mirror that's slightly enchanted (it always shows the room behind you: a Common item, 100 gp value). **Bramblecog only** (Contraption Fair).
+
+### 13.10 PATTER NIGHT (sealed: discovery)
+**Sell a worthless thing to a crowd.** Each contestant gets the same rubbish (a chipped teapot, a bent spoon, a jar of river water) and five minutes on a barrel. The crowd's coins are the score.
+- **Three beats:** the hook (**Performance or Persuasion DC 12**; Ash may use Persuasion), the story (**Deception DC 13**: where it came from; **the player tells the story out loud** and a good one gets advantage), the close (**Persuasion vs. the crowd's Insight +3**).
+- Each success = **1d6 gp** from the crowd; a **20** = a buyer pays **5d6** and wants another one tomorrow.
+- **Swingy:** a heckler (a rival's plant) calls you a fraud: **Intimidation or Performance DC 13** to turn the crowd, or lose a beat.
+- **Driftmarket** (Swap Deck night) and **Saffra** (the tabaxi call it a "small telling" and judge the story, not the coins: tabaxi rivals +8).
+
+### 13.11 COPPER TO CROWN (sealed: discovery)
+**Start with one copper at dawn; trade up across the city; whoever holds the most valuable thing at dusk wins.** No buying, no stealing (that's the rule, and judges follow you).
+- **Five trades** (each a scene the player plays briefly): pick a mark (street, market, guild, Crownhill, an odd one the DM invents), roll **Persuasion or Deception DC 12/13/14/15/16** (rising), and on a success the item's value roughly **triples**. A **natural 20** finds a "sleeper" (something worth far more than either side thinks).
+- **Fail:** the trade goes sideways (you end up with a goat; the goat is a scene).
+- **Winner:** the highest value at dusk, judged by a pawnbroker (Jory, in Emberford, who is *thrilled* to judge). **Entry 1 gp; prize 50 gp, and you keep whatever you ended with.**
+- **Where:** Emberford (Market Steps, monthly), Driftmarket (**One Knot to a Boat**, barter only: start with a knot of string), Kesselby (the Wager Board's version, mining scrip).
+
+### 13.12 THE PLANT (sealed: discovery)
+**Pickpocketing in reverse.** Each contestant gets a marked brass token and must **plant it** on a named judge (a fussy guildmaster, a priest, a Toll Guard captain) without them noticing, then tell the judge where it is at the closing bell.
+- **Three steps:** get close (**Stealth or Deception DC 12**), plant it (**Sleight of Hand vs. the judge's passive Perception 13**; **advantage** if Ash says *where* and it's clever: a hatband, a sword scabbard, the judge's own collection plate), survive the pat-down (the judge searches himself once at noon: **the planted spot holds on Sleight of Hand DC 14**, or Ash's description was clever enough).
+- **Best plant wins** (the judge votes on cleverness). **Entry 2 gp; prize 30 gp.** **Bramblecog** (planting on the lottery judge is a tradition), **Saltreach's Customs Plant** (smugglers' version: plant a "contraband" token on a customs man; illegal, very popular, T4).
+
+### 13.13 Placement (every city gets one or two)
+
+| City | New contests (and local twist) |
+|---|---|
+| **Emberford** | **Strange Arms** (Highwater Fair, circuit stop 1), **the Lamp Run** (monthly, Fringe to Old Ford), **the Moth Post** (Tenth-days, Guildhall steps), **Copper to Crown** (monthly), **Steal the Purse** (Ford Festival), **Who's the Duke** (Assembly Rooms, Lantern month: Act I–II) |
+| Hobb's Ferry | **The Weir Run** (old mill weir; Rope-Breaking day) |
+| Driftmarket | **Patter Night** (Swap Deck), **One Knot to a Boat** (Copper to Crown variant) |
+| Tollhaven | **Strange Arms** (Grand Wager, stop 2), **The Switch** (the counting-houses: swap a seal), **Who's the Duke** (masquerade tables), **Steal the Purse** (Seal-Breaking) |
+| Bramblecog | **The Glass Maze** (Contraption Fair), **The Plant** (Drawing day) |
+| Corriemount | **Candle-and-Bell: the Silent Crossing** |
+| Copperhill | **Shadow-Tail: the Seat's Shadows** (the town's champion keeps "shadows"; they're the rabbits); a **Pit-chain** exhibition |
+| Wolfsgate | **Strange Arms** (Hiring Yard, stop 3), **Candle-and-Bell: the Picket Test** |
+| Dun Morrach | **Strange Arms exhibition** (the Kettle-sling; respect, not gold) |
+| Kesselby | **Copper to Crown** (scrip version) |
+| Highmarch | **Strange Arms FINAL: the Stranger's Crown** (King's Tourney), **Who's the Duke** (the court version: T4, the King's own steward hunts) |
+| Aranhollow | **Shadow-Tail: Leaf-Follow** (tail an elf through the canopy; Hard) |
+| Old Varrow | **Strange Arms pop-up** (salvagers; the Return-iron) |
+| Saltreach | **The Tide-Race** (Weir Run), **the Customs Plant** (The Plant) |
+| Saffra | **Strange Arms** (stop 4, Mirrowen weapons), **Patter Night: the Small Telling** |
+| Tuskhold | **The Switch: the Rememberer's Stones** (swap one stone in a pattern of a hundred while elephant-folk watch; they remember everything: **Brutal**, DC +4; the prize is a story about you told forever) |
+| Horngard | **The Lamp Run: the Beacon Run** (light the highland beacons in order, on foot, at night) |
+| Hollowmere | **The Moth Post: the Burrow Post** (hare-folk messenger race in the tunnels; Bart hates tunnels) |
