@@ -1,0 +1,573 @@
+# Chapter 2 · The Lamplit Row (SEALED — DM ONLY)
+
+> **Act I · Level 2 (party reaches 3 at the end) · 1 session · Thawing, YF 1104 · about three days, starting the morning after Ch1**
+> **SEAL at start: 3.** Nothing in this chapter moves it.
+> **Built on:** `campaign/02` Ch2, `campaign/03` (SEC-01, 02, 03, 04, 05, 09, 11, 16, 17, 20, 22, 23), `campaign/04` (Twin Bond), `campaign/05` §4 (gifts), `truth/03`, `world/02` and `world/06` (the Row), `rules/02` §3 L2 row.
+
+---
+
+## 0. Chapter at a glance
+
+| | |
+|---|---|
+| **Shape** | The voice gets words. Ash wants answers, and the city has a lot of people who might have them. Moss gives the first, careful explanation. A courier job on Enchanters' Row brings Ash face to face with a young enchanter who makes every lamp glow, and with the kindly man who owns the Row. It ends with Gideon's vigil at the Ford Stone. |
+| **Party** | All four are available. Moss is in the city now (with a guest hidden above his shop) but still goes "gathering" every dawn. |
+| **Fights** | None required. Optional **Fight 2A · Magpies on Market Steps** (ordinary) if the parcel chase turns ugly. A lamp-warden fight is possible and a very bad idea (stat block given). |
+| **Skill challenges** | **The Parcel Chase** (Market Steps awnings) · **Shaking the Tail** (a lamp-warden follows Ash home) · **Keep the Vigil** (the Ford Stone, all night) |
+| **Exit** | Gideon's vigil is answered. **EVT-02. Level 3.** Also **EVT-40** (the lamps flare) lands mid-chapter. |
+| **Session guide** | Dawn call + Moss: 30 min · the Row, Clara, Hollis: 45–60 min · chase + Lamp House: 30 min · side activities: 30 min · the vigil: 30 min |
+
+### NPCs in this chapter
+
+| ID | Name | Where | Edges the scenes lean on |
+|---|---|---|---|
+| NPC-001 | Gideon | Home; restless; the vigil | R-001, R-003, R-015 |
+| NPC-002 | Zeke | Attic; the Row; the vigil | R-004, R-006, R-007 (vouch #4), R-053 (via Clara) |
+| NPC-003 | Moss | The Green Jar's back room; the Fenwick roof at night | R-008, R-010, R-011, R-094 |
+| NPC-018 | Thistle | Hidden above the Green Jar | R-068, R-069 |
+| NPC-014 | Aggie | The Green Jar | R-031, R-032 |
+| NPC-005 | Clara Grane | The Lamplit, Enchanters' Row | R-050, R-051, R-052, R-053 |
+| NPC-006 | Hollis Grane | The Row, Lamp House, or a Fringe "lamps for poor streets" tour | R-045, R-046, R-047 |
+| NPC-020 | (a lamp-warden with a burned right hand; **never named in this chapter**) | Behind Hollis | R-092 (not yet; he doesn't know who Ash is) |
+| NPC-007 | Hester Grane | The Lane on her bread round; Lamp House | R-040, R-041, R-042, R-043 |
+| NPC-078 | Tansy | Lamp House | — |
+| NPC-053 | Widow Elspeth Marsh | Keepsake & Locket | — |
+| NPC-055 | Dagny Coalbeard | Quickhand Tools | — |
+| NPC-050, 051, 052, 054, 056 | Wat Ember, Sister Rosalind, Jem Tapper, Corwin Lockley, Tobias Neat | The Row | — |
+| NPC-010 | Rook | Market Steps | R-037 |
+| NPC-012 | Dora Finch | The Lane | R-023 |
+| NPC-024 | Ma Garrow | The Bucket | R-062 |
+
+---
+
+## 1. ★ Must-happen beats (with routes)
+
+### ★1 · The call gets words
+*"Is anyone there? Please. I can hear you humming."* Ash can answer by humming near still water, and she hears him, faintly.
+- **A. The first morning, at the Lane Well, at sunrise** (still water in the drawn bucket). The call comes clearest here (SEC-22 seed; don't explain).
+- **B. At the Bend, at the Ford Stone (it hums at the turn of light), or any still pool Ash passes at sunrise or sunset.**
+- **C. In a dream that night**, then repeated awake at the next turn of light wherever he is: a glass of water on a tavern table goes still, and it comes through.
+- **D. Ash avoids water at the turn of light** for the whole chapter: on the vigil's dawn, the Ford Stone itself carries it (the stone hums; she's in the hum). It lands then, with ★5.
+
+### ★2 · Moss's first explanation
+*"That's a call, lad. From across the water. Someone on the other side is asking for help, and you're the only one in this city who can hear it. Your mother could have. I'd rather not say more until I'm sure."* He confirms the other side is real, that it's called **Mirrowen**, and that Thistle came from there. He refuses more.
+- **A. Ash goes to Moss** (the natural move after Ch1).
+- **B. Thistle tells Ash Mirrowen is real**, and Moss steps in before she says too much (R-069: she talks too much about it).
+- **C. Moss comes to the Fenwick roof at night.** He knows the hatch.
+- **D. Ash goes to someone else first** (Zeke, the Lyceum, Mother Brine, Jory Tolliver). Everyone gives him a folk-tale ("the talking-beast country under the water," `world/04`). That night Moss is sitting on the Fenwick roof when Ash climbs out (Route C).
+
+### ★3 · First meeting with Clara at the Lamplit
+When Ash and Clara stand close, **every lamp on the Row brightens.** The shopkeepers laugh: "Look at that! The lamps can't tell you two apart!" Both laugh it off, a little unsettled. Clara notices the grey-green fleck in his left eye. She has the same one. Neither says anything about it. **(EVT-40.)**
+- **A. The courier job:** a sealed parcel from the Lamplit to Hester Grane at Lamp House (a gift lamp for the orphans; harmless).
+- **B. Zeke drags Ash to the Row** ("I need a second opinion on a resonance coil.").
+- **C. Clara comes to the Fringe with Hester on Hester's weekly bread round.** The street lamps on Willow Lane flare when Clara passes Ash.
+- **D. Ash goes to the Row to price a gift** (Nell's blanket, `campaign/05` §4).
+
+### ★4 · Hollis Grane, the kindly man
+Warm, plain-spoken, generous. He knows Zeke by name: *"Our scholarship boy! Will we see you back next term?"* He tips Ash a gold piece. He notices the lamps. He doesn't know what it means yet, but a lamp-warden behind him takes note. **(EVT-40.)**
+- **A. On the Row, collecting Clara** at the end of her day.
+- **B. At Lamp House, with Hester**, when Ash delivers the parcel.
+- **C. Visiting the Fringe watch-house on a "lamps for poor streets" tour.** Willow Lane gets three new lamps.
+
+### ★5 · Gideon's vigil (the oath)
+Gideon keeps a night vigil at the **Ford Stone** in Old Ford, as Fenwick men have done "for luck" for generations. At dawn the stone hums (Ash hears it), and a **warm green light** rises from the moss on the stone and settles on Gideon: **Oath of the Ancients.** For one instant he feels something enormous and kind: a great bear, gone; and something antlered, very near. He doesn't speak of the antlers. **(EVT-02.)**
+- **A. Gideon announces it at supper**, half-embarrassed, and Ash and Zeke can go with him.
+- **B. Ash is elsewhere**: the vigil happens without him and Gideon comes home changed. Zeke reports what he saw.
+- **C. The vigil is skipped entirely**: the oath comes in Ch3, when Gideon steps between a Hushed thing and Ash at the Ford Pool and the light answers there. Grant L3 then. (Ch3's file covers it.)
+
+---
+
+## 2. Scenes
+
+### Scene 1 · Dawn at the Lane Well (★1 Route A)
+
+Ash doesn't have to be awake at dawn. If he isn't, use Route C (the dream) and bring it to the next turn of light. If he is (he's been sleeping badly since Ch1; the player decides), he's at the well, or passing it, as the sun comes up over Crownhill.
+
+> *The Lane's asleep. Mist on the Bend. Someone's rooster, then someone else's. You let the bucket down into the well and draw it up full, and set it on the stone lip, and the water in it goes still. Perfectly still. Not a ripple, though your hands are still on the rope.*
+>
+> *The sun clears Crownhill.*
+>
+> *And there's the humming again, under everything, close. Your tune. A child's voice, thin and tired. And then, for the first time, words, in Common with an accent you can't place, soft round the edges:*
+>
+> *"Is anyone there? Please." A breath. "I can hear you humming."*
+>
+> *You weren't humming. Were you?*
+
+**How it works (the DM's rules for the call, Ch2 stage):**
+- It comes only at the **turn of light** (the minute of sunrise or sunset), with Ash **within arm's reach of still water**. It lasts about a minute.
+- **She can hear him if he hums.** Not if he speaks: humming carries, words don't, yet. (If Ash speaks, she says, "I can't hear words. Hum. Please hum.")
+- If Ash hums back, she goes silent, then *hums with him*, a second voice under his, harmonizing badly. Then: *"Again! Do it again!"* And it fades with the turn of light.
+- Ash's locket goes cold every time (SEC-23).
+- **Nobody else hears anything.** If Netta or anyone is nearby, they see Ash staring at a bucket and humming. Netta will tell the Lane by noon that the youngest Fenwick is in love.
+
+**Second contact (any later turn of light this chapter):** add **fragments**, one at a time. These are the Ch2 villain footprints (`campaign/05` §5). Her voice is frightened and small:
+- *"There are iron horns. On the door. On the walls. Everything here has iron horns."*
+- *"The bird came again. The bird that doesn't blink. It sits by me and it's so* quiet."
+- *"I'm trying to keep singing. If I stop, I go grey. My hands are grey. Are your hands grey?"*
+
+Don't give her name yet (that's Ch3–5). If Ash asks by humming a question (a rising phrase), she understands the shape of it: *"Who am I? I'm— I'm not supposed to say. Gran said never say it to strangers."* Let that hurt a little.
+
+**Bart can't hear any of it.** "You're humming at a bucket again. Should I get Big Brother? I'm going to get Big Brother." (He won't. He'll sit on Ash's shoulder and be uncharacteristically quiet.)
+
+---
+
+### Scene 2 · The Green Jar's back room (★2)
+
+**Where:** the back room behind the Green Jar's counter. Drying racks, a stove, a scrubbed table, a ladder to the room above where Thistle (NPC-018) is "not here." Aggie (NPC-014) minds the shop and listens through the wall.
+
+**Route A (Ash goes to Moss):** Moss is back from the woods early today (he came back early because of Thistle). He pours tea before Ash sits.
+
+**What Moss says, in order** (from `campaign/00` §2; read it plainly, the way he'd say it):
+> *"That's a call, lad. From across the water. Someone on the other side is asking for help, and you're the only one in this city who can hear it."*
+>
+> *He turns his cup around once on the table.*
+>
+> *"Your mother could have."*
+
+Then, if Ash asks (and he will):
+- **Is the other side real?** "It's real. It's called Mirrowen. It's a long way and no way at all. You've stood closer to it than you'd think." (He won't say where.)
+- **Is that where Thistle came from?** "Yes."
+- **How do you know her name?** "I'd rather not say."
+- **How do you know any of this?** "I'd rather not say." (Long pause.) "I knew your mother. She had an ear for things."
+- **Who's calling?** "A child. That's all I'm sure of." (He's sure of more. He doesn't know her name either, only that it's the Mirrowen heir. He suspects Brannoc holds her, but "I'd rather not say until I'm sure.")
+- **What do I do?** "Nothing yet. Listen when she calls. Hum back if you like; it'll comfort her. Don't go looking for water at sunset in strange places. And don't tell the whole Lane."
+- **Why me?** Moss looks at him for a long time. "Because you've your mother's ears, lad. Because it's you she can hear." (True. Not the whole truth.)
+
+**Moss never says "I don't know" about Mirrowen.** He says "I'd rather not say." **SEC-01 seed #3.** If Ash notices the pattern and calls it out, **Insight DC 13**: Moss isn't hiding something because he doesn't trust Ash. He's hiding it because he's afraid *for* him. Moss, quietly: "I'll tell you everything I can, when I can. I promise you that. On your mother."
+
+**Dig early (SEC-01):** if Ash corners Moss with two seeds plus **Insight or Persuasion DC 18**, Moss admits he's "older than he looks" and "made a promise to your family a long time ago," and asks for trust "until the other side." He won't say "Hart." If Ash pushes past that with cruelty, Moss walks out to the Fordwood and doesn't come back until dawn (a real rift scene; `campaign/03` SEC-01). Ash's choice. Don't steer it.
+
+**Route B (Thistle):** Thistle comes down the ladder halfway through, ears up, and says all at once:
+> *"It's real, all of it, the Mirrowen side, I came through the old gate in the woods, Mother Burdock sent me to find the one who hears, because the Regent took her heir, our little singer, and the songs say a Tall Folk hearer can—"*
+>
+> *"Thistle," Moss says. Just that. Not loud.*
+>
+> *She stops. She thumps one foot, hard. "He should* know*."*
+>
+> *"He will," says Moss. "Not all at once. Up the ladder."*
+
+(Thistle never gets as far as Lark's name. Moss makes sure of it. The name is for the voice to give, in Ch3–5.)
+
+**Route C (the roof, at night):** Moss comes up through the hatch, sits on the slates with his knees up, and says the same things to the dark. He's easier there. He hums under his breath (the same tune), and stops when he realizes Ash has noticed.
+
+**SEC-20 seed #2: Aggie's picture-locket.** In any Green Jar scene, Aggie is changing Thistle's bandages and a cheap old Row locket swings out of her collar and falls open on its chain: a tiny painted picture, the kind the Row sold forty years ago, of a gawky girl of fourteen in a Lamp House smock beside a man who is **exactly** Moss, today, to the grey in his beard. **Perception DC 10** to see it clearly before she snaps it shut and tucks it away. If Ash asks: *"Mine. Old. Mind your business."* She means it. She also, for once, looks frightened.
+
+**Thistle (R-068, R-069), whenever she's on stage:**
+- Desperate to go home with "the one who hears," now, today. Moss says no.
+- Calls Eyrland carrots "too orange."
+- Asks Ash to hum. When he does, she closes her eyes and her ears go flat and she cries a little and is furious about it.
+- Wants her bundle back if Rook's crew got it in Ch1 (a small grey thumb-stone and a twist of Mirrowen herbs). See Scene 5.
+
+---
+
+### Scene 3 · Hester's bread round (★3 Route A setup, or Route C)
+
+**When:** the morning after the call, on Willow Lane. Hester Grane (NPC-007) comes through the Fringe once a week with a handcart of Lamp House bread, plain loaves for anyone short. She's 58, brusque, tireless, and wipes her hands on her apron whether they're dirty or not.
+
+- **R-042 (Hester → Ash):** the Fenwick baby she bandaged after the fire, grown wild. She's fond of all three brothers in a no-nonsense way. *"Asheron Fenwick. You're thin. Take two."*
+- **The courier job (★3 Route A):** "Your Gideon says you still run parcels. I've a lamp ordered from the Lamplit on the Row, a gift for my children. Bring it to Lamp House on Temple Isle tomorrow by noon, and don't drop it. Five gold. And don't tell me you'll do it for free, I'll not have it."
+- **Route C (Clara on the round):** if Ash already refused the job, or the chapter needs the meeting on the Lane, **Clara is pushing the handcart** for Hester today. Run Scene 4's meeting on Willow Lane instead: the Lane's lamps (the old oil ones and the two glimmer ones by the well) flare as she passes Ash. Netta drops a fish.
+- **Seed (SEC-10, early texture only):** Hester mentions, unprompted, that her brother "works too hard. Sits up half the night with his circle for the grieving. He's so good to them." (No vouch yet. It's just Hester being proud.)
+
+---
+
+### Scene 4 · Enchanters' Row and the Lamplit (★3, ★4)
+
+**The Row (from `world/06`):** a narrow glass-roofed lane in Glimmerway, about two hundred feet long, lined with tiny workshops. Glimmer sparks drift in the air. Chimes, hot glass, lavender oil.
+
+> *You step under the glass roof and the city noise drops away behind you. The light in here is blue-white and moving: sparks drifting like dust in a sunbeam, lamps in every window, a sign shaped like a teapot that steams real steam. Somewhere a music box plays three notes over and over. An old man in a leather apron is arguing with a kettle. A gnome runs past carrying something that's on fire and seems pleased about it.*
+
+**Zeke on the Row (discovery moment):** if Zeke's here, partway down the Row he stops, presses his fingers to his temple, and winces. *"Do you hear that? No. Of course you don't. It's a sort of chord. Like the Row's humming in a key."* He thinks it's a headache. **It's glimmer** (he can hear its music; `campaign/05` §6). If he takes a moment with it (**Arcana DC 12**, he's +8 with Scholar), he adds: "The Lamplit's the loudest. Odd. It's the smallest shop."
+
+**The workshops (use any; each a short beat):**
+
+| Workshop | Keeper | Beat today |
+|---|---|---|
+| **Hearthglow** | Old Wat Ember (NPC-050) | Ash can price Nell's blanket: **100 gp (Common)**, three days. Wat: "Always warm. Washable. Can't be stolen off a line, I'll guarantee that, it hums when it's taken." |
+| **The Dry Cloak** | Sister Rosalind Fairweather (NPC-051) | Cloaks that are always dry. She eyes Gideon's soaked coat if he's here. (Gift for later, `campaign/05` §4.) |
+| **Bottomless Barrel** | Jem Tapper (NPC-052) | A flask that refills one cup an hour (Common, 100 gp). "For your brother the bouncer. He looks like a man who needs a drink and won't buy one." |
+| **Keepsake & Locket** | Widow Elspeth Marsh (NPC-053) | **SEC-23 seed #3.** If Ash shows her his locket (or she spots it: she spots everything on a chain): *"This is a pair-locket, love. Made to split between two. Fringe tinwork. Where's its other half?"* |
+| **Lightfinger** | Corwin Lockley (NPC-054) | "For stage magicians." Gloves that leave no prints, a coin that lands how you like once a day. He winks at Ash like one professional to another. |
+| **The Lamplit** | **Clara Grane** (NPC-005) | See below. |
+| **Quickhand Tools** | Dagny Coalbeard (NPC-055) | **SEC-05 and SEC-11 seeds.** She's grumbling over a crate of glimmer chips with the new prices chalked on it: *"Up again. Up again! The old dwarves never touched this stuff, and I'm starting to think they had the right of it."* If asked why the old dwarves didn't: she goes quiet, then: "Oath. Old business. Not mine to tell." (She half-knows.) |
+| **Small Mercies** | Tobias Neat (NPC-056) | Bandages that knit faster. Sells at cost to the poor. Hester's friend: "Is that the Lamp House lamp you're carrying? Mind the corners." |
+
+#### The Lamplit
+
+A tiny shop at the Row's middle, its window full of lamps in every color: amber, rose, sea-green, one that cycles slowly through a sunset. A little brass bell over the door that plays the first two notes of something when it opens.
+
+> *Behind the counter, a young woman about your age is bent over a lamp the size of a teacup, humming to herself, a fine brush in one hand and a jeweler's glass screwed into one eye. Dark hair pinned up badly with a pencil. Glimmer dust on her cheek. The lamp under her brush is glowing brighter every time she hums.*
+>
+> *She looks up. Takes the glass out of her eye. Smiles, a little shy.*
+>
+> *"Oh! Sorry. Hello. You'll be the courier? For Aunt Hester's lamp? It's nearly ready. It's just— it won't sit right. Give me one moment."*
+
+**Clara (NPC-005)** is 20, warm, precise, apologizes too much, tucks her hair behind her ear when nervous, hums while she works. **R-052 (Clara → Ash):** at first, the Fringe boy who makes lamps flare, funny and a bit sad.
+
+**What she's humming (SEC-03 seed):** if Ash listens, **no roll**: it's the first line of *his* tune. Only the first line, over and over, the way you'd hum something you know only the start of. If Ash hums the second line back, she stops dead, laughs, and says, *"Oh! You know it? Nobody knows that one. I've only ever known the beginning. What comes after?"* Ash knows the rest of the first verse (he's always hummed it). He doesn't know a second verse exists.
+
+**The moment (★3, EVT-40):** at some point Ash and Clara are within about 5 feet of each other: she hands him the parcel, or comes round the counter to show him the lamp, or they both reach for the same dropped brush. Then:
+> *Every lamp in the shop flares. Not flickers:* flares*, all at once, amber and rose and sea-green and sunset, bright enough to throw your shadows hard against the back wall. And through the window, all down the Row, every lamp in every shop does the same, a wave of light running away from you both in either direction under the glass roof, and back.*
+>
+> *Then it settles.*
+>
+> *Somewhere outside, Jem Tapper whoops. Old Wat Ember's voice, delighted: "The lamps can't tell you two apart!" Laughter down the Row.*
+>
+> *Clara has gone pink to the ears. "Oh, the lamps do that sometimes. It's nothing. It's me, I think." She looks up at you properly, and stops. "Are you all right? You've got a little fleck in your eye, just like—" She stops. Her hand goes to her own left eye without her seeming to know it. "Never mind."*
+
+- **She has the same grey-green fleck in her left eye.** Ash sees it if he looks (no roll). Neither says anything. Don't let an NPC point it out.
+- **SEC-23 seed #3:** she wears a pewter half-locket on a chain. **Perception DC 12** to notice its shape: the broken hinge is on the *other* side from Ash's. If Ash is wearing his, it **tugs** faintly toward her (no roll) while they're within arm's reach, like a compass needle. Clara touches her own and frowns, as if it did something too.
+  - **If Ash shows her his locket (dig early, `campaign/03` SEC-23):** the two halves pull and *almost* click; the glass on Clara's half cracks. Clara laughs it off: *"Fringe tinwork, they all look alike!"* She's shaken, and hides it. **Hollis hears about it within a day** (from Clara, innocently, at supper). Consequences: raise the Calm's watch on Ash (the Ch5 Rook purchase moves up one session; SEC-14 seeds move up). The full reveal still waits for Ch11 unless Ash pushes with the eye fleck and the birthday too; then move Ch11 ★2 up. Ash's choice; never block it.
+- **Twin Bond (`campaign/04`), +1** if Ash is kind, curious or generous with Clara here: buys something from her, takes the embarrassment with good grace, defends her from the Row's teasing, is honest with her. Note it in the Sealed GM Notes. **Never tell the player there's a score.**
+- **The lamp for Lamp House** is a small, sturdy amber lamp with children's names painted round its base. It's genuinely kind. It does nothing sinister. (Clara: "Eleven names. I asked Aunt Hester for all of them. There's a little girl called Tansy who wanted a star on hers.")
+- **If Ash asks Clara about herself:** "I'm Master Grane's ward. He took me in when I was very small; I was a river-fever orphan." (She believes it.) "I work here one day a week. The rest of the time I'm in the Guildhall workshops, tuning lamps for the Lantern Night display. It's going to be the biggest the city's ever had." (She's proud. She has no idea.)
+- **What she might sell Ash (Common, 100 gp, commission 3 days):** a lamp that glows a chosen color; a lantern that sings softly; a glimmer pin that lights on command. She'll knock 10 gp off "for the fleck." (She means it as a joke and then is mortified.)
+
+#### Hollis arrives (★4 Route A)
+
+At the end of Clara's day, or a few minutes after the lamps flare:
+> *The bell over the door plays its two notes. A grey-bearded man in a good plain coat ducks in under the lintel, rubbing his hands against the cold, three masked figures in silvered half-helms waiting outside on the Row behind him. He has a broad, tired, kind face. He looks like somebody's grandfather.*
+>
+> *"There she is. My dear, you've glimmer on your nose again." Then he sees Zeke, and his whole face lights up. "Our scholarship boy! Will we see you back next term? And who's this? A Fenwick too, I'd wager."*
+
+- **Hollis (NPC-006):** warm, unhurried, a little rough-voiced. Remembers everyone's name. Rests a hand on your shoulder. Says "my dear." **R-047 (Hollis → Ash): a nobody, the youngest Fenwick.** He's kind to Ash the way he's kind to everyone. He presses a gold piece into Ash's hand "for your trouble" (whether or not there was any).
+- **R-046 (Hollis → Zeke):** genuinely warm. He asks after Zeke's resonance studies by name, remembers the title of Zeke's last essay, and says "the scholarship committee meets after Highwater, my boy. I'll put a word in." **R-007 (Zeke → Hollis), vouch #4:** after Hollis leaves, Zeke is glowing. *"Did you hear that? He remembered my essay. Ash, that's Master Grane. He pays for half the lamps in the Fringe. He paid my tuition twice. He's the best man in this city."* Zeke means every word. Don't undercut it. If Ash is skeptical, Zeke defends Hollis warmly and a bit hurt.
+- **R-015 (Gideon → Hollis), if Gideon's here:** a decent, generous man, a bit grand, good to Zeke. Gideon shakes his hand and calls him "Master Grane." (Gideon calls everyone by full names; he calls Hollis by his title. Note that.)
+- **He notices the lamps.** If they flared while he was outside, he says, mild and amused: "The whole Row lit up like Lantern Night as I came down it. Was that you, my dear?" Clara: "I think it was both of us." Hollis laughs. **Insight DC 18** on Hollis: under the laugh, for a heartbeat, he's very still. He doesn't know what it means. He files it.
+- **The lamp-warden with the burned right hand (SEC-17 seed, SEC-04 seed #1).** One of the three masked wardens outside the door doesn't watch the street. He watches Ash, through the glass, the whole time. His right hand is gloved, and he flexes it slowly, the way people do with an old burn. **Perception DC 13** to notice him watching; **DC 16** to notice the hand. He never speaks in this chapter. **Never name him** (he's Lucan Hask, NPC-020, sealed until Ch12). He reports the flaring to Hollis that night. **That's EVT-40.**
+- **Bart:** "The tin-hat one's staring at you. Not at the lamps. At *you*. I don't like him. I don't like any of them, but I don't like him most."
+
+**Route B (Lamp House):** Hollis is visiting his sister when Ash delivers the lamp. Same lines, plus Hester glowing with pride at him. The lamp-wardens wait in the yard.
+
+**Route C (the Fringe tour):** Hollis visits the Fringe watch-house with Ostley and Hugh Dale on a "lamps for poor streets" tour, and Willow Lane gets **three new glimmer lamps** (by the well, outside the Willow, at the bottom by the Bend). Clara is with him, carrying the lamp-chips in a basket. The new lamps flare when she passes Ash. Peg Mallory loudly thanks Master Grane on behalf of the whole Lane. *(These are just lamps. Ch7's listening-lamp is something else. Don't make these sinister.)*
+
+---
+
+### Scene 5 · Market Steps: the parcel chase (optional encounter)
+
+**When:** Ash carries Hester's lamp from the Row to Lamp House on Temple Isle: down through the Commons, down Market Steps, over the Seven Bridges. On Market Steps, **Rook's Magpies try to lift it.** They think it's valuable (it's in Lamplit paper, with the Guild stamp). Rook also wants a rematch after Ch1.
+
+> *Market Steps on a Tenth-day morning is a river of people pouring downhill between stalls: fish, cloth, spice, junk, pets, books, a man selling caged larks. You're halfway down when someone bumps your elbow hard, and someone else's hand is on the parcel, and a voice you know says, "Thanks, Fenwick," and they're gone, up onto the awnings.*
+
+Run **The Parcel Chase** (§4). It's a chase, not a fight. If the chase is lost badly, it can become **Fight 2A** (§5).
+
+**If Rook has Thistle's bundle (from Ch1's chase, step 3 failure):** he's wearing her herb-twist in his hatband as a joke. Getting it back is a natural goal. Rook will trade it for the parcel, or for "a fair go, Fenwick, you and me, Knife Wall, today."
+
+**R-037 (Rook → Ash):** Fenwick thinks he's better than everyone, and he's only lucky. **Beating Rook fairly without gloating** moves him up (`truth/01`). **Humiliating him in public** moves him down. Both matter for Ch7. Let the player find that out by playing.
+
+---
+
+### Scene 6 · Lamp House (delivery)
+
+**Where:** Temple Isle. A big plain old house beside the Temple of the Bright Lady, full of children and the smell of bread. Hester runs it like a ship.
+
+- Hester (R-042) takes the lamp, inspects it, and for one moment her face goes soft. "Eleven names. She did all eleven." Then: "Five gold. Here. And a loaf. Don't argue." Then she makes Ash wash his hands before he touches anything.
+- **Tansy (NPC-078), 8,** sits on the stairs with her chin in her hands. As the amber lamp is lit and set on the hall table, she starts humming to it. **It's Ash's tune.** The first line, the way Clara hums it. If Ash asks where she learned it: "Dunno. It's just in my head. It's a lamp song." (World seed: Hollis also uses Lamp House to find children who "hear things." **Don't** reveal that. Tansy is just a little girl humming.)
+- **Hester, if asked about Tansy:** "She hums. They all hum something. Tansy came to us after the cholera on the Low Wharf. My brother found her. He finds a lot of them." (True. Proud.)
+- **Ledger:** Hester's edges are all warm today. She doesn't vouch for Hollis yet; there's nothing to vouch against.
+
+---
+
+### Scene 7 · Shaking the Tail (optional)
+
+**When:** the evening after the Row. A lamp-warden (not the burned-hand one; one of the other two) follows Ash home from the Seven Bridges. He's not hostile. He's been told to find out where the Fringe boy lives.
+
+- **Spot him:** **Wisdom (Perception) DC 15** (Ash is +6; Bart from the air gives advantage). If no one spots him, he learns the Fenwick house, which changes nothing immediately (Hollis already knows where the Fenwicks live; he's paid Zeke's tuition). It only means the Calm has a face to put to "the Fringe boy."
+- If Ash spots him, run **Shaking the Tail** (§4). **A fight is a bad idea:** lamp-wardens are legitimate Guild guards. Attacking one in the street is assault on the Guild, and Ostley can't "not see" that. The stat block is in §6 if it happens anyway.
+
+---
+
+### Scene 8 · Supper, and Gideon's restlessness (★5 Route A)
+
+Gideon has been restless since Thistle came. He's sleeping badly. He paces the roof at night (Ash will notice; it's Ash's roof). At supper on the second or third evening, he says, half-embarrassed:
+> *"I'm going to keep a vigil at the Ford Stone. Tonight. Dad did it before he married. Grandad did it. Fenwick men do it, for luck." He folds his arms. "I don't know why. I just know I'm meant to. Don't laugh, Ezekiel."*
+
+- Zeke doesn't laugh. Zeke goes quiet, then says he'll come. Moss, if he's at the table, sets down his spoon. "That's a good custom," he says carefully. "An old one." He doesn't invite himself. (He'll be at the Ford Pool at dawn, as every dawn.)
+- **Dora's seed (if not landed in Ch1):** when Gideon mentions the vigil, Dora (dropping off a pie) says, "Your father did that. Moss walked him there and back. Moss looked just the same then, you know. Just the same. Some folk keep." **SEC-01 seed #2.**
+- **Ash's choice:** go, follow in secret, or stay home. All fine (★5 Routes A/B).
+
+---
+
+### Scene 9 · The vigil at the Ford Stone (★5)
+
+**Where:** Old Ford, inside the West Gate. The oldest walled district: crooked half-timbered houses, a mossy old chapel, and the **Ford Stone** in the square: a worn grey standing stone a little taller than Gideon, furred with old green moss on its north side, where couples swear and children make wishes. People touch it for luck before weddings, contests and journeys.
+
+**The night:** Gideon kneels at the stone at sundown and doesn't move. Run **Keep the Vigil** (§4) for whoever's with him.
+
+**The dawn (★5, EVT-02):**
+> *The sky over the Old Ford rooftops goes from black to grey to the color of a pigeon's breast. Gideon hasn't moved in nine hours. Frost on his shoulders.*
+>
+> *The sun's edge clears the wall.*
+>
+> *And the Ford Stone hums.*
+>
+> *You feel it in your teeth first, then hear it: a deep, slow note, like a bell rung underwater, coming up out of the stone and the ground under the stone and something much deeper than that. Nobody else in the square turns their head. [If Zeke is here: "Ash? What is it? What are you looking at?"]*
+>
+> *Then the moss on the stone begins to glow. Green. Warm. A spring green, like new leaves with the sun through them. It lifts off the stone like mist off the Bend, and drifts, and settles on Gideon's shoulders, on his bowed head, on his hands. And for one breath your brother's face changes. Not fear. Something like a man hearing his name called in a crowd by someone he thought was dead.*
+>
+> *Then it's gone, and he's just Gideon, kneeling on cold stone with frost on his coat, crying, and furious about it.*
+
+- **Everyone present sees the green light.** Only Ash hears the hum.
+- **What Gideon felt (sealed; he tells part of it):** something enormous and kind, a great bear, gone a long time, *pleased* with him; and, very near, **something antlered.** He tells Ash and Zeke about the bear, haltingly, if they ask. **He doesn't speak of the antlers.** **Insight DC 17:** there was something else, and it frightened him more than the bear did. If Ash asks: "Nothing. A trick of the light. I was tired." (He believes he's protecting everyone. SEC-09.)
+- **Where Moss is (DM only):** at the Ford Pool in the Fordwood, as every dawn. At the moment the light rises, he lifts his head from the water and closes his eyes and smiles (R-009 changes via EVT-02: hope). Nobody sees this. If Ash later says "the moss glowed," Moss says, "Did it now," and goes on grinding herbs, and his hands are not quite steady.
+- **Ash hears the stone (SEC-02, SEC-06 seeds).** If he puts his hand on it while it hums, there's a sense of *depth* under Old Ford, as if the square were the lid of something. Don't explain it. It fades with the turn of light. If Lark's call hasn't landed yet (★1 Route D), it lands now: she's inside the hum. *"Is anyone there? Please. I can hear you humming."*
+- **Gideon, walking home:** quiet. Then: "Don't tell the Lane." Then: "It was real, wasn't it. You saw it." Ash can answer however he likes. This is a good moment for the brothers. Let it be one.
+
+**→ EVT-02. Level 3.** (§9.)
+
+---
+
+## 3. Side-activity window
+
+| Activity | Where | How it plays | Rewards |
+|---|---|---|---|
+| **The Riddle Table** (monthly, this week) | The Lyceum of the Lamp, the old refectory | Five riddles, read aloud. Students and townsfolk answer. Each riddle: **Intelligence check DC 12 / 13 / 14 / 15 / 17** (Zeke has advantage on the two about magic; anyone may Help). Use real riddles at the table, or roll. A team scores a point per riddle. The Lyceum snobs (a rival team, average +2) score on a 12+. | **Most points:** the prize, a **Clockwork Amulet** (Common; 2024 DMG; ~100 gp value). Zeke beats a Lyceum snob who once called him "the Fringe charity case," and is unbearable about it for a day. |
+| **Liars' Night** | The Willow (monthly) | Best tall tale wins the tab. **Charisma (Deception or Performance) check**, contested by the room's best liar (Walt Finch, +4, telling the one about the eel that ate a Provost). The player can tell a real tale and get advantage if it's good. | **Win:** the whole table's tab, about 3 gp, and Peg's battered pewter "Liar's Cup" for a month. Ash's tale becomes Lane legend. |
+| **The Bucket, Tenth-day card** | The Bucket | Ma Garrow's offer from Ch1 (if he earned it). One bout against **Hal Brindle** (Ash picks Bare-Knuckle or Touches, `cities/00-index.md` §5.1; in Touches this bruiser is ring AC 10–11), a docker: use Big Lottie Sparrow (Ch1) with **HP 30**, **+1 to hit**, and Haymaker **1d8 + 3** (max 11, under the L2 cap of 14). Entry 5 gp. | **Win:** 40 gp purse, and Ma Garrow's respect (R-062 up). Gideon will hear about it. |
+| **Knife Wall rematch** | Market Steps | Rook's challenge (Scene 5) or just the week's board. Rules as Ch1. | Champion: 10 gp. Beating Rook fairly: R-037 up (if Ash doesn't gloat). |
+| **Commission a gift** | Enchanters' Row | Any workshop (§2, Scene 4). Common items 100 gp, half up front, 3 days to 3 weeks. | **Nell's blanket** (Hearthglow) is the natural first gift. Log it in the Campaign Bible's "Gifts given" list. It pays off in Ch4. |
+| **Lyceum charters** (dig-early) | The Lyceum library (the one with the moving staircase) | Zeke, or Ash with Zeke's pass: **Intelligence (Investigation) DC 20.** | "Fenn-wyck, the ford-watchers," in an old Guild charter. Explains the family name, not the gift (SEC-02 dig early). |
+
+---
+
+## 4. Skill challenges
+
+### The Parcel Chase (Market Steps)
+**Pressure:** two Magpies (and Rook) have the lamp and are running across the awnings. If they reach the river stairs, they're gone into the Wharves. Each step is one quick check. **4 successes before 3 failures.** Bart can Help on any step (advantage). Companions present may each take one step.
+
+| Step | Moment | Checks (pick one) | Notes |
+|---|---|---|---|
+| 1 | **Up.** They're on the awnings already. | **Strength (Athletics) DC 12** (climb a stall post) · **Dexterity (Acrobatics) DC 13** (bounce off a barrel) · Cunning Action **Dash** along the street underneath (no check, but it counts as a success only if a companion succeeds at another step this round) | Ash has no climb speed yet (L3). |
+| 2 | **Across the canvas.** Sagging awnings, a gap over the spice terrace. | **Dexterity (Acrobatics) DC 13** · **Strength (Athletics) DC 13** (jump the gap) · **Wisdom (Perception) DC 12** (spot the plank the Magpies use) | Failure: Ash falls into the spice stall (1d4 bludgeoning; he sneezes for an hour). |
+| 3 | **Split up.** Rook goes left with the parcel; Jenny Wick goes right with an empty sack. | **Wisdom (Insight) DC 13** (which one's bluffing) · **Wisdom (Perception) DC 14** (the weight in the sack) · Bart follows one (automatic, but he's out of the rest of the chase) | |
+| 4 | **Cut them off.** | **Charisma (Intimidation) DC 13** ("Stop or I tell your mother, Danny Pratt.") · **Dexterity (Sleight of Hand) DC 14** (caltrops, ball bearings, a well-thrown fish) · **Charisma (Deception) DC 13** ("Watch! It's the Watch!") | Using Rook's real name in public stings. It works, and it moves R-037 down. |
+| 5 | **The river stairs.** | **Dexterity check DC 12** · **Strength (Athletics) DC 12** (tackle) · Zeke's *Mage Hand* takes the parcel (Arcana DC 10, automatic success if he's in range) | |
+
+- **Success:** Ash has the lamp back, undamaged. Rook, cornered on the river stairs, either tosses it ("Keep your rubbish, Fenwick.") or haggles (Thistle's bundle for a clean getaway). **R-037:** up if Ash lets him go with his dignity; down if Ash crows.
+- **Failure:** the lamp's gone into the Wharves. Ash can buy it back from Jory Tolliver at Odd Lot that afternoon (5 gp; Jory: "Lovely piece. Guild stamp. Hot as a stove. Five, and I never saw you."), or chase it to the Magpies' den, which becomes **Fight 2A**. Either way Hester gets her lamp, a little late. She's cross. She pays anyway.
+
+### Shaking the Tail (lamp-warden)
+**Pressure:** a masked lamp-warden is following Ash from the Seven Bridges. Lose him before the West Gate. **3 successes before 2 failures.**
+
+| Step | Moment | Checks |
+|---|---|---|
+| 1 | Confirm he's following | **Wisdom (Perception) DC 15** (or he's spotted already) |
+| 2 | Break line of sight | **Dexterity (Stealth) DC 14** · Cunning Action Hide (still a check) · into a crowd: **Charisma (Deception) DC 13** |
+| 3 | Lead him wrong | **Charisma (Deception) DC 14** (a false trail into the Commons) · **Dexterity (Acrobatics) DC 13** (over a wall he can't follow in armor) |
+| 4 | Get home unseen | **Dexterity (Stealth) DC 13** (the roof route) |
+
+- **Success:** he loses Ash in the Commons. He reports "Fringe, West Gate side" and nothing more.
+- **Failure:** he follows Ash to the West Gate road and stops at the Fringe watch-house to ask Ostley who the boy is. **Ostley** (R-033) says, "Which boy? Lot of boys in the Fringe," and looks at the sky. Ash sees it from the roof. (It costs nothing. It does show the Lane protecting him.)
+
+### Keep the Vigil (the Ford Stone)
+**Pressure:** a night kneeling in an open square. Old Ford is quiet and poor-genteel, but the night has interruptions, and Gideon has sworn not to move until the light. Whoever came with him keeps the square. **4 successes before 3 failures.** Each step is one interruption, one check.
+
+| Hour | Interruption | Checks |
+|---|---|---|
+| Second watch | **Two drunk Lyceum students** want to touch the stone for luck and laugh at the kneeling man. | **Persuasion DC 12** · **Intimidation DC 11** · Zeke shames them by name (automatic if Zeke's here; they're from his seminar) |
+| Midnight | **The cold.** Frost, and Gideon in chain mail. | **Wisdom (Medicine) DC 12** (a blanket, warm stones) · Moss's tea from the Green Jar (automatic success if Ash thought to bring some) · *Prestidigitation* to warm his hands (automatic) |
+| Small hours | **A lamp-warden patrol** passes the square and slows. | **Dexterity (Stealth) DC 13** (stay out of the light) · **Charisma (Deception) DC 13** ("Family custom, sir. For luck.") (that's true; Gideon would approve) |
+| Before dawn | **An old woman of Old Ford** comes out with a candle, and wants to tell the kneeling man about her late husband, who also knelt here once. | **Wisdom (Insight) DC 12** (listen, and let her) · **Persuasion DC 12** (gently send her home) |
+| Last dark | **Gideon starts to doubt.** He mutters that this is foolish and starts to rise. | **Charisma (Persuasion) DC 13** · whatever Ash says, said honestly (advantage) · Ash hums the tune (automatic success; Gideon goes very still, and kneels again) |
+
+- **Success:** the oath lands as written (★5).
+- **Failure:** the oath **still lands** (it's a ★ beat). But a cost comes with it, chosen from: Gideon has **1 level of Exhaustion** until his next long rest; or the lamp-warden patrol saw the green light and reports "something odd at the Ford Stone at dawn, the Fenwicks again" (adds a small note to the Calm's interest; no EVT); or Gideon's embarrassed and short-tempered for a day and won't talk about it at all.
+
+---
+
+## 5. Fight 2A (optional) · Magpies on Market Steps
+
+```
+FIGHT 2A · Magpies on Market Steps · Chapter 2 · Ordinary · Party level 2
+Target numbers (rules/02 §3, L2): total HP 80 (for DPR 29) · enemy DPR 10 · AC 13–15 · attack +4–+5 · DC 12–13
+L2 cap: no creature deals more than 14 damage per turn.
+```
+
+**When:** only if the Parcel Chase fails and Ash goes after the lamp at the Magpies' den (an empty net-loft over a fishmonger's on the lowest terrace), or if Ash starts a fight with Rook in the street. **The Magpies don't kill.** They fight with cudgels and fists, and run when it's serious.
+
+**Who's here:** scale it.
+
+| Present | Party DPR | HP target | Roster | Field HP |
+|---|---|---|---|---|
+| Ash alone (+Bart) | 10 | ~28 | Rook + 1 Magpie | 30 + 12 = 42 (they break at half) |
+| Ash + one brother | ~17 | ~48 | Rook + 2 Magpies | 54 |
+| All four | 29 | 80 | Rook + 4 Magpies | **78** ✓ |
+
+**HP math (all four):** Rook 30 + 4 × 12 = 78. Party DPR 29 → ~2.7 rounds of pure damage; with movement, ladders and the break rule, **3–4 rounds.** ✓
+**Enemy DPR (all four):** Rook +5 vs ~AC 16 (50%) × 6.5 = 3.3, plus Dirty Trick setting up advantage (~+1) · 4 Magpies × +4 vs AC 16 (45%) × 5.5 = 9.9 → **~14 in round 1**, falling to ~10 by round 2 as they drop and run. ✓ (tuned above 10). **Max per creature per turn:** Rook 9, Magpie 8 (with Pack Tactics nothing exceeds the cap). ✓
+
+**Battlefield:** a long net-loft over a fishmonger's. (1) **Hanging nets** (a creature moving through them makes a DC 12 Dexterity save or is restrained until it uses an action to get free). (2) **The loft hatch** (10-foot drop to the fish stall: the Magpies' escape route). (3) **Crates of salt fish** (half cover). (4) **The window to the awnings** (the other escape route). (5) **The lamp** sits on a crate in the middle, and the Magpies try to grab it and go.
+
+**Enemy plan:** grab the lamp and get out a window or hatch. **Focus target:** whoever's holding the lamp, then Bart ("Get the owl! It's spotting for him!") **Counter (§6 of tuning, telegraphed):** in round 1, Jenny Wick points at Bart and shouts "Owl!" In round 2, two Magpies throw nets at him (Dexterity save DC 12; on a failure Bart is restrained on the floor and can't Help until freed). They don't hurt him. They do mean it.
+
+**PHASE 1 · rounds 1–2 · "Keep-away":** the lamp passes hand to hand. A Magpie holding it uses its bonus action to throw it to another within 20 feet (anyone in between can try to intercept: **Dexterity (Sleight of Hand) DC 12** as a reaction).
+**PHASE 2 · trigger: round 3, or Rook drops below half · "Scatter" (OBJECTIVE change):** the fishmonger below starts shouting for the Watch. The Magpies break for the hatch and window, each in a different direction, and one of them has the lamp. Now it's a short chase: who do you follow?
+**Final beat:** the lamp back; Rook cornered, caught or fled. **Rook surrenders at 0–5 HP** with a grin: "Fair go, Fenwick. Fair go." If Ash lets him go, R-037 up a little. If Ash drags him to the Watch, Ostley takes him in and lets him out by supper (Martha's sick; Ostley knows). R-037 down a lot, and Rook doesn't forget.
+**Fail-forward:** the Magpies get away with the lamp. Jory Tolliver at Odd Lot has it by evening (5 gp).
+**Rewards:** whatever's in the loft: 2d6 gp of small stolen goods (Ash can return them; the Lane will find out), and Thistle's bundle if Rook had it.
+
+### ROOK (Danny Pratt), L2
+*Medium Humanoid (human), Chaotic Neutral*
+**AC** 14 (leather) · **Initiative** +4 (14) · **HP** 30 (6d8 + 3)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 11 | +0 | +0 | DEX | 17 | +3 | +5 | CON | 12 | +1 | +1 |
+| INT | 12 | +1 | +1 | WIS | 11 | +0 | +2 | CHA | 14 | +2 | +2 |
+
+**Skills** Acrobatics +5, Deception +4, Sleight of Hand +5, Stealth +5 · **Senses** passive Perception 10 · **Languages** Common, Thieves' Cant · **CR** 1 (XP 200; PB +2)
+*Tuned for party level 2: leader / skirmisher (Ash's mirror)*
+
+**Traits**
+- ***Fringe Rules.*** No blades on Fringe folk. His shortsword stays sheathed; he fights with a weighted cudgel and his fists.
+- ***Not in Front of Mum's Street.*** Rook won't fight within sight of Martha Pratt's window. (Never used in Act I unless the player finds out where she lives.)
+
+**Actions**
+- ***Cudgel.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) bludgeoning damage, nonlethal. (Max 9.)
+- ***Knuckle-Coin.*** *Ranged Attack Roll:* +5, range 20/60 ft. A coin flicked hard. *Hit:* 4 (1d4 + 2) bludgeoning damage, and the target has disadvantage on its next Wisdom (Perception) check.
+
+**Bonus Actions**
+- ***Dirty Trick.*** One creature within 5 ft makes a **DC 13 Dexterity saving throw.** *Failure:* the next attack roll against it before the start of Rook's next turn has advantage (sand in the eyes, a stamped foot, a hat over the face).
+- ***Scarper.*** Disengage or Dash (instead of Dirty Trick).
+
+**Reactions**
+- ***Duck and Weave.*** When hit by a melee attack, Rook halves the damage. Then he moves 5 ft without provoking opportunity attacks. (Once per round.)
+
+**Phases:** Phase 1 directs the keep-away. Phase 2: flees with the lamp if he has it.
+**Tactics:** Sets up his Magpies with Dirty Trick, then lets them hit. Talks the whole time: *"Everyone's bought, Fenwick. You just haven't had the right offer."* (Save that line for Ch5 if possible. Here he says, "You always were slow on the left.")
+
+### MAGPIE CUTPURSE, L2
+*Medium or Small Humanoid (human), Chaotic Neutral*
+**AC** 13 (leather) · **Initiative** +2 (12) · **HP** 12 (3d8 − 3)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 10 | +0 | +0 | DEX | 15 | +2 | +4 | CON | 9 | −1 | −1 |
+| INT | 10 | +0 | +0 | WIS | 10 | +0 | +0 | CHA | 11 | +0 | +0 |
+
+**Skills** Acrobatics +4, Sleight of Hand +4, Stealth +4 · **Senses** passive Perception 10 · **Languages** Common, Thieves' Cant · **CR** 1/4 (XP 50; PB +2)
+*Tuned for party level 2: skirmisher*
+
+**Traits**
+- ***Fringe Rules.*** As Rook.
+- ***Pack Tactics.*** Advantage on an attack roll against a creature if an ally is within 5 ft of it and isn't incapacitated.
+
+**Actions**
+- ***Cudgel.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) bludgeoning damage, nonlethal. (Max 8.)
+- ***Throw Net*** (two in the loft). *Dexterity Saving Throw:* DC 12, one Medium or smaller creature within 15 ft. *Failure:* restrained (escape: action, DC 10 Strength (Athletics), or cut it: AC 10, 5 HP).
+
+**Bonus Actions**
+- ***Pass It On.*** Throw a held object to an ally within 20 ft.
+- ***Scarper.*** Disengage or Dash.
+
+**Tactics:** Gang up. Grab the lamp. Run when bloodied. Never hit anyone who's down.
+
+---
+
+## 6. Stat block: the lamp-warden (Ch2 escort)
+
+> Don't plan a fight. These are legitimate Guild guards on legitimate business. Fighting one in the street is a crime Ostley can't ignore, and it tells the Calm exactly who Ash is. If it happens anyway, this is what they are at L2. (The Ch5 lamp-wardens are tuned for L5 and are much more dangerous.)
+
+### LAMP-WARDEN (escort, Ch2)
+*Medium Humanoid (human), Lawful Neutral*
+**AC** 16 (breastplate, silvered half-helm) · **Initiative** +2 (12) · **HP** 30 (5d8 + 8)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 15 | +2 | +4 | DEX | 13 | +1 | +1 | CON | 14 | +2 | +4 |
+| INT | 10 | +0 | +0 | WIS | 12 | +1 | +1 | CHA | 9 | −1 | −1 |
+
+**Skills** Athletics +4, Perception +3 · **Senses** passive Perception 13 · **Languages** Common · **CR** 1 (XP 200; PB +2)
+*Tuned for party level 2: guard. Three escort Hollis (one is the burned-hand captain, who never fights in this chapter and leaves with Hollis).*
+
+**Traits**
+- ***Masked.*** The half-helm hides the face. Identifying a warden later needs **Wisdom (Insight) DC 15** from voice and bearing.
+- ***Guild Law.*** A warden reduced to half HP calls for the Watch and withdraws to protect his charge. He never pursues past his charge.
+
+**Actions**
+- ***Lamp-Cudgel.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) bludgeoning damage. (Max 10.)
+- ***Glare-Lamp (Recharge 5–6).*** *Constitution Saving Throw:* DC 12, one creature within 15 ft that can see the lamp. *Failure:* blinded until the end of its next turn.
+
+**Reactions**
+- ***Shield the Charge.*** When an attack targets a creature the warden is guarding within 5 ft, the warden can take the attack instead.
+
+**Tactics:** Protect Hollis and Clara. Disengage. Report everything.
+
+---
+
+## 7. Treasure
+
+| Source | What | Value |
+|---|---|---|
+| Hester's courier fee | 5 gp and a loaf | 5 gp |
+| Hollis's tip | One gold piece, pressed into Ash's hand | 1 gp |
+| Knife Wall (if champion) | | 10 gp |
+| Bucket Tenth-day card (if won) | Purse | 40 gp |
+| Liars' Night (if won) | The table's tab; the Liar's Cup (no magic) | ~3 gp |
+| The Riddle Table (if won) | **Clockwork Amulet** (Common) | (~100 gp) |
+| Fight 2A (if fought) | Small stolen goods in the loft | 2d6 gp (or returned) |
+| **Typical chapter total** | | **~20–65 gp coin, plus possibly 1 Common item** |
+
+**Running total for Act I so far (typical):** ~45–110 gp, 1 Potion of Healing, possibly a Clockwork Amulet. Enough, with luck, for **Nell's blanket** (100 gp, Common) by Ch3–4.
+
+---
+
+## 8. Seeds checklist
+
+| Seed | Secret | Where | Done |
+|---|---|---|---|
+| The call clearest at the Lane Well | SEC-22 #1 | Scene 1 | ☐ |
+| "I'd rather not say" | SEC-01 #3 | Scene 2 | ☐ |
+| "Your mother could have" | SEC-02 | Scene 2 | ☐ |
+| Aggie's picture-locket: Moss, unchanged in forty years | SEC-20 #2 | Scene 2 | ☐ |
+| Dora: "Moss looked just the same then" (if not in Ch1) | SEC-01 #2 | Scene 8 | ☐ |
+| Every lamp brightens; "the lamps can't tell you two apart" | SEC-03 #1 | Scene 4 | ☐ |
+| Clara's eye fleck | SEC-03 #2 | Scene 4 | ☐ |
+| Clara hums the lullaby's first line (and Tansy does too) | SEC-03 #3 | Scenes 4, 6 | ☐ |
+| Clara's half-locket; Ash's tugs toward it; Widow Marsh: "a pair-locket, love" | SEC-23 #3 | Scene 4 | ☐ |
+| A lamp-warden notices the lamps and reports (EVT-40) | SEC-04 #1 | Scene 4 | ☐ |
+| A lamp-warden with a burned right hand watches Ash | SEC-17 #1 | Scene 4 | ☐ |
+| Dagny: "the old dwarves never touched this stuff" / "Oath" | SEC-05, SEC-11 | Scene 4 | ☐ |
+| Glimmer prices up again (Dagny's crate, Simon's oil) | SEC-05 | Scenes 3–4 | ☐ |
+| The Ford Stone hums at the turn of light; depth under Old Ford | SEC-06, SEC-02 | Scene 9 | ☐ |
+| Gideon feels something antlered, very near, and says nothing | SEC-09 | Scene 9 | ☐ |
+| Zeke hears glimmer's chord, thinks it's a headache | (discovery) | Scene 4 | ☐ |
+| Lark's fragments: iron horns; the bird that doesn't blink | (villain footprints) | Scene 1 | ☐ |
+
+---
+
+## 9. Level milestone and exit
+
+**EVT-40 · The lamps flare: Ash meets Clara and Hollis; a lamp-warden reports it.** (Mid-chapter.)
+- Edges: R-045, R-047, R-052. Seeds SEC-03, SEC-04. *(Hollis files it. He doesn't connect it to anything yet: `campaign/00` §3B, "Highwater: notices lamps flaring around a Fringe boy. Doesn't yet connect it.")*
+
+**EVT-02 · Gideon's vigil at the Ford Stone is answered (Oath of the Ancients).**
+- **SEAL:** no change (3).
+- **Edges:** R-009 (Moss: hope).
+- **Secrets seeded:** SEC-09, SEC-06.
+- **Level 3.** Every 2024 class picks its subclass now.
+  - **Ash:** **Thief-Swashbuckler** (house rule, `rules/00` §3): Fast Hands, **Second-Story Work** (climb speed 30 ft; Dex for jumps), Fancy Footwork. Steady Aim. Sneak Attack 2d6. HP 24. *(Build with the player, one choice at a time. Ch3 is built with vertical terrain for it.)*
+  - **Gideon:** **Oath of the Ancients**: Channel Divinity (Nature's Wrath), oath spells (Ensnaring Strike, Speak with Animals). HP 34. He says the oath words came to him in the light. He's never heard them before. They're old.
+  - **Zeke:** **Wardwright** (house subclass): Wright's Savant (Shatter, Arcane Lock) and the Harness (Arcane Ward, 10 HP). HP 26.
+  - **Moss:** **Circle of the Moon**: Circle Forms (CR 1, AC 13 + Wis, temp HP 3 × level). HP 33. *(His story upgrade #1 comes in Ch3, not now.)*
+
+**Log in the Sealed GM Notes:** Twin Bond change (if any); whether the halves nearly clicked (dig-early consequences); Rook's edge movement; whether the lamp-warden tail learned anything; the vigil result and any cost; gifts commissioned.
+
+---
+
+## 10. If the party goes off-route
+
+| If Ash… | Then… |
+|---|---|
+| **…refuses the courier job and avoids the Row** | Clara comes to the Lane on Hester's bread round (★3 Route C), or Hollis brings his lamps-for-poor-streets tour to the Fringe with Clara carrying the chips (★4 Route C). The meeting happens on Willow Lane. |
+| **…goes straight to Mirrowen-hunting** (wants to find the gate now) | Moss says no, plainly, and means it: "Not yet, lad. Not without me, and not before I'm sure what's waiting." If Ash tries to follow Moss to the woods at dawn, that's **Ch3 ★1 Route B**, early. Fine: run the vigil (★5) the next night, and let Ch3 start a day sooner. Don't block it; just make the Fordwood at dawn very still and very cold, and let Moss turn round on the path and say, "Home. Today. Please." Whether Ash obeys is his business. |
+| **…confronts Hollis about the lamp-warden staring** | Hollis is puzzled and kind: "My wardens stare at everyone, my dear. It's what I pay them for. Did one of them frighten you? I'll have a word." He means to have a word, about Ash. (R-047 doesn't change yet.) Don't escalate. |
+| **…tells Clara about the call** | She's interested and kind and a little puzzled. "Voices in water? Oh, I sometimes think the lamps sing. Isn't that silly?" (It isn't. Don't let her know that.) Twin Bond +1 if he's honest and gentle. Hollis hears about it from her innocently ("a Fenwick boy who hears things in water, isn't that sweet?"). **That's a big tell to Hollis.** Raise the Calm's interest: Ch5's Rook purchase can move up by a session. Note it; it's a fair consequence, not a punishment. |
+| **…skips the vigil** | ★5 Route C. Gideon goes alone (Route B), or if nobody goes at all, the oath comes at the Ford Pool in Ch3 (Ch3's file). |
+| **…picks a fight with the lamp-wardens** | Use the escort block. After one round, Hollis says, "Stop. *Stop.* Sergeant, please," to the nearest Watchman, and it's over: Ash is in the Cage overnight, Gideon pays the fine (3 gp; it's the house tax money), and Hollis personally asks the magistrate for leniency "for Zeke's sake." That kindness is worse than the fine. |
+| **…brings Thistle into town** | People stare. A crowd gathers. Someone fetches the Watch. Thistle loves it for about a minute. Then a lamp-warden on the Row looks at her for a long moment and walks away quickly, toward the Guildhall. (`campaign/00` §3B has Hollis learn of "a hare-folk scout in the city asking for the one who hears" in **Blossom** (Ch5). This moves it up. Note it; Ch5's lamp-warden raid can come a session early.) |
+
+**Threads that must be open for Chapter 3:** the voice is a child, and she's grey and frightened; Moss knows much more than he says; the Ford Stone hums; something Gideon won't talk about; a young enchanter with the same fleck in her eye, and a locket like his.

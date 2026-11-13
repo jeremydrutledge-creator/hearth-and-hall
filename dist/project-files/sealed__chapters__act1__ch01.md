@@ -1,0 +1,809 @@
+# Chapter 1 · Willow Lane (SEALED — DM ONLY)
+
+> **Act I · Level 1 (party reaches 2 at the end) · 1 session · early Thawing, YF 1104 · Restday**
+> **SEAL at start: 3.** Nothing in this chapter moves it.
+> **Built on:** `campaign/02` Ch1 (beats, routes, seeds), `campaign/05` §2–3, `truth/01` (NPC-001 to NPC-025), `truth/03` (edges), `world/02` (Emberford), `world/09` (the family), `rules/02` (tuning, L1 row and the L1–2 survivability caps).
+> **Play this chapter first.** It is written to be run almost line by line. Everything marked ★ must happen. Everything else is there to be used, dropped or moved.
+
+---
+
+## 0. Chapter at a glance
+
+| | |
+|---|---|
+| **Shape** | A warm, ordinary Restday on Willow Lane that turns strange at sunset. Morning on the Lane, an odd job, a chase on the Wharves, a frightened hare-folk scout, the first time Ash hears the call awake, a fight at the water's edge, and Restday supper. |
+| **Who's in the party today** | **Ash** and **Bart** all day. **Gideon** works the early door at the Drowned Lantern on the Wharves (afternoon until the lamps are lit), so he is 60 feet from the fight. **Zeke** is home in the attic unless Ash brings him (he has a Lyceum errand at the Wharves he'd happily share). **Moss** is "out gathering" until dusk; he arrives after the fight. |
+| **Fights** | **Fight 1 · The Cellar Edge** (ordinary, 3–4 rounds). Optional: a Bucket undercard bout; a Magpie scuffle if the chase goes badly. |
+| **Skill challenges** | **The Chase on Warehouse Row** (quick chain). Optional: **The Leaking Roof** (two-check chain). |
+| **New NPCs who speak** | 13 established (IDs below), plus a handful of Tier 3 walk-ons (logged in `_change-requests.md`). |
+| **Exit** | Thistle is safe at the Green Jar and Ash has heard the call awake. **EVT-01. Level 2.** |
+| **Session length guide** | Opener and the Lane: 45–60 min · jobs and side activities: 30–45 min · the Wharves, chase and fight: 45 min · the call and supper: 30 min |
+
+### NPCs in this chapter (with the ledger edges each scene leans on)
+
+| ID | Name | Where today | Edges used |
+|---|---|---|---|
+| NPC-001 | Gideon Fenwick | Home (morning), the Drowned Lantern's door (afternoon), supper | R-001, R-003, R-016 |
+| NPC-002 | Zeke Fenwick | The attic workshop; optional Wharves errand; supper | R-004, R-005, R-006, R-007 |
+| NPC-003 | Moss | Away until dusk; the Wharves or the Bend after the fight; supper | R-008, R-009, R-013 |
+| NPC-010 | Rook (Danny Pratt) | Top of the Lane (morning), the Wharves (dusk) | R-037 |
+| NPC-011 | Bess Carter | Her doorstep, washing lines | R-018, R-019 |
+| NPC-026 / 027 | Pip and Nell Carter | The Lane | R-020 |
+| NPC-012 / 013 | Dora and Walt Finch | Their house (the leaking roof) | R-021, R-022, R-023, R-024, R-025 |
+| NPC-014 | Aggie Thorne | Behind the Green Jar's counter | R-031, R-032 |
+| NPC-015 | Peg Mallory | The Willow | R-028, R-029 |
+| NPC-016 | Netta Lowe | The Lane Well, with her eel barrow | R-026, R-027 |
+| NPC-025 | Simon Shaw | Shaw's Chandlery | R-030 |
+| NPC-017 | Sgt. Bill Ostley | The West Gate road and the Fringe watch-house | R-033, R-034 |
+| NPC-029 | Hugh Dale | The Fringe watch-house | R-036 |
+| NPC-018 | Thistle of the Mere | Warehouse Row, fleeing | R-068, R-069 |
+| NPC-044 | Hob and Arn Tolley | Warehouse Row, hunting | (none yet; see §6) |
+| NPC-024 | Ma Garrow | The Bucket | R-062, R-063 |
+| NPC-043 | Mother Brine | Mother Brine's, the Wharves | (none) |
+
+**Running rule reminder:** before any of these people talks about another, read the edge. Bess thinks the gifts might be the Bright Lady's charity or Hester's. Netta and Peg both think Ash is the doorstep thief. Dora loves Ash and is careless with the secret. Gideon is polite and never warm with Moss.
+
+---
+
+## 1. ★ Must-happen beats (with routes)
+
+> Routes run in order of preference. A is the natural path. Later routes are the world moving, never a punishment for Ash's choices. **The beat finds him.**
+
+### ★1 · Home is shown, and worth protecting
+- **A. The morning plays out naturally.** The opener puts Ash at **the Long Wall in the Willow** (top of the Lane) with a sack of flour that "fell off" a Crownhill delivery cart under the bench (Scene 0, CHG-25). Deciding where it goes walks him down the Lane, past every house (§3, Scenes 0–3). The older roof opener (Scene 1) is kept as an alternate if Ash heads home first.
+- **B. Ash leaves the Lane at once.** The Lane comes to him. Pip Carter tags along "to help" and narrates every house they pass. Netta flags him down at the well with news. Rook's Magpies block the West Gate road, and Ostley has to "not see" whatever happens.
+- **C. Restday supper (fixed, every time).** The brothers and Moss at the table, neighbors dropping in with a pie, a complaint or a rumor. The Lane is shown through their talk (§3, Scene 9).
+- **D. If Ash spends the whole day off the Lane**, the walk home at night is the beat: every lit window, Peg's laugh through the Willow's door, Bess's washing still out, Walt's bucket under the roof leak. One short scene, then supper.
+
+### ★2 · An odd job leads to the Wharves
+- **A. A job board.** The Watch board at the Fringe watch-house (Ostley), the Wharfmaster's Office or Mother Brine (she needs a crate fetched off a barge). Every job on the board in §4 ends at the Wharves near dusk.
+- **B. A contest.** Knife Wall on Market Steps. The weekly champion's purse is paid at the Drowned Lantern on the Wharves, at the lamp-lighting.
+- **C. The supper pail.** Gideon left his supper pail on the kitchen table. Zeke "volunteers" Ash to run it down to the Drowned Lantern ("Technically I'm busy. Technically you're not.").
+- **D. Rook's boast.** At the well, Rook tells his crew he's going to snatch "a talking rabbit worth a hundred gold at the Bucket." Ash goes to beat him to it.
+- **E. Nothing takes.** Netta hears that the Tolley brothers are after "a rabbit that talks" down on Warehouse Row, and that Gideon's on the Lantern door tonight. Any one of these pulls Ash to the river by sunset.
+
+### ★3 · The hare-folk scout
+Thistle of the Mere (NPC-018), a hare-folk scout Mother Burdock sent through the Ford Pool to find "the one who hears," is cornered in Warehouse Row by Hob and Arn Tolley (NPC-044), hired by the Bucket to catch her for a beast-bout. Rook's Magpies are after her too.
+- **A. Ash sees the chase** on the Wharves (the Chase on Warehouse Row, §5).
+- **B. Ash hears her scream.** Only he notices that it carries a few notes of *his* tune, the one he's hummed all his life.
+- **C. Thistle runs into the Drowned Lantern**, straight past Gideon at the door, and out the back onto Warehouse Row with the Tolleys behind her. Gideon follows, and so does whoever's with him.
+- **D. If Ash went home early**, Thistle comes the other way: up the Bend in the reeds, with the Tolleys' skiff behind her and the eel behind *them* (Fight 1, Route B location).
+
+### ★4 · The call, awake
+At the turn of light (the minute of sunset), near still water, Ash hears a child humming *his* tune, slightly wrong, like someone humming a song they learned through a wall. Nobody else hears it. His locket goes cold against his chest. Thistle sees his face and whispers: *"You heard it. You're him."*
+- **A. During or right after the rescue**, at sunset on the water's edge (built into Fight 1, start of round 3).
+- **B. If the fight runs past sunset**, the moment the fight ends: everything goes quiet but the hum.
+- **C. If Ash missed the Wharves entirely**, at the Bend behind the Fenwick house at sunset, while he's drawing water. Thistle comes stumbling out of the reeds a minute later.
+- **D. If Ash is nowhere near water at sunset** (unlikely), it comes at the next still water he passes before full dark: a horse trough, a rain barrel, a cup of ale left standing on the Willow's bar. Use C's Thistle entrance on the way home.
+
+### ★5 · Fight at the water
+The Tolleys' catchers, and then a greywilted river-eel that followed Thistle through the gate and comes up out of still water. It is the first sign that whatever is wrong across the water can come through. See §6 (Fight 1).
+- **A. The warehouse cellar on Warehouse Row** where Thistle is cornered.
+- **B. The Bend behind the Fenwick house**, if Ash went home (the eel follows Thistle up the side-channel).
+- **C. The Bucket's cistern**, if Thistle was already caught and caged for a beast-bout. The eel rises from the cistern's still water mid-bout (§6, Route C variant).
+
+---
+
+## 2. Before the session
+
+**Pre-campaign state (what Ash brings to the table):**
+- For a season or so, Ash has dreamed of a grey lake now and then. He wakes humming. He has always hummed the same tune; nobody ever taught it to him.
+- Bart (Ash's familiar; no NPC ID; house rule `rules/00` §4) is already summoned, an owl today. He has 1 HP and opinions.
+- Ash has 10 gp, the gear on his sheet and the locket under his shirt.
+
+**The world today (SEAL 3, shown, never told):**
+- Glimmer lamps on the Lane flicker for a breath at sunset.
+- Fish in the Bend rise and stare at the bank when nobody's moving.
+- The Lane Well's water is a little too clear (SEC-22 seed comes later; just let it be clear).
+- Netta's top rumor this morning: "a hare-folk was seen at the Wharves," and everyone's laughing about it.
+
+**What the DM must have open:** this file, `truth/00-index.md` (names by sound), `truth/03-ledger.md` (before any vouch), `rules/02` §3 L1 row.
+
+---
+
+## 3. Scenes
+
+### Scene 0 · The opener: the Long Wall (★1 Route A) · DEFAULT (CHG-25)
+
+**Why this opener:** at the start of the campaign the contest circuit *is* Ash's ordinary life. He checks the Long Wall most mornings and goes looking for a contest or a hustle. **Early play is often solo**: Ash on his own at the Willow, Market Steps or the Bucket, with the brothers around the edges (watching, rolling their eyes, keeping a tally) until he comes home or the story pulls them in. Play that. Don't hurry him toward the plot; the sun and ★2's routes bring the Wharves to him.
+
+**Where:** the Willow, late morning, Restday. Peg is wiping the Long Wall. **Gideon** is at the bar eating porridge before his afternoon shift on the Drowned Lantern's door. **Zeke** is at the corner table with tea and the notebook where he keeps Ash's win/loss tally "for science." Walt Finch comes in for Liars' Night gossip. Bart is on a rafter.
+
+**The opener narration ends with Gideon, not turning around:** *"Asheron. What's in the coat."* (The flour sack is under the bench, wrapped in Ash's coat.) Play it exactly like the roof version (Scene 1): every option is fine. If Ash owns up, Gideon: *"Crownhill flour."* Not a question. *"Don't put it on the Carters' step where Bess can see you. She'll give it back."* If Ash bluffs, Zeke gives him away by accident ("Technically it's a very lumpy coat"). If Ash bolts with it, Gideon calls after him: *"Supper's at lamp-lighting. Restday. You'll be there."* The walk down the Lane to place the flour is Scene 2, top to bottom.
+
+#### Day in the life: what's on the Long Wall this morning
+Present these as the chalk says them. Don't list them as a menu after the opener; they're in the narration already. Let Ash pick, ask, or ignore them.
+
+| Chalk | What it really is | Where it leads |
+|---|---|---|
+| **Knife Wall**, Market Steps, champion's purse at the Drowned Lantern at lamp-lighting | §8 Knife Wall. Joss Kettering holds this week's best (3). | ★2 Route B (the Wharves at dusk) |
+| **Bucket undercard**, Restday, 5 gp, Bare-Knuckle or Wasters | §8 Bucket undercard (Big Lottie Sparrow), and the Gideon bout below. Card runs mid-afternoon, so a fighter can still make a Wharves job by dusk. | The Wharves (★2 Route A/B), Ma Garrow's poster (★3 seed) |
+| **Mother Brine: a crate off a barge**, 3 sp | §4 job | ★2 Route A |
+| **Runaway terrier, Crownhill**, reward | §4 job (the terrier is on the Wharves by dusk) | ★2 Route A |
+| **Kings and Ferrymen**, the Willow corner table from noon | §8 | Stays on the Lane; ★2 Route C or E pulls him down later |
+| **Shell game** (Ash's own) | §8 | Anywhere crowded |
+
+**Brothers' reactions (use one or two, in character):**
+- **Zeke** (tally notebook): *"You're fifth. Technically you were fourth until Nora Cobb picked the Locksmiths' Race lock in a time I still don't believe."* He'll come watch anything with an audience and a chance of something exploding.
+- **Gideon** (arms folded): he never says "don't." He says *"Supper's at lamp-lighting,"* which means the same thing. If Ash wins anything, Gideon says *"Hm,"* which from Gideon is a parade.
+- **Bart:** heckles the standings, the brothers, and especially Gentle Joe Barrow ("He apologized to a door once. I watched him.").
+
+#### The coax: Gideon at the Bucket (optional beat; the player asked for it)
+Ash can try to talk Gideon into the Restday **Bare-Knuckle** undercard against **Gentle Joe Barrow** (Tavern Champ, Bare-Knuckle; #3 on the Cup). "You're a shoo-in."
+- **Gideon's position:** he has a shift at four, he doesn't brawl for money, and it's Restday. He's also a little tempted: Joe's the only man on the Wharves he's never been sure he could put down.
+- **Persuasion DC 15.** Advantage if Ash pays Gideon's 5 gp entry himself, or if Zeke backs him ("Technically, the house tax"). Insulting Gideon's pride works too (**Deception or Intimidation DC 13**, and Gideon knows exactly what Ash is doing and does it anyway).
+- **The bout:** Bare-Knuckle format, `cities/00-index.md` §5.1. **No magic** (Divine Smite is a spell; Lay on Hands between rounds is magic, and Ma will disqualify him for it). Gideon fights on Strength: unarmed +6, 1 + Str 4 = 5 bludgeoning, ring AC 11 (padded jacket, Dex). Use Big Lottie's ring rules; **Gentle Joe Barrow** uses Lottie's block +4 HP and +1 to hit, and apologizes after every knockdown.
+- **Purse:** 40 gp to the winner (Joe's title raises the card), 1 Cup point to the loser for finishing. If Gideon wins, Peg chalks *G. FENWICK* over Joe's name, and Gideon pretends for a week not to have noticed.
+- **Timing:** the card finishes by about three. Gideon walks next door to the Drowned Lantern, bruised, for his four o'clock shift. **This keeps him exactly where Fight 1 needs him** (60 feet from Warehouse Row).
+- If Ash fights too (Wasters vs. Big Lottie), both brothers are on the same card. Zeke takes bets. Ma Garrow notices the family.
+
+#### Money: tight, not desperate (test it in play)
+- The brothers are not going hungry. Gideon's pay covers the house tax and food, mostly. Ash's winnings and "found" goods are the margin: boots, Zeke's books, the doorsteps.
+- **Don't invent a crisis to force contests.** Gauge it from how the player plays. If he wants pressure, the honest pressure on the Lane is other people's: the Finches' roof, Bess's winter coal debt, Zeke's next term. If Ash skips a contest, nothing bad happens; the Wall just moves on without him (rivals roll their weekly d6, `cities/00-index.md` §14).
+- Note in the Sealed GM Notes how the player treats money in session one (chases purses / ignores them / gives them away), and tune later purses and temptations to that.
+
+---
+
+### Scene 1 · The opener: the roof (★1 Route A) · ALTERNATE OPENER
+
+**Where:** the roof of the Fenwick house, the tall, narrow, leaning three-story house at the bottom of Willow Lane, nearest the Bend. Slate, moss, a chimney Ash leans on, and the rooftop hatch he uses more than the front door.
+
+> *Late morning, early Thawing. The slates are warm where the sun's on them and cold where it isn't. Below you, Willow Lane runs crooked up the hill toward the West Gate road: twenty-odd wooden houses, washing lines strung between them like bunting, chickens, two dogs asleep in the one patch of sun, and children everywhere. Down past your heels, the Bend slides by, green and slow, smelling of willow and mud. Beside you on the slates sits a sack of good white Crownhill flour, the kind with a miller's stamp on it. A delivery cart lost it on the West Gate road about an hour ago. It's very possible the cart had help.*
+>
+> *From the yard below, a voice you've known all your life: "Asheron."*
+
+**What Ash knows:** the flour is worth about 1 gp to anyone, and a week of bread to the right doorstep. Everyone on the Lane leaves things on doorsteps, and on Willow Lane you never ask (a custom any local knows).
+
+**Bart, on the chimney pot** (telepathic, to Ash only; pick one or two):
+- "He said your whole name. You're dead. Can I have your room?"
+- "Big Brother's doing the arms. The folded arms. That's the bad arms."
+- "For the record, I told you the cart was a bad idea, and also I helped."
+
+**Gideon (NPC-001) in the yard,** arms folded (R-001: reckless, good-hearted, too young for the world):
+> *"Asheron. Down. Off the roof. Now. And bring whatever's in the sack."*
+
+Let the player choose: come down, go the other way across the roofs, talk Gideon round, hide the sack. **Every option is fine.** If Ash comes down, Gideon looks at the sack for a long moment and says, "Crownhill flour." It is not a question. Then: "Don't put it on the Carters' step where Bess can see you. She'll give it back." (He knows exactly what Ash does. He disapproves of how, not of who it's for.)
+
+If Ash goes the other way across the roofs, Gideon sighs and calls after him: "Supper's at lamp-lighting. Restday. You'll be there." That is not a question either.
+
+**Information Gideon gives in passing** (use whatever fits):
+- He's on the early door at the Drowned Lantern this afternoon, home after the lamps are lit. Restday supper is late tonight on purpose.
+- Moss is out the West Gate "gathering," same as every morning, and will be at supper.
+- Walt Finch's roof is leaking again. "Someone with no fear of heights could look at it."
+
+---
+
+### Scene 2 · Down the Lane (★1 Route A; the home street)
+
+Run this as a walk. Ash can stop anywhere. Each stop has who's there, what's going on, one line of voice, and what Ash can do. **Use three or four stops, not all of them,** unless the player is enjoying it, in which case use them all: this is the session's foundation.
+
+#### Willow Lane, top to bottom (map key)
+
+| # | Place | Who's there this morning | What's going on |
+|---|---|---|---|
+| 1 | **The West Gate road** and the **Fringe watch-house** (just outside the old wall) | Sgt. Bill Ostley (NPC-017) on the bench; Hugh Dale (NPC-029) inside doing paperwork | The Watch board is nailed to the watch-house wall (§4). A Crownhill delivery cart, one sack light, is parked by the gate while its driver complains to Ostley. |
+| 2 | **The Willow** (the Crooked Willow), hunchbacked little tavern at the top of the Lane | Peg Mallory (NPC-015), airing the taproom | Liars' Night is next week. Kings and Ferrymen game at the corner table from noon. |
+| 3 | **Shaw's Chandlery**, top of the Lane | Simon Shaw (NPC-025) | Candles, lamp oil, rope, nails. A little notice in the window: "Lamp oil 2 cp the pint. Still cheaper than glimmer." |
+| 4 | **The Lane Well** | Netta Lowe (NPC-016) with her barrow of eels and river fish; washerwomen; Rook (NPC-010) and two Magpies loafing at the top | The gossip engine. Rumors in §4. Rook's boast (★2 Route D) happens here. |
+| 5 | **The Green Jar**, halfway up the Lane | Aggie Thorne (NPC-014) behind the counter; the shop cat (unnamed; name it at the table) | Moss is out. Herbs drying from the beams, jars to the ceiling, mint and wet earth. |
+| 6 | **The Carter house** | Bess Carter (NPC-011) at the washing tubs; Pip (NPC-026, 9) "helping"; Nell (NPC-027, 5) on the step under a coat | Crownhill washing on every line. The doorstep Ash has been feeding for two years. |
+| 7 | **The Finch house** | Dora (NPC-012) and Walt Finch (NPC-013) | A bucket in the front room catching a drip from the roof. Walt is trying to climb a ladder he shouldn't. |
+| 8 | **The Fenwick house**, bottom of the Lane | Zeke (NPC-002) in the attic; Gideon until early afternoon | See Scene 3. |
+| 9 | **The Bend** | Children, eel traps, a rotting old barge the kids play pirates on | The side-channel. Slow and green. Fish rise and stare. |
+| 10 | **The Rope-walk** (east, along the Bend) | Two rope-makers who knew Walt in his day | A long, dim shed. Ash's old hiding place. |
+| 11 | **Tanner's Row** (east of the Lane) | Tannery yards | Stinks. Work for anyone strong. Two lanes past it is where Rook grew up, and where his mother Martha still lives. |
+
+#### Stop: the Carters' doorstep (Bess, Pip, Nell)
+
+> *Bess Carter is up to her elbows in grey wash-water, sleeves rolled, pushing damp hair off her forehead with her wrist. Crownhill linens hang on every line behind her like sails. On the step, a small girl sits inside a man's coat that comes down past her feet: Nell, five, who is always cold. A boy of nine is "helping" by dropping clothes pegs into the tub one at a time.*
+
+- **Bess** (R-018: a charmer, a bad influence on Pip, a good heart; R-019: Gideon's the steady one): *"Pip, get out from under the Fenwick boy's feet. Ash, love, you look starved. Sit. There's soup. Don't argue."* She means it. There's barely enough soup.
+- **Pip** (R-020: Ash is the greatest thief who ever lived) wants to know what's in the sack, wants to come with Ash all day, and will follow him if not stopped. *Watch out:* Bess's fear is Pip running with the wrong crowd (Rook's). If Pip tags along today and nothing bad happens, it's a sweet scene. If he gets hurt following Ash, Bess's edge moves down.
+- **Nell** says almost nothing. If Ash talks to her, she whispers that her feet are cold "all the way up."
+- **The drop.** If Ash wants to leave the flour without being seen: **Dexterity (Sleight of Hand) DC 12** while Bess is turned to the lines, or **Dexterity (Stealth) DC 12** via the side alley after she's gone in. Bart can distract (Help: advantage). Pip spots it on any failure; he says nothing to his mother, and looks at Ash like he hung the moon. On a failure by 5 or more, Bess sees the sack but not who left it, and stands looking at it for a long time. She takes it in. She doesn't ask (Lane custom).
+- **Seed for later (no roll):** Nell's coat is Gideon's old one. Nobody mentions it.
+- **Gift hook (`campaign/05` §4):** a Hearthglow blanket that's always warm would change Nell's life. It costs 100 gp (a Common item). Ash can't afford it today. Plant the wish; the money comes in Ch2–4.
+
+#### Stop: the Finch house (Dora, Walt, the leaking roof)
+
+> *Walt Finch, seventy-eight and stubborn as a knot, is halfway up a ladder with a hammer in his teeth. His wife Dora stands at the bottom holding it steady with one hand and a cup of tea in the other, saying "Walter" in the tone of a woman who has said it ten thousand times.*
+
+- **Walt** (R-024: good hands, no patience): *"Boy. You've good hands and no patience. Hold this ladder or get up it, one or the other."*
+- **Dora** (R-021: Ash is Elinor's boy, all over again; her love makes her careless): pats Ash's hand, starts sentences twice.
+- **The Leaking Roof (quick chain, optional).** Two checks, under mild pressure (Walt will try to do it himself if Ash dawdles):
+  1. Get up and find the leak: **Strength (Athletics) DC 10** to climb the wet slates, or **Wisdom (Perception) DC 10** from the ladder.
+  2. Fix it: **Dexterity (Sleight of Hand) DC 12** (quick hands on loose slates), **Intelligence DC 12** with Zeke's tinker's tools, or simply let Walt talk Ash through it (**Wisdom (Insight) DC 10**: listen to the old rope-maker, and do it his way).
+  - **Two successes:** the leak's fixed. Dora's attitude moves up (the roof is on her up-list). Walt grunts approval, which is the most he gives anyone.
+  - **One success:** it's patched "for now." It will fail in Ch4's flood. That's fine; it's a callback.
+  - **No successes:** Ash slides down the slates and lands in the hydrangea. No damage. Walt laughs until he coughs.
+- **★ Seeds from Dora (use both if Ash lingers, at least one if he doesn't):**
+  - **SEC-16 (Dora's slip):** *"You've got your mother's eyes, the both of— ah. The eyes, I mean. Your mother's eyes."* She covers it by fussing with the teacup. If Ash pushes at once: **Wisdom (Insight) DC 12** shows she's flustered, not confused. She says, "Ask Gideon about your mother sometime, love. Ask him properly." Then she changes the subject firmly. **Never stonewall a good roll:** on a 20+, she adds, "There was more to that night than one baby on a bank," and then looks frightened, and goes inside. Treat it as a strong SEC-16 seed, and let Ch4's reveal move up if Ash keeps pushing (`campaign/03` SEC-16, dig early).
+  - **SEC-01 (Moss doesn't age):** if Moss comes up: *"He looked just the same when I was a girl, you know. Some folk keep."* She laughs it off (R-023: she's decided not to find it strange).
+
+#### Stop: the Green Jar (Aggie)
+
+> *A bell over the door. The smell hits first: mint, wet earth, something bitter, something sweet. Jars to the ceiling, bundles of herbs hanging from every beam. A grey cat on the counter opens one eye. Behind the counter, a woman in her fifties with forearms like a bargeman's points a pestle at you.*
+
+- **Aggie** (R-032: trouble, and Moss's whole heart; R-031: Moss is the best man alive, possibly not a man): *"Wipe your feet. No, the other feet. He's out. He's always out. Buy something or stop breathing on the jars."*
+- **SEC-20 seed #1:** she calls Moss "the old stump" ("the old stump'll be back by dusk, same as ever"). Anyone who's seen them side by side knows Moss looks a good fifteen years younger than she does. Don't point this out. Let it sit.
+- **What she sells (Common, nonmagical unless noted):** healer's kit 5 gp; herbal poultice (heals 1d4 when applied during a short rest) 1 gp; antitoxin 50 gp (she has one); "Moss's tea" (a good night's sleep) 1 gp for a tin. No potions today ("He brews them when he brews them").
+- **If Ash asks where Moss goes every morning:** "The woods. Gathering. Same as every morning for as long as anyone's known him." She says "as long as anyone's known him" a little too carefully.
+
+#### Stop: the Lane Well (Netta, Rook's boast)
+
+> *The Lane Well is a round stone mouth with a wooden roof and a bucket on a chain, and it is the beating heart of every rumor in the Fringe. Netta Lowe stands beside it with her barrow of eels, pointing at a washerwoman with a fish.*
+
+- **Netta** (R-026: Ash is the doorstep thief and the Lane's favorite rascal; R-027: Danny Pratt is a bad lot): *"Did you hear? Did you? A hare-folk! At the Wharves! A rabbit in a coat, Joss Kettering swears it on his mother. Talking!"* (Joss is a Tier 3 docker; see `_change-requests.md`.)
+- **Rumors (roll d6 or pick; Netta tells at least two):**
+
+| d6 | Rumor | True? |
+|---|---|---|
+| 1 | A hare-folk was seen at the Wharves, in a coat, talking. Everyone's laughing. | **True.** It's Thistle. |
+| 2 | The lamps in Old Ford flicker every sunset now. "Bad glimmer, my cousin says." | True (SEAL 3). |
+| 3 | Glimmer's gone up again. Simon's selling more oil than he has in years. | True. |
+| 4 | A Lyceum student went missing. "Studying too hard, I expect. Off with a girl, I expect." | True (a world-file rumor; it isn't Ch1's business). |
+| 5 | The Tolley brothers have been asking about "something with long ears" on Warehouse Row. Someone at the Bucket's paying. | **True.** |
+| 6 | Fish in the Bend come up and *stare* at you. Netta's sold eels forty years and never seen it. | True (SEAL 3). |
+
+- **★2 Route D, Rook's boast.** At the top of the well's little square, Rook (NPC-010) flips a coin across his knuckles and tells two Magpies, loud enough for the whole Lane: *"Talking rabbit, down the Wharves. Ma Garrow's paying a hundred gold at the Bucket for it alive. A hundred. By lamp-lighting it's ours."* He sees Ash. *"Fenwick. Don't even think about it."* (R-037: Fenwick thinks he's better than everyone, and he's only lucky.)
+  - **What's true:** Ma Garrow put out word she'd pay well for "the talking rabbit" for a beast-bout. Rook's inflated it. She actually offered 20 gp to the Tolleys and "we'll see" to anyone else. Ma doesn't yet know the "rabbit" is a frightened girl.
+  - **If Ash needles Rook:** Rook's blind spot is that Ash's code shames him. A public humiliation moves him down (bad for Ch7). Beating him at something fairly, without gloating, moves him up.
+
+#### Stop: Shaw's Chandlery (Simon)
+
+- **Simon** (R-030: Ash will pay the slate someday): *"Put it on the slate, Ash. No, I don't want to hear it. Slate."* He sells anything on the 2024 PHB gear list a chandler would carry, at book price, and Ash's credit is good up to 5 gp ("A. Fenwick" has a whole ledger page he's never once collected on).
+- **A barometer:** "Oil's selling. Folk say glimmer's going up again. Can't say I'm sorry. Can't say I'm glad, either. Lamps are lamps."
+
+#### Stop: the Willow (Peg)
+
+- **Peg** (R-028: she approves of the doorstep thief): *"Fenwick! Sit before you fall. You're washing glasses if you're staying. Restday supper, is it? Tell Gideon I'm sending a pie and he's not to argue."* She bangs a cast-iron pan on the bar when the Kings and Ferrymen table gets loud.
+- Side activity: Kings and Ferrymen (§8).
+
+#### Stop: the West Gate road (Ostley)
+
+> *Sergeant Bill Ostley is sitting on the bench outside the Fringe watch-house with his boots up, eyes shut, face to the thin spring sun. A Crownhill carter is telling him, at length, about a sack of flour.*
+
+- **Ostley** (R-033: a thief with a code, and the code's good enough). When he sees Ash, he sighs and looks at the sky: *"I didn't see that. I'm going to keep not seeing it for about ten more seconds."* He tells the carter he'll "make enquiries." He will not.
+- He's the natural way in to the **Watch board** (§4).
+- **Hugh Dale** (R-036: by the book, and secretly thinks Ash is the bravest person on the Lane) comes out with a clipboard, reads the carter's complaint aloud, and looks at Ash with an expression of deep suffering.
+
+**Route B (Ash left at once):** Pip falls in beside Ash "to help" and narrates every house: "That's Mister Finch's roof, it leaks, he says it's the Bright Lady's judgment on him for something he did in nineteen-seventy— in some year." Netta flags him from the well with Rumor 1 and Rumor 5. Rook and two Magpies are on the West Gate road, blocking it with a handcart; Ostley studies the sky.
+
+---
+
+### Scene 3 · The Fenwick house (the brothers at home)
+
+**The house:** narrow, tall, leaning slightly toward the Bend. Creaky stairs. Ground floor: the kitchen and the long table where Restday supper happens. First floor: Gideon's neat room (sword on pegs, bed made with corners you could cut bread on) and Ash's room (not). Top: **Zeke's attic workshop**, full of half-built gadgets. A hatch to the roof.
+
+**Gideon** (before he leaves for the Lantern, early afternoon): packs his cudgel and lantern from the job, kisses no one, tells Ash to be at supper. His supper pail sits on the kitchen table, forgotten, from about two o'clock. (★2 Route C.)
+
+**Zeke** in the attic (R-004: Ash is brilliant at the wrong things and deserves the truth):
+> *"Ash! Good. Hold this. Don't touch the blue end. Technically it's a resonance coil. Technically it's a kettle that sings when it's going to boil, but think what it could be."*
+- He'll talk about the Lyceum (he's between terms; the Guild scholarship "might come through again," R-007: Master Grane is the best man in Emberford). Let him gush. This is vouch #4's foundation.
+- **Zeke's errand (an invitation, not a requirement):** he needs to collect a crate of Lyceum glassware off a barge at the Wharves before dusk, and he'd love company. If Ash takes him, Zeke is in Fight 1 from round 1. See §6's scaling table.
+
+**★ Seed: the second cradle (SEC-16).** In the attic, under a dust-sheet next to Zeke's junk, are two shapes: one is a box of springs. The other is a small wooden cradle, the twin of the one Ash slept in (which is long gone for firewood). If Ash goes to take parts from it or lift the sheet:
+> *Zeke's hand is on your wrist before you've seen him move. "Not that. Use anything else. Not that."*
+- He laughs it off a second later ("Mum's. Sentimental. You know how Gideon is"). **Wisdom (Insight) DC 13:** Zeke is upset, not sentimental, and he's lying about *why*. If Ash pushes, Zeke says, "Ask Gideon," and goes very busy with the coil. **Dig early:** if Ash finds the cradle *and* pushes hard (a second Insight or Persuasion DC 15), treat it as a strong SEC-16 seed and let Ch4 move up. Zeke won't break Gideon's promise today. He'll look like he wants to.
+
+**Seed (SEC-16): Zeke flinches at "Wren."** If anything brings the word up today (a wren lands on the Lane Well's roof; Bart mentions one; a Wharves barge is called *Wren*), Zeke flinches. Bart notices before Ash does: "Your brother just did a face. A real one. Weird."
+
+---
+
+### Scene 4 · Jobs and the road to the Wharves (★2)
+
+The Fringe to the Wharves: out the West Gate road, through the Commons, down Market Steps to the river. About half an hour's walk, quicker over roofs.
+
+Present the options in §4. Whatever Ash picks, steer the clock so he's on the Wharves around an hour before sunset. If Ash is enjoying side activities, let him play; the light does the steering ("The sun's getting low over the Commons roofs. The lamplighters are out with their long poles.").
+
+**The Wharves at dusk:**
+> *The river is wide and brown and loud here: barges three deep at the Low Wharf, porters shouting, gulls screaming, the smell of frying fish and tar. Glimmer lamps are being lit along the quay one by one, little blue globes on iron arms. The sun's going down red behind the warehouses. On Warehouse Row, between the great grey sheds, the shadows are already long.*
+
+---
+
+### Scene 5 · The chase (★3)
+
+Run **the Chase on Warehouse Row** (§5). Its result sets the opening of Fight 1.
+
+If Ash is with Gideon (Route C, the pail), Thistle comes through the Drowned Lantern's door at a dead run, under Gideon's arm, past the bar, out the back. Hob Tolley follows and Gideon, very calmly, puts a hand on his chest. "Hob." Hob shoves past. Gideon looks at Ash. "Asheron. What did you do." He follows. **Start the chase at step 3.**
+
+---
+
+### Scene 6 · Fight 1 (★5)
+
+See §6. The call (★4) lands at the start of round 3, or when the fight ends, whichever comes first after sunset.
+
+---
+
+### Scene 7 · The call (★4)
+
+**When:** the minute the sun touches the river (turn of light). In Fight 1, that's the start of round 3. Pause the fight. Describe it. Then resume.
+
+> *The sun touches the river.*
+>
+> *And everything goes quiet. Not silent: you can still see Hob's mouth moving, the gulls wheeling, the water heaving in the cellar mouth. But the sound has gone thin and far away, like it's coming through a wall. And under it, close, so close it could be inside your own ear, someone is humming.*
+>
+> *It's your tune. The one you've hummed your whole life, that nobody taught you. A child is humming it, high and thin and a little wrong, the way you'd hum a song you'd only ever heard through a wall. Like she's learned it from you.*
+>
+> *Against your chest, under your shirt, the locket has gone cold as river ice.*
+>
+> *Then the sound of the Wharves comes back all at once.*
+
+**Rules while it happens** (it lasts the space of a held breath):
+- Ash doesn't lose his turn and takes no penalty. Nobody else hears anything.
+- **The eel hears it too.** The Hushed River-Eel loses its reaction this round and doesn't move on its next turn: it turns its blind grey head toward Ash, listening.
+- Ash has **advantage on his next Charisma (Performance) check to hum the tune** this fight (the tune is in his throat; the water is waiting). Prompt with sensation, never instruction.
+- **Bart** (who can't hear it): "Ash? Ash. You've gone a funny colour. Is this a hit-on-the-head thing? Blink twice if it's a hit-on-the-head thing."
+
+**Thistle (R-068: "You're him.")**, netted or free, sees his face, and stares:
+> *"You heard it." Her ears go straight up. "You heard it. You're him. Don't make that face. You're him."*
+
+She means "the one who hears," from Mother Burdock's old songs. She doesn't know the word Hearkener as anything but a story. If Ash asks "who?", she says "the one who hears! The Tall Folk one! From the songs!" and is impatient that he doesn't already know (R-068's blind spot).
+
+**SEC-02 and SEC-23 seeds landed.** Don't explain either.
+
+---
+
+### Scene 8 · After the fight: Moss comes "from the woods"
+
+Whatever the result, at dusk Moss (NPC-003) appears: walking along Warehouse Row with his satchel and his knotted stick, smelling of mint and wet earth, "back from the woods" (Route A); or wading out of the Bend's reeds (Route B); or coming down the Bucket's cistern stairs behind Ma Garrow (Route C).
+
+> *He stops dead when he sees her. For a moment the kindly, dry, unhurried herbalist from halfway up your lane goes very, very still, the way a deer goes still. Then he crouches, slow, in the wet, so his eyes are level with the hare-girl's.*
+>
+> *"Thistle of the Mere," he says softly. "You're a long way from the warrens, little one."*
+>
+> *Then he catches himself, and you see him do it.*
+
+- **SEC-01 seed #1 (Moss knows her name and home).** If Ash asks how he knows her name: "She told me." She didn't. **Insight DC 14:** he's lying, and he's frightened. Moss doesn't lie well; he goes quiet instead. "I'd rather not say, lad. Not here." That's his tell (he never says "I don't know" about the other side).
+- Thistle, if allowed, stares at Moss as if he's a story walking (R-069: he's the Stag's people, or the Stag). She starts to say something about "the Stag" and Moss lays one finger on his lips. She stops. She thumps one foot.
+- **Moss hears Ash's tune** (if Ash hummed in the fight, or hums now). He goes white around the mouth. **R-008 changes via EVT-01:** the veil has failed. He doesn't say so. He says, "Come on. All of you. Not the Watch-house. My shop."
+- **Healing:** Moss uses Healing Word or Cure Wounds on anyone hurt, and the Healer feat on anyone else. Nobody goes home bleeding.
+- **The Tolleys:** see §6, "Final beat."
+
+**Exit line, at the Green Jar (★ outline exit):**
+> *"A guest," Moss says, to Aggie, before she can open her mouth. "Don't tell anyone. Aggie, get the good blankets."*
+>
+> *Aggie looks at the hare-girl. She looks at Moss. She looks at you, for a long, long moment. Then she puts down the pestle. "The good blankets," she says, flat. "Right."*
+
+Aggie asks nothing. She's never asked him anything in forty years (SEC-20). She gets the good blankets, and a saucer of milk, and then, after a moment, a second saucer, because the cat is offended.
+
+---
+
+### Scene 9 · Restday supper (★1 Route C; fixed)
+
+**Where:** the long kitchen table in the Fenwick house, late, after the lamps are lit. Gideon's home. Zeke's down from the attic with grease on his spectacles. Moss comes in last, quietly, and takes his usual chair. Peg's pie arrives by way of Pip, who stays as long as he can before Bess calls him home.
+
+**The table:** fish stew, bread, Peg's pie, a jug of small beer. Gideon says the grace their mother used to say, short and plain.
+
+**Beats to land, in any order:**
+1. **Gideon scolds, then bandages** (relationship beat; R-001). He heard about the fight from half the Wharves. *"Brawling. On Warehouse Row. With Hob Tolley."* He folds his arms. Let Ash answer however he likes. Gideon listens to the whole of it. Then, without a word, he gets the medicine box down and cleans and wraps whatever cut or bruise Ash has, carefully, thumb rubbing over the old burn scar on his own left palm. If Ash has no wound, Gideon finds one anyway (a split knuckle, a rope burn) and wraps it.
+2. **Ash hums (SEC-16, SEC-23).** If Ash hums the tune at any point (the player will often have him do it after tonight), or fiddles with the locket:
+   > *Gideon's spoon stops halfway to his mouth. Just for a heartbeat. His eyes go to the locket in your fingers, and then away, to the window, to the dark water of the Bend. "Pass the bread, Asheron," he says.*
+   >
+   > *Zeke says, too sharp, too fast: "Put that away. You'll break the glass."*
+   - If the player doesn't hum on his own, have Ash's familiar nudge: **Bart:** "You're doing the tune again. You always do the tune. Big Brother's doing a face." (Ash decides whether to stop.)
+   - **Insight DC 12** on either brother: they're both upset, and trying not to be. Neither will say why tonight. If Ash pushes, Gideon says, "Not tonight. Please." (Gideon never says please. It should land.)
+3. **Moss and Gideon (SEC-09 seed).** Gideon is polite to Moss. Always polite. Never warm. He passes him the salt by its base so their fingers don't meet. Nobody at the table would notice unless they were looking (R-003: he can't say why he's never been easy around him).
+4. **The day's story.** Ash tells it however he likes. Reactions:
+   - **Zeke:** wild with questions about the eel ("Grey? Grey how? Like slate? Like ash? Did it *glitter*?"). He wants to see Thistle. He wants to measure her ears.
+   - **Gideon:** "A girl. A child. In a net. For the Bucket." Very quietly. Then: "Ma Garrow and I will be having words."
+   - **Moss:** says almost nothing. If Ash mentions the humming he heard, Moss puts his cup down very carefully. "Tell me again, lad. Exactly." He listens. Then: "Tomorrow. I'll tell you what I can tomorrow." **Do not let him explain tonight.** The explanation is Ch2 ★2. If Ash pushes hard: "I'd rather not say more until I'm sure." (He is sure. He's afraid.)
+5. **The Lane drops in** (one or two): Netta at the door with the latest version of the story ("I heard *three* rabbits"); Walt Finch to say the roof held (or didn't); Ostley, off duty, to tell Gideon the Tolleys are "nursing their pride at the Drowned Lantern and say Fenwick owes them a net."
+
+**End the session on a quiet image.** Suggestion: Ash on the roof after supper, the Lane's lamps flickering once in unison, the Bend black and still, and very faintly, far off, under the water, the tune. Or Moss alone at the bottom of the Lane, looking at the water, not knowing Ash can see him.
+
+**→ EVT-01. Level 2.** (See §11.)
+
+---
+
+## 4. Job board (★2)
+
+All jobs are at **2024 PHB/DMG-style odd-job rates** from `world/02`. All coin counts as gold.
+
+| Source | Job | Pay | Where it leads | Notes |
+|---|---|---|---|---|
+| **Watch board**, Fringe watch-house (Ostley) | "LOST: one white terrier, answers to Button. Last seen Market Steps. Reward 5 gp. Apply Mistress Rose Ainslie, Crownhill." | 5 gp (+2 gp tip if Button is returned clean) | Button is on the Wharves, sniffing at Warehouse Row, barking at something in a cellar. **Wisdom (Survival) DC 12** or **Perception DC 13** to track him from Market Steps; Bart from the air gives advantage. | Button growls at the cellar water. Smart dog. |
+| **Watch board** | "WANTED: a pickpocket working the Tenth-day crowd on Market Steps. 10 gp if brought to the Commons watch-house." | 10 gp | Market Steps (an Ash-on-Ash moral puzzle: the pickpocket is a ten-year-old Magpie, Tad Sallow) | Ash can bring him in, warn him off or recruit him as an informant. Any of those is fine. |
+| **Wharfmaster's Office** (Wharfmaster Joan Huckle) | "Courier: sealed parcel, Lyceum Library to the Wharfmaster, by sunset." | 3 gp | The Lyceum (Glimmerway) and back down to the Wharves. | The parcel is the spring tide-tables. Joan Huckle pays promptly and says the river's "running odd": rising early this year, and the backwaters "too still." (Ch4 seed.) |
+| **Mother Brine's** (NPC-043) | "Crate off the barge *Dabchick*, Low Wharf. Careful, it clinks." | 5 gp, and a **Potion of Healing** if nothing's broken | The Low Wharf, next to Warehouse Row. The *Dabchick*'s bargeman, Dob Rushby, saw "a rabbit in a coat" go under his gangplank an hour ago. | **Dexterity check DC 10** to carry it through the crowd without a clink. Mother Brine: *"If you've broken one bottle, Fenwick, I'll make you drink the rest."* |
+| **Knife Wall**, Market Steps | The weekly contest (§8) | 10 gp champion's purse, paid at the Drowned Lantern at lamp-lighting | The Drowned Lantern (★2 Route B) | |
+| **Zeke** | Collect the Lyceum glassware crate from the barge *Pennywhistle* with Zeke | Zeke buys Ash a fried fish | The Low Wharf | Brings Zeke into Fight 1. |
+| **The supper pail** | Run Gideon's forgotten supper to the Drowned Lantern | Gideon's grudging thanks | The Drowned Lantern door (★2 Route C) | |
+
+---
+
+## 5. Skill challenge · The Chase on Warehouse Row
+
+**Pressure:** the Tolleys have spotted Thistle, Rook's Magpies are closing from the other end of the Row, and the sun is going down. **Each step is one quick check.** Bart can Help on any step he could reasonably reach (advantage). Each companion present can attempt a step instead of Ash once. Narrate fast. **3 successes before 2 failures.**
+
+| Step | The moment | Checks (pick one) | Notes |
+|---|---|---|---|
+| 1 | **Spot her.** A flash of brown fur and a too-big coat between the fish stalls. | **Wisdom (Perception) DC 11**; or **Bart's eyes** (Ash spends his bonus action to see through them: automatic success) | Ash's expertise makes this likely. Good: it should feel like *him*. |
+| 2 | **Through the crowd.** Porters, a fish cart, a dog fight, a gang of drunk bargemen. | **Dexterity (Acrobatics) DC 12** (over the cart) · **Strength (Athletics) DC 13** (through the bargemen) · **Charisma (Intimidation) DC 12** ("Make way, Watch business!") · **Charisma (Deception) DC 12** ("Fire! Fire on the *Dabchick*!") | On a Deception or Intimidation success, the crowd also slows the Tolleys: they arrive one round later in Fight 1. |
+| 3 | **The Magpies cut in.** Two Magpies (Jenny Wick and Tad Sallow) come down a side alley to grab her first. | **Charisma (Deception) DC 12** (send them the wrong way) · **Dexterity (Sleight of Hand) DC 13** (a ball bearing, a tripped heel) · **Strength (Athletics) DC 14** (shoulder through) · **Persuasion DC 14** with Jenny, who doesn't like nets either | On a failure, one Magpie grabs Thistle's coat; she twists out of it and loses the coat (and her bundle). Rook will have her bundle in Ch2 (a small grey stone with a groove worn by a thumb, and a twist of dried Mirrowen herbs Moss will recognize). |
+| 4 | **The warehouse.** She dives under a loading door into Tallow and Sons' old warehouse, where the floor is broken over a flooded cellar. | **Dexterity check DC 12** (roll under the door after her) · **Strength DC 12** (heave the door up) · **Wisdom (Perception) DC 12** (see the gap in the boarding round the side) | |
+
+**Results:**
+- **Success (3 before 2):** Ash reaches the warehouse **a moment before the Tolleys finish netting her.** In Fight 1, Ash (and anyone with him) has **advantage on initiative**, and Thistle's net is half-thrown: she is netted but **not yet hauled**, 20 feet from the cellar edge.
+- **Failure (2 failures first):** Thistle is netted and Hob is dragging the net toward the loading door when Ash gets there. **Rook is also inside**, haggling with Hob over her ("Fifty-fifty, Hob, I found her"). Fight 1 starts with the Tolleys rolling initiative normally, Thistle 10 feet from the cellar edge, and Rook present (he doesn't fight; he backs off to the stacked barrels and watches, and he leaves when the eel comes up. Later he will tell everyone he "let Fenwick have that one").
+- **Either way:** the fight begins about two rounds before sunset.
+
+---
+
+## 6. Fight 1 · The Cellar Edge
+
+```
+FIGHT 1 · The Cellar Edge · Chapter 1 · Ordinary · Party level 1
+Target numbers (rules/02 §3, L1): ordinary total HP 80 for a full party (DPR 28) · enemy DPR 6 · AC 13–15 · attack +4–+5 · DC 12–13
+Survivability caps (rules/02 §2): no creature deals more than 9 damage per turn. The Tolleys knock out; they don't kill.
+```
+
+### Who's actually here (scale before you tune)
+
+The tuning row assumes four characters. Today it's usually **Ash and Bart from round 1, and Gideon from the end of round 1** (he is on the Drowned Lantern's door, 60 feet away; the noise brings him). Zeke is here only if Ash brought him. Moss is not here.
+
+| Present | Party DPR (rules/02 §1: Ash 10, Gideon 6, Zeke 7) | Ordinary HP target (2.8 × DPR) | Use this roster | Enemy HP actually on the field | Enemy DPR target |
+|---|---|---|---|---|---|
+| **Ash + Bart, Gideon from round 2** (default) | ~16 from round 2 (10 in round 1) | ~45 | Hob, Arn, 1 catcher, then the eel (22 HP) | 41 + 22 = **63** on the field, but only **~45 must come off**: the Tolleys break at half strength (below) and the eel's job ends when Thistle is free | **~4–5** (effective HP of Ash + Gideon ≈ 30; 10% ≈ 3, tuned up) |
+| **Ash + Bart + Zeke, Gideon from round 2** | ~23 from round 2 | ~64 | Hob, Arn, 2 catchers, then the eel (26 HP) | 49 + 26 = **75**, ~62 must come off | **~6** |
+| **Ash alone with Bart** (Gideon somehow not on the door) | 10 | ~28 | Hob and Arn only; the eel at 14 HP | 33 + 14 = 47, ~28 must come off | **~3**; Moss arrives at the end of round 3 instead of after the fight |
+
+**HP math, default roster:** Hob 18 + Arn 15 + catcher 8 = 41 (Tolley side) · eel 22 · total 63. Round 1: Ash alone (~10). Rounds 2–4: Ash + Gideon (~16 each, ~48). Expected damage dealt over 4 rounds ≈ 58. The Tolleys break when two of the three are down or the eel surfaces (whichever is first), so in practice the party removes ~20–25 Tolley HP and the eel's 22. **Expected length: 3–4 rounds.** ✓ (rules/02: ordinary 3–4.)
+
+**Enemy DPR math, default roster:** Hob's club +4 vs AC 15 (50%) × 5.5 = 2.8 · Arn spends round 1 netting (no damage), then club +4 vs AC 15 × 4.5 = 2.3 · catcher +3 vs AC 15 (45%) × 3.5 = 1.6 · eel (from round 2–3) bite +4 vs AC 15 (50%) × 5.5 = 2.8. **Rounds 1–2 ≈ 4.4–6.7, rounds 3–4 ≈ 2.8–5** (the Tolleys are breaking). ✓ Tuned slightly above the 10% line for a two-person party. **Max single-creature damage per turn:** Hob 8, Arn 6, catcher 5, eel 9. ✓ Under the L1 cap.
+
+### Battlefield (Route A: Tallow and Sons' old warehouse, Warehouse Row)
+
+A 40-by-60-foot grey timber shed, half-gutted. Low sunset light comes through the loading doors in red bars. (Crop-friendly map: one rectangle, loading doors on the long river side, the cellar hole in the middle-left.)
+
+1. **The cellar edge.** A 15-by-15-foot hole where the floor's rotted through, 10 feet down to **still, black water** (a flooded cellar fed through a broken culvert from the river). The water is perfectly still. It doesn't reflect the sky quite right. **A creature shoved or knocked prone within 5 feet of the edge makes a DC 10 Dexterity saving throw or falls in** (1d6 bludgeoning, then swimming).
+2. **The loading doors and the quay.** The river side. Beyond the doors, 10 feet of **slick quay** (difficult terrain for anyone moving more than half speed; a creature that Dashes across it makes a DC 10 Dexterity save or falls prone) and then the Fordwater.
+3. **The cargo crane.** An old swing-crane inside the doors, with **a net of crates** hanging 15 feet up over the space between the doors and the cellar edge. Cut or slip the rope (an attack against AC 12, or a Utilize action with **Dexterity (Sleight of Hand) DC 12** at the cleat): the crates drop on a 10-foot square. **DC 12 Dexterity save, 2d6 bludgeoning on a failure, half on a success,** and the square becomes difficult terrain (smashed crates). *(Fast Hands bait from L3; today it costs Ash his action.)*
+4. **The barrel stack.** Rows of empty tallow barrels, 10 feet high. **Half cover** behind them; climbing up is **Strength (Athletics) DC 10** (Ash has no climb speed yet). From the top, ranged attacks against anyone at the cellar edge, and Bart's favorite perch.
+5. **The Drowned Lantern's back door**, 60 feet down the Row, where Gideon comes from.
+
+### Opening
+
+- **Thistle** is in Arn's net, 20 feet from the cellar edge (10 feet on a failed chase), kicking. She's **restrained**. She can't cut the net from inside without a blade (she lost hers in Ch1's crossing).
+- **Hob Tolley** holds the net's trailing rope. **Arn Tolley** has a second net ready. **The catcher(s)** have cudgels and are closing the loading doors.
+- **The eel is not visible.** It's 10 feet down in the cellar water, listening. Nobody but Bart (darkvision, perched high) has any chance to see it: **Bart's passive Perception 15 vs. its Stealth 14 (+4 in water).** If Bart beats it, he tells Ash: "Something's in the water. Something long. It doesn't move like a fish."
+- **What the Tolleys know about the party:** nothing. They think Ash is a Fringe kid trying to steal their rabbit. They know Gideon, and respect him, and would rather not fight him.
+
+### Enemy plan
+
+- **Focus target:** the Tolleys want the hare, not a fight. **Arn nets whoever is closest to Thistle** (usually Ash). **Hob hauls** the netted hare toward the loading doors (10 feet per turn) and clubs anyone who grabs the net. The catcher harries Bart ("Get that bird!") or Ash's flank.
+- **Plan fails:** if Ash frees Thistle or Gideon arrives, Hob tries talking: "Gideon. It's a *rabbit*. It's worth twenty gold. I'll split it."
+- **Flee or surrender:** see Phase 2. They're debt collectors, not killers. Once two of three are down, or the eel surfaces, they're done.
+
+### PHASE 1 · rounds 1–2 · "The net"
+
+- The Tolleys fight to keep their prize. Hob hauls; Arn nets; the catcher swings.
+- **Objective:** get Thistle out of the net. Options: cut the net (AC 10, 5 HP, any slashing or piercing damage; or a Utilize action with a blade), lift it off her (**Strength (Athletics) DC 12**, action), or talk Hob into dropping the rope (**Persuasion DC 14**, or **Intimidation DC 13** once Gideon's here, because nobody on the Wharves wants Gideon angry).
+- **Gideon arrives at the end of round 1** (he enters on his own initiative from round 2, 30 feet from the loading doors). His first line, to Hob: *"Hob. Put the girl down."* (He's already seen it's a girl.)
+- **Telegraph for Phase 2 (end of round 2):** the black water in the cellar goes *perfectly* still, so still the drips from the broken boards stop making rings. The glimmer lamp on the quay outside flickers. Bart: "Ash. The water. Ash. The water just stopped."
+
+### PHASE 2 · trigger: start of round 3, or the round after Thistle is cut free · **OBJECTIVE change**
+
+- **The Hushed River-Eel rises.** Ten feet of grey, glassy, slow-moving eel lifts out of the cellar, silent, its eyes like wet slate. It grabs **the net's trailing rope** (or Thistle herself, if she's free and within 10 feet of the edge) and starts **dragging toward the water: 10 feet per turn.**
+- **The stake:** if Thistle is dragged under the still water, she's held there. **Each round she starts under the water, she makes a DC 11 Constitution save** (she's +1). **Three failures and she's Hushed** (fully grey: she would have to be woken much later). She can hold her breath for the whole fight; this isn't about drowning. It's about the grey. Describe the grey creeping up her ears.
+- **The Tolleys break.** Hob sees the eel and goes white: "What is that? What *is* that?" Each Tolley who isn't unconscious chooses on his turn (roll or pick):
+  - **Flee** out the loading doors (the catchers always flee).
+  - **Help** (only if Ash or Gideon asks, **Persuasion DC 12**, or **Intimidation DC 11**): Hob grabs the rope and pulls against the eel (Thistle drags only 5 feet per turn while he's pulling). This is the seed for winning the Tolleys over (Ch7 Route B, the smuggling skiff).
+  - **Get grabbed.** If neither Tolley is helping and Thistle is already free, **the eel takes Arn instead** (Arn can't swim and is terrified of water). Now the objective is saving the man who netted her. Let Ash choose.
+- **The call lands (★4) at the start of round 3** if the sun is setting (it is). See Scene 7. The eel freezes for a heartbeat, listening.
+
+### FINAL BEAT · how it ends
+
+- **Thistle out and away from the edge, and the eel driven down or woken.** The eel never flees (Hushed). It fights until it's at 0 HP or woken. *At 0 HP it doesn't die cleanly: it goes still, sinks, and the grey slides off it like silt, and for one moment it's just an eel, brown and confused, before it's gone.* (Moss, later: "It wasn't wicked, lad. It was stopped.")
+- **Waking the eel (the hope lever):** Ash, within 30 feet, hums or sings the tune as an action: **Charisma (Performance) DC 15** (L1–4 tier). Ash is +4 (not proficient), with **advantage** the round after the call. On a success, the grey cracks and falls off it like old paint, it lets go, and it shoots away down the culvert to the river, alive and itself. **Nobody but Ash, Thistle and Moss (if he hears about it) understands what just happened.** Thistle will not stop talking about it.
+- **The Tolleys:** routed, helped, or rescued. Note which in the Sealed GM Notes; it sets their attitude for the rest of Act I:
+  - **Helped pull, or saved by Ash:** they're embarrassed, grateful, and say "We never saw nothing" to Ma Garrow. Seed for Ch5 Route B and Ch7 Route B.
+  - **Routed:** they're sore, and tell the Drowned Lantern "Fenwick owes us a net" (2 gp, which Ash can pay or not).
+  - **Knocked out:** the Watch (Hugh Dale) finds them, and Ostley "loses the paperwork."
+
+### Fail-forward
+
+- **If Ash and Gideon both drop:** the Tolleys stabilize them (they're not killers) and run. The eel drags Thistle toward the water, **and Moss arrives**: a sound like wind in leaves, and the eel *lets go*, slides back into the water and is gone. Thistle is saved, grey to the elbows, shivering; Moss carries her. Ash wakes at the Green Jar to Aggie saying, "He's awake. Don't move. You're dripping on my floor." **EVT-01 still happens.** Ash heard the call; that's the beat.
+- **If Thistle is Hushed** (three failed saves): Moss pulls her out and holds her all night at the Green Jar, humming, and in the morning she's half-grey and quiet but herself, because she was only under for a moment and Moss would not let her go. (This is Moss spending strength he doesn't have. Note it.) She recovers fully by the start of Ch2. **Don't** make the player's first fight cost a permanent Hushed ally.
+
+### Rewards
+
+- **Coin:** the Tolleys' purses (whoever's searched): Hob 4 gp, Arn 3 gp, a catcher 1 gp. Ma Garrow's bounty is never paid to the Tolleys.
+- **Story:** Thistle trusts Ash instantly (R-068). EVT-01 (with ★4). If the eel was woken, Thistle tells Moss, and Moss looks at Ash for a long time.
+- **The net:** a good weighted net (a 2024 PHB weapon; 1 gp). Ash can keep it.
+
+### DM notes
+
+- **Expected round count:** 3–4. If it drags past round 4 because the dice are cold, end it on the objective: Gideon hauls Thistle and the net clear of the edge bodily, the eel loses its grip, and it sinks back into the still water to wait.
+- **What to cut:** the catcher, then Arn's second net.
+- **Counter used (rules/02 §6):** none in Phase 1. In Phase 2, the eel's **Hushing Brush** quietly blunts reactions (it'll hit Gideon's opportunity attacks first). Don't swat Bart in this fight. Save that for later.
+- **Route B (the Bend):** same fight on the bank behind the Fenwick house. The Tolleys come up the Bend in a skiff; the "cellar edge" is the still pool under the willows by the old barge; the "barrel stack" is the rotting barge itself (half cover, climbable). Zeke can come down from the attic in round 2 (shouting "What is that? What *is* that?"), and Gideon is at the Lantern, so swap Gideon for Zeke in the roster table.
+- **Route C (the Bucket):** Thistle's caged in the Bucket's cistern ring for a beast-bout and Ash is in the crowd or the undercard. The eel rises from the cistern's sump pool mid-bout. Ma Garrow's people (use Tolley Catcher blocks as bouncers) try to keep the crowd back. **Ma Garrow (R-062)** sees Thistle *speak* and her code engages ("No kids. That's a *kid*.") She opens the cage herself. Now Ash's whole fight is Phase 2: get Thistle out, deal with the eel. Ma remembers who helped (R-062 up).
+
+---
+
+## 7. Stat blocks (Chapter 1)
+
+### HOB TOLLEY
+*Medium Humanoid (human), Neutral*
+**AC** 13 (studded leather) · **Initiative** +1 (11) · **HP** 18 (4d8)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 15 | +2 | +4 | DEX | 12 | +1 | +1 | CON | 11 | +0 | +0 |
+| INT | 9 | −1 | −1 | WIS | 10 | +0 | +0 | CHA | 8 | −1 | −1 |
+
+**Skills** Athletics +4, Intimidation +1 · **Senses** passive Perception 10 · **Languages** Common · **CR** 1/2 (XP 100; PB +2)
+*Tuned for party level 1: brute (and a debt collector, not a killer)*
+
+**Traits**
+- ***Pulls His Punches.*** Hob's attacks against people are always nonlethal: a creature he reduces to 0 HP falls unconscious and is stable.
+- ***Knows Gideon.*** Hob has disadvantage on attack rolls against Gideon Fenwick. He's known him fifteen years and he's scared of him.
+
+**Actions**
+- ***Club.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) bludgeoning damage. (Max 8.)
+- ***Shove.*** *Strength Saving Throw:* DC 12, one creature within 5 ft. *Failure:* the target is pushed 5 ft or knocked prone (Hob's choice). Near the cellar edge, see Battlefield 1.
+
+**Bonus Actions**
+- ***Haul.*** If Hob is holding the rope of a net with a restrained creature in it, he drags it 10 ft (5 ft if anyone is pulling against him).
+
+**Reactions**
+- ***Shoulder Check.*** When a creature Hob can see hits him with a melee attack, he adds 2 to his AC against that attack, possibly making it miss.
+
+**Phases:** Phase 1 as written. Phase 2: if not helping, he flees on his turn. If asked to help (Persuasion DC 12 / Intimidation DC 11), he pulls against the eel (counts as "pulling against," above).
+**Tactics:** Haul first, club second. Never attacks someone who's down. Talks to Gideon before fighting him.
+
+---
+
+### ARN TOLLEY
+*Medium Humanoid (human), Neutral*
+**AC** 12 (leather) · **Initiative** +2 (12) · **HP** 15 (3d8 + 2)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 13 | +1 | +1 | DEX | 14 | +2 | +4 | CON | 12 | +1 | +1 |
+| INT | 10 | +0 | +0 | WIS | 11 | +0 | +0 | CHA | 9 | −1 | −1 |
+
+**Skills** Sleight of Hand +4, Perception +2 · **Senses** passive Perception 12 · **Languages** Common · **CR** 1/4 (XP 50; PB +2)
+*Tuned for party level 1: controller*
+
+**Traits**
+- ***Pulls His Punches.*** As Hob.
+- ***Hates Water.*** Arn can't swim. If he starts his turn in water deeper than his waist, he's frightened until he's out of it.
+
+**Actions**
+- ***Throw Net.*** *Dexterity Saving Throw:* DC 12, one Large or smaller creature within 15 ft. *Failure:* the target is restrained by the net. A restrained creature can use its action to make a **DC 10 Strength (Athletics) check** to burst free; anyone adjacent can cut it (AC 10, 5 HP, slashing or piercing). Arn carries two nets.
+- ***Weighted Club.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) bludgeoning damage. (Max 6.)
+
+**Reactions**
+- ***Duck.*** When Arn is targeted by a ranged attack, he can move 5 ft into cover without provoking opportunity attacks.
+
+**Phases:** Phase 1: nets the nearest rescuer. Phase 2: frightened of the eel (no save); flees unless Hob is helping, in which case he stays to help. If the eel grabs him, he screams for his mother.
+**Tactics:** Nets the most mobile threat (Ash). Never nets Gideon ("Not him, are you mad?").
+
+---
+
+### TOLLEY CATCHER (hired lad)
+*Medium Humanoid (human), Neutral*
+**AC** 12 (padded) · **Initiative** +1 (11) · **HP** 8 (2d8 − 1)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 13 | +1 | +1 | DEX | 12 | +1 | +1 | CON | 9 | −1 | −1 |
+| INT | 9 | −1 | −1 | WIS | 9 | −1 | −1 | CHA | 10 | +0 | +0 |
+
+**Senses** passive Perception 9 · **Languages** Common · **CR** 1/8 (XP 25; PB +2)
+*Tuned for party level 1: skirmisher (also usable as a Bucket bouncer)*
+
+**Traits**
+- ***Paid by the Hour.*** The catcher flees when bloodied, when the eel surfaces, or when Gideon looks at him properly (Intimidation DC 10, no action required from Gideon beyond a look).
+
+**Actions**
+- ***Cudgel.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) bludgeoning damage, nonlethal. (Max 5.)
+- ***Get the Bird.*** The catcher throws a fish, a boot or a handful of gravel at a Tiny flying creature within 20 ft. *Dexterity Saving Throw:* DC 10. *Failure:* the creature is knocked 10 ft away and loses its next Help action. (It deals no damage. This is a warning, not a counter. Bart: "Rude.")
+
+**Tactics:** Flanks Ash, so the Tolleys get the hare. Runs the moment it isn't fun.
+
+---
+
+### HUSHED RIVER-EEL
+*Large Beast (Hushed), Unaligned*
+**AC** 13 (natural armor) · **Initiative** +0 (10) *(includes Hushed −2)* · **HP** 22 (4d10) *(26 (4d10 + 4) with Zeke present; 14 (4d10 − 8) if Ash is alone)*
+**Speed** 5 ft., swim 40 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 14 | +2 | +2 | DEX | 15 | +2 | +2 | CON | 11 | +0 | +0 |
+| INT | 1 | −5 | −5 | WIS | 10 | +0 | +0 | CHA | 3 | −4 | −4 |
+
+**Skills** Stealth +4 (+8 in still water) · **Resistances** psychic · **Vulnerabilities** thunder · **Condition Immunities** charmed, frightened
+**Senses** darkvision 60 ft., passive Perception 10 · **Languages** none · **CR** 1/2 (XP 100; PB +2)
+*Tuned for party level 1: controller (objective threat)*
+
+**Traits**
+- ***Hushed.*** Immune to charm and fear, resistant to psychic, vulnerable to thunder, −2 initiative (included), never flees. **Can be woken:** a Hearkener's song (Ash, an action, within 30 ft: **Charisma (Performance) DC 15** at this tier), or *greater restoration* plus a **DC 15 Charisma (Performance)** check. A woken creature stops fighting at once and is itself again.
+- ***Water-Bound.*** The eel can leave water for one turn at a time, no more than 10 ft from it, and must end its turn in water.
+- ***Grey Silence.*** The eel makes no sound at all, even when struck. Creatures that rely on hearing have disadvantage on Wisdom (Perception) checks to notice it.
+
+**Actions**
+- ***Bite.*** *Melee Attack Roll:* +4, reach 10 ft. *Hit:* 5 (1d8 + 1) piercing damage (max 9), and the target, or a rope or net the eel bites instead, is **grappled** (escape DC 12). While grappling, the eel can't bite another target.
+- ***Hushing Brush.*** When the eel hits with Bite, the target makes a **DC 11 Wisdom saving throw.** *Failure:* a terrible gentle calm: it can't take reactions until the end of its next turn. (No damage.)
+
+**Bonus Actions**
+- ***Drag Under.*** The eel pulls the creature or object it's grappling 10 ft toward or into the water (5 ft if someone is pulling against it).
+
+**Phases:** Not present in Phase 1 (hidden in the cellar water). Phase 2: rises at the start of round 3 (or the round after Thistle's free) and goes for the rope, then Thistle, then whoever's nearest the edge. Loses its reaction and its next move the round the call lands (★4).
+**Tactics:** It doesn't hate. It doesn't hunt. It *quiets*: it takes what's nearest the still water and pulls it under, slowly, patiently. Never leaves the cellar. If Thistle gets away, it takes the next nearest creature (Arn if he's close).
+
+---
+
+### THISTLE OF THE MERE (ally, NPC-018)
+*Small Humanoid (hare-folk), Neutral Good*
+**AC** 14 · **Initiative** +4 (14) · **HP** 11 (3d6 + 1)
+**Speed** 40 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 8 | −1 | −1 | DEX | 16 | +3 | +5 | CON | 12 | +1 | +1 |
+| INT | 11 | +0 | +0 | WIS | 13 | +1 | +3 | CHA | 12 | +1 | +1 |
+
+**Skills** Acrobatics +5, Perception +5, Stealth +5, Survival +3 · **Senses** passive Perception 15 · **Languages** Common (Mirrowen accent, "too orange" opinions), Hare-speech · **CR** 1/4 (XP 50; PB +2)
+*Ally NPC, DM-run. Not a party member; she flees danger when she can, and doesn't count toward the party's DPR.*
+
+**Traits**
+- ***Leaper.*** Her long jump is 20 ft and high jump 10 ft, with or without a run-up.
+- ***Ears.*** She has advantage on Wisdom (Perception) checks that rely on hearing.
+
+**Actions**
+- ***Sling.*** *Ranged Attack Roll:* +5, range 30/120 ft. *Hit:* 5 (1d4 + 3) bludgeoning damage.
+
+**Bonus Actions**
+- ***Bolt.*** She takes the Dash or Disengage action.
+
+**Voice:** fast, blunt, no filter. Thumps one foot when impatient. *"You heard it. You're him."*
+
+---
+
+### MAGPIE RUNNER (Rook's crew)
+*Medium or Small Humanoid (human), Chaotic Neutral*
+**AC** 13 (leather) · **Initiative** +3 (13) · **HP** 9 (2d8)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 9 | −1 | −1 | DEX | 15 | +2 | +4 | CON | 10 | +0 | +0 |
+| INT | 10 | +0 | +0 | WIS | 10 | +0 | +0 | CHA | 11 | +0 | +0 |
+
+**Skills** Acrobatics +4, Sleight of Hand +4, Stealth +4 · **Senses** passive Perception 10 · **Languages** Common, Thieves' Cant · **CR** 1/8 (XP 25; PB +2)
+*Tuned for party level 1: skirmisher. Use only if the chase turns into a scuffle; the Ch2 version is stronger.*
+
+**Traits**
+- ***Fringe Rules.*** Magpies don't kill and don't use blades on Fringe folk; they fight with fists and cudgels and run when it gets serious.
+
+**Actions**
+- ***Cudgel.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) bludgeoning damage, nonlethal. (Max 6.)
+- ***Snatch.*** *Dexterity (Sleight of Hand) +4* contested by the target's Dexterity (Sleight of Hand) or Wisdom (Perception): on a win, the Magpie takes one unsecured item.
+
+**Bonus Actions**
+- ***Scarper.*** Disengage or Dash.
+
+---
+
+### BIG LOTTIE SPARROW (Bucket undercard fighter)
+*Medium Humanoid (human), Neutral*
+**AC** 12 · **Initiative** +1 (11) · **HP** 22 (4d8 + 4)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 16 | +3 | +5 | DEX | 12 | +1 | +1 | CON | 13 | +1 | +3 |
+| INT | 9 | −1 | −1 | WIS | 11 | +0 | +0 | CHA | 13 | +1 | +1 |
+
+**Skills** Athletics +5, Intimidation +3 · **Senses** passive Perception 10 · **Languages** Common · **CR** 1/2 (XP 100; PB +2)
+*Tuned for party level 1: solo brute for a one-on-one ring bout (Ash's AC 15, HP 10)*
+
+**Traits**
+- ***Ring Rules.*** No blades, no magic, no killing (it's Restday, but Ma Garrow keeps the Tenth-day rule every day for the undercard). Damage is nonlethal. A fighter who drops to 0 loses.
+- ***Crowd Favorite.*** The first time each bout Lottie is hit by an attack the crowd thinks is cheap (a kick to the knee, a trip), she gains advantage on her next attack.
+
+**Actions**
+- ***Haymaker.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) bludgeoning damage, nonlethal. (Max 9. One attack a turn; her average turn after misses is ~3.5.)
+- ***Clinch.*** *Strength Saving Throw:* DC 13, one creature within 5 ft. *Failure:* grappled (escape DC 13). While Lottie grapples a target, her Haymaker against it has advantage.
+
+**Tactics:** Clinch, then haymaker. Plays to the crowd. Shakes hands after, win or lose. *(Max 9 a turn, inside the L1 cap: no single hit drops Ash from full.)*
+
+---
+
+## 8. Side-activity window
+
+Today has hours to fill if the player wants them. **Each activity takes about an hour of in-world time.** Use the sun to pace (★2).
+
+| Activity | Where | How it plays | Stakes and rewards |
+|---|---|---|---|
+| **Knife Wall** | Market Steps | Five throws at painted targets, 1 sp a try (bundle ten tries as 1 gp). Use Ash's thrown dagger (+6) against **AC 12, 14, 16, 18, 20**. Score = targets hit. The weekly board's best this week is **3** (by a sailor called Joss Kettering). | **4+ hits:** this week's champion, 10 gp, paid at the Drowned Lantern at lamp-lighting (★2 Route B). **5 hits:** the crowd goes wild, and a Lyceum student offers Ash 5 gp to "teach me that." Rook watches from the stair, arms folded. |
+| **The Bone Table** | Under an awning on Market Steps | Dice. Ash owns dice but isn't proficient. Wager 1–5 gp. **Wisdom (Insight) DC 13** to notice the dealer's dice are loaded. Ash can play straight (**Charisma check DC 12**: win the wager, fail: lose it), or cheat back (**Dexterity (Sleight of Hand) DC 14**, a failure by 5+ gets him thrown off the Steps). | Calling out the loaded dice in public: the crowd backs Ash, the dealer packs up, and the Bone Table owes Ash a favor in Ch2 (a tip-off about the Magpies' plan). |
+| **Shell game** | Anywhere crowded | Ash runs his own. **Dexterity (Sleight of Hand)** against each mark's passive Perception (10–13). An hour's hustling: roll three times. | 1d4 gp per success. Two failures: an angry mark. Three failures: Hugh Dale, notebook in hand. |
+| **Kings and Ferrymen** | The Willow, corner table, from noon | A card game. Ash is proficient (+6 with the gaming set, Cha). Three hands: contested **Charisma checks with playing cards** against the table's best (+3). | Win 2 of 3: 2d4 gp. Peg takes 1 gp "for the pot." |
+| **Bucket undercard** | The Bucket, a drained cistern under a Wharves warehouse | Entry 5 gp. One bout against **Big Lottie Sparrow** (stat block above). Ring rules: no blades, no magic. **Ash picks the format** (`cities/00-index.md` §5.1, CHG-19): **Bare-Knuckle** (Lottie's game: Ash fights unarmed at +3, 1 + Str, or with the Quick-Hands rule at +6 for 1 + Dex; three rounds or a knockdown, then the crowd) or **Wasters (Touches)** (waster shortsword and dagger: Vex, Nick and Sneak Attack all work; Lottie is ring AC 10 there; first to 3 touches). Ma raises an eyebrow at Touches ("Fancy.") and books it anyway. | **Win:** 20 gp purse. Ma Garrow (NPC-024) cracks a walnut one-handed and says, very quietly: *"You've a fast left, Fenwick. Five gold says you've a faster mouth. Card's on Tenth-day."* (R-062: a scrapper; good for business.) **Lose:** Ma notices anyway. Either way she now knows his face, which matters for Route C. |
+| **Rooftops** | The Fringe to Market Steps | No contest; just Ash's way of moving. **Acrobatics DC 12** per gap. | Shaves a quarter-hour off any trip. Bart races him and cheats. |
+
+**Ma Garrow at the Bucket (any time Ash visits):** she sits on an upturned barrel by the ring, enormous and silent. The beast-bout poster on the wall says *"RESTDAY NIGHT · A TALKING RABBIT · FROM THE OTHER COUNTRY · ODDS ON THE TERRIER."* If Ash tells her the "rabbit" is a girl, a kid, and a person: **Persuasion DC 12** (DC 8 if Thistle's with him and speaks). Her code engages: *"No kids."* She takes the poster down herself. The bout's off. She doesn't apologize (she never apologizes), but she owes Ash, and Ma Garrow pays her debts.
+
+---
+
+## 9. Treasure
+
+> Price bands (`rules/00` §2, `rules/03`): Common 100 gp · Uncommon 400 gp · consumables half (a Potion of Healing is 50 gp). All coin counts as gold.
+
+| Source | What | Value |
+|---|---|---|
+| Lost-dog job | 5 gp + 2 gp tip | 7 gp |
+| Pickpocket bounty (if Ash brings Tad in) | 10 gp | 10 gp |
+| Courier job (Wharfmaster) | 3 gp | 3 gp |
+| Mother Brine's crate | 5 gp + **Potion of Healing** | 5 gp + (50 gp) |
+| Knife Wall (if champion) | 10 gp | 10 gp |
+| Side activities (typical) | Shell game, cards, Bone Table | 2–10 gp |
+| Bucket undercard (if won) | 20 gp purse | 20 gp |
+| Fight 1 | Tolleys' purses; a weighted net | up to 8 gp; net (1 gp) |
+| **Typical chapter total** | | **~25–45 gp coin + 1 Potion of Healing** |
+
+**No permanent magic items this chapter**, on purpose. The first real gift money (enough for a Common Row commission like Nell's blanket at 100 gp) arrives in Ch2–4.
+
+---
+
+## 10. Seeds checklist (tick as they land)
+
+| Seed | Secret | Where | Done |
+|---|---|---|---|
+| The tune he's always hummed (opener, supper) | SEC-02 | Scene 1, Scene 9 | ☐ |
+| Thistle: "You're him." | SEC-02 | Scene 7 | ☐ |
+| Moss knows Thistle's name and home | SEC-01 #1 | Scene 8 | ☐ |
+| Dora: "He looked just the same when I was a girl" | SEC-01 #2 | Scene 2 (Finches) | ☐ |
+| Aggie calls him "the old stump," and looks older than him | SEC-20 #1 | Scene 2 (Green Jar), Scene 8 | ☐ |
+| Dora: "the both of— ah" | SEC-16 | Scene 2 (Finches) | ☐ |
+| The second cradle in the attic; Zeke's hand on Ash's wrist | SEC-16 | Scene 3 | ☐ |
+| Zeke flinches at "Wren" (optional) | SEC-16 | Scene 3 | ☐ |
+| Gideon's face when Ash hums at supper | SEC-16 | Scene 9 | ☐ |
+| The locket goes cold at the call | SEC-23 #1 | Scene 7 | ☐ |
+| At supper, Gideon's eyes go to the locket; Zeke: "Put that away" | SEC-23 #2 | Scene 9 | ☐ |
+| Gideon is polite, never warm, with Moss | SEC-09 | Scene 9 | ☐ |
+| A greywilted eel; grey still water | (villain footprint: the Stillness) | Fight 1 | ☐ |
+| Lamps flicker at sunset; fish rise and stare | SEAL 3 texture | throughout | ☐ |
+| The Wharfmaster: the river's "running odd" | Ch4 setup | §4 | ☐ |
+
+---
+
+## 11. Level milestone and exit
+
+**EVT-01 · Thistle is safe and Ash has heard the call awake.**
+- **SEAL:** no change (3).
+- **Edges changed (`truth/05`):** R-008 (Moss: the veil has failed), R-064 (Lark: someone hears; she doesn't know who), R-068 (Thistle: "You're him"), R-062 (Ma Garrow, if Ash spoiled her catch or talked her out of the bout).
+- **Secrets seeded:** SEC-02, SEC-01.
+- **Level 2.** Level up after supper or at the start of Ch2.
+  - **Ash:** Cunning Action (Dash, Disengage, Hide as a bonus action). +7 HP (or d8+2). HP 17.
+  - **Gideon:** Fighting Style (**Protection**), Paladin's Smite (Divine Smite always prepared, one free cast per long rest). HP 24.
+  - **Zeke:** Scholar (expertise in **Arcana**). HP 18.
+  - **Moss:** Wild Shape (CR 1/4 forms) and Wild Companion. HP 23. *His forms are always antlered, mossy or lichen-grey (SEC-01 seed). Never explain.*
+
+**Log in the Sealed GM Notes:** how the Tolleys ended (routed / helped / saved / knocked out); whether the eel was woken or killed (not a Mercy point, but Moss remembers); whether Ma Garrow's bout was called off; whether Pip followed Ash; what Ash told Gideon about the fight; real round count and damage for Fight 1 (`rules/02` §7).
+
+---
+
+## 12. If the party goes off-route
+
+| If Ash… | Then… |
+|---|---|
+| **…never comes down off the roof / spends the day on rooftops** | Fine. The Lane is visible from above: run Scene 2 as things Ash sees and hears (Netta's voice carries; Walt on his ladder; Rook at the well). Thistle comes to him: Route D of ★3 (up the Bend at sunset, with the Tolleys' skiff behind her). |
+| **…leaves the city** (out the West Gate, the Westwood Road, the orchards) | He meets Moss coming back early from the Fordwood, pale and hurrying ("Something came through this morning, lad, something small, and something followed it."). They go back together. Fight 1 runs at the Bend (Route B) with **Moss present** instead of Gideon. Moss is +6 to hit, 1d8+4 with Shillelagh; swap him for Gideon in the roster table. Moss's "Thistle of the Mere" line happens on sight. |
+| **…goes to Crownhill to rob someone** | Let him. Run it short (one or two checks). On the way back, the Crownhill bridge gives a view of the Wharves at sunset; he sees Thistle being chased (Route A of ★3, from a distance: the chase starts at step 2). |
+| **…goes to the Lyceum with Zeke all day** | Zeke's errand (the glassware crate at the Wharves) gets them there by dusk. Run the chase with Zeke present. |
+| **…ignores the chase** and keeps walking | Thistle's scream carries his tune (Route B of ★3). If he still walks, the call (★4) hits him at sunset wherever he is, and the eel rises in the nearest still water, with Thistle running toward him because she heard *him*: when the call hits, Ash hums without meaning to, and she hears it. |
+| **…helps the Tolleys catch her** | He can. Thistle is caged at the Bucket and the fight moves to Route C. Ma Garrow's code still engages when Thistle speaks. Thistle still says "You heard it. You're him" when the call comes. She doesn't hold it against him (R-068: instant trust); Moss quietly does, for a day. |
+| **…hands Thistle to the Watch** | Ostley takes one look and sends Hugh Dale running for Moss ("The herbalist knows animals"). Moss takes her in. Ostley tells Ash, quietly, "Good call, lad. Whatever that was." |
+| **…fights Rook instead** | Use Magpie Runner blocks for his crew. Rook himself backs off rather than fight Ash with Gideon nearby. He'll want a rematch (Ch2). |
+| **…tries to kill the Tolleys** | They surrender at the first serious wound. Killing a surrendering man in the Fringe breaks Ostley's edge (R-033 "breaks if: they kill someone in the Fringe"; the Wharves are close enough that he'll hear). Gideon will be very quiet at supper. Don't block it; show it. |
+
+**Threads that must be open for Chapter 2:** Who sent Thistle? Why does Moss know her? The voice. (Plus, if they happened: Rook has Thistle's bundle; Ma Garrow owes Ash or wants a rematch; the Tolleys owe Ash or want a net.)

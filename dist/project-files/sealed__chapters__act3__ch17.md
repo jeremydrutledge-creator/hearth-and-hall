@@ -1,0 +1,432 @@
+# Chapter 17 · The Hall of Two Rivers (SEALED — DM ONLY)
+
+> **Act III, chapter 4 of 7.** Level **17** during, **18** on exit. 2–3 sessions. Blossom, YF 1105. Emberford (Old Ford, the Ford Stone, the Guildhall, the Lane), then a race across the realm: Highmarch, Aranhollow, Dun Morrach.
+> Built on `campaign/02` Ch17, `campaign/00` §3–§4, `campaign/03` SEC-06, SEC-15, SEC-19, SEC-22, `campaign/04` (the Glimmer Choice; the three paths shown in the Hall), `campaign/05` §3–§7 (the Lane's arcs, gifts, discovery moments, Moss's upgrade #5), `world/03` (Highmarch, Aranhollow, Dun Morrach), `truth/01`, `truth/03` (R-086, R-087, R-088, R-090, R-091, R-007, R-017, R-095, R-028, R-018), `truth/05` (EVT-33, EVT-36, EVT-54, EVT-50), `rules/02` (L17 targets). Shared rules in `_index.md`.
+> **The point of this chapter:** home was always the center of the story. Under Ash's street is the room where the world was split. Every friend he's made gets called in, and the city he grew up in has to decide whether it'll give up its lamps to save everyone.
+
+---
+
+## At a glance
+
+| | |
+|---|---|
+| **Shape** | Home through the Ford Pool. Twin Hearkeners at the Ford Stone at the turn of light open the Hall of Two Rivers: the Sundering told in stone, and the three ways the story can end. Then the Concord, where Emberford votes on its own lamps. Then a race to bind the realm's three great powers. Mostly social, one strong fight, one optional fight, a festival. |
+| **SEAL in → out** | 4 → **3** (EVT-36, the Concord votes: −1, if it passes) |
+| **Fights** | **Fight 29 (significant, the Hall's Sundering-era stone warden: non-lethal if they sing)** · Fight 30 (optional, ordinary: Calm remnants try to kill the boy-king in Highmarch) |
+| **Skill challenges** | SC 17-A "The Turn of Light" (★1, opening the Hall) · SC 17-B "Before the Concord" (★2) · SC 17-C "The Road of Three Crowns" (★3, as a travel chain) |
+| **Stat blocks** | **The Ford-Warden (Sundering-era stone warden)** · Calm Knife · Calm Lamp-Priest · Still-Glass Sentinel |
+| **Events** | EVT-50 (Walt woken, if not yet) · EVT-36 (the Concord votes; SEAL −1) · EVT-54 (Hollis testifies, only if reached) · EVT-33 (the Hall opened; the alliance sworn; reveals SEC-15, SEC-06 fully, SEC-22; exit) |
+| **Exit level** | **18** |
+| **Discovery moments** | **Zeke** reads and *speaks* Sundering-script, which is the words of the song (S17.3). **Clara** sings in the Hall and the stone answers (S17.3). **Moss** upgrade #5, if Aranhollow returns his last shrine-piece (S17.8). |
+
+## Threads coming in
+
+| Thread | Check | Effect here |
+|---|---|---|
+| **Clara** | present? Twin Bond value? received the song? | ★1 route A (twins, Twin Bond 3+) or B (Ash and Lark). If she missed Tuskhold, Lark gives her the song in S17.1 (no roll). **Twin Bond 0–1 now forces Ending 3** (`campaign/04`): say nothing; the Hall's carving of the third path will glow brightest for this table. |
+| **Hollis** (Ch13) | killed / captured / reached / escaped | ★2: reached = EVT-54 (he testifies; huge). Captured = a hostile witness in chains (Insight shows he's empty). Killed = the fire-night ledger and his journal only. Escaped = he's in Mirrowen; Brannoc's people have him (S17.1 message). |
+| **Hester** | died (expected) or saved (costly route) | Saved: she testifies instead of Hollis, and it's devastating (★2 route D below). |
+| **Lantern Night** | Reserve dispersed? SEAL path | If not (costly route), SEAL is 6–7 here; the Concord is terrified and votes faster (★2 C is automatic), but the Hall's doors are cracked from beneath (SC 17-A starts with Pressure 1). |
+| **Walt** | still Hushed? | S17.1: Ash wakes him alone (Performance DC 21, two consecutive successes, `ch15.md` CHG-A3-03), or the twins with no roll. EVT-50. |
+| **Rook** | redeemed / fallen / woken | Redeemed: he runs the Fringe's march (★2 B). Fallen and still half-Hushed: Ash can wake him in S17.1 too. |
+| **The Willow** | burned in Ch4? rebuilt? | Peg hosts the march from the Willow (or its rebuilt frame). |
+| **Brynja** (EVT-53) | ally? | ★3: Dun Morrach is a sure thing; she can carry the message to Highmarch (route B). |
+| **Granny Tull** (EVT-12/13) | ally? | She can go to Aranhollow for the party (route B). |
+| **Gifts from the Row** (`campaign/05` §4) | given? | Zeke's pen (if given in Ch9) writes the Hall's translation. |
+| **Moss's antlers** | visible since Ch16 | Emberford sees them. The Lane already knew, or decides it did. |
+
+---
+
+## ★ Must-happen beats
+
+### ★1 · The Hall opens (reveals SEC-06 fully, SEC-22)
+Twin Hearkeners at the Ford Stone in Old Ford at the turn of light. The doors carved with twin figures open. Inside: the Sundering told in stone, the place where the first song was sung, and the **three paths** (re-sing, end, the Warden's seal). Zeke reads it all.
+- **A. The twins together** (Twin Bond 3+). SC 17-A as written. The doors open wide.
+- **B. Ash and Lark** (if Clara is lost or Twin Bond is too low). The doors open halfway. The party gets the knowledge but not the Hall's full blessing (no *Blessing of the Hall*, below).
+- **C. Moss, in true form, forces it** (if neither pair can or will). It costs him: he drops to his Ch3 strength (upgrade #1 only: no Hart, no antlers) until Ch20. The doors open, groaning, and one of the twin figures cracks.
+- **D. From below, through the Lane Well** (SEC-22: the Lane Well draws from the Hall's springs). If the party can't reach the Ford Stone (Old Ford is cordoned, the Watch is hostile, or it's simply what Ash thinks of), Ash opens the Lane Well with his hum at the turn of light, and they go *down*, into the Hall's spring-room, and open the doors from inside. Twin Bond rules for A/B still apply to the blessing. (This is the Lane-is-the-heart-of-it route. If the player finds it, let it be wonderful.)
+
+### ★2 · The Concord votes (EVT-36; SEAL −1 if passed)
+End glimmer mining. Proof from Kessel, Bearback and Lantern Night. Provost Teague, Osric Vane (for profit), Tam Hollin (for honesty). Hollis testifies, if he lived and was reached.
+- **A. The party argues before the Concord** (SC 17-B).
+- **B. The Lane and the Fringe march** (Bess, Peg, Netta, Ma Garrow, the Lamplighters; Rook if redeemed). The march brings automatic successes into SC 17-B.
+- **C. Provost Teague forces it as an emergency measure** after the party saves the city in public (Fight 29's warden, if it gets loose into Old Ford: see its fail-forward) or if SEAL is 6+.
+- **D. (If Hester lived.)** Hester walks into the Concord in mourning grey and says, "I ran Lamp House on his money for thirty years. Ask me what it bought." The Concord votes before she's finished.
+
+### ★3 · The alliance (EVT-33)
+At least two of the three powers commit.
+- **Highmarch:** Lord Chancellor Crane and King Edric II (the boy-king who hears grey lakes in his dreams). The Royal Archive's **Fenn-wyck Charter** proves the family's ancient right.
+- **Aranhollow:** Queen Amarys, moved by proof that the seal can be held (the twins). She gives back **Moss's last shrine-piece** (upgrade #5). **Reveals SEC-15.**
+- **Dun Morrach:** Torvald and Brynja (already likely friends).
+- **A. The party visits each in turn** (SC 17-C, a travel chain with short scenes).
+- **B. They send their allies:** Brynja to Highmarch, Granny Tull to Aranhollow. (Each sent ally makes one SC 17-C link automatic, but the party misses that court's scene; for Aranhollow, Moss's shrine-piece then comes at Ch19, not here.)
+- **C. The powers come to them:** a summit at the Ford Stone (if time is short, or if the party is stuck in Emberford). Run SC 17-C as three short speeches at one table, with the Hall's doors standing open behind them as the proof.
+
+---
+
+## Scenes
+
+### S17.1 · Home (opening; relationship beats; Walt)
+Through the Ford Pool at dawn, into the Fordwood in Blossom: everything flowering, the way it never is in the Horngard. Moss stops at the treeline and puts his hand on a birch.
+- **Willow Lane.** The Lane comes out. Bess Carter, Pip and Nell, Peg Mallory, Netta Lowe, Simon Shaw. Pip runs at Lark. Netta looks at Moss's antlers for a long time and then says, "Well, I *always* said." (She never said.) Peg: "Supper's at the Willow. Everyone. I'm not asking."
+- **Walt Finch** (if still Hushed). He's in his chair by the Finch window, where he's been since the flood a year ago. Dora is beside him. Ash can wake him now, alone (Performance DC 21; two consecutive successes, `ch15.md`) or with Clara (no roll). **EVT-50.** Walt's first words are to Dora: ***"Dora. Did I miss supper?"*** Dora's next words, to Ash, are the slip (SEC-16, if it hasn't come out): "I delivered you both, you know. You and your sister. You came out holding her heel."
+- **If Clara missed Tuskhold:** Lark finds her, takes both her hands, and gives her the song. It takes an hour. Nobody speaks. (No roll.)
+- **Restday supper at the Willow.** The relationship beat. Who's at the table this time: Lark, Clara (if Twin Bond 3+), Brynja (if allied), Russet or Fergan (if they came through), Thistle. Gideon says grace. Zeke reads the words he wrote down in the Remembering Hall, and Clara and Ash both go still because they *know* them.
+- **News waiting** (pick what fits): a message-moth from Chancellor Crane ("the boy-king dreams of a grey lake every night now"); a Leaf-Warden at the West Gate asking for "the Stag"; if Hollis escaped in Ch13, a letter from Brannoc: "The Tall Folk lamp-master is in my cells. He asks for his niece. Tell me what you want done."
+
+### S17.2 · The Ford Stone (★1; SC 17-A)
+Old Ford, the city's oldest district, at the turn of light (sunset is best; the Festival crowds are elsewhere). The **Ford Stone** stands at the river's edge where the first ford was: a waist-high grey stone worn smooth by eleven hundred years of hands. It's hummed under Ash's palm since Ch2. Now it *sings*. SC 17-A is the opening.
+- **What Old Ford sees:** a crowd gathers (Emberford gathers for anything). Captain Hale's Watch (NPC-033) keeps them back. Professor Doone (NPC-040) is there with a notebook. The Lamplighters stand on the bridge with their poles, not lighting anything.
+
+### S17.3 · The Hall of Two Rivers (★1; reveals SEC-06, SEC-22; discovery moments)
+The ground at the Ford Stone's foot opens along a seam nobody knew was there: a stair, going down under the river. At its foot, **the doors**: thirty feet tall, river-stone, carved with two figures, a boy and a girl, each with one hand raised and their mouths open in song. They open (or open halfway, or groan open).
+Inside, the **Hall of Two Rivers**: a long vaulted chamber under the river itself (you can hear the Tamber flowing above, a constant low note). Two streams cross the floor in stone channels, one clear, one faintly silver, and meet at the far end in a still round pool: **the first Wellgate**, the one the Sundering was sung over. The walls are carved floor to ceiling in Sundering-script and pictures.
+- **Fight 29** comes first: the Hall's guardian, the **Ford-Warden**, steps out of the far wall to test them. (Sing to it and it stops.)
+- **The carvings** (Zeke reads; History DC 15 for anyone else to follow the pictures). Read them aloud to the player as Zeke would, in pieces:
+  1. **The ford, before.** One world, one river, beastfolk and Tall Folk at the same fires. A grey stillness rising out of the deep water.
+  2. **The Sundering.** Wynne Fenn-wyck (a young woman with a grey-flecked eye) in the river, singing. Four great beasts around her: a stag, a bear, a heron, a tortoise. **All four singing with her.** (SEC-19, the fourth seed: the Heron sang the world in two.) The world coming apart along the river like cloth.
+  3. **The promise.** The stag kneeling to Wynne. Under it, in Sundering-script: *"Forever, the line of the ford."* (Moss reads it before Zeke can. He doesn't say anything.)
+  4. **The three paths.** The far wall, over the pool, in three panels:
+     - **Left: the re-singing.** Two figures singing at a gate in the sea. The grey sinking back. Lamps going dark in a city. *"Sing it whole, and it will sleep."* (Ending 1.)
+     - **Center: the unmaking.** Three figures singing. A great tortoise rising. A heron standing with them. A stag *becoming a tree* (show the player this; it's how they'll know what it costs). Rain. Two worlds touching. *"Sing it gone, and it will rain."* (Ending 2. The center panel needs three voices, the tortoise awake, and one of the old Wardens or a great host holding the gap: read the small figures under it, Investigation DC 17, or Zeke automatically.)
+     - **Right: the Warden's seal.** A stag standing at a gate in the sea, turning to stone. *"Or one of us will stand there forever."* (Ending 3.)
+  5. **Under the doors, inside:** a carving of a narrow well-shaft rising from the spring-room up into a little street. Old Ford's oldest map. The street is Willow Lane. (**SEC-22 revealed.** The Lane Well draws from the Hall's springs. Home was always built over the heart of it.)
+- **Zeke's discovery:** he reads the script aloud, and as he reads, the words *sound*. They're not a language. They're the song's words. He can **speak them**: from now on, Zeke can add his voice to any Hearkener song check (the Help action, as a spell with a verbal component; it doesn't need a slot), and in Ch20's Phase 4 he counts as a fourth singer for the words (not the Voice or the Hearing; the words). He says, very quietly, "Oh. *Oh.* It was never a language. It was always a song."
+- **Clara's discovery:** she sings one note (or Ash asks her to) and the whole Hall answers: every carving lights from inside, the silver stream brightens, and the pool shows, for one breath, a reflection of the Mirrowen side (the stone ring on the island in Hollowmere, Mother Burdock looking down into it, startled).
+- **The Blessing of the Hall (route A only):** each Hearkener who sings in the Hall gains **advantage on the first song check of each encounter** for the rest of the campaign (waking, opening, the finale's song). The Hall remembers their voices. (Route B: nothing. Route C: the blessing goes to Moss only, as a way of thanking him for the crack.)
+
+### S17.4 · The Guildhall and the Concord (★2; SC 17-B; EVT-36, EVT-54)
+The **Guild Concord** sits in the Guildhall's great chamber (the same building with the dispersed Reserve under it). Nine seats. Provost **Margery Teague** (NPC-031) presides. **Osric Vane** (NPC-032) wants glimmer's death for profit (his oil and coal concerns); **Tam Hollin** (NPC-035) wants honesty. The others are guild-heads who are afraid of the dark. The gallery is packed.
+- **The proposal:** end all glimmer mining in Emberford's charter-lands, and shut the Kessel Workings for good. The lamps go out slowly over a year as the stones run down. The Row's trinkets die. Peg's self-stirring pots. Bess Carter's kitchen heat-stones. Zeke's beloved Row.
+- **The Glimmer Choice (`campaign/04`):** it's **Yes** only if the vote passes **and** Ash personally argues for it, knowing what it costs. **Make sure the player knows the cost before Ash speaks.** Peg should say it to his face the night before: "If you do this, love, the Willow goes back to a fire in the grate. I'll do it. But you look me in the eye and tell me it's needed." (R-028.)
+- **Hollis (if reached, EVT-54):** brought in under guard, grey and thin. He testifies. Plainly. He answers every question. When Teague asks why, he says, ***"Because it promised me no more grief, and I believed it. And my sister is dead. And it is still quiet. It's still so quiet."*** The chamber doesn't breathe. (R-091: Teague's respectability breaks here.) If Clara is present, he doesn't look at her until the end, and then he says, "I'm sorry, Clara. You should have been told who you were. You should have been *Wren*." Twin Bond: no change; it's her moment.
+- **Hollis (captured, not reached):** he refuses to speak, then says only, "You'll all want it back within the year. The lamps. The quiet. You'll see." That helps the vote (SC 17-B: one automatic success, because it's horrifying).
+
+### S17.5 · The march (★2 B)
+If the party asks (or Peg decides), the Fringe marches. Down Willow Lane, through the Market Steps, across the Sallow Bridge to the Guildhall. Bess Carter at the front with a lamp she's not going to light. Netta ringing the well-bell. Ma Garrow (NPC-024) and her people. The Lamplighters with their poles. Rook (if redeemed) running ahead, clearing the way. Sergeant Ostley (NPC-017) and the Fringe watch-house walking *with* them instead of in front of them. The Lane is spending its own comfort to save everyone, and it knows it.
+
+### S17.6 · Highmarch (★3; Fight 30 optional)
+Five days down the Tamber by fast barge, or two by a gate Ash can open (the castle well is a minor Wellgate: Ash, Performance DC 21, or the locket; surfacing in the castle's kitchen cistern is a *scene*). The Royal Capital on its chalk ridge: banners, bells, a shabby proud city.
+- **Lord Chancellor Anselm Crane** (NPC-070): careful, colorless, decent. He wants the crown strong again. He's the only man in Eyrland who can move an army. He's not convinced by stories. He's convinced by **documents**.
+- **King Edric II** (NPC-069): fourteen, thin, sleepless. He's dreamt of a grey lake every night since Lantern Night. He's not a Hearkener, just sensitive. When he meets Ash he says, before anyone's introduced, "You're the one who hums. I hear you, sometimes, in the well." (He's heard Ash's gate-openings across the realm.)
+- **The Fenn-wyck Charter** (Royal Archive, Scholars' Gate): a Sundering-era grant of "the ford-watch, forever, to the house of Fenn-wyck." With the Ch12 fire-night ledger and the family crest (the ford with stag's antlers, from the split locket, SEC-23), it proves Ash and Clara are the heirs of the line the crown swore to protect. **Crane reads it twice, then rolls it up and says, "Well. The crown has an old debt. I suppose it had better pay it."**
+- **Fight 30 (optional):** the **Calm remnants** (FAC-03's last cell in Highmarch) try to kill the boy-king the night the party arrives, because a king who believes the hearers is a king who sends ships. If the party is at the castle, they stop it. If not, Edric survives anyway (a Crown Guard dies in his place) and the alliance is *more* certain (Crane is furious).
+
+### S17.7 · Dun Morrach (★3; usually quick)
+Up the Kettlehorns to the hold under the mountain. **King Torvald Deepanvil** (NPC-066) and **Princess Brynja** (NPC-067). If EVT-17 and EVT-53 happened, this is a homecoming: Torvald meets Gideon at the gate in full oath-regalia and kneels first (R-086). He commits the clans' shield-wall and their engineers ("Ships need keels. Keels need dwarves."). Brynja insists on coming herself.
+- **If the dwarves are cool** (EVT-17 missed): SC 17-C's Dun Morrach link at standard DC; Gideon's Bear-mark is still the lever.
+
+### S17.8 · Aranhollow (★3; reveals SEC-15; Moss's upgrade #5)
+Up the Brindle to the Leaf Weir, then into the Westwood by invitation (the Leaf-Warden from S17.1 is the invitation). The Tree City: green-gold light, hanging bridges, quiet music. **Queen Amarys** (NPC-068) in the Crown Tree's highest hall.
+- **SEC-15, revealed in her own words:** she knows everything. The seal, the glimmer, the Stillness, the Bear's death in the Gate War (she was young, and she watched it). She chose neutrality four hundred years ago because she believed humans would never stop using glimmer, and elves can't hold a seal alone. *"I have been waiting four hundred years to be wrong. Are you here to tell me I am?"*
+- **What moves her (R-088: caution she calls wisdom; changes only via EVT-33):** **proof that the seal can be held.** The twins singing together in front of her (the duet; or Ash and Lark with the Hall's words through Zeke); the Concord vote (if it passed: she's heard); a closed gate. Any two of these, and she commits. One, and SC 17-C's Aranhollow link is at DC 21.
+- **The Queen's Mirror** (a still pool at the Crown Tree's foot, a Wellgate she has held shut by her own will for four centuries). She lets the twins see it, and lets it open, for a moment. On the other side: the Wending, Mirrowen's forest of talking trees. A very old tree on that side *speaks*, slowly, to Moss. He answers it. Nobody else understands a word.
+- **Moss's last shrine-piece (upgrade #5):** a carved antler-tine of living wood, held in the Crown Tree's heart since the Gate War, when Mossoran broke off a piece of himself to help seal the Westwood's gate. Amarys gives it back. He holds it to his antlers and it *grows back on*. He's whole for the first time in eleven hundred years. **Upgrade #5:** in the finale (Ch20), Moss can be the Hart for **the whole of Phase 4** (`campaign/05` §7). (If this is missed here, it comes at Ch19 on Ommu's Rest.)
+- **Amarys commits:** the Wardens of the Leaf, and the elves' oldest song-keepers, to stand at the gathering. She asks one thing of Ash: "When it comes, sing it *whole*. Don't let anyone stand there forever if they don't have to." (She's looking at Moss.)
+
+### S17.9 · The alliance sworn (★3; EVT-33; exit)
+Wherever it's sworn (the Ford Stone summit, or each court in turn, or the last court the party visits), it's sworn **at the Hall's open doors** if at all possible: the powers' envoys come down the stair under the river, see the carvings, and swear on the pool. **EVT-33.** Level 18.
+- **Who's there for the swearing** (pick the ones the party earned): Crane and Edric (the boy-king insists on coming), Torvald and Brynja, a Leaf-Warden with Amarys's token (or Amarys herself if the twins sang for her), Brannoc or Fergan and Russet (through the Ford Pool, if called), Mother Burdock (through the Hollowmere door: the stone ring on the island, which the Hall's pool now shows), Provost Teague for Emberford.
+- **The oath** (Gideon writes it; Brynja corrects it; Zeke translates it into Sundering-script so the Hall will remember it): *"By the ford and the song, we stand at the gate when it opens. All of us."*
+
+---
+
+## NPC appearances
+
+> Running rule: read the edge before any NPC speaks about another.
+
+| NPC | Where | Edges relied on | Notes |
+|---|---|---|---|
+| NPC-005 Clara | S17.1, S17.2, S17.3, S17.4, S17.8 | R-050 (→Hollis), R-052 (→Ash), R-093 | Her discovery in the Hall. Hollis's testimony is her moment, not Ash's. |
+| NPC-006 Hollis Grane | S17.4 (if alive) | R-044 (→Hester), R-045 (→Clara), R-090 (Vane→him), R-091 (Teague→him) | Reached: testifies (EVT-54). Captured: a chilling refusal. |
+| NPC-007 Hester Grane | ★2 D only (if saved) | R-040 | Testifies in grey. |
+| NPC-012 Dora Finch · NPC-013 Walt Finch | S17.1 | R-021, R-024, R-025 | EVT-50. Dora slips about the twins (if SEC-16 is still sealed). |
+| NPC-011 Bess · NPC-026 Pip · NPC-027 Nell | S17.1, S17.5 | R-018, R-020 | Bess leads the march with an unlit lamp. |
+| NPC-015 Peg Mallory | S17.1, S17.4, S17.5 | R-028 | Asks Ash to look her in the eye about the cost. |
+| NPC-016 Netta Lowe | S17.1, S17.5 | R-026 | Rings the well-bell for the march. |
+| NPC-017 Sgt. Ostley | S17.5 | R-033, R-034 | Walks with the march. |
+| NPC-024 Ma Garrow | S17.5 | R-062 | Brings the Wharves. |
+| NPC-010 Rook | S17.5 (if redeemed) | R-037 | Runs ahead of the march. |
+| NPC-031 Provost Teague | S17.4 | R-091 | Presides. Breaks at Hollis's testimony. |
+| NPC-032 Osric Vane | S17.4 | R-090 | Votes yes for the wrong reasons, loudly. |
+| NPC-035 Tam Hollin | S17.4 | none | Votes yes for the right ones, quietly. |
+| NPC-033 Captain Hale | S17.2 | R-058, R-059 | Holds the crowd at the Ford Stone. |
+| NPC-040 Professor Doone | S17.2, S17.3 | R-061 | Takes notes. Asks Zeke to teach. |
+| NPC-069 King Edric II | S17.6, S17.9 | none (proposed R-235 Edric → Ash: "the one who hums") | Hears Ash in the well. |
+| NPC-070 Lord Chancellor Crane | S17.6, S17.9 | none (proposed R-236 Crane → the Charter) | Convinced by documents. |
+| NPC-066 King Torvald · NPC-067 Brynja | S17.7, S17.9 | R-086, R-087 | Torvald kneels first to Gideon. |
+| NPC-068 Queen Amarys | S17.8, S17.9 | R-088 | SEC-15. Gives back the shrine-piece. |
+| NPC-003 Moss | throughout | R-008, R-011, R-012 | Reads the promise carving first. Whole again (upgrade #5). |
+| NPC-192 Leaf-Warden Ithiel *(prov.)* | S17.1, S17.8 | none | The invitation. Haughty, then not. |
+| NPC-193 Archivist Brother Wendell *(prov.)* | S17.6 | none | Royal Archive. Finds the Charter in eleven minutes, which is a record. |
+
+---
+
+## Skill challenges
+
+> Chain format and DCs from `_index.md` §3. **L17 DCs:** easy 15, standard 17, hard 19, very hard 21. Waking and song DCs are **21** (tier 4) unless a rule here says otherwise.
+
+### SC 17-A · "The Turn of Light" (★1) · L17 · 5 links, Pressure 0–3
+**Situation:** the Ford Stone at sunset. The doors open only to a Hearkener pair at the exact turn of light. There are about four minutes. Old Ford is watching.
+
+| # | Link | Ways through | Success | Failure |
+|---|---|---|---|---|
+| 1 | **Find the note.** The Stone sings; which note is the door's? | Ash's Perception or Performance DC 19 (he's heard it since Ch2: advantage) · Zeke's words (automatic if he kept them in SC 16-B) · the locket (automatic, once) | They have it | Pressure +1 |
+| 2 | **Hold the crowd.** Old Ford presses in. Someone throws a lamp. | Gideon's Persuasion DC 17 · Captain Hale (automatic if R-058/R-059 are warm) · Intimidation DC 19 | Quiet | A child falls toward the opening seam: someone uses a reaction to catch her, or Pressure +1 |
+| 3 | **The duet.** Ash and Clara (or Ash and Lark) sing the door's two halves. | Performance DC 21 (one roll, Ash's, with advantage for the pair; Twin Bond 5+: automatic) | The seam opens | The seam opens a crack: Pressure +1 |
+| 4 | **The stair.** The ground opens under the river; water pours in at the edges | Athletics DC 17 (hold the seam's lip) · Moss shapes the stone (automatic) · Zeke's Arcana DC 19 (the water is *listening*: hum and it holds) | Down, dry | Down, soaked (one level of Exhaustion each: the drowning-dream, the Hall's own, DC 15 Con negates) |
+| 5 | **The doors.** Thirty feet of carved river-stone. They want to be *sung* open, all the way. | Performance DC 21 (the twins; Twin Bond 3+ advantage) · route C: Moss's true form (automatic, with the cost) | They open (route A) | They open halfway (as route B: no Blessing) |
+
+**Pressure 1:** the turn of light passes before link 5: try again at dawn (no penalty but a night; the Calm's watcher sees them). **Pressure 2:** something in the Hall knows they're coming: Fight 29's Ford-Warden starts awake (no surprise round for the party; it gets initiative advantage). **Pressure 3:** the crowd breaks through: Old Ford sees the Hall. That's not a failure. It means Emberford knows, by morning, what's under it. (★2 C becomes automatic: Teague calls the emergency vote.)
+
+### SC 17-B · "Before the Concord" (★2; EVT-36) · L17 · 6 successes before 3 failures
+**Situation:** nine seats, a packed gallery, and a city that loves its lamps. Ash (and anyone) argues. Each link is one member or bloc; each has a lever that makes it automatic. **The Glimmer Choice is made by Ash speaking in link 6, whatever the vote does.**
+
+| # | Seat / bloc | Ways through | Lever (automatic) |
+|---|---|---|---|
+| 1 | **Osric Vane** (wants it for profit) | Persuasion DC 15 (he's already a yes; don't lose him) · Insight DC 17 to see he'll walk if anyone says "oil monopoly" out loud | Nobody needs to. He's a yes unless insulted. |
+| 2 | **Tam Hollin** (wants honesty) | Persuasion DC 17 (tell him the whole truth) · show him the fire-night ledger (Ch12) | Hollis testifies (EVT-54) |
+| 3 | **The Enchanters' Guild seat** (now held by Senior Enchanter Adela Holt, Act II's provisional NPC block) | Persuasion DC 19 · Zeke's Arcana DC 19 (explain the seal-song as a craftsman, to a craftsman) | Zeke speaks a line of the Hall's words aloud in the chamber and every glimmer lamp in the room dims in answer |
+| 4 | **The frightened middle** (three guild-heads: brewers, carters, the Lamplighters' Company) | Persuasion DC 19 · Performance DC 19 (a story: Lantern Night, Hester) | The march (★2 B) arrives outside and the Lamplighters' Company's own members are in it |
+| 5 | **Provost Teague** (presides; won't vote unless it's tied) | Persuasion DC 21 · Insight DC 19 (she needs it to be *lawful*: an emergency charter, not a mob) | Hollis's testimony (R-091 breaks); or Crane's letter, if the party has been to Highmarch first ("the crown requests"); or SEAL 6+ (★2 C) |
+| 6 | **Ash speaks** (the Glimmer Choice) | No roll for the choice itself. If Ash argues for ending glimmer *knowing what it costs* (the player has been told, by Peg, in S17.4), the Glimmer Choice is **Yes** and this link succeeds automatically. If he argues for it without saying what it costs, it's a Persuasion DC 19. If he doesn't argue for it, this link fails (and the Glimmer Choice is **No**, whatever the vote does). | Peg stands up in the gallery and says, "He told me to my face. I'm still voting with him." (Only if Ash looked her in the eye.) |
+
+**6 successes:** the Concord votes to end glimmer mining. **EVT-36. SEAL −1.** The chamber's lamps are left burning that night as a goodbye. Bess Carter carries her unlit lamp home and puts it in her window anyway.
+**3 failures:** the vote fails by one. Teague calls it again in a week (★2 C: it passes as an emergency measure when SEAL rises in Ch18, EVT-34). The SEAL −1 comes then. **The Glimmer Choice still depends on link 6.**
+**The cost, shown not told:** within a month, the Row starts closing workshops. Zeke walks the Row at night and doesn't say anything. Ottoline Brightwell (NPC-047) gives him her last working glimmer-trinket, a little brass bird that sings. "Keep it till it stops, love."
+
+### SC 17-C · "The Road of Three Crowns" (★3; EVT-33) · L17 · a travel chain, one court per section
+**Situation:** a race across the realm in Blossom, before the Heron moves (Ch18). Each court is a short scene (S17.6–S17.8) and one decision link. **Two courts committed = ★3.** Three = the full alliance (the gathering in Ch20 gets every ally).
+**Travel:** Highmarch (5 days by barge, or Ash opens the castle well: 1 day) · Dun Morrach (8 days, or the Bearback mirror at Ursk's Den from Mirrowen: 2 days) · Aranhollow (6 days up the Brindle, or the Queen's Mirror if Amarys sends for them: 1 day). **The Heron moves at day 20** (Ch18 ★1). Each court visited in person costs its travel time; each ally sent (route B) costs nothing but means no scene.
+
+| Court | The link | Ways through | Lever (automatic) |
+|---|---|---|---|
+| **Highmarch** | Convince Crane (he wants documents) | Investigation DC 17 in the Archive (the Charter) + Persuasion DC 19 with Crane · stop the assassins (Fight 30) | The Fenn-wyck Charter + the split locket's crest (SEC-23) together |
+| **Dun Morrach** | Torvald commits the clans | Gideon's Persuasion DC 17 (oath-forms; Brynja coaches: advantage) | EVT-17 happened (Gideon is the Bear's chosen) |
+| **Aranhollow** | Amarys commits | Two proofs from: the twins sing for her, the Concord vote passed, a gate closed for good · or Persuasion DC 21 with one proof | The twins sing the door-song in front of her (Twin Bond 3+) |
+
+**Sending allies (route B):** Brynja to Highmarch (link automatic if Crane has met her before; DC 17 otherwise, rolled by her: +7) · Granny Tull to Aranhollow (automatic: R-089, she's known the Stag's charge from the barge-songs, and Amarys has known *her* great-grandmother; but no shrine-piece here, see S17.8).
+**Fail-forward:** a court that refuses still comes to the gathering in Ch20 if Ash has a personal relationship there (Edric always comes; Brynja always comes; a Leaf-Warden always comes). They just don't bring armies.
+
+---
+
+## Encounters
+
+### FIGHT 29 · The Ford-Warden · Ch17 · Significant (test; non-lethal) · Party level 17
+
+**Target numbers (L17):** total HP **675** · enemy DPR **97** (12% of effective HP 811) · AC 18–20 · attack +11 to +13 · DC 18–19.
+**HP math (shown):** The Ford-Warden 420 (two bodies: the Stone 260 and the River 160) · 4 Stone Echoes × 60 = 240 → **660**. Party output 150 × 5.5 ≈ 825 × ~80% ≈ 660. **Expected 5–6 rounds** if they fight it. **Expected 3–4 rounds** if they sing (the song ends it: see *The Test*).
+**DPR math (vs party AC ~19–22):** the Stone (2 × 26 × 0.55) ≈ **29** · the River's *Undertow* (recharge, averaged) ≈ **20** · Stone Echoes 4 × (2 × 13 × 0.55) ≈ **57** (only 2–3 engage: ~**40**) → **~89–97**.
+
+**Battlefield: the Hall of Two Rivers** (crop-friendly: a long vault 200 ft × 60 ft; the doors at the near end; two stone channels running the length of the floor, one clear, one silver, 10 ft wide, 5 ft deep; the still round pool at the far end, 40 ft across; carved walls; twelve pillars).
+1. **The clear channel.** Fresh water, waist-deep on a human. Difficult terrain. Anyone in it can hear the Tamber above (advantage on Performance checks: the river carries the note).
+2. **The silver channel.** Glimmer-dust in the water (the seal's own song, leaking). A creature that starts its turn in it regains 10 HP and *hears the song* (a Hearkener: advantage on the next song check).
+3. **The pillars.** Full cover. Carved with the Sundering. The Echoes come out of them.
+4. **The pool.** The first Wellgate. Still as glass. Not part of the fight; don't let anyone fall in (DC 19 Dex if shoved; on a failure, the drowning-dream and they surface in the stone ring on Hollowmere's island, Mirrowen, at the turn of light: a long swim back).
+5. **The carvings.** The answer is written on the walls (see *The Test*).
+
+**Opening.** As the doors open and the party walks in, the far wall *steps forward*: a figure thirty feet tall, half carved river-stone and half moving water, shaped like a woman with a grey-flecked eye and a staff of reeds. It's Wynne Fenn-wyck's likeness, made by the Firstbeasts to guard the Hall. It speaks in Sundering-script (Zeke translates; Moss knows it): ***"Who comes to the ford?"***
+**Enemy plan.** It's a **test**, not a fight to the death. It attacks whoever isn't singing, hardest the ones who attack it. It never attacks a Hearkener who is singing. **It's looking for the right answer.** If the party fights it to 0, it falls apart into ordinary stone and water, and the Hall stays open, but the Blessing is lost (even on route A).
+
+**The Test (how it ends without killing it).** The right answer is on the walls, in the promise carving: *"The line of the ford."* A Hearkener who answers ***"The line of the ford"*** (any way the player phrases it: "Fenwick," "Wynne's children," "the twins") **and then sings** passes. Each Hearkener needs **one Performance check (DC 21) while within 30 ft of it** after giving the answer. When Ash and Clara (or Ash and Lark) have both succeeded, it stops, kneels, and becomes the far wall again. **Fight over; the Blessing of the Hall is given.** (Zeke can read the answer off the wall: Investigation DC 15 as an action, or automatic if he's reading the carvings; Moss can just *say* it, but it's not his to say: R-008. He'll tell Ash if asked.)
+
+**PHASE 1 · rounds 1–3 · "Who comes to the ford?"**
+- The Ford-Warden (the Stone body) fights from the pool's edge with its reed-staff. Four Stone Echoes step out of the pillars: carved figures of the Sundering's beastfolk and Tall Folk, armed with stone spears.
+- **Counter (Ash's Sneak Attack from flanking):** *Telegraph (round 1):* the Echoes always move in pairs, back to back, spears out. *Back to Back:* an Echo within 5 ft of another Echo can't be flanked; Ash needs Bart's Help, Steady Aim or the Vex carry-over for advantage here.
+
+**PHASE 2 · trigger: the Stone body drops to half (130), or round 4 · "The river rises" (FORM + TERRAIN)**
+- *Telegraph (round 3):* the clear channel starts to *flow uphill*, toward the Warden. The Tamber's note overhead gets louder.
+- **FORM change:** the Warden steps *into* the clear channel and becomes **the River body** (160 HP, new actions: *Undertow*, *Riverwalk*). The Stone body stands still at the pool's edge, empty (its remaining HP is set aside).
+- **TERRAIN:** both channels overflow. The whole floor is ankle-deep water (difficult terrain except for swimmers). The silver channel's healing spreads to the whole floor (every creature regains 5 HP at the start of its turn), **for both sides**: the Echoes regain 5 too.
+- **The test is easier now:** the river carries song. Performance checks in water have advantage.
+
+**PHASE 3 · trigger: the River body reaches 0, or round 6 · "The doors begin to close" (OBJECTIVE)**
+- *Telegraph (round 5):* behind them, the thirty-foot doors start to swing shut. Slowly.
+- **OBJECTIVE change:** if the doors close with the party inside before the test is passed, they can only be opened again at the next turn of light (from inside: a night in the Hall, which isn't terrible, but the Concord votes without them: SC 17-B at Pressure 1 and the march goes ahead alone). Hold the doors (Athletics DC 21 as an action; a wall of force or Moss's *Stand* holds them for a round) **or** pass the test.
+- The Stone body wakes again at its set-aside HP for this phase.
+
+**FINAL BEAT.** The test is passed (it kneels and becomes the wall; Blessing given), or it's broken (Hall open, no Blessing), or the doors close (a night in the Hall; the Warden, if not broken, sits by the pool and waits with them, and at midnight it speaks one sentence in Sundering-script: "She sang it alone. You don't have to." Seed for Ending 2; then the test can be passed in the quiet with no roll).
+**Fail-forward.** If the party is losing: the Warden steps back to the pool and asks again, in plain Common this time, "Who comes to the ford?" (It *wants* them to pass.)
+**Rewards.** The Blessing of the Hall (route A, passed); the Hall's knowledge (all routes); a reed from the Warden's staff (story: in Ch20, the reed is the thing Ash holds while he sings, if he wants something to hold).
+**DM notes.** If the party attacks it all-out without listening, have Moss shout the answer's first word ("The line—") on round 3. If they still ignore it, let them win the hard way; the Blessing is lost and nothing else is.
+
+#### THE FORD-WARDEN
+*Gargantuan Construct (Sundering-made), Lawful Good*
+**AC** 19 (Stone) / 17 (River) · **Initiative** +4 (14) · **HP** 420 (Stone body 260 · River body 160)
+**Speed** 30 ft. (Stone); swim 60 ft., 30 ft. (River)
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 24 | +7 | +12 | DEX | 12 | +1 | +6 | CON | 24 | +7 | +12 |
+| INT | 18 | +4 | +9 | WIS | 20 | +5 | +10 | CHA | 14 | +2 | +7 |
+
+**Immunities** poison, psychic · **Resistances** bludgeoning, piercing, slashing (Stone); fire (River) · **Condition Immunities** Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned · **Senses** truesight 120 ft., passive Perception 15 · **Languages** Sundering-script (understands every language) · **CR** 18 (XP 20,000; PB +6)
+*Tuned for party level 17: test-guardian (significant)*
+*Weak save: **Dex +6** (Ash's Cunning Strike DC 19 lands ~65%).*
+
+**Traits**
+- ***The Test.*** See above. It never attacks a creature that is singing. When a Hearkener who has answered "the line of the ford" succeeds on the Performance check, that Hearkener has passed. When two have passed, it ends the fight.
+- ***Hall-Bound.*** It can't leave the Hall. If it's reduced to 0, it crumbles; it reforms in a hundred years.
+- ***Thunder and the Song.*** It takes no thunder damage. Thunder heals it (it's made of song).
+
+**Actions**
+- ***Multiattack.*** Two Reed-Staff attacks (Stone) or one Reed-Staff and Undertow (River).
+- ***Reed-Staff.*** *Melee Attack Roll:* +13, reach 15 ft. *Hit:* 26 (4d8 + 8) bludgeoning damage, and the target is pushed 10 ft (into a channel, if there is one).
+- ***Undertow (River body; Recharge 5–6).*** *Strength Saving Throw:* DC 19, every creature in the water within 30 ft. *Failure:* 36 (8d8) bludgeoning damage and pulled 20 ft toward the pool. *Success:* half damage, not pulled.
+- ***Ask (no recharge; once per round, free).*** It asks, "Who comes to the ford?" in Sundering-script. (This is a clue. Repeat it every round.)
+
+**Reactions**
+- ***Riverwalk (River body).*** When a creature within 30 ft that isn't singing moves, it moves up to 30 ft through the water.
+
+**Legendary Actions**
+*Uses: 2. Right after another creature's turn.*
+- ***Staff.*** One Reed-Staff attack.
+- ***Wake an Echo.*** A Stone Echo at 0 HP steps back out of a pillar at 30 HP (twice per fight).
+
+**Phases:** P1 Stone body, Echoes. P2 River body, flooding, healing for everyone. P3 both bodies; the doors.
+**Tactics:** it attacks those who attack it. It never strikes a singer. It *pauses* (loses its next legendary action) whenever someone reads a carving aloud.
+
+#### STONE ECHO
+*Medium Construct, Lawful Neutral*
+**AC** 18 · **Initiative** +2 (12) · **HP** 60 (8d8 + 24) · **Speed** 30 ft.
+STR 18 (+4) · DEX 14 (+2) · CON 16 (+3) · INT 6 (−2) · WIS 12 (+1) · CHA 6 (−2) · **Saves** Str +8, Con +7
+**Immunities** poison, psychic · **Condition Immunities** Charmed, Frightened, Poisoned · **Senses** passive Perception 11 · **CR** 6 (XP 2,300; PB +3)
+*Tuned for party level 17: guard (skirmisher pair)*
+- ***Back to Back.*** While within 5 ft of another Echo, it can't be flanked (see phase 1 counter).
+- ***Carved Memory.*** Each Echo is a figure from the Sundering: a minotaur, a fox, a Tall Folk boy, a hare-folk mother. (Lark recognizes the hare-folk one: "That's the first Warren Mother. Gran told me." She asks them not to break it. It's a carving. They can choose.)
+- ***Spear (×2 as Multiattack).*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 13 (2d8 + 4) piercing damage.
+- ***Stop When the Song Starts.*** An Echo within 30 ft of a singing Hearkener can't take reactions.
+
+---
+
+### FIGHT 30 · The Boy-King's Night · Ch17 · Ordinary (optional) · Party level 17
+
+**Target numbers (L17):** total HP **420** · enemy DPR **81** (10% of effective HP 811) · AC 18–20 · attack +11 to +13 · DC 18–19.
+**HP math (shown):** Calm Lamp-Priest 120 · 4 Calm Knives × 50 = 200 · Still-Glass Sentinel 100 → **420**. Party output 150 × 3.5 ≈ 525 × 80% ≈ 420. **Expected 3–4 rounds.**
+**DPR math:** Knives 4 × (2 × 14 × 0.55 + Sneak 10 × 0.3) ≈ **43** · Lamp-Priest (Grey Lantern, recharge) ≈ **22** · Sentinel ≈ **16** → **~81**.
+
+**Battlefield: the castle's well-court at midnight** (crop-friendly: a square stone court 80 ft on a side, the castle well in the middle (a minor Wellgate), the king's tower door on the north side, a gallery 15 ft up on three sides, lamps on iron hooks).
+1. **The well.** Still water. The Calm want to put the king *in* it at the turn of light (dawn: they're early; they plan to hold him until then).
+2. **The gallery.** Height and half cover. The Knives start up there.
+3. **The lamps.** Glimmer lamps (the old kind). The Lamp-Priest can make them *grey* (Grey Lantern).
+4. **The tower door.** Edric's bedroom is up those stairs. One Crown Guard, Sergeant **Godric Marsh**, is on it.
+
+**Opening.** The party is a guest in the castle (or arrives through the well itself, which is the funniest version: the Calm turn around and there are four wet people climbing out of their getaway). Edric is already in the court in his nightshirt, held by a Knife, sleepwalking toward the well. He's humming Ash's tune.
+**Enemy plan.** Get the king into the well at dawn ("so he can be at peace with the grey lake"). Kill nobody else unless they have to. The Knives keep the party off the Priest; the Sentinel guards the well's lip.
+
+**PHASE 1 · rounds 1–2 · "Wake the king"**
+- **Objective:** Edric is sleepwalking (not Hushed: dreaming). Wake him (a loud noise; Ash's hum: no roll; any spell that ends sleep). Once awake he runs for the tower door.
+- **Counter (Ash's Cunning Action Hide):** *Telegraph:* the Lamp-Priest lifts his lantern and every lamp in the court flares grey-white. *Grey Lantern's light:* no dim light or darkness in the court while the Priest stands. Ash can't hide in the shadows. (He can hide behind pillars and the well.)
+
+**PHASE 2 · trigger: Edric awake, or round 3 · "The well" (OBJECTIVE)**
+- *Telegraph (round 2):* the well's water goes perfectly still and the sky reflected in it turns grey.
+- **OBJECTIVE:** the Calm try to drag Edric (or a party member, if Edric's safe) into the well early. A creature pushed in at night isn't Hushed, but it's in the drowning-dream and surfaces in a pool in the Greymarsh (Ch18's territory, early). Stop it.
+
+**FINAL BEAT.** The Calm surrender when the Lamp-Priest falls (they're frightened people, not killers by nature). Or they flee into the well and are gone (to the Greymarsh: they'll be Hushed by morning; Ch18 has them).
+**Fail-forward.** If the party is losing, Crane arrives with forty Crown Guards. Embarrassing; effective.
+**Rewards.** Edric's trust ("You came for me. Nobody comes for me."); Crane's absolute commitment (SC 17-C Highmarch link automatic); the Lamp-Priest's grey lantern (story: it shows the Heron's path south, toward Old Varrow, if Zeke studies it).
+
+#### CALM LAMP-PRIEST
+*Medium Humanoid (human), Lawful Neutral*
+**AC** 17 (glimmer-woven robe) · **Initiative** +2 (12) · **HP** 120 (16d8 + 48) · **Speed** 30 ft.
+STR 10 (+0) · DEX 14 (+2) · CON 16 (+3) · INT 16 (+3) · WIS 18 (+4) · CHA 16 (+3) · **Saves** Wis +9, Cha +8, **Dex +2 (weak)**
+**Skills** Insight +9, Religion +8 · **Resistances** psychic · **Senses** passive Perception 14 · **Languages** Common · **CR** 11 (XP 7,200; PB +4)
+*Tuned for party level 17: controller / leader*
+- ***Grey Lantern (bonus action, while holding it).*** Every lamp within 60 ft burns grey-white: no darkness or dim light there.
+- ***The Quiet's Mercy.*** When a Calm ally within 30 ft drops to 0, the Lamp-Priest can use its reaction to let that ally stand up again at 1 HP (once per ally).
+- ***Multiattack.*** Two Lantern Strikes, or one and *Hush*.
+- ***Lantern Strike.*** *Melee or Ranged Attack Roll:* +11, reach 5 ft or range 60 ft. *Hit:* 18 (4d8) psychic damage.
+- ***Hush.*** *Wisdom Saving Throw:* DC 18, one creature within 60 ft. *Failure:* it can't speak or cast verbal spells until the end of its next turn.
+- ***Grey Lantern Burst (Recharge 5–6).*** *Wisdom Saving Throw:* DC 18, each creature in a 20-ft-radius sphere within 60 ft. *Failure:* 36 (8d8) psychic damage and speed 0 until the end of its next turn. *Success:* half damage only.
+
+#### CALM KNIFE
+*Medium Humanoid (human), Lawful Neutral*
+**AC** 17 (studded leather) · **Initiative** +5 (15) · **HP** 50 (9d8 + 9) · **Speed** 35 ft.
+STR 12 (+1) · DEX 20 (+5) · CON 12 (+1) · INT 12 (+1) · WIS 12 (+1) · CHA 10 (+0) · **Saves** Dex +9
+**Skills** Acrobatics +9, Stealth +13 · **Senses** passive Perception 11 · **CR** 6 (XP 2,300; PB +3)
+*Tuned for party level 17: skirmisher*
+- ***Cunning Action.*** Dash, Disengage or Hide as a bonus action.
+- ***Sneak Strike (once per turn).*** +10 (3d6) when it has advantage or an ally is within 5 ft of the target.
+- ***Multiattack.*** Two Knife attacks.
+- ***Knife.*** *Melee or Ranged Attack Roll:* +11, reach 5 ft or range 20/60 ft. *Hit:* 14 (2d8 + 5) piercing damage.
+- ***Afraid of the Dark.*** If the Lamp-Priest falls, each Knife must succeed on a DC 15 Wis save or surrender. (They're grieving people with knives, not assassins by trade.)
+
+#### STILL-GLASS SENTINEL
+*Large Construct (glimmer and grey glass), Unaligned*
+**AC** 18 · **Initiative** +0 (10) · **HP** 100 · **Speed** 25 ft.
+STR 20 (+5) · DEX 10 (+0) · CON 18 (+4) · INT 3 (−4) · WIS 10 (+0) · CHA 1 (−5) · **Saves** Con +8
+**Immunities** poison, psychic · **Vulnerabilities** thunder · **Condition Immunities** Charmed, Frightened, Poisoned · **CR** 8 (XP 3,900; PB +3)
+*Tuned for party level 17: guard (the well)*
+- ***Well-Lip Guard.*** It stays within 10 ft of the well. Creatures it hits are pushed 10 ft toward the well.
+- ***Glass Fist (×2).*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 16 (2d10 + 5) bludgeoning damage.
+- ***Shatter.*** At 0 HP it shatters: DC 17 Dex save for each creature within 10 ft, 13 (3d8) slashing on a failure, half on a success.
+
+---
+
+## Side-activity window
+
+| Activity | Run it | DC | Reward |
+|---|---|---|---|
+| **The Bargerace (Highwater Fair, again)** | A year after Ch4, and the party is famous. The race (Ch4's chain) at L17 DCs (Athletics/Vehicles (water) DC 19 × 4 legs). Rook (if redeemed) enters against Ash again and doesn't sabotage the poles this time. He just loses, or wins, and laughs either way. | 19 | A purse of 500 gp, and the Bargerace Cup (Ch20: Pip carries it to the gathering, for luck) |
+| **The Royal Tourney (Highmarch)** | Jousting (Gideon: Athletics/Animal Handling DC 19 × 3 passes), the commoner's melee (anyone: a free-for-all, three rounds, Athletics or Acrobatics DC 19), archery (DC 19 × 3). The young knight who sees Gideon as an upstart (`world/03`'s rival) is there. | 19 | A purse of 1,000 gp; a **knighthood candidacy** for Gideon (Edric grants it on the spot if he's met Ash: "Sir Gideon of the Ford") |
+| **The Row's Last Season** | The Row is closing workshops one by one (if the vote passed). Zeke can commission one last glimmer-trinket for anyone, at half price, before the stones run down. Or Ash can do the Row a favor: steal back a workshop's tools from a creditor (Stealth/Sleight of Hand DC 19 chain). | 19 | One last Row gift (see `campaign/05` §4); the Row remembers |
+| **Teaching** | Professor Doone asks Zeke to give one lecture at the Lyceum on Sundering-script. (Performance DC 17, or Zeke just talks and the player plays it.) | 17 | Zeke's discovery made public; Ch20 epilogue (Ending 2) has him teaching it |
+| **Moss's last fishing trip** | Moss and Ash fish the Bend at dawn (`campaign/05` §8). Moss tells one true story about Ash's mother: how she used to hum at the Bend, the same tune, and how he never told her what it was. | — | Relationship. Ending 2 seed: Moss asks Ash, very lightly, "If I had to stay somewhere, lad, for a long time, where would you want me?" Let the player answer. Remember the answer. |
+| **Lark's birthday** | If it hasn't happened yet (`campaign/05` §8): the Lane picks a day and throws her a party. | — | Lark's first birthday party. She cries, and then she eats four pies. |
+
+## Treasure
+
+| Source | Gold | Items |
+|---|---|---|
+| **The Crown's debt** (Crane, after the Charter) | 5,000 gp ("arrears on the ford-watch, eleven hundred years; I've rounded down") | A **Crown Writ of Passage** (story: every Crown ship and garrison must aid the bearer; Ch19's navy route is automatic) |
+| **Aranhollow** | — | **Cloak of the Leaf** (a **Cloak of Displacement**, Rare, 4,000 gp) for whoever Amarys thinks needs it most (Zeke, usually); the shrine-piece (Moss, story) |
+| **Dun Morrach** | 2,000 gp (Torvald insists: "dwarves pay for dwarven oaths") | **Brynja's spare: a +2 Shield of the Bear** (+2 Shield, Rare, 4,000 gp, with Ursk's mark) for Gideon, or **Dwarven Plate** (Very Rare) if he's still in mundane plate |
+| **The Hall** | — | The Ford-Warden's reed (story); the Blessing of the Hall (route A) |
+| **Fight 30** | 300 gp (the Calm's purses) | The grey lantern (story) |
+| **Side activities** | up to 1,500 gp | the Bargerace Cup |
+
+**Chapter total:** about **7,000–8,800 gp**, one Very Rare or two Rare permanent items, and a great deal of story.
+
+## Seeds placed
+
+| Seed | Where |
+|---|---|
+| **SEC-06 revealed fully** (the Hall; the Year of the Ford) | S17.3 |
+| **SEC-22 revealed** (the Lane Well) | S17.3 |
+| **SEC-15 revealed** (Amarys) | S17.8 |
+| SEC-19, fourth seed (the carving: four Wardens singing, the Heron among them) | S17.3 |
+| **The three paths shown** (Endings 1–3 carved in the Hall; Ending 2's cost made visible: the stag becoming a tree) | S17.3 |
+| "She sang it alone. You don't have to." (Ending 2) | Fight 29 (if the doors close) |
+| Moss: "If I had to stay somewhere, lad..." (Ending 2) | side activity |
+| The grey lantern points south (Ch18) | Fight 30 |
+
+## SEAL check and events (exit)
+- **EVT-50** (Walt woken, if not before): no SEAL change.
+- **EVT-36** (the Concord votes): **SEAL −1** if it passes (4 → **3**). If it fails, the −1 comes with the emergency re-vote at Ch18's start.
+- **EVT-54** (Hollis testifies): only if reached in Ch13. No SEAL change.
+- **EVT-33** (the Hall opened; the alliance sworn): no SEAL change. **Level 18.** **Reveals SEC-15, SEC-06 (fully), SEC-22.** Moss's upgrade #5 if Aranhollow's piece was given.
+- **The Glimmer Choice:** **Yes** if the vote passed and Ash argued for it knowing the cost (SC 17-B link 6). Log it.
+- **Twin Bond:** +1 if Ash made Clara part of the Hall's opening as a sister, not a tool (her discovery, her choice to sing). +1 if she's at the Willow supper as family. (Each once; `campaign/04` caps it at 6.)
+- **Edges:** R-086, R-088 (EVT-33), R-090 and R-091 (EVT-36, EVT-54).
+- **FAC moves:** the Crown, Dun Morrach and Aranhollow → **Allied** (those that committed). FAC-03 the Calm → **broken** (Fight 30's cell was the last organized one).
+
+## Level milestone
+**Level 18** when the alliance is sworn (EVT-33). Ash: **Elusive**. Gideon: **Aura Expansion (30 ft)**. Zeke: **Spell Mastery** (Shield, Misty Step). Moss: CR 6 forms; **Beast Spells**.
+
+## If the party goes off-route
+- **They open the Hall and then go straight after the Heron.** The Concord votes without them (★2 C, at Pressure 1; the Glimmer Choice is **No** unless Ash sends a letter that Peg reads aloud in the gallery: that counts as arguing for it, if the letter says what it costs). The alliance: ★3 C, the summit, happens at the Ford Stone while they're gone, and Brynja swears for them. EVT-33 lands; level 18 waits until they come back to the Hall to be sworn in.
+- **Ash refuses to argue against the lamps.** That's a real choice. The vote may still pass (Vane, Hollin, the march), but the Glimmer Choice is **No**. Ending 2 is closed. Don't say so. In Ch20, the center panel's figures won't light.
+- **The player wants to keep glimmer *and* save the world.** Zeke can explain (Arcana DC 15, or he just knows by now): every stone of glimmer is a note of the seal-song pulled out of the wall. There isn't a way. There might be, in a thousand years, if the realms grow back together and the song stops needing to be a wall. (That's Ending 2, and it's honest.)
+- **Clara won't come into the Hall.** Respect it. Route B (Ash and Lark). She comes later, alone, and sings in the empty Hall where nobody can hear her, and the stone answers (her discovery, offstage; Lark tells Ash). Twin Bond: no change.
+- **They kill the Ford-Warden fast.** The Hall's open and the Blessing's lost. Nothing else changes. Moss looks at the rubble for a long time and says, "She'd have liked you. Wynne, I mean. She'd have liked you anyway."
+- **They try to use the Hall's pool to cross.** It works (it's the first Wellgate). It goes to the stone ring on Hollowmere's island. It's the fastest way to Mirrowen for the rest of the campaign.
+- **They want to go to Brannoc for Hollis** (if Hollis escaped). A side scene through the Hall's pool: Brannoc hands him over. Hollis can be reached *now* (SC 13-C at L17 DCs: standard 19), and if he is, he testifies at the re-vote (EVT-54 late).
+
+## Threads for Ch18
+- **The alliance is sworn.** Crown, dwarves, elves (those that committed), the Horned Host and the Free Clans, Emberford.
+- **The Hall's three paths** are known. The player has seen the cost of each.
+- **SEAL 3** (expected). The Heron is gathering her strength somewhere south, in a lot of still water.
+- **Edric's dreams** (and the grey lantern) point to the Greymarsh and **Old Varrow**, the drowned old capital, where glimmer was first mined.
+- **The Heron's feather** (Ch15) and **Umbari's forgiveness** (Ch16) are both still in Moss's keeping. He's decided he'll carry the message.
+- **Zeke can speak the words. Clara's voice answers stone. Moss is whole** (if upgrade #5 came here).
+- **The lamps are going out.** Slowly. The Row is quieter every week.

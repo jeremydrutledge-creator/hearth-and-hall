@@ -134,7 +134,7 @@ The campaign has painted portraits, scenes, overhead battle maps, and two versio
 
 How to put an image in front of Jeremy hasn't been confirmed. Test it in session one and record what worked in the Campaign Bible:
 - **(a) Show the image file directly,** if this platform lets you present a project file or an image you made with code.
-- **(b) Name the file** ("Open `images/emberford-city.jpg`, the Wharves corner") and Jeremy opens it from the copy on his phone or computer.
+- **(b) Name the file** ("Open `player__maps__emberford-city.jpg`, the Wharves corner") and Jeremy opens it from the copy on his phone or computer.
 - Keep text labels in your description. The paintings deliberately carry little or no text.
 
 ### Battle maps and tokens

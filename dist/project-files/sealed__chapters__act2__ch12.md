@@ -1,0 +1,514 @@
+# Chapter 12 · The Kessel Workings (SEALED — DM ONLY)
+
+> **Act II, chapter 6 of 7.** Level **12** during, **13** on exit. 2 sessions. Frostcome, YF 1104. Kesselby and the Kessel Workings, a half-day upriver from Emberford.
+> Built on `campaign/02` Ch12, `campaign/03` SEC-04, SEC-17, SEC-23 (token rules), `campaign/04` (Twin Bond, Mercy), `campaign/05` §7 (Moss setbacks), `truth/03` (R-002, R-007, R-046, R-048, R-050, R-052, R-054, R-061, R-092, R-094), `truth/05` (EVT-19, EVT-20, EVT-50, EVT-52), `rules/02` (L12 targets; boss checklist). Shared rules in `_index.md`.
+
+---
+
+## At a glance
+
+| | |
+|---|---|
+| **Shape** | Back to the mine. Kessel has grown into a monster: a vast open gate pumping glimmer. Close it, find the proof of who ordered the fire, and watch Zeke's hero fall. |
+| **SEAL in → out** | 5 → **4** (EVT-19, the Kessel gate closed: −1) |
+| **Fights** | Fight 17 (ordinary, the lamp-warden garrison) · Fight 18 (significant, Hushed miners and the Gate War dead) · **Fight 19 (BOSS, Warden-Captain Lucan Hask)** |
+| **Skill challenges** | SC 12-A "Into the Workings" · SC 12-B "The Closing" (the duet, inside Fight 19) |
+| **Stat blocks** | Lamp-Warden Lieutenant Corbin Wade · Glimmer-Warden (L12) · Hushed Miner · Gate War Revenant · **Lucan Hask (boss, 3 phases)** · Hushed Lamp-Warden (Hask's guard) · Gate-Hushed |
+| **Events** | EVT-19 (SEAL −1), EVT-20 (the ledger; exit), EVT-50 (Walt woken, after), EVT-52 (Rook) |
+| **Exit level** | **13** |
+
+## Threads coming in
+
+| Thread | Check | Effect |
+|---|---|---|
+| **Clara's outcome** | (a) / (b) / (c) from Ch11 | (a): ★2 route A. (b): route B or A. (c): route B (she's there, sent by Hollis) or C. |
+| **Twin Bond** | value | The duet's strength; see SC 12-B |
+| Zeke took the fellowship? | Ch11 | He has the Reserve's tuning schedule; ★4 hits harder |
+| Rook | redemption / fall | ★3 route C; Fight 17 or 19 |
+| Orla Venn (Ch5) | alive and free? | If so, she's in the Mine-Warden's office: a broken, half-Hushed devotee, not a fight. She can be stirred (DC 19); woken, she says Hollis's name aloud (SEC-04 dig-early is over now anyway). |
+| Moss | upgrade #3 active | At risk if the duet doesn't happen |
+| Brynja | ally | She'll come ("Dwarves know mines"). Use her as an ally NPC: she can hold a tunnel or a door; she doesn't fight the boss for the party. |
+
+---
+
+## ★ Must-happen beats
+
+### ★1 · Kessel must close
+The Kessel gate is the source of the Reserve and the worst wound in the Eyrland seal.
+- **A. The party decides to close it.** (Natural; Moss: "Close Kessel and the Reserve starves. Close it and the seal stops bleeding.")
+- **B. Clara, shaken, asks Ash** to show her what her "tuning" really does, and the trail leads to Kessel. ("He says it's for the lamps. Show me. Please.")
+- **C. Kessel breaches:** a Hushed column (fifty miners and older dead) marches out toward the river towns. Old Bram (NPC-030) sees it from his ferry and rows to the Lane in the dark. The party is called to stop it (start with Fight 18 on the road, then go in).
+
+### ★2 · The first twin duet (EVT-19)
+Ash's Hearing and Clara's Voice together close the Kessel gate for good (SC 12-B).
+- **A. Clara comes with them.**
+- **B. Clara is at Kessel already,** sent by Hollis to "tune the final load." They meet there (she's in the gate chamber when Fight 19 begins, and Hask is guarding her as much as the gate).
+- **C. Clara refuses, but Ash's hum calls her across the distance** and she *answers* the note from Emberford (from the Lamplit, or the Grane house on Crownhill, at a window). A weaker duet, but it works.
+- **D. No Clara at all** (Twin Bond 0, or she's been kept away by Hollis): Zeke unweaves the glimmer lattice while Moss holds the gate and Ash hums. It still closes, at a cost: **Moss is drained** (loses upgrade #3 until Ch16) and **the closing is temporary** (it reopens at SEAL 7). Say both costs plainly when the player chooses this.
+
+### ★3 · The fire-night ledger (EVT-20)
+In the Mine-Warden's office or the lamp-warden barracks: Lucan Hask's record of the YF 1085 Leaffall "Fenwick matter," with Hollis's order in his own hand: ***"Bring me the child. The parents must not be able to follow."*** **SEC-04 proven.**
+- **A. Searched for and found** (S12.5).
+- **B. Hask is the boss and has it on him** (inside his breastplate, in an oilcloth packet; it falls when he goes down).
+- **C. Rook steals it** (redemption branch) and brings it to Ash, on the road home or in the barracks during Fight 17.
+
+### ★4 · Zeke's hero falls
+Zeke reads the order. He has to choose what to do with the man who paid his tuition, twice.
+- **A. Zeke reads it himself.**
+- **B. Ash reads it to him.**
+- **C. Hollis, learning it's been taken, sends Zeke a letter** (by message-moth, the next morning): ***"I would explain, if you'd let me. You of all people understand what it is to want to fix the world."*** (This lands harder.)
+- **D. If the party leaves Kessel without the ledger:** Rook brings it (if alive and redeemed), or Hask's corpse is found by Brynja's dwarves in the rubble a week later and they bring the packet to the Lane. The beat comes late, but it comes.
+
+---
+
+## Scenes
+
+### S12.1 · Frostcome on the Lane
+First frost. The Lane's breath smokes. Clara has been moved into the Guildhall full-time ("for the final tuning"); she's barely been seen since the festival.
+- **Route B (★1):** Clara comes to the Fenwick back door at dawn, hood up, frightened. "It hums back louder every night. Last night it hummed *before* I sang. Show me what it is." (Twin Bond: she chose to come.)
+- **Route C (★1):** Old Bram at the door at midnight, soaking, white-faced: "There's a column on the towpath. Miners. Fifty of them. Walking in step. Their lamps are out."
+- **Lark (SEC-13 status seed):** through the bond, Ash feels Lark wake in the night on the Drift, terrified: the Heron is **hunting along the bond** (she's listening down it, looking for Ash). Lark: "She's looking for the other one now. The one who sings." (The Stillness has learned of the twins: `campaign/00` §3 A. From now on, the Heron wants Clara first.)
+
+### S12.2 · Kesselby
+A mining town of grey slate cottages huddled below the Workings, a half-day upriver. Since Kessel's output doubled, half the town's men have "gone quiet" (Hushed) and the other half are drinking.
+- **The Pick and Lantern** (brawl tavern), run by **Sal Pickett** (NPC-153), a broad woman whose husband went quiet in the summer. She hates the lamp-wardens and will draw the party a map of the Workings on the bar in spilled ale (SC 12-A link 1 at advantage) if they promise to bring her Davey out.
+- **The miners' wager board** (side window).
+- **Ma Garrow's cousin** (Ch5 thread: "came back from Kessel grey") is here, Hushed, sitting on the Pick and Lantern's step every evening at the same time. If the twins close the gate *with* the duet, he wakes on his own that night (see S12.8).
+
+### S12.3 · Into the Workings (SC 12-A)
+See skill challenges. The Workings have tripled since Ch5: new shafts, new lifts, glimmer seams lit blue-white everywhere, a hum in the rock you feel in your teeth.
+
+### S12.4 · The garrison (Fight 17)
+Lieutenant Corbin Wade's lamp-wardens know the party now (Hask briefed them after the Varga vault and the festival). See Fight 17.
+
+### S12.5 · The Mine-Warden's office and the barracks (★3 route A)
+A slate office cut into the rock above the gate chamber, with a window of thick glass looking down on it. Ledgers, shipping manifests, a still-water bowl on a stand (cold; grey).
+- **The search.** Investigation DC 18 (the room); Ash's Perception DC 16 (the loose slate behind the strongbox); or Zeke's Arcana DC 15 (the glimmer-sealed drawer that hums wrong).
+- **What's here:**
+  - **Hask's letters** (to and from "the Keeper"): **SEC-07 seed:** *"…the horned ones across the water serve the same peace, the Keeper says. Their Regent's people come up the water at Driftmarket and the millponds. We are not to hinder them…"* (This is the first time Hollis's circle has heard of Brannoc's people: `campaign/05` §5.) **Lantern Night plan:** *"The Reserve will be ready by Lantern Night. The Keeper will light it himself. The girl's voice will carry the tuning; she needn't know."*
+  - **The fire-night ledger** (★3) is *not* here if the DM is running route B (Hask carries it). On route A it's in the loose-slate cache, in an oilcloth packet: a small bound book, Hask's cramped hand, entries from YF 1085, and a folded page in a different, warm round hand. *"Bring me the child. The parents must not be able to follow. — H. G."* Hask kept it twenty years. Under it, in his own hand: "Insurance."
+  - **Ulric Fane's receipt** (if Ch10 was skipped).
+  - **Shipping manifests:** glimmer to "the Guildhall Reserve," ninety-five parts in a hundred "tuned." (The Reserve is nearly ready: `campaign/00` timeline, Frostcome.)
+
+### S12.6 · The old shaft (Fight 18)
+Below the new works, a sealed Gate War shaft (the one the Ch5 dwarven warning stone marked: "Here the stone was asked to be quiet. Do not dig."). They dug. Hushed miners and the Gate War dead in it. See Fight 18.
+- **Gideon's discovery moment:** he can **feel which of the Hushed can still be woken**. It's like warmth through a wall. He says which: "That one. And her. Not those: those are long gone." In play: Gideon automatically knows whether any Hushed creature he can see is *recent* (wakeable) or *deep*/dead. From now on he never needs to guess.
+
+### S12.7 · The gate chamber (Fight 19; ★2)
+A cavern the size of the Guildhall dome. In its floor, a perfectly round lake of black still water forty feet across: the Kessel gate, wide open. Glimmer seams spiral up the walls like the inside of a shell, all humming one note. Rails, ore-carts, a cart-ramp down to the lake's edge, a scaffold of lamp-warden walkways. And Lucan Hask, half-helm off, burned hand flexing.
+> ***"Fenwick. I know that name. I knew it before you did."***
+- If Clara is here (route B), she's on the tuning platform above the lake, singing into a glimmer-forked frame. She stops when she sees Ash. Hask: "Keep singing, girl. The Keeper wants it finished."
+- **What Hask knows and will say** (if anyone talks before swords): he led the fire. He took the girl. He burned his hand on the prow pulling her out. "She was screaming for a brother. I didn't know there were two." He's not sorry. He's tired.
+
+### S12.8 · After (★4; EVT-20, EVT-50)
+- **★4: Zeke.** Wherever the ledger is read, give Zeke room. He's the one who loved Hollis. Play R-007 breaking. He doesn't shout. He takes his spectacles off, very carefully, and folds them. Then: "He paid my tuition. Twice. He sat with me when I couldn't pay for the third year and said 'You of all people understand.' I *did*. I understood." Then he asks Ash to read it again. **Ash has to hold him up** (`campaign/01`: Act II Ash↔Zeke). What Ash says is the scene.
+  - **Route C (Hollis's letter)** arrives the next morning, warm and sincere. Zeke can tear it up, burn it, keep it, or answer it. If he answers, Hollis answers back: a real, terrible correspondence about grief. (Use it in Ch13 ★5 "reaching Hollis": Zeke's letter is one of the levers.)
+  - **R-007** breaks (vouch #4 ends). **R-046** (Hollis → Zeke) stays the same; he doesn't know yet. **R-002** (Gideon → Zeke) deepens: Gideon sits with him all night and says nothing, which is the most Gideon thing possible.
+  - **Professor Doone** (NPC-040; R-061): if Zeke took the fellowship, Doone is waiting at the Guild library the next day, kind and curious: "Something's troubling you, Zeke. Would you like to sit with the circle tonight? It helps." Zeke's choice.
+- **EVT-20** fires (SEC-04 proven, SEC-17 revealed; R-002, R-007, R-015, R-046, R-048, R-050 (if Clara reads it: her vouch #3 finally breaks), R-054, R-061, R-092, R-094 (Moss: "mild disapproval" → **cold rage**)).
+- **Clara and the ledger.** If Clara sees the order (her choice to read it, or Ash shows her), R-050 breaks: "He sat up with me through every fever." She doesn't fall apart. She goes very still, like the water, and then she's sick behind an ore-cart, and then she says, "He named me after his wife. He *named* me." **Twin Bond:** don't push her. Ash being there is the +1 (`campaign/04`, "is there when she does"). Using it to turn her against Hollis on the spot is −1.
+- **Walt (EVT-50).** If the duet closed the gate (Clara and Ash), the twins can wake Walt: they go home and sing to him together in the Finches' kitchen. No roll. Walt's first words are to Dora: ***"You've let the fire go out, love."*** Dora's face. Give it all the room it wants. (If Clara isn't with Ash yet, Walt waits until she is, or Ch15.)
+- **Kesselby wakes.** If the duet closed it, the recently Hushed in Kesselby (Sal Pickett's Davey, Ma Garrow's cousin) wake over the next night on their own, like people coming out of a long fever. Sal Pickett sends the Lane a barrel of cider every month for a year.
+- **SEC-13 status seed:** that night, Lark (through the bond): "She stopped looking along me. She's looking along *her* now." (The Heron hunts Clara. Ch13 onward.)
+- **Level 13.**
+
+---
+
+## NPC appearances
+
+| NPC | Scenes | Edges relied on | Play note |
+|---|---|---|---|
+| NPC-005 Clara | S12.1, S12.7, S12.8 | R-050 (breaks at EVT-20), R-052 | The duet. She chooses. |
+| NPC-002 Zeke | S12.5, S12.8 | R-007 (breaks), R-095 | His hero falls. |
+| NPC-020 Lucan Hask | S12.7, Fight 19 | R-054, R-092; target of R-048 | Boss. "Insurance." |
+| NPC-006 Hollis | (letter, ★4 C) | R-046, R-047 | Sincere. Terrible. |
+| NPC-003 Moss | Fight 19, S12.8 | R-094 (→ cold rage), R-011 | Holds the gate if needed; cost stated. |
+| NPC-001 Gideon | S12.6, S12.8 | R-002, R-015 (breaks) | Feels who can wake. Sits with Zeke. |
+| NPC-010 Rook | ★3 C, Fight 17 | R-037, R-038 | Redemption: steals the ledger. Fall: a Hushed lamp-warden in the garrison who can be woken. |
+| NPC-012 / NPC-013 Finches | S12.8 | R-021, R-024, R-025 | EVT-50. |
+| NPC-040 Professor Doone | S12.8 | R-061 | Grooming Zeke. |
+| NPC-030 Old Bram | ★1 C | none | The column. |
+| NPC-067 Brynja | ally throughout | R-087 | Holds tunnels; reads the Gate War shaft's dwarven marks. |
+| NPC-152 Lt. Corbin Wade *(prov.)* | Fight 17 | none | Professional; not Calm; surrenders. |
+| NPC-153 Sal Pickett *(prov.)* | S12.2 | none | "Bring my Davey out." |
+| NPC-041 Orla Venn (if alive) | S12.5 | R-060 | Broken devotee; stir-able. |
+| NPC-004 Lark | (bond) | R-064 | SEC-13 status. |
+
+---
+
+## Encounters
+
+### FIGHT 17 · The Garrison · Ch12 · Ordinary · Party level 12
+
+**Target numbers (L12):** total HP **320** · enemy DPR **58** (10% of 576) · AC 17–18 · attack +9 to +11 · DC 16–17.
+**HP math:** Lt. Corbin Wade 110 + 4 Glimmer-Wardens × 52 = 208 → **318**. Party output 115 × 3.5 ≈ 400 × ~80% ≈ 320. **Expected 3–4 rounds.**
+**DPR math (vs AC ~18):** Glimmer-Wardens 4 × (2 × 9.5 × 0.6 = 11.4) = 45.6; Wade 2 × 11 × 0.6 = 13.2 → **~59**.
+
+**Battlefield: the lamp-warden barracks and lift-head.** A long hall cut in rock, bunks, a mess table, an armory rack, and the big iron ore-lift that goes down to the gate chamber.
+1. **The lift.** A 20-ft iron cage on chains. Wade's men can send it down (cutting the party off) or bring up reinforcements (no: they don't have any; that's a bluff Wade makes).
+2. **Glimmer racks.** Crates of tuned glimmer. A thunder or force effect on a rack makes it **burst** (DC 16 Dex save, 4d8 radiant in a 10-ft radius). Ch5's terrain rule, scaled.
+3. **The mess table and bunks.** Half cover.
+4. **The window** onto the gate chamber below: thick glass; shattering it (AC 15, 30 HP) is a 60-ft drop to the cart-ramp.
+
+**Opening.** They know. Wade has the hall set: two wardens behind the mess table with lanterns, two at the lift, Wade at the armory rack. "Fenwicks. Captain said you'd come. I'm told I'm to stop you. I'm not told *why*. Anyone want to tell me why?" (A real opening: Wade isn't Calm. If shown the Merrow ledger or told the truth plainly with Persuasion DC 18, or Panache (Insight +4), he stands his men down. He won't fight for something he doesn't understand. Reward talking.)
+
+**Enemy plan.** Spread out, light the hall, hold the lift. If they're losing, send the lift down to warn Hask (which gives Hask a pre-buff: see Fight 19 opening).
+- **Counter (Zeke's area spells):** *Telegraph:* Wade shouts "Spread! The wizard with the harness still has a fireball, and he won't miss his own people!" and they move 15 ft apart. They never cluster.
+- **Counter, phase 2 if it runs to round 3 (Ash's Hide):** *Telegraph:* a warden yanks a chain and every glimmer lamp in the hall flares to full. No dim light anywhere in the hall; Ash can't Hide except behind full cover.
+
+**Surrender.** At half strength, Wade surrenders. He'll tell them Hask is below, with "the Guildmaster's girl" if route B. "He's not right, Captain Hask. He talks to the water."
+**Rook (fall branch):** one of the four wardens is Rook in a lamp-warden helm, grey-eyed, recently Hushed. Gideon feels it (S12.6's discovery can come early here). Stir him (DC 19) and he wakes. Mercy +1 if not already scored. Kill him and Martha's grief is the Lane's for the rest of the campaign.
+
+#### LIEUTENANT CORBIN WADE (NPC-152, provisional)
+*Medium Humanoid (human), Lawful Neutral (not Calm)*
+**AC** 18 (plate) · **Initiative** +2 (12) · **HP** 110 (17d8 + 34)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 18 | +4 | +7 | DEX | 14 | +2 | +2 | CON | 14 | +2 | +5 |
+| INT | 12 | +1 | +1 | WIS | 14 | +2 | +5 | CHA | 13 | +1 | +4 |
+
+**Skills** Athletics +7, Insight +5, Perception +5 · **Senses** passive Perception 15 · **Languages** Common · **CR** 8 (XP 3,900; PB +3)
+*Tuned for party level 12: leader*
+
+**Actions**
+- ***Multiattack.*** Two Warden's Longsword attacks.
+- ***Warden's Longsword.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 11 (1d10 + 6) slashing damage (a fine weapon).
+- ***Rally (Recharge 5–6).*** Each warden within 30 ft regains 10 HP and can move 10 ft without provoking.
+
+**Reactions**
+- ***Parry.*** +3 AC against one melee attack.
+
+#### GLIMMER-WARDEN (party level 12 lamp-warden)
+*Medium Humanoid (human), Lawful Neutral*
+**AC** 18 (plate, silvered half-helm) · **Initiative** +1 (11) · **HP** 52 (8d8 + 16)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 18 | +4 | +7 | DEX | 12 | +1 | +1 | CON | 14 | +2 | +5 |
+| INT | 10 | +0 | +0 | WIS | 12 | +1 | +4 | CHA | 10 | +0 | +0 |
+
+**Skills** Athletics +7, Perception +4 · **Senses** passive Perception 14 · **Languages** Common · **CR** 5 (XP 1,800; PB +3)
+*Tuned for party level 12: line infantry*
+
+**Actions**
+- ***Multiattack.*** Two Glimmer-Mace attacks.
+- ***Glimmer-Mace.*** *Melee Attack Roll:* +9, reach 5 ft. *Hit:* 9 (1d8 + 5) bludgeoning damage. On a critical hit, the target is Blinded until the end of its next turn.
+- ***Lantern-Flash.*** *Constitution Saving Throw:* DC 16, one creature within 15 ft. *Failure:* Blinded until the start of the warden's next turn. (Replaces one Mace attack.)
+
+---
+
+### FIGHT 18 · The Old Shaft · Ch12 · Significant · Party level 12
+
+**Target numbers (L12):** total HP **520** · enemy DPR **69** (12% of 576) · AC 17–18 · attack +9 to +11 · DC 16–17.
+**HP math:** 6 Hushed Miners × 40 = 240 + 3 Gate War Revenants × 95 = 285 → **525**. **Every miner woken instead of beaten removes 40 HP from the pool and adds a helper** (woken miners grab tools and help hold the shaft: each woken miner reduces the Revenants' DPR by ~3 by getting in the way). Party output 115 × 5.5 ≈ 630 × ~80% ≈ 505, less if they're waking (which costs actions but shrinks the pool). **Expected 5–6 rounds.**
+**DPR math (vs AC ~18):** Miners 6 × (9.5 × 0.55 = 5.2) = 31; Revenants 3 × (16 × 0.6 + greywilt touch ~2.5) = ~36 → **~67–70**.
+
+**Battlefield: the Gate War shaft.** A sloping tunnel, 20 ft wide, descending 120 ft past the dwarven warning stone into an older, rougher working where the walls are dwarf-cut and glimmer-crusted.
+1. **The warning stone.** Ch5's stone: "Here the stone was asked to be quiet. Do not dig." Brynja touches it and goes white.
+2. **Ore-carts on the slope.** A cart can be released downhill (action): it rolls 60 ft in a line; DC 16 Dex save or 4d10 bludgeoning and prone.
+3. **Glimmer seams.** Thunder or force on a seam within 10 ft makes it burst (DC 16 Dex, 4d8 radiant, 10-ft radius). **Hushed are thunder-vulnerable; the seams punish thunder near walls.** A real choice.
+4. **The still sump.** A pool at the shaft's bottom where the Gate War dead come up. Still water rules (DC 16 Wis or 3d8 psychic, speed 0).
+5. **The miners' camp.** Bedrolls and lamps where Hushed miners sit in rows "resting" when not working.
+
+**Opening.** The six miners are working the seam: tapping, tapping, in rhythm. They don't turn when the party enters. Then the sump stirs, and the Revenants come up, and the miners turn all at once.
+
+**Enemy plan.** The Revenants want the living away from the old shaft. The miners do what the Revenants' presence makes them do: block, grab, hold. Revenants drag the downed toward the sump.
+- **Counter (healing yo-yo):** the Revenants **keep** downed heroes: they drag them toward the still sump (an objective change, not an execution). *Telegraph:* the first miner who drops is dragged, not struck. A creature dragged into the sump at 0 HP makes death saves at disadvantage and is "taken" (vanishes into the gate) at the end of its third turn there unless pulled out (Athletics DC 16, action). The Gate War dead don't kill; they *keep*.
+
+**PHASE 1 · rounds 1–3 · "The quiet workers"**
+- Miners block and grab. Revenants come up the slope.
+- **Gideon's discovery** (S12.6): he knows which are wakeable (all six miners: recent; the three Revenants: dead).
+- **Waking a miner:** Ash's song, DC 19 (tier 3), an action. With Gideon pointing (his discovery), Ash has advantage on the first one. (The twins' duet would wake them all, but Clara isn't singing yet.)
+
+**PHASE 2 · trigger: round 3–4 · "The stone remembers"**
+- *Telegraph (end of round 3):* the warning stone cracks with a sound like a bell, and the seam-glow along the walls dims and then flares.
+- **TERRAIN change:** the shaft's glimmer seams start **bursting on their own**: on initiative count 20 each round, one random seam within the fight bursts (DC 16 Dex save, 4d8 radiant, 10-ft radius). The DM points at the seam that will burst *next* at the start of each round (the hum rises there).
+- **Brynja** can read the old dwarven marks to show which seams are "asked to be quiet" (won't burst). Or Zeke can (Arcana DC 16). Then the party can fight near those.
+
+**PHASE 3 · trigger: round 5–6 · "Hold the shaft"**
+- **OBJECTIVE change:** the sump is a minor mouth of the Kessel gate. More dead are coming. Close the shaft's mouth: drop the old dwarven gate-slab (a 10-ton stone on a jammed winch: Athletics DC 18, two people at DC 16, or Brynja and Gideon together automatically) or bring the roof down over the sump (a seam-burst on purpose: a thunder effect on the "keystone" seam Brynja points out; everything within 20 ft of the sump makes a DC 16 Dex save or takes 6d8 bludgeoning). Once sealed, any Revenants still below are cut off.
+
+**FINAL BEAT.** The shaft sealed; Revenants laid to rest or cut off; miners woken (and led up to Kesselby by Brynja) or beaten unconscious (they wake later, Hushed, and are woken by the duet if it happens).
+**Fail-forward.** If the party is losing: woken miners and Brynja drag the downed out; the shaft isn't sealed, and in Fight 19 phase 3 add one extra Gate-Hushed (the dead keep coming).
+**Mercy:** **+1** if the party wakes or spares the miners (`campaign/04`, "Ch5/12: Hushed miners spared and woken"; score it once across Ch5 and Ch12 if Act I didn't).
+**DM notes.** Expected 5–6 rounds. If the party wakes miners fast, the fight shortens: good.
+
+#### HUSHED MINER
+*Medium Humanoid (human), Neutral · **Hushed***
+**AC** 14 (leather apron, helmet) · **Initiative** −2 (8; includes Hushed −2) · **HP** 40 (6d8 + 12)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 18 | +4 | +7 | DEX | 9 | −1 | −1 | CON | 15 | +2 | +5 |
+| INT | 8 | −1 | −1 | WIS | 10 | +0 | +0 | CHA | 7 | −2 | −2 |
+
+**Resistances** psychic · **Vulnerabilities** thunder · **Condition Immunities** Charmed, Frightened · **Senses** passive Perception 10 · **Languages** Common (silent) · **CR** 3 (XP 700; PB +2)
+*Tuned for party level 12: blocker (victim)*
+
+**Traits**
+- ***Hushed (recent).*** Wakeable (DC 19). Woken: a frightened miner who asks what month it is.
+- ***Victim.*** Damage the party deals to it can be made nonlethal at no cost. **Say so in the description** ("You could knock him down without killing him").
+
+**Actions**
+- ***Pick.*** *Melee Attack Roll:* +9, reach 5 ft. *Hit:* 9 (1d8 + 5) piercing damage.
+- ***Hold.*** The miner grapples a creature within 5 ft (escape DC 15).
+
+#### GATE WAR REVENANT
+*Medium Undead (human or dwarf), Neutral · **Hushed dead***
+**AC** 17 (Gate War mail) · **Initiative** −2 (8; includes Hushed −2) · **HP** 95 (10d8 + 50)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 19 | +4 | +8 | DEX | 9 | −1 | −1 | CON | 20 | +5 | +9 |
+| INT | 7 | −2 | −2 | WIS | 12 | +1 | +1 | CHA | 6 | −2 | −2 |
+
+**Resistances** cold, psychic · **Vulnerabilities** thunder · **Condition Immunities** Charmed, Frightened, Poisoned · **Senses** darkvision 60 ft., passive Perception 11 · **Languages** — · **CR** 8 (XP 3,900; PB +3)
+*Tuned for party level 12: brute / keeper*
+
+**Traits**
+- ***Hushed Dead.*** Laid to rest at 0 HP. Brynja can lay a dwarven Revenant to rest with its clan's rest-words (an action, when it's below half HP).
+
+**Actions**
+- ***Still Grasp.*** *Melee Attack Roll:* +9, reach 5 ft. *Hit:* 16 (2d10 + 5) bludgeoning damage plus 4 (1d8) psychic damage, and the target is Grappled (escape DC 17).
+- ***Keep.*** It moves up to its speed toward the sump, dragging a Grappled creature (its speed isn't halved).
+
+**Reactions**
+- ***Hold Fast.*** When a Grappled creature tries to escape, the Revenant imposes disadvantage on the check.
+
+---
+
+### FIGHT 19 · Warden-Captain Lucan Hask · Ch12 · **BOSS** · Party level 12
+
+**Target numbers (L12):** boss HP (all phases) **800** (cap 1,040) · boss + adds DPR **58 sustained / 86 spike** · AC 17–18 · attack +9 to +11 · DC 16–17 · boss best saves **+7 to +9**.
+**HP math (shown):**
+- Hask's own pools: **Phase 1** 220 · **Phase 2** 200 · **Phase 3** 160 = **580** (≈ 5 × party DPR).
+- Adds ≈ 2 × DPR (230): **Phase 1** 2 Hushed Lamp-Wardens (Hask's guards) × 55 = 110 · **Phase 3** 3 Gate-Hushed × 40 = 120 → **230**.
+- **Total 810** (inside 800–1,040). Legendary Resistance (4 in lair), the phase changes and SC 12-B's objective (the duet takes 3+ rounds of Ash's and Clara's actions) stretch it to **about 10 rounds**. Party output 115 × 10 = 1,150 × ~70% (objective, movement, collapse, LR) ≈ 800.
+- **Nova check:** a 2.5× round (~290) can end a phase early. Each phase's HP pool is separate: excess damage doesn't carry over (when a pool hits 0, the phase changes at once, and the next pool starts fresh). One nova can't skip the story.
+**DPR math (vs AC ~18, shown):**
+- Hask: 3 × 18.5 (1d10+6 slashing + 2d6 radiant) × 0.6 = **33**.
+- Legendary actions: ~1 extra Glaive Sweep a round ≈ **11**.
+- Adds: 2 Hushed Lamp-Wardens × (10.5 × 0.55 = 5.8) ≈ **12** (phase 1); 3 Gate-Hushed ≈ **14** (phase 3).
+- **Sustained ≈ 56–58.** **Spike** at each phase change: *Overload* (8d6 radiant, DC 17 Dex, 20-ft radius ≈ 28 × ~2.5 targets × 0.7 ≈ 49) on top of a normal round ≈ **86**.
+
+**Battlefield: the Kessel gate chamber.** (Map: a round cavern ~150 ft across; the gate lake in the center, 40 ft across; walkways on three levels; a cart-ramp; a tuning platform.)
+1. **The gate lake.** Black, still, wide open. Still water rules (DC 17 Wis or 3d8 psychic, speed 0; Gideon's aura protects). It's the boss's lair heart.
+2. **Glimmer seams** spiral up the walls: they burst under thunder or force (DC 17 Dex, 5d8 radiant, 10-ft radius) and they're where Hask *Lamp-Steps*.
+3. **The tuning platform.** A railed iron platform on chains over the lake's edge, 20 ft up, with the glimmer-forked tuning frame. Clara sings from here (route B), or Ash and Clara duet from here (SC 12-B). It's the objective's place.
+4. **The cart-ramp.** A 30-ft slope of rails from the upper walkway to the lake's edge. Carts can be released (DC 17 Dex, 5d10 bludgeoning, prone).
+5. **Walkways.** Three levels of iron scaffold (10, 20, 30 ft up), ladders between. They collapse in phase 2.
+
+**Opening.** Hask is at the lake's edge. On route B, Clara is on the tuning platform, singing; two Hushed Lamp-Wardens guard the platform ladder. If Fight 17's lift came down, Hask is pre-buffed: he's already at the top of initiative, and his *Glimmer-Mail* (phase 1 trait) is at full. He knows the party: their names, what Ash can do, that Zeke is a wizard, that Gideon is "the big one." He knows nothing about Moss being the Hart (if he sees it, he laughs: "So *that*'s what carried the boy.").
+
+**Enemy plan.** Kill the twins' chance. Hask's orders were to finish the tuning; his *instinct* is to kill the Fenwick boy, "the one that got away." He goes for **Ash**, and if Clara starts singing *with* Ash, he goes for **Clara** (he'll hesitate once: "Bring me the child," he says, softly, remembering). His guards Interpose for him. He uses the seams to move.
+
+**PHASE 1 · rounds 1–3 · "The gate chamber"** (Hask pool 220; 2 Hushed Lamp-Wardens)
+- Hask fights at the lake's edge with *Glimmer-Mail* up. Guards hold the platform ladder and Interpose.
+- **Counter (Gideon's smites):** ***Glimmer Shell.*** *Telegraph (round 1):* when Gideon first draws, Hask's burned hand flares and a man-shaped shell of blue light steps out of him and stands half a pace to his left. Once per round, when an attack that includes Divine Smite or Radiant Strikes damage hits Hask, the shell takes the radiant dice instead (it has 25 HP; when it breaks, it's gone for the phase). Gideon's base weapon damage still lands. Smart answer: hit the shell with something cheap first, or let Ash or Moss break it.
+- **Lair actions** (initiative 20; see block).
+
+**PHASE 2 · trigger: Hask's phase 1 pool reaches 0, or round 4 · "Overload"** (Hask pool 200)
+- *Telegraph (one round early):* Hask laughs, puts his burned hand flat on a seam, and *every* seam in the chamber goes from blue to white. The hum climbs a full note. Dust falls.
+- **FORM + TERRAIN change:** Hask's *Glimmer-Mail* shatters (AC 18 → 17, speed +10, he gains *Burning Hand*). **Overload** fires at once (spike). The chamber starts **collapsing**: the 30-ft walkway falls at the start of round 2 of this phase (DC 17 Dex save or fall 10 ft to the level below, 3d6 + prone); the cart-ramp is buried at the start of round 3. Lair action *Collapse* is unlocked.
+- **Counter (Ash's Hide):** the overloaded seams light everything: **there is no dim light in the chamber** this phase. Ash can't Hide except behind full cover. *Telegraph:* the same seam-flare: "There's nowhere dark left in here."
+
+**PHASE 3 · trigger: Hask's phase 2 pool reaches 0, or round 7 · "The gate opens behind him"** (Hask pool 160; 3 Gate-Hushed)
+- *Telegraph:* the lake *rises*. Not a wave. The whole surface lifts a foot, like something breathing in underneath.
+- **OBJECTIVE change:** the gate tears wider. **Gate-Hushed** climb out of the lake (3 on arrival; then 1 more at initiative 10 each round until the gate is closed). The twins must close it (**SC 12-B, the duet**) while the others hold. Hask now fights to *stop the closing*: he goes for whoever is singing.
+- **Counter (Gideon's Initiative Swap):** the Gate-Hushed reinforcements arrive on **initiative count 10**, not at the top. *Telegraph:* the first one's hand comes over the lake's lip at count 10 in the round of the telegraph.
+- **Moss** (route D, no Clara): Moss holds the gate's lip in his true shape (his Hart round for this tier, if available; otherwise his druid magic, and the cost is the same): see SC 12-B "without Clara."
+
+**FINAL BEAT.** The gate closes (SC 12-B) and Hask falls, in either order.
+- **If Hask drops before the gate closes:** the Gate-Hushed keep coming until it does.
+- **If the gate closes first:** Hask, still standing, feels the hum stop. The grey goes out of his eyes for a moment. He looks at his burned hand. "Huh," he says. "It's quiet. It's actually quiet." He might surrender now (Insight DC 17: he's tired, and he's never been anything but a man who did what he was paid to). **Capturing Hask** is a big option: he's a witness against Hollis (with the ledger, that's two proofs).
+- **The ledger** (route B) falls out of his breastplate when he drops or surrenders.
+- **Clara** (if present) looks at the man who carried her out of the fire. What she does is hers.
+**Fail-forward.** If the party is going down: the chamber's collapse ends it. Brynja (and her dwarves, if any came) haul the party out through the Gate War shaft as the roof comes down. Hask is buried (presumed dead; the ledger comes out later by ★4 route D). The gate is **not** closed: SEAL doesn't drop (no EVT-19), and Moss loses upgrade #3 holding it shut long enough to get out. Ch13 starts harder. Never a party wipe by script.
+**Rewards.** EVT-19 (SEAL −1, gate closed), EVT-20 (the ledger). The locket becomes a **Hearkener's token** (SEC-23 payoff 3, if it's whole: see `_index.md`).
+**DM notes.** Expected **~10 rounds**. Pacing guard: if it passes round 10 and the last phase change was 4+ rounds ago, the gate surges (phase 3 begins now if it hasn't) or the duet gets an automatic success. Cut the Gate-Hushed reinforcement if the party is struggling; add one if they're cruising.
+
+#### LUCAN HASK, WARDEN-CAPTAIN (NPC-020)
+*Medium Humanoid (human), Lawful Evil (half-Hushed)*
+**AC** 18 (phase 1: glimmer-mail; 17 from phase 2) · **Initiative** +4 (14) · **HP** 580 across three phases (phase 1: 220 · phase 2: 200 · phase 3: 160)
+**Speed** 30 ft. (40 ft. from phase 2)
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 20 | +5 | +9 | DEX | 13 | +1 | +4 | CON | 20 | +5 | +9 |
+| INT | 12 | +1 | +1 | WIS | 14 | +2 | +5 | CHA | 14 | +2 | +3 |
+
+**Skills** Athletics +9, Intimidation +6, Perception +6 · **Resistances** psychic, radiant · **Condition Immunities** Charmed, Frightened · **Senses** darkvision 60 ft. (glimmer-sight), passive Perception 16 · **Languages** Common · **CR** 16 (XP 15,000; PB +5)
+*Tuned for party level 12: boss*
+*Weak saves: **Dex +4** and **Wis +5** (Ash's Cunning Strike DC at L12 is 17: Trip and Daze land about 60–65% of the time). Best saves Str/Con +9.*
+
+**Traits**
+- ***Legendary Resistance (3/Day, or 4/Day in Lair).*** If he fails a saving throw, he can choose to succeed instead. *(In the gate chamber: 4. Spend on Banishment, Hold Person, Forcecage-type effects and stuns, not on minor ones. Say it: "He shrugs it off. That's one.")*
+- ***Half-Hushed.*** He's not thunder-vulnerable (he's only half), but Ash's song can *stir* him (DC 19): on a success he loses his reaction and his next legendary action, hearing a baby screaming for a brother.
+- ***Glimmer-Mail (phase 1 only).*** While his phase 1 pool is above 0, he has resistance to bludgeoning, piercing and slashing damage from nonmagical attacks, and the *Glimmer Shell* reaction. (The party's weapons are magical by now; the shell is the real counter.)
+- ***Burning Hand (phase 2+).*** His right hand blazes white. His Lantern-Glaive attacks deal an extra 1d6 fire, and he gains *Burned Grip*.
+- ***Lair Bond.*** While he's within 60 ft of the gate lake, he regains 10 HP at the start of each of his turns (it stops when the gate closes or he's dragged more than 60 ft away).
+
+**Actions**
+- ***Multiattack.*** Three Lantern-Glaive attacks. He can replace one with *Burned Grip* (phase 2+).
+- ***Lantern-Glaive.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 11 (1d10 + 6) slashing damage plus 7 (2d6) radiant damage (+1d6 fire from phase 2).
+- ***Burned Grip (phase 2+).*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 13 (2d6 + 6) fire damage, and the target is Grappled (escape DC 17). While grappling, he can Lamp-Step with the grappled creature.
+- ***Overload (at each phase change, and Recharge 6 thereafter).*** *Dexterity Saving Throw:* DC 17, each creature within 20 ft. *Failure:* 28 (8d6) radiant damage and Blinded until the end of its next turn. *Success:* half damage only.
+
+**Reactions**
+- ***Glimmer Shell (phase 1).*** See phase 1 counter.
+- ***"Not Again."*** When a creature within 10 ft starts to sing or hum (a waking attempt, SC 12-B, or any song-based action), he makes one Lantern-Glaive attack against it.
+
+**Legendary Actions**
+*Uses: 3 (4 in Lair). Right after another creature's turn, he spends a use on one option. He regains all uses at the start of his turn.*
+- ***Lamp-Step.*** He teleports from one glimmer seam he's touching (or within 5 ft of) to another seam he can see within 60 ft. (Seams are everywhere on the walls.)
+- ***Glaive Sweep.*** He makes one Lantern-Glaive attack.
+- ***Order the Guard (phase 1, costs 1).*** One Hushed Lamp-Warden moves up to its speed and attacks.
+- ***Flare (costs 2).*** One creature he can see within 60 ft makes a DC 17 Con save or is Blinded until the end of its next turn.
+- ***Bring Me the Child (phase 3, costs 2).*** He moves up to his speed toward whoever is singing at the tuning platform, without provoking opportunity attacks.
+
+**Lair Actions** *(initiative count 20, losing ties; no repeat two rounds running)*
+- ***Glimmer Flare (terrain).*** Two seams of his choice burst (DC 17 Dex, 5d8 radiant, 10-ft radius each).
+- ***Greywilt Wave (objective pressure).*** The gate lake's stillness rolls outward 20 ft: every creature within 20 ft of the lake's edge makes a DC 17 Wis save or takes 3d8 psychic and has speed 0 until the end of its next turn. (Gideon's aura protects.) In phase 3, a Greywilt Wave also adds one Gate-Hushed.
+- ***Collapse (phase 2+, terrain).*** A section of walkway or roof falls: a 20-ft square the DM points at; DC 17 Dex save or 4d10 bludgeoning, prone and Restrained under rubble (escape DC 15).
+- ***Counter-Hum (counter, phase 3).*** The gate hums *against* the duet: the next SC 12-B check before initiative 20 next round has disadvantage. (Once only.)
+
+**Phases (summary):** P1 glimmer-mail, shell, guards (Interpose). P2 mail shatters, AC 17, speed 40, Burning Hand, Overload, collapse begins, no dim light. P3 the gate opens: Gate-Hushed every round at count 10; *Bring Me the Child*; the duet objective.
+**Tactics:** focus Ash, then whoever sings. Use seams to get behind the line; never stand in Gideon's reach if a seam is near. Lets the guards take Gideon's hits. Never attacks at disadvantage if a Lamp-Step fixes it. Doesn't retreat (where would he go?).
+
+#### HUSHED LAMP-WARDEN (Hask's guard)
+*Medium Humanoid (human), Lawful Neutral · **Hushed***
+**AC** 18 (plate) · **Initiative** −1 (9; includes Hushed −2) · **HP** 55 (8d8 + 24)
+**Speed** 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 18 | +4 | +7 | DEX | 10 | +0 | +0 | CON | 16 | +3 | +6 |
+| INT | 8 | −1 | −1 | WIS | 10 | +0 | +0 | CHA | 7 | −2 | −2 |
+
+**Resistances** psychic · **Vulnerabilities** thunder · **Condition Immunities** Charmed, Frightened · **Senses** passive Perception 10 · **Languages** — · **CR** 5 (XP 1,800; PB +3)
+*Tuned for party level 12: guard*
+
+**Traits**
+- ***Hushed (recent).*** Wakeable (DC 19). The duet wakes them automatically when the gate closes.
+
+**Actions**
+- ***Warden's Mace.*** *Melee Attack Roll:* +9, reach 5 ft. *Hit:* 10 (1d8 + 6) bludgeoning damage.
+
+**Reactions**
+- ***Interpose.*** When an attack hits Hask and this guard is within 5 ft of him, the guard takes the hit instead.
+
+#### GATE-HUSHED
+*Medium Humanoid (various: miner, beastfolk, Gate War soldier), Neutral · **Hushed***
+**AC** 14 · **Initiative** −2 (8; includes Hushed −2) · **HP** 40 (6d8 + 12)
+**Speed** 30 ft., swim 30 ft.
+
+|   | Score | Mod | Save |   | Score | Mod | Save |   | Score | Mod | Save |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| STR | 17 | +3 | +6 | DEX | 10 | +0 | +0 | CON | 15 | +2 | +5 |
+| INT | 6 | −2 | −2 | WIS | 10 | +0 | +0 | CHA | 5 | −3 | −3 |
+
+**Resistances** psychic · **Vulnerabilities** thunder · **Condition Immunities** Charmed, Frightened · **Senses** passive Perception 10 · **Languages** — · **CR** 3 (XP 700; PB +2)
+*Tuned for party level 12: swarm-pressure*
+
+**Traits**
+- ***From the Gate.*** When the gate closes, every Gate-Hushed that isn't woken sinks back into the water and is gone.
+
+**Actions**
+- ***Grasp.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 10 (2d6 + 3) bludgeoning damage, and if the target is singing, it must make a DC 15 Con save or its song breaks (SC 12-B: no success from that singer this round).
+
+---
+
+## Skill challenges
+
+### SC 12-A · "Into the Workings" · L12 · 5 links, Pressure 0–3
+From Kesselby to the lift-head. **Clock:** the shift change at the top of the hour, when the lamp-wardens rotate and the gate's hum peaks.
+| Link | Situation | Checks | Success | Failure (+1 Pressure) |
+|---|---|---|---|---|
+| 1. **The approach** | Open slope under the wardens' lamp-towers | Stealth DC 17 (group) · Sal Pickett's ale-map (advantage) · come in as the night's ore-cart crew (Deception DC 17, Ash's expertise) | Unseen to the works' gate | A lamp-tower swings toward you: Fight 17's wardens are alert (no talk opening) |
+| 2. **The works' gate** | Iron, glimmer-locked | Thieves' Tools DC 19 (Fast Hands) · Zeke's *dispel magic* or *counterspell* (his Wright's Pick or prepared; automatic, a 3rd-level slot) · Brynja knows a dwarven drain under it (automatic if she's along; Athletics DC 14 to squeeze) | In | The lock's alarm-hum: the lift goes down to warn Hask (he's pre-buffed in Fight 19) |
+| 3. **The new shafts** | A maze of fresh tunnels | Survival or Investigation DC 17 · Ash hears the gate's hum and follows it (Perception DC 15) · Gideon feels the Hushed below (story: automatic direction, from S12.6's discovery, if it's already happened) | The barracks | Lost: 20 minutes; a Hushed miner shift walks past (Fight 18 begins early, here) |
+| 4. **The seams** | A corridor lined with live glimmer seams; one wrong noise bursts them | Stealth DC 16 (each) · Zeke Arcana DC 17 to quiet them · Moss *Commune with Nature* asks the stone where it's quiet (automatic) | Through | A seam bursts: 4d8 radiant to whoever failed; the noise brings the garrison |
+| 5. **The barracks door** | Wade's men inside | Perception DC 15 to count them · a quiet word through the door (Persuasion DC 18 to Wade) | Fight 17 starts with the talk option, the party choosing positions | Fight 17 starts with the wardens in position |
+
+### SC 12-B · "The Closing" (★2, the duet) · inside Fight 19 phase 3 · 6 successes
+**The gate closes when the singers reach 6 successes.** Each round, each singer can attempt one success **as their action**. Failures don't reset the count; each failure brings the gate one step closer to tearing (a Gate-Hushed arrives at once, outside initiative). **3 failures** before 6 successes: the gate tears wider (the chamber floods to the second walkway: all ground is still water) and the singers need 2 more successes.
+**DCs at L12 (tier 3 waking/closing DC 19):**
+
+| Singer | Check | Notes |
+|---|---|---|
+| **Ash (Hearing)** | Perception DC 19 *or* Performance DC 19 (his choice each round: find the note, or hold it) | Perception is his expertise: he's floored at a high roll by Reliable Talent, so **one Hearing success a round is near-certain**. That's intended: Hearing finds; Voice closes. **Ash alone can't close it**; his successes count only up to 3 unless a Voice is singing. Locket token (once per long rest, if whole): advantage. |
+| **Clara (Voice)** | **Automatic success** each round she sings, unless she took damage since her last turn (then a DC 15 Con save) or a Gate-Hushed broke her song | **Twin Bond 3+:** each of Clara's successes counts **double** (it's the duet). Twin Bond 1–2: single. Twin Bond 0: she can't find the note with him (route D). Clara has AC 12, 44 HP. She is Hask's target. Protect her. |
+| **Clara from afar (route C)** | Automatic success **every other round** (she's singing from an Emberford window; Ash feels it like a second rope) | Counts single. She can't be hurt here, but it's slower. |
+| **Zeke (route D: unweave)** | Arcana DC 19, or spend a slot of 3rd level or higher on *dispel magic* (automatic, once per slot level) | Counts single. **Without a Voice, Zeke's and Ash's successes together can reach 6**, but the closing is **temporary** (it reopens at SEAL 7). |
+| **Moss (route D: hold)** | The Hart's round (automatic 2 successes) or Wisdom save DC 17 each round as an action (1 success) | **Cost, stated aloud before he does it:** Moss is drained; he loses story upgrade #3 until Ch16. |
+
+**On 6 successes:** the gate closes **for good** (with Clara singing) or **for now** (route D). Describe it: the lake goes from black glass to ordinary water in a ring from the center out; the seams go dark one by one, like a city going to sleep; the hum stops, and the silence after it is *ordinary* silence, the good kind, with drips in it. **EVT-19 (SEAL −1).**
+- **The duet wakes the recently Hushed** in earshot (Hask's guards, Gate-Hushed, miners) at once. The Gate War dead are laid to rest.
+- **Twin Bond +1** for the duet (if Clara sang it).
+- **The locket** (if whole) goes warm for the first time. From now on it's a Hearkener's token (`campaign/03` SEC-23 rules note; summarized in `_index.md`).
+
+---
+
+## Side-activity window (short: Kesselby)
+
+| Activity | Run it | DC | Reward |
+|---|---|---|---|
+| **Brawl at the Pick and Lantern** | Miners vs off-duty lamp-wardens, nightly. Join (unarmed), bet, or end it (Intimidation DC 17, or Gideon's Abjure Foes on a table, which is funny) | 17 | 25 gp; the miners' trust (SC 12-A link 3 at advantage: they draw the new shafts) |
+| **The miners' wager board** | Bets on the week's output, on who goes quiet next (grim; Sal hates it), on whether the Fenwicks will come back out. Ash can bet on himself: 5:1 | — | 5:1 on any stake up to 100 gp, if they come back out |
+| **Sal's Davey** | Bring a specific Hushed miner out (he's in Fight 18's camp: one of the six) | — | Sal's cider; the town's thanks |
+| **Dwarven warning stones** | Brynja wants rubbings of every warning stone in the Workings (four of them): Investigation DC 15 to find each | 15 | Proof for the Concord (Ch13 ★1); Brynja's gratitude |
+
+---
+
+## Treasure
+
+| Source | Gold | Items |
+|---|---|---|
+| Barracks (Fight 17) | 340 gp in wages | Wade's longsword (fine, mundane) |
+| Mine-Warden's strongbox | 2,500 gp in Guild scrip (Emberford banks honor it until Lantern Night; after Ch13, the Guild's scrip is worthless unless the Concord honors it: spend it soon) | Shipping manifests, Hask's letters (story) |
+| Raw glimmer ingots | worth ~2,000 gp to a buyer | **A moral choice.** Selling glimmer feeds the problem. Moss asks them not to. If they sell, nothing mechanical happens, but Moss says "That's seal-song, lad," and Clara (if she knows) flinches. Dumping it in the closed gate lake is the alternative. |
+| **Hask** | 120 gp | ***The Lantern-Glaive*** (a **+2 glaive** that deals +1d6 radiant: Rare, 4,000 + 20 gp. **Glimmer-cored; dies in Endings 1 and 2.** It's the weapon of the man who burned the Fenwick boat. Nobody has to use it. If someone does, ask them how it feels.) · ***Hask's half-plate*** (+1 Half Plate Armor, Rare, 4,000 + 750 gp; Gideon may refuse it, or wear it, and either choice is a scene) · **the fire-night ledger** (★3) |
+| Professor Doone's crate (in the office, addressed to the Lyceum) | — | A **Wand of the War Mage +2** (Rare, 4,000 gp), meant as a "gift" to bind Zeke to the circle. Zeke can take it, knowing that. |
+| The Gate War shaft (behind the sealed slab, if Fight 18's phase 3 succeeded) | 300 gp in Gate War coin | A dwarven druid-warden's **Staff of the Woodlands** (Rare, 4,000 gp), clutched by a Revenant laid to rest. Brynja: "That's one of ours. Our grove-keepers carried those. Take it to the one who talks to trees." (Moss.) |
+
+**Chapter total:** about **3,300 gp** in coin and scrip (more if they sell glimmer), **three or four Rare items** (the glaive and plate are choices). This is the tier 3 gear chapter.
+
+---
+
+## Seeds placed
+
+| Seed | Where |
+|---|---|
+| SEC-04 proven; SEC-17 revealed (EVT-20) | ★3 |
+| SEC-07 ("the horned ones across the water serve the same peace") | S12.5 |
+| SEC-13 status (the Heron hunts along the bond; then turns to Clara) | S12.1, S12.8 |
+| Lantern Night plan ("the Keeper will light it himself") | S12.5 |
+| SEC-23 payoff 3 (the token) | SC 12-B |
+
+## SEAL check and events (exit)
+- **EVT-19** (Kessel gate closed: **SEAL −1 → 4**; temporary on route D, reopens at SEAL 7) · **EVT-20** (the ledger; SEC-04 proven, SEC-17 revealed) · **EVT-50** (Walt woken: after, if the twins sang together) · **EVT-52** (Rook's step: the ledger, or woken in the garrison).
+- **Mercy:** +1 (miners spared/woken, if not scored in Act I). **Twin Bond:** +1 (the duet), ±1 for how Ash handles Clara and the ledger.
+
+## Level milestone
+**Level 13** at EVT-19 + EVT-20. Ash: **Use Magic Device** and Sneak Attack 7d6 (Ch13's Guildhall devices are built for it; see `_change-requests.md` CHG-A2-05 for the scroll-ability question). Gideon: 4th-level spells. Zeke: 7th-level spells (**Forcecage**). Moss: 7th-level spells.
+
+## If the party goes off-route
+- **They go straight to the Guildhall instead.** It's too early: the Reserve isn't lit until Lantern Night, and the Guildhall's cellars are warded. They can scout (Garrick Stone's tunnels; Ch13 S13.5's routes) but they'll find the Reserve guarded by its colossus, dormant, and Hollis's wardens. If they force it, the Reserve *partly* discharges early (SEAL +1, not +3), Hollis escapes to Kessel, and Ch12 happens in reverse: Hask holds Kessel, and the party chases. Same fights, a different order.
+- **They capture Hask instead of killing him.** Excellent. He's a second witness. In Emberford, he'll testify for his life (and a promise he won't hang). He doesn't love Hollis (R-054: "a soft man with a hard cause"). His testimony plus the ledger is enough for Captain Hale to arrest Hollis... except Hollis is on Guildhall Isle with the Concord's protection, and it's two days to Lantern Night. That's Ch13 ★1.
+- **They don't close the gate** (they take the ledger and run). Kessel stays open. SEAL doesn't drop. The Reserve is fed until Lantern Night (Ch13's SC#4 starts with 1 failure already marked). Moss is grief-stricken and doesn't hide it. They can come back (a short return trip before Lantern Night: Fight 19 without the guards).
+- **Clara wants to go to Hollis right after.** Let her. That's her choice (Twin Bond: don't stop her). She goes to confront him, and he tells her the truth as he sees it: that he saved her from a life of being hunted, that the fire was "a terrible necessity," that he loved her from the first night. She comes back to the Lane at dawn, or she doesn't (Twin Bond decides: 3+ she comes back; 1–2 she sends a note; 0 she stays at the Guildhall, "to understand," and she's in the Reserve chamber on Lantern Night, singing, with her eyes open).
+- **Zeke wants to go and kill Hollis.** He's never wanted to hurt anyone in his life. Let Gideon (or Ash) talk him down, or not. If Zeke goes alone, Hollis receives him kindly, and Zeke can't do it. He comes home and sits on the roof. That's the scene.
+
+## Threads that must be open for Ch13
+- The ledger (and Hask, alive or not). The proof chain: slates (Ch10) + Merrow ledger (Ch9) + fire ledger (Ch12).
+- Hollis knows the ledger is gone (route C letter or rumor). Lantern Night is days away. He won't stop.
+- Clara: where she is, what she knows, Twin Bond.
+- The Heron is hunting Clara.
+- Moss's upgrade #3: held or lost.
+- SEAL 4 (or 5 if the gate wasn't closed).
+- Walt: woken or waiting.
