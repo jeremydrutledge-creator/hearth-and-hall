@@ -59,7 +59,14 @@ Miners' tavern by the Square. Modest lodging 5 sp. **The miners' drinking contes
 
 ---
 
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Pit-Head Run** (Gauntlet, Standard, T2; payday Tenth-days): down the mine scaffold by ladder and rope, through a crawl tunnel, back up the ore-chute. Stations: ladder drop ⬇ (Acrobatics 14), rope descent ⏱ (Athletics or Acrobatics 14; climb speed: automatic), crawl ⏱ (Stealth or Acrobatics 14), ore-cart sprint ⏱ (Athletics or Con 14), chute climb ⬇ (Athletics 14; climb speed: advantage), the pit-bell ⏱. **Entry 10 gp**, the reigning Fist takes **20%** (that's the job). Rivals: miners (+7 Athletics, −2 Acrobatics).
+- **Knife-Throw at the Square** (`§11.3`, T2): miners' axes and knives at the old pit-props, targets AC **14–22**. **Entry 2 gp a try; weekly prize 50 gp.**
+
 ## 5. The Square (sanctioned bouts) and street fights
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** the Square's yearly Fist fight (Ch10) is its own scene (Ch10's wasters rule already fits **Touches/Last-Standing**). Ordinary sanctioned bouts offer **Bare-Knuckle** (the miners' choice) or **Ring-Out on the pit-head beam** over a slurry pool. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 
 The Square is always open for sanctioned bouts: any two people can fight there with a Hundred-man as referee. Ring rules (`00-index.md` §5) with two changes: **gauntlets allowed** (Copper Cuffs work), and **the crowd can throw a fighter back in** once per bout (a fighter pushed out of the ring is shoved back in prone instead of losing, the first time).
 **Opponents:** Copperhill miners (use the Street Tough block, T2, solo, with +20 HP), **Gert Volker** (NPC-148; Ch10 block), and Hilde herself (Ch10 block; she'll spar with a friend any morning for nothing, nonlethal).

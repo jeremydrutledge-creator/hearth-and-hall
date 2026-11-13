@@ -58,7 +58,14 @@ Anyone may ring the ferry bell a tune; best tune (by cheering) gets free supper.
 
 ---
 
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Ferry-Rope Run** (Gauntlet, Standard, T1; Restday afternoons in summer): hand-over-hand along the ferry cable, then the four stepping-posts, the swinging fish-net, a sprint up the landing and the bell on the ferry-house. Stations: cable ⏱ (Athletics or Acrobatics 12; climb speed: automatic), posts ⬇ (Acrobatics 12), net ⏱ (Sleight of Hand 12 to slip the snag), sprint ⏱ (Athletics or Con 12; Dash: automatic), landing ⬇ (Dex save 12), bell ⏱ (Athletics or Acrobatics 12). **Entry 2 gp**; Old Nan Pike's family takes **10%** (honest). Rivals: the Pike grandsons (+5 Athletics, −2 Acrobatics).
+- **The Pike Shoot** (archery, T1; any market day): carved wooden pike bob on the current at 30 / 60 / 100 ft (**AC 13 / 15 / 17**, moving: the river). Three arrows, scored as §11.4. **Entry 1 gp; prize 15 gp and a smoked eel.** Rival: a King's Road courier who shoots +5.
+
 ## 4. Ring and street fights
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** **Bare-Knuckle** on the landing, or **Ring-Out on the ferry-barge's gangplank** over the river (the village's favorite: the loser swims). No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 
 There's no ring. There's the green.
 - **Green bouts:** after the arm-wrestling, sometimes someone wants to settle it standing up. Use the street-fight rules (`00-index.md` §6) and the **Street Tough** block (`03-emberford.md` §4.3), T1 or T2. A crowd of thirty and a hat (1d6 × 5 gp × tier).

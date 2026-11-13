@@ -52,7 +52,14 @@ The woken calves of the Quiet Pens are run up to the high pastures for the first
 
 ---
 
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Maze Run** (Gauntlet, T3): the herd-clans' hedge-and-stone maze. Perception ⏱ stations (DC 16, find the true path), sprint ⏱, and a calf-pen ⬇ (Stealth DC 16, slip past without startling the calves). **Entry 50 gp, pot.** Minotaurs (+5 Perception, a maze-sense +2 by birth) are the rivals.
+- **Horn-Archery** (archery, T3): long rounds at 150 / 300 ft (**AC 17 / 19**) shot from horseback... from a running minotaur's shoulders, actually, for the final. **Prize 400 gp and a drum-skin** signed by the war-chief's drummers.
+
 ## 4. The wrestling ring (ritual wrestling)
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** ritual wrestling is **Bare-Knuckle** by tradition, but a challenger may claim **Ring-Out** (the herd-clans' calf-game: push your opponent out of the stone circle). A minotaur may never refuse a smaller challenger's choice of format. That's the warrior-code. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 
 A ring of stones on every herd-hall's green. Three falls; a fall is a pin for a count of three or a throw out of the ring. Opposed Athletics, or a full bout with this block.
 

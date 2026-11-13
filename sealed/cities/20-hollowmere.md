@@ -39,6 +39,8 @@ A market in the biggest warren's great round hall, under a ceiling of roots hung
 | **Spring-Boxing** (hares box!) | A boxing match in the meadow, hare-style: three rounds, fast, mostly kicks. Use ring rules (`00-index.md` §5) and the **Warren Boxer** below. | 150 gp (T3) and a hare-folk boxer's ribbon |
 | **The Round-Song** | A singing contest in rounds: **Performance DC 17** to keep your part while three other parts sing against you. **Ash's tune** sung as a round here, with Lark, makes the island's stone ring hum (Ch14/Ch17 color). | The Mothers' blessing (story: a hare-folk Mother's blessing on a Tall Folk boy hasn't been given in four hundred years) |
 
+**Ring formats (`00-index.md` §5.1, CHG-19):** hare-folk spring-boxing is **Touches** (a clean kick counts as a touch; hare-folk ring AC 14, and they hit like mules) or **Ring-Out off the warren-mound** (first one down the slope loses). No magic.
+
 ### WARREN BOXER (a hare-folk spring-boxer)
 *Small Humanoid (hare-folk), Chaotic Good* · **AC** 16 · **Initiative** +6 · **HP** 79 · **Speed** 40 ft. · **CR** 7 (PB +3)
 *Tuned for party level 14 (Ash alone; ring DPR 26, HP 101).*
@@ -50,6 +52,11 @@ A market in the biggest warren's great round hall, under a ceiling of roots hung
 - ***Reaction: Hop Back.*** When targeted by a melee attack, the boxer hops 10 ft away without provoking; the attack has disadvantage (once per round).
 
 ---
+
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Leaping Fair** (Gauntlet, T3; Ch14+): a hare-folk course where **jump stations dominate** (four gap jumps, two of them ⬇). Hare-folk jump +8 and laugh at everyone else. **Second-Story Work's Dex jumping** keeps Ash in it. **Entry 50 gp, pot; winners get a garland of meadow-flowers** the warren will talk about for years.
+- **The Reed Run** (Gauntlet, Hard, T3): across the otter-rafts' floating reed mats on the Rennet, Dex save ⬇ stations every other step. Otter-folk (+9 Acrobatics) win when they can stop laughing. **Entry 50 gp, pot.**
 
 ## 4. The Rennet otter-rafts
 

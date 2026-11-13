@@ -385,12 +385,21 @@ A narrow, glass-roofed lane in Glimmerway, about two hundred feet long, lined wi
 - **The Bargerace** (Highwater Fair): teams of four pole a barge through the Seven Bridges. Prize 100 gp and a guild ribbon. There's always sabotage.
 - **The Lamp-Climb** (Ford Festival): climb the greased 60-foot Great Lamp pole on Guildhall Isle and tap the lamp. Prize 50 gp and a free drink in every tavern for a year (in theory).
 - **The Knife Wall** (Market Steps, any day): throw five knives at painted targets, 1 silver a try. The weekly champion gets 10 gp.
+- **The Wharfmaster's Run** (the Wharves, every Tenth-day afternoon): an obstacle course of floating barrels, a cargo net, a quay sprint, a ribbon to snatch off a swinging dummy, a tilting plank over the river and a bell at the end. **2 gp to enter.** Everyone who makes it to the bell without falling in or running out of time splits the pot (minus the clerk's cut). Most weeks, nobody or one person does.
+- **The Locksmiths' Race** (Glimmerway, first Restday of the month): five locks on a board against a sand-glass, each harder than the last, and the last one bites. 3 gp to enter; the winner gets 40 gp and a guild pick set. It's perfectly legal, held in daylight with the Watch watching... which some people think is the point.
+- **The Rooftop Race** (Tenth-day dusk, unofficial): from the Willow's roof to the weathervane on the Assembly Rooms in Crownhill. 2 gp a runner, winner takes the pot. Illegal in Crownhill, ignored in the Fringe. Rook and his Magpies run it every week.
+- **The Ribbon Pull** (Highwater Fair): ten "marks" in bell-sewn coats walk Market Steps with ribbons tucked somewhere. Pull the most ribbons without ringing a bell. 1 gp; prize 25 gp and a silk purse. Half the city thinks it's a game. The other half thinks it's a pickpocket audition.
 - **The Riddle Table** (the Lyceum, monthly): riddles for a minor magic prize. Zeke's favorite.
 - **Liars' Night** at the Willow (monthly): the best tall tale wins the night's tab.
 - **Guild Games** (Harvest): strength, archery, wrestling and tug-of-war between the guilds. Outsiders can enter as the "Fringe" team.
+- **Other cities have their own:** archery shoots, lock-boxes, climbing races, obstacle courses and stranger things. Every town has at least a couple.
 
 ### Fight rings
-- **The Bucket:** an underground ring in a drained cistern under a Wharves warehouse, run by Ma Garrow. Bare knuckles and cudgels. Entry 5 gp; purses 20–200 gp. **Rules:** no cutting weapons, no magic, "no killing on a Tenth-day." The betting is huge.
+- **The Bucket:** an underground ring in a drained cistern under a Wharves warehouse, run by Ma Garrow. Entry 5 gp; purses 20–200 gp. The betting is huge. **No blades that cut, no magic of any kind** (no spells, no holy smites, no familiars), and "no killing on a Tenth-day." You pick your format when you sign the slate:
+  - **Bare-Knuckle:** fists and grapples, three rounds. The big men's game.
+  - **Wasters (Touches):** wooden practice blades, first to three touches. A hit is a touch however hard it lands; a clean hit counts double. The quick man's game.
+  - **The Plank (Ring-Out):** a plank over the drain-pool. First one off loses.
+  - **Last-Standing** (Restdays): six fighters in the pit at once, last one up takes the pot.
 - **Street fights:** behind the Drowned Lantern, settled with a crowd and a hat passed for coins.
 
 ### Betting

@@ -88,7 +88,13 @@ Everything cheap, everything secondhand, half of it stolen. Mundane gear at **�
 
 ---
 
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The King's Archery** (archery, T4; the boy-king's festival): long rounds at **150 / 300 / 450 ft (AC 17 / 19 / 21)** and the trick round (split the royal ribbon, AC 23). **Entry 100 gp; prize 2,000 gp and a silver arrow** from the king's own hand. Rivals: the Chancellor's huntsman (+12), the royal guard's champion (+13). A longbow helps, and Ash isn't proficient (§11.4).
+- **The Night Climb** (`§11.6`, T4; Lowtown, illegal): into a Highmarch merchant's tower and out with the marked token. Pot **1,000 gp** staked by three crews. The Chancellor's men like to know who wins.
+
 ## 4. The Lowtown Pits (illegal fight ring)
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** the Pits run **Bare-Knuckle** and **Last-Standing** (blood-sport crowds), and a **Touches** card for nobles slumming it in masks. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 
 A flooded cellar under a Lowtown tannery, raided twice a year by the Crown Guard (always on the same two days; everyone knows which). **Boss: Black Tom Rudge** (NPC-346; aka Tommy Rudge), a scarred, genial crook who sells beer, fights, information and stolen goods. Ring rules (`00-index.md` §5) except **cutting weapons allowed** (first blood or yield; healers, sort of).
 - **Purses (T4):** undercard 300 / main 500–1,000 / champion **2,000 gp**.

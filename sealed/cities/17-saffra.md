@@ -53,7 +53,15 @@ Every story-hall has rooms. A night: **one story** (Charisma (Performance) DC 13
 
 ---
 
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Awning Run** (Gauntlet, Hard, T3): over the bright awnings and up the bell-ropes of the Hall of Bells. Tabaxi (+10 climb and jump) usually win. Climb speed: advantage on every climb. **Entry 50 gp, pot; the Tale-Keepers take 10%** and a story about every passer.
+- **The Tumbling** (judged, T3): three passes (**Acrobatics DC 16**, a knife-catch **Dex save DC 17**, a finale in **Performance**). Prize: **the crowd's hat (2d6 × 25 gp)** and a line in the Great Telling, which in Saffra is worth more.
+- (Ch14's rooftop chase race with Zuri Far-Wander is its own scene; run it as a **Rooftop Race**, §11.6.)
+
 ## 4. The Scratch (sparring ring)
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** the Scratch is tabaxi **Touches** with padded claws (a claw-touch counts like a waster hit; tabaxi ring AC 15–16). Outsiders may ask for **Ring-Out on the bell-rope beam**. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 
 A sanded courtyard behind the Hall of Bells where tabaxi spar with **padded claws**. Ring rules (`00-index.md` §5), three rounds, nonlethal. **No weapons at all** (Ash fights unarmed; Sneak Attack doesn't apply unless he has a way, which he doesn't). Purses (T3): 150 / 200–400 / 750 gp. It's fast, flashy and funny.
 

@@ -38,6 +38,8 @@
 **Interior (painter):** a smoky upstairs room with a big window over the snow (the window is on hinges; there's a cheat-shaped dent in the drift below); round tables, wolf-pelt chairs, a stove.
 
 ### 2.3 The Hiring Yard
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** the Yard spars in **Touches** (Company rules: waster swords, three touches, the sergeant judges) and **Last-Standing** on payday. Knife duels (§3.2) are Touches with waster knives. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 Anything can be hired (Ch10). **Rates:** a Grey Wolf Veteran (`act2/ch10` block) **200 gp** a fight (Ch13 allies), a squad of five Wolf soldiers (Street Tough T2 with spears and shields, AC 16) 100 gp a night, a guide over the pass 25 gp, a sapper 50 gp. Every hire is a written contract (Investigation DC 13 for the clause that says "unless the other side pays more" — it's always there, and Ulric's Wolves never use it on a party that's been honest with them).
 
 **Art:** `ch10-wolfsgate.png` (the Wolf Hall in snow) · `ch10-vonns-card-house.png` · `npc-065-ulric-fane.png` · `npc-337-hesketh-vonn.png`.
@@ -80,6 +82,11 @@ An endurance race up the mountain at night (Ch10: **Athletics DC 15 ×3, Con DC 
 **Tactics:** textbook. Won't chase. Respects anyone who fights smart. (Sergeant **Ruth Dane**, NPC-321, from Hobb's Ferry, runs the Yard; use this block for her.)
 
 ---
+
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Hiring Yard Trials** (archery and knife-throwing, T2; any morning): the Grey Wolf Company tests would-be hires on the butts: the archery short and long rounds (§11.4) and the knife board (§11.3). **No entry fee.** Top score of the day gets **50 gp** and a **contract offer** (one job, 100–300 gp, the Company's terms). Rivals: Company archers (+7 ranged), a mountain hunter (+8 long range).
+- **Escape Artist's Chains** (`§11.6`, T2; the Company stockade, Restday): Company manacles (DC 15), a grain sack (Acrobatics 14), the punishment box (Thieves' Tools or Athletics 15). Fastest out wins **80 gp** and the sergeants' grudging respect. Ash brought his own manacles; the sergeants think that's hilarious.
 
 ## 4. Street fights
 

@@ -47,4 +47,10 @@ CHG-## · Session # (or "build") · What changed · Why · Records touched (NPC/
 
 **CHG-18 · build (consistency pass) · Every belief change now has an event.** Added EVT-58 (Wolfsgate contract settled, Ch10), EVT-59 (Dunmore laid to rest or woken, Ch16), EVT-60 (the race with Hattie, Ch19) for the three new edges that changed through a chapter beat with no event. · Touched: truth/03 (R-201, R-234, R-239), truth/05.
 
-Next free: **CHG-19**, NPC-097, R-241, SEC-25, EVT-61.
+**CHG-19 · build (player feedback) · Ring formats.** Player asked that fight rings let a Dexterity rogue compete. `cities/00-index.md` §5.1 rewritten: four formats (Bare-Knuckle, Wasters/Touches, Ring-Out/Beam, Last-Standing); ring AC = 10 + Dex; no magic of any kind (Divine Smite is a spell; no auras, Radiant Strikes, Wild Shape, familiars); non-magical class features allowed; the Quick-Hands rule; touch cap; tuning notes by format. Every city's ring now lists its formats. Bucket ladder gains four Touches and four Ring-Out opponents (Will Farrow, Maud Kemble, Vesper Osgood, "the Needle"; Jinks Cobb, Sefton Darby, Ludo Ferris, Ned Garrow on the plank). Chapters touched: Ch1 Bucket undercard (format choice), Ch2 and Ch5 Bucket rows, Ch11 Festival Card. Beats unchanged. New Tier 3 names (no IDs): Will Farrow, Jinks Cobb, Tilly Cobb, Old Merrit, Maud Kemble, Sefton Darby, Vesper Osgood, Ludo Ferris, "the Needle", Lida Tull, Brother Gaskin.
+
+**CHG-20 · build (player feedback) · Skill contest system.** Player asked for rogue skill contests (knife-throwing, archery, lock-picking, obstacle courses with pot payouts). `cities/00-index.md` §11 added: the Gauntlet pot format, the obstacle-course builder (⬇ drop and ⏱ clock stations, Ash's features per station), knife-throwing, archery, lock-picking, six more rogue contests, rival bonuses, treasure note, and a city-by-city list.
+
+**CHG-21 · build (player feedback) · Every city gets 2+ skill contests.** Emberford §2.8 (Wharfmaster's Run, Locksmiths' Race, Rooftop Race, Ribbon Pull) and a "Skill contests" block in every other city file (04–20). Player packet §8 and new `player/contests-and-rings.md` updated with public rules only.
+
+Next free: **CHG-22**, NPC-097, R-241, SEC-25, EVT-61.

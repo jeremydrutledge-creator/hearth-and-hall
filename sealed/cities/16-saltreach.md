@@ -60,7 +60,13 @@ A small-sail regatta around the harbor and out past the point. **Ch19 is in Mids
 
 ---
 
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Rigging Race** (`§11.6`, T4): up three masts of a navy frigate in harbor, across the yards, down the backstay. **Climb speed: advantage on every stage.** **Entry 200 gp; prize 2,000 gp** and the governor's handshake. Rivals: topmen (+12 Athletics, +11 Acrobatics).
+- **Escape Artist's Chains, the harbor drop** (`§11.6`, T4): manacles DC 20, a sack, a weighted crate off the quay into the harbor; Con save DC 14 + 2 per extra try. **Prize 1,000 gp and the crowd's hat.** Smugglers watch to hire the winner.
+
 ## 4. The Hold (fight ring)
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** the Hold runs **Bare-Knuckle** in the bilge, **Ring-Out on a spar over the harbor**, and **Last-Standing** on navy paydays. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 
 Bouts in the hold of a rotting warship hulk in the Navy Yard's mud. Ring rules (`00-index.md` §5); **the ship lists**: at the start of each round, roll a d6; on a 1, everyone in the ring makes a **DC 15 Dex save** or slides 10 ft downhill and falls prone.
 - **Purses (T4):** 300 / 500–1,000 / **2,000 gp** (championship).

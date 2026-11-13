@@ -51,7 +51,14 @@
 
 ---
 
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Wager Board's Rooftop Race** (`§11.6`, T3; any evening the miners are bored): over the slate roofs of the company cottages to the Pick and Lantern's chimney. Lamp-wardens don't care; the Mine-Warden pretends not to. **Entry 50 gp, pot.** Rivals: young miners (+8 Athletics, −2 Acrobatics), a lamp-warden off duty (+9).
+- **Shell-Game Tournament** (`§3`, `§11.6`, T3): at the Pick and Lantern, eight sharps from three towns. **Entry 25 gp; winner takes the entries.** Sal Pickett (NPC-153) runs the book and bets against Ash.
+
 ## 4. Brawls at the Pick and Lantern
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** the Pick and Lantern brawl is **Last-Standing** (fists and furniture). The wager board will also book a **Ring-Out** on the cart-bridge over the slurry ditch. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.
 
 Ch12: miners vs off-duty lamp-wardens, nightly. Join (unarmed), bet, or end it (**Intimidation DC 17**, or Gideon's Abjure Foes on a table, which is funny). Reward 25 gp and the miners' trust.
 Use the **Street Tough** block (`03-emberford.md` §4.3) at **T3** for miners, and this for the wardens:

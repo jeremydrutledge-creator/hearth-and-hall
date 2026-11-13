@@ -54,6 +54,10 @@ On a still day, sit on the causeway at dusk and watch the dead walk past. **Wisd
 
 ---
 
+### Skill contests (`00-index.md` §11; CHG-21)
+- **Ring the Bell** (§3.1) is a **Mast Climb** variant: climb speed gives advantage.
+- **The Salvagers' Night Climb** (`§11.6`, T2): from the scavengers' camp into a half-sunk tower at the marsh-edge and back with a marked token. Pot **100 gp** staked by two salvage crews. Stealth and Perception stations; the drowned bells ring if anyone fails Stealth by 5 or more, and then it isn't a contest any more (Hushed dead, `§4` below).
+
 ## 4. Fights
 
 **No ring.** The marsh is the ring. Scavengers settle disputes by **the Long Pole**: two people stand on two boats, each with a pole, and try to knock the other in (opposed **Athletics**, best of three; a fall is a cold swim). Bertie's six are all +5. Bertie himself is +8 with one arm.

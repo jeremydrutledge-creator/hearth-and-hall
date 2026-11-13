@@ -56,7 +56,14 @@ A riddle-trail through the library, set by Sister Winifred. Five riddles hidden 
 
 ---
 
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Bell-Ringers' Challenge** (§3.2) runs as a **Mast Climb** (`00-index.md` §11.6) up the abbey tower: climb speed gives advantage on every stage.
+- **Bee-Skep Archery** (archery, T2; feast days): straw skep-targets swung on ropes from the orchard trees (**moving, AC 15 / 16 / 17**), plus one long shot over the still lake (**AC 17 at 150 ft**, the monks' tradition). **Entry 5 gp; prize 60 gp and a jar of the abbey's honey.** Rival: Brother Gaskin, a lay brother who was a soldier (+7 ranged). *(The monks never let anyone shoot across the lake on calm mornings. They won't say why.)*
+
 ## 4. Fights
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** there's no ring; brawls with pilgrims are **Last-Standing** rules if anyone's counting. No magic.
 
 **None.** It's an abbey. A **Duel of Honor** isn't allowed on abbey land, so village disputes are settled by **the Long Silence**: both parties sit together in the chapel without speaking until one gives way. **Wisdom saves DC 12 / 14 / 16** each hour; the first to fail speaks first and loses. Ash will hate it. Gideon will win it.
 

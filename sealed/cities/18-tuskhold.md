@@ -50,7 +50,14 @@ Tuskhold feeds guests: flatbread, fruit, a thick bean stew. Free, always, even d
 
 ---
 
+
+### Skill contests (`00-index.md` §11; CHG-21)
+- **The Weight-and-Balance** (Gauntlet, T3): carry a water jar across the balance-logs of the old wall (**Dex save** ⬇ and **Con save** ⏱ stations, DC 16). The elephant-folk children are better at it than anyone. **No fee; prize: a memory-stone with your name on it**, and food for the city's refugees in the winner's name.
+- **Trunk-Throw** (knife-throwing, T3): elephant-folk swing the targets with their trunks (**moving, AC 16–24**). **Prize 200 gp** (in food for the besieged city if the party agrees, which earns a step of attitude with the Rememberer).
+
 ## 4. Fights
+
+**Ring formats (`00-index.md` §5.1, CHG-19):** the Horned Wrestle (Ch16) is **Ring-Out** in a sand circle; the elephant-folk also play **Touches** with reed-wands for children's festivals and will let an outsider in. No magic.
 
 **No ring.** Tuskhold's only ring is the war on the walls (Ch14, Ch16). Sparring happens on the wall-walk with the **Wallguard**, who'll spar with anyone who stands a watch with them (no purse; respect). Ch16's **Horned Wrestle** (Brannoc +13) is the one honor bout.
 

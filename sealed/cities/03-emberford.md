@@ -62,6 +62,13 @@ Across the Fordwater and back. Three **Athletics DC 15** checks, best of three w
 ### 2.7 Turn of Light (Ash's birthday)
 No contest. At sunset, floating lamps. Each person makes a wish, and it's bad luck to say it aloud. Ask the player what Ash wishes for, and don't comment. Write it in the Campaign Bible. **(Ch20 uses it.)** The Lane throws Ash a small party at the Willow if Peg can manage it; the Lane has done this every year since he was three.
 
+### 2.8 Skill contests (`00-index.md` §11; CHG-21)
+Ash's city has the most of them, and they're where the Lane will come to cheer.
+- **The Wharfmaster's Run** (Gauntlet, **Standard**, T1; every Tenth-day afternoon on the Wharves; Hard from T2). The sample course in `00-index.md` §11.2: the barrels ⬇, the cargo net ⏱, the quay sprint ⏱, the ribbon grab ⏱, the tilting plank ⬇ (into the Fordwater), the bell ⏱. **Entry 2 gp**; the Wharfmaster's clerk takes **15%**. Rivals: **Joss Kettering** (sailor, +5 Athletics, −2 Sleight of Hand), **Rook** (+6 Acrobatics; he'll be there the first time Ash is), Bargemen apprentices (+5 Athletics). The Lane comes to watch; Pip shouts every station.
+- **The Locksmiths' Race** (lock-picking, T1–T2; first Restday of each month, Glimmerway, in the Locksmiths' Guild yard under the Watch's eye). As `00-index.md` §11.5: five locks **DC 10 / 12 / 14 / 16 / 18**, the last trapped, five minutes. **Entry 3 gp; prize 40 gp and a guild pick set** (+1, non-magical). Rivals: a guild apprentice, **Tilly Cobb** (+5), and a "retired" burglar the Watch knows by name, **Old Merrit** (+6; he winks at Ash). Captain Hale's sergeant writes down the winner's name. **Every time.**
+- **The Rooftop Race** (`00-index.md` §11.6; unofficial, Tenth-day dusk): from the Willow's roof to the Assembly Rooms' weathervane in Crownhill. **Entry 2 gp, pot.** Rook and two Magpies run it every week. It's illegal in Crownhill (trespass) and nobody cares in the Fringe. **Ash's signature contest**, and the one Rook most wants to beat him at.
+- **The Ribbon Pull** (`00-index.md` §11.6; Highwater Fair only, on Market Steps): marks are Weavers' Guild apprentices in bell-coats, passive Perception 11–14. **Entry 1 gp; prize 25 gp and a silk purse.** Hugh Dale watches the winners very closely.
+
 ---
 
 ## 3. Betting in Emberford
@@ -81,7 +88,8 @@ Use the odds table in `00-index.md` §4.
 ### 4.1 The place and the rules
 A drained cistern under a Wharves warehouse: a round brick pit with an iron rail, three tiers of crates for seats, lanterns on chains, the smell of river and sweat. **Ma Garrow** (NPC-024) sits on an upturned barrel by the ring cracking walnuts one-handed. Odds chalked on a slate by her nephew, **Little Ned Garrow** (NPC-310; huge, gentle, the chalk looks tiny in his hand).
 - **Card nights:** Tenth-day (main card), Restday (undercard and, in Act I, beast bouts until Ma's code shuts them, Ch1/Ch7).
-- **House rules:** no weapons that cut (cudgels and wasters allowed; `00-index.md` §5.1), no magic, no familiars in the pit (Bart heckles from the chains). "No killing on a Tenth-day" (Ma applies it every day for the undercard). Nonlethal.
+- **Formats (`00-index.md` §5.1, CHG-19):** the Bucket runs **Bare-Knuckle** (Ma's first love), **Wasters (Touches)** and, on Tenth-days, a **plank over the cistern's drain-pool for Ring-Out**. Restday undercards add a **Last-Standing** (six fighters, wasters). The entrant picks from the night's card.
+- **House rules:** no weapons that cut (cudgels and wasters allowed), no magic of any kind (no smites, no spells, no animal shapes), no familiars in the pit (Bart heckles from the chains). "No killing on a Tenth-day" (Ma applies it every day for the undercard). Nonlethal.
 - **Entry:** 5 gp. **Purses:** `00-index.md` §5.3 (T1 20/40/100 · T2 50/80–150/300 · T3 150/200–400/750 · T4 300/500–1,000/2,000).
 - **Ma's code:** no kids. No beasts that talk (once Ash tells her, Ch1). No fixed fights she doesn't fix herself. She always finds out who took a dive.
 - **Healer:** Ma's sister-in-law **Dot Garrow**, 5 gp × tier for half HP between bouts.
@@ -95,6 +103,18 @@ The chapters name specific opponents. Use them when they fit; use the ladder for
 | **T2** | Hal Brindle scaled to L5–6 (+6 HP/level, `00-index` §5.2) | **"the Anvil" Morwenna Kell** (§4.4; Ch5) · **the Kessel Mule** (§4.4; Ch7) | Ch11 Festival Card: Toll Bravo (`act2/ch08`), Grey Wolf Veteran (`act2/ch10`), then **"the Ox"** (Hilde Strand's numbers, `act2/ch10`) | Ch5, Ch7, Ch11 |
 | **T3** | The Ox (as Ch11) | **Brannagh "Bonebreaker" Reece** (§4.4) | **Ma's champion of champions, Ned Garrow** (§4.4) | — (the Bucket after Ch13 runs in a half-flooded cistern, `§4.5`) |
 | **T4** | Reece | Ned Garrow scaled up a tier | **"the Bellman" Jonas Hatch** (§4.4) | — |
+
+
+**Format choices on the ladder (CHG-19).** The fighters above are **Bare-Knuckle** brawlers (Strength-favored); in **Touches** they use waster clubs at **ring AC 10 + Dex** (most are AC 10–12 there) and the touch cap, which makes them big targets for a fast fencer. Every card night also offers these **Dexterity fighters** for Touches and Ring-Out (short blocks; scale with `§5.2`):
+
+| Tier | Touches (wasters) | Ring-Out (the plank) |
+|---|---|---|
+| **T1** | **"Dandy" Will Farrow**, a Crownhill footman who fences on his nights off. Ring AC 13, +5 to hit, waster rapier 1d8+3; **Parry** (reaction: +2 AC against one hit, turning it into a miss if that's enough). Thinks he's better than he is. HP 20. | **Jinks Cobb**, Tilly's cousin, a wiry ferry-hand. Athletics +4, Acrobatics +5, Dex save +4; **Sidestep** (once per bout, he dodges a shove automatically). HP 18. |
+| **T2** | **Maud Kemble**, a Lyceum fencing master who teaches the rich and fights for the joy of it. Ring AC 15, +7 to hit, two waster attacks; **Riposte** (when an attack misses her, reaction attack). HP 50. | **Sefton Darby**, a bargeman who's never been thrown off a plank. Athletics +7, Acrobatics +5, Dex save +5; **Low Stance** (advantage to resist shoves; disadvantage on Dex saves when he's hit by a crit). HP 55. |
+| **T3** | **Vesper Osgood**, a Tollhaven duelist on the run from a contract. Ring AC 16, +9 to hit, two attacks; **Feint** (bonus action: advantage on the next attack, once a round); **Riposte**. HP 75. | **Ludo Ferris**, an acrobat from a river circus. Athletics +7, Acrobatics +10, Dex save +9; **Spring** (once a round, moves 10 ft along the beam without provoking). HP 70. |
+| **T4** | **"the Needle,"** a masked duelist who fights only on Lantern Night. Ring AC 18, +11 to hit, three attacks; Feint, Riposte, **Read the Blade** (Legendary Resistance ×1, for one touch she'd lose). HP 120. | **Ned Garrow on the plank** (§4.4 scaled up a tier): the biggest man in the Bucket, Athletics +12, Dex save +5. A Strength wall; beat him with footwork. |
+
+**Ash's odds by format, T1** (the bookie's line; the player shouldn't see this table): vs Lottie Sparrow Bare-Knuckle **2 to 1 against**; vs Lottie in Touches **1 to 3 on** (she's AC 10 there); vs Will Farrow in Touches **evens**; vs Jinks Cobb on the plank **evens**.
 
 ### 4.3 Street Tough (the reusable crew block for street fights)
 Use for every street fight in Emberford (and as the base everywhere: city files add one local trick).
