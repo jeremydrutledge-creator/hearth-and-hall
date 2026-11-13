@@ -21,3 +21,14 @@
 - Zeke (Wizard): INT 17, CON 16, DEX 13, WIS 12, CHA 11, STR 8
 - Moss (Circle of the Moon Druid): WIS 16, CON 16, DEX 15, STR 12, INT 12, CHA 12
 - Party is well above standard-array power (modifier totals +12, +12, +7, +11 vs +5). Encounter tuning must use these actual numbers.
+
+## Ash — build so far (built with the player)
+- Human, Rogue 1 (house-ruled Thief/Swashbuckler subclass at 3), Wayfarer background.
+- Scores: DEX 18 (16+2), CHA 18 (17+1), CON 14, WIS 14, INT 13, STR 13.
+- Skills: Insight, Stealth, Sleight of Hand, Perception, Deception, Acrobatics, Persuasion (human Skillful).
+- Expertise (L1): Stealth, Perception. Planned L6: Sleight of Hand + Deception or Persuasion.
+- Feats: Lucky (Wayfarer); Magic Initiate (Wizard) via human Versatile — spellcasting ability CHA.
+  - Cantrips: Message, Prestidigitation. 1st-level spell: Find Familiar.
+- Tools: Thieves' Tools.
+- Familiar HOUSE RULE: default form is an owl. Once per day (resets on long rest), free, the familiar can blink into its pocket dimension and return in a different familiar form (spider and rat most common) for up to 1 hour, then blinks away and returns to its form for the day. Free of cost. Uses the standard 2024 familiar form list and stat blocks. (Changing the day's base form otherwise follows normal Find Familiar rules.)
+- Familiar uses the Help action to grant advantage; owl has Flyby. Expect smart enemies to target it.
