@@ -46,7 +46,7 @@ Some items need something only Ash can get (a hair, a feather, a bit of Mirrowen
 ### 2.3 Building a new commission
 If the player asks for something not on the menus:
 - **Does one small cantrip-sized thing, always, or once a day:** Common, **100 gp**, 3 days to 2 weeks.
-- **Gives a real mechanical edge** (a +1, advantage on one kind of check, a spell once a day): Uncommon, **400 gp** plus a material **[needs]**, 2–4 weeks. Only Hearthglow, Keepsake & Locket, Lightfinger and Quickhand can do Uncommon. Nobody on the Row does Rare.
+- **Gives a real mechanical edge** (a +1, advantage on one kind of check, a spell once a day): Uncommon, **400 gp** plus a material **[needs]**, 2–4 weeks. Only Hearthglow, the Dry Cloak, Keepsake & Locket, Lightfinger and Quickhand can do Uncommon. Nobody on the Row does Rare.
 - **Pure fashion or fun, no rules effect:** a **glimmer charm**, 5–50 gp, 1–3 days.
 - **(true) magic** (survives the end of glimmer): Uncommon only, from **Dagny** (tools) or **Elspeth** (memory), **×2 price and ×2 time**, and only after Ch10 (when Dagny's oath-shame turns into pride, and Elspeth admits she learned the old way first).
 
