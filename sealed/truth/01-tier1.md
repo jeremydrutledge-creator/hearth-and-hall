@@ -25,7 +25,7 @@ Tier 1 · FAC-05 (Willow Lane) · First seen: opener, the Fenwick house
 - **ARC:** Ch1 reins Ash in, bandages him anyway · Ch2 oath at the Ford Stone (L3), feels the antlered presence, says nothing · Ch4 the twin secret breaks; he defends it, then owns it · Ch6 sees the Hart and knows · Ch7 confronts Moss: "It was you. On the bank." (EVT-44) · Ch10 marked by Ursk; dwarves kneel to it · Ch11 Hester's slip about Clara turns him white (Route C) · Ch12 can feel which Hushed can still be woken · Ch14–16 bear-folk kneel; leads an army · Ch20 holds the line. Ending 2: swears the first joint Warden oath.
 - **EDGES:** R-001, R-002, R-003, R-015, R-016, R-017, R-096 · targeted by R-005, R-009, R-019, R-022, R-034, R-058, R-063, R-086, R-087
 - **STATUS:** alive · Willow Lane, the Fenwick house · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-001-gideon-fenwick.png
+- **PORTRAIT:** /art/portraits/npc-001-gideon.png
 
 ---
 
@@ -44,7 +44,7 @@ Tier 1 · FAC-05 / FAC-17 (Lyceum, when he can pay) · First seen: opener, the a
 - **ARC:** Ch2 hears glimmer, thinks it's a headache; vouches for Hollis · Ch3 reads the Ford Pool stones · Ch4 sings the second verse (Route C) and confesses · Ch5 glimmer resonance · Ch7 spots the listening-lamp (Arcana DC 18) · Ch9 reads the astrolabe · Ch11 offered a paid Guild fellowship · Ch12 reads Hollis's order; his hero falls (EVT-20) · Ch13 unweaves the city's lamp-chain · Ch15 reads the Wardens' stones · Ch17 speaks the song's words.
 - **EDGES:** R-004, R-005, R-006, R-007, R-095 · targeted by R-002, R-010, R-043, R-046, R-053, R-061
 - **STATUS:** alive · Willow Lane, the Fenwick house (attic) · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-002-zeke-fenwick.png
+- **PORTRAIT:** /art/portraits/npc-002-zeke.png
 
 ---
 
@@ -63,7 +63,7 @@ Tier 1 · FAC-05 / FAC-14 (the Wardens) · First seen: Ch1, dusk, "back from the
 - **ARC:** Ch1 knows Thistle's name and slips · Ch2 first explanation · Ch3 veil released, story upgrade #1 · Ch6 becomes the Hart at the Glass Mere shore (EVT-25), upgrade #2 · Ch7 tells the whole story; Gideon confronts him (EVT-44) · Ch10 Bearback shrine piece, upgrade #3 · Ch11 learns Wren is alive; breaks, comes back (EVT-47) · Ch13 holds the Hall with roots · Ch15 faces his sister · Ch16 antlers permanent, upgrade #4 · Ch17/19 last shrine piece, upgrade #5 · Ch20 his final choice (Ending 2: becomes the Ford Stone tree; Ending 3: the stone stag at the Gate).
 - **EDGES:** R-008, R-009, R-010, R-011, R-012, R-013, R-014, R-094 · targeted by R-003, R-006, R-023, R-029, R-031, R-065, R-069, R-070, R-073, R-082, R-088, R-089
 - **STATUS:** alive · Willow Lane, the Green Jar (mornings: the Ford Pool, Fordwood) · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-003-moss.png (true form, sealed: /art/portraits/npc-003-moss-hart.png)
+- **PORTRAIT:** /art/portraits/npc-003-moss.png (second image, sealed until it happens in play: /sealed/art/portraits/npc-003-b.png)
 
 ---
 
@@ -84,7 +84,7 @@ Tier 1 · FAC-08 (Free Clans) · First seen: Ch1 as a voice; in person Ch6, Stil
 - **ARC:** Ch1–5 voice and fragments · Ch6 rescued (EVT-08) · Ch7 the Lane takes her in; best friends with Pip; quiets water · Ch8 sheltered at Driftmarket (EVT-13) · Ch11 visits, sings to Moss · Ch14 sends songs into dreams · Ch15 helps wake the Pens · Ch16 sings the dying Hushed to rest · Ch19 leads the third song · Ch20 one of three voices.
 - **EDGES:** R-064, R-065, R-066, R-067 · targeted by R-014, R-084, R-093, R-096
 - **STATUS:** alive · Stillwater Keep, the Glass Mere, Mirrowen (captive) · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-004-lark.png
+- **PORTRAIT:** /sealed/art/portraits/npc-004-lark.png (move to /art/portraits/ when the player meets them)
 
 ---
 
@@ -103,7 +103,7 @@ Tier 1 · FAC-02 (Enchanters' Guild, apprentice) · First seen: Ch2, the Lamplit
 - **ARC:** Ch2 the lamps flare (EVT-40) · Ch7 makes the gift lamp, sincerely proud of it · Ch11 learns who she is (EVT-18); vouches for Hollis (vouch #3) · Ch12 first duet, closes Kessel · Ch13 sings the Reserve apart · Ch17 the Hall answers her · Ch19–20 the song. Lost path: leaves Emberford or is taken by the Heron.
 - **EDGES:** R-050, R-051, R-052, R-053, R-093 · targeted by R-011, R-017, R-041, R-045, R-095
 - **STATUS:** alive · Emberford, the Lamplit (Glimmerway) and the Grane house on Crownhill · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-005-clara-grane.png
+- **PORTRAIT:** /sealed/art/portraits/npc-005-clara-grane.png (move to /art/portraits/ when the player meets them)
 
 ---
 
@@ -160,7 +160,7 @@ Tier 1 · FAC-07 (Horned Host, leader) · First seen: Ch2 as Lark's fragment "ir
 - **ARC:** Ch6 offstage: Stillwater Keep is his; the ribboned calf · Ch6–7 sends hunters (EVT-09) · Ch8 raids · Ch13 his scouts wait at the Ford Pool · Ch14 declares war (EVT-27); the parley (EVT-28) · Ch15 Ama wakes, he breaks and turns (EVT-29/30) · Ch16 fights beside the Free Clans · Ch20 his host holds the Gap if turned.
 - **EDGES:** R-076, R-077, R-078, R-079 · targeted by R-075, R-080, R-085
 - **STATUS:** alive · Mirrowen, the siege lines at Tuskhold / Cairn Answer · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-008-brannoc-ironhorn.png (sealed until Ch14)
+- **PORTRAIT:** /sealed/art/portraits/npc-008-brannoc-ironhorn.png (sealed until Ch14)
 
 ---
 
@@ -179,7 +179,7 @@ Tier 1 · FAC-07 (adviser) · FAC-14 (corrupted Warden) · First seen: Ch2 as a 
 - **ARC:** Ch6 away; her return is the escape's clock; "Brother, you've grown small" (Route B) · Ch7 speaks through still water · Ch15 first fight; withdraws; "Brother. Why does this hurt?" (EVT-26) · Ch18 opens the Greymarsh gate; final fight; redeemed or destroyed (EVT-35) · Ch19 if redeemed, wakes Ommu with a cry.
 - **EDGES:** R-082, R-083, R-084 · targeted by R-012, R-076
 - **STATUS:** alive · Mirrowen, Cairn Answer / the Glass Mere · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-009-vessimer.png (sealed until she appears)
+- **PORTRAIT:** /sealed/art/portraits/npc-009-vessimer.png (sealed until she appears)
 
 ---
 
@@ -350,7 +350,7 @@ Tier 1 · FAC-08 (Free Clans, scout) · First seen: Ch1, Warehouse Row
 - **ARC:** Ch1 rescued (EVT-01) · Ch2 tells Ash Mirrowen is real · Ch3 leads them to the Ford Pool · Ch5 hunted by lamp-wardens; "singing stones" · Ch6 leads them to the burrows · Act III scout with the Free Clans.
 - **EDGES:** R-068, R-069 · targeted by (none)
 - **STATUS:** alive · Emberford, Warehouse Row (fleeing) · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-018-thistle.png
+- **PORTRAIT:** /sealed/art/portraits/npc-018-thistle.png (move to /art/portraits/ when the player meets them)
 
 ---
 
@@ -369,7 +369,7 @@ Tier 1 · FAC-08 (Free Clans, Hollowmere leader) · First seen: Ch6, the deep bu
 - **ARC:** Ch6 kneels to Moss (seed and vouch #5) · Ch6 Lark returned (EVT-08) · Act III a Free Clans leader; at the gathering.
 - **EDGES:** R-070, R-071 · targeted by R-066
 - **STATUS:** alive · Mirrowen, Hollowmere, the deep burrows · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-019-mother-burdock.png
+- **PORTRAIT:** /sealed/art/portraits/npc-019-mother-burdock.png (move to /art/portraits/ when the player meets them)
 
 ---
 
@@ -388,7 +388,7 @@ Tier 1 · FAC-02 (lamp-wardens, captain) · FAC-03 (Calm inner circle) · First 
 - **ARC:** Ch2 notes the lamps flaring and reports (EVT-40) · Ch5 on the Kessel roster · Ch7 coordinates the Calm crew · Ch10 hires the Grey Wolves · Ch12 boss; the fire ledger (EVT-20).
 - **EDGES:** R-054, R-092 · targeted by R-048
 - **STATUS:** alive · Emberford, the Guildhall barracks / the Kessel Workings · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-020-lucan-hask.png (sealed until Ch12)
+- **PORTRAIT:** /sealed/art/portraits/npc-020-lucan-hask.png (sealed until Ch12)
 
 ---
 
@@ -407,7 +407,7 @@ Tier 1 · FAC-08 (Free Clans, spirit) · First seen: Ch6 as Lark's "Gran Umbari 
 - **ARC:** Ch6/8 mentioned by Lark · Ch14 meets them · Ch15 failing; asks Ash for a song · Ch16 gives the song and dies (EVT-31). Her last words tell how to wake the Tortoise.
 - **EDGES:** R-074, R-075 · targeted by (none)
 - **STATUS:** alive · Mirrowen, Tuskhold (besieged) · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-021-umbari.png
+- **PORTRAIT:** /sealed/art/portraits/npc-021-umbari.png (move to /art/portraits/ when the player meets them)
 
 ---
 
@@ -426,7 +426,7 @@ Tier 1 · FAC-07 (Horned Host officer) · First seen: Ch14
 - **ARC:** Ch14 go-between or captured officer · Ch15 rises if Brannoc fails (EVT-30) · Ch16 leads loyalists · Ch20 holds the Gap.
 - **EDGES:** R-080, R-081 · targeted by R-077
 - **STATUS:** alive · Mirrowen, Tuskhold siege lines · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-022-fergan-ironhorn.png (sealed until Ch14)
+- **PORTRAIT:** /sealed/art/portraits/npc-022-fergan-ironhorn.png (sealed until Ch14)
 
 ---
 
@@ -445,7 +445,7 @@ Tier 1 · FAC-04 (Ford Watch, Old Ford) · FAC-03 (the Calm) · First seen: Ch5,
 - **ARC:** Ch5 "a license" · Ch5 buys Rook · Ch7 absent on the siege night · Ch11 sets up the Lamp-Climb attack; exposed (Ch7 or Ch11) · Ch13 Hushed lamp-warden lines.
 - **EDGES:** R-055, R-056 · targeted by R-035, R-038, R-049, R-057
 - **STATUS:** alive · Emberford, Watch headquarters, Temple Isle · last seen: (not yet played)
-- **PORTRAIT:** /art/portraits/npc-023-giles-mabry.png
+- **PORTRAIT:** /sealed/art/portraits/npc-023-giles-mabry.png (move to /art/portraits/ when the player meets them)
 
 ---
 

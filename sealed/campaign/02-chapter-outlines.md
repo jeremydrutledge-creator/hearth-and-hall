@@ -69,7 +69,7 @@
    - A. Ash goes to Moss (the natural move after Thistle).
    - B. Thistle tells Ash Mirrowen is real, and Moss is forced to step in and explain before she says too much.
    - C. Moss comes to the Fenwick roof at night (he knows the hatch) and tells him there.
-3. **★ First meeting with Clara at the Lamplit.** A job on Enchanters' Row (courier pickup, or Zeke dragging Ash along to look at a "singing lantern"). When Ash and Clara stand close, **every lamp on the Row brightens**. The shopkeepers laugh: "Clara's sweet on the Fringe boy!" Both are embarrassed. Clara notices his eye fleck. She has the same one. (Neither says anything about it.)
+3. **★ First meeting with Clara at the Lamplit.** A job on Enchanters' Row (courier pickup, or Zeke dragging Ash along to look at a "singing lantern"). When Ash and Clara stand close, **every lamp on the Row brightens**. The shopkeepers laugh: "Look at that! The lamps can't tell you two apart!" Both laugh it off, a little unsettled. Clara notices his eye fleck. She has the same one. (Neither says anything about it.)
    - A. Courier job: a sealed parcel from the Lamplit to Hester Grane at Lamp House. (It's a gift lamp for the orphans. Harmless.)
    - B. Zeke drags Ash to the Row ("I need a second opinion on a resonance coil").
    - C. Clara comes to the Fringe with Hester Grane on Hester's weekly bread round. The street lamps on Willow Lane flare when Clara passes Ash.

@@ -192,7 +192,7 @@ From `campaign/03` SEC-23's rules note. Once the two halves have clicked shut (C
 | NPC-158 | **Archivist Sigrun Deeplore** | Dun Morrach's archivist | 10 |
 | NPC-159 | **Plish** | Otter-folk refugee freed from the Bucket (optional) | 7, 8 |
 
-Tier 3 names used at the table level (log in `truth/07` if they get play): Lucas Dunn (Lamp House clerk), the six Mothers of Driftmarket besides Granny Tull (Ma Kettering, Old Saltash, Mother Reed, Dace Corran, Mother Fennimore, Hettie Brine-no-relation), Brock Underhill (badger-folk sett-elder), Lettice Grey (a Purse heir; a `world/04` example name), Gristle (the Wolves' war-dog), Annie (Mabry's late wife), Orm Coalbeard (a clan head), Ewan Pickett.
+Tier 3 names used at the table level (log in `truth/07` if they get play): Oliver Fairley (Lamp House clerk), the six Mothers of Driftmarket besides Granny Tull (Ma Kettering, Old Saltash, Mother Reed, Dace Corran, Mother Fennimore, Hettie Brine-no-relation), Brock Underhill (badger-folk sett-elder), Lettice Grey (a Purse heir; a `world/04` example name), Gristle (the Wolves' war-dog), Annie (Mabry's late wife), Orm Coalbeard (a clan head), Ewan Pickett.
 
 ---
 

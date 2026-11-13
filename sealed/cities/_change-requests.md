@@ -1,5 +1,7 @@
 # City-Life Layer: Change Requests for Shared Files (SEALED — DM ONLY)
 
+> **STATUS: all requests below were resolved in the step-10 consistency pass (CHG-07 to CHG-16 in `truth/08-change-log.md`). Where a request offered options, the change log records the one chosen.**
+
 > This folder doesn't edit `world/`, `campaign/` or `truth/`. Everything those files need from the city-life layer is requested here, CHG-style, for the Truth File's owner (or the consistency pass) to apply and log in `truth/08-change-log.md`.
 
 ---

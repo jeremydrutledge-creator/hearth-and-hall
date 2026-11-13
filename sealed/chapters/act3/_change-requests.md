@@ -1,5 +1,7 @@
 # Act III · Change Requests for Shared Files (SEALED — DM ONLY)
 
+> **STATUS: all requests below were resolved in the step-10 consistency pass (CHG-07 to CHG-16 in `truth/08-change-log.md`). Where a request offered options, the change log records the one chosen.**
+
 > Act III's chapter files don't edit `world/`, `campaign/`, `truth/` or `rules/`. Everything below is a **request** to the owner of those files, in the `truth/08` CHG format. Numbers here are **provisional** (CHG-A3-##); the Truth File's owner assigns real CHG numbers.
 > Format: **CHG-A3-## · build (Act III chapters) · What should change · Why · Records touched**
 > **Note on numbering:** the first Act III writer (Ch14–15) was cut off by a container restart before writing this file. Ch15 cites **CHG-A3-03** (the deep-Hushed waking rule), so that number is kept for that rule. CHG-A3-01 and -02 are assigned here to the items below; no other numbers from the first writer are cited anywhere in `ch14.md` or `ch15.md`.

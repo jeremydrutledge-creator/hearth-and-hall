@@ -193,7 +193,7 @@
 | `npc-071-maud-penrose.png` | Portrait | Ch19 | |
 | `npc-072-jago-trelawn.png` | Portrait | Ch19 | |
 | `npc-350-tamsin-gale.png` | Portrait | Ch19 | |
-| `npc-351-abel-fathom.png` | Portrait | Ch19 | |
+| `npc-351-enoch-fathom.png` | Portrait | Ch19 | |
 | `npc-352-gussie-crabb.png` | Portrait | Ch19 | |
 
 ## From `17-saffra.md`

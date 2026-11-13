@@ -144,7 +144,7 @@ If the player asks for something not on the menus:
 **Voice:** warm, precise, apologizes too much; tucks hair behind her ear when nervous; hums the first line of *his* tune while she works.
 **Interior (painter):** a tiny shop at the middle of the Row, its window full of lamps in every color: amber, rose, sea-green, one that cycles slowly through a sunset. A brass bell over the door that plays two notes. Her bench is under the window: a jeweler's glass, fine brushes, a lamp the size of a teacup. Glimmer dust everywhere.
 **No haggling.** She undercharges everyone. **Insight DC 12** spots it; if Ash pays full price anyway, R-052 (Clara → Ash) notes it (no step; a line in her VOICE: "You overpaid. I noticed.").
-**The flare:** every time Ash and Clara are within 5 feet in this shop, every lamp on the Row flares. The Row's keepers keep joking about it ("Clara's sweet on the Fringe boy"). Don't let anyone explain it. Don't let it become a romance; she's his twin (`world/00`), and from the player's side the joke must be plainly wrong in a funny, warm way. If the player ever leans it toward romance, Clara gently and cheerfully isn't interested ("You're like a brother I misplaced"), which is both true and a seed.
+**The flare:** every time Ash and Clara are within 5 feet in this shop, every lamp on the Row flares. The Row's keepers keep joking about it ("The lamps can't tell you two apart!"). Don't let anyone explain it. **Never play it as romance** (she's his twin, `world/00`, and the player's rule is no romance with female allies). If the player ever leans that way, Clara cheerfully isn't interested ("You're like a brother I misplaced"), which is both true and a seed.
 
 | Commission | Rarity / price | Lead time | Notes |
 |---|---|---|---|

@@ -1,5 +1,7 @@
 # Act II · Change Requests for Shared Files (SEALED — DM ONLY)
 
+> **STATUS: all requests below were resolved in the step-10 consistency pass (CHG-07 to CHG-16 in `truth/08-change-log.md`). Where a request offered options, the change log records the one chosen.**
+
 > Act II's chapter files don't edit `world/`, `campaign/`, `truth/` or `rules/`. Everything below is a **request** to the owner of those files, written in the `truth/08` CHG format. Numbers here are **provisional** (CHG-A2-##); the Truth File's owner assigns real CHG numbers (next free per `truth/00`: CHG-07, unless other steps have used it).
 > Format: **CHG-A2-## · build (Act II chapters) · What should change · Why · Records touched**
 

@@ -1,5 +1,7 @@
 # Act I · Change Requests for Shared Files (SEALED — DM ONLY)
 
+> **STATUS: all requests below were resolved in the step-10 consistency pass (CHG-07 to CHG-16 in `truth/08-change-log.md`). Where a request offered options, the change log records the one chosen.**
+
 > The Act I chapter files didn't edit anything outside `sealed/chapters/act1/`. These are the changes they need (or assume) in shared world, campaign and truth files. Each is written as a proposed CHG entry. **The next free IDs in the shared files are NPC-080, R-097, SEC-24, EVT-56, CHG-07** (`truth/_handoff-notes.md`), but other chapter writers may be claiming them in parallel, so **these requests use local numbers (CR-A1-##) and leave the final IDs to whoever applies them.**
 
 ---

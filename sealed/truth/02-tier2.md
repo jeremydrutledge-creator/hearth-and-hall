@@ -222,7 +222,7 @@
 
 ### Tier 3 names pre-planned by the writers (log in 07 if used)
 
-- Act II: Lucas Dunn (Lamp House clerk); the six Driftmarket Mothers besides Granny Tull (Ma Kettering, Old Saltash, Mother Reed, Dace Corran, Mother Fennimore, Hettie Brine-no-relation); Brock Underhill (badger-folk sett-elder); Lettice Grey (Purse heir); Gristle (war-dog); Annie (Mabry's late wife); Orm Coalbeard (clan head); Ewan Pickett.
+- Act II: Oliver Fairley (Lamp House clerk); the six Driftmarket Mothers besides Granny Tull (Ma Kettering, Old Saltash, Mother Reed, Dace Corran, Mother Fennimore, Hettie Brine-no-relation); Brock Underhill (badger-folk sett-elder); Lettice Grey (Purse heir); Gristle (war-dog); Annie (Mabry's late wife); Orm Coalbeard (clan head); Ewan Pickett.
 - Act III: Sergeant Godric Marsh (Crown Guard, Ch17); Kester Sayle (sailor, Bosun Cole's nephew, Ch19); Zuri Far-Wander (tabaxi rooftop champion, Ch14).
 
 ---
