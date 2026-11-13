@@ -87,7 +87,7 @@ Full numbers are on his sheet. In short:
 
 **Bartholomew.** Ash calls him **Bart**, which Bart hates about as much as Ash hates "Asheron." That's the point.
 
-- **An owl**, most days. Ash summoned him with the Find Familiar spell a while ago (Zeke helped). He's a spirit, not a real bird.
+- **A tiny northern saw-whet owl**, most days: about 3–4 ounces, fist-sized, huge yellow eyes, no ear tufts. He fits in a coat pocket and resents it. (Rules: the standard Owl familiar stat block; the size is flavor.) Ash summoned him with the Find Familiar spell a while ago (Zeke helped). He's a spirit, not a real bird.
 - **He talks only in Ash's head.** Telepathy, within 100 feet. Nobody else hears a word. If Ash laughs at nothing in the middle of a serious conversation, that's Bart.
 - **He is snarky.** He makes fun of Gideon and Zeke constantly. He's lippy with Ash, too. It's the kind of joke that's only funny if you're not the one it's about. Ash can always pass it along: *"He says you're an idiot."*
 - **He helps in a fight** by swooping in to distract an enemy (the Help action), which gives Ash advantage on his next attack. Owls don't provoke opportunity attacks when they fly away.
