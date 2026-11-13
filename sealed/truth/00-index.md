@@ -6,9 +6,9 @@
 | `00-index.md` | ID scheme, running rule, name lookup with every spelling |
 | `01-tier1.md` | 25 Tier 1 entries, full block format (incl. the three companions), plus 2 non-person entities |
 | `02-tier2.md` | Tier 2 entries, 2–3 lines each, plus historical figures |
-| `03-ledger.md` | Relationship Ledger: 96 directional edges (R-001 to R-096) |
-| `04-secrets.md` | Secrets register SEC-01 to SEC-22 (holders, seed counts, reveal events, edges) |
-| `05-events.md` | Events EVT-01 to EVT-55, the only things that change beliefs or the SEAL clock |
+| `03-ledger.md` | Relationship Ledger: 116 directional edges (R-001 to R-096, R-200 to R-208, R-230 to R-240) |
+| `04-secrets.md` | Secrets register SEC-01 to SEC-24 (holders, seed counts, reveal events, edges) |
+| `05-events.md` | Events EVT-01 to EVT-60, the only things that change beliefs or the SEAL clock |
 | `06-factions.md` | FAC-01 to FAC-18 with leaders, secrets and attitude moves |
 | `07-tier3-log.md` | Improvised NPCs during play |
 | `08-change-log.md` | CHG entries: play overrides the plan |
@@ -26,8 +26,8 @@
 | `FAC-##` | Factions | FAC-01 to FAC-18 |
 | `R-###` | Ledger edges (one direction each) | R-001 to R-096, R-200 to R-208, R-230 to R-240 (R-241 next) |
 | `SEC-##` | Secrets | SEC-01 to SEC-24 (SEC-25 next) |
-| `EVT-##` | Events | EVT-01 to EVT-57 (EVT-58 next) |
-| `CHG-##` | Change log entries | CHG-01 to CHG-17 (CHG-18 next) |
+| `EVT-##` | Events | EVT-01 to EVT-60 (EVT-61 next) |
+| `CHG-##` | Change log entries | CHG-01 to CHG-18 (CHG-19 next) |
 
 ## The running rule
 > **Before any NPC vouches for, speaks about or reacts to another, read that edge in `03-ledger.md`.**

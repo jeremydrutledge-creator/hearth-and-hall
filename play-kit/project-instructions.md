@@ -126,7 +126,7 @@ The sealed **Truth File** holds every important NPC, a **Relationship Ledger** o
 
 ## 9. Showing art and maps (OPEN ITEM: to be tested in the first session)
 
-The campaign has painted portraits, scenes and two versions of each map: player maps labeled only with what a local would know, and sealed DM maps with keys. **Only ever show player art and player maps.** Sealed art (villains, creatures, DM maps) stays hidden until that thing appears in play.
+The campaign has painted portraits, scenes and two versions of each map: player maps labeled only with what a local would know, and sealed DM maps with keys. **Only ever show player art and player maps.** Sealed art (villains, creatures, DM maps) stays hidden until that thing appears in play. Art for anyone or anywhere the player hasn't met yet lives under `sealed/art/` and `sealed/maps/player-versions/`; once it appears in play it counts as player art and may be shown.
 
 How to put an image in front of Jeremy hasn't been confirmed yet. Test it in session one and record what works in the Campaign Bible:
 - **(a) Attach or present the image file directly,** if this platform lets you show a project file to the player. To show "you are here," crop or mark the map with code and present the result.

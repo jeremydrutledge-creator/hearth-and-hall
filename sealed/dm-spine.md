@@ -726,12 +726,12 @@
 | Fight math, party DPR, stat-block template, counters | `rules/02-tuning-notes.md` |
 | House rules, builds, level plans, prices | `rules/00`, `01`, `03` |
 | The family and the locket | `world/09-the-fenwick-family.md` |
-| Build-time rulings (all resolved) | `truth/08-change-log.md` CHG-07 to CHG-17 |
+| Build-time rulings (all resolved) | `truth/08-change-log.md` CHG-07 to CHG-18 |
 | Art list (every image, priority tiers) | `sealed/art-manifest.md` |
 
 ---
 
-## 8. Consistency-pass rulings to remember at the table (CHG-07 to CHG-17)
+## 8. Consistency-pass rulings to remember at the table (CHG-07 to CHG-18)
 - **Ford Festival is the 1st of Leaffall** (Ch11), not Lantern.
 - **The lamp joke on the Row (Ch2):** "The lamps can't tell you two apart!" Never play Ash and Clara as romance.
 - **Renamed:** Julian Hume (Tollhaven rival broker), Bastian Harrow (Quiet Knives leader), Zuri Far-Wander (Saffra rooftop champion), Gerald Hatherley, Old Enoch Fathom, Oliver Fairley, Godric Marsh, Kester Sayle, Ewan Pickett.

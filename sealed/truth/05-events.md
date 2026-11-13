@@ -261,6 +261,15 @@
 - Edges: R-240 (blind spot broken; she still loves him). Gives the party the abbey's trust (healer-monks and mead to the Ch17 muster).
 - Secrets: reveals SEC-24.
 
-**Edge links added to existing events (CHG-11):** EVT-15 → R-202, R-204 · EVT-16 → R-203 · EVT-17 → R-200 · EVT-23 → R-205, R-206, R-207 · EVT-24 → R-204, R-206, R-207 · EVT-28 → R-231, R-232 · EVT-29 → R-233 · EVT-31 → R-230 · EVT-33 → R-235, R-236 · EVT-35 → R-233 · EVT-38 → R-237 (and +1 more SEAL if SC#5 fails; CHG-14) · EVT-39 → R-238 · EVT-53 → R-208. Non-event changes: R-201 (Ch10 route), R-234 (Ch16 Fight 28), R-239 (Ch19 SC 19-A).
+**Edge links added to existing events (CHG-11):** EVT-15 → R-202, R-204 · EVT-16 → R-203 · EVT-17 → R-200 · EVT-23 → R-205, R-206, R-207 · EVT-24 → R-204, R-206, R-207 · EVT-28 → R-231, R-232 · EVT-29 → R-233 · EVT-31 → R-230 · EVT-33 → R-235, R-236 · EVT-35 → R-233 · EVT-38 → R-237 (and +1 more SEAL if SC#5 fails; CHG-14) · EVT-39 → R-238 · EVT-53 → R-208. (R-201, R-234 and R-239 change through EVT-58, EVT-59 and EVT-60 below.)
 
 **EVT-21 branch (CHG-12):** if Hester is saved by the costly route, she lives with her blind spot gone, becomes an angry witness against Hollis in Ch17; Hollis escapes un-reached toward Mirrowen (Ch14 handles "escaped"); EVT-22 is +3 and EVT-23 doesn't happen. Loss level B still caps at two planned deaths; **don't replace Hester with another death.**
+
+**EVT-58 · Ch10 · The Wolfsgate contract is settled** (kept, bought out, or lawfully voided by the route the party chose)
+- Edges: R-201.
+
+**EVT-59 · Ch16 (Fight 28) · Dunmore Breakhorn is laid to rest or woken**
+- Edges: R-234.
+
+**EVT-60 · Ch19 (SC 19-A) · The race to the Glass with Hattie Slade**
+- Edges: R-239.

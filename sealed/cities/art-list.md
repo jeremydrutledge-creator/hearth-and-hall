@@ -1,5 +1,7 @@
 # City-Life Art List (SEALED — DM ONLY)
 
+> **Superseded for generation by `sealed/art-manifest.md`** (one consolidated list with tiers, final paths and a prompt paragraph per image). This file stays as the city layer's record. Note: Old Abel Fathom is now Old Enoch Fathom (CHG-10).
+
 > Every shop interior, shopkeeper portrait and establishing painting the city-life layer calls for, with file names per the naming rule (`ch##-place-name.png`, `npc-###-name.png`). Descriptions for the painter are in each source file (the shop's **Interior (painter)** line, or the city's **at a glance** section). Style: `/art/style-bible.md`.
 >
 > **Spoilers:** an image may be shown to the player only from its **Show from** chapter on (the first chapter the place or person can be met). Mirrowen and Act III images are sealed until then. Shop interiors are painted **without text labels**; signs can be added in the text.

@@ -795,7 +795,7 @@
 
 ## G. Added in the consistency pass (CHG-11)
 
-> R-097 to R-199 and R-209 to R-229 are unused (the chapter writers reserved blocks). Next free: **R-241**.
+> R-097 to R-199 and R-209 to R-229 are unused (the chapter writers reserved blocks). Next free: R-241.
 
 **R-200 · NPC-064 Hilde Strand → NPC-001 Gideon** (or PC-01 Ash, whoever fought her at Copperhill)
 - BELIEVES: the fighter she's been waiting for; maybe a successor.
@@ -811,7 +811,7 @@
 - BLIND SPOT: reads everything as a contract.
 - WILL VOUCH: that they keep their word, in Wolfsgate · won't vouch for anyone's cause.
 - FEELING: professional respect.
-- CHANGES ONLY VIA: Ch10 (route chosen).
+- CHANGES ONLY VIA: EVT-58 (Ch10: the Wolfsgate contract is kept, bought out or lawfully voided).
 
 **R-202 · NPC-063 Dame Constance Abernathy → PC-01 Ash**
 - BELIEVES: finally, a thief who admits it; useful.
@@ -892,7 +892,7 @@
 **R-234 · NPC-190 Dunmore → NPC-003 Moss**
 - BELIEVES: an old comrade from the Gate War. ACTUALLY KNOWS: they held a gate together. BLIND SPOT: thinks it's still the war. 
 - WILL VOUCH: for Moss to any Gate War dead · nothing living. FEELING: "Did we hold it?"
-- CHANGES ONLY VIA: Ch16 Fight 28 (laid to rest or woken).
+- CHANGES ONLY VIA: EVT-59 (Ch16 Fight 28: Dunmore is laid to rest or woken).
 
 **R-235 · NPC-069 King Edric → PC-01 Ash**
 - BELIEVES: "the one who hums"; trust. ACTUALLY KNOWS: what Ash showed him. BLIND SPOT: he's a boy; he wants a hero.
@@ -917,7 +917,7 @@
 **R-239 · NPC-195 Hattie Slade → PC-01 Ash**
 - BELIEVES: a rival, then a little brother she didn't ask for. ACTUALLY KNOWS: how he sails and steals. BLIND SPOT: competitiveness.
 - WILL VOUCH: for his nerve, to smugglers · not for his seamanship. FEELING: rival, then sisterly (no romance).
-- CHANGES ONLY VIA: Ch19 SC 19-A.
+- CHANGES ONLY VIA: EVT-60 (Ch19 SC 19-A: the race to the Glass with Hattie).
 
 **R-240 · NPC-077 Mother Hilary Vance → NPC-334 Prior Benedict Lowry** (optional Corriemount thread)
 - BELIEVES: he's the best of her order, her first novice, gentle and devout.
