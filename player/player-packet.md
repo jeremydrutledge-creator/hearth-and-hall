@@ -549,7 +549,7 @@ These are rumors. Some are true, some aren't, and some are half true.
 **Maps (player versions, labeled only with what a local would know):**
 - Eyrland and the Tamber River: `/player/maps/eyrland-region.jpg`
 - Emberford: `/player/maps/emberford-city.jpg`
-- Willow Lane: `/player/maps/willow-lane.jpg`
+- Willow Lane: `/player/maps/willow-lane.jpg` (with a numbered key: `/player/maps/willow-lane-keyed.jpg`)
 
 **Party portraits:**
 - Ash: `/art/portraits/pc-01-ash.jpg`

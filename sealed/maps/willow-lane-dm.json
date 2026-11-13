@@ -1,0 +1,125 @@
+{
+ "title": "Willow Lane (DM)",
+ "markers": [
+  {
+   "n": 1,
+   "x": 696,
+   "y": 288,
+   "label": "The Willow (Peg Mallory), the Long Wall"
+  },
+  {
+   "n": 2,
+   "x": 912,
+   "y": 672,
+   "label": "Shaw's Chandlery"
+  },
+  {
+   "n": 3,
+   "x": 1164,
+   "y": 1032,
+   "label": "The Green Jar (Moss, Aggie)"
+  },
+  {
+   "n": 4,
+   "x": 900,
+   "y": 1140,
+   "label": "The Lane Well"
+  },
+  {
+   "n": 5,
+   "x": 102,
+   "y": 720,
+   "label": "Fringe watch-house (Ostley)"
+  },
+  {
+   "n": 6,
+   "x": 276,
+   "y": 480,
+   "label": "West Gate road"
+  },
+  {
+   "n": 7,
+   "x": 480,
+   "y": 888,
+   "label": "The Carter house"
+  },
+  {
+   "n": 8,
+   "x": 528,
+   "y": 1536,
+   "label": "The Finch house"
+  },
+  {
+   "n": 9,
+   "x": 552,
+   "y": 1920,
+   "label": "The Fenwick house"
+  },
+  {
+   "n": 10,
+   "x": 1260,
+   "y": 1680,
+   "label": "The Rope-walk"
+  },
+  {
+   "n": 11,
+   "x": 1620,
+   "y": 1500,
+   "label": "Tanner's Row yards"
+  },
+  {
+   "n": 12,
+   "x": 1200,
+   "y": 2100,
+   "label": "The Bend"
+  },
+  {
+   "n": 13,
+   "x": 1524,
+   "y": 2028,
+   "label": "The old barge"
+  },
+  {
+   "n": 14,
+   "x": 624,
+   "y": 2110,
+   "label": "Fenwick cellar: waterline, flooded lower level"
+  },
+  {
+   "n": 15,
+   "x": 790,
+   "y": 396,
+   "label": "The Willow's cellar"
+  },
+  {
+   "n": 16,
+   "x": 780,
+   "y": 840,
+   "label": "Rooftop route (Lane roofs, house to house)"
+  },
+  {
+   "n": 17,
+   "x": 360,
+   "y": 1800,
+   "label": "Ch4 flood line"
+  },
+  {
+   "n": 18,
+   "x": 276,
+   "y": 360,
+   "label": "Ch7 siege approach: West Gate road"
+  },
+  {
+   "n": 19,
+   "x": 1320,
+   "y": 2280,
+   "label": "Ch7 siege approach: the Bend"
+  },
+  {
+   "n": 20,
+   "x": 960,
+   "y": 1230,
+   "label": "Well spring, deep (SEC-22)"
+  }
+ ]
+}

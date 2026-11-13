@@ -1,0 +1,83 @@
+{
+ "title": "Willow Lane",
+ "markers": [
+  {
+   "n": 1,
+   "x": 696,
+   "y": 288,
+   "label": "The Willow (Peg Mallory), the Long Wall"
+  },
+  {
+   "n": 2,
+   "x": 912,
+   "y": 672,
+   "label": "Shaw's Chandlery"
+  },
+  {
+   "n": 3,
+   "x": 1164,
+   "y": 1032,
+   "label": "The Green Jar (Moss, Aggie)"
+  },
+  {
+   "n": 4,
+   "x": 900,
+   "y": 1140,
+   "label": "The Lane Well"
+  },
+  {
+   "n": 5,
+   "x": 102,
+   "y": 720,
+   "label": "Fringe watch-house (Ostley)"
+  },
+  {
+   "n": 6,
+   "x": 276,
+   "y": 480,
+   "label": "West Gate road"
+  },
+  {
+   "n": 7,
+   "x": 480,
+   "y": 888,
+   "label": "The Carter house"
+  },
+  {
+   "n": 8,
+   "x": 528,
+   "y": 1536,
+   "label": "The Finch house"
+  },
+  {
+   "n": 9,
+   "x": 552,
+   "y": 1920,
+   "label": "The Fenwick house"
+  },
+  {
+   "n": 10,
+   "x": 1260,
+   "y": 1680,
+   "label": "The Rope-walk"
+  },
+  {
+   "n": 11,
+   "x": 1620,
+   "y": 1500,
+   "label": "Tanner's Row yards"
+  },
+  {
+   "n": 12,
+   "x": 1200,
+   "y": 2100,
+   "label": "The Bend"
+  },
+  {
+   "n": 13,
+   "x": 1524,
+   "y": 2028,
+   "label": "The old barge"
+  }
+ ]
+}
