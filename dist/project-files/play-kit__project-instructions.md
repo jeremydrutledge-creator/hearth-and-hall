@@ -213,8 +213,10 @@ When Jeremy says **"log this session,"** run these steps **in this order, withou
 
 **Then give, in this order:**
 - **The complete updated project instructions (Part A + Part B) in ONE copy-pasteable block.** Fold in any rulings or table preferences from this session. Jeremy pastes it into the project instructions.
-- **The next session's start line** (one sentence of narration).
+- **The start prompt for the next session:** a short message Jeremy pastes as the first message of the next chat (e.g. "Start session 4. Read Part B, then open with: <start line>"), with the start line (one sentence of narration) inside it.
 - **One sentence** on where we left off.
+
+The wrap-up is required before a new session starts. If a new chat opens and Part B looks stale (its session number doesn't match the last Story Log tab), say so before playing and offer to rebuild Part B from the Docs.
 
 **Report any step that fails** ("Story Log: Docs unavailable, saved as an artifact"). Never claim a step worked if it didn't. If the instructions box has a length limit and the block won't fit, keep Part B's tables tight and move detail to the Character Sheet doc, and say so.
 
@@ -253,6 +255,10 @@ Open by reading `play-kit__session-one-opener.md` aloud, as book-style narration
 | Climb the Willow Cup (Ash is 5th) | Ash | Ongoing |
 | Restday supper at lamp-lighting | Gideon (not a request) | Tonight |
 | Walt Finch's roof leaks again | Walt and Dora | Open |
+| **Be harder to hit:** studded leather (45 gp; AC 12 + Dex = 16) | Ash | Saving up: contest winnings, a prize, a trade or a job |
+| **A better lock** for the Fenwick front door (a good lock ~10 gp; better ones cost more) | Ash | Open |
+| **A bag of holding** (Uncommon magic item, ~400 gp) | Ash | Dream; watch for one |
+| **Better weapons**, magic or masterwork, and getting better at things | Ash | Ongoing |
 
 ### The party (compact sheets; full detail in the Character Sheet doc)
 | | Lvl | HP | AC | Init | Key bonuses | Attacks | Resources |

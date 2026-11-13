@@ -742,3 +742,13 @@
 - **Hester saved (costly route):** no replacement death.
 - **Optional side content:** Corriemount thread (R-240, EVT-57, SEC-24); Tuskhold pond closing (SEAL −1, counts toward the max of two).
 - **Art:** anyone the player hasn't met has their portrait in `/sealed/art/`. Move it to `/art/` (or show it) only when they appear.
+
+
+---
+
+## Player's stated wants (from the build interview; reward through play, never hand them over)
+- **Studded leather (45 gp)** is Ash's first goal: be harder to hit. Make it reachable within the first 1–3 sessions: a contest prize on the Long Wall, a trade with a merchant who owes the Lane, a bounty paying just enough, or a used set at Odd Lot with a quirk. He should feel he *earned* it.
+- **A better lock for the Fenwick door** (~10 gp good lock; a Row-made lock is a nice small gift/commission later). Easy early win; can also seed a scene (someone tests it).
+- **A bag of holding** (Uncommon, ~400 gp): a "soon-ish" goal. Put a real path to one in Act I by about level 3–5 (a Strange Arms or circuit prize, a heist target, a noble's off-the-books payment, Odd Lot's quirky secondhand one). Don't gift it in session one.
+- **Better weapons / magic:** a +1 or special finesse weapon around level 3–5 through treasure, a contest, or the Row; sooner if the story offers a fitting one.
+- **"Get better at things":** reward practice and contests with small, earned perks (a Tavern title, a mentor's tip, advantage-once boons) in addition to milestone levels.

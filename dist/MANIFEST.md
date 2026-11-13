@@ -4,7 +4,7 @@
 
 ## Totals
 
-- **project-files:** 89 files · 409,270 words · 2,258 KB
+- **project-files:** 89 files · 409,641 words · 2,260 KB
 - **images (player-safe):** 42 files · 38,342 KB
 - **images-sealed (DM only):** 6 files · 5,195 KB
 
@@ -33,7 +33,7 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 
 | File | Size | Words | Purpose |
 |---|---|---|---|
-| `sealed__dm-spine.md` | 38 KB | 6562 | DM spine: every chapter's beats, milestones, secrets due, clock, endings. Read first. |
+| `sealed__dm-spine.md` | 39 KB | 6771 | DM spine: every chapter's beats, milestones, secrets due, clock, endings. Read first. |
 | `sealed__campaign__00-premise-truth.md` | 16 KB | 2821 | Campaign plan |
 | `sealed__campaign__01-arc-overview.md` | 8 KB | 1637 | Campaign plan |
 | `sealed__campaign__02-chapter-outlines.md` | 78 KB | 13729 | Campaign plan |
@@ -114,7 +114,7 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | `player__player-packet.md` | 44 KB | 7796 | Player-safe reference |
 | `player__rules-and-house-rules.md` | 12 KB | 2256 | Player-safe reference |
 | `play-kit__UPLOAD-GUIDE.md` | 7 KB | 1214 | Play kit |
-| `play-kit__project-instructions.md` | 28 KB | 5068 | Paste into the project instructions box (not needed as a file) |
+| `play-kit__project-instructions.md` | 29 KB | 5230 | Paste into the project instructions box (not needed as a file) |
 | `play-kit__session-one-opener.md` | 16 KB | 3070 | Play kit |
 | `play-kit__token-tool.md` | 3 KB | 566 | Play kit |
 | `play-kit__templates__ash-character-sheet.md` | 7 KB | 1240 | Template for a living Claude Doc |
