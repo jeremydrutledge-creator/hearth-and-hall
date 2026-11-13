@@ -173,7 +173,7 @@ From `campaign/03` SEC-23's rules note. Once the two halves have clicked shut (C
 |---|---|---|---|
 | NPC-140 | **Lady Honoria Merrow** (Honora, Merow) | Head of the House of Merrow, Tollhaven; Calm | 9, (13) |
 | NPC-141 | **Valentine Crewe** (Val, Crew) | The Calm-hired duelist (Ch9's unnamed role) | 9 |
-| NPC-142 | **Percival Hume** (Percy, Hewm) | Smooth young Tollhaven broker; the party's rival there | 9, (11) |
+| NPC-142 | **Julian Hume** (Jules, Hewm) | Smooth young Tollhaven broker; the party's rival there | 9, (11) |
 | NPC-143 | **Master Otto Varga** (Varga, Vargas) | Head of the House of Varga | 9 |
 | NPC-144 | **Coble Tull** (Cobble) | Granny Tull's grandson; messenger | 8, 9, 11 |
 | NPC-145 | **Merrilee** (Merrily) | Otter-folk refugee elder | 8 |
@@ -182,7 +182,7 @@ From `campaign/03` SEC-23's rules note. Once the two halves have clicked shut (C
 | NPC-148 | **Gert Volker** (Gerd) | Mercenary who wants Copperhill's Seat | 10 |
 | NPC-149 | **Sergeant-Mage Ilse Brandt** (Ilsa) | Grey Wolf battle-mage | 10 |
 | NPC-150 | **Thurvig the Gate-Breaker** (Thurvik) | Hushed frost giant of the Gate War (dead) | 10 |
-| NPC-151 | **Dob Harrow** (Dobbin) | Leader of the Quiet Knives (hired killers) | 11 |
+| NPC-151 | **Bastian Harrow** (Bas, Bastien) | Leader of the Quiet Knives (hired killers) | 11 |
 | NPC-152 | **Lieutenant Corbin Wade** (Corbyn) | Lamp-warden lieutenant at Kessel; not Calm | 12 |
 | NPC-153 | **Sal Pickett** (Sally) | Keeper of the Pick and Lantern, Kesselby | 12 |
 | NPC-154 | **Senior Enchanter Ivo Pryce** (Price) | Calm inner circle (FAC-02's "two senior enchanters") | 13 |
@@ -192,7 +192,7 @@ From `campaign/03` SEC-23's rules note. Once the two halves have clicked shut (C
 | NPC-158 | **Archivist Sigrun Deeplore** | Dun Morrach's archivist | 10 |
 | NPC-159 | **Plish** | Otter-folk refugee freed from the Bucket (optional) | 7, 8 |
 
-Tier 3 names used at the table level (log in `truth/07` if they get play): Abel Penny (Lamp House clerk), the six Mothers of Driftmarket besides Granny Tull (Ma Kettering, Old Saltash, Mother Reed, Dace Corran, Mother Fennimore, Hettie Brine-no-relation), Brock Underhill (badger-folk sett-elder), Lettice Grey (a Purse heir; a `world/04` example name), Gristle (the Wolves' war-dog), Annie (Mabry's late wife), Orm Coalbeard (a clan head), Davey Pickett.
+Tier 3 names used at the table level (log in `truth/07` if they get play): Lucas Dunn (Lamp House clerk), the six Mothers of Driftmarket besides Granny Tull (Ma Kettering, Old Saltash, Mother Reed, Dace Corran, Mother Fennimore, Hettie Brine-no-relation), Brock Underhill (badger-folk sett-elder), Lettice Grey (a Purse heir; a `world/04` example name), Gristle (the Wolves' war-dog), Annie (Mabry's late wife), Orm Coalbeard (a clan head), Ewan Pickett.
 
 ---
 
@@ -227,7 +227,7 @@ Tier 3 names used at the table level (log in `truth/07` if they get play): Abel 
 | Ursk's Echo | ch10 | ally effect |
 | Sgt. Giles Mabry | ch11 | leader, CR 8 |
 | Quiet Knife | ch11 | assassin, CR 7 |
-| Dob Harrow | ch11 | assassin leader, CR 8 |
+| Bastian Harrow | ch11 | assassin leader, CR 8 |
 | Hushed Watchman | ch11 | Hushed guard, CR 4 |
 | Lt. Corbin Wade | ch12 | leader, CR 8 |
 | Glimmer-Warden (L12) | ch12 | line infantry, CR 5 |

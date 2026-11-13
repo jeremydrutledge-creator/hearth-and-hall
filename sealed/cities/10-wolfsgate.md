@@ -101,7 +101,7 @@ Ch10: every mercenary job imaginable. A quick menu of what's on the Hiring Yard 
 | 1 | Escort a caravan over the pass | 60 gp | A snow-fight with 4 Hushed wolves (T2) or a pack of ordinary wolves |
 | 2 | Recover a deserter (he ran because his family's starving in the Pick Rows) | 50 gp | Investigation DC 14 in Copperhill; Ash can bring him back with a written pardon from Ulric (Persuasion DC 16) |
 | 3 | Clear a bandit camp in the foothills | 120 gp | An ordinary fight (Street Tough T2 with bows) |
-| 4 | Carry a sealed contract to Tollhaven | 40 gp | The seal mustn't break; Percival Hume tries to read it (Ch9 rival; comedy) |
+| 4 | Carry a sealed contract to Tollhaven | 40 gp | The seal mustn't break; Julian Hume tries to read it (Ch9 rival; comedy) |
 | 5 | Retrieve a clan heirloom pawned at Vonn's (Dun Morrach's oath-ring; Ch10) | 150 gp and the clan's friendship | **Sleight of Hand DC 17** at the card house (Ch10) |
 | 6 | (T4) The Wolves need a scout for the Ch17 muster | 300 gp | `campaign/02` Ch17 |
 

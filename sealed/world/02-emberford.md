@@ -94,7 +94,7 @@ Outside the old city wall, beyond the **West Gate**, where the city spills into 
 | Highwater (mid-spring) | **Highwater Fair** | River floods its banks a bit; fair on Market Steps; the **Bargerace** (poled-barge race through the Seven Bridges) | Contest, betting, sabotage |
 | Midsummer's Eve | **Turn of Light** | At sunset, everyone floats a tiny glimmer lamp down the river and makes a wish. Lovers kiss on the bridges. | Ash's birthday. A Wellgate-adjacent night: strange things happen at sunset |
 | Harvest | **Provost Election** | Guild parades, speeches, bribery, brawls | Political jobs |
-| 1st of Lantern | **Ford Festival** | City founding. The Provost re-lights the Ford Stone lamp. Pageant of the "First Crossing" (a garbled folk memory of the Sundering) | Huge seed opportunity |
+| 1st of Leaffall | **Ford Festival** | City founding. The Provost re-lights the Ford Stone lamp. Pageant of the "First Crossing" (a garbled folk memory of the Sundering) | Huge seed opportunity |
 | Last night of the year | **Lantern Night** | Every lamp lit, all night. Gift-giving: small enchanted trinkets are the customary gift | Gifts from Enchanters' Row |
 | Every 10th day | **Tenth-day market** | Big market, cheap goods, pickpocket heaven | |
 

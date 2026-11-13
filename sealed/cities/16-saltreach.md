@@ -20,7 +20,7 @@
 ## 2. Shops and services
 
 ### 2.1 Fathom's Chandlery (the Shambles)
-**Keeper: Old Abel Fathom** (NPC-351; aka Abe Fathom), a sea-wizard turned chandler, barnacled to the elbows (honestly), with a parrot that only says the weather.
+**Keeper: Old Enoch Fathom** (NPC-351; aka Nock Fathom, Enock), a sea-wizard turned chandler, barnacled to the elbows (honestly), with a parrot that only says the weather.
 **Interior (painter):** a low shop half underground, its back wall the cliff itself, wet and glittering; coils of rope, lanterns, ship's brass; a glass tank with a small octopus in it that Abel talks to; charts pinned to every beam.
 **Haggle DC 15** (lever: a sea-story; Mother Brine's name gets advantage: "Beth Rourke? She owes me a leg. A *wooden* one").
 | Item | Rarity | Price | Notes |
@@ -125,7 +125,7 @@ Ship arrivals (grim in YF 1105: "which boats come back from the Glass"), the Gul
 | ID | Name (aka) | One line |
 |---|---|---|
 | NPC-350 | Captain Tamsin Gale (Tam Gale, Tamzin) | Lanternless smuggler captain; Ash's rival; sisterly; rows him to Jago |
-| NPC-351 | Old Abel Fathom (Abe Fathom) | Sea-wizard turned chandler; Ch19 gear |
+| NPC-351 | Old Enoch Fathom (Nock, Enock) | Sea-wizard turned chandler; Ch19 gear |
 | NPC-352 | Gussie Crabb (Augusta, Gussy Crab) | Keeper of the Barnacle; sings the low part |
 
 Tier 3 (no ID): "Salt" Merridy (the Hold's champion).

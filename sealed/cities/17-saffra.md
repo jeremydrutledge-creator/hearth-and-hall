@@ -2,7 +2,7 @@
 
 > **Saffra** (aka Safra, Saffrah). The tabaxi trade city on the Rennet's mid-course: bright awnings, bells and story-halls. Mirrors Tollhaven.
 > **Government:** an **elected Tale-Keeper**, the best storyteller, chosen by audience acclaim at the **Great Telling** each year. **Tale-Keeper: Saffi-of-the-Lamplight** (NPC-061), who collects stories about "the boy who hears" and is an information broker and ally. **Law:** the **Tale-Keepers' truce**: inside Saffra's bell-ring, no one may draw a weapon on a story-night. Otherwise, the bell-wardens (tabaxi watchmen with long hooked poles) keep order and are bribable with a good anecdote.
-> **When visited:** Ch14 (`chapters/act3/ch14.md`: the parley at the Great Telling; its side window has the Great Telling chain, bell-market haggling, the rooftop chase race with **Mirra Far-Wander**, and cat's-cradle duels). Mentioned in Ch9 (the Varga gate surfaces under Saffra's **Hall of Bells**). **Tier: T3.**
+> **When visited:** Ch14 (`chapters/act3/ch14.md`: the parley at the Great Telling; its side window has the Great Telling chain, bell-market haggling, the rooftop chase race with **Zuri Far-Wander**, and cat's-cradle duels). Mentioned in Ch9 (the Varga gate surfaces under Saffra's **Hall of Bells**). **Tier: T3.**
 > **The chapter wins.** This file adds the shops, the Scratch (Saffra's sparring ring), odd jobs, stealing, the fence, and Saffra by act. Neutral, trading with everyone to survive, sheltering refugees in secret (`world/05`).
 
 ---
@@ -47,7 +47,7 @@ Every story-hall has rooms. A night: **one story** (Charisma (Performance) DC 13
 ## 3. Festivals and contests
 
 - **The Great Telling** (Mirrowen's Thawing): **Ch14 runs it** (the chain at DC 17 / 19 / 21; the parley happens under its truce). The year's Tale-Keeper is chosen by acclaim. **If Ash wins it**, he's offered the Keepership (he can't keep it; Saffi laughs and keeps it for him "until you come back to tell the end").
-- **The rooftop chase race** (Ch14): Athletics or Acrobatics DC 17 / 19 / 21, advantage with Ash's climb speed. **Mirra Far-Wander** (Tier 3) is fast and rude. 300 gp purse; Mirra carries a message anywhere in Mirrowen, once.
+- **The rooftop chase race** (Ch14): Athletics or Acrobatics DC 17 / 19 / 21, advantage with Ash's climb speed. **Zuri Far-Wander** (Tier 3) is fast and rude. 300 gp purse; Zuri carries a message anywhere in Mirrowen, once.
 - **Cat's-cradle duels** (Ch14): Sleight of Hand contested (tabaxi +8), best of three.
 - **Bell-Ringing Eve** (any new moon): every family rings its own note in turn at dusk. Visitors are given a bell and asked to find their note. **Wisdom (Perception) DC 15** to hear which note in the city is "missing" (one family's gone still). It's a quiet beat and a quest hook (§6 job 2).
 
@@ -100,7 +100,7 @@ Under the truce: none on story-nights. Otherwise, rooftop scuffles. **Local tric
 
 ## 8. Rivals
 
-- **Mirra Far-Wander** (Tier 3): the fast, rude rooftop champion (Ch14).
+- **Zuri Far-Wander** (Tier 3): the fast, rude rooftop champion (Ch14).
 - **A rival teller, Pim-of-the-Seven-Lies** (Tier 3, no ID): enters the Great Telling every year with the same story (badly), and is the city's most beloved loser.
 
 ---

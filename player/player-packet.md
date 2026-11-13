@@ -434,7 +434,7 @@ There are twelve months of 30 days each: **Thawing, Seedtide, Highwater, Blossom
 | Mid-Highwater (mid-spring) | **Highwater Fair** | The river floods its banks a little. A fair on Market Steps. The Bargerace. |
 | Midsummer's Eve | **Turn of Light** | At sunset everyone floats a tiny glimmer lamp down the river and makes a wish. Lovers kiss on the bridges. **Ash's birthday.** |
 | Harvest | **Provost Election** | Guild parades, speeches, bribery and brawls. |
-| 1st of Lantern | **Ford Festival** | The city's founding day. The Provost re-lights the Ford Stone lamp. A pageant shows "the Lady of the Ford" leading the first settlers across the river with a lamp. The Lamp-Climb. |
+| 1st of Leaffall | **Ford Festival** | The city's founding day. The Provost re-lights the Ford Stone lamp. A pageant shows "the Lady of the Ford" leading the first settlers across the river with a lamp. The Lamp-Climb. |
 | Last night of the year | **Lantern Night** | Every lamp in the city lit, all night. People give each other small enchanted trinkets from the Row. |
 | Every 10th day | **Tenth-day market** | A big market and cheap goods. Pickpocket heaven. |
 

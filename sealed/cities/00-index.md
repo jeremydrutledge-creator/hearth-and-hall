@@ -138,7 +138,7 @@ When the mark is a professional, swap the passive number for a real opponent:
 |---|---|---|---|---|
 | **Street sharp** (Bone Table dealer, Rook) | +5 | +4 | 14 | 1d6 × 5 gp |
 | **Professional** (Lamplight Row dealer, mercenary card house) | +8 | +6 | 16 | 2d6 × 10 gp |
-| **Master** (Percival Hume; Tesh Twelve-Bells) | +11 | +8 | 18 | 3d6 × 20 gp |
+| **Master** (Julian Hume; Tesh Twelve-Bells) | +11 | +8 | 18 | 3d6 × 20 gp |
 | **Legend** (the Grand Wager final; a Saffra bell-house mistress) | +14 | +10 | 20 | 4d6 × 50 gp |
 
 Ash's card bonus (Cha + proficiency): **+6** at L1, **+7** at L5, **+8** at L9, **+9** at L10 (Cha 20), **+10** at L13, **+11** at L17. His Sleight of Hand: **+6** (L1), **+7** (L4), **+8** (L5), **+11** (L6, expertise), **+13** (L9), **+15** (L13), **+17** (L17). He'll outgrow the Street pitches by tier 2. That's the point: the fun moves to the sharps and the high tables.
@@ -328,7 +328,7 @@ Calendar (`world/01`): Thawing, Seedtide, Highwater, Blossom, Midsummer, Haymont
 | 1–7 Harvest | The Grand Wager | Tollhaven | 06 |
 | 25 Harvest | The Wolf Run | Wolfsgate | 10 |
 | 1 Leaffall | The Drawing (the Fairest Machine picks the council) and the Contraption Fair (the week before) | Bramblecog | 07 |
-| 1 Lantern (or 1 Leaffall; see CHG-A2-01) | Ford Festival; the Lamp-Climb | Emberford | 03 |
+| 1 Leaffall | Ford Festival; the Lamp-Climb | Emberford | 03 |
 | Frostcome, first snow | The Kettle Plunge season opens | Dun Morrach | 11 |
 | 21 Deepwinter | The Re-Striking Eve (every 10th year; next is YF 1106) and the Anvil Test (every year) | Dun Morrach | 11 |
 | Last night of Lantern | Lantern Night | Emberford | 03 |
@@ -341,4 +341,4 @@ Calendar (`world/01`): Thawing, Seedtide, Highwater, Blossom, Midsummer, Haymont
 
 `truth/00` gave NPC-080 as next free. Act II's chapters used a provisional block (NPC-140 to NPC-159). **This folder uses its own provisional block, NPC-300 to NPC-356**, so it can't collide with chapter writers working at the same time. `_change-requests.md` (CHG-CY-01) asks the Truth File's owner to confirm or renumber. All names were checked against the banned list in `world/04` and the existing name lookup.
 
-Existing NPCs reused here (no new IDs): every Emberford shopkeeper (NPC-043 to NPC-056), Simon Shaw (NPC-025), Peg (NPC-015), Netta (NPC-016), Bess (NPC-011), Tam Hollin (NPC-035), Ma Garrow (NPC-024), Rook (NPC-010), Hugh Dale (NPC-029), Old Bram (NPC-030), the city leaders (NPC-062 to NPC-077), Percival Hume (NPC-142), Gert Volker (NPC-148), Sal Pickett (NPC-153), Saffi (NPC-061), and the Act I Tier 3 fighters (Big Lottie Sparrow, Hal Brindle, Morwenna Kell).
+Existing NPCs reused here (no new IDs): every Emberford shopkeeper (NPC-043 to NPC-056), Simon Shaw (NPC-025), Peg (NPC-015), Netta (NPC-016), Bess (NPC-011), Tam Hollin (NPC-035), Ma Garrow (NPC-024), Rook (NPC-010), Hugh Dale (NPC-029), Old Bram (NPC-030), the city leaders (NPC-062 to NPC-077), Julian Hume (NPC-142), Gert Volker (NPC-148), Sal Pickett (NPC-153), Saffi (NPC-061), and the Act I Tier 3 fighters (Big Lottie Sparrow, Hal Brindle, Morwenna Kell).

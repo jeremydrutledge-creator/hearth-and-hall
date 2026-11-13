@@ -7,7 +7,7 @@ Always list alternate spellings in every NPC entry. Jeremy dictates.
 | People / region | Sound | Example personal names | Example place names |
 |---|---|---|---|
 | **Midriver humans (Emberford, Fringe)** | Plain, English, short | Bram, Tolly, Hester, Corwin, Nell, Wat, Agnes, Tam, Rose, Joss, Martha, Dob, Jem | Willow Lane, the Bend, Market Steps |
-| **Lakeland humans (Tollhaven)** | Plain but "moneyed," surnames matter | Constance Abernathy, Percival Hume, Lettice Grey | Counting Quarter, Gull Hill |
+| **Lakeland humans (Tollhaven)** | Plain but "moneyed," surnames matter | Constance Abernathy, Julian Hume, Lettice Grey | Counting Quarter, Gull Hill |
 | **River-clans (Driftmarket)** | Short, watery nicknames | Wenna Tull, Reed, Minnow, Ottilie, Coble | The Patient Goose, Long Plank |
 | **Lowriver/royal (Highmarch)** | Old-fashioned, noble | Edric, Anselm, Gisela, Rowan | the Ridge, Kingsbridge |
 | **Coast (Saltreach)** | Cornish-flavored | Maud Penrose, Jago, Tamsin Trelawn, Bryok, Kerra | Lighthouse Point, Smugglers' Stair |

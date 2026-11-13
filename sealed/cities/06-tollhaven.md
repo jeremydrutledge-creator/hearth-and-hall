@@ -65,7 +65,7 @@ Write and seal any contract (2 gp); witness a duel (5 gp); post a bounty (10% of
 ## 3. Festivals and contests
 
 ### 3.1 The Grand Wager (1–7 Harvest)
-**Ch9 runs it** (buy-in 50 gp; three rounds: cards, dice, riddles; final purse 600 gp; Percival Hume in the final). If the party is in Tollhaven in Harvest of a later visit (unlikely), run the same chain at **DC +4** and a **2,000 gp** final purse, with a Legend-grade sharp (`00-index.md` §3.5) in the final.
+**Ch9 runs it** (buy-in 50 gp; three rounds: cards, dice, riddles; final purse 600 gp; Julian Hume in the final). If the party is in Tollhaven in Harvest of a later visit (unlikely), run the same chain at **DC +4** and a **2,000 gp** final purse, with a Legend-grade sharp (`00-index.md` §3.5) in the final.
 
 ### 3.2 The Counting Race, the regatta, Purse duels, masquerade tables
 **Ch9's window.** For a T3 return, DCs +3 and purses ×3.
@@ -138,7 +138,7 @@ Ch9 lists the First Purse's clock collection (don't), a forged charter in the Pu
 | The **Weighing Docks' strongroom** | under the great scales | High (DC 17, Alarm 2) | 1,200 gp in toll coin | During the Seal-Breaking (§3.3) the Alarm limit is **3**. Stealing toll coin is stealing from the whole city; the Drift would cheer, the Purses would hang him. |
 | **Merrow's glimmer-futures ledger** | House Merrow's counting-house, Gull Hill | High | none (it's proof) | Ch9 ★-beat material; the chapter wins |
 | A Purse heir's **IOU book** (gambling debts) | Lettice Grey's apartments, Lamplight Row | Medium | 300 gp as blackmail (Ash wouldn't) or a favor (burn it in front of her) | She becomes a friend if he burns it |
-| Percival Hume's **little black book** of who bids on what | his rooms, Counting Quarter | Medium | none | Every odd job in Tollhaven at advantage for a month; Percival is *furious* and impressed |
+| Julian Hume's **little black book** of who bids on what | his rooms, Counting Quarter | Medium | none | Every odd job in Tollhaven at advantage for a month; Julian is *furious* and impressed |
 | The **Netyards' net-tithe** (stolen from fishermen by a Toll clerk) | the clerk's house | Low | 80 gp, returned to the Netyards | Ash's favorite kind |
 
 **Fence: Pim Saddler** (NPC-331; aka Pimm Sadler), a cheerful old ropemaker in the Netyards who fences for the fishermen and the Drift. Pays **35%** (hot) / **50%** (cold). Won't touch anything stolen from the Netyards or the Drift. Hettie Brine sends people to him.
@@ -147,7 +147,7 @@ Ch9 lists the First Purse's clock collection (don't), a forged charter in the Pu
 
 ## 8. Rivals
 
-- **Percival Hume** (NPC-142): the smug young broker in a plum coat who outbids the party for every odd job and turns up everywhere (Ch9). In side activities: any T2 odd job in Tollhaven, roll a d6; on 1–3, Percival has bid for it too, and Ash must win a **Persuasion contest** (Percival +6) or take 20% less. Beat him at anything public and he becomes a source (Ch9).
+- **Julian Hume** (NPC-142): the smug young broker in a plum coat who outbids the party for every odd job and turns up everywhere (Ch9). In side activities: any T2 odd job in Tollhaven, roll a d6; on 1–3, Julian has bid for it too, and Ash must win a **Persuasion contest** (Julian +6) or take 20% less. Beat him at anything public and he becomes a source (Ch9).
 - **Valentine Crewe** (NPC-141): not a side-activity rival. The chapter owns him.
 - **The Velvet Box** (the Purse house that keeps Cassius Dray): **House Ellery** (no ID; Tier 3 if used), who'd love to own a Fringe champion.
 

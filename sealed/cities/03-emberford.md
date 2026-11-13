@@ -17,7 +17,7 @@ The campaign opens early Thawing YF 1104 and ends Midsummer's Eve YF 1105. Calen
 | Last day of Blossom (eve) | **Turn of Light** (Midsummer's Eve) | At sunset everyone floats a tiny glimmer lamp downriver and makes a wish. Lovers kiss on the bridges. **Ash's birthday.** | Ch7 (YF 1104), Ch20 (YF 1105) | §2.7 |
 | Midsummer (whole month) | **Midsummer fairs** | Smaller fairs every Tenth-day; the **Midsummer Swim** across the Fordwater. | Ch7 | §2.6 |
 | Harvest (whole month) | **Provost Election** | Guild parades, speeches, bribery, brawls. Guild Games in the last week. | Ch11 backdrop | §2.5, §5.3 |
-| 1 Lantern (or 1 Leaffall; see CHG-A2-01) | **Ford Festival** | The city's founding. The Provost re-lights the Ford Stone lamp. Pageant of the "First Crossing." The **Lamp-Climb** on the 60-ft Great Lamp pole. | Ch11 | §2.2 |
+| 1 Leaffall | **Ford Festival** | The city's founding. The Provost re-lights the Ford Stone lamp. Pageant of the "First Crossing." The **Lamp-Climb** on the 60-ft Great Lamp pole. | Ch11 | §2.2 |
 | Last night of Lantern | **Lantern Night** | Every lamp lit all night. Gift-giving: small enchanted trinkets. The Row works through the night. | Ch13 | `02-enchanters-row.md` |
 | Monthly | **Liars' Night** (the Willow), **the Riddle Table** (the Lyceum) | | Ch2, Ch5, Ch7, Ch11 | §2.4 |
 
@@ -412,7 +412,7 @@ Heist chain, Alarm and fences: `00-index.md` §8. Ash's code: never the Fringe. 
 | NPC-313 | Jonas Hatch, "the Bellman" (Jonah, Jonas Hach) | Retired tourney champion; T4 Bucket champion |
 | NPC-314 | Barnaby Coyle (Barney Coil) | Merchants' Guild landlord starving out Fringe tenants |
 | NPC-315 | Gilbert Swift (Gil, Gilbert Swyft) | Swift and Sons couriers; Ash's price rival |
-| NPC-316 | Percy Lisle (Percival Lyle) | Lyceum snob. **Not** Percival Hume (NPC-142); say "Lisle" every time. |
+| NPC-316 | Percy Lisle (Percy Lyle) | Lyceum snob. Lyceum snob. |
 | NPC-317 | Hortensia Vale (Tensy, Hortensia Vail) | Lyceum snob; apologizes in Act III |
 
 Minor names with no ID (Tier 3 if they recur): Old Grace Pinner, the Twins Abbot, Dicky Mole (bookies); Oswin Fitch (Knife Wall student); Mistress Dunn and Biscuit; Lanky Ferris; Dot Garrow (Ma's healer); Joss Kettering (Ch1).

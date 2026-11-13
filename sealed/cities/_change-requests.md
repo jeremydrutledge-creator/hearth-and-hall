@@ -26,10 +26,10 @@ This folder used its own provisional block so it couldn't collide with the chapt
 | NPC-313 | Jonas Hatch, "the Bellman" | 03 | T4 Bucket champion |
 | NPC-314 | Barnaby Coyle (Barney Coil) | 03 | Merchants' Guild landlord |
 | NPC-315 | Gilbert Swift | 03 | Swift and Sons couriers |
-| NPC-316 | Percy Lisle (Percival Lyle) | 03 | Lyceum snob |
+| NPC-316 | Percy Lisle (Percy Lyle) | 03 | Lyceum snob |
 | NPC-317 | Hortensia Vale (Tensy) | 03 | Lyceum snob; apologizes in Act III |
 | NPC-318 | Molly Pike (Mollie) | 04 | Hobb's Ferry cook; arm-wrestler |
-| NPC-319 | Wilf Hatherley | 04 | Hobb's Ferry miller |
+| NPC-319 | Gerald Hatherley | 04 | Hobb's Ferry miller |
 | NPC-320 | Brother Ivo (Eye-vo, Evo) | 04 | Hobb's Ferry priest |
 | NPC-321 | Sergeant Ruth Dane (Ruthie) | 04, 10 | Grey Wolf recruiter; runs the Yard |
 | NPC-322 | Old Corrie Bask (Cory Bask) | 05 | Swap Deck knitter |
@@ -61,7 +61,7 @@ This folder used its own provisional block so it couldn't collide with the chapt
 | NPC-348 | Elowen Fairbough (Elowyn, Fairbow) | 14 | Aranhollow bowyer |
 | NPC-349 | Bertie Gall (Bert Gaul, Burty) | 15 | Drowners' Rest scavenger boss |
 | NPC-350 | Captain Tamsin Gale (Tam, Tamzin) | 16 | Lanternless rival captain (Ch19) |
-| NPC-351 | Old Abel Fathom (Abe) | 16 | Saltreach chandler |
+| NPC-351 | Old Enoch Fathom (Nock) | 16 | Saltreach chandler |
 | NPC-352 | Gussie Crabb (Augusta) | 16 | The Barnacle's keeper |
 | NPC-353 | Yesh Copper-Whisker | 17 | Saffra song-charm seller; fence |
 | NPC-354 | Lio-of-the-Long-Shelf (Leo) | 17 | Saffra archivist-bookseller |
@@ -77,7 +77,7 @@ This folder used its own provisional block so it couldn't collide with the chapt
 The player dictates by voice. These pairs could be misheard; add each to the lookup's sound-alike notes:
 - **Hettie Bunce** (NPC-303, Willow Lane baker) vs **Hettie Brine-no-relation** (Ch8, the *Lucky Eel*) vs **Mother Brine** (NPC-043). Different places; use the scene.
 - **Hob Rudd** (NPC-323) vs **Hob Tolley** (NPC-044 pair). Say the surname.
-- **Percy Lisle** (NPC-316) vs **Percival Hume** (NPC-142). Say the surname.
+- (Resolved: NPC-142 renamed Julian Hume, CHG-07.)
 - **Ned Garrow** (NPC-310) vs **Ma Garrow** (NPC-024). Fine in context.
 - **Reece** (NPC-312) vs **Rook** (NPC-010)? Low risk; noted.
 - **Ruth Dane** (NPC-321) vs **Ruthie**: same person.
@@ -123,4 +123,4 @@ The city files add a few house items (no book equivalent). Prices follow the rar
 
 ## CHG-CY-08 · A naming flag for review
 
-**Mirra Far-Wander** (Ch14's rooftop champion, from `world/05`'s example names) is close in sound to the banned **Marra**. It isn't the same name, and it came from the world bible. **Request:** the consistency pass decides whether to keep it or rename (a simple swap, e.g. **Mirri Far-Wander**, in `world/05`, `chapters/act3/ch14.md` and `17-saffra.md`).
+**Zuri Far-Wander** (Ch14's rooftop champion, from `world/05`'s example names) is close in sound to the banned **Marra**. It isn't the same name, and it came from the world bible. **Request:** the consistency pass decides whether to keep it or rename (a simple swap, e.g. **Mirri Far-Wander**, in `world/05`, `chapters/act3/ch14.md` and `17-saffra.md`).

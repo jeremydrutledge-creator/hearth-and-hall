@@ -35,7 +35,7 @@
 | 5 | A Mirrowen hare-folk charm (a woven grass knot); Nan doesn't know what it is; it hums faintly to Ash (color) | 2 gp |
 | 6 | A dwarven waterskin that keeps water cold (glimmer charm, but dwarven-made; Dagny's sister made it) | 15 gp |
 
-**The Mill** · **Wilf Hatherley** (NPC-319; aka Wilf Hatherly), the miller. Flour, and gossip about the river level. His waterwheel was stolen once (§5, job 2).
+**The Mill** · **Gerald Hatherley** (NPC-319; aka Gerry, Hatherly), the miller. Flour, and gossip about the river level. His waterwheel was stolen once (§5, job 2).
 
 **The Chapel of the Bright Lady** · a small whitewashed chapel; the priest is **Brother Ivo** (NPC-320; aka Eye-vo). Healing: *Cure Wounds* 10 gp, *Lesser Restoration* 40 gp (donations, honestly asked). Blesses travelers for free.
 
@@ -50,7 +50,7 @@ The ice ropes come off the ferry and the summer rope goes up. The whole village 
 
 ### 3.2 The arm-wrestling table (any night)
 The groove in the table is from forty years of elbows. Contested **Strength (Athletics)**, best of three. 1 gp a bout, house takes nothing; the winner of the night gets their name chalked on the beam.
-**The table's best (roll d4 for tonight):** 1, Tobin Pike (+5); 2, Wilf Hatherley the miller (+6); 3, a passing Grey Wolf sellsword (+7; a T2 tell that something's moving on the road); 4, **Molly Pike** (+8; nobody has beaten her in nine years; Gideon might).
+**The table's best (roll d4 for tonight):** 1, Tobin Pike (+5); 2, Gerald Hatherley the miller (+6); 3, a passing Grey Wolf sellsword (+7; a T2 tell that something's moving on the road); 4, **Molly Pike** (+8; nobody has beaten her in nine years; Gideon might).
 **Gideon** is the natural entrant (+5 at L1, +7 at L5). If he beats Molly, the whole inn goes quiet, then roars, then Molly makes him a pie.
 
 ### 3.3 Ferry Bell Night (the evening before a Tenth-day)
@@ -113,7 +113,7 @@ Ash's code applies here like the Fringe: **Hobb's Ferry is folk like his folk.**
 | ID | Name (aka) | One line |
 |---|---|---|
 | NPC-318 | Molly Pike (Mollie) | Nan's daughter-in-law, cook, undefeated arm-wrestler |
-| NPC-319 | Wilf Hatherley (Wilf Hatherly) | The miller; gossip about the river level |
+| NPC-319 | Gerald Hatherley (Gerry, Hatherly) | The miller; gossip about the river level |
 | NPC-320 | Brother Ivo (Eye-vo, Evo) | The chapel priest; blesses travelers |
 | NPC-321 | Sergeant Ruth Dane (Ruthie, Ruth Dain) | Grey Wolf recruiter; turns up at Wolfsgate |
 

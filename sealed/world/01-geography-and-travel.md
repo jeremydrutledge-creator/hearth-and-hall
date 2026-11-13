@@ -87,7 +87,7 @@ Saltreach to the Salt Isles: 4 days. Saltreach to the Glass: 1 day (if anyone wi
 - **Year of the Ford (YF).** Campaign opens in **early spring, YF 1104**.
 - Four seasons with real winters in the north. River floods in late spring ("the Highwater").
 - **Months (common names):** Thawing, Seedtide, Highwater, Blossom, Midsummer, Haymonth, Harvest, Leaffall, Frostcome, Deepwinter, Longnight, Lantern. Each has 30 days. **Lantern** is the year-end month of festivals and lights.
-- **Key days:** Midsummer's Eve (Ash's birthday; the Turn-of-Light festival), the Ford Festival (the 1st of Lantern, city founding), Highwater Fair (Emberford, mid-Highwater), Lantern Night (the last night of the year, every lamp in Emberford lit).
+- **Key days:** Midsummer's Eve (Ash's birthday; the Turn-of-Light festival), the Ford Festival (the 1st of Leaffall, city founding), Highwater Fair (Emberford, mid-Highwater), Lantern Night (the last night of the year, every lamp in Emberford lit).
 
 ## Common knowledge (player-safe)
 - The Tamber River is the road of Eyrland. If you want to go somewhere, you take a barge.

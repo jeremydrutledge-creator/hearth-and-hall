@@ -186,8 +186,8 @@ Unchanged from Act II (`act2/_index.md` §3.5). Act III uses: SC 15-B (advantage
 | NPC-194 | The Bell-Warden | Bell-Warden | Ch18 | Old Varrow's senior Hushed knight. |
 | NPC-195 | Captain Hattie Slade | Hattie, Hatty, Slade | Ch19–20 | Smuggler captain, Jago's niece; sisterly rival. |
 | NPC-196 | Bosun Ezzard Cole | Ezzard, Ezard, Cole, Coal | Ch19 | Maud's bosun. |
-| T3 | Sergeant Abel Marsh (Crown Guard) | Abel, Marsh | Ch17 | One line. |
-| T3 | Tom Brindle (sailor) | Brindle | Ch19 | Hushed in the Glass if SC#5 fails once. |
+| T3 | Sergeant Godric Marsh (Crown Guard) | Abel, Marsh | Ch17 | One line. |
+| T3 | Kester Sayle (sailor) | Kester, Sayle | Ch19 | Hushed in the Glass if SC#5 fails once. |
 | HIST-06 (prov.) | Edwin Fenn-wyck | Edwin | Ch18 | The Fenn-wyck knight entombed in Old Varrow's chapel. |
 
-**NPC-185 and NPC-186 are unused** (reserved; never assigned). **Sound-alike traps added in Act III:** *Dunmore* (the Warlord) vs. *Dun Morrach* (the dwarven hold): "Dunmore" said in Mirrowen is the Warlord; in Eyrland it's almost always the hold. *Hattie* vs. *Hester*: Hattie is on the coast; Hester is in Emberford (and probably dead). *Hulda* vs. *Hilde* (Strand, the Copperhill champion). *Ezzard Cole* vs. *Coble* (Tull). *Abel Marsh* vs. *Elspeth Marsh*. *Nkemba* may come through dictation as "Kimba" or "in Kemba."
+**NPC-185 and NPC-186 are unused** (reserved; never assigned). **Sound-alike traps added in Act III:** *Dunmore* (the Warlord) vs. *Dun Morrach* (the dwarven hold): "Dunmore" said in Mirrowen is the Warlord; in Eyrland it's almost always the hold. *Hattie* vs. *Hester*: Hattie is on the coast; Hester is in Emberford (and probably dead). *Hulda* vs. *Hilde* (Strand, the Copperhill champion). *Ezzard Cole* vs. *Coble* (Tull). *Godric Marsh* vs. *Elspeth Marsh*. *Nkemba* may come through dictation as "Kimba" or "in Kemba."
