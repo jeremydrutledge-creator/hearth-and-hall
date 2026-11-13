@@ -493,7 +493,7 @@ Tier 1 · FAC-05 · First seen: Ch1, the chandlery at the top of the Lane
 ENT-01 · Omeruth, the Stillness (aka Omerooth, Omeroth, Omeruthe, "the Quiet under the water")
 Ancient Threat · First felt: Ch1 (grey still water) · In body: Ch20
 ```
-- Primordial silence from before the first river. Not a demon, not infernal. It soothes, and its touch Hushes. It can't act while sealed: it works through grief (Hollis), desperation (Brannoc) and corruption (Vessimer). See world/00 §6.
+- Primordial silence from before the first river, older than any god or underworld. It soothes, and its touch Hushes. It can't act while sealed: it works through grief (Hollis), desperation (Brannoc) and corruption (Vessimer). See world/00 §6.
 - **Answers to:** nothing. **Edges:** none. It doesn't have relationships; it has instruments.
 
 ```

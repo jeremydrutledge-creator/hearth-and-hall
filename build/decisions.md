@@ -39,3 +39,5 @@
 - Owns dice, playing cards (proficient — Wayfarer gaming set), and a shell-game set (cups and ball; run with Sleight of Hand vs mark's Wisdom (Perception)). Street hustling goes on city side-activity menus.
 - Starting gear: Rogue package A + Wayfarer package A combined (leather armor, shortsword, 4 daggers, shortbow + 20 arrows, quiver, 2x thieves' tools, burglar's pack, bedroll, traveler's clothes, 2 pouches, games). ~24 gp.
 - REVISED: one set of thieves' tools only; starting coin 36 gp (spare-tools sale folded in, not roleplayed). Familiar named Bartholomew ("Bart" to Ash), already summoned before session one. Shopping list pending.
+- Purchases: manacles (2), grappling hook (2), fine clothes (15), caltrops (1), steel mirror (5), chalk, 10 pitons (~1 for chalk + pitons). Total ~26 gp. Remaining: 10 gp.
+- Ash carries a sentimental trinket. Its meaning and origin are an author decision (sealed). Player packet shows only its surface description and what Ash believes about it.

@@ -113,7 +113,7 @@ The world file says Ash has the **Hearing** half and Clara the **Voice** half, a
 | EVT-19 | Kessel Workings gate closed (twin duet, or Zeke + Moss) (Ch12) | −1 |
 | EVT-23 | Grand Reserve un-tuned/dispersed (Ch13) | −1 (on top of preventing the +3) |
 | EVT-29 | Quiet Pens woken (Ch15) | −1 |
-| EVT-31 | Concord votes to end glimmer mining (Ch17, needs public proof) | −1 |
+| EVT-36 | Concord votes to end glimmer mining (Ch17, needs public proof) *(renumbered from EVT-31 by CHG-02; EVT-31 is Umbari, Ch16)* | −1 |
 | EVT-35 | Heron redeemed (−2) or destroyed (−1) (Ch18) | −1/−2 |
 | Optional | Any minor gate closed on a side quest (max 2 over the campaign) | −1 each |
 

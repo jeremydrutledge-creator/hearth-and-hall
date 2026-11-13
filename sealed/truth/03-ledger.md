@@ -618,7 +618,7 @@
 - BLIND SPOT: none; this is wisdom, not blindness.
 - WILL VOUCH: for his heart, not his deeds.
 - FEELING: pity.
-- CHANGES ONLY VIA: EVT-29.
+- CHANGES ONLY VIA: EVT-29 (vindicated), EVT-31 (her last words name him).
 
 **R-076 · NPC-008 Brannoc → NPC-009 Vessimer**
 - BELIEVES: The Heron is a holy messenger who cured the calves.
@@ -748,7 +748,7 @@
 - BLIND SPOT: Respectability.
 - WILL VOUCH: for his civic record · won't vouch for glimmer.
 - FEELING: cautious respect.
-- CHANGES ONLY VIA: EVT-22/23 (Lantern Night: horror), EVT-36, EVT-54.
+- CHANGES ONLY VIA: EVT-22, EVT-23 (Lantern Night: horror), EVT-36, EVT-54.
 
 **R-092 · NPC-020 Hask → PC-01 Ash**
 - BELIEVES: The baby that got away. A loose end.

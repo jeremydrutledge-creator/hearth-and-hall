@@ -134,7 +134,7 @@
 
 ## SEC-18 · Brannoc's own daughter Ama is in the Quiet Pens
 - **Who knows:** Brannoc, Fergan, the Pens' wardens.
-- **Seeds:** Ch6 (the calf with a ribbon); Ch14 (Fergan).
+- **Seeds:** Ch6 (the calf with a ribbon); Ch7/8 (a captured Horned Host raider or raid-captain: "The Regent goes to the Pens every night. Nobody asks why."); Ch14 (Fergan). *(Ch7/8 seed added by CHG-03.)*
 - **Reveal:** Ch14–15.
 
 ## SEC-19 · Vessimer can be redeemed
