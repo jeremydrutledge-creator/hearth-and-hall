@@ -176,7 +176,7 @@ If Claude Docs isn't available, keep them as artifacts or files, and tell Jeremy
 ## 12. "Log this session": the end-of-session wrap-up
 
 When Jeremy says **"log this session,"** run these steps **in this order, without asking**:
-1. **Campaign Bible:** add new places, people (public faces only), customs and rulings.
+1. **Campaign Bible:** add new places, people (public faces only), customs and rulings. **Update the Tavern Board** (§6b): Ash's contest results and points, and roll the rivals' weekly d6 movement for each in-game week that passed (rules in `sealed/cities/00-index.md` §14).
 2. **Ash's Character Sheet:** hit points, level, gear, coin, consumables, luck, features, Bart.
 3. **Sealed GM Notes:** clock moves, track changes, beats hit and routes used, secrets seeded or revealed, edges changed (with events), changes made because of play, new Tier 3 NPCs, open threads, where the next session starts. **Never say what you wrote.**
 4. **Party Knowledge File:** new facts with sources, trust earned or borrowed (and through whom), suspicions, last contact, and flags where a source's trust has changed.

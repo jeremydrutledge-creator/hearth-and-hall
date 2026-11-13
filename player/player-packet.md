@@ -448,7 +448,7 @@ The whole back wall of **the Willow**, Peg Mallory's tavern at the top of Willow
 | 1 | **Rook** (Magpies) | 14 | Rooftop Race | Roofs, knives, and never shutting up about it |
 | 2 | **Joss Kettering** | 11 | Wharfmaster's Run | A sailor. Strong, fast, can't pick a pocket to save his life |
 | 3 | **"Gentle" Joe Barrow** | 10 | Bare-Knuckle (the Bucket) | Huge, polite, apologizes after he knocks you down |
-| 4 | **Tilly Cobb** | 8 | Locksmiths' Race | A locksmith's apprentice. Fast hands, no nerve for anything illegal |
+| 4 | **Nora Cobb** | 8 | Locksmiths' Race | A locksmith's apprentice. Fast hands, no nerve for anything illegal |
 | 5 | **Ash** | 7 | **Shell Game** | You |
 | 6 | **Jenny Wick** (Magpies) | 6 | The Plank | Rook's lieutenant. Balance like a cat |
 | 7 | **Old Merrit** | 5 | (none) | A "retired" burglar the Watch knows by name. Winks at Ash. Second at every hustle |

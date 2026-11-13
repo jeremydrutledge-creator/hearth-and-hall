@@ -19,7 +19,7 @@
 | Prefix | Meaning | Range in use |
 |---|---|---|
 | `PC-01` | Ash (the player character). No Truth entry. | PC-01 |
-| `NPC-###` | Characters. 001–003 companions; 004–025 Tier 1; 026+ Tier 2 | NPC-001 to NPC-096, NPC-140 to NPC-159, NPC-180 to NPC-196 (185–186 reserved, unused), NPC-300 to NPC-356 (next: NPC-097) |
+| `NPC-###` | Characters. 001–003 companions; 004–025 Tier 1; 026+ Tier 2 | NPC-001 to NPC-106, NPC-140 to NPC-159, NPC-180 to NPC-196 (185–186 reserved, unused), NPC-300 to NPC-356 (next: NPC-107) |
 | `ENT-##` | Non-person powers | ENT-01, ENT-02 |
 | `HIST-##` | Dead or historical figures | HIST-01 to HIST-06 |
 | `T3-###` | Tier 3, improvised in play | T3-001 next |
@@ -267,3 +267,20 @@
 - **Dunmore** (NPC-190) vs. **Dun Morrach**: in Mirrowen, the Warlord; in Eyrland, the hold. **Hulda** (NPC-191) vs. **Hilde** (Strand). **Godric Marsh** vs. **Elspeth Marsh**. **Nkemba** may come through as "Kimba" or "in Kemba."
 - **Reece** (NPC-312) vs. **Rook**: low risk.
 - **Julian Hume** (NPC-142) vs. **Percy Lisle** (NPC-316): different cities.
+
+### Added for contests and the Tavern Board (CHG-22, CHG-23)
+
+| Heard as… | Is | ID |
+|---|---|---|
+| Odo Fairlie, Odo Fairly, the Collector | Odo Fairlie | NPC-097 |
+| Garnet Haddow, Sergeant Haddow, Garnett Hadow | Sergeant Garnet Haddow | NPC-098 |
+| Saba Mercer, Sabba Mercer | Saba Mercer | NPC-099 |
+| Greta Bellamy, Greta Belamy | Greta Bellamy | NPC-100 |
+| Teddy Rowntree, Lord Rowntree, Teddy Roundtree | Lord Teddy Rowntree | NPC-101 |
+| Pashi Two-Rivers, Pashy, Pasha | Pashi Two-Rivers | NPC-102 |
+| Nora Cobb, Nora Cob, Norah | Nora Cobb | NPC-103 |
+| Old Merrit, Merritt, Merit | Old Merrit | NPC-104 |
+| Oswin Fitch, Ozwin, Oswyn | Oswin Fitch | NPC-105 |
+| Lenny Swann, Len Swan, Lenny Swan | Lenny Swann | NPC-106 |
+
+**Sound-alike traps (new):** **Merrit** (NPC-104) vs. **Merrilee** (otter-folk name pattern): different realms. **Swann** (Lenny) vs. **Swift** (Swift and Sons): Lenny is a fencer, Swift is a courier. **Nora** (Cobb) vs. **Nell** (Carter): Nora is the locksmith apprentice, Nell is five. **Haddow** vs. **Hale** (Captain): Haddow is always "Sergeant," and Wolfsgate's.

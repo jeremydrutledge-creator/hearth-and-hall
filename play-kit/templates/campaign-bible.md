@@ -41,6 +41,29 @@
 | Session | What | Outcome | Paid / owed |
 |---|---|---|---|
 
+## 6b. Tavern Board (the Long Wall at the Willow)
+*Update at every wrap-up. Ash's points change only from contests actually played; rivals move by the weekly d6 roll (DM rules are sealed). Standings live here, never in an image.*
+
+**Season:** Lantern Night YF 1103 → Lantern Night YF 1104 · **Lantern Jar:** ~__ gp
+
+| # | Name | Points | Title held | Last change (session) |
+|---|---|---|---|---|
+| 1 | Rook | 14 | Rooftop Race | day one |
+| 2 | Joss Kettering | 11 | Wharfmaster's Run | day one |
+| 3 | "Gentle" Joe Barrow | 10 | Bare-Knuckle | day one |
+| 4 | Nora Cobb | 8 | Locksmiths' Race | day one |
+| 5 | **Ash** | 7 | Shell Game | day one |
+| 6 | Jenny Wick | 6 | The Plank | day one |
+| 7 | Old Merrit | 5 | — | day one |
+| 8 | Lenny Swann | 4 | Wasters | day one |
+| 9 | Walt Finch | 3 | Liars' Night | day one |
+| 10 | Oswin Fitch | 2 | — | day one |
+
+**Vacant titles:** Lamp Run, Strange Arms, Ribbon Pull, Copper to Crown. **Moth Post:** the Official Moths.
+**Coming up (from the wall):** | Date | Contest | Where | Entry |
+
+**Ash's contest ledger:** | Session | Contest | Result | Points | Fee / purse |
+
 ## 7. Levels and milestones
 | Level | Session | What happened |
 |---|---|---|

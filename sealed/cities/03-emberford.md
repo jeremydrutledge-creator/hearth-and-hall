@@ -65,7 +65,7 @@ No contest. At sunset, floating lamps. Each person makes a wish, and it's bad lu
 ### 2.8 Skill contests (`00-index.md` §11; CHG-21)
 Ash's city has the most of them, and they're where the Lane will come to cheer.
 - **The Wharfmaster's Run** (Gauntlet, **Standard**, T1; every Tenth-day afternoon on the Wharves; Hard from T2). The sample course in `00-index.md` §11.2: the barrels ⬇, the cargo net ⏱, the quay sprint ⏱, the ribbon grab ⏱, the tilting plank ⬇ (into the Fordwater), the bell ⏱. **Entry 2 gp**; the Wharfmaster's clerk takes **15%**. Rivals: **Joss Kettering** (sailor, +5 Athletics, −2 Sleight of Hand), **Rook** (+6 Acrobatics; he'll be there the first time Ash is), Bargemen apprentices (+5 Athletics). The Lane comes to watch; Pip shouts every station.
-- **The Locksmiths' Race** (lock-picking, T1–T2; first Restday of each month, Glimmerway, in the Locksmiths' Guild yard under the Watch's eye). As `00-index.md` §11.5: five locks **DC 10 / 12 / 14 / 16 / 18**, the last trapped, five minutes. **Entry 3 gp; prize 40 gp and a guild pick set** (+1, non-magical). Rivals: a guild apprentice, **Tilly Cobb** (+5), and a "retired" burglar the Watch knows by name, **Old Merrit** (+6; he winks at Ash). Captain Hale's sergeant writes down the winner's name. **Every time.**
+- **The Locksmiths' Race** (lock-picking, T1–T2; first Restday of each month, Glimmerway, in the Locksmiths' Guild yard under the Watch's eye). As `00-index.md` §11.5: five locks **DC 10 / 12 / 14 / 16 / 18**, the last trapped, five minutes. **Entry 3 gp; prize 40 gp and a guild pick set** (+1, non-magical). Rivals: a guild apprentice, **Nora Cobb** (+5), and a "retired" burglar the Watch knows by name, **Old Merrit** (+6; he winks at Ash). Captain Hale's sergeant writes down the winner's name. **Every time.**
 - **The Rooftop Race** (`00-index.md` §11.6; unofficial, Tenth-day dusk): from the Willow's roof to the Assembly Rooms' weathervane in Crownhill. **Entry 2 gp, pot.** Rook and two Magpies run it every week. It's illegal in Crownhill (trespass) and nobody cares in the Fringe. **Ash's signature contest**, and the one Rook most wants to beat him at.
 - **The Ribbon Pull** (`00-index.md` §11.6; Highwater Fair only, on Market Steps): marks are Weavers' Guild apprentices in bell-coats, passive Perception 11–14. **Entry 1 gp; prize 25 gp and a silk purse.** Hugh Dale watches the winners very closely.
 
@@ -461,7 +461,7 @@ Minor names with no ID (Tier 3 if they recur): Old Grace Pinner, the Twins Abbot
 | 1 | **Rook** (NPC-010) | 14 | Rooftop Race | roofs, knife-throwing | anything judged by a crowd that dislikes him | +6 | R-037; the board is where their rivalry is public |
 | 2 | **Joss Kettering** (NPC-080) | 11 | Wharfmaster's Run | Athletics, Gauntlets | Sleight of Hand | +5 | friendly; buys Ash a drink after losing |
 | 3 | **"Gentle" Joe Barrow** (NPC-311) | 10 | Bare-Knuckle | Bare-Knuckle, stone-lift | Wasters, the Plank | +5 | kindly; offers to teach Ash "the proper way to fall down" |
-| 4 | **Tilly Cobb** (NPC-103) | 8 | Locksmiths' Race | locks | anything illegal (she won't enter the Rooftop Race or the Night Climb) | +5 | wary; thinks Ash is a criminal (correct); respects his hands |
+| 4 | **Nora Cobb** (NPC-103) | 8 | Locksmiths' Race | locks | anything illegal (she won't enter the Rooftop Race or the Night Climb) | +5 | wary; thinks Ash is a criminal (correct); respects his hands |
 | 5 | **Ash** | 7 | **Shell Game** | — | — | — | — |
 | 6 | **Jenny Wick** (NPC-084) | 6 | The Plank | balance, Ribbon Pull | Strength | +5 | Magpie; takes her cue from Rook |
 | 7 | **Old Merrit** (NPC-104) | 5 | — | hustles, lock-boxes, cheating | anything athletic now (bad knees) | +6 | likes Ash; offers tips for a price; will throw a contest if Rook pays him (Insight DC 14) |
@@ -474,7 +474,7 @@ Minor names with no ID (Tier 3 if they recur): Old Grace Pinner, the Twins Abbot
 **Day-one news on the wall** (for the session-one opener or Ash's first visit): Lenny Swann took Wasters from Jenny Wick last Tenth-day and bought the room a round with the purse; Rook has written "FENWICK OWES ME A RACE" in the corner and Peg hasn't wiped it.
 
 ### 10.2 Who's new (IDs registered in `truth/02-tier2.md`, CHG-23)
-- **Tilly Cobb** (NPC-103; Tilly Cob). Locksmiths' Guild apprentice, 19, prim, fast hands, lives with her father the locksmith in Glimmerway. Comes to the Willow only on contest nights.
+- **Nora Cobb** (NPC-103; Nora Cob). Locksmiths' Guild apprentice, 19, prim, fast hands, lives with her father the locksmith in Glimmerway. Comes to the Willow only on contest nights.
 - **Old Merrit** (NPC-104; Merritt, Merit). "Retired" burglar, sixties, bad knees, twinkle. Knows the Watch by first name and the Watch knows him. A possible mentor for heist tricks (Investigation tips for 1 gp a tip).
 - **Oswin Fitch** (NPC-105; Ozwin). Lyceum student, 18, gangly, earnest, keeps losing at the Knife Wall, keeps coming back.
 - **Lenny Swann** (NPC-106; Len Swan, Lenny Swan). Twenty-two, from Saltreach by way of Tollhaven, flashy fencer's coat, dueling-school Wasters, cocky and funny. **Not a villain;** a newcomer who wants to be top of the wall. Rook has adopted him to annoy Ash; Lenny can be won over (beat him fairly in Wasters and then buy *him* a round: he switches from Rook's friend to Ash's).

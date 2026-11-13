@@ -216,6 +216,18 @@
 - **NPC-355 · Oyelu the Stonewright** (Oyello). Tuskhold carver-smith (cities/18).
 - **NPC-356 · Sorcha Drumhand** (Sorsha). Horngard drum-mistress (cities/19).
 
+### Contests and the Tavern Board (CHG-22, CHG-23)
+- **NPC-097 · Odo Fairlie** ("the Collector"; Odo Fairly). Plump, delighted traveling arms collector, sixty; runs the Strange Arms circuit (cities/00 §12). Fair, never cheats, loves a twist. Emberford (Highwater Fair) → Tollhaven → Wolfsgate → Saffra → Highmarch final.
+- **NPC-098 · Sergeant Garnet Haddow** (Garnett Hadow). Grey Wolf Company crossbow sergeant, 50s; Strange Arms "Veteran." Wolfsgate.
+- **NPC-099 · Saba Mercer.** Saltreach harpooner, late 20s; Strange Arms "Natural." Laughs a lot, never studies.
+- **NPC-100 · Greta Bellamy.** Bramblecog gnome scholar, 40s; Strange Arms "Scholar." Shares notes with the polite.
+- **NPC-101 · Lord Teddy Rowntree** (Roundtree). Highmarch lordling slumming the circuit; Strange Arms "Showboat." Crowd darling, not a villain.
+- **NPC-102 · Pashi Two-Rivers** (Pashy). Tabaxi collector-competitor from Saffra (Act II+); the Collector's friendly rival; gossip source.
+- **NPC-103 · Nora Cobb** (Nora Cob). Locksmiths' Guild apprentice, 19; Locksmiths' Race champ on the Willow's wall (cities/03 §10).
+- **NPC-104 · Old Merrit** (Merritt). "Retired" burglar, sixties; Willow regular; tips for a price; can be bought by Rook (cities/03 §10).
+- **NPC-105 · Oswin Fitch** (Ozwin). Lyceum student, 18; the Knife Wall's earnest underdog; knows Zeke.
+- **NPC-106 · Lenny Swann** (Len Swan). Cocky newcomer fencer, 22, from Saltreach via Tollhaven; Wasters champ on day one; Rook adopts him to annoy Ash; winnable.
+
 ### Historical
 
 - **HIST-06 · Edwin Fenn-wyck** (Edwin). The Gate War ford-knight entombed in Old Varrow's chapel (Ch18). His tomb holds a Ring of Free Action and a water-damaged letter: *"...the Heron came to the ford and stood with us. Don't forget that she stood with us."*
