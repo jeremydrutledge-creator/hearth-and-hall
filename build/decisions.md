@@ -30,5 +30,7 @@
 - Feats: Lucky (Wayfarer); Magic Initiate (Wizard) via human Versatile — spellcasting ability CHA.
   - Cantrips: Message, Prestidigitation. 1st-level spell: Find Familiar.
 - Tools: Thieves' Tools.
-- Familiar HOUSE RULE: default form is an owl. Once per day (resets on long rest), free, the familiar can blink into its pocket dimension and return in a different familiar form (spider and rat most common) for up to 1 hour, then blinks away and returns to its form for the day. Free of cost. Uses the standard 2024 familiar form list and stat blocks. (Changing the day's base form otherwise follows normal Find Familiar rules.)
+- Familiar HOUSE RULE: default form is an owl. Once per day (resets on long rest), free, the familiar can blink into its pocket dimension and return in a different familiar form (spider and rat most common) for up to 1 hour, then blinks away and returns to its form for the day. Free of cost. Cannot be done during combat. THE FAMILIAR picks the form: Ash states the goal, the familiar chooses the best route/shape. Uses the standard 2024 familiar form list and stat blocks. (Changing the day's base form otherwise follows normal Find Familiar rules.)
 - Familiar uses the Help action to grant advantage; owl has Flyby. Expect smart enemies to target it.
+- Familiar personality: a character in its own right. Snarky; mocks Ash's brothers; lippy with Ash sometimes. The kind of joke that's only funny if you're not the target. Played for fun and humor.
+- Weapon masteries: Shortsword (Vex) and Dagger (Nick) — dual-wields; Nick puts the off-hand attack inside the Attack action, keeping the bonus action free. Carries a shortbow (proficient, no mastery) as a backup.
