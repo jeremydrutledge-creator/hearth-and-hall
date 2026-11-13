@@ -12,11 +12,11 @@
 
 | Kind | Name sound | Home | Government | Flavor |
 |---|---|---|---|---|
-| **Minotaurs** | Hard, Gaelic-heavy: Brannoc, Dughal, Morra → *avoid Marra*; use Mairead, Fergan, Cathal | **the Horngard** highlands (north) | Herd-clans under a war-chief; now under **Brannoc's Regency** | Proud, loyal, musical (great drummers), farmers of high pastures. Not brutes. Their warrior-code values protecting calves above all. |
+| **Minotaurs** | Hard, Gaelic-heavy: Brannoc, Dughal, Mairead, Fergan, Cathal | **the Horngard** highlands (north) | Herd-clans under a war-chief; now under **Brannoc's Regency** | Proud, loyal, musical (great drummers), farmers of high pastures. Not brutes. Their warrior-code values protecting calves above all. |
 | **Tabaxi** | Lilting and musical, two-part names: Saffi-of-the-Lamplight, Tesh Twelve-Bells, Mirra Far-Wander | **Saffra** (trade city on the Rennet's mid-course) | Elected **Tale-Keeper**: the best storyteller, chosen by audience acclaim at the Great Telling each year | Merchants, traders, gossip-lovers, collectors, curious about everything. Know more about Eyrland than anyone in Mirrowen. |
 | **Elephant-folk** | Deep, rounded: Umbari, Tolo, Nkemba, Oyelu | **Tuskhold** (great plain and stone city) | The **Rememberer**: eldest matriarch, keeper of memory | Wise, patient, remember everything. Historians and judges of Mirrowen. |
 | **Hare-folk (rabbit-folk)** | Short, nature names: Lark, Burdock, Thimble, Clover, Sedge | **Hollowmere** (warren-towns under meadow-hills by a still lake) | The **Warren Mothers**: council of eldest mothers | Quick, nervous, brave in bursts, wonderful singers. The Mirrowen Hearkener line. |
-| Otter-folk | Bubbly, sing-song: Plish, Merra-Lou → *use Merrilee*, Tumble, Brook | The Rennet's banks | Raft-clans, a bit like Eyrland's Driftmarket | Bargemen, fishers, jokers. Natural friends to river humans. |
+| Otter-folk | Bubbly, sing-song: Plish, Merrilee, Tumble, Brook | The Rennet's banks | Raft-clans, a bit like Eyrland's Driftmarket | Bargemen, fishers, jokers. Natural friends to river humans. |
 | Fox-folk | Clever, two-syllable: Vesper, Russet, Tavish | Woodlands | Loose dens, no single ruler | Scouts, spies, tricksters (honest tricksters). |
 | Bear-folk | Slow, heavy: Ursa, Borra, Bruin | Mountain forests | Den-chiefs | Gentle giants, honey farmers. Revere Ursk the Mountain Bear. |
 | Owl-folk | Soft, hooting: Oolu, Whit, Hoolah | Great old trees | The Parliament (literally) | Scholars, watchers, keep the night-songs. |
@@ -40,7 +40,7 @@
 
 - **Brannoc Ironhorn, the Horned Regent**, controls the Horngard, Hollowmere and the Glass Mere, and besieges Tuskhold. He calls himself Regent "until the blight is cured."
 - **Saffra** is neutral and trading with everyone.
-- **The Free Clans** (FAC-08): otter-folk, fox-folk, the hidden Warren Mothers, bear-folk, Tuskhold's defenders. A loose, desperate resistance led in spirit by Grandmother Umbari and in the field by a fox-folk captain, **Russet Vane** → *rename to avoid repeating Vane*: **Russet Tamsworth** (aka Rusty). He's clever, tired, and doesn't trust humans.
+- **The Free Clans** (FAC-08): otter-folk, fox-folk, the hidden Warren Mothers, bear-folk, Tuskhold's defenders. A loose, desperate resistance led in spirit by Grandmother Umbari and in the field by a fox-folk captain, **Russet Tamsworth** (aka Rusty, Tamsworthe). He's clever, tired, and doesn't trust humans.
 - Refugees cross into Eyrland through thinning gates, especially at Emberford, Driftmarket and Bramblecog.
 
 ## Greywilt and the Hushed

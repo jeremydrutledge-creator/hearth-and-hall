@@ -12,7 +12,7 @@ Always list alternate spellings in every NPC entry. Jeremy dictates.
 | **Lowriver/royal (Highmarch)** | Old-fashioned, noble | Edric, Anselm, Gisela, Rowan | the Ridge, Kingsbridge |
 | **Coast (Saltreach)** | Cornish-flavored | Maud Penrose, Jago, Tamsin Trelawn, Bryok, Kerra | Lighthouse Point, Smugglers' Stair |
 | **Dwarves (Dun Morrach)** | Norse and Scots, hard consonants | Torvald, Brynja, Hakon, Sigrun, Orm, Dagny; clan names: Deepanvil, Stonebrow, Coalbeard | Dun Morrach, Anvil Throne |
-| **Elves (Aranhollow)** | Flowing, vowel-rich, soft "r" and "l" | Amarys, Ithlin, Saelor, Liriel → *avoid "-triel"*; Aerin, Neris, Faelan | Ar-Aranel, the Bough Walks |
+| **Elves (Aranhollow)** | Flowing, vowel-rich, soft "r" and "l" | Amarys, Ithlin, Saelor, Aerin, Neris, Faelan (avoid any name ending in "-triel") | Ar-Aranel, the Bough Walks |
 | **Gnomes (Bramblecog)** | Whimsical compound surnames, short first names | Dabble Quickwhistle, Nim Gearwright, Pip Copperkettle, Wendle Tock | the Millwheels, Fairest Machine |
 | **Copperhill / Wolfsgate** | Blunt, Germanic | Hilde Strand, Ulric Fane, Gert, Anselm | the Square, Wolf Hall |
 | **Mirrowen beastfolk** | See 05-mirrowen.md. Each kind has its own sound. | | |

@@ -71,16 +71,17 @@ Party actions push it down (closing gates, breaking glimmer mines, freeing Heark
 
 ### Why only now, at 20
 
-When Ash was a toddler, **Moss** wrapped him in a protective "hush" (Moss's own magic, a gentle veil) so the hunters who killed his parents could never sense the gift in him. That veil cost Moss most of his power, which is why he's been diminished for 18 years. The veil also muffled Ash's gift. Lark's desperate, constant calling, plus the seal thinning to SEAL 3, has finally broken through. **Moss first hears Ash humming a tune Ash shouldn't know** (seed) and realizes the veil has failed.
+When Ash was a toddler, **Moss** wrapped him in a protective "hush" (Moss's own magic, a gentle veil) so the hunters who killed his parents could never sense the gift in him. That veil cost Moss most of his power, which is why he's been diminished for 19 years. The veil also muffled Ash's gift. Lark's desperate, constant calling, plus the seal thinning to SEAL 3, has finally broken through. **Moss first hears Ash humming a tune Ash shouldn't know** (seed) and realizes the veil has failed.
 
 ### Why the twins matter (the hidden sibling)
 
 - **Ash had a twin sister.** The gift split between them at birth, which has almost never happened: **Ash got Hearing. She got Voice.**
-- On the night the Fenwick parents died (a "barge fire" on the Fordwater, YF 1086), the killers were sent to take the infant heir. They found two babies. **Moss carried Ash out.** The killers took **the girl**, believing she was the heir. They were half right.
-- She was raised as the ward of the man who ordered the killing: **Master Hollis Grane** of the Enchanters' Guild. She is now **Clara Grane** (aka Klara, Claire, Clare), age 20, Hollis's brilliant apprentice enchanter. She believes she's an orphan of river fever whom Hollis took in out of kindness. She has an unusual singing voice that makes glimmerstone glow brighter. She has used this all her life without knowing what it is.
+- On the night the Fenwick parents died (a "barge fire" on the Fordwater, Leaffall YF 1085, when the twins were two), the killers were sent to take the infant heir. They found two babies. **Moss carried Ash out.** The killers took **the girl**, believing she was the heir. They were half right.
+- Her birth name was **Wren Fenwick**. She was raised as the ward of the man who ordered the killing: **Master Hollis Grane** of the Enchanters' Guild, who renamed her after his dead wife. She is now **Clara Grane** (aka Klara, Claire, Clare), age 20, Hollis's brilliant apprentice enchanter. She believes she's an orphan of river fever whom Hollis took in out of kindness. She has an unusual singing voice that makes glimmerstone glow brighter. She has used this all her life without knowing what it is.
 - **Hollis believes Clara is the true heir** and that he has "contained" the Eyrland line. He uses her Voice, without her understanding, to drain and channel glimmer. He does *not* know a second child survived until Ash starts making waves.
 - **Clara and Ash are a matched pair of halves.** Together they can do what a full Hearkener can, and more: they can re-sing the entire seal, or end the Sundering. Neither can do it alone.
-- Seeds: same birthday (Midsummer's Eve); both have one grey-green fleck in the left eye; Hollis's ward "came to him as an infant the summer of the barge fire"; Clara hums the same tune Ash does; glimmer lamps flare when they stand near each other.
+- Seeds: same birthday (Midsummer's Eve); both have one grey-green fleck in the left eye; Hollis's ward "came to him as a little one, the autumn of the bad fires"; Clara hums the same tune Ash does; glimmer lamps flare when they stand near each other.
+- **Gideon and Zeke know Ash had a twin sister, Wren, and believe she died in the fire. They never told Ash** (SEC-16; see 09-the-fenwick-family.md). That gives a two-stage reveal: first "you had a twin," later "she's alive."
 - Sisterly relationship only. No romance, ever. She can become Ash's fiercest ally and the "sister he never knew."
 
 ---
@@ -91,7 +92,7 @@ When Ash was a toddler, **Moss** wrapped him in a protective "hush" (Moss's own 
 - In his true form he is a great stag nearly twelve feet at the shoulder, antlers grown with living moss and tiny white flowers. In Mirrowen he is a figure of legend, "Old Mossback," a children's bedtime guardian.
 - He swore to the first Hearkener that he would guard her line forever. **He has watched the Fenwicks for 1,100 years**, usually from a distance, sometimes as a family friend under a different name. (Seed: the oldest neighbors remember "an herbalist named Moss" from when *they* were children, and say he hasn't aged a day. They think he's just one of those people.)
 - **He failed once.** He was away tending a failing Wellgate the night the parents died. He arrived in time to carry one baby out of the fire. He has never forgiven himself, and he does not know the girl survived. (When he learns, it shatters him, then gives him a reason to fight harder.)
-- **Why his powers are dulled:** the veil over Ash eats most of his strength, and he has spent the rest holding the Emberford Wellgate (the "Ford Pool," in the woods outside the West Gate) together by hand for 18 years. **That's where he goes every morning.** His herb shop is a cover and a home.
+- **Why his powers are dulled:** the veil over Ash eats most of his strength, and he has spent the rest holding the Emberford Wellgate (the "Ford Pool," in the woods outside the West Gate) together by hand for 19 years. **That's where he goes every morning.** His herb shop is a cover and a home.
 - **Power comes back** as (a) the veil over Ash is released (Ash's gift wakes, so Moss is freed), (b) Wellgates are mended or closed, and (c) he reclaims pieces of himself held at the old Warden shrines. Mechanically: Moss levels with the party as a Circle of the Moon druid. His beast forms always lean toward antlered, mossy, forest animals (seed). His "story upgrades" are narrative: speaking with animals without a spell, plants answering him, and eventually one scene per tier of chapters where he takes his true form for a round or two.
 - **Reveal:** fully at the end of Act I (see campaign outline). Seeded heavily before. His tell is that he never says "I don't know" about Mirrowen. He says "I'd rather not say."
 
@@ -119,7 +120,7 @@ When Ash was a toddler, **Moss** wrapped him in a protective "hush" (Moss's own 
 - **Public face:** Guildmaster of the Enchanters' Guild of Emberford and a member of the Guild Concord (the city's ruling council). Kindly, grey-bearded, plain-spoken, rich. He funds scholarships at the Lyceum (**he has quietly paid Zeke's tuition twice**; Zeke idolizes him), lamps for poor streets and the city orphan-house run by his sister Hester. A beloved public man.
 - **Truth:** 25 years ago, river fever took his wife and young son in a single week. In his grief he heard the Stillness, faint through a glimmer lamp, offering "an end to every loss." He has served it since, sincerely, as an act of love. He leads the **Calm** (FAC-03), a quiet cult of grieving, frightened, orderly people.
 - **Plan:** Over-mine glimmer so the Emberford seal fails, letting the Stillness's peace spread over the city first (which he believes is a gift), then the realm. He uses Clara's Voice, without her knowing, to "tune" huge glimmer reserves under the Guildhall.
-- He ordered the Fenwick killings (YF 1086). He carries real guilt about it and has buried it under his cause.
+- He ordered the Fenwick killings (YF 1085). He carries real guilt about it and has buried it under his cause.
 - Not a cackler. Warm, reasonable, generous and terrifying once you understand him. His sister's love is his blind spot, and hers is him.
 
 ### The Open Conqueror (other realm): **Brannoc Ironhorn, the Horned Regent** (aka Brannock, Brannick)
@@ -171,13 +172,14 @@ Ash's choices decide which: how he treats Clara, Brannoc, Hollis's people and th
 | SEC-06 | The Year of the Ford counts from the Sundering; Emberford is built on the Hall of Two Rivers |
 | SEC-07 | Brannoc's bargain: the Stillness, through the Grey Heron, "cured" his clan's calves by Hushing them |
 | SEC-08 | The Grey Heron is a corrupted Firstbeast |
-| SEC-09 | Gideon remembers more of the fire night than he has ever said (he saw a great antlered shape carry the baby out, and has told himself for 18 years it was a dream) |
+| SEC-09 | Gideon remembers more of the fire night than he has ever said (he saw a great antlered shape carry the baby out, and has told himself for 19 years it was a dream) |
 | SEC-10 | Hester Grane's blind spot: she knows her brother has secret meetings and has chosen not to look |
 | SEC-11 | The dwarves stopped mining glimmer 400 years ago because they *know* what it does; an oath of silence keeps them from saying so |
 | SEC-12 | The Deep Tortoise sleeps under Ommu's Rest; the Drowned Gate is the prison's keyhole |
 | SEC-13 | Lark is alive and being Hushed in Stillwater Keep |
 | SEC-14 | The street rival is being paid by the Calm to watch Ash (from Act I midpoint) |
 | SEC-15 | Queen Amarys of Aranhollow knows the whole truth and has chosen neutrality; her elves will not act unless given proof the seal can be held |
+| SEC-16 | Gideon and Zeke know Ash had a twin sister (Wren) whom they believe died in the fire; they've kept it from Ash |
 
 ---
 
