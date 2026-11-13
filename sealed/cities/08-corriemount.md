@@ -61,6 +61,10 @@ A riddle-trail through the library, set by Sister Winifred. Five riddles hidden 
 - **The Bell-Ringers' Challenge** (§3.2) runs as a **Mast Climb** (`00-index.md` §11.6) up the abbey tower: climb speed gives advantage on every stage.
 - **Bee-Skep Archery** (archery, T2; feast days): straw skep-targets swung on ropes from the orchard trees (**moving, AC 15 / 16 / 17**), plus one long shot over the still lake (**AC 17 at 150 ft**, the monks' tradition). **Entry 5 gp; prize 60 gp and a jar of the abbey's honey.** Rival: Brother Gaskin, a lay brother who was a soldier (+7 ranged). *(The monks never let anyone shoot across the lake on calm mornings. They won't say why.)*
 
+### New contests (`00-index.md` §13; CHG-22)
+- **Candle-and-Bell: the Silent Crossing.** Cross the chapter house during vespers without ringing a bell or snuffing a candle; the abbot judges from the gallery. Prize: a blessing and a jar of the good honey (and the novices' undying respect).
+
+
 ## 4. Fights
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** there's no ring; brawls with pilgrims are **Last-Standing** rules if anyone's counting. No magic.

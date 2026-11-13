@@ -64,6 +64,11 @@ A small-sail regatta around the harbor and out past the point. **Ch19 is in Mids
 - **The Rigging Race** (`§11.6`, T4): up three masts of a navy frigate in harbor, across the yards, down the backstay. **Climb speed: advantage on every stage.** **Entry 200 gp; prize 2,000 gp** and the governor's handshake. Rivals: topmen (+12 Athletics, +11 Acrobatics).
 - **Escape Artist's Chains, the harbor drop** (`§11.6`, T4): manacles DC 20, a sack, a weighted crate off the quay into the harbor; Con save DC 14 + 2 per extra try. **Prize 1,000 gp and the crowd's hat.** Smugglers watch to hire the winner.
 
+### New contests (`00-index.md` §13; CHG-22)
+- **The Tide-Race** (Weir Run on the ebb tide through the harbor mouth; T4 DCs +6).
+- **The Customs Plant** (The Plant: plant a 'contraband' token on a customs officer. Illegal and beloved.)
+
+
 ## 4. The Hold (fight ring)
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** the Hold runs **Bare-Knuckle** in the bilge, **Ring-Out on a spar over the harbor**, and **Last-Standing** on navy paydays. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

@@ -69,6 +69,11 @@ The Fairest Machine draws the new council. Betting on it is illegal and universa
 - **The Clockwork Gauntlet** (Gauntlet, Hard, T2; every market day): the gnomes' moving course. Every station's DC is **+1** (the obstacles move), and every course has a **Perception ⏱** station (spot the gear-gap before it closes, DC 14) and a **timing ⬇** station (Dex save DC 15: the pendulum). **Entry 10 gp**; the Fairest Machine draws the station order by lottery each run, which delights everyone. Rival: a Gearwright cousin's apprentice racer (+7, cheats with a wind-up boot that jams 1 time in 3).
 - **Blindfold Lock** (lock-picking, T2): gnome locks by feel, DCs **15 / 16 / 17 / 18 / 20**, the last one a puzzle lock that needs **Intelligence (Investigation) DC 15** before it can be picked. **Entry 10 gp, prize 120 gp** and a gnome-made pick that hums near the right pin (+1, non-magical; it's a tuning fork). Zeke loves this contest and can't pick a lock to save his life.
 
+### New contests (`00-index.md` §13; CHG-22)
+- **The Glass Maze** (Contraption Fair): the gnome on stilts in the horned helmet is called **the Minotaur** and insists on it.
+- **The Plant** on Drawing day: plant a brass token on the lottery judge. A three-hundred-year tradition; the judge pretends to be outraged.
+
+
 ## 4. Clockwork bouts (Bramblecog's fight ring)
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** the gnomes' clockwork bouts are fought in **Touches** (the automatons are Dex fighters: ring AC 14–15) or **Ring-Out on a rotating gear-wheel** (each round the wheel turns: Dex save DC 12 or prone). No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

@@ -65,6 +65,10 @@ A cavern of hot pools stepping down the rock, each hotter than the last. A soak:
 - **The Kettle Steps** (Gauntlet, Hard, T2 / T4): up the steaming spring-terraces under the mountain: slick stone ⬇ (Dex save), the heat ⏱ (**Con save**, three stations of it: the dwarves' strength and Ash's weakness), the steam-jets ⏱ (Perception to time them), the last terrace ⬇ (Athletics). **Entry 10 gp** (T2) / 200 gp (T4). Dwarves (+8 Con saves, −2 Acrobatics) usually pass; outsiders usually don't, and the dwarves respect anyone who tries twice.
 - **The Dwarven Lock-Box** (lock-picking, **Brutal**, T2 / T4): five dwarven locks, DC **16 / 17 / 18 / 19 / 21**, two trapped (a needle and a crushing bar: Dex save DC 15 or 2d6 bludgeoning). **No fee, no pot: the prize is a dwarven pick set** (+2 to Thieves' Tools checks, non-magical) **and respect**: the clan's attitude to the party improves one step for whoever opens all five. No outsider has in nine years. (Betting on yourself here is dishonorable, `§4`.)
 
+### New contests (`00-index.md` §12; CHG-22)
+- **Strange Arms exhibition: the Kettle-sling** on the spring terraces. No purse; the prize is a dwarven nod, which is worth more here. The dwarves watch the Hidden Trick (the skip) very closely.
+
+
 ## 4. The Shield Ring (formal honor bouts)
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** the Shield Ring is formal **Touches** with shields allowed (+2 ring AC for a shield-bearer; dwarves love it). An outsider may choose **Ring-Out on the Anvil Bridge** instead; the dwarves think that's undignified and come to watch anyway. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

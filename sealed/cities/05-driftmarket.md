@@ -67,6 +67,11 @@ The Seven Mothers re-tie the town's ropes, one knot per barge, all night, by lan
 - **Barge-Hop** (Gauntlet, T2; every Drift-day; **Brutal** at the yearly drift festival): leap from barge to barge across the moving Drift, eight stations: gap jumps ⬇ (Athletics, or automatic with Second-Story Work up to 15 ft; the barges drift: roll 1d6 × 2 ft added to each gap), a rocking deck ⬇ (Dex save), a laundry-line crawl ⏱ (Acrobatics), a gauntlet of river-clan kids with buckets ⏱ (Dex save; fail = soaked, a penalty and the crowd's love). **Entry 10 gp**, the clans take **15%**. Rivals: river-clan pole-runners (+7 Acrobatics, +8 at the festival).
 - **Mast Climb** (`§11.6`, T2): the Drift's tallest galley mast, three stages DC 14 / 16 / 18, the lake below. **Entry 10 gp, pot.** Rival: **Lida Tull**, Granny Wenna Tull's great-granddaughter (+8 Athletics), who has won it six years running and is fond of whoever beats her.
 
+### New contests (`00-index.md` §13; CHG-22)
+- **Patter Night** on the Swap Deck: the river clans throw rubbish at bad patter and fish at good patter.
+- **One Knot to a Boat** (Copper to Crown, barter only; start with a knot of string; the record is a whole skiff, and it's a Drift legend).
+
+
 ## 4. Barrel bouts (the Drift's fight ring)
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** **Ring-Out** is the Drift's native format (barrel bouts are fought on a floating barrel-raft: the raft counts as the beam, and every Shove that succeeds also rocks the raft: both fighters make a DC 10 Dex save). Also **Touches** with oar-wasters. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

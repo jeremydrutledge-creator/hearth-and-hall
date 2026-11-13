@@ -58,6 +58,10 @@ A market in the biggest warren's great round hall, under a ceiling of roots hung
 - **The Leaping Fair** (Gauntlet, T3; Ch14+): a hare-folk course where **jump stations dominate** (four gap jumps, two of them ⬇). Hare-folk jump +8 and laugh at everyone else. **Second-Story Work's Dex jumping** keeps Ash in it. **Entry 50 gp, pot; winners get a garland of meadow-flowers** the warren will talk about for years.
 - **The Reed Run** (Gauntlet, Hard, T3): across the otter-rafts' floating reed mats on the Rennet, Dex save ⬇ stations every other step. Otter-folk (+9 Acrobatics) win when they can stop laughing. **Entry 50 gp, pot.**
 
+### New contests (`00-index.md` §13; CHG-22)
+- **The Moth Post: the Burrow Post** (hare-folk messengers race in the tunnels; the Warren Mothers judge; T1 when occupied is impossible, T3 once freed). Bart hates tunnels and says so.
+
+
 ## 4. The Rennet otter-rafts
 
 The otter-folk raft-clans on the Rennet below Hollowmere: bargemen, fishers and jokers, natural friends to river humans (`world/05`). They're who carries the party to Saffra by water in Ch14 (two days by otter-raft). Plish (NPC-159), if freed in Ch7, is here with his family by Ch14, and they will not let the Fenwicks pay for anything.

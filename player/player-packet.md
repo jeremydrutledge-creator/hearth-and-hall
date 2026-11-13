@@ -391,6 +391,11 @@ A narrow, glass-roofed lane in Glimmerway, about two hundred feet long, lined wi
 - **The Ribbon Pull** (Highwater Fair): ten "marks" in bell-sewn coats walk Market Steps with ribbons tucked somewhere. Pull the most ribbons without ringing a bell. 1 gp; prize 25 gp and a silk purse. Half the city thinks it's a game. The other half thinks it's a pickpocket audition.
 - **The Riddle Table** (the Lyceum, monthly): riddles for a minor magic prize. Zeke's favorite.
 - **Liars' Night** at the Willow (monthly): the best tall tale wins the night's tab.
+- **The Lamp Run** (a moonless night each month, unofficial): a night race across the Fringe and Old Ford rooftops, tapping ten numbered glimmer lamps **in order**. Tap the wrong one and it flashes red where the whole street can see. 2 gp, pot split among finishers. The Lamplighters' apprentices run it and somehow always know the order.
+- **The Moth Post** (Tenth-days, the Guildhall steps): a courier race between the city's message-moths and **anybody's pet, bird or familiar**. Carry a sealed note across the city and bring back a reply. 1 gp; 20 gp and a brass moth pin. **Familiars are allowed in this one.** Bart has opinions about that.
+- **Strange Arms** (comes with the Highwater Fair most years): a traveling collector called **the Collector** sets up with a cart of locked cases full of odd weapons from far-off places. Everybody gets the same weapon nobody's ever used: a minute to look it over, three practice shots, then a shooting round and head-to-head knockouts until one's left. 5 gp; the winner keeps the weapon and a purse. Champion archers have lost to bargemen at it.
+- **Rich men's games, if you can get in:** **The Switch** (swap a marked object for a fake under three judges' noses) and **Who's the Duke** (sneak into a masked ball as an impostor while paid hunters try to spot you). Ten gold or a sponsor to enter; you'd need the fine clothes.
+- **Shadow-Tail** (other towns run it more than Emberford does): follow a hired "rabbit" through a market for an hour without getting spotted. She's paid for every tail she catches.
 - **Guild Games** (Harvest): strength, archery, wrestling and tug-of-war between the guilds. Outsiders can enter as the "Fringe" team.
 - **Other cities have their own:** archery shoots, lock-boxes, climbing races, obstacle courses and stranger things. Every town has at least a couple.
 
@@ -418,13 +423,42 @@ A narrow, glass-roofed lane in Glimmerway, about two hundred feet long, lined wi
 - **Guard and escort work** (Gideon's line): 2–10 gp a night
 - **Test subject at the Lyceum** (Zeke's line): 5 gp and possibly a new hair color
 - **Wharf work:** loading, 1 gp a day
-- **The Wharfmaster's job board** and **the Watch board** are the two places to look
+- **The Wharfmaster's job board** and **the Watch board** are the two places to look. Peg copies the best of both onto **the Long Wall** at the Willow every morning (below).
 
 ### Rivals
 - **Rook and the Magpies** work the same streets.
 - **Swift and Sons**, the courier outfit that keeps undercutting Ash.
 - **Lyceum snobs** who look down on Zeke.
 - A rival bouncer at the Drowned Lantern who can't stand Gideon.
+
+### The Long Wall at the Willow
+
+The whole back wall of **the Willow**, Peg Mallory's tavern at the top of Willow Lane, is black-painted boards covered in chalk. It's where the Fringe's job-hunters, hustlers and contest regulars drink, brag and check the wall. Peg keeps it honest with a wet rag and a cast-iron pan.
+
+**What's on it:**
+1. **Jobs:** the day's courier runs, retrievals and small bounties, copied from the Watch board and the Wharfmaster's board.
+2. **What's coming:** contests across the city (and rumors of ones up and down the river), with entry fees.
+3. **Tavern Champs:** who currently holds each title. Win a contest and Peg chalks your name over the last champ's. Lose it and she wipes you off.
+4. **The Willow Cup:** the season's points race. **5 points** for a win, **3** for second, **1** for finishing in the money or passing a course. Big festival contests count double. The season runs **Lantern Night to Lantern Night.** All year Peg drops a silver in **the Lantern Jar** for every round bought on contest nights. On Lantern Night, the Cup leader takes the jar (usually 40–60 gold) and gets his name painted on the beam over the bar, where it stays forever.
+
+**What the wall says this morning (early Thawing, YF 1104):**
+
+| # | Name | Points | Holds | Known for |
+|---|---|---|---|---|
+| 1 | **Rook** (Magpies) | 14 | Rooftop Race | Roofs, knives, and never shutting up about it |
+| 2 | **Joss Kettering** | 11 | Wharfmaster's Run | A sailor. Strong, fast, can't pick a pocket to save his life |
+| 3 | **"Gentle" Joe Barrow** | 10 | Bare-Knuckle (the Bucket) | Huge, polite, apologizes after he knocks you down |
+| 4 | **Tilly Cobb** | 8 | Locksmiths' Race | A locksmith's apprentice. Fast hands, no nerve for anything illegal |
+| 5 | **Ash** | 7 | **Shell Game** | You |
+| 6 | **Jenny Wick** (Magpies) | 6 | The Plank | Rook's lieutenant. Balance like a cat |
+| 7 | **Old Merrit** | 5 | (none) | A "retired" burglar the Watch knows by name. Winks at Ash. Second at every hustle |
+| 8 | **Lenny Swann** | 4 | Wasters | New in town from downriver two weeks ago. Took the Wasters title his first night and bought the room a round with it |
+| 9 | **Walt Finch** | 3 | Liars' Night | Seventy-eight years old. Undefeated since autumn |
+| 10 | **Oswin Fitch** | 2 | (none) | A Lyceum student who keeps coming back to the Knife Wall. Everyone likes him. Nobody bets on him |
+
+**Empty titles** (not run yet this season): the Lamp Run (it starts again when the frost's off the roofs), Strange Arms (if the Collector comes with the Fair), the Ribbon Pull (Highwater Fair; Jenny Wick won it last year). The Moth Post title is held by "the Official Moths," which annoys everybody.
+
+**The honest truth about the money:** contests don't make anyone rich. The real professional circuits, the jousting lists and the noble tourneys, are for lords' sons and men with sponsors. Ash wins sometimes, places often enough to get his entry fee back, and that, plus odd jobs and the quiet work nobody chalks on a wall, is what keeps three brothers fed.
 
 ---
 

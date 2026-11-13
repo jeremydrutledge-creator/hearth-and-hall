@@ -55,6 +55,10 @@ Elves don't haggle, and find it puzzling. Prices are fixed. **Paying without cou
 - **The Canopy Run** (Gauntlet, Hard, T4): branch-paths, rope-bridges and a long glide on a vine. Stations at **DC 19–20**; elves (+12 Acrobatics) usually pass. Climb speed gives advantage on every climb and jump station. **No fee for invited guests; prize: the Queen's notice** (a token, and one favor, unspecified).
 - **Silent Arrow** (archery, T4): before each shot the archer makes **Stealth DC 18** to move to a new mark unseen by the judges; a seen archer shoots with disadvantage. Then three arrows at **AC 19 / 21 / 23**. **Prize 1,500 gp and an elven arrow-case.** Ash's Stealth expertise makes this his best chance in Aranhollow.
 
+### New contests (`00-index.md` §13; CHG-22)
+- **Shadow-Tail: Leaf-Follow.** Tail an elf through the canopy for an hour. The elf is Perception +8 and has done this for three hundred years (Hard). Elves award no purse; a successful tail earns a name in their songs.
+
+
 ## 4. The Duel of Blades
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** the Duel of Blades is the elves' **Touches** (first to three, waster blades, no shield). There's no other format; the elves don't brawl. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

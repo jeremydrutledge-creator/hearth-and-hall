@@ -59,6 +59,11 @@ Every story-hall has rooms. A night: **one story** (Charisma (Performance) DC 13
 - **The Tumbling** (judged, T3): three passes (**Acrobatics DC 16**, a knife-catch **Dex save DC 17**, a finale in **Performance**). Prize: **the crowd's hat (2d6 × 25 gp)** and a line in the Great Telling, which in Saffra is worth more.
 - (Ch14's rooftop chase race with Zuri Far-Wander is its own scene; run it as a **Rooftop Race**, §11.6.)
 
+### New contests (`00-index.md` §12–13; CHG-22)
+- **Strange Arms: the Far Booth** (circuit stop 4): Mirrowen's weapons (#12, 13, 14) arrive, plus one Eyrland weapon for the tabaxi to fumble. Pashi Two-Rivers (NPC-102) joins.
+- **Patter Night: the Small Telling.** Tabaxi judge the story, not the coins (tabaxi +8).
+
+
 ## 4. The Scratch (sparring ring)
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** the Scratch is tabaxi **Touches** with padded claws (a claw-touch counts like a waster hit; tabaxi ring AC 15–16). Outsiders may ask for **Ring-Out on the bell-rope beam**. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

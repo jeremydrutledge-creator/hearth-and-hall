@@ -92,6 +92,11 @@ Everything cheap, everything secondhand, half of it stolen. Mundane gear at **�
 - **The King's Archery** (archery, T4; the boy-king's festival): long rounds at **150 / 300 / 450 ft (AC 17 / 19 / 21)** and the trick round (split the royal ribbon, AC 23). **Entry 100 gp; prize 2,000 gp and a silver arrow** from the king's own hand. Rivals: the Chancellor's huntsman (+12), the royal guard's champion (+13). A longbow helps, and Ash isn't proficient (§11.4).
 - **The Night Climb** (`§11.6`, T4; Lowtown, illegal): into a Highmarch merchant's tower and out with the marked token. Pot **1,000 gp** staked by three crews. The Chancellor's men like to know who wins.
 
+### New contests (`00-index.md` §12–13; CHG-22)
+- **Strange Arms FINAL: the Stranger's Crown** (King's Tourney window; `00-index.md` §12.5). Lord Teddy Rowntree (NPC-101) is the crowd's darling.
+- **Who's the Duke: the court version** (T4; the King's own steward hunts; Insight +11).
+
+
 ## 4. The Lowtown Pits (illegal fight ring)
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** the Pits run **Bare-Knuckle** and **Last-Standing** (blood-sport crowds), and a **Touches** card for nobles slumming it in masks. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

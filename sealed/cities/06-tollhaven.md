@@ -80,6 +80,13 @@ Each month the Purse Council breaks the old month's seal on the Weighing Docks' 
 - **The Eleven Locks** (lock-picking, Hard, T2–T3; the first Tenth-day of each month, in the Exchange courtyard): each of the Eleven Purses mounts a lock on the board, DCs **14 / 15 / 16 / 17 / 18** then six more by the House sponsoring the finals (DC 18–22, two trapped). Sand-glass of eleven minutes. **Entry 25 gp; prize 300 gp (T2) / 750 gp (T3)** and a Purse's letter of employment (which is a trap of a kind: the winners' list is the Toll Guard's favorite reading). Rivals: House Ellery's pet picker (+9), a "retired" Saltreach burglar (+8).
 - **The Ribbon Pull** (`§11.6`, T2; Countinghouse Fair): in the Exchange square, the marks are Purse clerks, passive Perception 13–16. **Entry 5 gp, prize 80 gp and a Purse's silk purse.** The Toll Guard watches; a bell rung is a fine of 5 gp, not an arrest (during the Fair).
 
+### New contests (`00-index.md` §12–13; CHG-22)
+- **Strange Arms: the Purse Cup** (Grand Wager, circuit stop 2; a Purse sponsors it; weapons #2, 4, 5, 10). Bets are enormous.
+- **The Switch** in the Counting Quarter: swap a wax seal on a contract under three clerks' eyes (the clerks are +6 Perception; the Toll Guard officiates and is amused).
+- **Who's the Duke** at the masquerade tables (Lamplight Row): the hunters are Toll Guard off duty, Insight +6.
+- **Steal the Purse** at the Seal-Breaking: a Purse's showpiece strongbox (T2 DCs).
+
+
 ## 4. The Golden Cage (legal fight arena)
 
 **Ring formats (`00-index.md` §5.1, CHG-19):** **Touches** (Tollhaven's fashionable format: waster rapiers, judges with flags), **Bare-Knuckle** (the cheap seats' card), and **Last-Standing** on Purse holidays. Contracts are signed for the format; a fighter who switches format forfeits. No magic in any format: no smites, no spells, no Wild Shape, no familiars. Dexterity fighters can win here.

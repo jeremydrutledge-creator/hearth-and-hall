@@ -71,6 +71,15 @@ Ash's city has the most of them, and they're where the Lane will come to cheer.
 
 ---
 
+### 2.9 New contests (`00-index.md` §12–13; CHG-22)
+- **Strange Arms: the Strangers' Booth** (Highwater Fair, circuit stop 1; offered again in Ch5's window if missed). Odo Fairlie (NPC-097) sets up beside the Bargerace books with a cart of locked cases. Weapons drawn from §12.3 #1, 3, 6, 7. Rook enters because Ash did. **Entry 5 gp; 60 gp and the weapon.** The Lane comes to watch.
+- **The Lamp Run** (monthly, a moonless night; Fringe to Old Ford; the last lamp is above the Ford Stone). Run by the Lamplighters' apprentices, who know the order (+2). **Entry 2 gp, pot.** Hugh Dale hates it.
+- **The Moth Post** (Tenth-days, Guildhall steps). Familiars allowed. Bart negotiates. **Entry 1 gp; 20 gp and a brass moth pin.**
+- **Copper to Crown** (monthly, Market Steps). Jory Tolliver judges and is delighted to. **Entry 1 gp; 50 gp and whatever you end with.**
+- **Steal the Purse** (Ford Festival, the Locksmiths' Guild booth). 100 gp in the case; the dye-needle lock.
+- **Who's the Duke** (Assembly Rooms, Crownhill, Lantern month). **Entry 10 gp** (Ash needs a sponsor or his fine clothes and a story); 80 gp and an invitation.
+
+
 ## 3. Betting in Emberford
 
 Use the odds table in `00-index.md` §4.

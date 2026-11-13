@@ -41,3 +41,4 @@
 - REVISED: one set of thieves' tools only; starting coin 36 gp (spare-tools sale folded in, not roleplayed). Familiar named Bartholomew ("Bart" to Ash), already summoned before session one. Shopping list pending.
 - Purchases: manacles (2), grappling hook (2), fine clothes (15), caltrops (1), steel mirror (5), chalk, 10 pitons (~1 for chalk + pitons). Total ~26 gp. Remaining: 10 gp.
 - Ash carries a sentimental trinket. Its meaning and origin are an author decision (sealed). Player packet shows only its surface description and what Ash believes about it.
+- Bart's look: a tiny northern saw-whet owl (~3–4 oz, fist-sized, no ear tufts, huge yellow eyes). Rules: still the standard Owl familiar stat block; the small size is flavor. (Update player packet/party sheets wording to match.)

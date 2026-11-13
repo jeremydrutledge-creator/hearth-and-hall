@@ -88,6 +88,11 @@ An endurance race up the mountain at night (Ch10: **Athletics DC 15 ×3, Con DC 
 - **The Hiring Yard Trials** (archery and knife-throwing, T2; any morning): the Grey Wolf Company tests would-be hires on the butts: the archery short and long rounds (§11.4) and the knife board (§11.3). **No entry fee.** Top score of the day gets **50 gp** and a **contract offer** (one job, 100–300 gp, the Company's terms). Rivals: Company archers (+7 ranged), a mountain hunter (+8 long range).
 - **Escape Artist's Chains** (`§11.6`, T2; the Company stockade, Restday): Company manacles (DC 15), a grain sack (Acrobatics 14), the punishment box (Thieves' Tools or Athletics 15). Fastest out wins **80 gp** and the sergeants' grudging respect. Ash brought his own manacles; the sergeants think that's hilarious.
 
+### New contests (`00-index.md` §12–13; CHG-22)
+- **Strange Arms: the Hiring Yard Strangers** (circuit stop 3; Sergeant Garnet Haddow's home stop; weapons #2, 6, 7). The Company hires the winner for a day (100 gp contract).
+- **Candle-and-Bell: the Picket Test.** Cross a line of 'sleeping' Company pickets with bells on their boots. Prize: a scout's contract and the Company's respect.
+
+
 ## 4. Street fights
 
 Inside the walls: fists only, anywhere but the Wolf Hall's doorstep (where it's a duel and needs a sergeant to witness). The **local trick: snow.** A creature shoved prone in the street is half-buried: it takes an extra 5 ft of movement to stand, and **disadvantage on Dex saves** until it does. Use the Street Tough block (T2), with Wolf off-duty soldiers at **AC 15**.

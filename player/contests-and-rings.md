@@ -50,6 +50,25 @@ A course is **5 to 8 stations**, one quick roll each.
 - **Escape-artist contests:** manacles, a sack and a crate. Fastest out wins.
 - **Show contests:** juggling, knife-catching, tumbling, judged by the crowd.
 
+## New and strange (what a local knows)
+
+- **Strange Arms.** A traveling collector, **the Collector**, brings cases of rare weapons from far-off places. Everyone in the field gets the **same weapon nobody's used before**. Nobody is trained with it.
+  1. **Study:** a minute to look it over or watch one demonstration throw. A good look teaches you its catch, the way it likes to go wrong.
+  2. **Practice:** three practice shots. Every shot teaches you something; you get better through the day (up to as good as if you'd trained).
+  3. **Challenge round:** everyone shoots the course. The bottom two face off.
+  4. **Elimination:** head to head, best of three targets, loser out, until one's left. Sometimes the Collector swaps the weapon mid-knockout.
+  - Every weapon has a trick the demonstrator doesn't mention. Watch closely, think about how it *could* be used, and say what you try.
+  - The winner keeps the weapon and a purse. The Collector runs a circuit of stops up and down the river, and word is there's a big final somewhere grand.
+- **The Switch.** Swap a marked object for a fake while three judges stand around it. Set it up (a distraction, the crowd, or just nerve), make the swap, then keep a straight face while a judge picks it up and looks. A better fake costs a little more and is allowed.
+- **Shadow-Tail.** Follow a hired "rabbit" through a crowded market for an hour without being spotted. She's paid for every tail she catches, so she doubles back, changes coats and stops to listen. Two glances and she calls you out. A disguise helps.
+- **The Lamp Run.** A night rooftop race tapping numbered glimmer lamps in order. Take the safe way or the short way each leg. Tap the wrong lamp and it flashes red, and too many red flashes bring the Watch.
+- **Who's the Duke.** A masked ball. You go in as a guest, a servant, a musician or a lord. Paid hunters roam the floor tapping shoulders: "Your Grace?" Last impostor standing at midnight wins. Expensive to enter.
+- **The Moth Post.** A courier race between message-moths and **anyone's pet or familiar** (Bart can enter). Carry a sealed note across the city and bring back a reply. You can't touch your courier after the start. Bart may want paying.
+
+## The Long Wall at the Willow
+
+Peg Mallory's chalk wall at the Willow tracks jobs, upcoming contests, **Tavern Champs** (current holder of each title) and **the Willow Cup**, the season's points race: **5** for a win, **3** for second, **1** for passing or finishing in the money, double for big festival contests. The season runs Lantern Night to Lantern Night, and the leader takes **the Lantern Jar** (a silver from every contest-night round, usually 40–60 gp) and gets his name painted on the beam. Day-one standings are in the player packet (section 8). Contests keep Ash in coin, not in comfort: wins pay, places get the fee back, and the real pro circuits are for nobles.
+
 ---
 
 ## Fight rings: the formats
