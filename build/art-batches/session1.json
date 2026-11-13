@@ -1,0 +1,286 @@
+[
+ {
+  "key": "npc-001-gideon",
+  "out": "art/portraits/npc-001-gideon.png",
+  "prompt": "The reference image shows this man's youngest brother. Paint a different man, his older brother, with a clear family resemblance (same family face and coloring), matching the painting style exactly. Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Reference portrait of a broad, solid human man of 32, the oldest brother: close-cropped dark hair, a short beard, a jaw like a door, steady serious eyes. Plain mail under a dark bouncer's coat, a longsword on his back, arms folded across his chest, an old burn scar visible on the left palm. Lit warm from a tavern doorway (the Drowned Lantern on the Wharves) with river fog behind. He looks like the man who pays the house tax and has for eighteen years: tired, dutiful, unbudging, protective.",
+  "aspect": "3:4",
+  "refs": [
+   "art/portraits/pc-01-ash.png"
+  ]
+ },
+ {
+  "key": "npc-002-zeke",
+  "out": "art/portraits/npc-002-zeke.png",
+  "prompt": "The reference image shows this man's youngest brother. Paint a different man, his older brother, with a clear family resemblance (same family face and coloring), matching the painting style exactly. Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Reference portrait of a slim human man of 31, the middle brother: same family face as Gideon but narrower, tousled hair, round wire spectacles he's pushing up with one knuckle, ink on his fingers. A scholar's coat with too many pockets stuffed with coils, springs and folded notes; a half-built brass gadget in one hand humming faint blue. Background: his cluttered attic workshop under the eaves, glass jars and copper wire catching lamplight. Expression: mid-sentence, excited, about to say \"technically.\"",
+  "aspect": "3:4",
+  "refs": [
+   "art/portraits/pc-01-ash.png"
+  ]
+ },
+ {
+  "key": "npc-003-moss",
+  "out": "art/portraits/npc-003-moss.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Reference portrait of an older man of uncertain age, weathered and kind: silver-brown beard with a stray leaf in it, deep-set calm eyes, skin like good bark, a soft wool cloak dusted with pollen, a satchel of herbs and a gnarled walking staff. Flecks of real moss on his sleeve. Behind him the Green Jar's doorway on Willow Lane, bundles of drying herbs hanging from the beam, a grey cat on the step. Morning light. He looks unhurried and gentle, a countryman, nothing more. (Keep him entirely human and ordinary-looking.)",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "familiar-bart",
+  "out": "art/portraits/familiar-bart.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Reference portrait of Bartholomew, a small brown-and-cream barn owl familiar with an unmistakably sarcastic expression: one eye half-lidded, head tilted, feathers slightly ruffled as if he's been insulted. A faint shimmer at his edges to show he's a spirit, not a real bird. Perched on a rooftop chimney pot above Emberford at night, glimmer lamps below. Comic but dignified, like an old butler who thinks everyone is an idiot.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "eyrland-region",
+  "out": "player/maps/eyrland-region.png",
+  "prompt": "Top-down overhead fantasy map drawn in ink and soft watercolor on parchment, in the style of a hand-drawn tabletop RPG cartographer's map, seen straight down from directly above. Absolutely no text, no labels, no numbers, no title, no legend, no compass, no signature. A painted bird's-eye map of Eyrland, a great river basin like a tilted bowl: grey mountains with steaming springs on the north rim, a dark old forest in the west, rolling hills and sheep country to the east, and the sea along the bottom. The Tamber River runs north to south through the middle, widening into a huge mirror-smooth lake two-thirds of the way up (the Glasswater), with a reed marsh south of the lake, then down past a walled capital to a port city at the river's mouth. Emberford sits on islands where the river splits. Small cold lake in the foothills; a tributary out of the western forest; another out of the eastern hills. A dead-calm patch of sea far to the south. Only what a local would know.  Keep key features well spaced so the DM can crop sections.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "willow-lane",
+  "out": "player/maps/willow-lane.png",
+  "prompt": "Top-down overhead fantasy map drawn in ink and soft watercolor on parchment, in the style of a hand-drawn tabletop RPG cartographer's map, seen straight down from directly above. Absolutely no text, no labels, no numbers, no title, no legend, no compass, no signature. A painted close map of a crooked lane of about twenty small wooden houses running downhill from the West Gate road to a slow, green side-channel of the river (the Bend). Washing lines strung between houses, chickens, a shared well with a little wooden roof halfway down, a hunchbacked tavern at the top, a chandlery, an herb shop with jars in the window, a fish barrow by the well, a tiny watch-house on the gate road. At the very bottom by the water, a tall, narrow, slightly leaning three-story wooden house with a roof hatch (the Fenwick house). A long rope-walk shed east along the Bend, tannery yards beyond, an old rotting barge in the reeds, willows everywhere.  Keep key features well spaced so the DM can crop sections.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-010-rook",
+  "out": "art/portraits/npc-010-rook.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A wiry young man of 21 with a sharp, sneering handsome face, cropped hair, a magpie feather pinned to a battered coat, flipping a silver coin across his knuckles. Market Steps behind him at noon. Cocky, hungry, dangerous in a small way.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-011-bess-carter",
+  "out": "art/portraits/npc-011-bess-carter.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A tired, proud washerwoman in her thirties, sleeves rolled, damp hair pushed off her forehead with her wrist, a basket of Crownhill linen on her hip. Kind under the edges. Her small cottage doorstep on Willow Lane behind her.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-012-dora-finch",
+  "out": "art/portraits/npc-012-dora-finch.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A soft, round old woman in her mid-seventies, a retired midwife with a shawl and gentle crinkled eyes, reaching out to pat someone's hand. A warm, cluttered cottage kitchen behind her.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-013-walt-finch",
+  "out": "art/portraits/npc-013-walt-finch.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A stubborn old rope-maker in his late seventies, knotted hands always busy with a length of cord, a pipe in his teeth, a ladder leaning on the cottage wall behind him that he definitely shouldn't climb. Gruff and funny.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-014-aggie-thorne",
+  "out": "art/portraits/npc-014-aggie-thorne.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A sturdy woman of 52 with forearms like a bargeman's, iron-grey hair scraped back, a scowl, pointing a pestle at the viewer. Behind her the Green Jar's counter, jars to the ceiling, a grey cat.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-015-peg-mallory",
+  "out": "art/portraits/npc-015-peg-mallory.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A big, laughing tavern landlady in her fifties with a cast-iron pan in one hand and a tray in the other, behind the bar of a small low-beamed tavern full of lamplight and neighbors.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-016-netta-lowe",
+  "out": "art/portraits/npc-016-netta-lowe.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A quick, sharp-eyed fishwife pointing with an eel, mid-story, beside a barrow of river fish at a wooden-roofed well. Shawl, apron, gossip in her grin.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-017-bill-ostley",
+  "out": "art/portraits/npc-017-bill-ostley.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A paunchy, tired Watch sergeant in his fifties in a faded Fringe watch tabard, looking at the sky in weary disbelief, a small stone watch-house behind him at the city's west gate.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-024-ma-garrow",
+  "out": "art/portraits/npc-024-ma-garrow.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A very large, very quiet woman cracking a walnut in one hand, sitting in shadow at the edge of a drained stone cistern turned fight ring, a crowd and a lantern-lit pit below. Calm, unreadable, faintly amused.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-025-simon-shaw",
+  "out": "art/portraits/npc-025-simon-shaw.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A thin, careful chandler peering over tiny spectacles at a slate of sums, candles, rope coils and oil jars on the shelves behind him. Kind, worried, honest.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-026-pip-carter",
+  "out": "art/portraits/npc-026-pip-carter.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A scrappy nine-year-old boy with a gap tooth and a too-big cap, grinning with hero worship, half-hidden behind a washing line on Willow Lane.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-027-nell-carter",
+  "out": "art/portraits/npc-027-nell-carter.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A shy five-year-old girl wrapped in a man's coat that drags past her feet, cold-nosed, peeking out from a cottage doorway.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-030-old-bram",
+  "out": "art/portraits/npc-030-old-bram.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A weathered old ferryman with a pole and a lantern on a flat ferry-barge in the reeds of a slow green river channel. A local hero, quietly proud.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "ch01-hettie-bunces-bakehouse",
+  "out": "art/battlemaps/ch01-hettie-bunces-bakehouse.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: A warm little bakehouse at the top of Willow Lane by the West Gate road: a brick oven glowing, trays of buns and honey-cakes, flour on everything, a broad floury widow in her sixties at the counter, a queue of neighbors at the door in the early morning.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-mother-brines",
+  "out": "art/battlemaps/ch01-mother-brines.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: The inside of an upturned barge: ribs overhead like a whale's belly, tarred and hung with drying kelp, rope and lanterns. Shelves made of old oars. Bottles in every color, stoppered with cork and wax, each labeled in her big square hand (\"FOR BLEEDING,\" \"FOR STUPIDITY\"). A copper still bubbling in the corner. A ship's wheel nailed to the wall as decoration, a parrot cage with no parrot (\"He left me. Joined the navy.\"). A scrubbed table with a bowl of salt for luck.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-odd-lot",
+  "out": "art/battlemaps/ch01-odd-lot.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: A cave of things. Birdcages hanging from the ceiling with no birds, one with a clock in it. A suit of rusty armor wearing a lady's hat. A wall of keys. Jars of buttons, teeth, marbles, glass eyes. Rugs on rugs. A brass counter buried under ledgers, a pawn ticket spike, and a stuffed pike with a pipe in its mouth. The light is three mismatched glimmer lamps, one flickering. A \"back shelf\" behind a curtain where the hot goods and the keepsakes live.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-simon-shaws-chandlery",
+  "out": "art/battlemaps/ch01-simon-shaws-chandlery.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: a narrow shop smelling of tallow and hemp; coils of rope like sleeping snakes; candle-ends in a box marked \"FREE, TAKE ONE\"; a slate behind the counter with names and debts on it, and Ash's name on it, and no number beside it.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-tam-hollins-forge",
+  "out": "art/battlemaps/ch01-tam-hollins-forge.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: A big honest smithy on the Commons: roaring forge, anvils, racks of plain swords and hinges and horseshoes, a huge loud guildmaster smith hammering, sparks, apprentices, the guild's hammer banner on the wall.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-the-green-jar",
+  "out": "art/battlemaps/ch01-the-green-jar.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: A narrow, low shop with bunches of herbs drying from every beam, jars floor to ceiling with handwritten labels, a scrubbed counter with brass scales, a mortar the size of a washbasin. A cat asleep on the scales. A ladder to the rooms above. A small window of green bottle-glass making the light underwater-green. A stub of candle (Moss doesn't like glimmer either, and doesn't say why).",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-the-lane-well",
+  "out": "art/battlemaps/ch01-the-lane-well.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: The shared Lane Well halfway down Willow Lane: a stone well under a little shingled wooden roof, buckets and a worn crank, a fishwife's barrow of eels beside it, washing lines overhead, chickens, kids, two neighbors gossiping. Morning light through willows.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-the-willow",
+  "out": "art/battlemaps/ch01-the-willow.png",
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: A small hunchbacked tavern at the top of Willow Lane, the neighborhood's living room: low smoke-dark beams, a crooked bar with a cast-iron pan hanging behind it, mismatched benches, a fire, a cellar trapdoor, neighbors crowded in with mugs, lamplight warm and gold, rain on the bottle-glass windows.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "npc-035-tam-hollin",
+  "out": "art/portraits/npc-035-tam-hollin.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Big Tam Hollin, the Smiths' Guildmaster: a huge, loud, honest smith in his fifties, bald head shining with sweat, a bushy red-grey beard, leather apron, forearms like hams, laughing mid-shout, a hammer over his shoulder, a roaring forge behind him.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-043-mother-brine",
+  "out": "art/portraits/npc-043-mother-brine.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Mother Brine: a retired woman sailor in her sixties with a wooden peg leg, a weathered sea-tanned face, braided grey hair under a knitted cap, a gold hoop earring, a foghorn grin, potion bottles and drying kelp in the upturned-barge shop behind her.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-045-jory-tolliver",
+  "out": "art/portraits/npc-045-jory-tolliver.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Jory Tolliver: a sly half-elf pawnbroker in his forties with a gap-toothed grin, slicked-back dark hair, pointed ears, a jeweler's loupe pushed up on his forehead, a mismatched velvet waistcoat, holding up a trinket to the light, junk piled to the rafters behind him.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-046-ambrose-webb",
+  "out": "art/portraits/npc-046-ambrose-webb.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Master Ambrose Webb: an ancient, bat-eared, glacially slow scholar with a long thin white beard and half-moon spectacles, in dusty dark robes, one finger raised for patience, candlelit shelves of scrolls and spellbooks behind him.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-047-ottoline-brightwell",
+  "out": "art/portraits/npc-047-ottoline-brightwell.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Madame Ottoline Brightwell: an elegant, glittering, snobbish shop owner in her fifties with silver hair piled high, a high lace collar, glimmering blue jewelry, one eyebrow raised at the viewer, a glossy shop of fine fashion and jewelry behind her.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-048-nim-gearwright",
+  "out": "art/portraits/npc-048-nim-gearwright.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Nim Gearwright: a bubbly young gnome tinker woman with wild copper curls, oversized brass goggles on her forehead, soot on her cheek, a clockwork gadget sparking in her gloved hands, beaming, a cluttered workshop of gears behind her.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-049-hakon-stonebrow",
+  "out": "art/portraits/npc-049-hakon-stonebrow.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Hakon Stonebrow: a broad, grim, proud dwarf smith with a braided iron-grey beard bound with steel rings, heavy brows, arms crossed over a scorched leather apron, racks of plain steel dwarven weapons and armor behind him, firelight.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-303-hettie-bunce",
+  "out": "art/portraits/npc-303-hettie-bunce.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Hettie Bunce: a broad, floury widow baker in her sixties with rosy cheeks, a kerchief over grey hair, flour on her forearms, holding a tray of honey-cakes, a glowing brick oven behind her.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-305-mags-weller",
+  "out": "art/portraits/npc-305-mags-weller.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Mags Weller: a sharp-tongued old woman who runs a secondhand clothes stall, wiry and wrinkled, a tape measure around her neck and pins in her mouth, holding up a coat to judge it, racks of old clothes behind her.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "npc-018-thistle",
+  "out": "sealed/art/portraits/npc-018-thistle.png",
+  "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A teenage hare-folk scout: tall ears with a notch in one, rust-and-cream fur, wiry and fast, a scout's leather harness and sling, thumping one foot impatiently. Wet from river water, glaring, brave. Classic storybook talking-animal style, dignified, not cartoonish.",
+  "aspect": "3:4",
+  "refs": []
+ },
+ {
+  "key": "ch01-hushed-river-eel",
+  "out": "sealed/art/creatures/ch01-hushed-river-eel.png",
+  "prompt": "Ten feet of grey, glassy, slow-moving river eel rising silently out of a dark flooded cellar, its eyes like wet slate, utterly still and quiet, water sheeting off it without a ripple. Unnatural calm, not gore.",
+  "aspect": "4:3",
+  "refs": []
+ },
+ {
+  "key": "ch01-tolley-brothers",
+  "out": "sealed/art/creatures/ch01-tolley-brothers.png",
+  "prompt": "Two big, mean debt collectors for the Merchants' Guild with a weighted net and cudgels, one bald and one bearded, at the edge of a waterside cellar at dusk.",
+  "aspect": "4:3",
+  "refs": []
+ },
+ {
+  "key": "ch01-warehouse-row",
+  "out": "sealed/art/battlemaps/ch01-warehouse-row.png",
+  "aspect": "2:3",
+  "refs": [],
+  "prompt": "Top-down overhead tabletop RPG battle map of this place, seen straight down from directly above (no perspective, no tilt), digital painted style like popular online VTT battle maps, clean readable floor layout with clear walkable space, warm interior light. No grid lines, no text, no labels, no watermark. The place: A 40-by-60-foot grey timber riverside warehouse shed, half-gutted, low red sunset light coming through big loading doors along one long side that open onto a slick wet stone quay and the river beyond. In the middle-left of the floor a 15-by-15-foot square hole where the floorboards have rotted through, showing perfectly still black water ten feet below in a flooded cellar. An old wooden swing-crane just inside the loading doors with a cargo net full of crates hanging from it. Rows of stacked empty tallow barrels ten feet high along the back wall. Broken boards, rope coils, a few crates."
+ }
+]
