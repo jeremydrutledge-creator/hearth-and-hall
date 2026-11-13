@@ -1,0 +1,37 @@
+[
+ {
+  "key": "ch01-the-green-jar",
+  "out": "art/battlemaps/ch01-the-green-jar.jpg",
+  "prompt": "Orthographic top-down battle map, camera pointing straight down from directly overhead like a floor plan, the roof removed so we see the whole floor of ONE single room or building from above. NOT isometric, NOT angled, NOT perspective, NOT split into panels, NOT a cutaway side view. Digital painted VTT battle-map style, clean readable floor with walkable space, furniture seen from above, warm light. No grid lines, no text, no labels, no watermark. The place: A narrow, low shop with bunches of herbs drying from every beam, jars floor to ceiling with handwritten labels, a scrubbed counter with brass scales, a mortar the size of a washbasin. A cat asleep on the scales. A ladder to the rooms above. A small window of green bottle-glass making the light underwater-green. A stub of candle (Moss doesn't like glimmer either, and doesn't say why).",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-the-willow",
+  "out": "art/battlemaps/ch01-the-willow.jpg",
+  "prompt": "Orthographic top-down battle map, camera pointing straight down from directly overhead like a floor plan, the roof removed so we see the whole floor of ONE single room or building from above. NOT isometric, NOT angled, NOT perspective, NOT split into panels, NOT a cutaway side view. Digital painted VTT battle-map style, clean readable floor with walkable space, furniture seen from above, warm light. No grid lines, no text, no labels, no watermark. The place: A small hunchbacked tavern at the top of Willow Lane, the neighborhood's living room: low smoke-dark beams, a crooked bar with a cast-iron pan hanging behind it, mismatched benches, a fire, a cellar trapdoor, neighbors crowded in with mugs, lamplight warm and gold, rain on the bottle-glass windows.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-mother-brines",
+  "out": "art/battlemaps/ch01-mother-brines.jpg",
+  "prompt": "Orthographic top-down battle map, camera pointing straight down from directly overhead like a floor plan, the roof removed so we see the whole floor of ONE single room or building from above. NOT isometric, NOT angled, NOT perspective, NOT split into panels, NOT a cutaway side view. Digital painted VTT battle-map style, clean readable floor with walkable space, furniture seen from above, warm light. No grid lines, no text, no labels, no watermark. The place: The inside of an upturned barge: ribs overhead like a whale's belly, tarred and hung with drying kelp, rope and lanterns. Shelves made of old oars. Bottles in every color, stoppered with cork and wax, each labeled in her big square hand (\"FOR BLEEDING,\" \"FOR STUPIDITY\"). A copper still bubbling in the corner. A ship's wheel nailed to the wall as decoration, a parrot cage with no parrot (\"He left me. Joined the navy.\"). A scrubbed table with a bowl of salt for luck.",
+  "aspect": "1:1",
+  "refs": []
+ },
+ {
+  "key": "ch01-warehouse-row",
+  "out": "sealed/art/battlemaps/ch01-warehouse-row.jpg",
+  "aspect": "2:3",
+  "refs": [],
+  "prompt": "Orthographic top-down battle map, camera pointing straight down from directly overhead like a floor plan, the roof removed so we see the whole floor of ONE single room or building from above. NOT isometric, NOT angled, NOT perspective, NOT split into panels, NOT a cutaway side view. Digital painted VTT battle-map style, clean readable floor with walkable space, furniture seen from above, warm light. No grid lines, no text, no labels, no watermark. The place: A 40-by-60-foot grey timber riverside warehouse shed, half-gutted, low red sunset light coming through big loading doors along one long side that open onto a slick wet stone quay and the river beyond. In the middle-left of the floor a 15-by-15-foot square hole where the floorboards have rotted through, showing perfectly still black water ten feet below in a flooded cellar. An old wooden swing-crane just inside the loading doors with a cargo net full of crates hanging from it. Rows of stacked empty tallow barrels ten feet high along the back wall. Broken boards, rope coils, a few crates."
+ },
+ {
+  "key": "willow-lane",
+  "out": "player/maps/willow-lane.jpg",
+  "prompt": "Top-down overhead neighborhood map drawn in ink and soft watercolor on parchment, like a hand-drawn tabletop RPG cartographer's map, seen straight down from directly above (not angled, not isometric). Absolutely no text, labels, numbers, title, legend, compass or signature. A painted close map of a crooked lane of about twenty small wooden houses running downhill from the West Gate road to a slow, green side-channel of the river (the Bend). Washing lines strung between houses, chickens, a shared well with a little wooden roof halfway down, a hunchbacked tavern at the top, a chandlery, an herb shop with jars in the window, a fish barrow by the well, a tiny watch-house on the gate road. At the very bottom by the water, a tall, narrow, slightly leaning three-story wooden house with a roof hatch (the Fenwick house). A long rope-walk shed east along the Bend, tannery yards beyond, an old rotting barge in the reeds, willows everywhere.  Keep key features well spaced so the DM can crop sections.",
+  "aspect": "3:4",
+  "refs": []
+ }
+]
