@@ -82,7 +82,9 @@ Every Restday, the brothers eat supper together at the long table in the kitchen
 
 You are **Ash Fenwick**. You're twenty years old, and as far as most of Emberford is concerned, you're trouble.
 
-You've been a lot of things: a courier, a finder of lost dogs and pawned rings, a very minor bounty hunter, and a wharf porter for exactly one day. You enter contests you have no real business winning: the Knife Wall on Market Steps, the Bargerace at Highwater, cards at the Willow, anything with a purse and a crowd. Sometimes you win. Sometimes you lose spectacularly. You can work a shell game on a street corner for coin, and you are far better with your hands than an honest person needs to be.
+You've been a lot of things: a courier, a finder of lost dogs and pawned rings, a very minor bounty hunter, and a wharf porter for exactly one day. But mostly, if anyone asked what you *do*, the honest answer is: you compete. The Knife Wall on Market Steps. Wasters at the Bucket. Cards at the Willow. Rooftop races, lock races, the Bargerace at Highwater, anything with a purse and a crowd. You're not good enough to be a professional at anything (the real circuits, the jousts and the noble tourneys, are for lords' sons anyway), but you're good enough to win now and then, and to place often enough to get your entry back. Some days that's the whole plan: wake up, see what's chalked on the Long Wall, and go find out whether today's your day. You can work a shell game on a street corner for coin, and you are far better with your hands than an honest person needs to be.
+
+Your brothers have watched you do this for years. Zeke keeps a running tally of your wins and losses in the back of a notebook "for science." Gideon watches from the bar with his arms folded and says nothing, which is worse.
 
 And you steal. Not on Willow Lane, never on Willow Lane. But up on Crownhill, off a delivery cart, out of a merchant's purse that won't miss it, you take what you can carry. A lot of it ends up on doorsteps on your street. Bess Carter has been finding things on her step for two years. She doesn't know it's you. On Willow Lane, you don't ask.
 
@@ -95,19 +97,25 @@ It's early Thawing, Year of the Ford 1104. The snowmelt is just starting to swel
 
 ---
 
-## VI. The Roof
+## VI. The Long Wall
 
-Late morning.
+Late morning, Restday.
 
-The slates of the Fenwick roof are warm where the sun's on them and cold where it isn't. You're sitting with your back against the chimney. Below you, Willow Lane runs crooked up the hill toward the West Gate road: washing lines, smoke from a dozen kitchens, chickens arguing, a child somewhere shrieking with laughter. Down past your heels, the Bend slides by, green and slow, smelling of willow and mud.
+The Willow smells of last night's ale, this morning's porridge and the wet rag Peg is using on the back wall. The **Long Wall** is the whole back of the tavern: black-painted boards covered in chalk. Jobs on the left, copied off the Watch board and the Wharfmaster's board. Contests in the middle, with their fees. Tavern Champs down the right side. And across the top, in Peg's big square letters, **the Willow Cup**: Rook first with fourteen points, a sailor called Joss Kettering second, Gentle Joe Barrow third, a locksmith's apprentice fourth, and fifth, with seven points and the Shell Game title chalked beside it, *A. FENWICK.*
 
-Beside you on the slates sits a sack of good white Crownhill flour, the kind with a miller's stamp on it. A delivery cart lost it on the West Gate road about an hour ago. It's very possible the cart had help.
+Fifth. You've been staring at it long enough that Peg has started wiping around you.
 
-On the chimney pot above your head, Bart ruffles his feathers and turns his head almost all the way around to look at you. *"So,"* he says, in the inside of your skull. *"Whose step are we leaving it on? And before you say 'Bess's,' I'd like it on record that she's out front with the washing, and she has eyes."*
+Today's chalk, fresh this morning: a crate to fetch off a barge for Mother Brine, three silver. A runaway terrier, Crownhill, reward. The **Knife Wall** on Market Steps, champion's purse paid at the Drowned Lantern at lamp-lighting. And down at the Bucket, a Restday undercard, five gold to enter, *formats: Bare-Knuckle or Wasters.* Somebody's drawn a little crown next to Gentle Joe Barrow's name on the Bare-Knuckle line. Somebody else has drawn a smaller, ruder thing next to it.
 
-From the yard below comes a voice you've known all your life.
+Under the bench by your boot, wrapped in your coat, sits a sack of good white Crownhill flour with a miller's stamp on it. A delivery cart lost it on the West Gate road about an hour ago. It's very possible the cart had help.
 
-*"Asheron."*
+Zeke is at the corner table with a notebook and a cooling cup of tea, pretending to read and very obviously watching you read the wall. Gideon is at the bar, eating Peg's porridge before his shift at the Drowned Lantern, in the plain dark coat he wears to work doors. He has not turned around. He doesn't need to.
+
+On the rafter above your head, Bart ruffles his feathers and turns his head almost all the way around. *"Fifth,"* he says, inside your skull. *"Behind a man who apologizes after he hits people. Also: the flour. Bess is out front with the washing. She has eyes. Your brother has eyes. Everyone in this room has eyes except Walt Finch, and he's coming in the door."*
+
+From the bar, without turning around, a voice you've known all your life.
+
+*"Asheron. What's in the coat."*
 
 ---
 

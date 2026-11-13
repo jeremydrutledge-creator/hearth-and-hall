@@ -227,7 +227,8 @@
 
 ## Ch1 · Willow Lane (L1, 1 session) · `chapters/act1/ch01.md`
 
-**Opener:** late morning, on the Fenwick roof with "found" Crownhill flour. Gideon calls "Asheron." Restday supper tonight. Moss is out the West Gate.
+**Opener (CHG-25):** late morning at **the Long Wall in the Willow** (Scene 0), "found" Crownhill flour under the bench; Gideon at the bar before his shift, Zeke with his tally notebook. Gideon: "Asheron. What's in the coat." (The roof opener, Scene 1, is the alternate.) Restday supper tonight. Moss is out the West Gate.
+**Day in the life:** the contest circuit is Ash's ordinary life. Early play is often solo (the Willow, Market Steps, the Bucket); brothers watch and roll their eyes. Long Wall options: Knife Wall, Bucket undercard (Bare-Knuckle or Wasters), Mother Brine's crate, the Crownhill terrier, cards, the shell game. Optional coax: Gideon vs. Gentle Joe Barrow (Bare-Knuckle, Persuasion DC 15), done by three so he's on the Lantern door for Fight 1. Money is tight, not desperate: never invent a crisis; note how the player treats purses.
 
 **★ Beats:**
 1. **Home is worth protecting.**
