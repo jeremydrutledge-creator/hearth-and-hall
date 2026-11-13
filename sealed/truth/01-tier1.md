@@ -93,7 +93,7 @@ NPC-005 · Clara Grane (aka Klara, Claire, Clare, Clarra · born Wren Fenwick: R
 Tier 1 · FAC-02 (Enchanters' Guild, apprentice) · First seen: Ch2, the Lamplit, Enchanters' Row
 ```
 - **PUBLIC FACE:** Master Hollis Grane's ward and brilliant apprentice enchanter, 20. Works at the Lamplit on the Row. Kind, earnest, a little lonely, funny once she relaxes. Her singing voice makes glimmer glow brighter, which everyone thinks is a charming knack.
-- **TRUTH:** She is **Wren Fenwick**, Ash's twin (SEC-03). The Voice half of the gift. Taken from the barge fire at two and raised by the man who ordered it, renamed after his dead wife. She believes she's an orphan of river fever. Hollis uses her Voice, without her understanding, to tune the Grand Reserve ("tuning lamps for the Lantern Night display"). She has the same grey-green fleck in her left eye, the same birthday (Midsummer's Eve), and hums the lullaby's first line.
+- **TRUTH:** She is **Wren Fenwick**, Ash's twin (SEC-03). The Voice half of the gift. Taken from the barge fire at two and raised by the man who ordered it, renamed after his dead wife. She believes she's an orphan of river fever. Hollis uses her Voice, without her understanding, to tune the Grand Reserve ("tuning lamps for the Lantern Night display"). She has the same grey-green fleck in her left eye, the same birthday (Midsummer's Eve), and hums the lullaby's first line. She wears the back half of the Fenwick pair-locket on a chain, five notes engraved on it (SEC-23).
 - **WANTS:** To make Hollis proud. To make something beautiful. To belong to someone who chose her.
 - **FEARS:** Being given back. Being a disappointment. Later: that her whole life was built on a fire.
 - **HIDING:** nothing she knows about. She *is* SEC-03.

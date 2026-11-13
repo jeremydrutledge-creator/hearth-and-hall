@@ -153,6 +153,20 @@
 - **Seeds:** Ch5 (Mabry is the one who says the lamp-wardens had a "license" to take Thistle); Ch7 (he's on duty and absent the night of the Lane siege).
 - **Reveal:** Ch7 or Ch11 (he sets up the Ford Festival attack).
 
+## SEC-23 · The split locket: Ash's half has a twin (added by CHG-06)
+- **Who knows:** Gideon and Zeke know the other half was Wren's (they believe it was lost with her). Hollis knows Clara's half came off the Fenwick child. Clara knows only "it's the only thing I came with." Nobody alive knows both halves still exist.
+- **Seeds (before Ch4 and Ch11):**
+  1. **Opener/Ch1:** Ash's locket goes cold against his chest at sunset by the still water, the moment he hears the call. (Narrate the sensation; never explain it.)
+  2. **Ch1 supper:** Ash fiddles with the locket while humming. Gideon's eyes go to it and he changes the subject. Zeke says, "Put that away, you'll break the glass," too sharply.
+  3. **Ch2 (any route that puts Ash on the Row or near Clara):** Clara wears a pewter half-locket on a chain. The broken hinge is on the *other* side from his. Perception DC 12 to notice the shape; Ash's own locket tugs faintly toward her (no roll, if he's wearing it). If Ash shows his locket at Keepsake & Locket, Widow Elspeth Marsh says: "This is a pair-locket, love. Made to split between two. Fringe tinwork. Where's its other half?"
+  4. **Ch5 or Ch7:** Clara, nervous, turns her half-locket over and over. Its back is engraved with five little notes. If Ash or Zeke reads them (any music sense, or Zeke's Arcana/History DC 10), they're the first line of Ash's tune.
+- **Payoff 1 (Ch4 ★4, new route E):** in the flood-dawn twin scene, Ash's locket is the evidence. "Mum hung half on each of you. That's your curl. The other one was hers." Gideon or Zeke, either one.
+- **Payoff 2 (Ch11 ★2, new route E):** the halves meet. When Ash and Clara stand close, both halves pull together and **click shut**, whole, for the first time in nineteen years. Inside, under the two glasses: "A" and "W." This is the cleanest proof in the campaign; it can stand alone as the twin reveal.
+- **Payoff 3 (Ch12 onward):** the whole locket is a **Hearkener's token** (story item; see the rules note below). In Ch20, whoever holds it when the song is sung, Ash or Clara, can give it to the other. That's a lovely table moment, not a mechanic gate.
+- **Rules note (the token, Ch12+):** while the locket is whole and both twins are within 1 mile, each knows the other's direction and whether she or he is in pain. Once per long rest, the twin holding it gains advantage on one check to wake a Hushed creature or to open or close a Wellgate. It is plain pewter: not glimmer, not attunement, can't be dispelled, survives Ending 1.
+- **If the halves meet early (dig early):** if Ash forces the meeting before Ch11 (shows Clara his locket in Ch2/5/7), let the halves pull and almost click, and the glass on Clara's side cracks. Clara laughs it off ("Fringe tinwork, they all look alike"). Hollis hears about it within a day (raise the Calm's watch on Ash: Rook gets paid sooner, SEC-14 seeds move up). The full reveal still waits for Ch11 unless Ash pushes with the eye flecks and the birthday too. Then move Ch11 ★2 up.
+- **Dig early (Ash asks Gideon about the other half before Ch4):** Gideon says "lost in the fire" and leaves the room. Treat it as a strong SEC-16 seed and move the Ch4 reveal up if Ash keeps pushing.
+
 ## SEC-22 · The Lane Well draws from the Hall of Two Rivers' springs
 - **Who knows:** Moss.
 - **Seeds:** Ch2 (the call comes clearest at the Lane Well); Ch4 (the well stays clean in the flood when everything else fouls); Ch7 (Lark sleeps best near it).

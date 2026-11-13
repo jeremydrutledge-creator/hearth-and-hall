@@ -28,16 +28,17 @@
 | SEC-20 | Aggie Thorne knows Moss never ages | NPC-014 | 2 (Ch1, Ch2) | Ch7 (EVT-45) | R-013, R-031, R-032 |
 | SEC-21 | Sergeant Giles Mabry is Calm | NPC-023, the inner circle, NPC-010 | 2 (Ch5, Ch7) | Ch7 or Ch11 (EVT-48) | R-035, R-055, R-057 |
 | SEC-22 | The Lane Well draws from the Hall of Two Rivers' springs | NPC-003 | 3 (Ch2, Ch4, Ch7) | Ch13 (route) or Ch17 (EVT-33) | — |
+| SEC-23 | The split locket: Ash's half has a twin, worn by Clara | NPC-001, NPC-002 (believe Wren's half was lost); NPC-006 (knows Clara's half came off the Fenwick child); NPC-005 wears it unknowing | 4 (Ch1 ×2, Ch2, Ch5/7) | Ch4 route E (EVT-07, half-truth); Ch11 route E (EVT-18, the click) | R-001, R-004, R-011 (strengthens existing SEC-16/SEC-03 edges; no new edges) |
 
 ## Secret-holder index (who to be careful with)
 
 | NPC | Holds |
 |---|---|
-| NPC-001 Gideon | SEC-09, SEC-16 |
-| NPC-002 Zeke | SEC-16 |
+| NPC-001 Gideon | SEC-09, SEC-16, SEC-23 (half) |
+| NPC-002 Zeke | SEC-16, SEC-23 (half) |
 | NPC-003 Moss | SEC-01, SEC-02, SEC-05, SEC-06, SEC-08, SEC-12, SEC-16, SEC-22 |
 | NPC-005 Clara | is SEC-03 (doesn't know) |
-| NPC-006 Hollis | SEC-03, SEC-04, SEC-05 |
+| NPC-006 Hollis | SEC-03, SEC-04, SEC-05, SEC-23 |
 | NPC-007 Hester | SEC-10 |
 | NPC-008 Brannoc | SEC-07, SEC-13, SEC-18 |
 | NPC-009 Vessimer | SEC-08, SEC-13, SEC-19 (unknowingly) |

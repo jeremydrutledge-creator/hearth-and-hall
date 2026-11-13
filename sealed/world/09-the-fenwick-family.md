@@ -13,6 +13,12 @@
 | **Asheron "Ash" Fenwick** | Midsummer's Eve YF 1083 | Living, 20 | Hearing half of the gift. **Doesn't know he had a twin.** |
 | **Wren Fenwick → Clara Grane** | Midsummer's Eve YF 1083 | Living, 20 | Voice half. Raised as Hollis's ward. |
 
+## Ash's keepsake: the split locket (SEC-23, CHG-06)
+- **What Ash carries:** a dented pewter half-locket on a leather cord under his shirt. Front: a worn crest, a river ford with antlers above it. Inside, behind cracked glass, a curl of baby hair and a scratched "A." The hinge is broken off on one side.
+- **What Ash believes:** it was his mother's. Gideon gave it to him when he was ten and said, "That was Mum's. That's your hair in it. The other half was lost in the fire." (All true. Gideon just doesn't say whose neck the other half was on.) Ash has pawned everything he owns at least once. He's never pawned this, and he's never quite been able to say why. Sometimes it goes cold for no reason.
+- **What Gideon and Zeke know:** the other half was Wren's, with her curl in it. They think it went into the river with her.
+- **Truth:** see 00-core-truths §4 and SEC-23. Clara wears the matching back half.
+
 ## The family secrets (layered reveals)
 
 ### Layer 1: "You had a twin." (SEC-16)

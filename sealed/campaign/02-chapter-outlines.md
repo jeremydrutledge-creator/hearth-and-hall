@@ -46,7 +46,7 @@
 
 **Side-activity window:** Knife Wall (Market Steps), the Bone Table, a Bucket undercard if Ash wants a purse (Ma Garrow notices him).
 
-**Seeds planted:** SEC-02 (the tune), SEC-01 (Moss knows hare-folk *by name*: "Thistle of the Mere. You're a long way from the warrens, little one." He catches himself.), SEC-16 (Gideon's face when Ash hums at supper).
+**Seeds planted:** SEC-02 (the tune), SEC-01 (Moss knows hare-folk *by name*: "Thistle of the Mere. You're a long way from the warrens, little one." He catches himself.), SEC-16 (Gideon's face when Ash hums at supper), SEC-23 (Ash's locket goes cold at the call; at supper Gideon's eyes go to it while Ash hums, and Zeke snaps "put that away").
 
 **Relationship beats:** Gideon scolds Ash for the brawl, then quietly bandages him. Thistle trusts Ash instantly, and Moss more than both of them.
 
@@ -89,7 +89,7 @@
 
 **Side-activity window:** the Riddle Table at the Lyceum (Zeke), Liars' Night at the Willow, the Bucket.
 
-**Seeds:** SEC-03 (lamps, eye fleck, Clara humming the lullaby's first line under her breath), SEC-04 (a lamp-warden noticing), SEC-05 (glimmer prices up again; Dagny Coalbeard grumbles "the old dwarves never touched this stuff"), SEC-09 (Gideon at the stone).
+**Seeds:** SEC-03 (lamps, eye fleck, Clara humming the lullaby's first line under her breath), SEC-23 (Clara's pewter half-locket on a chain; Ash's locket tugs toward it; Widow Marsh: "a pair-locket, love"), SEC-04 (a lamp-warden noticing), SEC-05 (glimmer prices up again; Dagny Coalbeard grumbles "the old dwarves never touched this stuff"), SEC-09 (Gideon at the stone).
 
 **Exit:** EVT-02. **Level 3.**
 
@@ -151,6 +151,7 @@
    - B. Dora Finch, in shock, says to Ash: "Thank the Lady you're safe. We lost your little sister to water once, we couldn't lose—" and stops.
    - C. Ash's tune: Zeke hears him humming it in the dawn and, broken by the night, sings the *second verse*, the one with "little Wren" in it. Ash has never heard it.
    - D. Gideon, after floating three lamps for the dead neighbors' pets, finally tells him himself.
+   - E. Ash's locket (SEC-23): Ash, soaked and furious, holds it up. "Whose hair is the other half for?" Gideon or Zeke can't lie to that.
    - **How it goes:** a real family fight. Gideon defends the decision ("You were two. I was fourteen. I didn't want you raised by a ghost."). Zeke admits he hated keeping it. Ash gets to be angry. Moss is present or nearby and says the one thing that matters: "She was so small. I'm sorry, lad. I'm so sorry." (He believes she died. He is grieving too, for real.) Reconciliation can be immediate or take a while. That's up to Ash.
 
 ### Skill challenge #1 · "Get the Lane Out" (fast, under pressure)
@@ -412,6 +413,7 @@
    - B. Moss hears Clara humming the lullaby, *both verses*, and realizes. It shatters him. "She didn't die. I left her. I left her in the fire."
    - C. Hester, at the barge-fire anniversary memorial, says to Gideon without thinking, "Hollis brought Clara to me that same autumn, poor mite, she had nobody." Gideon goes white.
    - D. The lamps: Clara and Ash touch hands and every lamp on the Row bursts.
+   - E. The locket (SEC-23): the two pewter halves pull together and click shut. Inside, "A" and "W."
 3. **★ Telling Clara (or not).** The choice of how, when and whether to tell Clara. She loves Hollis as a father. She **vouches for him sincerely** (vouch #3: "He took me in when no one would. He sat up with me every night I had fever."). She doesn't believe it, at first.
    - A. Ash tells her himself.
    - B. Ash waits (protecting her), and Clara works it out from a lamp flare and the lullaby and comes to him.

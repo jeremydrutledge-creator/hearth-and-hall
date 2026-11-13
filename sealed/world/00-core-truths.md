@@ -83,6 +83,7 @@ When Ash was a toddler, **Moss** wrapped him in a protective "hush" (Moss's own 
 - **Clara and Ash are a matched pair of halves.** Together they can do what a full Hearkener can, and more: they can re-sing the entire seal, or end the Sundering. Neither can do it alone.
 - Seeds: same birthday (Midsummer's Eve); both have one grey-green fleck in the left eye; Hollis's ward "came to him as a little one, the autumn of the bad fires"; Clara hums the same tune Ash does; glimmer lamps flare when they stand near each other.
 - **Gideon and Zeke know Ash had a twin sister, Wren, and believe she died in the fire. They never told Ash** (SEC-16; see 09-the-fenwick-family.md). That gives a two-stage reveal: first "you had a twin," later "she's alive."
+- **The split locket (SEC-23, added by CHG-06).** Elinor Fenwick had a plain pewter "pair-locket" made by a Fringe tinsmith when the twins were born: a hinged oval that unclips into two halves. The **front half** carries the family crest (a river ford with a stag's antlers above it, the same mark Tom carved on the barge prow) and, under a scrap of glass inside, a curl of Ash's baby hair scratched "A." The **back half** is engraved with five little notes (the first line of her lullaby) and holds a curl of Wren's hair scratched "W." On the twins' first birthday she unclipped it and hung a half on each baby's cord "so you'll always find each other." Wren was wearing her half when she was taken. Hollis let her keep it: it carried no crest, only notes, and he could not bring himself to strip the child of the one thing she came with. **Clara has worn the back half on a chain all her life** ("the only thing I came to Master Grane with"). The notes on it are where she first learned the lullaby's opening. It is **not** glimmer-made. It's plain pewter, so it survives Ending 1. But it has sat against a Hearkener's skin for twenty years: each half goes cold near a Wellgate, and the two halves pull faintly toward each other within arm's reach.
 - Sisterly relationship only. No romance, ever. She can become Ash's fiercest ally and the "sister he never knew."
 
 ---
@@ -181,6 +182,7 @@ Ash's choices decide which: how he treats Clara, Brannoc, Hollis's people and th
 | SEC-14 | The street rival is being paid by the Calm to watch Ash (from Act I midpoint) |
 | SEC-15 | Queen Amarys of Aranhollow knows the whole truth and has chosen neutrality; her elves will not act unless given proof the seal can be held |
 | SEC-16 | Gideon and Zeke know Ash had a twin sister (Wren) whom they believe died in the fire; they've kept it from Ash |
+| SEC-23 | Ash's half-locket is one of a pair; Clara wears the other half (added CHG-06) |
 
 ---
 

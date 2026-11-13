@@ -1,7 +1,7 @@
 # Handoff Notes from the Truth File step (SEALED)
 
 ## For step 6 (chapters in detail)
-- **Use NPC IDs** from `00-index.md` in every chapter file, encounter and shop. Next free IDs: NPC-080, R-097, SEC-23, EVT-56, CHG-06.
+- **Use NPC IDs** from `00-index.md` in every chapter file, encounter and shop. Next free IDs: NPC-080, R-097, SEC-24 (SEC-23 used by CHG-06), EVT-56, CHG-07.
 - **Portrait paths** are set in `01-tier1.md` (`/art/portraits/npc-###-name.png`). Tier 2 portraits for shopkeepers use the same pattern (e.g. `npc-054-corwin-lockley.png`).
 - **Stat-block owners:** Captain Hoard (NPC-058, Ch6), Orla Venn (NPC-041, Ch5), Lucan Hask (NPC-020, Ch12), Moth-of-the-Long-Dusk (NPC-079, Ch7 tracker), Ulric Fane (NPC-065, Ch10), Vessimer (NPC-009, Ch15 and Ch18), the Hart (NPC-003 true form).
 - **Unnamed roles to name if they speak:** the House of Merrow's head, the Ch9 duelist, the Ch14 Horned Host champion, the Hushed Warlord's living name. Add them to Tier 2.
