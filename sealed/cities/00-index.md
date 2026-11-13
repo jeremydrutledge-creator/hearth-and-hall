@@ -716,3 +716,33 @@ Cross a dark hall strung with **bells on threads** and set with **forty lit cand
 | Tuskhold | **The Switch: the Rememberer's Stones** (swap one stone in a pattern of a hundred while elephant-folk watch; they remember everything: **Brutal**, DC +4; the prize is a story about you told forever) |
 | Horngard | **The Lamp Run: the Beacon Run** (light the highland beacons in order, on foot, at night) |
 | Hollowmere | **The Moth Post: the Burrow Post** (hare-folk messenger race in the tunnels; Bart hates tunnels) |
+
+---
+
+## 14. The Tavern Board (CHG-23: a living leaderboard)
+
+> Every city can have one; **Emberford's is the Long Wall at the Willow** (`03-emberford.md` §10 has the day-one standings and the rivals' numbers). It's flavor first and a light mechanic second: the player should feel he's **one of the regulars** in a scene full of named rivals whose numbers move while he's away.
+
+### 14.1 What's on a board
+1. **Jobs** (from §7, copied by the landlord), 2. **What's coming** (the contest calendar with entry fees, from the city file and §9), 3. **Tavern Champs** (one current holder per contest type), 4. **The season race** (points; the Willow calls it **the Willow Cup**).
+
+### 14.2 Points and titles
+- **Points:** win **5**, second **3**, "in the money" (passed a Gauntlet, reached elimination in Strange Arms, won a bout on the undercard) **1**. **Festival contests and circuit stops count double.** Ring bouts count by format (each format is its own title).
+- **Titles:** winning a contest takes its title. A holder who **doesn't defend** (enter) for **two contest nights** is wiped and the title goes vacant. A title can be **challenged** in the tavern on any night for a 1 gp side bet (a straight contest from §11; the crowd decides the terms).
+- **The season:** Lantern Night to Lantern Night. The leader takes the **jar** (a silver per round bought on contest nights: **40–60 gp** at the Willow) and a name painted on the beam. Second and third get drinks on the house for a month. **Ash's name on the beam is a real, cheap, lovely campaign goal**: use it.
+
+### 14.3 Making it live (between sessions)
+- **Per in-game week, roll a d6 for each board rival** (it's ten rolls; do it in one code block at wrap-up):
+  - **1–2:** nothing. **3–4:** +1 point. **5:** +3 points (a second place somewhere). **6:** +5 points, and if the rival's **specialty title** is held by someone else, roll a contest: rival's bonus vs. the holder's (d20 each); the winner keeps or takes the title.
+- **Rivals have a specialty (+2) and a weakness (−2)** (`03` §10 lists them). Use their bonus whenever they appear in a contest Ash enters: roll them for real.
+- **Ash's points** come only from contests actually played. Never move his line off-screen.
+- **Movement is news.** When Ash walks into the tavern after a few days away, **tell him one change on the wall** ("Lenny Swann's name is over Jenny's on the Plank now, and she's not speaking to anyone"). Rivals react to Ash's wins (Rook especially; R-037).
+- **Away from home:** the board keeps running. Ash's line freezes. When he comes back after months, the season may be over: tell him who won the jar, and let it sting or delight.
+
+### 14.4 The economics (keep it a meager living at T1)
+- **The player's framing (locked):** Ash isn't good enough to be a professional, and **the real pro circuits are closed to him**: jousting lists, the King's Tourney lists, Tollhaven's Golden Cage title fights and the noble archery are for lords' sons and sponsored men. He **wins sometimes, places often enough to get his fee back**, and that plus odd jobs and quiet theft keeps the brothers' house fed. **It is not always on the up and up, and he has no legit job.**
+- **Budget check (T1):** a normal week of contests costs Ash **4–8 gp** in fees and returns **0–30 gp**; **expected net about +5 to +10 gp a week**. The Fenwick house runs on roughly **1 gp a day** for three men (food, fuel, saving for the house tax), and Gideon's door wages cover most of it. Ash's contest money is the difference between eating meat on Restday and not. **Don't let contests become the treasure engine:** a T1 jackpot (a 60 gp Strange Arms win, a lone Gauntlet pass) is a celebration and a scene, not a weekly event. §11.8 and §3.7 caps still apply.
+- **T2+:** fees and purses rise with tier (§11.1), and by then Ash's real money is from the story. The board stays for pride and the beam.
+
+### 14.5 Art (optional, reusable)
+`art/battlemaps/` style is wrong for this; use a scene painting: *"A tavern's back wall of black-painted boards covered in chalk columns and tally marks, a wet rag and a stick of chalk on a ledge, a cast-iron pan hanging beside it, lamplight, regulars' silhouettes at the bar; the chalk marks are abstract scribbles and tallies only, absolutely no readable text, letters or numbers."* Standings live in text, never in the picture.

@@ -445,3 +445,36 @@ Heist chain, Alarm and fences: `00-index.md` §8. Ash's code: never the Fringe. 
 | NPC-317 | Hortensia Vale (Tensy, Hortensia Vail) | Lyceum snob; apologizes in Act III |
 
 Minor names with no ID (Tier 3 if they recur): Old Grace Pinner, the Twins Abbot, Dicky Mole (bookies); Oswin Fitch (Knife Wall student); Mistress Dunn and Biscuit; Lanky Ferris; Dot Garrow (Ma's healer); Joss Kettering (Ch1).
+
+---
+
+## 10. The Long Wall at the Willow (the Tavern Board; `00-index.md` §14; CHG-23)
+
+**Where and why the Willow:** it's the Fringe's living room at the top of Willow Lane, a minute from the Fringe watch-house's board; Liars' Night and Kings and Ferrymen already happen here; the Rooftop Race starts from its roof. **Peg Mallory (NPC-015)** keeps the wall: wet rag, chalk, cast-iron pan for disputes. She copies the Watch board and the Wharfmaster's board each morning (Hugh Dale brings her the Watch list because Ostley won't). **Little Ned Garrow** (NPC-310) comes up on Restdays to chalk the Bucket's results in, very neatly.
+
+**The jar:** the Lantern Jar on the shelf behind the bar; 1 sp per round on contest nights; **40–60 gp** at season's end. The beam over the bar has painted names going back forty years. **Walt Finch's name is on it twice** (YF 1061, YF 1067: arm-wrestling and Liars' Night). Tom Fenwick's isn't; Gideon has never entered. (No seed; just texture. Don't add one.)
+
+### 10.1 Day-one board (early Thawing YF 1104; the season began on Lantern Night YF 1103)
+
+| # | Name (ID) | Pts | Title held | Specialty (+2) | Weakness (−2) | Bonus (T1) | Attitude to Ash |
+|---|---|---|---|---|---|---|---|
+| 1 | **Rook** (NPC-010) | 14 | Rooftop Race | roofs, knife-throwing | anything judged by a crowd that dislikes him | +6 | R-037; the board is where their rivalry is public |
+| 2 | **Joss Kettering** (NPC-080) | 11 | Wharfmaster's Run | Athletics, Gauntlets | Sleight of Hand | +5 | friendly; buys Ash a drink after losing |
+| 3 | **"Gentle" Joe Barrow** (NPC-311) | 10 | Bare-Knuckle | Bare-Knuckle, stone-lift | Wasters, the Plank | +5 | kindly; offers to teach Ash "the proper way to fall down" |
+| 4 | **Tilly Cobb** (NPC-103) | 8 | Locksmiths' Race | locks | anything illegal (she won't enter the Rooftop Race or the Night Climb) | +5 | wary; thinks Ash is a criminal (correct); respects his hands |
+| 5 | **Ash** | 7 | **Shell Game** | — | — | — | — |
+| 6 | **Jenny Wick** (NPC-084) | 6 | The Plank | balance, Ribbon Pull | Strength | +5 | Magpie; takes her cue from Rook |
+| 7 | **Old Merrit** (NPC-104) | 5 | — | hustles, lock-boxes, cheating | anything athletic now (bad knees) | +6 | likes Ash; offers tips for a price; will throw a contest if Rook pays him (Insight DC 14) |
+| 8 | **Lenny Swann** (NPC-106) | 4 | Wasters | Wasters, Who's the Duke | patience (−2 on Shadow-Tail, Candle-and-Bell) | +6 | cocky; picks Ash as "the local to beat" because Rook told him to |
+| 9 | **Walt Finch** (NPC-013) | 3 | Liars' Night | tall tales | everything else (he's 78) | +4 | adores Ash; will lose Liars' Night to Ash on purpose once, and deny it |
+| 10 | **Oswin Fitch** (NPC-105) | 2 | — | knives (he's improving: +1 bonus per month he keeps entering) | nerves | +3 | Zeke's acquaintance from the Lyceum; the board's underdog. If he ever wins, the Willow erupts |
+
+**Vacant titles:** the Lamp Run (restarts mid-Seedtide), Strange Arms (Highwater Fair), the Ribbon Pull (Highwater Fair; Jenny Wick held it last year), Copper to Crown (monthly from Seedtide). **The Moth Post:** "the Official Moths" (the Guildhall's own message-moths hold it; it annoys everyone; beating them is a minor civic event).
+
+**Day-one news on the wall** (for the session-one opener or Ash's first visit): Lenny Swann took Wasters from Jenny Wick last Tenth-day and bought the room a round with the purse; Rook has written "FENWICK OWES ME A RACE" in the corner and Peg hasn't wiped it.
+
+### 10.2 Who's new (IDs registered in `truth/02-tier2.md`, CHG-23)
+- **Tilly Cobb** (NPC-103; Tilly Cob). Locksmiths' Guild apprentice, 19, prim, fast hands, lives with her father the locksmith in Glimmerway. Comes to the Willow only on contest nights.
+- **Old Merrit** (NPC-104; Merritt, Merit). "Retired" burglar, sixties, bad knees, twinkle. Knows the Watch by first name and the Watch knows him. A possible mentor for heist tricks (Investigation tips for 1 gp a tip).
+- **Oswin Fitch** (NPC-105; Ozwin). Lyceum student, 18, gangly, earnest, keeps losing at the Knife Wall, keeps coming back.
+- **Lenny Swann** (NPC-106; Len Swan, Lenny Swan). Twenty-two, from Saltreach by way of Tollhaven, flashy fencer's coat, dueling-school Wasters, cocky and funny. **Not a villain;** a newcomer who wants to be top of the wall. Rook has adopted him to annoy Ash; Lenny can be won over (beat him fairly in Wasters and then buy *him* a round: he switches from Rook's friend to Ash's).
