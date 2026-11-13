@@ -42,3 +42,7 @@ CHG-## · Session # (or "build") · What changed · Why · Records touched (NPC/
 **CHG-16 · build (consistency pass) · Campaign treasure summed.** About 48,000–60,000 gp and about 38 permanent items across the campaign; no trims made; not verified against the 2024 DMG treasure guidance. · Touched: rules/03.
 
 Next free: **CHG-17**, NPC-097, R-241, SEC-25, EVT-58.
+
+**CHG-17 · build (consistency pass) · Final cleanups.** (1) Ch2's Row joke changed from "Clara's sweet on the Fringe boy" to "The lamps can't tell you two apart!" (no romance with female allies; a better twin seed). (2) The Lamp House clerk is **Oliver Fairley** ("Lucas" is a dictation alias for Hask). (3) "Hushed by choice" counts as deep Hushed (fallen Rook, Orla). (4) Portrait paths: Gideon and Zeke files standardized to `npc-001-gideon.png` / `npc-002-zeke.png`; anyone the player hasn't met (and every sealed second image) lives in `/sealed/art/portraits/` until they appear, so file names can't spoil. (5) Old Enoch Fathom's portrait file renamed. · Touched: campaign/02 (Ch2), chapters/act1/ch02, cities/02, cities/art-list, chapters/act2 (_index, ch11), truth/01 (PORTRAIT lines), truth/02, world/05, dm-spine.
+
+Next free: **CHG-18**.

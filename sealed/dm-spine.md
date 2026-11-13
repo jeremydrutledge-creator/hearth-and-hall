@@ -62,7 +62,7 @@
 
 **L1–2 caps:** no single creature deals more than 9 damage per turn at L1, or 14 at L2. Full tuning: `rules/02-tuning-notes.md`.
 
-**Waking a Hushed creature:** Performance with the tune, DC 15 / 17 / 19 / 21 by tier. Ash isn't proficient (+4).
+**Waking a Hushed creature (CHG-08):** half-Hushed (recent, "still in there"): Performance with the tune, DC 15 / 17 / 19 / 21 by tier, from Ch1. Deep Hushed (fully grey, long under, or Hushed by choice): Ash alone only stirs them until Ch15; the twins' duet wakes them from Ch12; from Ch15 Ash wakes them with two consecutive successes. Hushed dead: laid to rest only. Ash senses the depth without a roll. Ash isn't proficient (+4) until the Ch9 Performance offer.
 
 ---
 
@@ -194,7 +194,7 @@
 - **Ch7 (KEY):** leads the Calm crew. He hesitates and warns Ash if Ash helped him or Martha (NPC-028).
 - **Ch9–13:**
   - Redemption path: brings information, steals the Mabry letters, then the fire-night ledger, then runs Market Steps on Lantern Night.
-  - Fall path: half-Hushed, wakeable from Ch15.
+  - Fall path: Hushed by choice (counts as deep Hushed, CHG-08); wakeable by Ash alone from Ch15, or by the duet from Ch12.
 - **Ch20:** shows up either way.
 - **Treating Martha's lung-rot** (EVT-55) nearly guarantees his redemption.
 
@@ -715,7 +715,7 @@
 | A name by sound | `truth/00-index.md` |
 | What X believes about Y | `truth/03-ledger.md` |
 | Who someone is, their voice | `truth/01-tier1.md`, `02-tier2.md` |
-| A secret's seeds, or digging early | `campaign/03-secrets-and-seeds.md` (SEC-01 to SEC-23), `truth/04-secrets.md` |
+| A secret's seeds, or digging early | `campaign/03-secrets-and-seeds.md` (SEC-01 to SEC-24), `truth/04-secrets.md` |
 | What changes a belief | `truth/05-events.md` |
 | Factions | `truth/06-factions.md`, `world/07-factions.md` |
 | Villain timelines if unopposed | `campaign/00-premise-truth.md` §3 |
@@ -726,4 +726,18 @@
 | Fight math, party DPR, stat-block template, counters | `rules/02-tuning-notes.md` |
 | House rules, builds, level plans, prices | `rules/00`, `01`, `03` |
 | The family and the locket | `world/09-the-fenwick-family.md` |
-| Open fixes from the build | `chapters/act*/_change-requests.md`, `cities/_change-requests.md` |
+| Build-time rulings (all resolved) | `truth/08-change-log.md` CHG-07 to CHG-17 |
+| Art list (every image, priority tiers) | `sealed/art-manifest.md` |
+
+---
+
+## 8. Consistency-pass rulings to remember at the table (CHG-07 to CHG-17)
+- **Ford Festival is the 1st of Leaffall** (Ch11), not Lantern.
+- **The lamp joke on the Row (Ch2):** "The lamps can't tell you two apart!" Never play Ash and Clara as romance.
+- **Renamed:** Julian Hume (Tollhaven rival broker), Bastian Harrow (Quiet Knives leader), Zuri Far-Wander (Saffra rooftop champion), Gerald Hatherley, Old Enoch Fathom, Oliver Fairley, Godric Marsh, Kester Sayle, Ewan Pickett.
+- **Boons when earned:** Ash's Performance (Ch9, offered); Gideon's greywilt aura (Ch8), Bear's Ward (Ch10), leads an army (Ch16); Zeke's Sundering-script Help (Ch17); Act III blessings. Details: `rules/01` end.
+- **Finale is round-fixed** (rounds 1–3, 4–7, 8–11, 12–15). **SC#5 at 5 failures: SEAL +1.**
+- **Endings:** Ash can't be the seal; Moss's consent in S20.1; switch songs down only; SC 20-B sets Twin Bond 3. Details: `campaign/04` end.
+- **Hester saved (costly route):** no replacement death.
+- **Optional side content:** Corriemount thread (R-240, EVT-57, SEC-24); Tuskhold pond closing (SEAL −1, counts toward the max of two).
+- **Art:** anyone the player hasn't met has their portrait in `/sealed/art/`. Move it to `/art/` (or show it) only when they appear.

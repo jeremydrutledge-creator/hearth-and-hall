@@ -27,7 +27,7 @@
 | `R-###` | Ledger edges (one direction each) | R-001 to R-096, R-200 to R-208, R-230 to R-240 (R-241 next) |
 | `SEC-##` | Secrets | SEC-01 to SEC-24 (SEC-25 next) |
 | `EVT-##` | Events | EVT-01 to EVT-57 (EVT-58 next) |
-| `CHG-##` | Change log entries | CHG-01 to CHG-16 (CHG-17 next) |
+| `CHG-##` | Change log entries | CHG-01 to CHG-17 (CHG-18 next) |
 
 ## The running rule
 > **Before any NPC vouches for, speaks about or reacts to another, read that edge in `03-ledger.md`.**
