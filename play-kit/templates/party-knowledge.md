@@ -1,6 +1,6 @@
 # Party Knowledge File (template)
 
-> **Becomes a Claude Doc in the first play session.** Player-facing. It holds what **Ash** knows and how he knows it. Day-one contents come from `player/party-knowledge-day-one.md`. Update it at every "log this session."
+> **Becomes a Claude Doc in the first play session.** Player-facing. It holds what **Ash** knows and how he knows it. Day-one contents come from `player/party-knowledge.md`. Update it at every "log this session."
 >
 > **Rules:**
 > - Every fact has a **source** ("Gideon says…," "everyone on the Lane knows…," "Ash saw it himself").
