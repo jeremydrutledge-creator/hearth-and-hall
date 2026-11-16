@@ -282,5 +282,22 @@
 | Old Merrit, Merritt, Merit | Old Merrit | NPC-104 |
 | Oswin Fitch, Ozwin, Oswyn | Oswin Fitch | NPC-105 |
 | Lenny Swann, Len Swan, Lenny Swan | Lenny Swann | NPC-106 |
+| Dot Fenwick, Dottie, Dot | Dot Fenwick | NPC-107 |
+| Molly Hatch, Mollie, Moll | Molly Hatch | NPC-108 |
+| Lord Allard, Alard, Allerd | Lord Allard | NPC-109 |
+| Gerald Corbett, Gerrold, Corbet | Gerald Corbett | NPC-110 |
+| Ned Corbett, Corbet | Ned Corbett | NPC-111 |
+| Barnaby Crale, Barney, Crail, Krale | Barnaby Crale | NPC-112 |
+| Allard's cook | Allard's cook | NPC-113 |
+| Annie Rush, Anny | Annie Rush | NPC-114 |
+| Bea Rush, Bee | Bea Rush | NPC-115 |
+| Man in Black | The Man in Black | NPC-116 |
+| Big Hugo, Hugh, Hughie | Big Hugo | NPC-117 |
+| Gammy Dunn, Gammie | Gammy Dunn | NPC-118 |
+| Midge | Midge (Magpie) | NPC-119 |
+| Feather | Feather (Magpie) | NPC-120 |
+| Lump | Lump (Magpie) | NPC-121 |
 
 **Sound-alike traps (new):** **Merrit** (NPC-104) vs. **Merrilee** (otter-folk name pattern): different realms. **Swann** (Lenny) vs. **Swift** (Swift and Sons): Lenny is a fencer, Swift is a courier. **Nora** (Cobb) vs. **Nell** (Carter): Nora is the locksmith apprentice, Nell is five. **Haddow** vs. **Hale** (Captain): Haddow is always "Sergeant," and Wolfsgate's.
+
+**Sound-alike traps (Session 6):** **Dot Fenwick** (NPC-107) vs. **Dot Garrow** (Ma's sister-in-law, healer). **Molly Hatch** (NPC-108) vs. **Molly Pike** (NPC-318) and **Jonas Hatch** (the Bellman). **Gammy Dunn** (NPC-118) vs. **Mistress Dunn**. **Ned Corbett** vs. **Corbin Wade** (NPC-152). **Davy Garrow** (NPC-091) vs. **Danny** (Rook).
