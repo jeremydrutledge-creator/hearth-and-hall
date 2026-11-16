@@ -1,0 +1,353 @@
+{
+ "batch": "batches/9l6oybs8ucn9we0i0ucpd1upyxajioucgvpt",
+ "jobs": [
+  {
+   "key": "npc-117-big-hugo",
+   "out": "art/portraits/npc-117-big-hugo.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Big Hugo, a giant of a man and a regular at a small, low-beamed Fringe tavern: huge shoulders, enormous hands wrapped around a tankard, a broad gentle face, cropped hair, a plain homespun shirt, sitting on a bench that looks too small for him, smoky tavern firelight behind.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-030-old-bram-barge",
+   "out": "art/portraits/npc-030-old-bram-barge.jpg",
+   "prompt": "The man in the reference image, Old Bram the ferryman, painted again in the same style: standing at the stern of his flat old river barge holding the steering pole, a blue Guild ribbon pinned proudly to his old coat, reeds and a slow green river channel behind him, evening light. Waist-up.",
+   "aspect": "3:4",
+   "refs": [
+    "art/portraits/npc-030-old-bram.jpg"
+   ]
+  },
+  {
+   "key": "npc-091-davy-garrow",
+   "out": "art/portraits/npc-091-davy-garrow.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Davy Garrow, a young working man recovering from a long illness: pale and thin, hollow-cheeked but with a tired half-smile, a rough wool blanket around his shoulders, sitting up on a cot in a dim brick room lit by a lantern.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-028-martha-pratt",
+   "out": "art/portraits/npc-028-martha-pratt.jpg",
+   "prompt": "Martha Pratt, a thin, proud, careworn working woman in her late forties, sitting on a stool in the open doorway of a small wooden house in the sun, a shawl around her, a fat tabby cat named Duchess curled in her lap, eyes half-closed in the warmth. Waist-up, painterly background of a poor but tidy lane.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-119-121-the-magpies",
+   "out": "art/portraits/npc-119-121-the-magpies.jpg",
+   "prompt": "Group portrait of three young street thieves of a city crew called the Magpies, waist-up, posed cockily in an alley mouth: Midge, small and wiry and quick-eyed; Feather, lanky with a magpie feather stuck in a battered cap; Lump, big, slow and broad with a round, solid face. Patched coats, fingerless gloves, each wearing a black-and-white magpie feather somewhere. Dusk light.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "npc-118-gammy-dunn",
+   "out": "art/portraits/npc-118-gammy-dunn.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Gammy Dunn, an old street bookie with a wide grin full of gold teeth, a battered hat, a chalk slate of odds tucked under one arm, sitting under a red-and-white striped market awning, coins on a little folding table.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-054-corwin-lockley",
+   "out": "art/portraits/npc-054-corwin-lockley.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Corwin Lockley, a thin, sly, middle-aged man with a neat stage magician's mustache and very clean hands, winking, a playing card between two fingers, in a black-and-gold shop like a theater box with a little curtained stage behind him.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-006-hollis-grane",
+   "out": "art/portraits/npc-006-hollis-grane.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Hollis Grane, a warm, broad, grey-bearded man in his sixties in plain, unshowy good clothes, smiling kindly with a teacup in his hand at an afternoon tea in a grand domed hall, tall windows behind him.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-005-clara-grane",
+   "out": "art/portraits/npc-005-clara-grane.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Clara Grane, a kind, earnest young woman of about twenty in a plain grey hooded cloak, hair tucked behind one ear, a gentle shy smile, standing in a narrow glass-roofed lane of little workshops where colored lamps glow in the windows.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "lamp-warden",
+   "out": "art/portraits/lamp-warden.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A city lamp-warden: a masked guard in a silvered half-helm that hides the upper face, a dark cloak over a breastplate, a lantern on a pole and a short staff, standing silent and still on a misty cobbled street at night. Faceless and unreadable.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-075-nan-pike",
+   "out": "art/portraits/npc-075-nan-pike.jpg",
+   "prompt": "Old Nan Pike, the sharp-eyed elderly ferrywarden of a river village, sitting on an upturned barrel by a ferry landing, smoking a clay pipe, a shawl and a weathered face that misses nothing, a ferry-raft on a thick rope and a winch-house bell behind her. Waist-up.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-076-tobin-pike",
+   "out": "art/portraits/npc-076-tobin-pike.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Tobin Pike, a cheerful, sunburned young ferryman of about twenty with strong forearms and a rope over his shoulder, an open friendly grin, a broad brown river and a ferry-raft behind him.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-107-dot-fenwick",
+   "out": "art/portraits/npc-107-dot-fenwick.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Dot Fenwick, a small, quick, street-sharp girl of about eleven, scrubbed clean and wearing her best plain dress, a plain pewter locket on a cord at her neck, a red hair ribbon tied around one wrist, a bright guarded look like she's deciding whether to trust you. Background: a warm kitchen by a hearth.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-108-molly-hatch-maid",
+   "out": "art/portraits/npc-108-molly-hatch-maid.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Molly Hatch, a small, quick young woman of nineteen, freckles everywhere, a mass of dark hair under a knotted red scarf, a wide scrunched-up grin. Here she's a kitchen maid: sleeves rolled up, a basket on her hip, a big house kitchen behind her.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-108-molly-hatch-housekeeper",
+   "out": "art/portraits/npc-108-molly-hatch-housekeeper.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Molly Hatch, a small, quick young woman of nineteen, freckles everywhere, a mass of dark hair under a knotted red scarf, a wide scrunched-up grin. Here she's a housekeeper: a dark dress, a ring of keys at her belt, the red scarf knotted at her throat instead of on her hair, standing a little proud in a wood-paneled hall.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-108-molly-hatch-blue-dress",
+   "out": "art/portraits/npc-108-molly-hatch-blue-dress.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Molly Hatch, a small, quick young woman of nineteen, freckles everywhere, a mass of dark hair under a knotted red scarf, a wide scrunched-up grin. Here she wears a simple pretty blue dress for an evening out, the red scarf in her hair, lantern light behind her.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-109-lord-allard",
+   "out": "art/portraits/npc-109-lord-allard.jpg",
+   "prompt": "Lord Allard, a very old and frail nobleman: thin, a beak nose, wisps of white hair, pale blue pin-sharp eyes. He sits in a high-backed chair by a window with a rug over his knees, in a study full of ticking clocks. Waist-up.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-109-lord-allard-standing",
+   "out": "art/portraits/npc-109-lord-allard-standing.jpg",
+   "prompt": "Lord Allard, a very old and frail nobleman: thin, a beak nose, wisps of white hair, pale blue pin-sharp eyes. He stands leaning on a silver-headed cane in an old deep-green coat with brass buttons, a crest of a tower with a key above it carved on the paneling behind him. Three-quarter length.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-110-gerald-corbett",
+   "out": "art/portraits/npc-110-gerald-corbett.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Gerald Corbett, a disgraced house steward: sour, well-fed, a narrow nose, a velvet coat a little too fine for him, a resentful look.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-111-ned-corbett",
+   "out": "art/portraits/npc-111-ned-corbett.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Ned Corbett, a pawnbroker in his forties: soft and pale, the same narrow nose, ink on his shirt cuffs, a nervous glance over his shoulder, shelves of pawned goods behind a counter.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-112-barnaby-crale",
+   "out": "art/portraits/npc-112-barnaby-crale.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Barnaby Crale, a rich collector: big and red-faced, in a silk dressing gown, raising a wine glass in a gilded room full of clocks.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-113-allards-cook",
+   "out": "art/portraits/npc-113-allards-cook.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A big household cook with flour to the elbows and a face like a slammed door, arms folded, in a grand old house kitchen.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-114-annie-rush",
+   "out": "art/portraits/npc-114-annie-rush.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Annie Rush, a young woman with brown hair, a gap-toothed smile mid-laugh, flour dust on her clothes from a mill, a millstone and sacks behind her.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-115-bea-rush",
+   "out": "art/portraits/npc-115-bea-rush.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. Bea Rush, a thin, grey-haired, kind mother in a shawl, a gentle tired smile, a mill-house doorway behind her.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "npc-116-man-in-black",
+   "out": "art/portraits/npc-116-man-in-black.jpg",
+   "prompt": "Head-and-shoulders character portrait, three-quarter view, face clearly lit, painterly background. A man in a good black coat at an auction, a soldier's straight posture, rough scarred knuckles on a bidding paddle with no marking, his face half in shadow and hard to make out. Keep him vague and unidentifiable.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "item-dot-locket",
+   "out": "art/items/dot-locket-and-ash-half-locket.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. Two pewter lockets side by side for scale: a plain dull pewter locket with a simple letter F on the front, lying open to show an engraving inside that reads \"Not by blood, but by choosing. And chosen is forever.\" Beside it, an older, dented pewter half-locket on a leather cord, its hinge broken off on one side. If the lettering can't be rendered cleanly, leave the surface plain. No text or lettering anywhere else.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "item-whisper-stones",
+   "out": "art/items/whisper-stones.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. A pair of smooth grey river stones, one engraved \"A.F.\" and the other \"W.F.\", each with a faint blue glow deep inside. If the lettering can't be rendered cleanly, leave the surface plain. No text or lettering anywhere else.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "item-ash-shortsword",
+   "out": "art/items/ash-shortsword-plus1.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. A fine dwarf-forged shortsword lying on dark cloth: plain, perfectly balanced steel with a subtle silvery sheen, a wire-wrapped grip, a simple brass guard, crafted by a master smith, clearly magical in its quality but with no glowing crystal. No runes. No text or lettering anywhere else.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "item-pegs-liars-cup",
+   "out": "art/items/pegs-liars-cup.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. A battered old pewter tankard with a hinged lid shaped like a grinning fox's head, dented from years of use, on a tavern bar. No text or lettering anywhere else.",
+   "aspect": "1:1",
+   "refs": []
+  },
+  {
+   "key": "item-snuffbox-and-swan-salt",
+   "out": "art/items/eleanors-snuffbox-and-swan-salt.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. A small enamel snuffbox whose lid crest (a tower with a key above it) has been scratched at with a pin, beside a silver salt cellar shaped like a swan. No text or lettering anywhere else.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "item-carriage-clock",
+   "out": "art/items/silver-carriage-clock.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. A small silver carriage clock with an engraved plate on its base reading \"E., from the fool with the dwarf coin\". If the lettering can't be rendered cleanly, leave the surface plain. No text or lettering anywhere else.",
+   "aspect": "1:1",
+   "refs": []
+  },
+  {
+   "key": "item-case-clock",
+   "out": "art/items/walnut-case-clock.jpg",
+   "prompt": "Painting of a tall walnut longcase clock with a brass face standing against wood paneling in warm candlelight, its pendulum visible through a glass panel. No text or lettering anywhere else.",
+   "aspect": "2:3",
+   "refs": []
+  },
+  {
+   "key": "item-portable-hole-folded",
+   "out": "art/items/portable-hole-folded.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. A neatly folded square of plain black silk that seems to drink the candlelight. No text or lettering anywhere else.",
+   "aspect": "1:1",
+   "refs": []
+  },
+  {
+   "key": "item-portable-hole-open",
+   "out": "art/items/portable-hole-open.jpg",
+   "prompt": "Painting of a round black silk cloth laid open on a patterned carpet, seen from above at an angle, looking exactly like a perfect circular hole in the floor going down into darkness, candlelight around it. No text or lettering anywhere else.",
+   "aspect": "1:1",
+   "refs": []
+  },
+  {
+   "key": "item-dot-gifts",
+   "out": "art/items/dot-gifts.jpg",
+   "prompt": "Close-up still life painting on a dark wooden table, warm candlelight. A small smooth piece of pale ash wood carved with the name \"DOT\", beside a little brown leather notebook tied with a cord. If the lettering can't be rendered cleanly, leave the surface plain. No text or lettering anywhere else.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "s06-ford-stone-naming",
+   "out": "art/scenes/s06-ford-stone-naming.jpg",
+   "prompt": "Painted scene. Sunset in a quiet old square: a worn, mossy standing stone, small white flowers growing between the cobbles. A naming ceremony for a girl of about eleven in her best dress: three brothers gather round (the three men in the reference images: the youngest, the eldest broad and bearded, the bespectacled middle one), with a laughing tavern landlady, a giant gentle man, and an older weathered herbalist with a staff. A young woman in a plain grey cloak kneels beside the girl. Warm golden light, a family moment.",
+   "aspect": "16:9",
+   "refs": [
+    "art/portraits/pc-01-ash.jpg",
+    "art/portraits/npc-001-gideon.jpg",
+    "art/portraits/npc-002-zeke.jpg"
+   ]
+  },
+  {
+   "key": "s06-saltwife-sunset",
+   "out": "art/scenes/s06-saltwife-sunset.jpg",
+   "prompt": "Painted scene. Sunset at a city river wharf: a small two-masted coaster ship moored at the low wharf, a young woman in a red scarf leaning on the bow rail, a little supper table with a lantern set up on the deck, warm sky over the river.",
+   "aspect": "16:9",
+   "refs": []
+  },
+  {
+   "key": "ch04-bargerace-finish",
+   "out": "art/scenes/ch04-bargerace-finish.jpg",
+   "prompt": "Painted scene. The finish of a barge race on a wide city river: a light old barge with four polers bursting through colored ribbons strung across the water between bridge piers, both banks packed with cheering crowds, flags and spray.",
+   "aspect": "16:9",
+   "refs": []
+  },
+  {
+   "key": "s06-rooftop-supper",
+   "out": "art/scenes/s06-rooftop-supper.jpg",
+   "prompt": "Painted scene. Night, a rooftop supper on a flat lead roof beside a little bell loft: a blanket, bread, cheese and a lantern, the young thief from the reference image sitting there, and the whole river city spread out below glittering with thousands of tiny pale-blue lamps.",
+   "aspect": "16:9",
+   "refs": [
+    "art/portraits/pc-01-ash.jpg"
+   ]
+  },
+  {
+   "key": "s06-allard-study",
+   "out": "art/scenes/s06-allard-study.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. An old nobleman's study by firelight: a dozen clocks of every size on shelves and walls, a high-backed chair by the window with a rug, a glass display cabinet in the corner whose contents are hard to look at: blurred, shadowed and unreadable.",
+   "aspect": "16:9",
+   "refs": []
+  },
+  {
+   "key": "s06-crale-clock-room",
+   "out": "art/scenes/s06-crale-clock-room.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. A gilded room full of clocks at night, glowing with cool blue light from glass lamps, gold leaf and polished cases, an empty silk chair.",
+   "aspect": "16:9",
+   "refs": []
+  },
+  {
+   "key": "ch02-the-patient-owl",
+   "out": "art/scenes/ch02-the-patient-owl.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. A tall, narrow book-and-scroll shop three stories high with no floors between the second and third, just a gallery and a rolling ladder. Books in stacks like stalagmites. Scroll-cases in honeycomb racks. One candle-lamp of real wax. A stuffed owl over the door, its glass eyes very slightly mismatched. A brass kettle on a spirit stove. Dust in the light from a round window.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "ch02-row-lightfinger",
+   "out": "art/scenes/ch02-row-lightfinger.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. A black-and-gold shop like a theater box: a little curtained stage at the back, a top hat on a stand, decks of cards fanned in glass cases, a wall of gloves, coins floating slowly in a bowl, a counter with a drawer.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "ch02-the-iron-kettle",
+   "out": "art/scenes/ch02-the-iron-kettle.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. A low stone vault of a dwarven smithy, warm, lit only by the forge mouth and two oil lamps. Weapons on racks along curved walls, every one oiled, each with a small blank slate tag. A great black anvil on a stump of oak. A copper kettle the size of a child steaming on the forge's edge.",
+   "aspect": "4:3",
+   "refs": []
+  },
+  {
+   "key": "s06-guildhall-tea-room",
+   "out": "art/scenes/s06-guildhall-tea-room.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. An elegant tea room inside a great domed civic hall: tall arched windows, polished wood and white stone, round tables with porcelain tea sets and cakes, guild merchants in good clothes talking in small groups, soft afternoon light.",
+   "aspect": "16:9",
+   "refs": []
+  },
+  {
+   "key": "s06-assembly-rooms",
+   "out": "art/scenes/s06-assembly-rooms.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. The grand assembly rooms of a rich hill district: a long ballroom with chandeliers of soft glowing lamps, a sprung wooden floor, a musicians' gallery, tall mirrors and white columns, an auction podium set up at one end with rows of gilt chairs.",
+   "aspect": "16:9",
+   "refs": []
+  },
+  {
+   "key": "s06-allard-house",
+   "out": "art/scenes/s06-allard-house.jpg",
+   "prompt": "Interior painting of a place, wide view, warm light, period detail. The entrance hall of an old, fading nobleman's townhouse: dark paneling, a worn grand staircase, dust sheets on some furniture, a tall walnut clock, portraits gone dim, a carved crest of a tower with a key above it over the inner door.",
+   "aspect": "3:4",
+   "refs": []
+  },
+  {
+   "key": "ch04-the-rope-and-raft",
+   "out": "art/scenes/ch04-the-rope-and-raft.jpg",
+   "prompt": "Painted scene. A river village at a ferry crossing: a broad brown river, a ferry-raft on a rope as thick as a man's arm, a winch-house with a bell, a mill with a waterwheel, one inn, one small chapel, a green with a crooked maypole, thatched cottages and geese.",
+   "aspect": "16:9",
+   "refs": []
+  }
+ ],
+ "submitted": 1794867989.40576,
+ "raw": {
+  "name": "batches/9l6oybs8ucn9we0i0ucpd1upyxajioucgvpt"
+ }
+}
