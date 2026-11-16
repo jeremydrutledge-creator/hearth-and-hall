@@ -62,4 +62,6 @@ CHG-## · Session # (or "build") · What changed · Why · Records touched (NPC/
 
 **CHG-25 · build (player feedback) · Solo day-in-the-life opening.** Player: at the start the contest circuit is Ash's ordinary life; early play can be solo until the brothers are drawn in; brothers watch from the Willow; Ash may coax Gideon into a bare-knuckle bout; money tight but not desperate, tested in play. Ch1 gains Scene 0 (the Long Wall opener, now the default; the roof opener kept as alternate), a day-in-the-life table tying each Long Wall option to ★2's routes, brothers' reactions, the Gideon-vs-Gentle-Joe coax (NPC-311; Bare-Knuckle, no magic, finished by three so Gideon is on the Lantern door for Fight 1), and money guidance. ★1 Route A text updated. **No must-happen beat changed.** · Touched: chapters/act1/ch01.md §1 and §3, dm-spine.md Ch1, play-kit/session-one-opener.md (§V and new §VI "The Long Wall").
 
-Next free: **CHG-26**, NPC-107, R-241, SEC-25, EVT-61.
+**CHG-26 · art (Session 6 batch prep)** · Gave IDs NPC-107–121 to people born or named in play (Tier 3 log + name lookup) so their portraits have file names. NPC-091 Davy shown in play as Ma Garrow's son (play overrides). Records touched: 07-tier3-log, 00-index, sealed/art-batches/session6.json.
+
+Next free: **CHG-27**, NPC-122, R-241, SEC-25, EVT-61.

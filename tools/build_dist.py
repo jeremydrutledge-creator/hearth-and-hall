@@ -18,7 +18,7 @@ SKIP_NAMES = {"_handoff-notes.md", "_change-requests.md", "_consistency.md", "_a
               "_player-packet-leak-check.md", "art-manifest.md", "art-list.md", ".gitkeep"}
 SKIP_DIRS = {"sealed/art-batches", "sealed/art", "sealed/maps", "art", "build", "tools", "dist", ".git"}
 TEXT_DIRS = ["sealed", "player", "play-kit"]
-PLAYER_IMG_DIRS = ["art/portraits", "art/battlemaps", "art/scenes", "player/maps"]
+PLAYER_IMG_DIRS = ["art/portraits", "art/battlemaps", "art/scenes", "art/items", "player/maps"]
 SEALED_IMG_DIRS = ["sealed/art", "sealed/maps"]
 IMG_EXT = (".jpg", ".jpeg", ".png")
 

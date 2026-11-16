@@ -4,8 +4,8 @@
 
 ## Totals
 
-- **project-files:** 89 files · 409,641 words · 2,260 KB
-- **images (player-safe):** 42 files · 38,342 KB
+- **project-files:** 89 files · 410,290 words · 2,264 KB
+- **images (player-safe):** 90 files · 87,332 KB
 - **images-sealed (DM only):** 6 files · 5,195 KB
 
 ## Minimum set (if the project's knowledge limit is hit)
@@ -72,15 +72,15 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | `sealed__world__08-history.md` | 6 KB | 1000 | World bible |
 | `sealed__world__09-the-fenwick-family.md` | 6 KB | 1059 | World bible |
 | `sealed__world__README.md` | 1 KB | 172 | World bible |
-| `sealed__truth__00-index.md` | 18 KB | 3363 | Name lookup by sound, ID scheme, running rule |
+| `sealed__truth__00-index.md` | 19 KB | 3558 | Name lookup by sound, ID scheme, running rule |
 | `sealed__truth__01-tier1.md` | 48 KB | 8331 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__truth__02-tier2.md` | 24 KB | 3740 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__truth__03-ledger.md` | 43 KB | 7709 | Relationship Ledger (read before any vouch) |
 | `sealed__truth__04-secrets.md` | 7 KB | 1265 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__truth__05-events.md` | 11 KB | 1992 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__truth__06-factions.md` | 6 KB | 1026 | Truth File: NPCs, secrets, events, factions, logs |
-| `sealed__truth__07-tier3-log.md` | 0 KB | 81 | Truth File: NPCs, secrets, events, factions, logs |
-| `sealed__truth__08-change-log.md` | 14 KB | 2042 | Truth File: NPCs, secrets, events, factions, logs |
+| `sealed__truth__07-tier3-log.md` | 3 KB | 489 | Truth File: NPCs, secrets, events, factions, logs |
+| `sealed__truth__08-change-log.md` | 14 KB | 2088 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__rules__00-house-rules.md` | 13 KB | 2289 | Rules, builds, tuning, prices |
 | `sealed__rules__01-party-builds.md` | 22 KB | 3931 | Rules, builds, tuning, prices |
 | `sealed__rules__02-tuning-notes.md` | 20 KB | 4139 | Rules, builds, tuning, prices |
@@ -128,9 +128,12 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | File | Size | Words | Purpose |
 |---|---|---|---|
 | `art__portraits__familiar-bart.jpg` | 990 KB |  | Player-safe image |
+| `art__portraits__lamp-warden.jpg` | 961 KB |  | Player-safe image |
 | `art__portraits__npc-001-gideon.jpg` | 823 KB |  | Player-safe image |
 | `art__portraits__npc-002-zeke.jpg` | 812 KB |  | Player-safe image |
 | `art__portraits__npc-003-moss.jpg` | 1,229 KB |  | Player-safe image |
+| `art__portraits__npc-005-clara-grane.jpg` | 1,216 KB |  | Player-safe image |
+| `art__portraits__npc-006-hollis-grane.jpg` | 969 KB |  | Player-safe image |
 | `art__portraits__npc-010-rook.jpg` | 1,028 KB |  | Player-safe image |
 | `art__portraits__npc-011-bess-carter.jpg` | 1,251 KB |  | Player-safe image |
 | `art__portraits__npc-012-dora-finch.jpg` | 960 KB |  | Player-safe image |
@@ -143,6 +146,8 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | `art__portraits__npc-025-simon-shaw.jpg` | 1,073 KB |  | Player-safe image |
 | `art__portraits__npc-026-pip-carter.jpg` | 1,096 KB |  | Player-safe image |
 | `art__portraits__npc-027-nell-carter.jpg` | 1,333 KB |  | Player-safe image |
+| `art__portraits__npc-028-martha-pratt.jpg` | 1,044 KB |  | Player-safe image |
+| `art__portraits__npc-030-old-bram-barge.jpg` | 970 KB |  | Player-safe image |
 | `art__portraits__npc-030-old-bram.jpg` | 1,041 KB |  | Player-safe image |
 | `art__portraits__npc-035-tam-hollin.jpg` | 951 KB |  | Player-safe image |
 | `art__portraits__npc-043-mother-brine.jpg` | 1,101 KB |  | Player-safe image |
@@ -151,6 +156,26 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | `art__portraits__npc-047-ottoline-brightwell.jpg` | 1,040 KB |  | Player-safe image |
 | `art__portraits__npc-048-nim-gearwright.jpg` | 974 KB |  | Player-safe image |
 | `art__portraits__npc-049-hakon-stonebrow.jpg` | 952 KB |  | Player-safe image |
+| `art__portraits__npc-054-corwin-lockley.jpg` | 876 KB |  | Player-safe image |
+| `art__portraits__npc-075-nan-pike.jpg` | 1,090 KB |  | Player-safe image |
+| `art__portraits__npc-076-tobin-pike.jpg` | 983 KB |  | Player-safe image |
+| `art__portraits__npc-091-davy-garrow.jpg` | 1,242 KB |  | Player-safe image |
+| `art__portraits__npc-107-dot-fenwick.jpg` | 945 KB |  | Player-safe image |
+| `art__portraits__npc-108-molly-hatch-blue-dress.jpg` | 996 KB |  | Player-safe image |
+| `art__portraits__npc-108-molly-hatch-housekeeper.jpg` | 1,068 KB |  | Player-safe image |
+| `art__portraits__npc-108-molly-hatch-maid.jpg` | 1,024 KB |  | Player-safe image |
+| `art__portraits__npc-109-lord-allard-standing.jpg` | 906 KB |  | Player-safe image |
+| `art__portraits__npc-109-lord-allard.jpg` | 1,206 KB |  | Player-safe image |
+| `art__portraits__npc-110-gerald-corbett.jpg` | 986 KB |  | Player-safe image |
+| `art__portraits__npc-111-ned-corbett.jpg` | 928 KB |  | Player-safe image |
+| `art__portraits__npc-112-barnaby-crale.jpg` | 1,111 KB |  | Player-safe image |
+| `art__portraits__npc-113-allards-cook.jpg` | 1,194 KB |  | Player-safe image |
+| `art__portraits__npc-114-annie-rush.jpg` | 990 KB |  | Player-safe image |
+| `art__portraits__npc-115-bea-rush.jpg` | 890 KB |  | Player-safe image |
+| `art__portraits__npc-116-man-in-black.jpg` | 908 KB |  | Player-safe image |
+| `art__portraits__npc-117-big-hugo.jpg` | 979 KB |  | Player-safe image |
+| `art__portraits__npc-118-gammy-dunn.jpg` | 1,102 KB |  | Player-safe image |
+| `art__portraits__npc-119-121-the-magpies.jpg` | 986 KB |  | Player-safe image |
 | `art__portraits__npc-303-hettie-bunce.jpg` | 980 KB |  | Player-safe image |
 | `art__portraits__npc-305-mags-weller.jpg` | 1,022 KB |  | Player-safe image |
 | `art__portraits__pc-01-ash.jpg` | 210 KB |  | Player-safe image |
@@ -165,6 +190,29 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | `art__battlemaps__emberford-the-bucket-demo.jpg` | 312 KB |  | Player-safe image |
 | `art__battlemaps__emberford-the-bucket.jpg` | 282 KB |  | Player-safe image |
 | `art__scenes__ch01-fenwick-house.jpg` | 307 KB |  | Player-safe image |
+| `art__scenes__ch02-row-lightfinger.jpg` | 963 KB |  | Player-safe image |
+| `art__scenes__ch02-the-iron-kettle.jpg` | 966 KB |  | Player-safe image |
+| `art__scenes__ch02-the-patient-owl.jpg` | 1,129 KB |  | Player-safe image |
+| `art__scenes__ch04-bargerace-finish.jpg` | 1,162 KB |  | Player-safe image |
+| `art__scenes__ch04-the-rope-and-raft.jpg` | 1,206 KB |  | Player-safe image |
+| `art__scenes__s06-allard-house.jpg` | 878 KB |  | Player-safe image |
+| `art__scenes__s06-allard-study.jpg` | 900 KB |  | Player-safe image |
+| `art__scenes__s06-assembly-rooms.jpg` | 1,030 KB |  | Player-safe image |
+| `art__scenes__s06-crale-clock-room.jpg` | 1,102 KB |  | Player-safe image |
+| `art__scenes__s06-ford-stone-naming.jpg` | 899 KB |  | Player-safe image |
+| `art__scenes__s06-guildhall-tea-room.jpg` | 1,099 KB |  | Player-safe image |
+| `art__scenes__s06-rooftop-supper.jpg` | 903 KB |  | Player-safe image |
+| `art__scenes__s06-saltwife-sunset.jpg` | 1,247 KB |  | Player-safe image |
+| `art__items__ash-shortsword-plus1.jpg` | 869 KB |  | Player-safe image |
+| `art__items__dot-gifts.jpg` | 1,148 KB |  | Player-safe image |
+| `art__items__dot-locket-and-ash-half-locket.jpg` | 874 KB |  | Player-safe image |
+| `art__items__eleanors-snuffbox-and-swan-salt.jpg` | 798 KB |  | Player-safe image |
+| `art__items__pegs-liars-cup.jpg` | 1,191 KB |  | Player-safe image |
+| `art__items__portable-hole-folded.jpg` | 1,011 KB |  | Player-safe image |
+| `art__items__portable-hole-open.jpg` | 1,007 KB |  | Player-safe image |
+| `art__items__silver-carriage-clock.jpg` | 1,107 KB |  | Player-safe image |
+| `art__items__walnut-case-clock.jpg` | 988 KB |  | Player-safe image |
+| `art__items__whisper-stones.jpg` | 943 KB |  | Player-safe image |
 | `player__maps__emberford-city.jpg` | 324 KB |  | Player-safe image |
 | `player__maps__eyrland-region.jpg` | 1,236 KB |  | Player-safe image |
 | `player__maps__willow-lane-keyed.jpg` | 901 KB |  | Player-safe image |
