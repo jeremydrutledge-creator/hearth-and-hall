@@ -4,8 +4,8 @@
 
 ## Totals
 
-- **project-files:** 89 files · 410,290 words · 2,264 KB
-- **images (player-safe):** 90 files · 87,332 KB
+- **project-files:** 89 files · 410,292 words · 2,264 KB
+- **images (player-safe):** 90 files · 86,664 KB
 - **images-sealed (DM only):** 6 files · 5,195 KB
 
 ## Minimum set (if the project's knowledge limit is hit)
@@ -79,7 +79,7 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | `sealed__truth__04-secrets.md` | 7 KB | 1265 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__truth__05-events.md` | 11 KB | 1992 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__truth__06-factions.md` | 6 KB | 1026 | Truth File: NPCs, secrets, events, factions, logs |
-| `sealed__truth__07-tier3-log.md` | 3 KB | 489 | Truth File: NPCs, secrets, events, factions, logs |
+| `sealed__truth__07-tier3-log.md` | 3 KB | 491 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__truth__08-change-log.md` | 14 KB | 2088 | Truth File: NPCs, secrets, events, factions, logs |
 | `sealed__rules__00-house-rules.md` | 13 KB | 2289 | Rules, builds, tuning, prices |
 | `sealed__rules__01-party-builds.md` | 22 KB | 3931 | Rules, builds, tuning, prices |
@@ -161,9 +161,9 @@ Upload these first. Swap in the next act's chapters (`sealed__chapters__act2__*`
 | `art__portraits__npc-076-tobin-pike.jpg` | 983 KB |  | Player-safe image |
 | `art__portraits__npc-091-davy-garrow.jpg` | 1,242 KB |  | Player-safe image |
 | `art__portraits__npc-107-dot-fenwick.jpg` | 945 KB |  | Player-safe image |
-| `art__portraits__npc-108-molly-hatch-blue-dress.jpg` | 996 KB |  | Player-safe image |
-| `art__portraits__npc-108-molly-hatch-housekeeper.jpg` | 1,068 KB |  | Player-safe image |
-| `art__portraits__npc-108-molly-hatch-maid.jpg` | 1,024 KB |  | Player-safe image |
+| `art__portraits__npc-108-molly-hatch-blue-dress.jpg` | 830 KB |  | Player-safe image |
+| `art__portraits__npc-108-molly-hatch-housekeeper.jpg` | 802 KB |  | Player-safe image |
+| `art__portraits__npc-108-molly-hatch-maid.jpg` | 788 KB |  | Player-safe image |
 | `art__portraits__npc-109-lord-allard-standing.jpg` | 906 KB |  | Player-safe image |
 | `art__portraits__npc-109-lord-allard.jpg` | 1,206 KB |  | Player-safe image |
 | `art__portraits__npc-110-gerald-corbett.jpg` | 986 KB |  | Player-safe image |

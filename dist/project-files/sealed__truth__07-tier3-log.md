@@ -11,7 +11,7 @@ T3-### · Name (aka spellings) · role, place · first seen: Session #, scene ·
 (filled during play)
 **Born in play by Session 6 (given IDs for art; appearance as the player described them; play's own Docs hold their full story):**
 - NPC-107 · Dot Fenwick (Dottie, Dot) · girl of about 11 Ash took in from Market Steps; NOT Dot Garrow · small, quick, street-sharp; scrubbed-clean best dress, plain pewter locket, red hair ribbon round her wrist · Session 6
-- NPC-108 · Molly Hatch (Mollie, Moll) · 19; kitchen maid, later housekeeper; NOT Molly Pike (NPC-318) · freckles, mass of dark hair under a knotted red scarf, wide scrunched-up grin · Session 6
+- NPC-108 · Molly Hatch (Mollie, Moll) · 19; kitchen maid, later housekeeper; NOT Molly Pike (NPC-318) · striking; copper-red curly hair, green eyes, freckles, knotted red scarf, confident mischievous smile (portraits redone) · Session 6
 - NPC-109 · Lord Allard (Alard, Allerd) · very old, frail noble; crest: a tower with a key above it · thin, beak nose, wisps of white hair, pale blue pin-sharp eyes; rug, high-backed chair, study of clocks; deep-green coat, silver-headed cane · Session 6
 - NPC-110 · Gerald Corbett (Gerrold, Corbet) · disgraced steward · sour, well-fed, narrow nose, velvet coat · Session 6
 - NPC-111 · Ned Corbett (Corbet) · Gerald's cousin, pawnbroker at the Brass Hook · soft, pale, forties, ink on his cuffs, same narrow nose, nervous · Session 6
